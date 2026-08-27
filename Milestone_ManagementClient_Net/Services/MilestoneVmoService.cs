@@ -202,10 +202,36 @@ namespace MilestoneManagementClient.Services
         // --- Rules Management ---
         public List<RuleModel> GetRules() { return _rules; }
 
-        public void AddRule(string name, string trigger, string target, string timeProfile, string action, bool enabled)
+        public void AddRule(string name, string trigger, string target, string timeProfile, string action, bool enabled, string description = "", string logEntry = "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$", bool isDefault = false)
         {
-            _rules.Add(new RuleModel(name, trigger, target, timeProfile, action, enabled));
+            _rules.Add(new RuleModel(name, trigger, target, timeProfile, action, enabled, description, logEntry, isDefault));
             AddLog("INFO", "Rules", "Created new rule: '" + name + "'", "Administrator");
+        }
+
+        public void UpdateRule(string ruleId, string name, string description, bool isActive, string trigger, string target, string logEntry)
+        {
+            var r = _rules.FirstOrDefault(x => x.Id == ruleId);
+            if (r != null)
+            {
+                r.Name = name;
+                r.Description = description;
+                r.IsEnabled = isActive;
+                if (!string.IsNullOrEmpty(trigger)) r.EventTrigger = trigger;
+                if (!string.IsNullOrEmpty(target)) r.TargetSource = target;
+                if (!string.IsNullOrEmpty(logEntry)) r.LogEntry = logEntry;
+                AddLog("INFO", "Rules", "Updated rule configuration: '" + name + "'", "Administrator");
+            }
+        }
+
+        public void DuplicateRule(string ruleId)
+        {
+            var r = _rules.FirstOrDefault(x => x.Id == ruleId);
+            if (r != null)
+            {
+                var copy = new RuleModel(r.Name + " (Copy)", r.EventTrigger, r.TargetSource, r.TimeProfile, r.Action, r.IsEnabled, r.Description, r.LogEntry, false);
+                _rules.Add(copy);
+                AddLog("INFO", "Rules", "Duplicated rule: '" + r.Name + "' -> '" + copy.Name + "'", "Administrator");
+            }
         }
 
         public void ToggleRule(string ruleId)
@@ -400,11 +426,22 @@ namespace MilestoneManagementClient.Services
 
         private void InitializeRules()
         {
-            _rules.Add(new RuleModel("Rule 01: Motion -> Start Recording", "Motion Started", "All Cameras in South Block", "Always", "Start recording on related device at 25 fps", true));
-            _rules.Add(new RuleModel("Rule 02: ANPR Speed Violation Email Alert", "Speed > 40 km/h detected", "ROAD SAFETY Cameras", "Always", "Send Email Notification to transport@company.com with Snapshot", true));
-            _rules.Add(new RuleModel("Rule 03: Perimeter Line Crossing Alarm", "Analytics: Line Crossing", "SECTOR-1 & SECTOR-4 Cameras", "Night Shift (20:00 - 06:00)", "Trigger Siren Output 1 & PTZ Preset 03", true));
-            _rules.Add(new RuleModel("Rule 04: Server Room Door Access Recording", "Access Control Door Opened", "SERVER ROOM FRONT CAM 1, 2, 3", "Always", "Bookmark event & record at High Quality 60fps", true));
-            _rules.Add(new RuleModel("Rule 05: Daily Midnight Archive Backup", "Timer: 00:00 Daily", "All Recording Servers", "Always", "Move recorded footage older than 7 days to Archive Pool", true));
+            _rules.Add(new RuleModel("24x7 Recording", "Always", "All Cameras", "Always", "Perform continuous recording on all cameras at 25 fps", true, "Standard continuous recording profile across all cluster devices.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$"));
+            _rules.Add(new RuleModel("Analitics Triger by Intrusion", "Intrusion Started", "SECTOR-1 Cameras", "Night Shift (20:00 - 06:00)", "Start recording & trigger red perimeter strobe", true, "Perimeter security intrusion detection alert rule.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$"));
+            _rules.Add(new RuleModel("Analitics Triger by Motion detection", "Motion Started (HW)", "Camera Group 1", "Always", "Perform an action on Motion Started (HW) from Camera Group 1. Create log entry.", true, "Primary motion detection trigger rule for Camera Group 1.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$"));
+            _rules.Add(new RuleModel("Analitics trigered Tripwire", "Tripwire Crossed", "Boundary Perimeter Cameras", "Always", "Bookmark event & PTZ Preset 01", true, "Virtual tripwire crossing trigger.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$"));
+            _rules.Add(new RuleModel("Analities Triger by crowd dedect start", "Crowd Density High", "VISITOR LOBBY & MAIN GATE", "Always", "Send notification to control room & trigger log entry", true, "Crowd density start threshold trigger rule.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$"));
+            _rules.Add(new RuleModel("Analities Triger by crowd dedect start rising", "Crowd Density Rising", "VISITOR LOBBY & MAIN GATE", "Always", "Increase stream framerate to 30fps", true, "Crowd gathering warning rule.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$"));
+            _rules.Add(new RuleModel("Analities Triger by Line crossing", "Line Crossing Event", "PARKING NORTH & ENTRY ROAD", "Always", "Create log entry & PTZ focus tracking", true, "Directional line crossing analytics trigger.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$"));
+            _rules.Add(new RuleModel("Default Goto Preset when PTZ is done Rule", "PTZ Inactivity Timeout", "All PTZ Cameras", "Always", "Move PTZ Camera back to Default Guard Tour Preset 01", true, "Default system rule to return PTZ cameras after manual operator control.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$", true));
+            _rules.Add(new RuleModel("Default Play Audio on Request Rule", "Audio Request Triggered", "All Speakers", "Always", "Play pre-recorded audio advisory message on requested speaker", true, "Public address audio playback rule.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$", true));
+            _rules.Add(new RuleModel("Default Record on Bookmark Rule", "Bookmark Created", "All Cameras", "Always", "Lock footage 15 minutes before and after bookmark", true, "System evidence preservation rule for bookmarked incidents.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$", true));
+            _rules.Add(new RuleModel("Default Record on Motion Rule", "Motion Started (HW)", "All Motion Enabled Cameras", "Always", "Start recording on related device with 5 seconds pre-buffer", true, "Standard hardware motion based recording trigger.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$", true));
+            _rules.Add(new RuleModel("Default Record on Request Rule", "Manual Record Requested", "All Cameras", "Always", "Trigger manual priority recording feed", true, "Operator manual recording rule.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$", true));
+            _rules.Add(new RuleModel("Default Start Audio Feed Rule", "Audio Streaming Started", "All Microphones", "Always", "Start audio feed decoding", true, "System default audio feed automation.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$", true));
+            _rules.Add(new RuleModel("Default Start Feed Rule", "Live View Requested", "All Cameras", "Always", "Start live video feed", true, "System default live stream activation rule.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$", true));
+            _rules.Add(new RuleModel("Default Start Metadata Feed Rule", "Metadata Feed Requested", "All Analytics Devices", "Always", "Start AI metadata bounding box feed", true, "System default metadata stream feed rule.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$", true));
+            _rules.Add(new RuleModel("Test Analytics rule", "Test Event Triggered", "Camera Group 1", "Always", "Write simulation test entry to server logs", true, "Diagnostics and rule engine test rule.", "$DeviceName$$Event Name$$TriggerTime$$RuleName$$RecorderName$"));
         }
 
         private void InitializeSecurity()

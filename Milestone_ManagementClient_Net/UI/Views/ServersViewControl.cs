@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using MilestoneManagementClient.Models;
 using MilestoneManagementClient.Services;
@@ -9,11 +11,19 @@ namespace MilestoneManagementClient.UI.Views
     public class ServersViewControl : UserControl
     {
         private readonly MilestoneVmoService _vmoService;
-        private ListView _lvServers;
+        private TreeView _treeServers;
+        private TextBox _txtFilter;
+        private CheckBox _chkHideDisabled;
         private Panel _pnlDetails;
+
+        // Details Panel Controls
         private Label _lblName;
+        private TextBox _txtDesc;
         private Label _lblHost;
+        private TextBox _txtWebAddress;
+        private ComboBox _cbTimeZone;
         private Label _lblStatus;
+        private Label _lblFailover;
         private ProgressBar _pbCpu;
         private Label _lblCpu;
         private ProgressBar _pbRam;
@@ -22,7 +32,6 @@ namespace MilestoneManagementClient.UI.Views
         private Label _lblStorage;
         private Label _lblLivePath;
         private Label _lblArchivePath;
-        private Label _lblFailover;
 
         public ServersViewControl(MilestoneVmoService vmoService)
         {
@@ -48,158 +57,192 @@ namespace MilestoneManagementClient.UI.Views
             split.Panel1.BackColor = Color.White;
             split.Panel2.BackColor = Color.White;
             this.Controls.Add(split);
-            try { if (split.Width > 500) split.SplitterDistance = 450; } catch { }
-            this.SizeChanged += (s, e) => { try { if (split.Width > 500) split.SplitterDistance = 450; } catch { } };
+            try { if (split.Width > 500) split.SplitterDistance = 380; } catch { }
+            this.SizeChanged += (s, e) => { try { if (split.Width > 500) split.SplitterDistance = 380; } catch { } };
 
-            // Left: Servers List
+            // ==========================================
+            // LEFT PANE: Filter Bar + Recording Servers Tree
+            // ==========================================
             var pnlLeft = new Panel { Dock = DockStyle.Fill, BackColor = Color.White };
-            var pnlHeader = new Panel { Dock = DockStyle.Top, Height = 32, BackColor = Color.FromArgb(255, 241, 242), Padding = new Padding(6, 4, 6, 4) };
-            pnlHeader.Controls.Add(new Label { Text = "Recording Servers", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), ForeColor = Color.FromArgb(190, 18, 60), Dock = DockStyle.Left, AutoSize = true, Padding = new Padding(0, 3, 0, 0) });
 
-            var btnDeleteServer = new Button
-            {
-                Text = "🗑 Delete",
-                Dock = DockStyle.Right,
-                Size = new Size(80, 24),
-                BackColor = Color.White,
-                ForeColor = Color.FromArgb(190, 18, 60),
-                FlatStyle = FlatStyle.Flat,
-                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
-                Cursor = Cursors.Hand
-            };
-            btnDeleteServer.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
-            btnDeleteServer.Click += (s, e) =>
-            {
-                if (_lvServers.SelectedItems.Count > 0)
-                {
-                    var srv = _lvServers.SelectedItems[0].Tag as RecordingServerModel;
-                    if (srv != null) PromptDeleteServer(srv.Name);
-                }
-                else
-                {
-                    MessageBox.Show("Please select a recording server to delete.", "Delete Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            };
-            pnlHeader.Controls.Add(btnDeleteServer);
-
-            var btnRenameServer = new Button
-            {
-                Text = "✏ Rename",
-                Dock = DockStyle.Right,
-                Size = new Size(85, 24),
-                BackColor = Color.White,
-                ForeColor = Color.FromArgb(71, 85, 105),
-                FlatStyle = FlatStyle.Flat,
-                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
-                Cursor = Cursors.Hand
-            };
-            btnRenameServer.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
-            btnRenameServer.Click += (s, e) =>
-            {
-                if (_lvServers.SelectedItems.Count > 0)
-                {
-                    var srv = _lvServers.SelectedItems[0].Tag as RecordingServerModel;
-                    if (srv != null) PromptRenameServer(srv.Name);
-                }
-                else
-                {
-                    MessageBox.Show("Please select a recording server to rename.", "Rename Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            };
-            pnlHeader.Controls.Add(btnRenameServer);
-
-            var btnAddServer = new Button
-            {
-                Text = "➕ Add Server...",
-                Dock = DockStyle.Right,
-                Size = new Size(110, 24),
-                BackColor = Color.FromArgb(190, 18, 60),
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat,
-                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
-                Cursor = Cursors.Hand
-            };
-            btnAddServer.FlatAppearance.BorderSize = 0;
-            btnAddServer.Click += (s, e) => PromptAddServer();
-            pnlHeader.Controls.Add(btnAddServer);
+            // 1. Top Section Header
+            var pnlHeader = new Panel { Dock = DockStyle.Top, Height = 30, BackColor = Color.FromArgb(255, 241, 242), Padding = new Padding(8, 4, 8, 4) };
+            pnlHeader.Controls.Add(new Label { Text = "Recording Servers", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), ForeColor = Color.FromArgb(190, 18, 60), Dock = DockStyle.Left, AutoSize = true, Padding = new Padding(0, 2, 0, 0) });
             pnlLeft.Controls.Add(pnlHeader);
 
-            _lvServers = new ListView
+            // 2. Filter Bar (Exact Milestone UI)
+            var pnlFilter = new Panel { Dock = DockStyle.Top, Height = 60, BackColor = Color.FromArgb(248, 250, 252), Padding = new Padding(8, 4, 8, 6) };
+            _chkHideDisabled = new CheckBox
+            {
+                Text = "Hide disabled devices",
+                Checked = true,
+                Location = new Point(8, 6),
+                AutoSize = true,
+                Font = new Font("Segoe UI", 8.5F)
+            };
+            pnlFilter.Controls.Add(_chkHideDisabled);
+
+            _txtFilter = new TextBox
+            {
+                Location = new Point(8, 30),
+                Size = new Size(260, 23),
+                Font = new Font("Segoe UI", 8.5F),
+                Text = "Type here to filter devices..."
+            };
+            _txtFilter.GotFocus += (s, e) => { if (_txtFilter.Text == "Type here to filter devices...") { _txtFilter.Text = ""; _txtFilter.ForeColor = Color.Black; } };
+            _txtFilter.LostFocus += (s, e) => { if (string.IsNullOrWhiteSpace(_txtFilter.Text)) { _txtFilter.Text = "Type here to filter devices..."; _txtFilter.ForeColor = Color.FromArgb(148, 163, 184); } };
+            _txtFilter.TextChanged += (s, e) => FilterServerTree(_txtFilter.Text);
+            pnlFilter.Controls.Add(_txtFilter);
+
+            var btnApplyFilter = new Button
+            {
+                Text = "Apply filter",
+                Location = new Point(274, 29),
+                Size = new Size(85, 25),
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Segoe UI", 8F)
+            };
+            btnApplyFilter.Click += (s, e) => FilterServerTree(_txtFilter.Text);
+            pnlFilter.Controls.Add(btnApplyFilter);
+            pnlLeft.Controls.Add(pnlFilter);
+
+            // 3. Recording Servers TreeView
+            _treeServers = new TreeView
             {
                 Dock = DockStyle.Fill,
-                View = View.Details,
-                FullRowSelect = true,
-                GridLines = true,
                 BorderStyle = BorderStyle.None,
-                Font = new Font("Segoe UI", 9F)
-            };
-            _lvServers.Columns.Add("Server Name", 190);
-            _lvServers.Columns.Add("IP / Host", 110);
-            _lvServers.Columns.Add("Status", 110);
-            _lvServers.Columns.Add("Cameras", 70);
-
-            // Context Menu for Right Click Actions
-            var ctx = new ContextMenuStrip();
-            var mnuAdd = new ToolStripMenuItem("➕ Add Recording Server...", null, (s, e) => PromptAddServer());
-            var mnuRename = new ToolStripMenuItem("✏ Rename Server...", null, (s, e) =>
-            {
-                if (_lvServers.SelectedItems.Count > 0)
-                {
-                    var srv = _lvServers.SelectedItems[0].Tag as RecordingServerModel;
-                    if (srv != null) PromptRenameServer(srv.Name);
-                }
-            });
-            var mnuDelete = new ToolStripMenuItem("🗑 Delete Server", null, (s, e) =>
-            {
-                if (_lvServers.SelectedItems.Count > 0)
-                {
-                    var srv = _lvServers.SelectedItems[0].Tag as RecordingServerModel;
-                    if (srv != null) PromptDeleteServer(srv.Name);
-                }
-            });
-            var mnuRefresh = new ToolStripMenuItem("🔄 Refresh", null, (s, e) => RefreshList());
-
-            ctx.Items.Add(mnuAdd);
-            ctx.Items.Add(new ToolStripSeparator());
-            ctx.Items.Add(mnuRename);
-            ctx.Items.Add(mnuDelete);
-            ctx.Items.Add(new ToolStripSeparator());
-            ctx.Items.Add(mnuRefresh);
-            _lvServers.ContextMenuStrip = ctx;
-
-            _lvServers.KeyDown += (s, e) =>
-            {
-                if (e.KeyCode == Keys.Delete && _lvServers.SelectedItems.Count > 0)
-                {
-                    var srv = _lvServers.SelectedItems[0].Tag as RecordingServerModel;
-                    if (srv != null) PromptDeleteServer(srv.Name);
-                }
+                Font = new Font("Segoe UI", 9F),
+                FullRowSelect = false,
+                HideSelection = false,
+                ShowLines = true,
+                ShowPlusMinus = true,
+                ShowRootLines = true,
+                ItemHeight = 22
             };
 
-            _lvServers.SelectedIndexChanged += (s, e) =>
+            _treeServers.AfterSelect += (s, e) =>
             {
-                if (_lvServers.SelectedItems.Count > 0)
+                if (e.Node != null)
                 {
-                    var srv = _lvServers.SelectedItems[0].Tag as RecordingServerModel;
+                    var srv = e.Node.Tag as RecordingServerModel;
                     if (srv != null) DisplayServerDetails(srv);
                 }
             };
 
-            pnlLeft.Controls.Add(_lvServers);
-            _lvServers.BringToFront();
+            // Setup Exact Milestone Right-Click Context Menu
+            SetupTreeContextMenu();
+
+            // Keyboard Shortcuts
+            _treeServers.KeyDown += (s, e) =>
+            {
+                var srv = GetSelectedServer();
+                if (e.Control && e.KeyCode == Keys.N)
+                {
+                    PromptAddHardware();
+                }
+                else if (e.KeyCode == Keys.F2 && srv != null)
+                {
+                    PromptRenameServer(srv.Name);
+                }
+                else if (e.KeyCode == Keys.Delete && srv != null)
+                {
+                    PromptDeleteServer(srv.Name);
+                }
+                else if (e.KeyCode == Keys.F5)
+                {
+                    RefreshList();
+                }
+            };
+
+            pnlLeft.Controls.Add(_treeServers);
+            _treeServers.BringToFront();
             split.Panel1.Controls.Add(pnlLeft);
 
-            // Right: Detailed Info & Gauges
+            // ==========================================
+            // RIGHT PANE: Milestone Server Properties & Subtabs
+            // ==========================================
             _pnlDetails = new Panel { Dock = DockStyle.Fill, BackColor = Color.White, AutoScroll = true, Padding = new Padding(12) };
             BuildDetailsPanel();
             split.Panel2.Controls.Add(_pnlDetails);
         }
 
+        // ==========================================
+        // EXACT MILESTONE RIGHT-CLICK CONTEXT MENU
+        // ==========================================
+        private void SetupTreeContextMenu()
+        {
+            var ctx = new ContextMenuStrip();
+
+            var mnuExpand = new ToolStripMenuItem("Expand", null, (s, e) => { if (_treeServers.SelectedNode != null) _treeServers.SelectedNode.Expand(); });
+            var mnuAddHw = new ToolStripMenuItem("⭐ Add Hardware...\tCtrl+N", null, (s, e) => PromptAddHardware());
+            mnuAddHw.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+
+            var mnuMoveHw = new ToolStripMenuItem("Move Hardware...", null, (s, e) => MessageBox.Show("Select target recording server to move hardware channels.", "Move Hardware", MessageBoxButtons.OK, MessageBoxIcon.Information));
+            var mnuDeleteAllHw = new ToolStripMenuItem("Delete All Hardware", null, (s, e) =>
+            {
+                var srv = GetSelectedServer();
+                if (srv != null && MessageBox.Show(string.Format("Are you sure you want to delete all hardware under '{0}'?", srv.Name), "Confirm Delete All", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    srv.DeviceCount = 0;
+                    RefreshList();
+                }
+            });
+
+            var mnuChangePass = new ToolStripMenuItem("🔒 Change Hardware Password...", null, (s, e) => MessageBox.Show("Enter new universal device hardware password.", "Change Hardware Password", MessageBoxButtons.OK, MessageBoxIcon.Information));
+            var mnuRename = new ToolStripMenuItem("Rename Recording Server\tF2", null, (s, e) =>
+            {
+                var srv = GetSelectedServer();
+                if (srv != null) PromptRenameServer(srv.Name);
+            });
+
+            var mnuRemove = new ToolStripMenuItem("❌ Remove Recording Server", null, (s, e) =>
+            {
+                var srv = GetSelectedServer();
+                if (srv != null) PromptDeleteServer(srv.Name);
+            });
+            mnuRemove.ForeColor = Color.FromArgb(190, 18, 60);
+
+            var mnuRefresh = new ToolStripMenuItem("🔄 Refresh\tF5", null, (s, e) => RefreshList());
+
+            ctx.Items.Add(mnuExpand);
+            ctx.Items.Add(new ToolStripSeparator());
+            ctx.Items.Add(mnuAddHw);
+            ctx.Items.Add(mnuMoveHw);
+            ctx.Items.Add(mnuDeleteAllHw);
+            ctx.Items.Add(new ToolStripSeparator());
+            ctx.Items.Add(mnuChangePass);
+            ctx.Items.Add(mnuRename);
+            ctx.Items.Add(mnuRemove);
+            ctx.Items.Add(new ToolStripSeparator());
+            ctx.Items.Add(mnuRefresh);
+
+            _treeServers.NodeMouseClick += (s, e) =>
+            {
+                if (e.Button == MouseButtons.Right)
+                {
+                    _treeServers.SelectedNode = e.Node;
+                }
+            };
+            _treeServers.ContextMenuStrip = ctx;
+        }
+
+        private RecordingServerModel GetSelectedServer()
+        {
+            if (_treeServers.SelectedNode != null)
+            {
+                return _treeServers.SelectedNode.Tag as RecordingServerModel;
+            }
+            return null;
+        }
+
+        // ==========================================
+        // PROPERTIES PANEL: Exact Milestone Subtabs
+        // ==========================================
         private void BuildDetailsPanel()
         {
             _pnlDetails.Controls.Clear();
 
-            // Milestone Tabs Header
+            // 1. Milestone Properties Tabs Header
             var pnlSubTabs = new Panel { Dock = DockStyle.Top, Height = 28, BackColor = Color.FromArgb(241, 245, 249), Padding = new Padding(2) };
             var tabBtns = new[] { "Recording server information", "Failover", "Multicast", "Network", "Info" };
             int tx = 2;
@@ -223,7 +266,7 @@ namespace MilestoneManagementClient.UI.Views
             }
             _pnlDetails.Controls.Add(pnlSubTabs);
 
-            // Group: Recording server information (Exact Milestone Screenshot)
+            // 2. Group: Recording server information (Screenshot Layout)
             var gbInfo = new GroupBox
             {
                 Text = "Recording server information",
@@ -240,8 +283,8 @@ namespace MilestoneManagementClient.UI.Views
             y += 26;
 
             gbInfo.Controls.Add(new Label { Text = "Description:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F) });
-            var txtDesc = new TextBox { Text = "JSPL ICC Central Command Recording Server", Location = new Point(140, y - 2), Size = new Size(340, 23) };
-            gbInfo.Controls.Add(txtDesc);
+            _txtDesc = new TextBox { Text = "JSPL ICC Central Command Recording Server", Location = new Point(140, y - 2), Size = new Size(340, 23) };
+            gbInfo.Controls.Add(_txtDesc);
             y += 28;
 
             gbInfo.Controls.Add(new Label { Text = "Host name:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
@@ -250,15 +293,15 @@ namespace MilestoneManagementClient.UI.Views
             y += 26;
 
             gbInfo.Controls.Add(new Label { Text = "Web server address:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
-            var txtWeb = new TextBox { Text = "http://jspangicccrec01.jspliccc.local:7563/", ReadOnly = true, Location = new Point(140, y - 2), Size = new Size(340, 23), BackColor = Color.FromArgb(248, 250, 252) };
-            gbInfo.Controls.Add(txtWeb);
+            _txtWebAddress = new TextBox { Text = "http://jspangicccrec01.jspliccc.local:7563/", ReadOnly = true, Location = new Point(140, y - 2), Size = new Size(340, 23), BackColor = Color.FromArgb(248, 250, 252) };
+            gbInfo.Controls.Add(_txtWebAddress);
             y += 30;
 
             gbInfo.Controls.Add(new Label { Text = "Time zone:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
-            var cbTz = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Location = new Point(140, y - 2), Size = new Size(340, 23) };
-            cbTz.Items.AddRange(new object[] { "(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi", "(UTC+00:00) UTC Universal Coordinated Time", "(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm", "(UTC-05:00) Eastern Time (US & Canada)" });
-            cbTz.SelectedIndex = 0;
-            gbInfo.Controls.Add(cbTz);
+            _cbTimeZone = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Location = new Point(140, y - 2), Size = new Size(340, 23) };
+            _cbTimeZone.Items.AddRange(new object[] { "(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi", "(UTC+00:00) UTC Universal Coordinated Time", "(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm", "(UTC-05:00) Eastern Time (US & Canada)" });
+            _cbTimeZone.SelectedIndex = 0;
+            gbInfo.Controls.Add(_cbTimeZone);
             y += 30;
 
             gbInfo.Controls.Add(new Label { Text = "Service Status:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
@@ -268,7 +311,7 @@ namespace MilestoneManagementClient.UI.Views
             _pnlDetails.Controls.Add(gbInfo);
             gbInfo.BringToFront();
 
-            // Performance Gauges
+            // 3. Performance Metrics
             var gbPerf = new GroupBox { Text = "Hardware Performance Metrics", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), Dock = DockStyle.Top, Height = 140, Padding = new Padding(10) };
             int py = 26;
 
@@ -293,7 +336,7 @@ namespace MilestoneManagementClient.UI.Views
             _pnlDetails.Controls.Add(gbPerf);
             gbPerf.BringToFront();
 
-            // Storage Pools
+            // 4. Storage Pools
             var gbStorage = new GroupBox { Text = "Media Database & Storage Pools", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), Dock = DockStyle.Top, Height = 160, Padding = new Padding(10) };
             int sy = 24;
 
@@ -317,27 +360,79 @@ namespace MilestoneManagementClient.UI.Views
 
         public void RefreshList()
         {
-            _lvServers.Items.Clear();
+            _treeServers.Nodes.Clear();
+
+            var rootNode = new TreeNode("🖧 Recording Servers");
+            rootNode.NodeFont = new Font("Segoe UI", 9F, FontStyle.Bold);
+            rootNode.ForeColor = Color.FromArgb(190, 18, 60);
+
+            var servers = _vmoService.GetServers();
+            var allCameras = _vmoService.GetAllCameras().Values.ToList();
+
+            foreach (var srv in servers)
+            {
+                var srvNode = new TreeNode("🖥 " + srv.Name);
+                srvNode.Tag = srv;
+                srvNode.ForeColor = Color.FromArgb(15, 23, 42);
+
+                // Add Child Hardware / Cameras to Server Node
+                var srvCams = allCameras.Where(c => c.IpAddress != null && c.IpAddress.StartsWith("192.168.1.")).Take(4).ToList();
+                foreach (var cam in srvCams)
+                {
+                    var camNode = new TreeNode("📹 " + cam.Name + " (" + cam.IpAddress + ")");
+                    camNode.Tag = cam;
+                    camNode.ForeColor = Color.FromArgb(71, 85, 105);
+                    srvNode.Nodes.Add(camNode);
+                }
+
+                rootNode.Nodes.Add(srvNode);
+            }
+
+            _treeServers.Nodes.Add(rootNode);
+            rootNode.Expand();
+
+            if (rootNode.Nodes.Count > 0)
+            {
+                _treeServers.SelectedNode = rootNode.Nodes[0];
+                var srv = rootNode.Nodes[0].Tag as RecordingServerModel;
+                if (srv != null) DisplayServerDetails(srv);
+            }
+        }
+
+        private void FilterServerTree(string query)
+        {
+            if (string.IsNullOrWhiteSpace(query) || query == "Type here to filter devices...")
+            {
+                RefreshList();
+                return;
+            }
+
+            _treeServers.Nodes.Clear();
+            var rootNode = new TreeNode("🖧 Recording Servers (Filtered)");
+            rootNode.NodeFont = new Font("Segoe UI", 9F, FontStyle.Bold);
+            rootNode.ForeColor = Color.FromArgb(190, 18, 60);
+
             var servers = _vmoService.GetServers();
             foreach (var srv in servers)
             {
-                var item = new ListViewItem(srv.Name);
-                item.SubItems.Add(srv.Hostname);
-                item.SubItems.Add(srv.Status);
-                item.SubItems.Add(srv.DeviceCount.ToString());
-                item.Tag = srv;
-                _lvServers.Items.Add(item);
+                if (srv.Name.IndexOf(query, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    srv.Hostname.IndexOf(query, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    var srvNode = new TreeNode("🖥 " + srv.Name) { Tag = srv };
+                    rootNode.Nodes.Add(srvNode);
+                }
             }
-            if (_lvServers.Items.Count > 0)
-            {
-                _lvServers.Items[0].Selected = true;
-            }
+
+            _treeServers.Nodes.Add(rootNode);
+            rootNode.ExpandAll();
         }
 
         private void DisplayServerDetails(RecordingServerModel srv)
         {
             _lblName.Text = srv.Name;
-            _lblHost.Text = srv.Hostname + ":" + srv.Port;
+            _txtDesc.Text = "JSPL ICC Central Command Recording Server - " + srv.Name;
+            _lblHost.Text = srv.Hostname;
+            _txtWebAddress.Text = string.Format("http://{0}:{1}/", srv.Hostname.ToLower(), srv.Port);
             _lblStatus.Text = "● " + srv.Status;
             _lblFailover.Text = srv.IsFailoverConfigured ? srv.FailoverServerName : "None configured";
 
@@ -354,7 +449,10 @@ namespace MilestoneManagementClient.UI.Views
             _lblArchivePath.Text = srv.ArchiveStoragePath + " (" + srv.ArchiveUsedGb + " GB / " + srv.ArchiveTotalGb + " GB)";
         }
 
-        private void PromptAddServer()
+        // ==========================================
+        // ACTION HANDLERS
+        // ==========================================
+        private void PromptAddHardware()
         {
             var dlg = new AddHardwareWizardDialog(_vmoService, RefreshList);
             dlg.ShowDialog(this);
@@ -400,8 +498,8 @@ namespace MilestoneManagementClient.UI.Views
         private void PromptDeleteServer(string currentName)
         {
             var res = MessageBox.Show(
-                string.Format("Are you sure you want to delete the recording server '{0}'?\n\nThis will remove the server from the cluster and update the MSSQL surveillance database.", currentName),
-                "Confirm Delete Recording Server",
+                string.Format("Are you sure you want to remove the recording server '{0}'?\n\nThis will remove the server from the cluster and synchronize with the MSSQL surveillance database.", currentName),
+                "Remove Recording Server",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button2);
@@ -411,8 +509,8 @@ namespace MilestoneManagementClient.UI.Views
                 _vmoService.DeleteRecordingServer(currentName);
                 RefreshList();
                 MessageBox.Show(
-                    string.Format("Recording server '{0}' has been successfully deleted.", currentName),
-                    "Server Deleted",
+                    string.Format("Recording server '{0}' has been successfully removed.", currentName),
+                    "Recording Server Removed",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }

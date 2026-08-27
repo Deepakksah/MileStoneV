@@ -20,6 +20,7 @@ namespace MilestoneManagementClient.Models
         public int Saturation { get; set; }
         public int Sharpness { get; set; }
         public string MulticastIp { get; set; }
+        public string IpAddress { get; set; }
         public string StreamingMethod { get; set; }
         public bool IsOnline { get; set; }
 

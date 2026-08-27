@@ -17,14 +17,20 @@ namespace MilestoneManagementClient.Services
         private readonly List<TaskModel> _tasks = new List<TaskModel>();
         private readonly List<LogEntryModel> _logs = new List<LogEntryModel>();
 
+        private static readonly string DbFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "surveillance_database.json");
+
         public MilestoneVmoService()
         {
-            InitializeDefaultMilestoneInventory();
-            InitializeServers();
-            InitializeRules();
-            InitializeSecurity();
-            InitializeTasks();
-            InitializeLogs();
+            if (!LoadFromDatabase())
+            {
+                InitializeDefaultMilestoneInventory();
+                InitializeServers();
+                InitializeRules();
+                InitializeSecurity();
+                InitializeTasks();
+                InitializeLogs();
+                SaveToDatabase();
+            }
         }
 
         // --- Camera & Group Management ---
@@ -44,6 +50,7 @@ namespace MilestoneManagementClient.Services
                 _cameras[camera.Name] = camera;
                 _savedConfigurations[camera.Name] = camera.Clone();
                 AddLog("INFO", "Configuration", "Updated camera properties for '" + camera.Name + "'", "Administrator");
+                SaveToDatabase();
             }
         }
 
@@ -55,6 +62,7 @@ namespace MilestoneManagementClient.Services
                 if (_savedConfigurations.TryGetValue(camera.Name, out saved))
                 {
                     _cameras[camera.Name] = saved.Clone();
+                    SaveToDatabase();
                 }
             }
         }
@@ -76,6 +84,7 @@ namespace MilestoneManagementClient.Services
                     _savedConfigurations[newName] = saved;
                 }
                 AddLog("INFO", "Devices", "Renamed camera from '" + oldName + "' to '" + newName + "'", "Administrator");
+                SaveToDatabase();
             }
         }
 
@@ -89,6 +98,7 @@ namespace MilestoneManagementClient.Services
                 }
             }
             AddLog("INFO", "Devices", "Renamed group from '" + oldGroup + "' to '" + newGroup + "'", "Administrator");
+            SaveToDatabase();
         }
 
         public void DeleteCamera(string name)
@@ -97,6 +107,7 @@ namespace MilestoneManagementClient.Services
             _savedConfigurations.Remove(name);
             _license.HardwareDeviceLicensesUsed = _cameras.Count;
             AddLog("WARN", "Devices", "Deleted camera '" + name + "'", "Administrator");
+            SaveToDatabase();
         }
 
         public void DeleteGroup(string groupName)
@@ -107,6 +118,7 @@ namespace MilestoneManagementClient.Services
                 DeleteCamera(name);
             }
             AddLog("WARN", "Devices", "Deleted device group '" + groupName + "'", "Administrator");
+            SaveToDatabase();
         }
 
         public void AddDeviceGroup(string groupName)
@@ -119,6 +131,7 @@ namespace MilestoneManagementClient.Services
             _savedConfigurations[c2.Name] = c2.Clone();
             _license.HardwareDeviceLicensesUsed = _cameras.Count;
             AddLog("INFO", "Devices", "Created device group '" + groupName + "' with 2 cameras", "Administrator");
+            SaveToDatabase();
         }
 
         public void AddCameraToGroup(string camName, string groupName, string resolution)
@@ -128,6 +141,7 @@ namespace MilestoneManagementClient.Services
             _savedConfigurations[camName] = cam.Clone();
             _license.HardwareDeviceLicensesUsed = _cameras.Count;
             AddLog("INFO", "Hardware Wizard", "Added new camera '" + camName + "' to group '" + groupName + "'", "Administrator");
+            SaveToDatabase();
         }
 
         // --- Servers Management ---
@@ -145,6 +159,7 @@ namespace MilestoneManagementClient.Services
             {
                 srv.Name = newName.Trim();
                 AddLog("INFO", "Servers", "Renamed recording server from '" + oldName + "' to '" + newName + "'", "Administrator");
+                SaveToDatabase();
             }
         }
 
@@ -158,10 +173,25 @@ namespace MilestoneManagementClient.Services
                 DeviceCount = 0,
                 Status = "Running (Active)",
                 CpuUsage = 15,
-                RamUsage = 30
+                RamUsage = 30,
+                PrimaryStoragePath = @"D:\Milestone\MediaDatabase",
+                StorageUsedGb = 500,
+                StorageTotalGb = 8000
             };
             _servers.Add(srv);
-            AddLog("INFO", "Servers", "Added new recording server '" + name + "' (" + host + ":" + port + ")", "Administrator");
+            AddLog("INFO", "Servers", "Added new recording server '" + name + "'", "Administrator");
+            SaveToDatabase();
+        }
+
+        public void DeleteRecordingServer(string name)
+        {
+            var srv = _servers.FirstOrDefault(s => s.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            if (srv != null)
+            {
+                _servers.Remove(srv);
+                AddLog("WARN", "Servers", "Deleted recording server '" + name + "'", "Administrator");
+                SaveToDatabase();
+            }
         }
 
         // --- License Info ---
@@ -427,6 +457,196 @@ namespace MilestoneManagementClient.Services
             AddLog("INFO", "Recording Server", "REC-SRV-04 connected (AI Edge Processor online)", "SYSTEM");
             AddLog("INFO", "Security", "Administrator session started from 127.0.0.1", "Administrator");
             AddLog("INFO", "Device Pack", "Milestone Device Pack 13.4a drivers loaded", "SYSTEM");
+        }
+
+        // --- Database Persistence Layer ---
+        public bool LoadFromDatabase()
+        {
+            try
+            {
+                if (!System.IO.File.Exists(DbFilePath)) return false;
+                string json = System.IO.File.ReadAllText(DbFilePath);
+                var data = SimpleJsonSerializer.DeserializeDb(json);
+                if (data == null) return false;
+
+                _cameras.Clear();
+                _savedConfigurations.Clear();
+                foreach (var cam in data.Cameras)
+                {
+                    _cameras[cam.Name] = cam;
+                    _savedConfigurations[cam.Name] = cam.Clone();
+                }
+
+                _servers.Clear();
+                _servers.AddRange(data.Servers);
+
+                _rules.Clear();
+                _rules.AddRange(data.Rules);
+
+                _users.Clear();
+                _users.AddRange(data.Users);
+
+                _roles.Clear();
+                _roles.AddRange(data.Roles);
+
+                _tasks.Clear();
+                _tasks.AddRange(data.Tasks);
+
+                _logs.Clear();
+                _logs.AddRange(data.Logs);
+
+                return _cameras.Count > 0;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public void SaveToDatabase()
+        {
+            try
+            {
+                var data = new DatabaseSnapshot
+                {
+                    Cameras = _cameras.Values.ToList(),
+                    Servers = _servers,
+                    Rules = _rules,
+                    Users = _users,
+                    Roles = _roles,
+                    Tasks = _tasks,
+                    Logs = _logs
+                };
+
+                string json = SimpleJsonSerializer.SerializeDb(data);
+                System.IO.File.WriteAllText(DbFilePath, json);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Database Save Error: " + ex.Message);
+            }
+        }
+    }
+
+    public class DatabaseSnapshot
+    {
+        public List<CameraModel> Cameras { get; set; }
+        public List<RecordingServerModel> Servers { get; set; }
+        public List<RuleModel> Rules { get; set; }
+        public List<UserModel> Users { get; set; }
+        public List<RoleModel> Roles { get; set; }
+        public List<TaskModel> Tasks { get; set; }
+        public List<LogEntryModel> Logs { get; set; }
+    }
+
+    public static class SimpleJsonSerializer
+    {
+        public static string SerializeDb(DatabaseSnapshot snap)
+        {
+            var sb = new System.Text.StringBuilder();
+            sb.AppendLine("{");
+            sb.AppendLine("  \"Cameras\": [");
+            for (int i = 0; i < snap.Cameras.Count; i++)
+            {
+                var c = snap.Cameras[i];
+                sb.AppendLine("    {");
+                sb.AppendLine("      \"Name\": \"" + Escape(c.Name) + "\",");
+                sb.AppendLine("      \"Group\": \"" + Escape(c.Group) + "\",");
+                sb.AppendLine("      \"Resolution\": \"" + Escape(c.Resolution) + "\",");
+                sb.AppendLine("      \"Fps\": " + c.Fps + ",");
+                sb.AppendLine("      \"Codec\": \"" + Escape(c.Codec) + "\",");
+                sb.AppendLine("      \"RetentionDays\": " + c.RetentionDays + ",");
+                sb.AppendLine("      \"StoragePath\": \"" + Escape(c.StoragePath) + "\",");
+                sb.AppendLine("      \"PrebufferSeconds\": " + c.PrebufferSeconds + ",");
+                sb.AppendLine("      \"PrebufferType\": \"" + Escape(c.PrebufferType) + "\",");
+                sb.AppendLine("      \"RecordFps\": " + c.RecordFps + ",");
+                sb.AppendLine("      \"RecordKeyframesOnly\": " + (c.RecordKeyframesOnly ? "true" : "false") + ",");
+                sb.AppendLine("      \"MotionDetectionEnabled\": " + (c.MotionDetectionEnabled ? "true" : "false") + ",");
+                sb.AppendLine("      \"MotionSensitivity\": " + c.MotionSensitivity + ",");
+                sb.AppendLine("      \"MotionThreshold\": " + c.MotionThreshold + ",");
+                sb.AppendLine("      \"MotionHardwareAcceleration\": \"" + Escape(c.MotionHardwareAcceleration) + "\",");
+                sb.AppendLine("      \"IsOnline\": " + (c.IsOnline ? "true" : "false") + ",");
+                sb.AppendLine("      \"MulticastIp\": \"" + Escape(c.MulticastIp) + "\",");
+                sb.AppendLine("      \"EventsCount\": " + c.DriverEvents.Count);
+                sb.Append("    }");
+                if (i < snap.Cameras.Count - 1) sb.Append(",");
+                sb.AppendLine();
+            }
+            sb.AppendLine("  ]");
+            sb.AppendLine("}");
+            return sb.ToString();
+        }
+
+        public static DatabaseSnapshot DeserializeDb(string json)
+        {
+            var snap = new DatabaseSnapshot
+            {
+                Cameras = new List<CameraModel>(),
+                Servers = new List<RecordingServerModel>(),
+                Rules = new List<RuleModel>(),
+                Users = new List<UserModel>(),
+                Roles = new List<RoleModel>(),
+                Tasks = new List<TaskModel>(),
+                Logs = new List<LogEntryModel>()
+            };
+
+            if (string.IsNullOrWhiteSpace(json)) return snap;
+
+            try
+            {
+                string[] lines = json.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                CameraModel curCam = null;
+
+                foreach (var line in lines)
+                {
+                    string tr = line.Trim();
+                    if (tr.StartsWith("{") && curCam == null)
+                    {
+                        curCam = new CameraModel();
+                    }
+                    else if (tr.StartsWith("}") || tr.StartsWith("},"))
+                    {
+                        if (curCam != null && !string.IsNullOrWhiteSpace(curCam.Name))
+                        {
+                            snap.Cameras.Add(curCam);
+                            curCam = null;
+                        }
+                    }
+                    else if (curCam != null && tr.Contains(":"))
+                    {
+                        int colonIdx = tr.IndexOf(':');
+                        string key = tr.Substring(0, colonIdx).Replace("\"", "").Trim();
+                        string val = tr.Substring(colonIdx + 1).Trim().TrimEnd(',');
+                        string cleanVal = val.Trim('\"');
+
+                        if (key == "Name") curCam.Name = cleanVal;
+                        else if (key == "Group") curCam.Group = cleanVal;
+                        else if (key == "Resolution") curCam.Resolution = cleanVal;
+                        else if (key == "Fps") { int v; if (int.TryParse(cleanVal, out v)) curCam.Fps = v; }
+                        else if (key == "Codec") curCam.Codec = cleanVal;
+                        else if (key == "RetentionDays") { int v; if (int.TryParse(cleanVal, out v)) curCam.RetentionDays = v; }
+                        else if (key == "StoragePath") curCam.StoragePath = cleanVal;
+                        else if (key == "PrebufferSeconds") { int v; if (int.TryParse(cleanVal, out v)) curCam.PrebufferSeconds = v; }
+                        else if (key == "PrebufferType") curCam.PrebufferType = cleanVal;
+                        else if (key == "RecordFps") { int v; if (int.TryParse(cleanVal, out v)) curCam.RecordFps = v; }
+                        else if (key == "RecordKeyframesOnly") curCam.RecordKeyframesOnly = cleanVal.Equals("true", StringComparison.OrdinalIgnoreCase);
+                        else if (key == "MotionDetectionEnabled") curCam.MotionDetectionEnabled = cleanVal.Equals("true", StringComparison.OrdinalIgnoreCase);
+                        else if (key == "MotionSensitivity") { int v; if (int.TryParse(cleanVal, out v)) curCam.MotionSensitivity = v; }
+                        else if (key == "MotionThreshold") { int v; if (int.TryParse(cleanVal, out v)) curCam.MotionThreshold = v; }
+                        else if (key == "MotionHardwareAcceleration") curCam.MotionHardwareAcceleration = cleanVal;
+                        else if (key == "IsOnline") curCam.IsOnline = cleanVal.Equals("true", StringComparison.OrdinalIgnoreCase);
+                        else if (key == "MulticastIp") curCam.MulticastIp = cleanVal;
+                    }
+                }
+            }
+            catch { }
+            return snap;
+        }
+
+        private static string Escape(string s)
+        {
+            if (string.IsNullOrEmpty(s)) return "";
+            return s.Replace("\\", "\\\\").Replace("\"", "\\\"");
         }
     }
 }

@@ -23,6 +23,18 @@ namespace MilestoneManagementClient.Models
         public string StreamingMethod { get; set; }
         public bool IsOnline { get; set; }
 
+        public int RetentionDays { get; set; }
+        public string StoragePath { get; set; }
+        public int PrebufferSeconds { get; set; }
+        public string PrebufferType { get; set; }
+        public int RecordFps { get; set; }
+        public bool RecordKeyframesOnly { get; set; }
+        public bool MotionDetectionEnabled { get; set; }
+        public int MotionSensitivity { get; set; }
+        public int MotionThreshold { get; set; }
+        public string MotionHardwareAcceleration { get; set; }
+        public System.Collections.Generic.List<string> DriverEvents { get; set; }
+
         public CameraModel()
         {
             Name = "";
@@ -43,6 +55,18 @@ namespace MilestoneManagementClient.Models
             MulticastIp = "0.0.0.0";
             StreamingMethod = "RTP/RTSP/TCP";
             IsOnline = true;
+
+            RetentionDays = 30;
+            StoragePath = @"D:\Milestone\MediaDatabase";
+            PrebufferSeconds = 5;
+            PrebufferType = "In memory";
+            RecordFps = 25;
+            RecordKeyframesOnly = false;
+            MotionDetectionEnabled = true;
+            MotionSensitivity = 80;
+            MotionThreshold = 10;
+            MotionHardwareAcceleration = "Automatic";
+            DriverEvents = new System.Collections.Generic.List<string>();
         }
 
         public CameraModel Clone()

@@ -197,49 +197,104 @@ namespace MilestoneManagementClient.UI.Views
 
         private void BuildDetailsPanel()
         {
-            var gbInfo = new GroupBox { Text = "Server Details & Health", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), Dock = DockStyle.Top, Height = 180, Padding = new Padding(10) };
+            _pnlDetails.Controls.Clear();
+
+            // Milestone Tabs Header
+            var pnlSubTabs = new Panel { Dock = DockStyle.Top, Height = 28, BackColor = Color.FromArgb(241, 245, 249), Padding = new Padding(2) };
+            var tabBtns = new[] { "Recording server information", "Failover", "Multicast", "Network", "Info" };
+            int tx = 2;
+            foreach (var t in tabBtns)
+            {
+                var b = new Button
+                {
+                    Text = t,
+                    Location = new Point(tx, 2),
+                    Height = 24,
+                    AutoSize = true,
+                    FlatStyle = FlatStyle.Flat,
+                    BackColor = (t == "Recording server information") ? Color.White : Color.FromArgb(241, 245, 249),
+                    ForeColor = (t == "Recording server information") ? Color.FromArgb(190, 18, 60) : Color.FromArgb(71, 85, 105),
+                    Font = new Font("Segoe UI", 8.5F, (t == "Recording server information") ? FontStyle.Bold : FontStyle.Regular),
+                    Cursor = Cursors.Hand
+                };
+                b.FlatAppearance.BorderSize = 0;
+                pnlSubTabs.Controls.Add(b);
+                tx += b.PreferredSize.Width + 4;
+            }
+            _pnlDetails.Controls.Add(pnlSubTabs);
+
+            // Group: Recording server information (Exact Milestone Screenshot)
+            var gbInfo = new GroupBox
+            {
+                Text = "Recording server information",
+                Font = new Font("Segoe UI", 9.5F, FontStyle.Bold),
+                Dock = DockStyle.Top,
+                Height = 220,
+                Padding = new Padding(12)
+            };
             int y = 24;
 
-            gbInfo.Controls.Add(new Label { Text = "Server Name:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
-            _lblName = new Label { Text = "REC-SRV-01 (Primary Production)", Location = new Point(120, y), AutoSize = true, ForeColor = Color.FromArgb(0, 102, 204) };
+            gbInfo.Controls.Add(new Label { Text = "Name:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
+            _lblName = new Label { Text = "JSPANGICCCREC01.JSPLICCC.LOCAL", Location = new Point(140, y), AutoSize = true, ForeColor = Color.FromArgb(0, 102, 204), Font = new Font("Segoe UI", 9F, FontStyle.Bold) };
             gbInfo.Controls.Add(_lblName);
             y += 26;
 
-            gbInfo.Controls.Add(new Label { Text = "IP / Hostname:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
-            _lblHost = new Label { Text = "192.168.1.101:7563", Location = new Point(120, y), AutoSize = true };
+            gbInfo.Controls.Add(new Label { Text = "Description:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F) });
+            var txtDesc = new TextBox { Text = "JSPL ICC Central Command Recording Server", Location = new Point(140, y - 2), Size = new Size(340, 23) };
+            gbInfo.Controls.Add(txtDesc);
+            y += 28;
+
+            gbInfo.Controls.Add(new Label { Text = "Host name:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
+            _lblHost = new Label { Text = "jspangicccrec01.jspliccc.local", Location = new Point(140, y), AutoSize = true };
             gbInfo.Controls.Add(_lblHost);
             y += 26;
 
-            gbInfo.Controls.Add(new Label { Text = "Service Status:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
-            _lblStatus = new Label { Text = "● Running (Active)", Location = new Point(120, y), AutoSize = true, ForeColor = Color.FromArgb(16, 185, 129), Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) };
-            gbInfo.Controls.Add(_lblStatus);
-            y += 26;
+            gbInfo.Controls.Add(new Label { Text = "Web server address:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
+            var txtWeb = new TextBox { Text = "http://jspangicccrec01.jspliccc.local:7563/", ReadOnly = true, Location = new Point(140, y - 2), Size = new Size(340, 23), BackColor = Color.FromArgb(248, 250, 252) };
+            gbInfo.Controls.Add(txtWeb);
+            y += 30;
 
-            gbInfo.Controls.Add(new Label { Text = "Failover Host:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
-            _lblFailover = new Label { Text = "FAILOVER-SRV-01 (Hot Standby)", Location = new Point(120, y), AutoSize = true, ForeColor = Color.FromArgb(79, 70, 229) };
-            gbInfo.Controls.Add(_lblFailover);
+            gbInfo.Controls.Add(new Label { Text = "Time zone:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
+            var cbTz = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Location = new Point(140, y - 2), Size = new Size(340, 23) };
+            cbTz.Items.AddRange(new object[] { "(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi", "(UTC+00:00) UTC Universal Coordinated Time", "(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm", "(UTC-05:00) Eastern Time (US & Canada)" });
+            cbTz.SelectedIndex = 0;
+            gbInfo.Controls.Add(cbTz);
+            y += 30;
+
+            gbInfo.Controls.Add(new Label { Text = "Service Status:", Location = new Point(12, y), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) });
+            _lblStatus = new Label { Text = "● Running (Active)", Location = new Point(140, y), AutoSize = true, ForeColor = Color.FromArgb(16, 185, 129), Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) };
+            gbInfo.Controls.Add(_lblStatus);
+
             _pnlDetails.Controls.Add(gbInfo);
+            gbInfo.BringToFront();
 
             // Performance Gauges
             var gbPerf = new GroupBox { Text = "Hardware Performance Metrics", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), Dock = DockStyle.Top, Height = 140, Padding = new Padding(10) };
             int py = 26;
 
             gbPerf.Controls.Add(new Label { Text = "CPU Load:", Location = new Point(12, py), AutoSize = true });
-            _pbCpu = new ProgressBar { Location = new Point(120, py), Size = new Size(180, 18), Value = 32 };
-            _lblCpu = new Label { Text = "32%", Location = new Point(310, py), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) };
+            _pbCpu = new ProgressBar { Location = new Point(140, py), Size = new Size(180, 18), Value = 32 };
+            _lblCpu = new Label { Text = "32%", Location = new Point(330, py), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) };
             gbPerf.Controls.Add(_pbCpu);
             gbPerf.Controls.Add(_lblCpu);
             py += 32;
 
             gbPerf.Controls.Add(new Label { Text = "RAM Memory:", Location = new Point(12, py), AutoSize = true });
-            _pbRam = new ProgressBar { Location = new Point(120, py), Size = new Size(180, 18), Value = 48 };
-            _lblRam = new Label { Text = "48% (7.68 GB / 16 GB)", Location = new Point(310, py), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) };
+            _pbRam = new ProgressBar { Location = new Point(140, py), Size = new Size(180, 18), Value = 48 };
+            _lblRam = new Label { Text = "48% (7.68 GB / 16 GB)", Location = new Point(330, py), AutoSize = true, Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) };
             gbPerf.Controls.Add(_pbRam);
             gbPerf.Controls.Add(_lblRam);
+            py += 32;
+
+            gbPerf.Controls.Add(new Label { Text = "Failover Server:", Location = new Point(12, py), AutoSize = true });
+            _lblFailover = new Label { Text = "FAILOVER-SRV-01.JSPLICCC.LOCAL (Hot Standby)", Location = new Point(140, py), AutoSize = true, ForeColor = Color.FromArgb(79, 70, 229), Font = new Font("Segoe UI", 8.5F, FontStyle.Bold) };
+            gbPerf.Controls.Add(_lblFailover);
+
             _pnlDetails.Controls.Add(gbPerf);
+            gbPerf.BringToFront();
 
             // Storage Pools
-            var gbStorage = new GroupBox { Text = "Media Database & Storage Pools", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), Dock = DockStyle.Top, Height = 180, Padding = new Padding(10) };
+            var gbStorage = new GroupBox { Text = "Media Database & Storage Pools", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), Dock = DockStyle.Top, Height = 160, Padding = new Padding(10) };
             int sy = 24;
 
             gbStorage.Controls.Add(new Label { Text = "Live Recording Pool:", Location = new Point(12, sy), AutoSize = true });
@@ -257,6 +312,7 @@ namespace MilestoneManagementClient.UI.Views
             _lblArchivePath = new Label { Text = @"E:\Milestone\Archive01 (18 TB / 40 TB)", Location = new Point(150, sy), AutoSize = true, ForeColor = Color.FromArgb(71, 85, 105) };
             gbStorage.Controls.Add(_lblArchivePath);
             _pnlDetails.Controls.Add(gbStorage);
+            gbStorage.BringToFront();
         }
 
         public void RefreshList()
@@ -300,48 +356,8 @@ namespace MilestoneManagementClient.UI.Views
 
         private void PromptAddServer()
         {
-            var form = new Form
-            {
-                Text = "🖧 Add Recording Server Wizard",
-                Size = new Size(420, 240),
-                StartPosition = FormStartPosition.CenterParent,
-                FormBorderStyle = FormBorderStyle.FixedDialog,
-                MaximizeBox = false,
-                MinimizeBox = false,
-                BackColor = Color.FromArgb(248, 250, 252),
-                Font = new Font("Segoe UI", 9F)
-            };
-
-            int y = 16;
-            form.Controls.Add(new Label { Text = "Server Display Name:", Location = new Point(14, y), AutoSize = true, Font = new Font("Segoe UI", 9F, FontStyle.Bold) });
-            var txtName = new TextBox { Text = "REC-SRV-05 (Edge Node)", Location = new Point(14, y + 22), Size = new Size(375, 24) };
-            form.Controls.Add(txtName);
-            y += 54;
-
-            form.Controls.Add(new Label { Text = "IP Address / FQDN:", Location = new Point(14, y), AutoSize = true, Font = new Font("Segoe UI", 9F, FontStyle.Bold) });
-            var txtHost = new TextBox { Text = "192.168.1.105", Location = new Point(14, y + 22), Size = new Size(240, 24) };
-            var numPort = new NumericUpDown { Minimum = 1, Maximum = 65535, Value = 7563, Location = new Point(265, y + 22), Size = new Size(124, 24) };
-            form.Controls.Add(txtHost);
-            form.Controls.Add(numPort);
-            y += 60;
-
-            var btnOk = new Button { Text = "💾 Add Server", Location = new Point(180, y), Size = new Size(110, 30), BackColor = Color.FromArgb(16, 185, 129), ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold) };
-            var btnCancel = new Button { Text = "Cancel", Location = new Point(300, y), Size = new Size(88, 30), FlatStyle = FlatStyle.Flat };
-
-            btnOk.Click += (s, e) =>
-            {
-                if (!string.IsNullOrEmpty(txtName.Text.Trim()))
-                {
-                    _vmoService.AddRecordingServer(txtName.Text.Trim(), txtHost.Text.Trim(), (int)numPort.Value);
-                    RefreshList();
-                    form.Close();
-                }
-            };
-            btnCancel.Click += (s, e) => form.Close();
-
-            form.Controls.Add(btnOk);
-            form.Controls.Add(btnCancel);
-            form.ShowDialog(this);
+            var dlg = new AddHardwareWizardDialog(_vmoService, RefreshList);
+            dlg.ShowDialog(this);
         }
 
         private void PromptRenameServer(string currentName)

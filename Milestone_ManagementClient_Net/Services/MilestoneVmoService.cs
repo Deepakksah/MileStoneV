@@ -342,8 +342,8 @@ namespace MilestoneManagementClient.Services
         {
             _servers.Add(new RecordingServerModel
             {
-                Name = "REC-SRV-01 (Primary Production)",
-                Hostname = "192.168.1.101",
+                Name = "JSPANGICCCREC01.JSPLICCC.LOCAL",
+                Hostname = "jspangicccrec01.jspliccc.local",
                 Port = 7563,
                 Status = "Running (Active)",
                 DeviceCount = 14,
@@ -356,13 +356,13 @@ namespace MilestoneManagementClient.Services
                 ArchiveUsedGb = 18000,
                 ArchiveTotalGb = 40000,
                 IsFailoverConfigured = true,
-                FailoverServerName = "FAILOVER-SRV-01 (Hot Standby)"
+                FailoverServerName = "FAILOVER-SRV-01.JSPLICCC.LOCAL (Hot Standby)"
             });
 
             _servers.Add(new RecordingServerModel
             {
-                Name = "REC-SRV-02 (Storage Pool Alpha)",
-                Hostname = "192.168.1.102",
+                Name = "JSPANGICCCREC02.JSPLICCC.LOCAL",
+                Hostname = "jspangicccrec02.jspliccc.local",
                 Port = 7563,
                 Status = "Running (Active)",
                 DeviceCount = 8,
@@ -375,13 +375,13 @@ namespace MilestoneManagementClient.Services
                 ArchiveUsedGb = 12000,
                 ArchiveTotalGb = 32000,
                 IsFailoverConfigured = true,
-                FailoverServerName = "FAILOVER-SRV-01 (Hot Standby)"
+                FailoverServerName = "FAILOVER-SRV-01.JSPLICCC.LOCAL (Hot Standby)"
             });
 
             _servers.Add(new RecordingServerModel
             {
-                Name = "REC-SRV-03 (Storage Pool Beta)",
-                Hostname = "192.168.1.103",
+                Name = "JSPANGICCCREC03.JSPLICCC.LOCAL",
+                Hostname = "jspangicccrec03.jspliccc.local",
                 Port = 7563,
                 Status = "Running (Active)",
                 DeviceCount = 4,
@@ -393,25 +393,6 @@ namespace MilestoneManagementClient.Services
                 ArchiveStoragePath = @"E:\Milestone\Archive03",
                 ArchiveUsedGb = 6500,
                 ArchiveTotalGb = 24000,
-                IsFailoverConfigured = false,
-                FailoverServerName = "None"
-            });
-
-            _servers.Add(new RecordingServerModel
-            {
-                Name = "REC-SRV-04 (Edge Processing & AI)",
-                Hostname = "192.168.1.104",
-                Port = 7563,
-                Status = "Running (Active)",
-                DeviceCount = 0,
-                CpuUsage = 44,
-                RamUsage = 62,
-                PrimaryStoragePath = @"D:\Milestone\MediaDatabase\Live04",
-                StorageUsedGb = 800,
-                StorageTotalGb = 4000,
-                ArchiveStoragePath = @"E:\Milestone\Archive04",
-                ArchiveUsedGb = 2000,
-                ArchiveTotalGb = 16000,
                 IsFailoverConfigured = false,
                 FailoverServerName = "None"
             });

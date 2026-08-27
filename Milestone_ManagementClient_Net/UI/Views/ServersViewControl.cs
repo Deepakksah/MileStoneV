@@ -56,15 +56,42 @@ namespace MilestoneManagementClient.UI.Views
             var pnlHeader = new Panel { Dock = DockStyle.Top, Height = 32, BackColor = Color.FromArgb(255, 241, 242), Padding = new Padding(6, 4, 6, 4) };
             pnlHeader.Controls.Add(new Label { Text = "Recording Servers", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), ForeColor = Color.FromArgb(190, 18, 60), Dock = DockStyle.Left, AutoSize = true, Padding = new Padding(0, 3, 0, 0) });
 
-            var btnRenameServer = new Button
+            var btnDeleteServer = new Button
             {
-                Text = "✏ Rename Server",
+                Text = "🗑 Delete",
                 Dock = DockStyle.Right,
-                Size = new Size(115, 24),
+                Size = new Size(80, 24),
                 BackColor = Color.White,
                 ForeColor = Color.FromArgb(190, 18, 60),
                 FlatStyle = FlatStyle.Flat,
-                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold)
+                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            btnDeleteServer.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
+            btnDeleteServer.Click += (s, e) =>
+            {
+                if (_lvServers.SelectedItems.Count > 0)
+                {
+                    var srv = _lvServers.SelectedItems[0].Tag as RecordingServerModel;
+                    if (srv != null) PromptDeleteServer(srv.Name);
+                }
+                else
+                {
+                    MessageBox.Show("Please select a recording server to delete.", "Delete Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            };
+            pnlHeader.Controls.Add(btnDeleteServer);
+
+            var btnRenameServer = new Button
+            {
+                Text = "✏ Rename",
+                Dock = DockStyle.Right,
+                Size = new Size(85, 24),
+                BackColor = Color.White,
+                ForeColor = Color.FromArgb(71, 85, 105),
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
+                Cursor = Cursors.Hand
             };
             btnRenameServer.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
             btnRenameServer.Click += (s, e) =>
@@ -89,7 +116,8 @@ namespace MilestoneManagementClient.UI.Views
                 BackColor = Color.FromArgb(190, 18, 60),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
-                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold)
+                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
+                Cursor = Cursors.Hand
             };
             btnAddServer.FlatAppearance.BorderSize = 0;
             btnAddServer.Click += (s, e) => PromptAddServer();
@@ -109,6 +137,44 @@ namespace MilestoneManagementClient.UI.Views
             _lvServers.Columns.Add("IP / Host", 110);
             _lvServers.Columns.Add("Status", 110);
             _lvServers.Columns.Add("Cameras", 70);
+
+            // Context Menu for Right Click Actions
+            var ctx = new ContextMenuStrip();
+            var mnuAdd = new ToolStripMenuItem("➕ Add Recording Server...", null, (s, e) => PromptAddServer());
+            var mnuRename = new ToolStripMenuItem("✏ Rename Server...", null, (s, e) =>
+            {
+                if (_lvServers.SelectedItems.Count > 0)
+                {
+                    var srv = _lvServers.SelectedItems[0].Tag as RecordingServerModel;
+                    if (srv != null) PromptRenameServer(srv.Name);
+                }
+            });
+            var mnuDelete = new ToolStripMenuItem("🗑 Delete Server", null, (s, e) =>
+            {
+                if (_lvServers.SelectedItems.Count > 0)
+                {
+                    var srv = _lvServers.SelectedItems[0].Tag as RecordingServerModel;
+                    if (srv != null) PromptDeleteServer(srv.Name);
+                }
+            });
+            var mnuRefresh = new ToolStripMenuItem("🔄 Refresh", null, (s, e) => RefreshList());
+
+            ctx.Items.Add(mnuAdd);
+            ctx.Items.Add(new ToolStripSeparator());
+            ctx.Items.Add(mnuRename);
+            ctx.Items.Add(mnuDelete);
+            ctx.Items.Add(new ToolStripSeparator());
+            ctx.Items.Add(mnuRefresh);
+            _lvServers.ContextMenuStrip = ctx;
+
+            _lvServers.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Delete && _lvServers.SelectedItems.Count > 0)
+                {
+                    var srv = _lvServers.SelectedItems[0].Tag as RecordingServerModel;
+                    if (srv != null) PromptDeleteServer(srv.Name);
+                }
+            };
 
             _lvServers.SelectedIndexChanged += (s, e) =>
             {
@@ -313,6 +379,27 @@ namespace MilestoneManagementClient.UI.Views
             form.Controls.Add(btnOk);
             form.Controls.Add(btnCancel);
             form.ShowDialog(this);
+        }
+
+        private void PromptDeleteServer(string currentName)
+        {
+            var res = MessageBox.Show(
+                string.Format("Are you sure you want to delete the recording server '{0}'?\n\nThis will remove the server from the cluster and update the MSSQL surveillance database.", currentName),
+                "Confirm Delete Recording Server",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2);
+
+            if (res == DialogResult.Yes)
+            {
+                _vmoService.DeleteRecordingServer(currentName);
+                RefreshList();
+                MessageBox.Show(
+                    string.Format("Recording server '{0}' has been successfully deleted.", currentName),
+                    "Server Deleted",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
         }
     }
 }

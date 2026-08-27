@@ -52,6 +52,7 @@ namespace MilestoneManagementClient.UI
                 try { this.Icon = new Icon(icoPath); } catch { }
             }
 
+            this.ShowIcon = true;
             this.ShowInTaskbar = true;
 
             InitializeViews();

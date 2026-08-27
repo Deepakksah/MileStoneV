@@ -7,9 +7,18 @@ namespace MilestoneManagementClient
 {
     internal static class Program
     {
+        [System.Runtime.InteropServices.DllImport("shell32.dll", SetLastError = true)]
+        private static extern void SetCurrentProcessExplicitAppUserModelID([System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.LPWStr)] string AppID);
+
         [STAThread]
         private static void Main()
         {
+            try
+            {
+                SetCurrentProcessExplicitAppUserModelID("Milestone.LycheeVMS.ManagementClient.2025");
+            }
+            catch { }
+
             string logFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "startup.log");
             try
             {

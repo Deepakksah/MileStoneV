@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="DisableAlarmsSource" xml:space="preserve"><value>來源</value></data>
+  <data name="MessageBoxIs64BitProcess" xml:space="preserve"><value>64 位元處理器:</value></data>
+  <data name="CancelButtonText" xml:space="preserve"><value>取消</value></data>
+  <data name="FromToTimePickerStartEndModeFromLabelText" xml:space="preserve"><value>開始</value></data>
+  <data name="MessageBoxCancelButton" xml:space="preserve"><value>取消</value></data>
+  <data name="DisableAlarmsEvents" xml:space="preserve"><value>事件</value></data>
+  <data name="DisableAlarmsFor" xml:space="preserve"><value>已停用</value></data>
+  <data name="MessageBoxExceptionType" xml:space="preserve"><value>例外類型:</value></data>
+  <data name="FromToTimePickerInvalidTimeSetButtonDisabledTooltip" xml:space="preserve"><value>所選時區中的一個選定時間無效。</value></data>
+  <data name="SuppressStatusCancelButton" xml:space="preserve"><value>取消</value></data>
+  <data name="DateTimePickerCancel" xml:space="preserve"><value>取消</value></data>
+  <data name="SuppressStatusTimeOut" xml:space="preserve"><value>超时</value></data>
+  <data name="MessageBosIPAddress" xml:space="preserve"><value>IP 位址:</value></data>
+  <data name="DisableAlarmsComboBoxItemHours" xml:space="preserve"><value>小時</value></data>
+  <data name="SuppressStatusTitle" xml:space="preserve"><value>忽略 {0} 的運作狀態</value></data>
+  <data name="MessageBoxOKButton" xml:space="preserve"><value>確定</value></data>
+  <data name="DisableAlarmsTimeOut" xml:space="preserve"><value>超时</value></data>
+  <data name="DisableAlarmsCancelButton" xml:space="preserve"><value>取消</value></data>
+  <data name="TreeViewItemLoading" xml:space="preserve"><value>正在載入...</value></data>
+  <data name="DisableAlarmsTitle" xml:space="preserve"><value>停用所有新警報</value></data>
+  <data name="DisableAlarmsUntil" xml:space="preserve"><value>停用至</value></data>
+  <data name="FlipHeaderTextFormat" xml:space="preserve"><value>{0}/{1}</value></data>
+  <data name="SuppressStatusFor" xml:space="preserve"><value>對此忽略:</value></data>
+  <data name="MessageBoxIPAddress" xml:space="preserve"><value>IP 位址:</value></data>
+  <data name="FromToTimePickerStartEndModeSetButtonDisabledTooltip" xml:space="preserve"><value>結束時間必須晚於起始時間。</value></data>
+  <data name="SuppressStatusContextMenuModify" xml:space="preserve"><value>編輯</value></data>
+  <data name="DisableAlarmsManageWindowTitle" xml:space="preserve"><value>目前停用的警示</value></data>
+  <data name="DisableAlarmsComboBoxItemMinutes" xml:space="preserve"><value>分</value></data>
+  <data name="MessageBoxShowDetails" xml:space="preserve"><value>顯示詳細資料</value></data>
+  <data name="FromToTimePickerFromToModeSetButtonDisabledTooltip" xml:space="preserve"><value>結束時間必須晚於起始時間。</value></data>
+  <data name="CloseButtonText" xml:space="preserve"><value>關閉</value></data>
+  <data name="SuppressStatusContextMenuDelete" xml:space="preserve"><value>啟用</value></data>
+  <data name="MessageBoxOSVersion" xml:space="preserve"><value>作業系統版本:</value></data>
+  <data name="SuppressStatusOKButton" xml:space="preserve"><value>確定</value></data>
+  <data name="MessageBoxIs64BitOperativSystem" xml:space="preserve"><value>64 位元作業系統:</value></data>
+  <data name="DisableAlarmsComboBoxItemDays" xml:space="preserve"><value>天</value></data>
+  <data name="MessageBoxExceptionTargetSite" xml:space="preserve"><value>例外目標網站: </value></data>
+  <data name="FromToTimePickerFromToModeToLabelText" xml:space="preserve"><value>收件者</value></data>
+  <data name="NoItemsFound" xml:space="preserve"><value>找不到項目</value></data>
+  <data name="FromToTimePickerStartEndModeToLabelText" xml:space="preserve"><value>結束</value></data>
+  <data name="OkButtonText" xml:space="preserve"><value>確定</value></data>
+  <data name="DisableAlarmsOKButton" xml:space="preserve"><value>停用</value></data>
+  <data name="FromToTimePickerSetButtonText" xml:space="preserve"><value>設定</value></data>
+  <data name="FromToTimePickerCancelButtonText" xml:space="preserve"><value>取消</value></data>
+  <data name="SuppressStatusSource" xml:space="preserve"><value>來源</value></data>
+  <data name="SuppressStatusComment" xml:space="preserve"><value>備註</value></data>
+  <data name="DateTimePickerGoTo" xml:space="preserve"><value>移至</value></data>
+  <data name="MessageBoxHideDetails" xml:space="preserve"><value>隱藏詳細資訊</value></data>
+  <data name="MessageBoxProcessorCount" xml:space="preserve"><value>處理器數量:</value></data>
+  <data name="TruncatingStackPanelOverflowTooltip" xml:space="preserve"><value>+另外 {0} 個。</value></data>
+  <data name="DisableAlarmsExpanderHeader" xml:space="preserve"><value>不會觸發警示的事件</value></data>
+  <data name="SuppressStatusUntill" xml:space="preserve"><value>此時之前忽略:</value></data>
+  <data name="MessageBoxCurrentUser" xml:space="preserve"><value>目前的使用者:</value></data>
+  <data name="FromToTimePickerFromToModeFromLabelText" xml:space="preserve"><value>寄件者</value></data>
+  <data name="MessageBoxExceptionMessage" xml:space="preserve"><value>例外訊息:</value></data>
+  <data name="MessageBoxNoButton" xml:space="preserve"><value>否</value></data>
+  <data name="SearchBoxWatermark" xml:space="preserve"><value>搜尋(S)...</value></data>
+  <data name="MessageBoxRemoveButton" xml:space="preserve"><value>移除</value></data>
+  <data name="MessageBoxExceptionSource" xml:space="preserve"><value>例外來源:</value></data>
+  <data name="DisableAlarmsContextMenuModify" xml:space="preserve"><value>編輯</value></data>
+  <data name="SuppressStatusComboBoxItemDays" xml:space="preserve"><value>天</value></data>
+  <data name="MessageBoxMachineName" xml:space="preserve"><value>機器名稱:</value></data>
+  <data name="DisableAlarmsContextMenuDelete" xml:space="preserve"><value>啟用</value></data>
+  <data name="MessageBoxUnableToGetIP" xml:space="preserve"><value>無法取得網路資訊</value></data>
+  <data name="SuppressStatusComboBoxItemHours" xml:space="preserve"><value>小時</value></data>
+  <data name="DisableAlarmsComment" xml:space="preserve"><value>備註</value></data>
+  <data name="AllNewAlarmsTriggeredBy" xml:space="preserve"><value>若要停用警示，請選擇觸發目前不需要的警示的事件。
+您選擇的事件將不會在您選擇的時間段內觸發警示。</value></data>
+  <data name="MessageBoxYesButton" xml:space="preserve"><value>是</value></data>
+  <data name="MessageBoxDateTime" xml:space="preserve"><value>日期和時間:</value></data>
+  <data name="SuppressStatusManageWindowTitle" xml:space="preserve"><value>忽略狀態</value></data>
+  <data name="SuppressStatusComboBoxItemMinutes" xml:space="preserve"><value>分</value></data>
+  </root>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorFailedUnpack" xml:space="preserve"><value>Nije moguće raspakirati program za instalaciju:</value></data>
+  <data name="ErrorOccured" xml:space="preserve"><value>Došlo je do pogreške</value></data>
+  <data name="ExternalArchiveNotFound" xml:space="preserve"><value>Ovaj instalacijski program zahtijeva vanjsku arhivu „{0}” koja se nalazi u istoj mapi kao i izvršni instalacijski program.</value></data>
+  <data name="ErrorAnotherInstanceRunning" xml:space="preserve"><value>Druga je instalacija već u tijeku.</value></data>
+  <data name="Unpacking" xml:space="preserve"><value>Raspakiravanje datoteka…</value></data>
+  <data name="ErrorUnexpected" xml:space="preserve"><value>Neočekivani neuspjeh instalacije zbog pogreške:
+
+{0}
+
+Pogreška je za lakše praćenje zabilježena u Windows pregledniku događaja</value></data>
+  <data name="ExternalArchiveHashMismatch" xml:space="preserve"><value>Vanjska arhiva „{0}” nije valjana za ovaj instalacijski program.</value></data>
+  <data name="ErrorPrereq" xml:space="preserve"><value>Instalirajte .Net Framework 4.7.2 na svoje računalo. Preuzmite komponentu s proizvođačeve lokacije za preuzimanje. Kada se instalira, ponovno pokrenite „{0}”.</value></data>
+  <data name="Preparing" xml:space="preserve"><value>Instalacijski se program priprema</value></data>
+  <data name="Launching" xml:space="preserve"><value>Pokretanje instalacijskog programa...</value></data>
+  <data name="ExternalArchiveValidate" xml:space="preserve"><value>Potvrđivanje paketa…</value></data>
+  <data name="ExternalArchiveReadError" xml:space="preserve"><value>Nije moguće pročitati vanjsku arhivu „{0}”.</value></data>
+  </root>

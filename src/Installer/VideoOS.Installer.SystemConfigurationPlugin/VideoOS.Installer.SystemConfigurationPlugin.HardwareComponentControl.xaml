@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.SystemConfigurationPlugin.HardwareComponentControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Installer.SystemConfigurationPlugin">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../../ResourceDictionary.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Height="20">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <CheckBox Width="26px" Grid.Column="0" Margin="0,-1,0, 0" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="{Binding EditMode, Converter={StaticResource inverseBoolToVisConverter}}" IsChecked="{Binding Enabled}" />
+    <local:EditableTextBoxControl Grid.Column="1" Margin="5,0,0,0" Editable="{Binding EditMode}" />
+  </Grid>
+</UserControl>

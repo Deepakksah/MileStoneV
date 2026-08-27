@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.UI.WarningPageControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Installer.UI" xmlns:framework="clr-namespace:VideoOS.Installer.UI.Framework;assembly=VideoOS.Installer.UI.Framework">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../ResourceDictionary.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+      <local:WarningIconSourceConverter x:Key="warningIconSourceConverter" />
+      <DataTemplate x:Key="{DataTemplateKey {x:Type local:WarningPageEntryViewModel}}" x:Name="EntryTemplate" DataType="{x:Type local:WarningPageEntryViewModel}">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
+          </Grid.RowDefinitions>
+          <Image Name="warningIcon" SnapsToDevicePixels="True" Stretch="None" Grid.Column="0" Grid.Row="0" AutomationProperties.AutomationId="WarningPage.WarningList.WarningIcon" Source="{Binding Content.Rank, Converter={StaticResource warningIconSourceConverter}}" />
+          <TextBlock Margin="2,0,10,0" Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Bottom" AutomationProperties.AutomationId="WarningPage.WarningList.Heading" Style="{StaticResource WarningHeadingTextBlockStyle}" Text="{Binding Heading}" />
+          <TextBlock Margin="2,0,10,0" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" AutomationProperties.AutomationId="WarningPage.WarningList.Details" Style="{StaticResource ControlTextBlockStyle}" framework:TextLinkFormatHelper.ContentLinkText="{Binding Path=Details}" />
+          <TextBlock Margin="2,0,10,0" Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" AutomationProperties.AutomationId="WarningPage.WarningList.Subheading" Style="{StaticResource WarningSubheadingTextBlockStyle}" Text="{Binding Subheading}" />
+          <TextBlock Margin="2,0,10,0" Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" AutomationProperties.AutomationId="WarningPage.WarningList.Subsection" Style="{StaticResource ControlTextBlockStyle}" framework:TextLinkFormatHelper.ContentLinkText="{Binding Path=Subsection}" />
+        </Grid>
+        <DataTemplate.Triggers>
+          <DataTrigger Binding="{Binding Path=Content}" />
+        </DataTemplate.Triggers>
+      </DataTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Margin="58, 40, 58, 0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="48" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="20" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <TextBlock Name="LabelHeadLine" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextWrapping="Wrap" Margin="0" Grid.Row="0" AutomationProperties.AutomationId="WarningPage.LabelHeadLine" Style="{StaticResource HeaderTextBlockStyle}" Text="{Binding LabelHeadline}" />
+    <TextBlock Name="LabelInfo" AutomationProperties.AutomationId="WarningPage.LabelInfo" TextWrapping="Wrap" Grid.Row="1" Style="{StaticResource HeaderInfoTextBlockStyle}" Text="{Binding LabelInfo}" />
+    <Grid Row="3" Margin="0,2,0,6">
+      <Border BorderThickness="1" BorderBrush="#FF000000" Height="270" Background="#FFFFFFFF" HorizontalAlignment="Stretch">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch">
+          <ItemsControl AutomationProperties.AutomationId="WarningPage.WarningList" Margin="0,10,0,0" ItemsSource="{Binding CommonPageItems}" />
+        </ScrollViewer>
+      </Border>
+    </Grid>
+    <Grid Row="4" Margin="0,2,0,0">
+      <CheckBox Name="AcceptanceCheckbox" AutomationProperties.AutomationId="WarningPage.AcceptanceCheckbox" IsChecked="{Binding CheckBoxChecked}">
+        <TextBlock VerticalAlignment="Center" AutomationProperties.AutomationId="WarningPage.AcceptanceCheckboxTextBlock" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding CheckBoxInfo}" />
+      </CheckBox>
+    </Grid>
+  </Grid>
+</UserControl>

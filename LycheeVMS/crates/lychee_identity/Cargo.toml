@@ -1,0 +1,11 @@
+[package]
+name = "lychee_identity"
+version = "2025.3.0"
+edition = "2021"
+description = "Identity & Security Subsystem (converted from Milestone src/Identity, VideoOS.IdentityServer, VideoOS.Common.Login)"
+
+[dependencies]
+lychee_common = { path = "../lychee_common" }
+lychee_database = { path = "../lychee_database" }
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4" }

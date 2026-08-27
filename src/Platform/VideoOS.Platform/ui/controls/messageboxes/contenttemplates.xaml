@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:converters="clr-namespace:VideoOS.Platform.UI.Converters" xmlns:dataContext="clr-namespace:VideoOS.Platform.UI.Controls.MessageBoxes">
+  <DataTemplate x:Key="{x:Static controls:VideoOSMessageBox+VideoOSMessageBoxInternals.HeaderAndMessageTemplateKey}" DataType="dataContext:MessageBoxContentDataContext">
+    <Grid Margin="0,0,0,24">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="24" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid Row="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <controls:VideoOSIcon Grid.Column="0" Width="16" Height="16" Margin="0,4.5,8,0" VerticalAlignment="Top" IconSource="{Binding IconSource}" Visibility="{Binding IconSource, Converter={converters:NullToVisibilityConverter NullResult=Collapsed, NotNullResult=Visible}}" />
+        <controls:VideoOSTextBlockH1 Grid.Column="1" VerticalAlignment="Top" TextWrapping="Wrap" MaxLines="2" Text="{Binding Header}" />
+      </Grid>
+      <controls:VideoOSTextBlockBodyMedium Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="{Binding Message}" />
+    </Grid>
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:VideoOSMessageBox+VideoOSMessageBoxInternals.HeaderOnlyTemplateKey}" DataType="dataContext:MessageBoxContentDataContext">
+    <Grid Margin="0,0,0,24">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <controls:VideoOSIcon Grid.Column="0" Width="16" Height="16" Margin="0,4.5,8,0" VerticalAlignment="Top" IconSource="{Binding IconSource}" Visibility="{Binding IconSource, Converter={converters:NullToVisibilityConverter NullResult=Collapsed, NotNullResult=Visible}}" />
+      <controls:VideoOSTextBlockH1 Grid.Column="1" VerticalAlignment="Top" TextWrapping="Wrap" Text="{Binding Header}" />
+    </Grid>
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:VideoOSMessageBox+VideoOSMessageBoxInternals.MessageOnlyTemplateKey}" DataType="dataContext:MessageBoxContentDataContext">
+    <Grid Margin="0,0,0,24">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <controls:VideoOSIcon Grid.Column="0" Width="16" Height="16" Margin="0,2,8,0" VerticalAlignment="Top" IconSource="{Binding IconSource}" Visibility="{Binding IconSource, Converter={converters:NullToVisibilityConverter NullResult=Collapsed, NotNullResult=Visible}}" />
+      <controls:VideoOSTextBlockBodyMedium Grid.Column="1" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Message}" />
+    </Grid>
+  </DataTemplate>
+</ResourceDictionary>

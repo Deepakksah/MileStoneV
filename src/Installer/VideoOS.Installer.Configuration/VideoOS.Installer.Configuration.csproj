@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Installer.Configuration</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="VideoOS.Installer.Configuration.GlobalPrerequisites.GlobalDotNetFX.Product.xml" />
+    <None Remove="VideoOS.Installer.Configuration.GlobalPrerequisites.GlobalPrerequisites.xml" />
+    <None Remove="VideoOS.Installer.Configuration.GlobalPrerequisites.GlobalWindowsInstaller.Product.xml" />
+    <EmbeddedResource Include="VideoOS.Installer.Configuration.GlobalPrerequisites.GlobalDotNetFX.Product.xml" LogicalName="VideoOS.Installer.Configuration.GlobalPrerequisites.GlobalDotNetFX.Product.xml" />
+    <EmbeddedResource Include="VideoOS.Installer.Configuration.GlobalPrerequisites.GlobalPrerequisites.xml" LogicalName="VideoOS.Installer.Configuration.GlobalPrerequisites.GlobalPrerequisites.xml" />
+    <EmbeddedResource Include="VideoOS.Installer.Configuration.GlobalPrerequisites.GlobalWindowsInstaller.Product.xml" LogicalName="VideoOS.Installer.Configuration.GlobalPrerequisites.GlobalWindowsInstaller.Product.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    
+    
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <Reference Include="System.Core" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\VideoOS.Common.EnvironmentServices\VideoOS.Common.EnvironmentServices.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Logging\VideoOS.Installer.Logging.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common\VideoOS.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Core\VideoOS.Installer.Core.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Interfaces\VideoOS.Installer.Interfaces.csproj" />
+  </ItemGroup>
+</Project>

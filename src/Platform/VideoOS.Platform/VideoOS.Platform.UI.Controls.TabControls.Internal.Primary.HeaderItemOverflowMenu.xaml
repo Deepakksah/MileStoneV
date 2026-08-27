@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Platform.UI.Controls.TabControls.Internal.Primary.HeaderItemOverflowMenu" x:ClassModifier="internal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:ui="clr-namespace:VideoOS.Platform.UI" xmlns:local="clr-namespace:VideoOS.Platform.UI.Controls.TabControls.Internal.Primary" x:Name="_root" Height="48" Focusable="True" ToolTip="{local:OverflowMenuTooltip}" MouseLeftButtonDown="HeaderItemOverflowMenu_OnMouseLeftButtonDown" KeyDown="HeaderItemOverflowMenu_OnKeyDown">
+  <Control.IsTabStop>
+    <MultiBinding Converter="{x:Static local:HeaderItemOverflowMenu.IsTabStopConverter}">
+      <Binding />
+      <Binding Path="SelectedItem" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type local:HeaderControl}}" />
+    </MultiBinding>
+  </Control.IsTabStop>
+  <Control.Background>
+    <MultiBinding Converter="{x:Static local:HeaderItemOverflowMenu.BackgroundConverter}">
+      <Binding Path="." RelativeSource="{RelativeSource Self}" />
+      <Binding Path="Items" RelativeSource="{RelativeSource Self}" />
+      <Binding Path="SelectedItem" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type local:HeaderControl}}" />
+      <Binding Path="IsEnabled" RelativeSource="{RelativeSource Self}" />
+      <Binding Path="IsMouseOver" RelativeSource="{RelativeSource Self}" />
+      <Binding Path="IsOpen" RelativeSource="{RelativeSource Self}" />
+      <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+    </MultiBinding>
+  </Control.Background>
+  <Grid>
+    <controls:VideoOSIcon HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16" IconSource="{local:OverflowMenuAlertIndicatorIcon}" />
+    <Rectangle Height="4" VerticalAlignment="Bottom">
+      <Shape.Fill>
+        <MultiBinding Converter="{x:Static local:HeaderItemOverflowMenu.SelectedIndicatorFillConverter}">
+          <Binding Path="." RelativeSource="{RelativeSource Self}" />
+          <Binding Path="Items" ElementName="_root" />
+          <Binding Path="SelectedItem" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type local:HeaderControl}}" />
+          <Binding Path="IsEnabled" ElementName="_root" />
+          <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+        </MultiBinding>
+      </Shape.Fill>
+    </Rectangle>
+  </Grid>
+</UserControl>

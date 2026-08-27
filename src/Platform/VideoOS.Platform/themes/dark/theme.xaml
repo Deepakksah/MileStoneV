@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/Themes/DesignSystemColors.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <system:String x:Key="{x:Static controls:VideoOSResourceKeysInternal.ThemeName}">Dark</system:String>
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.BackgroundBrushForWindowAndDialog}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.BackgroundBrushForWindows}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.BackgroundBrushForDialogs}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.DAK}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.HighlightBrushForWindowAndDialog}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.DAK}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.HighlightBrushForWindows}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.DAK}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.HighlightBrushForDialogs}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Storm}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.EmptyStateBrushForWindowAndDialog}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.DAK}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.EmptyStateBrushForWindows}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.DAK}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.EmptyStateBrushForDialogs}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Storm}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.SubtleBrushForWindowAndDialog}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Night}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.SubtleBrushForWindows}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.SubtleBrushForDialogs}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.ForegroundBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <system:Double x:Key="{x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}">1.0</system:Double>
+  <system:Double x:Key="{x:Static controls:VideoOSResourceKeys.IconOpacityEnabledLowEmphasis}">0.6</system:Double>
+  <system:Double x:Key="{x:Static controls:VideoOSResourceKeys.IconOpacityDisabled}">0.35</system:Double>
+  <Color x:Key="{x:Static controls:VideoOSResourceKeys.TransparentColor}">#00000000</Color>
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.TransparentBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.DebugPinkBrush}" po:Freeze="True" Color="Pink" Opacity="1" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BorderIdleBrush}" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BorderHoverBrush}" Color="{StaticResource Neutral.Mozart}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BorderPressedBrush}" Color="{StaticResource Neutral.Mozart}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BorderDisabledBrush}" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BorderSelectedBrush}" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BorderHighlightBrush}" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BackgroundIdleBrush}" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BackgroundIdleDownplayBrush}" Color="{StaticResource Neutral.Charcoal}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BackgroundHoverBrush}" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BackgroundPressedBrush}" Color="{StaticResource Primary.Orbit}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BackgroundDisabledBrush}" Opacity="0.35" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BackgroundSelectedBrush}" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.BackgroundHighlightBrush}" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.NonInteractiveForegroundHighEmphasisBrush}" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.NonInteractiveForegroundLowEmphasisBrush}" Opacity="0.6" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.NonInteractiveForegroundDisabledBrush}" Opacity="0.35" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.InteractiveForegroundIdleBrush}" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.InteractiveForegroundHoverBrush}" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.InteractiveForegroundPressedBrush}" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.InteractiveForegroundDisabledBrush}" Opacity="0.35" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.StatusDestructiveBrush}" Color="{StaticResource Destructive.Christmas}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.StatusWarningBrush}" Color="{StaticResource Warning.Holland}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.StatusConfirmationBrush}" Color="{StaticResource Confirmation.Frog}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeys.StatusInformationBrush}" Color="{StaticResource Neutral.England}" />
+  <DropShadowEffect x:Key="{x:Static controls:VideoOSResourceKeys.DropShadowEffect}" po:Freeze="true" ShadowDepth="1" BlurRadius="6" RenderingBias="Quality" Direction="270" Opacity="0.6" Color="{StaticResource Neutral.Black}" />
+  <Thickness x:Key="{x:Static controls:VideoOSResourceKeys.DropShadowThickness}" Left="6" Top="5" Right="6" Bottom="7" />
+  <LinearGradientBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.SmartClientAboutDialogBackgroundBrush}" StartPoint="0,1" EndPoint="1,0">
+    <GradientStop Offset="0.0" Color="{StaticResource Neutral.BlackHole}" />
+    <GradientStop Offset="1.0" Color="{StaticResource Neutral.Koala}" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineLineBackgroundBrush}" Color="{StaticResource Neutral.Petrol}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineSequenceSourceVisualAppearanceFillTopLineLowZOrderBrush}" Color="{StaticResource Destructive.Flamingo}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineSequenceSourceVisualAppearanceFillTopLineHighZOrderBrush}" Color="{StaticResource Destructive.Radio}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineSequenceSourceVisualAppearanceFillBottomLineLowZOrderBrush}" Color="{StaticResource Confirmation.Spinach}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineSequenceSourceVisualAppearanceFillBottomLineHighZOrderBrush}" Color="{StaticResource Confirmation.Frog}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineSequenceSourceVisualAppearanceFillExtraZOrder1Brush}" Color="{StaticResource Neutral.Stone}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineSequenceSourceVisualAppearanceFillExtraZOrder2Brush}" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineLivePlaybackToggleControlBackgroundBrush}" Color="{StaticResource Neutral.Petrol}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineLivePlaybackToggleControlSelectedBackgroundBrush}" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineLivePlaybackToggleControlBackgroundDisabledBrush}" Opacity="0.35" Color="{StaticResource Neutral.Petrol}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineLivePlaybackToggleControlSelectedBackgroundDisabledBrush}" Opacity="0.35" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineTimeRulerBaselineBrush}" Color="{StaticResource Neutral.Mozart}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineTimeRulerTickMarksPrimaryBrush}" Color="{StaticResource Neutral.Mozart}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineTimeRulerTickMarksSecondaryBrush}" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelinePlayheadBackgroundBrush}" Color="{StaticResource Neutral.DAK}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineTimeSelectionExcludedAreaOverlayBrush}" Opacity="0.7" Color="{StaticResource Neutral.Charcoal}" />
+  <LinearGradientBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineTracksFadeInBrush}" StartPoint="0,0" EndPoint="1,0">
+    <GradientStop Offset="0.0" Color="{StaticResource Neutral.Charcoal}" />
+    <GradientStop Offset="1.0" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineTracksFadeOutBrush}" StartPoint="0,0" EndPoint="1,0">
+    <GradientStop Offset="0.0" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+    <GradientStop Offset="1.0" Color="{StaticResource Neutral.Charcoal}" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineSelectionControlsBrush}" Color="{StaticResource Accent.Accent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineSelectionBookmarkBrush}" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineSelectionInfoBackgroundBrush}" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineDialogSeparatorLineBrush}" Color="{StaticResource Neutral.England}" />
+  <LinearGradientBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TimelineLabelsBackgroundBrush}" StartPoint="0,0" EndPoint="1,0">
+    <GradientStop Offset="0.0" Color="{StaticResource Neutral.Charcoal}" />
+    <GradientStop Offset="0.27" Color="{StaticResource Neutral.Charcoal}" />
+    <GradientStop Offset="1.0" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSInternalResourceKeys.TagBackgroundBrush}" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollBarThumbBackgroundIdleBrush}" po:Freeze="true" Opacity="1" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollBarThumbBackgroundDisabledBrush}" po:Freeze="true" Opacity="0.35" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollBarThumbBackgroundHoveredBrush}" po:Freeze="true" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollBarThumbBackgroundPressedBrush}" po:Freeze="true" Opacity="1" Color="{StaticResource Neutral.Koala}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollBarBorderBrush}" po:Freeze="true" Opacity="1" Color="{StaticResource Neutral.Koala}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollViewerScrollEdgeBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <LinearGradientBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollViewerScrollEdgeTopShadowBrush}" po:Freeze="True" StartPoint="0,0" EndPoint="0,1" Opacity="0.3">
+    <GradientStop Offset="0" Color="{StaticResource Neutral.Black}" />
+    <GradientStop Offset="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollViewerScrollEdgeBottomShadowBrush}" po:Freeze="True" StartPoint="0,0" EndPoint="0,1" Opacity="0.3">
+    <GradientStop Offset="0" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+    <GradientStop Offset="1" Color="{StaticResource Neutral.Black}" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPanelBorderIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPanelBorderDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <system:Double x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockOpacityEnabled}">1.0</system:Double>
+  <system:Double x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockOpacityDisabled}">0.35</system:Double>
+  <system:Double x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockOpacityHighEmphasis}">1.0</system:Double>
+  <system:Double x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockOpacityLowEmphasis}">0.6</system:Double>
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockTitleHighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockTitleHighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH1HighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH1HighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH2HighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH2HighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH2LowEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH2LowEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH2PrimaryForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH2PrimaryForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH3HighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH3HighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH3LowEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockH3LowEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockEmptyStateLowEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockEmptyStateLowEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyMediumHighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyMediumHighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyMediumLowEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyMediumLowEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyMediumDestructiveForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyMediumDestructiveForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumHighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumHighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumLowEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumLowEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumPrimaryForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumPrimaryForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumPrimaryForegroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumPrimaryForegroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumPrimaryUnderlinedForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumPrimaryUnderlinedForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumPrimaryUnderlinedForegroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumPrimaryUnderlinedForegroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumDestructiveForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumDestructiveForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumDestructiveForegroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Flamingo}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveMediumDestructiveForegroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Christmas}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodySmallHighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodySmallHighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodySmallLowEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodySmallLowEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodySmallDestructiveForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodySmallDestructiveForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallHighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallHighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallLowEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallLowEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallPrimaryForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallPrimaryForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallPrimaryForegroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallPrimaryForegroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallPrimaryUnderlinedForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallPrimaryUnderlinedForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallPrimaryUnderlinedForegroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallPrimaryUnderlinedForegroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallDestructiveForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallDestructiveForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallDestructiveForegroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Flamingo}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveSmallDestructiveForegroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Christmas}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyExtraSmallHighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyExtraSmallHighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyExtraSmallLowEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyExtraSmallLowEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyExtraSmallDestructiveForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockBodyExtraSmallDestructiveForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallHighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallHighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallLowEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallLowEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallPrimaryForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallPrimaryForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallPrimaryForegroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallPrimaryForegroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallPrimaryUnderlinedForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallPrimaryUnderlinedForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallPrimaryUnderlinedForegroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallPrimaryUnderlinedForegroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallDestructiveForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallDestructiveForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallDestructiveForegroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Flamingo}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockInteractiveExtraSmallDestructiveForegroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Christmas}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockLabelHighEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockLabelHighEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockLabelLowEmphasisForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBlockLabelLowEmphasisForegroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconAutoColorIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconAutoColorDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonAccentBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Accent.Accent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonAccentBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Accent.Accent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonAccentBackgroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Accent.ABL}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonAccentBackgroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Accent.Yoga}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonPrimaryNondestructiveBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonPrimaryNondestructiveBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonPrimaryNondestructiveBackgroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonPrimaryNondestructiveBackgroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonPrimaryDestructiveBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Radio}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonPrimaryDestructiveBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Destructive.Radio}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonPrimaryDestructiveBackgroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Cherry}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonPrimaryDestructiveBackgroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Merlot}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonSecondaryNondestructiveOutlineIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonSecondaryNondestructiveOutlineDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonSecondaryNondestructiveOutlineHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonSecondaryNondestructiveOutlinePressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonSecondaryDestructiveOutlineIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonSecondaryDestructiveOutlineDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonSecondaryDestructiveOutlineHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Flamingo}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonSecondaryDestructiveOutlinePressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Christmas}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonTertiaryBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonTertiaryBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonTertiaryBackgroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonTertiaryBackgroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Petrol}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonTransparentBackgroundIdleBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonTransparentBackgroundDisabledBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonTransparentBackgroundHoveredBrush}" po:Freeze="True" Opacity="0.2" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSButtonTransparentBackgroundPressedBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonDeselectedOutlineIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonDeselectedOutlineDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonDeselectedOutlineHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Unicorn}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonDeselectedOutlinePressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonSelectedOutlineIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonSelectedOutlineDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonSelectedOutlineHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Unicorn}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonSelectedOutlinePressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonDeselectedDotIdleBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonDeselectedDotDisabledBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonDeselectedDotHoveredBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonDeselectedDotPressedBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonSelectedDotIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonSelectedDotDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonSelectedDotHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Unicorn}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSRadioButtonSelectedDotPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedOutlineIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedOutlineDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedOutlineHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Unicorn}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedOutlinePressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxSelectedBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxSelectedBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxSelectedBackgroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Unicorn}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxSelectedBackgroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedBackgroundIdleBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedBackgroundDisabledBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedBackgroundHoveredBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedBackgroundPressedBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxSelectedTickIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxSelectedTickDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxSelectedTickHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxSelectedTickPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedTickIdleBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedTickDisabledBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedTickHoveredBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCheckBoxDeselectedTickPressedBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconOutlineOffIdleBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconOutlineOffDisabledBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconOutlineOffHoveredBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconOutlineOffPressedBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconBackgroundOffIdleBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconBackgroundOffDisabledBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconBackgroundOffHoveredBrush}" po:Freeze="True" Opacity="0.2" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconBackgroundOffPressedBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconOutlineOnIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconOutlineOnDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconOutlineOnHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconOutlineOnPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconBackgroundOnIdleBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconBackgroundOnDisabledBrush}" po:Freeze="True" Opacity="0.15" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconBackgroundOnHoveredBrush}" po:Freeze="True" Opacity="0.4" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonIconBackgroundOnPressedBrush}" po:Freeze="True" Opacity="0.5" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchOutlineOffIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchOutlineOffDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchOutlineOffHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Unicorn}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchOutlineOffPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchBackgroundOnIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchBackgroundOnDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchBackgroundOnHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Unicorn}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchBackgroundOnPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchBackgroundOffIdleBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchBackgroundOffDisabledBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchBackgroundOffHoveredBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchBackgroundOffPressedBrush}" po:Freeze="True" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchDotOffIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchDotOffDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchDotOffHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Unicorn}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchDotOffPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchDotOnIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchDotOnDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchDotOnHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToggleButtonSwitchDotOnPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxOutlineNormalIdleFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxOutlineNormalIdleUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxOutlineNormalDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxOutlineNormalHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Mozart}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxOutlineErrorIdleFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Radio}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxOutlineErrorIdleUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxOutlineErrorDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxOutlineErrorHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Flamingo}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxBackgroundIdleFocusedBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxBackgroundIdleUnfocusedBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.1" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTextBoxBackgroundHoveredBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxOutlineNormalIdleFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxOutlineNormalIdleUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxOutlineNormalDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxOutlineNormalHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Mozart}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxOutlineErrorIdleFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Radio}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxOutlineErrorIdleUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxOutlineErrorDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxOutlineErrorHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Flamingo}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxBackgroundIdleFocusedBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxBackgroundIdleUnfocusedBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.1" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPasswordBoxBackgroundHoveredBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableBorderIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableBorderDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableGridLinesIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Koala}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableGridLinesDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.Koala}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableHeaderBackgroundIdleFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableHeaderBackgroundIdleUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableHeaderBackgroundHoveredFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableHeaderBackgroundHoveredUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableHeaderBackgroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Orbit}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableHeaderBackgroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableHeaderSortIndicatorForegroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableHeaderSortIndicatorForegroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundDeselectedIdleFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundDeselectedIdleUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundDeselectedIdleAlternateFocusedBrush}" po:Freeze="True" Opacity="0.08" Color="{StaticResource Primary.Summer}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundDeselectedIdleAlternateUnfocusedBrush}" po:Freeze="True" Opacity="0.08" Color="{StaticResource Primary.Summer}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundDeselectedDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundDeselectedDisabledAlternateBrush}" po:Freeze="True" Opacity="0.03" Color="{StaticResource Primary.Summer}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundDeselectedHoveredFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundDeselectedHoveredUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundDeselectedHoveredAlternateFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundDeselectedHoveredAlternateUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundSelectedIdleFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundSelectedIdleUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundSelectedIdleAlternateFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundSelectedIdleAlternateUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundSelectedDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundSelectedDisabledAlternateBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundSelectedHoveredFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundSelectedHoveredUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundSelectedHoveredAlternateFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTableRowBackgroundSelectedHoveredAlternateUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSProgressBarBackgroundBrush}" po:Freeze="True" Opacity="0.5" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSProgressBarForegroundBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSProgressSpinnerBackgroundBrush}" po:Freeze="True" Opacity="0.5" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSProgressSpinnerForegroundBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarDividerIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Petrol}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarDividerDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.Petrol}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarErrorBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.PHO}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarErrorBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Destructive.PHO}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarErrorBarIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Radio}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarErrorBarDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Destructive.Radio}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarWarningBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Warning.Brick}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarWarningBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Warning.Brick}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarWarningBarIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Warning.Urban}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarWarningBarDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Warning.Urban}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarInformationBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.DAK}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarInformationBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.DAK}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarInformationBarIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarInformationBarDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarConfirmationBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Confirmation.Einstein}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarConfirmationBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Confirmation.Einstein}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarConfirmationBarIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Confirmation.Dinosaur}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSMessageBarConfirmationBarDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Confirmation.Dinosaur}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInSourceAppearanceErrorBrush}" po:Freeze="True" Color="{StaticResource Destructive.Christmas}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInSourceAppearanceWarningBrush}" po:Freeze="True" Color="{StaticResource Warning.Holland}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInSourceAppearancesConfirmationBrush}" po:Freeze="True" Color="{StaticResource Confirmation.Frog}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInSourceAppearancesNeutralBrush}" po:Freeze="True" Color="{StaticResource Neutral.Sneakers}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInErrorCombinedBackgroundBrush}" po:Freeze="True" Color="{StaticResource Destructive.Radio}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInErrorCombinedForegroundBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInWarningColorBackgroundBrush}" po:Freeze="True" Color="{StaticResource Warning.Urban}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInWarningColorForegroundBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInInformationCombinedBackgroundBrush}" po:Freeze="True" Color="{StaticResource Neutral.England}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInInformationCombinedForegroundBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInConfirmationCombinedBackgroundBrush}" po:Freeze="True" Color="{StaticResource Confirmation.Dinosaur}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInConfirmationCombinedForegroundBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInStateConfirmationCombinedForegroundBrush}" po:Freeze="True" Color="{StaticResource Confirmation.Frog}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInStateWarningCombinedForegroundBrush}" po:Freeze="True" Color="{StaticResource Warning.Holland}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSIconBuiltInStateErrorCombinedForegroundBrush}" po:Freeze="True" Color="{StaticResource Destructive.Christmas}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuBackgroundBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuOutlineBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Stone}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuItemBackgroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuItemBackgroundSelectedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuItemBackgroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Orbit}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuSeparatorLineBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Koala}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBorderNormalIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBorderNormalHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Mozart}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBorderNormalFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBorderNormalDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBorderErrorIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBorderErrorHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Flamingo}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBorderErrorFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Radio}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBorderErrorDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Destructive.POP}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBackgroundIdleBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBackgroundHoveredBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBackgroundFocusedBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSDropDownBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.1" Color="{StaticResource Neutral.BlackHole}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToolTipBackgroundBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSToolTipBorderBrush}" po:Freeze="True" Opacity="0.4" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPopoverPrimaryDarkBackgroundBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPopoverPrimaryLightBackgroundBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Summer}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPopoverAccentBackgroundBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Accent.Butterfly}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSPopoverNeutralBackgroundBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewBorderIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewBorderDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewBackgroundBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemBackgroundDeselectedIdleFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemBackgroundDeselectedIdleUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemBackgroundDeselectedHoveredFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemBackgroundDeselectedHoveredUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemBackgroundDeselectedDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemBackgroundSelectedIdleFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemBackgroundSelectedIdleUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.Dolphin}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemBackgroundSelectedHoveredFocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemBackgroundSelectedHoveredUnfocusedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemBackgroundSelectedDisabledBrush}" po:Freeze="True" Color="{StaticResource Neutral.Dolphin}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityDisabled}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemIconAutoColorDeselectedIdleFocusedBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledLowEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemIconAutoColorDeselectedIdleUnfocusedBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledLowEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemIconAutoColorDeselectedHoveredFocusedBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledLowEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemIconAutoColorDeselectedHoveredUnfocusedBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledLowEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemIconAutoColorDeselectedDisabledBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityDisabled}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemIconAutoColorSelectedIdleFocusedBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemIconAutoColorSelectedIdleUnfocusedBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemIconAutoColorSelectedHoveredFocusedBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemIconAutoColorSelectedHoveredUnfocusedBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityEnabledHighEmphasis}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewItemIconAutoColorSelectedDisabledBrush}" po:Freeze="True" Color="{StaticResource Neutral.White}" Opacity="{StaticResource {x:Static controls:VideoOSResourceKeys.IconOpacityDisabled}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlBorderIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlBorderDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabBackgroundDeselectedIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabBackgroundDeselectedHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabBackgroundDeselectedPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Orbit}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabBackgroundDeselectedDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabBackgroundSelectedIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabBackgroundSelectedHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabBackgroundSelectedPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabBackgroundSelectedDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.Secondary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabSelectedIndicatorIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabSelectedIndicatorDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.Primary}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabSeparatorIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSTabControlHeaderTabSeparatorDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderTrackAppearanceDefaultBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderTrackAppearanceDefaultDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderTrackAppearanceNeutralBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderTrackAppearanceNeutralDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderTrackAppearancePrimaryBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderTrackAppearancePrimaryDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.Argentina}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderThumbFillIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderThumbFillHoverBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Unicorn}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderThumbFillPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderThumbFillDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderThumbOutlineIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderThumbOutlineHoverBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Unicorn}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderThumbOutlinePressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderThumbOutlineDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.White}" />
+  <system:Double x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderThumbEnabledOpacity}">1.0</system:Double>
+  <system:Double x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSSliderThumbDisabledOpacity}">0.35</system:Double>
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarBorderIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarBorderDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarTodayItemOutlineIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarTodayItemOutlineHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarTodayItemOutlinePressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarTodayItemOutlineDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.MainEvent}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarSelectedItemBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarSelectedItemBackgroundHoveredBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarSelectedItemBackgroundPressedBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarSelectedItemBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Primary.Chameleon}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarDeselectedItemBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarDeselectedItemBackgroundHoveredBrush}" po:Freeze="True" Opacity="0.2" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarDeselectedItemBackgroundPressedBrush}" po:Freeze="True" Opacity="0.3" Color="{StaticResource Neutral.White}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSCalendarDeselectedItemBackgroundDisabledBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource {x:Static controls:VideoOSResourceKeys.TransparentColor}}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSActionListSeparatorLineBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Neutral.England}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSBadgeBackgroundIdleBrush}" po:Freeze="True" Opacity="1" Color="{StaticResource Destructive.Radio}" />
+  <SolidColorBrush x:Key="{x:Static controls:VideoOSResourceKeysInternal.VideoOSBadgeBackgroundDisabledBrush}" po:Freeze="True" Opacity="0.35" Color="{StaticResource Destructive.Radio}" />
+</ResourceDictionary>

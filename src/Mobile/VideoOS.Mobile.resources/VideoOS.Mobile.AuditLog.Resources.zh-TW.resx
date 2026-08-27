@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="DeviceNotificationsEnabledChanged" xml:space="preserve"><value>行動裝置伺服器「{0}」：{1} 推送註冊裝置「{2}」的通知</value></data>
+  <data name="ExportLocation" xml:space="preserve"><value>匯出位置</value></data>
+  <data name="VideoPlayback" xml:space="preserve"><value>行動伺服器「{0}」：正在播放 {1} 到 {2}(UTC 時間) 的錄製影像。</value></data>
+  <data name="InvestigationDeleted" xml:space="preserve"><value>行動裝置伺服器 '{0}'：已刪除的調查
+調查名稱：'{1}'
+片段：'{2}' 到 '{3}'
+包含裝置：{4}
+(均為 UTC 時間)</value></data>
+  <data name="VideoPushStopped" xml:space="preserve"><value>行動伺服器「{0}」：已停止視訊推送。</value></data>
+  <data name="VideoPushStarted" xml:space="preserve"><value>行動伺服器「{0}」：已啟動視訊推送。</value></data>
+  <data name="InvestigationCreated" xml:space="preserve"><value>行動裝置伺服器 '{0}'：已建立的調查
+調查名稱：'{1}'
+片段：'{2}' 到 '{3}'
+包含裝置：{4}
+(均為 UTC 時間)</value></data>
+  <data name="ExportTypeDb" xml:space="preserve"><value>資料庫</value></data>
+  <data name="SettingChanged" xml:space="preserve"><value>行動伺服器「{0}」：「{1}」由「{2}」變更為「{3}」</value></data>
+  <data name="ItemRemoved" xml:space="preserve"><value>行動伺服器「{0}」：已使用設定移除 {1}：{2}</value></data>
+  <data name="ItemAdded" xml:space="preserve"><value>行動伺服器「{0}」：已使用設定新增 {1}：{2}</value></data>
+  <data name="TwoStepCorrectCodeEntered" xml:space="preserve"><value>行動伺服器「{0}」：已成功套用驗證碼。</value></data>
+  <data name="LoggedOutByServer" xml:space="preserve"><value>行動裝置伺服器「{0}」︰系統發起的登出</value></data>
+  <data name="InvestigationStateCompleted" xml:space="preserve"><value>已完成</value></data>
+  <data name="ConfigExport" xml:space="preserve"><value>行動伺服器「{0}」：設定已匯出至「{1}」</value></data>
+  <data name="DeviceDeleted" xml:space="preserve"><value>行動伺服器「{0}」︰已將裝置「{1}」從注冊的裝置清單上移除。</value></data>
+  <data name="LoggedOutByClient" xml:space="preserve"><value>行動裝置伺服器「{0}」︰使用者發起的登出</value></data>
+  <data name="TwoStepCodeSent" xml:space="preserve"><value>行動伺服器「{0}」：已傳送驗證碼。</value></data>
+  <data name="ExportCreated" xml:space="preserve"><value>行動裝置伺服器 '{0}'：已就緒的調查匯出
+調查名稱：'{1}'
+片段：'{2}' 到 '{3}'
+包含裝置：{4}
+受密碼保護：{5}
+包含的語音：{6}
+匯出格式：{7}
+(均為 UTC 時間)</value></data>
+  <data name="InvestigationUpdated" xml:space="preserve"><value>行動裝置伺服器 '{0}'：已變更的調查詳情
+調查名稱：
+- 變更前：'{1}'
+- 變更後：'{2}'
+片段:
+- 變更前：'{3}' 至 '{4}'
+- 變更後：'{5}' 至 '{6}'
+包含裝置：{7}
+新狀態：{8}
+(均為 UTC 時間)</value></data>
+  <data name="TwoStepIncorrectCodeEntered" xml:space="preserve"><value>行動伺服器「{0}」：輸入的驗證碼不正確。</value></data>
+  <data name="InvestigationStateOngoing" xml:space="preserve"><value>進行中</value></data>
+  <data name="TwoStepUserNotAllowed" xml:space="preserve"><value>行動伺服器「{0}」：由於兩步驗證的問題，登入未完成。</value></data>
+  <data name="ExportDownloaded" xml:space="preserve"><value>行動裝置伺服器 '{0}'：已下載的調查匯出
+調查名稱：'{1}'
+片段：'{2}' 到 '{3}'
+包含裝置：{4}
+受密碼保護：{5}
+包含的語音：{6}
+匯出格式：{7}
+(均為 UTC 時間)</value></data>
+  <data name="ItemUpdated" xml:space="preserve"><value>行動伺服器「{0}」：「{1}」從： 
+{2}
+更新為： 
+{3}</value></data>
+  <data name="ExportDeleted" xml:space="preserve"><value>行動裝置伺服器 '{0}'：已刪除的調查匯出
+調查名稱：'{1}'
+片段：'{2}' 到 '{3}'
+包含裝置：{4}
+匯出格式：{5}
+(均為 UTC 時間)</value></data>
+  </root>

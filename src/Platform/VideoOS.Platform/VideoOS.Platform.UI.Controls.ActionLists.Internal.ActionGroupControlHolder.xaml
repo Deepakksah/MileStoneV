@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentControl x:Class="VideoOS.Platform.UI.Controls.ActionLists.Internal.ActionGroupControlHolder" x:ClassModifier="internal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:internal="clr-namespace:VideoOS.Platform.UI.Controls.ActionLists.Internal" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:commands="clr-namespace:VideoOS.Platform.UI.Commands" Focusable="False" Content="{Binding}">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonTextExtraSmallDataTemplateName}">
+        <controls:VideoOSMenuButtonTextSmall commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonTextSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonTextSmallDataTemplateName}">
+        <controls:VideoOSMenuButtonTextSmall commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonTextSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonTextMediumDataTemplateName}">
+        <controls:VideoOSMenuButtonTextMedium commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonTextMedium>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonPrimaryExtraSmallDataTemplateName}">
+        <controls:VideoOSMenuButtonPrimarySmall commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonPrimarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonPrimarySmallDataTemplateName}">
+        <controls:VideoOSMenuButtonPrimarySmall commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonPrimarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonPrimaryMediumDataTemplateName}">
+        <controls:VideoOSMenuButtonPrimaryMedium commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonPrimaryMedium>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonSecondaryExtraSmallDataTemplateName}">
+        <controls:VideoOSMenuButtonSecondarySmall commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonSecondarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonSecondarySmallDataTemplateName}">
+        <controls:VideoOSMenuButtonSecondarySmall commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonSecondarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonSecondaryMediumDataTemplateName}">
+        <controls:VideoOSMenuButtonSecondaryMedium commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonSecondaryMedium>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonTertiaryExtraSmallDataTemplateName}">
+        <controls:VideoOSMenuButtonTertiarySmall commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonTertiarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonTertiarySmallDataTemplateName}">
+        <controls:VideoOSMenuButtonTertiarySmall commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonTertiarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonTertiaryMediumDataTemplateName}">
+        <controls:VideoOSMenuButtonTertiaryMedium commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonTertiaryMedium>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonTransparentExtraSmallDataTemplateName}">
+        <controls:VideoOSMenuButtonTransparentExtraSmall commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonTransparentExtraSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonTransparentSmallDataTemplateName}">
+        <controls:VideoOSMenuButtonTransparentSmall commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonTransparentSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionGroupControlHolder.MenuButtonTransparentMediumDataTemplateName}">
+        <controls:VideoOSMenuButtonTransparentMedium commands:EventsToCommandMapping.Events="Opened, Closed" Content="{Binding Text}" IconSource="{Binding IconSource}" Actions="{Binding Actions}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" commands:EventsToCommandMapping.Command="{Binding MenuButtonOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type internal:ActionGroupControlHolder}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSMenuButtonTransparentMedium>
+      </DataTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <ContentControl.ContentTemplate>
+    <MultiBinding Converter="{x:Static internal:ActionGroupControlHolder.ContentDataTemplateConverter}">
+      <Binding Path="." RelativeSource="{RelativeSource Self}" />
+      <Binding Path="Appearance" />
+    </MultiBinding>
+  </ContentControl.ContentTemplate>
+</ContentControl>

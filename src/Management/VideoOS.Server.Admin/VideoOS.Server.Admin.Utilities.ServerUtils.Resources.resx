@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Adding_user_to_the_management_server" xml:space="preserve"><value>Adding user to the management server. User: {0}. Role: {1}</value></data>
+  <data name="Setting_the_service_account" xml:space="preserve"><value>Setting the service account. Old user: {0}. New user: {1}</value></data>
+  <data name="Setting_the_service_account_Old_user_0_New_user_1" xml:space="preserve"><value>Setting the service account. Old user: {0}. New user: {1}</value></data>
+  <data name="Error_adding_user" xml:space="preserve"><value>Error adding user: Error {0}</value></data>
+  <data name="Error_adding_role" xml:space="preserve"><value>Error adding role: Error {0}</value></data>
+  <data name="OldAccountIsNull" xml:space="preserve"><value>oldAccount</value></data>
+  <data name="Service_account_changed" xml:space="preserve"><value>Service account changed. Old user: {0}. New user: {1}</value></data>
+  <data name="ServiceAccountIsNull" xml:space="preserve"><value>serviceAccount</value></data>
+  <data name="Service_namespace_security_has_been_set" xml:space="preserve"><value>Service namespace security has been set. User: {0}</value></data>
+  <data name="NewAccountIsNull" xml:space="preserve"><value>newAccount</value></data>
+  <data name="Invalid_account" xml:space="preserve"><value>Invalid account</value></data>
+  <data name="Service_Account_Has_Been_Added_to_Administrators_Role" xml:space="preserve"><value>Service account: {0} has been added to the Administrators Role</value></data>
+  <data name="Database_account_has_been_set" xml:space="preserve"><value>Database account has been set. User: {0}</value></data>
+  <data name="Error_connecting_to_server" xml:space="preserve"><value>Error connecting to server. Error {0}</value></data>
+  <data name="Adding_Service_Account_to_Administrators_Role" xml:space="preserve"><value>Adding service account: {0} to the Administrators Role</value></data>
+  <data name="Validated_the_web_server" xml:space="preserve"><value>Validated the web server.</value></data>
+  <data name="The_role_does_not_exist" xml:space="preserve"><value>The role does not exist</value></data>
+  <data name="Adding_role_to_the_management_server" xml:space="preserve"><value>Adding role to the management server. Role: {0}.</value></data>
+  <data name="oldAccount" xml:space="preserve"><value>oldAccount</value></data>
+  <data name="New_account_not_found" xml:space="preserve"><value>New account not found</value></data>
+  <data name="Setting_database_account_on_server" xml:space="preserve"><value>Setting database account on server: {0}, database: {1}, account name: {2}</value></data>
+  <data name="User" xml:space="preserve"><value>Installing user: {0}</value></data>
+  </root>

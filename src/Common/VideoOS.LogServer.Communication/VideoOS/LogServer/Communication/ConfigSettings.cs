@@ -1,0 +1,25 @@
+﻿using System;
+using System.Configuration;
+using VideoOS.LogServer.Communication.CommunicationFactory;
+
+namespace VideoOS.LogServer.Communication;
+
+public class ConfigSettings
+{
+	private static readonly LogServiceClientBindingParameters DefaultLogServiceClientBindingParameters = new LogServiceClientBindingParameters();
+
+	public static LogServiceClientBindingParameters LogConfigurationServiceClientBindingParameters => new LogServiceClientBindingParameters(SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogConfiguration.BindingOpenTimeoutSeconds", DefaultLogServiceClientBindingParameters.OpenTimeout), SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogConfiguration.BindingCloseTimeoutSeconds", DefaultLogServiceClientBindingParameters.CloseTimeout), SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogConfiguration.BindingSendTimeoutSeconds", DefaultLogServiceClientBindingParameters.SendTimeout), SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogConfiguration.BindingReceiveTimeoutSeconds", DefaultLogServiceClientBindingParameters.ReceiveTimeout));
+
+	public static LogServiceClientBindingParameters LogReaderServiceClientBindingParameters => new LogServiceClientBindingParameters(SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogReader.BindingOpenTimeoutSeconds", DefaultLogServiceClientBindingParameters.OpenTimeout), SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogReader.BindingCloseTimeoutSeconds", DefaultLogServiceClientBindingParameters.CloseTimeout), SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogReader.BindingSendTimeoutSeconds", DefaultLogServiceClientBindingParameters.SendTimeout), SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogReader.BindingReceiveTimeoutSeconds", DefaultLogServiceClientBindingParameters.ReceiveTimeout));
+
+	public static LogServiceClientBindingParameters LogWriterServiceClientBindingParameters => new LogServiceClientBindingParameters(SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogWriter.BindingOpenTimeoutSeconds", DefaultLogServiceClientBindingParameters.OpenTimeout), SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogWriter.BindingCloseTimeoutSeconds", DefaultLogServiceClientBindingParameters.CloseTimeout), SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogWriter.BindingSendTimeoutSeconds", DefaultLogServiceClientBindingParameters.SendTimeout), SecondsTimeSpanFromAppSettings("VideoOS.LogServer.Communication.LogWriter.BindingReceiveTimeoutSeconds", DefaultLogServiceClientBindingParameters.ReceiveTimeout));
+
+	private static TimeSpan SecondsTimeSpanFromAppSettings(string appConfigKey, TimeSpan defaultValue)
+	{
+		if (!int.TryParse(ConfigurationManager.AppSettings[appConfigKey], out var result))
+		{
+			return defaultValue;
+		}
+		return TimeSpan.FromSeconds(result);
+	}
+}

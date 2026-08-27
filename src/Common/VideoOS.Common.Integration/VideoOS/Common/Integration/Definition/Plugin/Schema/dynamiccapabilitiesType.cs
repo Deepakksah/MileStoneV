@@ -1,0 +1,58 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
+namespace VideoOS.Common.Integration.Definition.Plugin.Schema;
+
+[Serializable]
+[GeneratedCode("xsd", "4.6.1055.0")]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://VideoOS.net/Surveillance/XmlSchema")]
+public class dynamiccapabilitiesType
+{
+	private dynamiccapabilitiesTypeCapability[] capabilityField;
+
+	private dynamiccapabilitiesTypePresets presetsField;
+
+	private dynamiccapabilitiesTypePtz ptzField;
+
+	[XmlElement("capability")]
+	public dynamiccapabilitiesTypeCapability[] capability
+	{
+		get
+		{
+			return capabilityField;
+		}
+		set
+		{
+			capabilityField = value;
+		}
+	}
+
+	public dynamiccapabilitiesTypePresets presets
+	{
+		get
+		{
+			return presetsField;
+		}
+		set
+		{
+			presetsField = value;
+		}
+	}
+
+	public dynamiccapabilitiesTypePtz ptz
+	{
+		get
+		{
+			return ptzField;
+		}
+		set
+		{
+			ptzField = value;
+		}
+	}
+}

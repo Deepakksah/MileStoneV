@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorMessage_RestartLabelHead" xml:space="preserve"><value>Restart the computer.</value></data>
+  <data name="Install_ConfirmInstallText" xml:space="preserve"><value>{0} is already installed on this computer. Do you want to update it to {1}?</value></data>
+  <data name="ErrorMessage_PackagesFailedLabelHeadLine" xml:space="preserve"><value>Cannot install the components needed to run {0}</value></data>
+  <data name="ProcessUpdate_ButtongContinueAndIgnore" xml:space="preserve"><value>&amp;Ignore</value></data>
+  <data name="ErrorMessage_GeneralErrorUninstallLabelSubLine" xml:space="preserve"><value>An attempt to uninstall {0} has failed. Open the log file for details.</value></data>
+  <data name="FileLocation_LabelHeadLine_HardwareManufacturerMode" xml:space="preserve"><value>Select file location</value></data>
+  <data name="IISSetup_NoWebSiteFound" xml:space="preserve"><value>Verify that you have the required version of Internet Information Services (IIS), and that it is installed correctly.</value></data>
+  <data name="IISSetup_ListAddress" xml:space="preserve"><value>Address</value></data>
+  <data name="btn_Cancel" xml:space="preserve"><value>C&amp;ancel</value></data>
+  <data name="InstallationType_LabelInstallCustomCompDescription" xml:space="preserve"><value>This option allows you to change the default values for the installation parameters.</value></data>
+  <data name="Modify_LabelHeadLine" xml:space="preserve"><value>Changing {0} installation...</value></data>
+  <data name="ErrorMessage_GeneralErrorLabelMessage" xml:space="preserve"><value>Error details: '{0}'</value></data>
+  <data name="FileLocation_WarningText" xml:space="preserve"><value>Note that IIS logging will be disabled on the management server.
+Also note that the basic user feature requires an HTTPS binding with an IIS certificate. If the binding and the certificate are not installed, the program installs them automatically.</value></data>
+  <data name="IISSetup_DetailsDesc" xml:space="preserve"><value>The installer uses the selected website. The installer starts the website if it is not already started.</value></data>
+  <data name="WarningMessage_ExistingSystemsUninstallOldText" xml:space="preserve"><value>An existing installation of {0} has been detected on this computer. In order to install {1}, your current installation of {0} will be removed from this computer. All existing recordings and configuration from the previous version will be available in the new version.
+Do you want to continue?</value></data>
+  <data name="ErrorMessage_InvalidPathText" xml:space="preserve"><value>Entered path is invalid.</value></data>
+  <data name="InstallationType_LabelInstallTypicalGroupDescription" xml:space="preserve"><value>This option installs all components needed to run {0} on this computer. You can later extend your system by installing clients and archives on other computers.</value></data>
+  <data name="Message_SSRegistrationPerfomFailed" xml:space="preserve"><value>The registration of {0} on the download page failed. Exit code: {1}.</value></data>
+  <data name="ErrorMessage_InvalidPathCaption" xml:space="preserve"><value>Invalid path</value></data>
+  <data name="LicUpdate_SubHeadling" xml:space="preserve"><value>You have a license for an older {0} version of the product.
+
+Do you want your license to be automatically replaced with the license for {1}?
+A new license will be imported and your old license will not be valid anymore.</value></data>
+  <data name="Install_LabelHeadLine" xml:space="preserve"><value>Installing {0}</value></data>
+  <data name="ProcessUpdate_Headline" xml:space="preserve"><value>Updating your license…</value></data>
+  <data name="Uninstalling_CompletedHeadline" xml:space="preserve"><value>Uninstallation completed</value></data>
+  <data name="Uninstalling_CompletedMessage" xml:space="preserve"><value>Uninstallation of {0} completed successfully</value></data>
+  <data name="WarningMessage_ExistingSystemsUninstallOldVersionDependentText" xml:space="preserve"><value>An existing installation of {0} has been detected on this computer. In order to install {1}, your current installation of {0} will be removed from this computer. All existing recordings and configuration from the previous version will be available in the new version.
+
+{0} is not a supported version of your product, so the upgrade from this version to {1} may not work. 
+
+Do you want to continue?</value></data>
+  <data name="IISSetup_ListState" xml:space="preserve"><value>State</value></data>
+  <data name="Welcome_LabelLicenseFileLocation" xml:space="preserve"><value>Enter the location of the &amp;license file:</value></data>
+  <data name="FileLocation_LabelProductLanguage" xml:space="preserve"><value>Product &amp;language:</value></data>
+  <data name="LicUpdate_Headline" xml:space="preserve"><value>License update available</value></data>
+  <data name="Initialize_LabelHeadLine" xml:space="preserve"><value>Checking and preparing your computer for installation...</value></data>
+  <data name="btnFinish_Text" xml:space="preserve"><value>&amp;Finish</value></data>
+  <data name="MessageBox_ConfirmPostInstallationCloseCaption" xml:space="preserve"><value>Stop configuration</value></data>
+  <data name="CertificateCommonHyperLinkText" xml:space="preserve"><value>Learn more</value></data>
+  <data name="Install_LabelComponentProgress" xml:space="preserve"><value>Installing {0}...</value></data>
+  <data name="ErrorMessage_ServerIsRunningSecure" xml:space="preserve"><value>The management server is configured to be secure. Enter an HTTPS address.</value></data>
+  <data name="btn_Install" xml:space="preserve"><value>&amp;Install</value></data>
+  <data name="NewPasswordInvalid" xml:space="preserve"><value>The password is invalid.</value></data>
+  <data name="Welcome_ButtonContinue" xml:space="preserve"><value>&amp;Continue</value></data>
+  <data name="LicUpdate_ButtonSkipUpdate" xml:space="preserve"><value>&amp;Skip update</value></data>
+  <data name="ProcessUpdate_Successfull" xml:space="preserve"><value>License for the {0} was retrieved from the software registration system.</value></data>
+  <data name="ServerSelection_LabelSubHeader" xml:space="preserve"><value>Enter the management server address. Use HTTPS if the management server is configured to be secure:</value></data>
+  <data name="ErrorMessage_PackagesFailedLabelSubLine" xml:space="preserve"><value>The components listed below needs to be installed before installation of {0} is possible. Install these components, before you run this installer again.</value></data>
+  <data name="ProcessUpdate_SupExpired" xml:space="preserve"><value>Your Software Upgrade Plan has expired ({0})</value></data>
+  <data name="UninstallWelcome_Modify" xml:space="preserve"><value>Change one or more {0} components</value></data>
+  <data name="Finish_OpenDownloadLink" xml:space="preserve"><value>Show system component download page</value></data>
+  <data name="Eula_LabelHeadLine" xml:space="preserve"><value>Accept the {0} license agreement</value></data>
+  <data name="ErrorMessage_ExistingSystemsExistCaption" xml:space="preserve"><value>Previous versions have been detected on the computer.</value></data>
+  <data name="LicUpdate_SupHelpLink" xml:space="preserve"><value>Milestone Care™ Plus</value></data>
+  <data name="LicUpdate_SupHelpInfo" xml:space="preserve"><value>Automatic upgrade requires a valid</value></data>
+  <data name="Welcome_LabelSubHeading" xml:space="preserve"><value>You can install a trial of {0}, or, if you have a license file, you can install a licensed version.</value></data>
+  <data name="FileLocation_LabelSpaceAveliableTb" xml:space="preserve"><value>Free disk space on drive: {0} TB</value></data>
+  <data name="FileLocation_LabelSpaceAveliableMb" xml:space="preserve"><value>Free disk space on drive: {0} MB</value></data>
+  <data name="ServerSelection_TryingToConnect" xml:space="preserve"><value>Connecting to the server...</value></data>
+  <data name="MultiInstanceRecorderVerificationErrorMessage" xml:space="preserve"><value>An error occurred while verifying multi-instance recorders.
+{0}</value></data>
+  <data name="ProcessUpdate_ErrorLicEmpty" xml:space="preserve"><value>The retrieved license file from the server is empty.</value></data>
+  <data name="ErrorMessage_NotEnoughSpaceSubLine" xml:space="preserve"><value>{0} requires {1} MB free disk space to install. There is only {2} MB available on the selected disk drive. Clean up the disk drive or select another disk drive.</value></data>
+  <data name="Welcome_LabelHeadLine2" xml:space="preserve"><value>Select license file</value></data>
+  <data name="CertificateCommonEncryptionSubTitleRun" xml:space="preserve"><value>It is recommended to secure communication with encryption.</value></data>
+  <data name="Install_ConfirmInstallTitle" xml:space="preserve"><value>Confirm installation</value></data>
+  <data name="WarningMessage_ExistingSystemsUninstallOldVersionDependentTrialText" xml:space="preserve"><value>An existing fully licensed {0} installation has been detected. To install a trial version of {1}, your current installation will be removed. 
+
+If you install {1} in trial mode, you may lose recorded video. Trial mode supports only up to eight cameras, and has a retention time of five days. If your system uses more than eight cameras, these cameras and their recordings will be deleted. Recordings that are more than five days old will be deleted.
+
+{0} is not a supported version of your product, so the upgrade from this version to {1} may not work. 
+
+Are you sure you want to install in trial mode and uninstall {0}?</value></data>
+  <data name="ErrorMessage_AnotherInstanceRunning" xml:space="preserve"><value>Another installation is already running. Wait until it is finished and run this installer again.</value></data>
+  <data name="WarningPageHeaderInfo" xml:space="preserve"><value>Before, during or after the installation, you need to address the following important compatibility and vulnerability issues.</value></data>
+  <data name="Welcome_LabelLicenseKey" xml:space="preserve"><value>Enter the license &amp;key:</value></data>
+  <data name="InstallationType_LabelInstallTypicalCompDescription" xml:space="preserve"><value>This option installs all components needed to run {0} on this computer.</value></data>
+  <data name="ButtonBrowse" xml:space="preserve"><value>&amp;Browse...</value></data>
+  <data name="Message_SSRegistrationPerformed" xml:space="preserve"><value>The registration on the download page was successful.</value></data>
+  <data name="WarningMessage_ExistingSystemsUninstallOldTrialext" xml:space="preserve"><value>An existing fully licensed {0} installation has been detected. To install a trial version of {1}, your current installation will be removed. 
+
+If you install  {1} in trial mode, you may lose recorded video. Trial mode supports only up to eight cameras, and has a retention time of five days. If your system uses more than eight cameras, these cameras and their recordings will be deleted. Recordings that are more than five days old will be deleted.
+
+Are you sure you want to install in trial mode and uninstall {0}?</value></data>
+  <data name="Finish_GettingStartedLabel" xml:space="preserve"><value>Show Quick Getting Started Guide</value></data>
+  <data name="refresharrow_3_16x16" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAUwEAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlw
+SFlzAAAOxAAADsQBlSsOGwAAAOhJREFUOE+l00GKwkAQheGAS2d2mvt4hRmPIwZG8B5eYcatNxAR
+vYiKi0HE9v1NCitFJKCLL8SuqmfSSYqU0lvy4WvR8wYyl53817byI9Ssr2oL+JaDpCeOQk/F7xhA
+4UZB/mQkHzXOWaNmPY2AoZBOYSoWGq0kD8MHcH8sLiUOmXzZzs0HsEkscqlxEHEYVx/ATrP4KXH4
+qc4Aal3yQc1dt+DRs5a5D7BN/JU4ENFDbyOgFHuME4lDhho99JY+AG0vUr/Guf0zPfQ29sCM5SQ0
+tqGWh9EWAPuY9nKRs2xkJv5jegS8LhV3kUfQ5eJgqa4AAAAASUVORK5CYIIL</value></data><data name="MultiInstancesRecorderNotSupportedMessage" xml:space="preserve"><value>We have detected that your system has multiple instances of the recording server installed.
+Multiple instances of the recording server is no longer supported from version 2024 R2 onward.
+
+For further details on how to proceed, please refer to {0} KB article.</value></data>
+  <data name="ErrorMessage_WinVersionMissmatchText" xml:space="preserve"><value>You cannot install {0} on this operating system. The OS is not supported.</value></data>
+  <data name="MultiInstancesRecorderNotSupportedMessageLinkText" xml:space="preserve"><value>this</value></data>
+  <data name="Welcome_LabelHeadLine" xml:space="preserve"><value>Select which version of {0} you want to install</value></data>
+  <data name="ProcessUpdate_NoNewProductWithinSup" xml:space="preserve"><value>There are no new products available for your Software Upgrade Plan.</value></data>
+  <data name="ServerSelection_ServerNotFound" xml:space="preserve"><value>The management server is not responding. Make sure that: The management server is online; HTTPS is used if the management server is configured to be secure; the versions of the management server and the component that you are about to install are compatible.</value></data>
+  <data name="InstallationType_LabelInstallCustomGroupDescription" xml:space="preserve"><value>This option allows you to select the components you want to install on this computer. You can also change the default values for the installation parameters. When the installation is complete, you can later extend your system by installing clients and archives on other computers.</value></data>
+  <data name="error" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA3AIAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlw
+SFlzAAAOxAAADsQBlSsOGwAAAnFJREFUOE9lk99PUmEYx8/1e0CniBlgWGqE0zVm86otr1wNitVV
+tW6iLopV7iyzlQvM6fSiCxtXZXbZRBsOSy1s6weiYiAKxNRggrh10V+guX17zhHk17M929l73s/3
+eb7PeQ5XHCHPFJL9VqQt7UiZDYifb0bU2IaVuzew5JpA5lpp+H3zSA5Y8edqKzZblYjqZQjreKw2
+8gg28PDrKuFtqsXX65ex6PUWColwutOMrXYt1pt4xE4xRE4yrDUyrDQw/DzBsHScwadl8GgVcLcZ
+sJAvkrDfRvLcMazrGf6ODmPnuVAA+wmOP32AnREHvtUyuGsqMH7JdCAQnHZh29yEDT0vwfv7+1Ju
+9woI5MHZ89RrB+aOMryVyfDF6QS3KVzDhkEhtZ3usuDf7u7h5S2bgHhPDhbfRe5b8LmG4X2VDK86
+OsD9Np7GLxpYVHfgOfmwUKQEpuozR8hGNY8BtQpc7KwWkQwcIs+BempZIJG9vZwAPefDHyknqxh6
+ysvBhVrVWKOJZ2HRcyKv7WzGngiYzcDuarKgYOgWBZbO1EnfOUjwcjFMlfM7CT8WJNhF1ccrGbpU
+ZOH7lQ4s1peVwFnP4XuFM1ntFqTqo3IGmzhE79g7zKrkWKhjSL3oK4A95HmWJh6y5kSig30Yq2B4
+xPOYEj+jGJPmC5ipkeMHLUliyH4IfyJ4mjxPUduBOxZE+u1S6y9lPHpNmUUSQ1zLEUMzJpQyzKlo
+XYvgSeXB0JxUeZhgoaUF88X/g48OHCYjhuiCk6qIw5JAGpgIvilj6KS2nxmNpXB+fCBfgxdNEDRq
+3GIMNymtGg1s1LI76/kwOO4/dGM0myxai3wAAAAASUVORK5CYIIL</value></data><data name="LicUpdate_ButtonUpdate" xml:space="preserve"><value>&amp;Update</value></data>
+  <data name="Finish_LabelHeadLine" xml:space="preserve"><value>The installation is complete</value></data>
+  <data name="spinner_16x16" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAxAEAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAA
+OpgAABdvkl/FRgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAUpJREFUOE+N0jsohWEcx/HXNXdSBnJJ
+cllY3AabQsqGUkophUGKIhOTy6YMLAalDAwyiMlkYSGDxaCUQSkpgxh8v6e3k3M6nPOrT2//5z3/
+8zzP+zxBgrRjB/f4coCkh/5NAbbxjg984hsmA9nIQ44D8cnCGV7xhme4imkYZ7cxH8UoQhqi2YBN
+L7DRH8XHhlyUogwliCQTj3iCW4j55wRx9nJUwhUFnXjAHXyZLG6nGrXhM9iHX3zVIsXUoAGNFje4
+xahFiqlCM1osrnCNYYsUU4e2UHCISyxZpJhWdMHvFyzgAifwMiWLR9mDbngSQRPOcYp5/HeMvuvD
+APrhDY1kDsc4wgy8svEpxCBGwqcriMZlreEAe9iCp+I+O+Bsk5jAGIbgBYyJA+PYhTdyE+tYwSJm
+MQVPywn/jPuqh1txVcuwsRcV+JUg+AEFlDN0CVjSfQAAAABJRU5ErkJgggs=</value></data><data name="Eula_CheckBoxAccepted" xml:space="preserve"><value>&amp;I accept the terms in the license agreement</value></data>
+  <data name="UninstallingWelcome_ConfirmUninstall" xml:space="preserve"><value>Are you sure you want to remove {0} from the computer?</value></data>
+  <data name="CertificateCommonCheckmarkEncrypt" xml:space="preserve"><value>Encrypt</value></data>
+  <data name="ErrorMessage_GeneralErrorLabelHeadLine" xml:space="preserve"><value>A system error has occurred</value></data>
+  <data name="ErrorMessage_NotEnoughSpaceHeadLine" xml:space="preserve"><value>Not enough disk space available</value></data>
+  <data name="WarningMessage_ExistingSystemsMoveConfigText" xml:space="preserve"><value>The installation of {0} is detected on this computer. You must save and move the configuration manually. Are you sure you want to continue the installation of {1}?</value></data>
+  <data name="IISSetup_ListDescription" xml:space="preserve"><value>Description</value></data>
+  <data name="WarningPageHeader" xml:space="preserve"><value>Warnings - read the text below carefully</value></data>
+  <data name="Finish_ButtonClose" xml:space="preserve"><value>&amp;Close</value></data>
+  <data name="ErrorMessage_RestartToCompleteLabelSubLine" xml:space="preserve"><value>Restart the computer to complete the installation.</value></data>
+  <data name="Finish_ModifyLabelHeadLine" xml:space="preserve"><value>Installation changed</value></data>
+  <data name="ErrorMessage_PackagesFailedModifyLabelHeadLine" xml:space="preserve"><value>Cannot change the components of {0}</value></data>
+  <data name="Components_LabelHeadLine" xml:space="preserve"><value>Components to be installed</value></data>
+  <data name="IISSetup_HeadLine" xml:space="preserve"><value>Select a website on the IIS to use with the {0}</value></data>
+  <data name="NewPasswordEmpty" xml:space="preserve"><value>The password field must not be empty.</value></data>
+  <data name="FileLocation_LabelFileLocation" xml:space="preserve"><value>&amp;File location:</value></data>
+  <data name="ErrorMessage_GeneralErrorLabelSubLine" xml:space="preserve"><value>A system error has occurred during installation. Open the log file for details.</value></data>
+  <data name="IISSetup_NotConnfigured" xml:space="preserve"><value>Selected website is not configured correctly. </value></data>
+  <data name="WarningPageCheckBoxInfo" xml:space="preserve"><value>I have read and understood the above</value></data>
+  <data name="IISSetup_ListHttpPort" xml:space="preserve"><value>HTTP port</value></data>
+  <data name="MessageBox_ConfirmPostInstallationClose" xml:space="preserve"><value>Are you sure you want to stop configuration?</value></data>
+  <data name="ServerSelection_LabelHeader" xml:space="preserve"><value>Specify Management Server</value></data>
+  <data name="NewPasswordPasswordsDoNotMatch" xml:space="preserve"><value>The passwords do not match.</value></data>
+  <data name="InstallationType_ButtonInstallCustom" xml:space="preserve"><value>C&amp;ustom</value></data>
+  <data name="Uninstalling_LabelHeadLine" xml:space="preserve"><value>Uninstalling {0}...</value></data>
+  <data name="MessageBox_ConfirmCancelText" xml:space="preserve"><value>Are you sure you want to cancel the installation?</value></data>
+  <data name="IISSetup_Details" xml:space="preserve"><value>Details:</value></data>
+  <data name="ErrorMessage_ViewLogButton" xml:space="preserve"><value>&amp;View Log</value></data>
+  <data name="FileLocation_LabelHeadLine" xml:space="preserve"><value>Select file location and product language</value></data>
+  <data name="FileLocation_LabelHeadLine_FinalizeMode" xml:space="preserve"><value>Select product language</value></data>
+  <data name="UninstallWelcome_PrepareModify" xml:space="preserve"><value>Uninstall or change {0} components</value></data>
+  <data name="NewPasswordDoesNotMeetComplexityPolicy" xml:space="preserve"><value>The password does not meet the Windows complexity requirements.</value></data>
+  <data name="TrecksInterssection_HeadLine" xml:space="preserve"><value>Select an installation type</value></data>
+  <data name="Finish_AllInstalled" xml:space="preserve"><value>{0} has successfully been installed on your computer.</value></data>
+  <data name="ErrorMessage_PackagesRequiredLabelHeadLine" xml:space="preserve"><value>Required components</value></data>
+  <data name="ErrorMessage_ServerIsRunningUnsecure" xml:space="preserve"><value>The management server is not configured to be secure. Either make the server secure (recommended) or enter an HTTP address.</value></data>
+  <data name="Welcome_ButtonInstallTrial" xml:space="preserve"><value>Install &amp;Trial</value></data>
+  <data name="ErrorMessage_RestartLabelSubLine" xml:space="preserve"><value>Restart the computer to continue the installation.</value></data>
+  <data name="ServerSelection_LabelExample" xml:space="preserve"><value>Examples: http://host or https://host.domain.com:8443.</value></data>
+  <data name="InstallationType_ButtonInstallTypical" xml:space="preserve"><value>&amp;Typical</value></data>
+  <data name="CertificateCommonEncryptionTitle" xml:space="preserve"><value>Select encryption</value></data>
+  <data name="ModifyComponents_LabelHeadLine" xml:space="preserve"><value>Select the {0} components you want to keep:</value></data>
+  <data name="UninstallWelcome_PrepareUninstall" xml:space="preserve"><value>Preparing uninstall...</value></data>
+  <data name="IISSetup_ListHttpsPort" xml:space="preserve"><value>HTTPS port</value></data>
+  <data name="NewPasswordTooShort" xml:space="preserve"><value>The password is too short.</value></data>
+  <data name="ErrorMessage_ExistingSystemsExistText" xml:space="preserve"><value>You must uninstall {1} before you can install {0}.
+Warning! You must manually save and move the configuration.</value></data>
+  <data name="ErrorMessage_PrerequisitesRequiredLabelSubLine" xml:space="preserve"><value>Before you install the product, you must first download and install the following component(s):</value></data>
+  <data name="CertificateCommonButtonDetails" xml:space="preserve"><value>Details</value></data>
+  <data name="ErrorMessage_RestartButton" xml:space="preserve"><value>&amp;Restart Computer</value></data>
+  <data name="Finish_LabelComponnetsPresent" xml:space="preserve"><value>These components are now installed on your computer:</value></data>
+  <data name="MessageBox_ConfirmCancelCaption" xml:space="preserve"><value>Confirm cancel</value></data>
+  <data name="MessageBox_ConfirmCancelLicenseText" xml:space="preserve"><value>Are you sure you want to cancel the installation?
+
+Your license is already updated. If you cancel now, you cannot use your old license or update your license automatically at a later time. 
+
+{0} recommends that you complete the installation.</value></data>
+  <data name="ProcessUpdate_ButtonRetry" xml:space="preserve"><value>&amp;Retry</value></data>
+  <data name="FileLocation_LabelSpaceAveliable" xml:space="preserve"><value>Free disk space on drive: {0} GB</value></data>
+  <data name="ConfigurationPlugin_ErrorOccured" xml:space="preserve"><value>Could not configure the server. See the log file for more information.</value></data>
+  <data name="ErrorMessage_PrerequisitesRequiredMoreInfo" xml:space="preserve"><value>(More information...)</value></data>
+  <data name="LicUpdate_FailedLoadNewProdName" xml:space="preserve"><value>Failed to load the name of the product.</value></data>
+  <data name="ErrorMessage_InvalidUrlText" xml:space="preserve"><value>The entered URL is invalid.</value></data>
+  <data name="warning" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAApAEAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlw
+SFlzAAAOxAAADsQBlSsOGwAAATlJREFUOE+lkMFKAnEYxHeVUAnpJhRClA8Q9Az1Dr6DvUM3D107
+KtQhiohqgy55yFNRpgddCg+Cx/Ji4KEosGlmdWXd/QuFhx8fM998w3/XAjAXRlOUixtbBGTbtPcx
+mjyySb37sqSCurQpJ4wmD/K356vApwVNaVNORAyGF0jntb0IDCxoSssPZ0XEYLBwf5XFw00KufU1
+b0rT3wlnxZRgKE3e+s8pOAdpr0DznZp+T/tgXkwJBnZrlytA14ZTGhdwSsvXPpgXweMMGXw0+alt
+G+51wivQlJavvXKzCvYbZ8tAM+bhXiRHBZy+p71ykQKaOfI1fIwDTwzPYFiLq+Bb+XDBceuUL7tj
+cIyzN/oH7hFfEPCVY/5kUkCxSX5QZSCEe8hjg6+87vyCCpH5XyqTT5gHo/l3YP0CoxSp+Mu8uGQA
+AAAASUVORK5CYIIL</value></data><data name="InstallationType_LabelHeadLine" xml:space="preserve"><value>Select the installation type</value></data>
+  <data name="ProcessUpdate_SubHeadline" xml:space="preserve"><value>Warning! Do not turn off your computer or your network connection.</value></data>
+  <data name="ProcessUpdate_SupInvalid" xml:space="preserve"><value>You do not have a valid Software Upgrade Plan.</value></data>
+  <data name="btn_Skip" xml:space="preserve"><value>&amp;Skip</value></data>
+  <data name="ErrorMessage_ProcessRunningText" xml:space="preserve"><value>Close the following applications to continue: {0}
+
+Click OK to retry or Cancel to cancel the installation.</value></data>
+  <data name="Install_LabelTotalProgress" xml:space="preserve"><value>Overall progress</value></data>
+  <data name="Welcome_LabelSubHeading2" xml:space="preserve"><value>Specify a valid license file in order to continue. If you do not have a license file, contact your reseller.</value></data>
+  <data name="NewPasswordTooLong" xml:space="preserve"><value>The password is too long.</value></data>
+  <data name="ErrorMessage_ArchitectureMissmatchText" xml:space="preserve"><value>A system error has occurred. This product can only be installed on {0}-bit Windows installations.</value></data>
+  <data name="FileLocation_FailoverWarningText" xml:space="preserve"><value>XProtect Failover Management Server comes with a three-day demo license. If you do not add a license, the management server stops working after three days. To obtain an XProtect Management Server Failover license, contact your reseller.</value></data>
+  <data name="UninstallWelcome_Uninstall" xml:space="preserve"><value>Uninstall all {0} components</value></data>
+  <data name="MultiInstancesRecorderNotSupportedHeader" xml:space="preserve"><value>A system error has occurred</value></data>
+  <data name="Finish_LabelfinishComponentInstall" xml:space="preserve"><value>These components have been successfully installed.</value></data>
+  </root>

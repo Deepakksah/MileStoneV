@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.LogServer.Communication</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <Reference Include="System.ServiceModel" />
+    
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization" />
+    
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.Utilities.Telemetry\VideoOS.Utilities.Telemetry.csproj" />
+    <ProjectReference Include="..\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\..\Platform\VideoOS.Platform\VideoOS.Platform.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorMessage_RestartLabelHead" xml:space="preserve"><value>重新啟動電腦。</value></data>
+  <data name="Install_ConfirmInstallText" xml:space="preserve"><value>已經在此電腦上安裝 {0}。是否要更新為 {1}?</value></data>
+  <data name="ErrorMessage_PackagesFailedLabelHeadLine" xml:space="preserve"><value>無法安裝執行 {0} 所需的元件</value></data>
+  <data name="ProcessUpdate_ButtongContinueAndIgnore" xml:space="preserve"><value>忽略(&amp;I)</value></data>
+  <data name="ErrorMessage_GeneralErrorUninstallLabelSubLine" xml:space="preserve"><value>嘗試解除安裝 {0} 失敗。請開啟記錄檔瞭解詳細資訊。</value></data>
+  <data name="FileLocation_LabelHeadLine_HardwareManufacturerMode" xml:space="preserve"><value>選擇檔案位置</value></data>
+  <data name="IISSetup_NoWebSiteFound" xml:space="preserve"><value>確定您有網際網路資訊服務 (IIS) 的所需版本，而且已經正確安裝。</value></data>
+  <data name="IISSetup_ListAddress" xml:space="preserve"><value>位址</value></data>
+  <data name="btn_Cancel" xml:space="preserve"><value>取消 (&amp;A)</value></data>
+  <data name="InstallationType_LabelInstallCustomCompDescription" xml:space="preserve"><value>此選項可讓您變更安裝參數預設值。</value></data>
+  <data name="Modify_LabelHeadLine" xml:space="preserve"><value>正在變更 {0} 安裝...</value></data>
+  <data name="ErrorMessage_GeneralErrorLabelMessage" xml:space="preserve"><value>錯誤詳細資訊: '{0}'</value></data>
+  <data name="FileLocation_WarningText" xml:space="preserve"><value>請注意，將在管理伺服器停用 IIS 記錄。
+另請注意，基本使用者功能需要 IIS 憑證的 HTTPS 繫結。如果未安裝繫結及憑證，程式將自動安裝它們。</value></data>
+  <data name="IISSetup_DetailsDesc" xml:space="preserve"><value>安裝程式使用選取的網站。如果尚未開啟網站，應用程式將予以開啟。</value></data>
+  <data name="WarningMessage_ExistingSystemsUninstallOldText" xml:space="preserve"><value>已在此電腦上偵測到 {0} 的現有安裝。為了安裝 {1}，將會從此電腦上移除 {0} 的現有安裝。先前版本的所有現有錄影和設定將可在新版本中使用。
+是否繼續?</value></data>
+  <data name="ErrorMessage_InvalidPathText" xml:space="preserve"><value>輸入的路徑無效。</value></data>
+  <data name="InstallationType_LabelInstallTypicalGroupDescription" xml:space="preserve"><value>這個選項會在此電腦上安裝執行 {0} 所需的所有元件。您可稍候在其他電腦安裝用戶端與歸檔，以擴充您的系統。</value></data>
+  <data name="Message_SSRegistrationPerfomFailed" xml:space="preserve"><value>下載頁面上 {0} 的註冊失敗。離開代碼: {1}。</value></data>
+  <data name="ErrorMessage_InvalidPathCaption" xml:space="preserve"><value>路徑無效</value></data>
+  <data name="LicUpdate_SubHeadling" xml:space="preserve"><value>您有產品舊版 {0} 的授權。
+
+您是否希望將您的授權自動取代為 {1} 的授權?
+系統將匯入新的授權，而且您舊的授權將不再有效。</value></data>
+  <data name="Install_LabelHeadLine" xml:space="preserve"><value>正在安裝 {0}</value></data>
+  <data name="ProcessUpdate_Headline" xml:space="preserve"><value>正在更新您的授權…</value></data>
+  <data name="Uninstalling_CompletedHeadline" xml:space="preserve"><value>解除安裝已完成</value></data>
+  <data name="Uninstalling_CompletedMessage" xml:space="preserve"><value>成功完成 {0} 的解除安裝</value></data>
+  <data name="WarningMessage_ExistingSystemsUninstallOldVersionDependentText" xml:space="preserve"><value>已在此電腦上偵測到 {0} 的現有安裝。為了安裝 {1}，將會從此電腦上移除 {0} 的現有安裝。先前版本的所有現有錄影和設定將可在新版本中使用。
+
+{0} 不是本產品的受支援版本，因此可能無法從該版本升級至 {1}。
+
+是否繼續?</value></data>
+  <data name="IISSetup_ListState" xml:space="preserve"><value>狀態</value></data>
+  <data name="Welcome_LabelLicenseFileLocation" xml:space="preserve"><value>輸入授權檔案的位置(&amp;L):</value></data>
+  <data name="FileLocation_LabelProductLanguage" xml:space="preserve"><value>產品語言(&amp;L):</value></data>
+  <data name="LicUpdate_Headline" xml:space="preserve"><value>有授權更新可用</value></data>
+  <data name="Initialize_LabelHeadLine" xml:space="preserve"><value>正在檢查與準備您的電腦以進行安裝...</value></data>
+  <data name="btnFinish_Text" xml:space="preserve"><value>完成(&amp;F)</value></data>
+  <data name="MessageBox_ConfirmPostInstallationCloseCaption" xml:space="preserve"><value>停止設定</value></data>
+  <data name="CertificateCommonHyperLinkText" xml:space="preserve"><value>進一步瞭解</value></data>
+  <data name="Install_LabelComponentProgress" xml:space="preserve"><value>正在安裝 {0}...</value></data>
+  <data name="ErrorMessage_ServerIsRunningSecure" xml:space="preserve"><value>管理伺服器設定為安全。請輸入 HTTPS 位址。</value></data>
+  <data name="btn_Install" xml:space="preserve"><value>安裝(&amp;I)</value></data>
+  <data name="NewPasswordInvalid" xml:space="preserve"><value>密碼無效。</value></data>
+  <data name="Welcome_ButtonContinue" xml:space="preserve"><value>繼續 (&amp;C)</value></data>
+  <data name="LicUpdate_ButtonSkipUpdate" xml:space="preserve"><value>略過更新(&amp;S)</value></data>
+  <data name="ProcessUpdate_Successfull" xml:space="preserve"><value>{0} 的授權是從軟體註冊系統擷取。</value></data>
+  <data name="ServerSelection_LabelSubHeader" xml:space="preserve"><value>請輸入管理伺服器位址。如果管理伺服器設定為安全，請使用 HTTPS：</value></data>
+  <data name="ErrorMessage_PackagesFailedLabelSubLine" xml:space="preserve"><value>必須先安裝下列元件，才能安裝 {0}。請安裝這些元件，再執行此安裝程式。</value></data>
+  <data name="ProcessUpdate_SupExpired" xml:space="preserve"><value>您的 Software Upgrade Plan 已經到期 ({0})</value></data>
+  <data name="UninstallWelcome_Modify" xml:space="preserve"><value>變更一個或多個 {0} 元件</value></data>
+  <data name="Finish_OpenDownloadLink" xml:space="preserve"><value>顯示系統元件下載頁面</value></data>
+  <data name="Eula_LabelHeadLine" xml:space="preserve"><value>接受 {0} 授權合約</value></data>
+  <data name="ErrorMessage_ExistingSystemsExistCaption" xml:space="preserve"><value>已經在電腦上偵測到舊版。</value></data>
+  <data name="LicUpdate_SupHelpInfo" xml:space="preserve"><value>自動更新需要有效的軟體升級方案</value></data>
+  <data name="Welcome_LabelSubHeading" xml:space="preserve"><value>您可安裝試用版 {0}，或若您有授權檔案，可安裝授權版本。</value></data>
+  <data name="FileLocation_LabelSpaceAveliableTb" xml:space="preserve"><value>磁碟上的可用空間: {0} TB</value></data>
+  <data name="FileLocation_LabelSpaceAveliableMb" xml:space="preserve"><value>磁碟上的可用空間: {0} MB</value></data>
+  <data name="ServerSelection_TryingToConnect" xml:space="preserve"><value>正在連線到伺服器...</value></data>
+  <data name="MultiInstanceRecorderVerificationErrorMessage" xml:space="preserve"><value>驗證多部錄影伺服器時發生錯誤。
+{0}</value></data>
+  <data name="ProcessUpdate_ErrorLicEmpty" xml:space="preserve"><value>從伺服器擷取的授權檔案是空的。</value></data>
+  <data name="ErrorMessage_NotEnoughSpaceSubLine" xml:space="preserve"><value>{0} 需要 {1} MB 的可用磁碟空間進行安裝。所選磁碟上只有 {2} MB 可用。請清理磁碟或選取其他磁碟。</value></data>
+  <data name="Welcome_LabelHeadLine2" xml:space="preserve"><value>選擇授權檔案</value></data>
+  <data name="CertificateCommonEncryptionSubTitleRun" xml:space="preserve"><value>建議使用加密確保安全通訊。</value></data>
+  <data name="Install_ConfirmInstallTitle" xml:space="preserve"><value>確認安裝</value></data>
+  <data name="WarningMessage_ExistingSystemsUninstallOldVersionDependentTrialText" xml:space="preserve"><value>已偵測到現有完整授權的 {0} 安裝。若要安裝試用版的 {1}，您目前的安裝將會移除。
+
+如果您以試用模式安裝 {1}，可能會遺失錄製的視訊。試用模式僅支援最多八部攝影機，而且保留時間為五天。如果您的系統使用超過八部攝影機，這些攝影機及其錄影將會刪除。超過五天的錄影也會刪除。
+
+{0} 不是本產品的受支援版本，因此可能無法從該版本升級至 {1}。
+
+確定要以試用模式安裝，並解除安裝 {0} 嗎?</value></data>
+  <data name="ErrorMessage_AnotherInstanceRunning" xml:space="preserve"><value>另一個安裝正在進行。請先等候完成，再執行此安裝程式。</value></data>
+  <data name="WarningPageHeaderInfo" xml:space="preserve"><value>在安裝之前、期間或之後，您需要解決以下重要的相容性和漏洞問題。</value></data>
+  <data name="Welcome_LabelLicenseKey" xml:space="preserve"><value>輸入授權碼(&amp;K):</value></data>
+  <data name="InstallationType_LabelInstallTypicalCompDescription" xml:space="preserve"><value>此選項可安裝在此電腦執行 {0} 所需的所有元件。</value></data>
+  <data name="ButtonBrowse" xml:space="preserve"><value>瀏覽... (&amp;B)</value></data>
+  <data name="Message_SSRegistrationPerformed" xml:space="preserve"><value>下載網頁上的註冊已成功。</value></data>
+  <data name="WarningMessage_ExistingSystemsUninstallOldTrialext" xml:space="preserve"><value>已偵測到現有完整授權的 {0} 安裝。若要安裝試用版的 {1}，您目前的安裝將會移除。
+
+如果您以試用模式安裝 {1}，可能會遺失錄製的視訊。試用模式僅支援最多八部攝影機，而且保留時間為五天。如果您的系統使用超過八部攝影機，這些攝影機及其錄影將會刪除。超過五天的錄影也會刪除。
+
+確定要以試用模式安裝，並解除安裝 {0} 嗎?</value></data>
+  <data name="Finish_GettingStartedLabel" xml:space="preserve"><value>顯示快速入門指南</value></data>
+  <data name="MultiInstancesRecorderNotSupportedMessage" xml:space="preserve"><value>我們已偵測到您的系統安裝了多部錄影伺服器。
+自版本 2024 R2 起不再支援多部錄影伺服器。如需進一步詳細了解如何進行，請參考{0}知識庫文章。</value></data>
+  <data name="ErrorMessage_WinVersionMissmatchText" xml:space="preserve"><value>您無法在此作業系統上安裝 {0}。此作業系統不受到支援。</value></data>
+  <data name="MultiInstancesRecorderNotSupportedMessageLinkText" xml:space="preserve"><value>這篇</value></data>
+  <data name="Welcome_LabelHeadLine" xml:space="preserve"><value>選取您要安裝的 {0} 版本</value></data>
+  <data name="ProcessUpdate_NoNewProductWithinSup" xml:space="preserve"><value>您的 Software Upgrade Plan 沒有可用的新產品。</value></data>
+  <data name="ServerSelection_ServerNotFound" xml:space="preserve"><value>管理伺服器沒有回應。請確保：管理伺服器已上線；如果管理伺服器設定為安全，請使用 HTTPS；管理伺服器版本與您即將安裝的元件相容。</value></data>
+  <data name="InstallationType_LabelInstallCustomGroupDescription" xml:space="preserve"><value>此選項可讓您選取要在此電腦上安裝的元件。您也可以變更安裝參數的預設值。安裝完成時，您可以稍後在其他電腦上安裝用戶端及歸檔，以擴展系統。</value></data>
+  <data name="LicUpdate_ButtonUpdate" xml:space="preserve"><value>更新(&amp;U)</value></data>
+  <data name="Finish_LabelHeadLine" xml:space="preserve"><value>安裝完成</value></data>
+  <data name="Eula_CheckBoxAccepted" xml:space="preserve"><value>我接受授權合約條款(&amp;I)</value></data>
+  <data name="UninstallingWelcome_ConfirmUninstall" xml:space="preserve"><value>您確定要從電腦移除 {0} 嗎?</value></data>
+  <data name="CertificateCommonCheckmarkEncrypt" xml:space="preserve"><value>加密</value></data>
+  <data name="ErrorMessage_GeneralErrorLabelHeadLine" xml:space="preserve"><value>已發生系統錯誤</value></data>
+  <data name="ErrorMessage_NotEnoughSpaceHeadLine" xml:space="preserve"><value>可用磁碟空間不足</value></data>
+  <data name="WarningMessage_ExistingSystemsMoveConfigText" xml:space="preserve"><value>在此電腦上偵測到 {0} 的安裝。您必須手動儲存和移除設定。是否要繼續安裝 {1}?</value></data>
+  <data name="IISSetup_ListDescription" xml:space="preserve"><value>說明</value></data>
+  <data name="WarningPageHeader" xml:space="preserve"><value>警告 - 請仔細閱讀以下文字</value></data>
+  <data name="Finish_ButtonClose" xml:space="preserve"><value>關閉 (&amp;C)</value></data>
+  <data name="ErrorMessage_RestartToCompleteLabelSubLine" xml:space="preserve"><value>請重新啟動電腦以完成安裝。</value></data>
+  <data name="Finish_ModifyLabelHeadLine" xml:space="preserve"><value>安裝已變更</value></data>
+  <data name="ErrorMessage_PackagesFailedModifyLabelHeadLine" xml:space="preserve"><value>無法變更 {0} 的元件</value></data>
+  <data name="Components_LabelHeadLine" xml:space="preserve"><value>即將安裝的元件</value></data>
+  <data name="IISSetup_HeadLine" xml:space="preserve"><value>選取 IIS 上要用於 {0} 的網站</value></data>
+  <data name="NewPasswordEmpty" xml:space="preserve"><value>密碼欄位不可為空白。</value></data>
+  <data name="FileLocation_LabelFileLocation" xml:space="preserve"><value>檔案位置(&amp;F):</value></data>
+  <data name="ErrorMessage_GeneralErrorLabelSubLine" xml:space="preserve"><value>安裝期間發生系統錯誤。請開啟記錄檔查看詳細資料。</value></data>
+  <data name="IISSetup_NotConnfigured" xml:space="preserve"><value>未正確設定所選取的網站。 </value></data>
+  <data name="WarningPageCheckBoxInfo" xml:space="preserve"><value>我已經閱讀並理解了上述內容</value></data>
+  <data name="IISSetup_ListHttpPort" xml:space="preserve"><value>HTTP 連接埠</value></data>
+  <data name="MessageBox_ConfirmPostInstallationClose" xml:space="preserve"><value>您確定要停止設定嗎？</value></data>
+  <data name="ServerSelection_LabelHeader" xml:space="preserve"><value>指定管理伺服器</value></data>
+  <data name="NewPasswordPasswordsDoNotMatch" xml:space="preserve"><value>密碼不相符。</value></data>
+  <data name="InstallationType_ButtonInstallCustom" xml:space="preserve"><value>自訂 (&amp;U)</value></data>
+  <data name="Uninstalling_LabelHeadLine" xml:space="preserve"><value>正在解除安裝 {0}...</value></data>
+  <data name="MessageBox_ConfirmCancelText" xml:space="preserve"><value>是否確定要取消安裝?</value></data>
+  <data name="IISSetup_Details" xml:space="preserve"><value>詳細資料:</value></data>
+  <data name="ErrorMessage_ViewLogButton" xml:space="preserve"><value>檢視記錄(&amp;V)</value></data>
+  <data name="FileLocation_LabelHeadLine" xml:space="preserve"><value>選取檔案位置和產品語言</value></data>
+  <data name="FileLocation_LabelHeadLine_FinalizeMode" xml:space="preserve"><value>選擇產品語言</value></data>
+  <data name="UninstallWelcome_PrepareModify" xml:space="preserve"><value>解除安裝或變更 {0} 元件</value></data>
+  <data name="NewPasswordDoesNotMeetComplexityPolicy" xml:space="preserve"><value>密碼不符合 Windows 複雜度要求。</value></data>
+  <data name="TrecksInterssection_HeadLine" xml:space="preserve"><value>選取安裝類型</value></data>
+  <data name="Finish_AllInstalled" xml:space="preserve"><value>已經在您的電腦上成功安裝 {0}。</value></data>
+  <data name="ErrorMessage_PackagesRequiredLabelHeadLine" xml:space="preserve"><value>所需元件</value></data>
+  <data name="ErrorMessage_ServerIsRunningUnsecure" xml:space="preserve"><value>管理伺服器未設定為安全。建議將伺服器設定為安全或輸入 HTTP 位址。</value></data>
+  <data name="Welcome_ButtonInstallTrial" xml:space="preserve"><value>安裝試用版(&amp;T)</value></data>
+  <data name="ErrorMessage_RestartLabelSubLine" xml:space="preserve"><value>請重新啟動電腦以繼續安裝。</value></data>
+  <data name="ServerSelection_LabelExample" xml:space="preserve"><value>範例：http://host 或 https://host.domain.com:8443.</value></data>
+  <data name="InstallationType_ButtonInstallTypical" xml:space="preserve"><value>典型(&amp;T)</value></data>
+  <data name="CertificateCommonEncryptionTitle" xml:space="preserve"><value>選取加密</value></data>
+  <data name="ModifyComponents_LabelHeadLine" xml:space="preserve"><value>選取您要保留的 {0} 元件:</value></data>
+  <data name="UninstallWelcome_PrepareUninstall" xml:space="preserve"><value>正在準備解除安裝...</value></data>
+  <data name="IISSetup_ListHttpsPort" xml:space="preserve"><value>HTTPS 連接埠</value></data>
+  <data name="NewPasswordTooShort" xml:space="preserve"><value>密碼過短。</value></data>
+  <data name="ErrorMessage_ExistingSystemsExistText" xml:space="preserve"><value>您必須先解除安裝 {1}，才能安裝 {0}。
+警告! 您必須手動儲存和移動設定。</value></data>
+  <data name="ErrorMessage_PrerequisitesRequiredLabelSubLine" xml:space="preserve"><value>在安裝產品前，您必須先下載並安裝以下元件：</value></data>
+  <data name="CertificateCommonButtonDetails" xml:space="preserve"><value>詳細資料</value></data>
+  <data name="ErrorMessage_RestartButton" xml:space="preserve"><value>重新啟動電腦(&amp;R)</value></data>
+  <data name="Finish_LabelComponnetsPresent" xml:space="preserve"><value>現在已在您的電腦上安裝這些元件:</value></data>
+  <data name="MessageBox_ConfirmCancelCaption" xml:space="preserve"><value>確認取消</value></data>
+  <data name="MessageBox_ConfirmCancelLicenseText" xml:space="preserve"><value>是否確定要取消安裝?
+
+您的授權已經更新。如果現在取消，日後將無法使用舊授權，也無法自動更新授權。 
+
+{0} 建議您完成安裝。</value></data>
+  <data name="ProcessUpdate_ButtonRetry" xml:space="preserve"><value>重試(&amp;R)</value></data>
+  <data name="FileLocation_LabelSpaceAveliable" xml:space="preserve"><value>磁碟上的可用空間: {0} GB</value></data>
+  <data name="ConfigurationPlugin_ErrorOccured" xml:space="preserve"><value>無法設定伺服器。如需詳細資訊，請參閱記錄檔。</value></data>
+  <data name="ErrorMessage_PrerequisitesRequiredMoreInfo" xml:space="preserve"><value>(更多資訊...)</value></data>
+  <data name="LicUpdate_FailedLoadNewProdName" xml:space="preserve"><value>無法載入產品的名稱。</value></data>
+  <data name="ErrorMessage_InvalidUrlText" xml:space="preserve"><value>輸入的 URL 無效。</value></data>
+  <data name="InstallationType_LabelHeadLine" xml:space="preserve"><value>選取安裝類型</value></data>
+  <data name="ProcessUpdate_SubHeadline" xml:space="preserve"><value>警告! 請勿關閉您的電腦或網路連線。</value></data>
+  <data name="ProcessUpdate_SupInvalid" xml:space="preserve"><value>您沒有有效的 Software Upgrade Plan。</value></data>
+  <data name="btn_Skip" xml:space="preserve"><value>略過</value></data>
+  <data name="ErrorMessage_ProcessRunningText" xml:space="preserve"><value>關閉下列應用程式以繼續: {0}
+
+按一下「確定」重試，或按一下「取消」，取消安裝。</value></data>
+  <data name="Install_LabelTotalProgress" xml:space="preserve"><value>整體進度</value></data>
+  <data name="Welcome_LabelSubHeading2" xml:space="preserve"><value>指定有效的授權檔案以繼續進行。如果沒有授權檔案，請聯絡您的經銷商。</value></data>
+  <data name="NewPasswordTooLong" xml:space="preserve"><value>密碼過長。</value></data>
+  <data name="ErrorMessage_ArchitectureMissmatchText" xml:space="preserve"><value>發生系統錯誤。只能在 {0} 位元 Windows 安裝上安裝此產品。</value></data>
+  <data name="FileLocation_FailoverWarningText" xml:space="preserve"><value>XProtect Failover Management Server 隨附一份三天試用版授權。若您未新增授權，管理伺服器將於三天後停止運作。若要獲取 XProtect Management Server Failover 授權，請聯絡您的經銷商。</value></data>
+  <data name="UninstallWelcome_Uninstall" xml:space="preserve"><value>解除安裝全部 {0} 元件</value></data>
+  <data name="MultiInstancesRecorderNotSupportedHeader" xml:space="preserve"><value>已發生系統錯誤</value></data>
+  <data name="Finish_LabelfinishComponentInstall" xml:space="preserve"><value>已順利安裝這些元件。</value></data>
+  </root>

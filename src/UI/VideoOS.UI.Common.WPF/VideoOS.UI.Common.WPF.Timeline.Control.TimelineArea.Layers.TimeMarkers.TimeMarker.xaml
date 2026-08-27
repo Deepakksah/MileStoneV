@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Grid x:Class="VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.TimeMarkers.TimeMarker" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" Width="101" xmlns:timemarkers="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.TimeMarkers;assembly=VideoOS.UI.Common.WPF">
+  <Grid>
+    <Rectangle Name="_primaryMarker" Width="1" Height="8" VerticalAlignment="Top" Margin="0,21,0,0" Fill="{controls:VideoOSInternalDynamicResource TimelineTimeRulerTickMarksPrimaryBrush}" />
+    <Rectangle Name="_secondaryMarker" Width="1" Height="4" VerticalAlignment="Top" Margin="0,25,0,0" Fill="{controls:VideoOSInternalDynamicResource TimelineTimeRulerTickMarksSecondaryBrush}" />
+    <Rectangle Name="_tertiaryMarker" Width="1" Height="4" VerticalAlignment="Top" Margin="0,25,0,0" Fill="{controls:VideoOSInternalDynamicResource TimelineTimeRulerTickMarksSecondaryBrush}" />
+    <controls:VideoOSTextBlockLabel Name="_legendTextBlock" Appearance="HighEmphasis" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0" />
+    <Rectangle Name="_primaryMarkerNarrow" Width="1" Height="5" VerticalAlignment="Top" Margin="0,20,0,0" Fill="{controls:VideoOSInternalDynamicResource TimelineTimeRulerTickMarksPrimaryBrush}" />
+    <Rectangle Name="_secondaryMarkerNarrow" Width="1" Height="3" VerticalAlignment="Top" Margin="0,22,0,0" Fill="{controls:VideoOSInternalDynamicResource TimelineTimeRulerTickMarksSecondaryBrush}" />
+    <Rectangle Name="_tertiaryMarkerNarrow" Width="1" Height="3" VerticalAlignment="Top" Margin="0,22,0,0" Fill="{controls:VideoOSInternalDynamicResource TimelineTimeRulerTickMarksSecondaryBrush}" />
+    <controls:VideoOSTextBlockLabel Name="_legendTextBlockNarrow" Appearance="HighEmphasis" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0" />
+  </Grid>
+</Grid>

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.ConfigurationAPI", "src\Management\VideoOS.ConfigurationAPI\VideoOS.ConfigurationAPI.csproj", "{C80ADFD2-F29C-42CD-8810-7F741F1E42E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Management.Common", "src\Management\VideoOS.Management.Common\VideoOS.Management.Common.csproj", "{B90E0406-D42D-4951-9278-314D544553BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Management.Server", "src\Management\VideoOS.Management.Server\VideoOS.Management.Server.csproj", "{9A684B57-9045-4E03-AA7C-3DE5C5C3F360}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Management.VmoClient", "src\Management\VideoOS.Management.VmoClient\VideoOS.Management.VmoClient.csproj", "{EC85E43F-A4EB-4CAD-9C3C-24F4D9241D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Management.VmoClient.resources", "src\Management\VideoOS.Management.VmoClient.resources\VideoOS.Management.VmoClient.resources.csproj", "{C716F9F0-C73C-485A-9792-0A129666960F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Server.Admin", "src\Management\VideoOS.Server.Admin\VideoOS.Server.Admin.csproj", "{D4A1F8E5-37B0-4376-935F-9545087CB645}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C80ADFD2-F29C-42CD-8810-7F741F1E42E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C80ADFD2-F29C-42CD-8810-7F741F1E42E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C80ADFD2-F29C-42CD-8810-7F741F1E42E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C80ADFD2-F29C-42CD-8810-7F741F1E42E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90E0406-D42D-4951-9278-314D544553BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90E0406-D42D-4951-9278-314D544553BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90E0406-D42D-4951-9278-314D544553BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90E0406-D42D-4951-9278-314D544553BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A684B57-9045-4E03-AA7C-3DE5C5C3F360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A684B57-9045-4E03-AA7C-3DE5C5C3F360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A684B57-9045-4E03-AA7C-3DE5C5C3F360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A684B57-9045-4E03-AA7C-3DE5C5C3F360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC85E43F-A4EB-4CAD-9C3C-24F4D9241D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC85E43F-A4EB-4CAD-9C3C-24F4D9241D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC85E43F-A4EB-4CAD-9C3C-24F4D9241D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC85E43F-A4EB-4CAD-9C3C-24F4D9241D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C716F9F0-C73C-485A-9792-0A129666960F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C716F9F0-C73C-485A-9792-0A129666960F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C716F9F0-C73C-485A-9792-0A129666960F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C716F9F0-C73C-485A-9792-0A129666960F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A1F8E5-37B0-4376-935F-9545087CB645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A1F8E5-37B0-4376-935F-9545087CB645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A1F8E5-37B0-4376-935F-9545087CB645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A1F8E5-37B0-4376-935F-9545087CB645}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

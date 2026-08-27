@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas x:Class="VideoOS.Platform.UI.Controls.ActionLists.Internal.ActionsPresenter" x:ClassModifier="internal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:internal="clr-namespace:VideoOS.Platform.UI.Controls.ActionLists.Internal;assembly=VideoOS.Platform" Loaded="ActionsPresenter_OnLoaded" />

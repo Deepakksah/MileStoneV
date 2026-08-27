@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.GatewayService.InstallerPlugin</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    
+    
+    
+    <Reference Include="System.ServiceModel" />
+    
+    
+    <Reference Include="System.Xml" />
+    
+    <Reference Include="System.DirectoryServices" />
+    
+    
+    
+    
+    <Reference Include="System.Core" />
+    
+    <Reference Include="Microsoft.Web.Administration" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.Core\VideoOS.Installer.Core.csproj" />
+    <ProjectReference Include="..\VideoOS.GatewayService.Utilities\VideoOS.GatewayService.Utilities.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.ServerConfigurator.Interfaces\VideoOS.ServerConfigurator.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.Interfaces\VideoOS.Installer.Interfaces.csproj" />
+    <ProjectReference Include="..\..\ServerCore\VideoOS.Server\VideoOS.Server.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.Common\VideoOS.Installer.Common.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.UI.Framework\VideoOS.Installer.UI.Framework.csproj" />
+    <ProjectReference Include="..\VideoOS.WebService.Common\VideoOS.WebService.Common.csproj" />
+    <ProjectReference Include="..\..\Management\VideoOS.Server.Admin\VideoOS.Server.Admin.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.IdentityServer\VideoOS.IdentityServer.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.Common.Utilities\VideoOS.Installer.Common.Utilities.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.UI\VideoOS.Installer.UI.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.Logging\VideoOS.Installer.Logging.csproj" />
+    <ProjectReference Include="..\VideoOS.GatewayService.Registrars\VideoOS.GatewayService.Registrars.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.MSI\VideoOS.Installer.MSI.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.ServerConfigurator\VideoOS.Installer.ServerConfigurator.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.IdentityServer.Common\VideoOS.IdentityServer.Common.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:PlaybackWpfUserControlInternal x:Class="VideoOS.Platform.Client.PlaybackWpfUserControlMini" x:ClassModifier="internal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Platform.Client" xmlns:properties="clr-namespace:VideoOS.Platform.Properties">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <local:SpeedSliderValueConvertor x:Key="SliderValueToSpeedText" />
+      <local:TimeSpanSliderTextConvertor x:Key="TimeSpanInMinutesToText" />
+      <local:TimeSpanSliderValueConvertor x:Key="TimeSpanInMinutes-SliderValue" />
+      <Style x:Key="AllButtons" TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Width" Value="20" />
+        <Setter Property="Margin" Value="5" />
+      </Style>
+      <Image x:Key="backwardPlay" Source="Images/icn16x16_light_playpausebackward_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      <Image x:Key="backwardPause" Source="Images/icn16x16_light_pause_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      <Image x:Key="forwardPlay" Source="Images/icn16x16_light_play_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      <Image x:Key="forwardPause" Source="Images/icn16x16_light_pause_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      <Image x:Key="backwardPlayDown" Source="Images/icn16x16_light_playpausebackward_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      <Image x:Key="backwardPauseDown" Source="Images/icn16x16_light_pause_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      <Image x:Key="forwardPlayDown" Source="Images/icn16x16_light_play_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      <Image x:Key="forwardPauseDown" Source="Images/icn16x16_light_pause_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Name="_playbackUserControlGrid" Height="100" Background="#00FFFFFF" MouseWheel="TimelineControl_MouseWheel">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="42" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid Name="_overlapGrid">
+      <Image Name="ruler" Height="30" Panel.ZIndex="1" VerticalAlignment="Top" />
+      <Grid Name="_upperControlGrid" ZIndex="2" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="120" />
+          <ColumnDefinition Width="120" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="labelStartTime" VerticalAlignment="Center" HorizontalAlignment="Left" />
+        <Button Name="_previousFrameUp" Style="{StaticResource AllButtons}" Grid.Column="1" VerticalContentAlignment="Top" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_PreviousFrame_Tooltip}" Click="_previousFrameUp_Click">
+          <Image Source="Images/icn16x16_light_stepbackward_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+        </Button>
+        <Button Name="_playBackwardUp" Style="{StaticResource AllButtons}" Grid.Column="2" VerticalContentAlignment="Top" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_PlayBackward_Tooltip}" Click="_playBackwardUp_Click">
+          <DynamicResourceExtension ResourceKey="backwardPlay" />
+        </Button>
+        <TextBlock Name="labelDate" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" />
+        <TextBlock Name="labelTime" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="4" Margin="40,0,0,0" />
+        <Button Name="_playForwardUp" Style="{StaticResource AllButtons}" Grid.Column="5" VerticalContentAlignment="Top" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_PlayForward_Tooltip}" Click="_playForwardUp_Click">
+          <DynamicResourceExtension ResourceKey="forwardPlay" />
+        </Button>
+        <Button Name="_nextFrameUp" Style="{StaticResource AllButtons}" Grid.Column="6" VerticalContentAlignment="Top" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_NextFrame_Tooltip}" Click="_nextFrameUp_Click">
+          <Image Source="Images/icn16x16_light_stepforward_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+        </Button>
+        <TextBlock Name="labelEndTime" VerticalAlignment="Center" Grid.Column="7" HorizontalAlignment="Right" />
+      </Grid>
+      <Image Name="_centeralBar" Panel.ZIndex="3" />
+    </Grid>
+    <Image Name="_recordingSequenceLine" Height="8" Grid.Row="1" />
+    <Grid Name="_lowerControlGrid" Height="50" Row="2">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0">
+        <Slider Name="_speedControlSlider" TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight" Width="108" Height="25" Minimum="0" Maximum="8" Value="3" ValueChanged="_speedControlSlider_ValueChanged" />
+        <TextBlock Name="_speedControlTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=Value, ElementName=_speedControlSlider, Converter={StaticResource SliderValueToSpeedText}}" />
+      </StackPanel>
+      <Button Name="_firstSequenceDown" Style="{StaticResource AllButtons}" Grid.Column="1" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_FirstSequence_Tooltip}" Click="_firstSequenceDown_Click">
+        <Image Source="Images/icn16x16_light_firstsequence_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      </Button>
+      <Button Name="_previousSequenceDown" Style="{StaticResource AllButtons}" Grid.Column="2" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_PreviousSequence_Tooltip}" Click="_previousSequenceDown_Click">
+        <Image Source="Images/icn16x16_light_previoussequence_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      </Button>
+      <Button Name="_previousFrameDown" Style="{StaticResource AllButtons}" Grid.Column="3" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_PreviousFrame_Tooltip}" Click="_previousFrameDown_Click">
+        <Image Source="Images/icn16x16_light_stepbackward_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      </Button>
+      <Button Name="_playBackwardDown" Style="{StaticResource AllButtons}" Grid.Column="4" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_PlayBackward_Tooltip}" Click="_playBackwardDown_Click">
+        <DynamicResourceExtension ResourceKey="backwardPlayDown" />
+      </Button>
+      <Button Name="_playForwardDown" Style="{StaticResource AllButtons}" Grid.Column="5" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_PlayForward_Tooltip}" Click="_playForwardDown_Click">
+        <DynamicResourceExtension ResourceKey="forwardPlayDown" />
+      </Button>
+      <Button Name="_nextFrameDown" Style="{StaticResource AllButtons}" Grid.Column="6" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_NextFrame_Tooltip}" Click="_nextFrameDown_Click">
+        <Image Source="Images/icn16x16_light_stepforward_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      </Button>
+      <Button Name="_nextSequenceDown" Style="{StaticResource AllButtons}" Grid.Column="7" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_NextSequence_Tooltip}" Click="_nextSequenceDown_Click">
+        <Image Source="Images/icn16x16_light_nextsequence_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      </Button>
+      <Button Name="_lastSequenceDown" Style="{StaticResource AllButtons}" Grid.Column="8" ToolTip="{x:Static properties:Strings.PlaybackWpfUserControlMini_LastSequence_Tooltip}" Click="_lastSequenceDown_Click">
+        <Image Source="Images/icn16x16_light_lastsequence_default.png" Width="16" Height="16" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+      </Button>
+      <StackPanel Grid.Column="9" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40, 0, 0, 0">
+        <Slider Name="_timespanControlSlider" TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight" Width="108" Height="25" Minimum="0" Maximum="17" Value="{Binding Path=TimeSpanInMinutes, Converter={StaticResource TimeSpanInMinutes-SliderValue}, Mode=TwoWay}" />
+        <TextBlock Name="_timespanControlTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=TimeSpanInMinutes, Converter={StaticResource TimeSpanInMinutesToText}}" />
+      </StackPanel>
+    </Grid>
+  </Grid>
+</local:PlaybackWpfUserControlInternal>

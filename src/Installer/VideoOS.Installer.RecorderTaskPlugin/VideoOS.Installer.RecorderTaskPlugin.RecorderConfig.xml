@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<recorderconfig>
+	<!-- Version is set by the installer -->
+	<version></version>
+	<recorder>
+		<id>C9CEF804-E600-4b4b-B5F9-BE246BB49133</id>
+		<displayname>Local test recording server</displayname>
+		<driverspath>../../../../../Drivers</driverspath>
+		<mipdriverspath>../../../../../MIPDrivers</mipdriverspath>
+		<pluginspath>../../../../../Plugins</pluginspath>
+		<ruleactionspath>../../../../../RuleActions</ruleactionspath>
+		
+		<!-- garbagecollectinterval instructs the service to run a garbage collection with the specified interval (in milliseconds). 0 = never -->
+		<garbagecollectinterval>0</garbagecollectinterval>
+		<memoryloginterval>600000</memoryloginterval>
+		<unmanagedmemorypressure>300</unmanagedmemorypressure>
+		
+		<!--
+		minWorkerThreads :
+				Value set as minimum worker threads for the .NET thread pool.
+				Type    : System.Int32
+				Range   : 0 - 1000
+				Default : 200
+				If setting til value to 0 (zero) the .NET default will be used (nothing will be applied).
+
+		minCompletionPortThreads : 
+				Value set as minimum IO Completion port  threads for the .NET thread pool.
+				Type    : System.Int32
+				Range   : 0 - 1000
+				Default : 0
+				If setting til value to 0 (zero) the .NET default will be used (nothing will be applied).
+		-->
+		<threadpool minWorkerThreads="20" minCompletionPortThreads="0" />
+
+		<!--
+		maxDelay : Specifies the maximum time in millisconds to use when generating a random delay in the 
+							 hardware startup procedure. Normally this should be 0 but some networks experience 
+							 problems when initiating many simultanious connections which is done on recorder startup
+							 where all hardware is started in parallel.
+							 In such a case it could help to set this value to e.g. one or two seconds to avoid 
+							 connection timeouts and thereby a 30 seconds delay due to the retry mechanism.
+									Type    : System.Int32
+									Range   : 0 - 10000
+									Default : 0
+		-->
+		<hardwarestartup maxDelay="0" />
+		
+		<!--
+		The shutdown procedure is initiated when the service is stopped or restarted either via the Service Control Manager or by a user or system initiated
+		restart or shutdown.
+		maxTimeToWait : 
+			Specifies the maximum time in minutes to wait for the service to complete a gracefull 
+			shutdown. When the maxTimeToWait interval has elapsed the service is forcefully closed.
+				Type    : System.Int32
+				Range   : 1 - Int32.MaxValue 
+				Defalut : 60
+		-->
+		<shutdownProcedure maxTimeToWait="60" />
+		<ClientRegistrationId/>
+		<serverEncryption enabled="false" certificateHash=""/>
+
+		<!--
+		maxVideoStreamsPerProxy: 
+			For interop drivers, specifies the maximum number of video streams allowed per proxy server. 
+			New proxy server instances will be created dynamically until there are enough proxy servers to host all interop hardware devices.
+				Type     : System.Int32
+				Range    : 1 - Int32.MaxValue
+				Default  : 100
+		-->
+		<proxyServerSplitting maxVideoStreamsPerProxy="100"/>
+	</recorder>
+
+	<server>
+		<address>localhost</address>
+		<webapiport>9000</webapiport>
+		<authorizationserveraddress/>
+		<logenabled>true</logenabled>
+		<logbundleinterval>5000</logbundleinterval>
+		<logbundlemaxcount>100</logbundlemaxcount>
+		<configversioncheckinterval>3600000</configversioncheckinterval>
+		<sendstatustoserverinterval>300000</sendstatustoserverinterval>
+	</server>
+
+	<webapi>
+		<port>9001</port>
+		<publicUri>localhost:9001</publicUri>
+		<timeoutfraction>2</timeoutfraction>
+	</webapi>
+
+	<pipeline>
+		<!--
+			Specifies the maximum number of frames allowed in a gop.
+			Type    : System.Int32
+			Range   : 1 - 10000
+			Default : 5000
+		-->
+		<gopframecountlimit>5000</gopframecountlimit>
+
+		<!--
+			Specifies the maximum size, in bytes, allowed for a gop.
+			Type    : System.Int32
+			Range   : 1048576 - 31457280 (1 MB - 30 MB)
+			Default : 20*1024*1024
+		-->
+		<gopbytecountlimit>20971520</gopbytecountlimit>
+
+		<!--
+			Specifies the maximum allowed timespan for a gop.
+			Type    : System.Int32
+			Range   : 1000 - 600000 (1 sec - 10 minutes)
+			Default : 300000 (5 minutes)
+		-->
+		<goptimespanlimit>300000</goptimespanlimit>
+
+		<!--
+			Specifies the timespan of audio frames to put into same gop.
+			Type    : System.Int32
+			Range   : 1 - 30000 (1 millisec - 30 seconds)
+			Default : 1000 (1 second)
+		-->
+		<audiogoptimespan>1000</audiogoptimespan>
+
+		<!--
+			Specifies the timespan of metadata frames to put into same gop.
+			Type    : System.Int32
+			Range   : 1 - 30000 (1 millisec - 30 seconds)
+			Default : 1000 (1 second)
+		-->
+		<metadatagoptimespan>1000</metadatagoptimespan>
+
+		<!--
+			Specifies audio burst delay
+			Type    : System.Int32
+			Range   : 0 - 100 (no delay - 100 milliseconds)
+			Default : 5 (5 milliseconds)
+		-->
+		<audioburstdelay>5</audioburstdelay>
+
+		<liveThread maxStackSizeKB="256" />
+		<processingThread maxStackSizeKB="256" />
+
+		<!--
+			Specifies the maximun number of frames in the queue, both key- and nonkey-frames (H264 and MPEG limit primarily).
+			Type    : System.Int32
+			Range   : 20 - 200 (recomended limits)
+			Default : 50
+		-->
+		<maxframesinqueue>50</maxframesinqueue>
+
+		<!--
+			Specifies the maximum size, in bytes, allowed in the queue.
+			Type    : System.Int32
+			Range   : 1048576 - 104857600 (1 MB - 100 MB, recomended limits)
+			Default : 30*1024*1024
+		-->
+		<maxbytesinqueue>31457280</maxbytesinqueue>
+
+		<!--
+			Specifies the maximum time pipeline part 2 is allowed to be active.
+			Type    : System.Int32
+			Range   : 0 (no check), 30000 - 3600000 (30 sec - 60 min)
+			Default : 600000 (10 min)
+		-->
+		<maxactivetimepipeline2>600000</maxactivetimepipeline2>
+	
+	</pipeline>
+
+	<database>
+		<database_server>
+			<logging>
+				<path/>
+				<prefix>Database</prefix>
+				<days_to_keep>30</days_to_keep>
+				<max_size>10485760</max_size>
+			</logging>
+			<table_database>
+				<path/>
+				<pragmas>
+					<!--Note: Pragma values may not be verified! Make sure you have entered valid pragma values-->
+					<!--The following pragmas are only applied to new databases. Existing databases run with the pragmas
+					when they were created.-->
+					<!--For pragma reference visit: https://www.sqlite.org/pragma.html-->
+
+					<!--For better performance we recommend setting page_size value to 65536 and auto_vacuum value to NONE-->
+					<!--Database pragmas-->
+					<!--Pragmas page_size and auto_vacuum are part of database pragmas which means these two are set during database creation only 
+					and the rest of the pragmas are set per connection-->
+					<pragma name="page_size" value ="65536"/>
+					<pragma name="auto_vacuum" value ="NONE"/>
+
+					<!--Connection pragmas-->
+					<!--Synchronous and journal_mode pragmas are mandatory, application will not run if they are not present in the config.-->
+					<!--Accepted journal_mode values are DELETE or TRUNCATE or PERSIST, application will not run if the values are different than these three.-->
+					<pragma name="journal_mode" value ="TRUNCATE"/>
+					<!--Accepted synchronous values are FULL Or EXTRA, application will not run if the values are different than these two.-->
+					<pragma name="synchronous" value ="FULL"/>
+				</pragmas>
+			</table_database>
+			<socket_communication>
+				<port_number>5210</port_number>
+				<authentication>
+					<anonymous>
+						<enable>false</enable>
+					</anonymous>
+					<token>
+						<enable>true</enable>
+					</token>
+				</authentication>
+			</socket_communication>
+			<server>
+				<client_shutdown_grace_period_milliseconds>10000</client_shutdown_grace_period_milliseconds>
+				<client_shutdown_grace_sleep_milliseconds>250</client_shutdown_grace_sleep_milliseconds>
+			</server>
+			<table_split>
+				<max_minutes>60</max_minutes>
+				<max_size_in_mb>0</max_size_in_mb>
+				<live_split_table_check_interval_seconds>1500</live_split_table_check_interval_seconds>
+			</table_split>
+			<thread_pools>
+				<delete_thread_pool_size>2</delete_thread_pool_size>
+				<low_priority_archive_thread_pool_size>1</low_priority_archive_thread_pool_size>
+				<high_priority_archive_thread_pool_size>4</high_priority_archive_thread_pool_size>
+			</thread_pools>
+			<disk_usage_monitor>
+				<check_interval_in_seconds>10</check_interval_in_seconds>
+				<force_archive_limit_in_mb>5120</force_archive_limit_in_mb>
+				<force_delete_limit_in_mb>1024</force_delete_limit_in_mb>
+			</disk_usage_monitor>
+			<eye_candy>
+				<use_descriptive_folder_names>true</use_descriptive_folder_names>
+			</eye_candy>
+			<disk_utilization>
+				<max_bytes_in_block_files>16777216</max_bytes_in_block_files>
+				<max_records_in_block_files>2000</max_records_in_block_files>
+				<truncate_block_files>true</truncate_block_files>
+				<precreate_block_files>true</precreate_block_files>
+				<precreate_sizes>
+					<regular>16777216</regular>
+					<sequence>65536</sequence>
+					<signature>4194304</signature>
+				</precreate_sizes>
+				<media_block_files>
+					<read_buffer_size>4096</read_buffer_size>
+					<write_buffer_size>4096</write_buffer_size>
+				</media_block_files>
+				<sequence_block_files>
+					<read_buffer_size>4096</read_buffer_size>
+					<write_buffer_size>4096</write_buffer_size>
+				</sequence_block_files>
+				<signature_block_files>
+					<read_buffer_size>4096</read_buffer_size>
+					<write_buffer_size>4096</write_buffer_size>
+				</signature_block_files>
+				<index_files>
+					<read_buffer_size>4096</read_buffer_size>
+					<write_buffer_size>4096</write_buffer_size>
+				</index_files>
+				<chunk_files>
+					<read_buffer_size>65536</read_buffer_size>
+					<write_buffer_size>65536</write_buffer_size>
+				</chunk_files>
+			</disk_utilization>
+		</database_server>
+		<database_client>
+			<address>localhost</address>
+			<port>5210</port>
+			<authentication>
+				<anonymous>
+					<enable>false</enable>
+				</anonymous>
+				<token>
+					<enable>true</enable>
+				</token>
+			</authentication>
+		</database_client>
+		<database_default>
+			<name>Local Default</name>
+			<path>C:\MediaDB</path>
+		</database_default>
+		<encryption>
+			<light>
+				<bytes>1024</bytes>
+			</light>
+		</encryption>
+		<event_channel>
+			<!--
+					The maximum size of the database event queue requested by the event listener.
+					
+					Type    : System.UInt32
+					Range   : 0 - MaxUInt32
+					Default : 10000000
+			-->
+			<max_queue_size>10000000</max_queue_size>
+			<!--
+					The time in milliseconds that the event listener will time out waiting for database event.
+					For out of process database configuration, this has direct impact on the service
+					shut down time.
+					
+					Type    : System.UInt32
+					Range   : 0 - MaxUInt32
+					Default : 4294967295 (UInt32.MaxValue) ~49 days
+			-->
+			<event_timeout_ms>4294967295</event_timeout_ms>
+		</event_channel>
+
+		<Failover>
+			<!--
+					The maximum time span of the failover bank. A value of 0 indicates indefitely
+					
+					Type    : System.Int32
+					Range   : 0 - MaxInt
+					Default : 0
+			-->
+			<MaxRetentionMinutes>0</MaxRetentionMinutes>
+
+			<!--
+					The maximum size of the failover storage in mega bytes.  A value of 0 indicates no limit
+					
+					Type    : System.Int32
+					Range   : 0 - MaxInt
+					Default : 0
+			-->
+			<MaxSizeMb>0</MaxSizeMb>
+		</Failover>
+
+		<Caching>
+			<DiskUsageInformationBank TimeoutSeconds="59" />
+			<ListFileSystemDiskUsage TimeoutSeconds="59" />
+		</Caching>
+		
+		<BankAvailability>
+			<!--
+				Type     : bool
+				Default  : true
+				
+				Specifies behavior of the recorder when a Recording Storage goes offline.
+			-->
+			<KeepFailingRecordingStorageOffline>true</KeepFailingRecordingStorageOffline>
+
+			<!--
+				Type     : bool
+				Default  : true
+				
+				Specifies whether recording server can start even if a recording storage is offline.
+				If false, the recording server will hang during startup and wait for all storages to
+				become available.
+			-->
+			<AllowStartWithOfflineRecordingStorage>true</AllowStartWithOfflineRecordingStorage>
+
+		</BankAvailability>
+
+	</database>
+
+	<logmanager>
+		<timerecurrence>3600</timerecurrence>
+	</logmanager>
+
+	<eventlimiter>
+		<disk_full_event>3600</disk_full_event>
+	</eventlimiter>
+
+	<webserver>
+		<!--
+				It is optional to specify a host name / IP. If no host is specified, then the recorder will automatically 
+				resolve a host name that will be used for generating the LiveFeedUri that is published to clients.
+				Examples of valid host values are: 
+				127.0.0.1
+				ServerName
+				www.domain.com
+			-->
+		<host/>
+		<port>7563</port>
+
+		<!--
+				Specifies which certificate, if any, to use for SSL encryption in the web server.
+
+				enabled:
+						Values: True or False
+						
+						Setting to 'True' means that web server will require SSL communication with all clients using
+						the certificate found using the other parameters for this node.
+						
+						Setting to 'False' means that web server will not try to load certificate and will not require
+						nor accept SSL communication with clients.
+				
+				
+				certificateHash: hash value of the certificate to be used by the web server. Certificate needs to be
+												be present under MY store on Local Computer.
+		-->
+		<encryption enabled="false" certificateHash=""/>
+		
+		<requestThread maxStackSizeKB="512" maxRequestSizeKb ="10240"/>
+
+
+		<!--
+				This option tells if clients can connect, when a privacy mask is defined, 
+				but the client does not support handling of privacy mask.
+			-->
+		<allowConnectIfPrivacyMaskNotSupported>false</allowConnectIfPrivacyMaskNotSupported>
+
+		<!--
+				This option allows for a more relaxed token check,
+				which makes the check backwards compatible.
+				This will allow for client connection to the ImageServer to stay connected, even if token has timed out.
+			-->
+		<useRelaxedTokenCheck>false</useRelaxedTokenCheck>
+
+		<imageServerLiveThread maxStackSizeKB="256" />
+	</webserver>
+	
+	<traycontroller>
+		<port>8966</port>
+	</traycontroller>
+
+	<driverservices>
+		<!--
+			It is optional to specify a host name / IP. If no host is specified, then the recorder will automatically 
+			resolve a host name that will be used for setting up event configuration for tcp event in cameras.
+			Examples of valid host values are: 
+			127.0.0.1
+			ServerName
+			www.domain.com
+		-->
+		<hosts>
+			<host/>
+		</hosts>
+
+		<alert>
+			<!-- Enabling this will open a port for not encrypted connections without authorization. -->
+			<enabled>false</enabled>
+			<port>5432</port>
+			<!-- Max allowed sessions (0 - 50) -->
+			<maxsessions>20</maxsessions>
+		</alert>
+	</driverservices>
+
+	<DriverEventListener>
+		<!--
+			Specifies the UDP port used by the recorder for receiving event notificatins from the drivers.
+			The default value is 65101.
+		-->
+		<Port>65101</Port>
+	</DriverEventListener>
+
+	<framemediadbconsumer>
+		<!--
+			framerateconstant:
+			Type    : System.Double
+			Default : 9.0
+
+			The framerateconstant indicates how much the FrameMediaDbConsumer should try to level out
+			the bursts that may occur when frames are received for writing. The bursts are leveled out
+			by expanding the time that we wait for a frame to arrive before the FrameMediaDbConsumer
+			determines that the writing is behind and therefore "catch up".
+
+			When setting the value to a higher number the FrameMediaDbConsumer will wait longer before
+			catching up. This will cause the recorded data to write more bursts and discarding less
+			frames - but the average over a longer time will be more accurate to the selected recording
+			framerate. This number indicates the number of seconds that a frame can be delayed without
+			the FrameMediaDbConsumer using the frames timestamp directly to determine when the next frame
+			should be written.
+
+			The time that the FrameMediaDbConsumer accept to be behind before catching up is calculated
+			like this:
+			(Int64)(FramePerSecond * FramerateConstant);
+
+			Where:
+			FramePerSecond    : The configured recording frame rate
+			FramerateConstant : (This configuration value)
+		-->
+		<framerateconstant>9.0</framerateconstant>
+	</framemediadbconsumer>
+
+	<rules>
+		<!-- Accept a delay of up to 2000 ms without correcting timestamp in ExecuteRuleActionsCommands -->
+		<maxruleactionexecutioncommanddelay>2000</maxruleactionexecutioncommanddelay>
+	</rules>
+
+	<failoverserver>
+		<port>11000</port>
+		<tokenmaxsize>4096</tokenmaxsize>
+		<installedasfailoverserver>false</installedasfailoverserver>
+	</failoverserver>
+
+	<SmartSearch>
+		<UseSecondaryColumns>false</UseSecondaryColumns>
+	</SmartSearch>
+
+	<HardwareCheck>
+		<!-- 
+			CheckFrequence:
+			Type    : int
+			Default : 15000
+
+			The CheckFrequence indicates how often a check should be performed on the hardware that's
+			connected to the recorder. The default is 15000 ms.
+			-->
+		<CheckFrequence>15000</CheckFrequence>
+
+	</HardwareCheck>
+
+	<!-- 
+		StartupRetrieveSeconds:
+		Type    : int (0 - 1024)
+		Default : 0
+		
+		Specifies the amount of time to retrieve video for from cameras when recording server is started.
+		A positive value can cause problems if failover is configured.
+		
+		- o -
+		
+		FailoverSkipRetrieveSeconds:
+		Type    : int (0 - 1024)
+		Default : 30
+		
+		When an ordinary recording server (i.e. not failover or hot standby) comes starts after a failover, there might be a gap in the recordings between when the 
+		failover stopped and the recorder started recording. The recorder will attempt filling this gap from the edge storage, if it's available. 
+		However, in this version of XProtect, overlapping video is not supported.
+		To avoid this situation happening, the recorder will not attempt to retrieve the number of specified seconds after it started up. The retrieval will try to cover
+		for each device the period after the specified time elapsed and up to when the first image is received from the device.
+		
+		- o -
+		
+		MaxStackSizeKB:
+		Type    : int  (256 - 1024)
+		Default : 256
+		
+		Specifies the stack size for threads executing the edge storage jobs.
+		
+		- o -
+
+		MaxSimultaneousJobs:
+		Type    : int (1 - 200)
+		Default : 100
+		
+		Specifies the maximum number of simultaneous edge-storage jobs running.
+		
+		- o -
+
+		MaxJobsAcrossHardware:
+		Type    : int (1 - 100)
+		Default : 50
+		
+		Specifies the maximum number of hardware to simultaneous run edge-storage jobs on.
+		
+		- o -
+		
+		PeriodicUpdateSeconds:
+		Type    : int (1 - 300)
+		Default : 10
+		
+		Specifies the number of seconds between each update of registered timestamps.
+		
+		- o -
+		
+		JobMinSeconds:
+		Type    : int (0 - 300)
+		Default : 2
+		
+		Specifies the minimum number of seconds a job must span in order to be registered.
+		
+		- o -
+		
+		WriteFinishedJobsXmlMinutes:
+		Type    : int (1 - 300)
+		Default : 10
+		
+		Specifies the minimum number of minutes between writing of xml file storing finished jobs. 
+
+- o -
+		
+		DisableAutomaticRetrievalOnStartup:
+		Type    : bool 
+		Default : false
+		
+    Only used when Automatic Retrieval is enabled.
+		Specifies if the recorder does a retrieval upon startup, when no failover is configured. 
+	-->
+	<EdgeStorage
+			StartupRetrieveSeconds = "0"
+			FailoverSkipRetrieveSeconds = "30"
+			MaxStackSizeKB = "256"
+			JobMinSeconds="2"
+			MaxSimultaneousJobs = "100"
+			MaxJobsAcrossHardware = "50"
+			PeriodicUpdateSeconds="5"
+			WriteFinishedJobsXmlMinutes="10"
+      DisableAutomaticRetrievalOnStartup="false"
+	/>
+
+	<!--
+	SessionLingerSeconds:
+	Type    : int (0 - max int)
+	Default : 10
+
+	Specifies the number of seconds from a multicast-stop is received until the session is actually stopped.
+	-->
+	<Multicast
+	SessionLingerSeconds="10"
+	/>
+
+	<PerformanceCounters>
+		<!-- DeviceDiskUsageIncrementIntervalInSeconds sets how often performance counters related to disk usage per device are incremented. 0 = disable -->
+		<DeviceDiskUsageIncrementIntervalInSeconds>60</DeviceDiskUsageIncrementIntervalInSeconds>
+		<!-- MediaDBDiskUsageIncrementIntervalInSeconds sets how often performance counters related to disk usage for the media database are incremented. 0 = disable -->
+		<MediaDBDiskUsageIncrementIntervalInSeconds>60</MediaDBDiskUsageIncrementIntervalInSeconds>
+	</PerformanceCounters>
+	
+	<FileStorage>
+		<!--
+		storageQuotaMBLimit : 
+				Specifies the maximum number of megabytes allowed for storage of files (e.g. for firmware update)
+				Type    : System.UInt32
+				Range   : 16 - 4096
+				Default : 3072 (3GB)
+		-->
+		<storageQuotaMBLimit>3072</storageQuotaMBLimit>
+		<!--
+		persistedEntryDurationInSeconds : 
+				Specifies the number of seconds to wait before removing an inactive persisted storage entry.
+				Type    : System.UInt32
+				Range   : 60 - 86400
+				Default : 1200 (20 minutes)
+		-->
+		<persistedEntryDurationInSeconds>1200</persistedEntryDurationInSeconds>
+		<!--
+		temporaryEntryDurationInSeconds : 
+				Specifies the number of seconds to wait before removing an inactive temporary storage entry.
+				Type    : System.UInt32
+				Range   : 60 - 86400
+				Default : 300 (5 minutes)
+		-->
+		<temporaryEntryDurationInSeconds>300</temporaryEntryDurationInSeconds>
+	</FileStorage>
+	<FirmwareUpdate>
+		<!--
+		maximumSimultaneousFirmwareUpdates :
+				Value set as maximum worker threads for running firmware update operations.
+				Type    : System.Int32
+				Default : 10
+		-->
+		<maximumSimultaneousFirmwareUpdates>10</maximumSimultaneousFirmwareUpdates>
+	</FirmwareUpdate>
+</recorderconfig>

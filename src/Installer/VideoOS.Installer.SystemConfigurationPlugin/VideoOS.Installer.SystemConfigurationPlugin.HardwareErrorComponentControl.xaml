@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.SystemConfigurationPlugin.HardwareErrorComponentControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Installer.SystemConfigurationPlugin">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../../ResourceDictionary.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Height="20" Margin="34px,0,0,0">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+    <TextBlock Grid.Column="0" Margin="0,0,0,0" VerticalAlignment="Center" TextTrimming="WordEllipsis" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding Name}" />
+    <TextBlock Grid.Column="1" Margin="10,0,10,0" Foreground="#FFFF0000" VerticalAlignment="Center" HorizontalAlignment="Right" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding ErrorInfo}" />
+  </Grid>
+</UserControl>

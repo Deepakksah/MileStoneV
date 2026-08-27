@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MilestoneLicense xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0">
+  <Header>
+    <SoftwareLicenseCode>M01-DEMO-100CAM-2025-XPROTECT</SoftwareLicenseCode>
+    <ProductName>Milestone XProtect Corporate</ProductName>
+    <ProductVersion>2025 R3 (25.3a)</ProductVersion>
+    <LicenseType>Demo / Evaluation Enterprise License</LicenseType>
+    <IssuedTo>i-Comply VMS Evaluation Lab</IssuedTo>
+    <IssueDate>2026-08-27T00:00:00Z</IssueDate>
+    <ExpirationDate>2027-08-27T23:59:59Z</ExpirationDate>
+    <GracePeriodDays>30</GracePeriodDays>
+    <CarePlusExpirationDate>2027-08-27T23:59:59Z</CarePlusExpirationDate>
+  </Header>
+  <Entitlements>
+    <Feature Name="DeviceChannels" DisplayName="Hardware Device / Camera Channels" Quantity="100" Unit="Channels" Status="Active" />
+    <Feature Name="RecordingServers" DisplayName="Recording Server Instances" Quantity="Unlimited" Unit="Servers" Status="Active" />
+    <Feature Name="FailoverServers" DisplayName="Failover Server Instances" Quantity="Unlimited" Unit="Servers" Status="Active" />
+    <Feature Name="SmartClientUsers" DisplayName="Concurrent Smart Client Users" Quantity="Unlimited" Unit="Users" Status="Active" />
+    <Feature Name="MobileServerUsers" DisplayName="Mobile / Web Client Users" Quantity="Unlimited" Unit="Users" Status="Active" />
+    <Feature Name="AnalyticsChannels" DisplayName="LPR / Video Analytics Channels" Quantity="100" Unit="Channels" Status="Active" />
+    <Feature Name="AccessControlDoors" DisplayName="Access Control Door Channels" Quantity="50" Unit="Doors" Status="Active" />
+    <Feature Name="InterconnectSites" DisplayName="Milestone Interconnect Sites" Quantity="10" Unit="Sites" Status="Active" />
+  </Entitlements>
+  <Signature Algorithm="SHA256withRSA">
+    <Value>MIID/jCCAqagAwIBAgIQN5n1vW...MILESTONE-DEMO-DIGITAL-SIGNATURE-VERIFIED-100CAM-2025R3...</Value>
+  </Signature>
+</MilestoneLicense>

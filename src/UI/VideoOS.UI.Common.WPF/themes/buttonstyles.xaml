@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:controls="clr-namespace:VideoOS.UI.Common.WPF.Controls" xmlns:internal="clr-namespace:VideoOS.UI.Common.WPF.Controls.Internal">
+  <system:Double x:Key="VideoOSButtonSmallHeight">22</system:Double>
+  <system:Double x:Key="VideoOSButtonMediumHeight">32</system:Double>
+  <Thickness x:Key="VideoOSButtonPadding">8,1,8,1</Thickness>
+  <ControlTemplate x:Key="VideoOSButtonBaseFocusTemplate">
+    <Rectangle Margin="-2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource VideoOSFocusBorderBrush}" RadiusX="2" RadiusY="2" />
+  </ControlTemplate>
+  <ControlTemplate x:Key="VideoOSButtonTextFocusTemplate">
+    <Rectangle Margin="2,2,2,1" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource VideoOSFocusBorderBrush}" RadiusX="2" RadiusY="2" />
+  </ControlTemplate>
+  <Style x:Key="VideoOSButtonSmallBaseStyle" TargetType="{x:Type internal:VideoOSButtonBase}" BasedOn="{StaticResource {x:Type Button}}">
+    <Setter Property="Height" Value="{StaticResource VideoOSButtonSmallHeight}" />
+    <Setter Property="MinWidth" Value="100" />
+    <Setter Property="Padding" Value="{StaticResource VideoOSButtonPadding}" />
+    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Setter Property="internal:VideoOSButtonBase.CornerRadius" Value="2" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type internal:VideoOSButtonBase}">
+          <Grid Name="Grid">
+            <Border Name="Border" CornerRadius="{TemplateBinding internal:VideoOSButtonBase.CornerRadius}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}" Background="{TemplateBinding Control.Background}" SnapsToDevicePixels="true">
+              <controls:VideoOSTextBlockButton2 x:Name="TextBlock" Text="{TemplateBinding ContentControl.Content}" Foreground="{TemplateBinding Control.Foreground}" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" TextAlignment="Center" Margin="{TemplateBinding Control.Padding}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" ToolTip="{TemplateBinding FrameworkElement.ToolTip}" />
+            </Border>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="Border" Property="Border.BorderBrush" Value="{Binding Path=MouseOverBorderBrush, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="Border" Property="Border.Background" Value="{Binding Path=MouseOverBackground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="TextBlock" Property="TextBlock.Foreground" Value="{Binding Path=MouseOverForeground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+              <Setter TargetName="Border" Property="Border.BorderBrush" Value="{Binding Path=PressedBorderBrush, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="Border" Property="Border.Background" Value="{Binding Path=PressedBackground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="TextBlock" Property="TextBlock.Foreground" Value="{Binding Path=PressedForeground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+              <Setter TargetName="Border" Property="Border.BorderBrush" Value="{Binding Path=DisabledBorderBrush, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="Border" Property="Border.Background" Value="{Binding Path=DisabledBackground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="TextBlock" Property="TextBlock.Foreground" Value="{Binding Path=DisabledForeground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="VideoOSButtonMediumBaseStyle" TargetType="{x:Type internal:VideoOSButtonBase}" BasedOn="{StaticResource {x:Type Button}}">
+    <Setter Property="Height" Value="{StaticResource VideoOSButtonMediumHeight}" />
+    <Setter Property="MinWidth" Value="100" />
+    <Setter Property="Padding" Value="{StaticResource VideoOSButtonPadding}" />
+    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Setter Property="internal:VideoOSButtonBase.CornerRadius" Value="2" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type internal:VideoOSButtonBase}">
+          <Grid Name="Grid">
+            <Border Name="Border" CornerRadius="{TemplateBinding internal:VideoOSButtonBase.CornerRadius}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}" Background="{TemplateBinding Control.Background}" SnapsToDevicePixels="true">
+              <controls:VideoOSTextBlockButton1 x:Name="TextBlock" Text="{TemplateBinding ContentControl.Content}" Foreground="{TemplateBinding Control.Foreground}" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" TextAlignment="Center" Margin="{TemplateBinding Control.Padding}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" ToolTip="{TemplateBinding FrameworkElement.ToolTip}" />
+            </Border>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="Border" Property="Border.BorderBrush" Value="{Binding Path=MouseOverBorderBrush, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="Border" Property="Border.Background" Value="{Binding Path=MouseOverBackground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="TextBlock" Property="TextBlock.Foreground" Value="{Binding Path=MouseOverForeground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+              <Setter TargetName="Border" Property="Border.BorderBrush" Value="{Binding Path=PressedBorderBrush, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="Border" Property="Border.Background" Value="{Binding Path=PressedBackground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="TextBlock" Property="TextBlock.Foreground" Value="{Binding Path=PressedForeground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+              <Setter TargetName="Border" Property="Border.BorderBrush" Value="{Binding Path=DisabledBorderBrush, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="Border" Property="Border.Background" Value="{Binding Path=DisabledBackground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+              <Setter TargetName="TextBlock" Property="TextBlock.Foreground" Value="{Binding Path=DisabledForeground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="VideoOSButtonSmallTextBaseStyle" TargetType="{x:Type internal:VideoOSButtonBase}" BasedOn="{StaticResource {x:Type Button}}">
+    <Setter Property="Height" Value="{StaticResource VideoOSButtonSmallHeight}" />
+    <Setter Property="Padding" Value="{StaticResource VideoOSButtonPadding}" />
+    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type internal:VideoOSButtonBase}">
+          <controls:VideoOSTextBlockButton2 x:Name="TextBlock" TextAlignment="Center" Text="{TemplateBinding ContentControl.Content}" Foreground="{TemplateBinding Control.Foreground}" ToolTip="{TemplateBinding FrameworkElement.ToolTip}" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" Margin="{TemplateBinding Control.Padding}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter TargetName="TextBlock" Property="TextBlock.Foreground" Value="{Binding Path=MouseOverForeground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+              <Setter TargetName="TextBlock" Property="TextBlock.Foreground" Value="{Binding Path=PressedForeground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+              <Setter TargetName="TextBlock" Property="TextBlock.Foreground" Value="{Binding Path=DisabledForeground, RelativeSource={RelativeSource AncestorType=internal:VideoOSButtonBase}}" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonPrimarySmall}" TargetType="{x:Type controls:VideoOSButtonPrimarySmall}" BasedOn="{StaticResource VideoOSButtonSmallBaseStyle}">
+    <Setter Property="Background" Value="{DynamicResource VideoOSButtonPrimaryBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource VideoOSButtonPrimaryBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonPrimaryForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryBorderHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBackground" Value="{DynamicResource VideoOSButtonPrimaryBackgroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonPrimaryForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryBorderPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBackground" Value="{DynamicResource VideoOSButtonPrimaryBackgroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonPrimaryForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryBorderDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBackground" Value="{DynamicResource VideoOSButtonPrimaryBackgroundDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonPrimaryForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonBaseFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonPrimaryMedium}" TargetType="{x:Type controls:VideoOSButtonPrimaryMedium}" BasedOn="{StaticResource VideoOSButtonMediumBaseStyle}">
+    <Setter Property="Background" Value="{DynamicResource VideoOSButtonPrimaryBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource VideoOSButtonPrimaryBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonPrimaryForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryBorderHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBackground" Value="{DynamicResource VideoOSButtonPrimaryBackgroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonPrimaryForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryBorderPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBackground" Value="{DynamicResource VideoOSButtonPrimaryBackgroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonPrimaryForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryBorderDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBackground" Value="{DynamicResource VideoOSButtonPrimaryBackgroundDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonPrimaryForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonBaseFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonSecondarySmall}" TargetType="{x:Type controls:VideoOSButtonSecondarySmall}" BasedOn="{StaticResource VideoOSButtonSmallBaseStyle}">
+    <Setter Property="Background" Value="{DynamicResource VideoOSButtonSecondaryBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource VideoOSButtonSecondaryBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonSecondaryForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryBorderHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBackground" Value="{DynamicResource VideoOSButtonSecondaryBackgroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonSecondaryForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryBorderPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBackground" Value="{DynamicResource VideoOSButtonSecondaryBackgroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonSecondaryForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryBorderDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBackground" Value="{DynamicResource VideoOSButtonSecondaryBackgroundDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonSecondaryForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonBaseFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonSecondaryMedium}" TargetType="{x:Type controls:VideoOSButtonSecondaryMedium}" BasedOn="{StaticResource VideoOSButtonMediumBaseStyle}">
+    <Setter Property="Background" Value="{DynamicResource VideoOSButtonSecondaryBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource VideoOSButtonSecondaryBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonSecondaryForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryBorderHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBackground" Value="{DynamicResource VideoOSButtonSecondaryBackgroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonSecondaryForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryBorderPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBackground" Value="{DynamicResource VideoOSButtonSecondaryBackgroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonSecondaryForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryBorderDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBackground" Value="{DynamicResource VideoOSButtonSecondaryBackgroundDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonSecondaryForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonBaseFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonTertiarySmall}" TargetType="{x:Type controls:VideoOSButtonTertiarySmall}" BasedOn="{StaticResource VideoOSButtonSmallBaseStyle}">
+    <Setter Property="Background" Value="{DynamicResource VideoOSButtonTertiaryBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource VideoOSButtonTertiaryBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonTertiaryForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBorderBrush" Value="{DynamicResource VideoOSButtonTertiaryBorderHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBackground" Value="{DynamicResource VideoOSButtonTertiaryBackgroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonTertiaryForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBorderBrush" Value="{DynamicResource VideoOSButtonTertiaryBorderPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBackground" Value="{DynamicResource VideoOSButtonTertiaryBackgroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonTertiaryForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBorderBrush" Value="{DynamicResource VideoOSButtonTertiaryBorderDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBackground" Value="{DynamicResource VideoOSButtonTertiaryBackgroundDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonTertiaryForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonBaseFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonTertiaryMedium}" TargetType="{x:Type controls:VideoOSButtonTertiaryMedium}" BasedOn="{StaticResource VideoOSButtonMediumBaseStyle}">
+    <Setter Property="Background" Value="{DynamicResource VideoOSButtonTertiaryBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource VideoOSButtonTertiaryBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonTertiaryForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBorderBrush" Value="{DynamicResource VideoOSButtonTertiaryBorderHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBackground" Value="{DynamicResource VideoOSButtonTertiaryBackgroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonTertiaryForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBorderBrush" Value="{DynamicResource VideoOSButtonTertiaryBorderPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBackground" Value="{DynamicResource VideoOSButtonTertiaryBackgroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonTertiaryForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBorderBrush" Value="{DynamicResource VideoOSButtonTertiaryBorderDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBackground" Value="{DynamicResource VideoOSButtonTertiaryBackgroundDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonTertiaryForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonBaseFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonPrimaryDestructiveSmall}" TargetType="{x:Type controls:VideoOSButtonPrimaryDestructiveSmall}" BasedOn="{StaticResource VideoOSButtonSmallBaseStyle}">
+    <Setter Property="Background" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBorderHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBackground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBackgroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBorderPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBackground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBackgroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBorderDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBackground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBackgroundDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonBaseFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonPrimaryDestructiveMedium}" TargetType="{x:Type controls:VideoOSButtonPrimaryDestructiveMedium}" BasedOn="{StaticResource VideoOSButtonMediumBaseStyle}">
+    <Setter Property="Background" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBorderHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBackground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBackgroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBorderPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBackground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBackgroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBorderBrush" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBorderDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBackground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveBackgroundDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonPrimaryDestructiveForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonBaseFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonSecondaryDestructiveSmall}" TargetType="{x:Type controls:VideoOSButtonSecondaryDestructiveSmall}" BasedOn="{StaticResource VideoOSButtonSmallBaseStyle}">
+    <Setter Property="Background" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBorderHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBackground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBackgroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBorderPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBackground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBackgroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBorderDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBackground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBackgroundDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonBaseFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonSecondaryDestructiveMedium}" TargetType="{x:Type controls:VideoOSButtonSecondaryDestructiveMedium}" BasedOn="{StaticResource VideoOSButtonMediumBaseStyle}">
+    <Setter Property="Background" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBorderHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverBackground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBackgroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBorderPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedBackground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBackgroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBorderBrush" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBorderDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledBackground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveBackgroundDisabled}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonSecondaryDestructiveForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonBaseFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonTextSmall}" TargetType="{x:Type controls:VideoOSButtonTextSmall}" BasedOn="{StaticResource VideoOSButtonSmallTextBaseStyle}">
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonTextForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonTextForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonTextForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonTextForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonTextFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSButtonTextDestructiveSmall}" TargetType="{x:Type controls:VideoOSButtonTextDestructiveSmall}" BasedOn="{StaticResource VideoOSButtonSmallTextBaseStyle}">
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSButtonTextDestructiveForeground}" />
+    <Setter Property="internal:VideoOSButtonBase.MouseOverForeground" Value="{DynamicResource VideoOSButtonTextDestructiveForegroundHover}" />
+    <Setter Property="internal:VideoOSButtonBase.PressedForeground" Value="{DynamicResource VideoOSButtonTextDestructiveForegroundPressed}" />
+    <Setter Property="internal:VideoOSButtonBase.DisabledForeground" Value="{DynamicResource VideoOSButtonTextDestructiveForegroundDisabled}" />
+    <Setter Property="FrameworkElement.FocusVisualStyle">
+      <Setter.Value>
+        <Style>
+          <Setter Property="Control.Template" Value="{StaticResource ResourceKey=VideoOSButtonTextFocusTemplate}" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

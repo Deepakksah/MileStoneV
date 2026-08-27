@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.SystemConfigurationPlugin.FinishPageControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:resx="clr-namespace:VideoOS.Installer.SystemConfigurationPlugin.Properties" xmlns:local="clr-namespace:VideoOS.Installer.SystemConfigurationPlugin">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../ResourceDictionary.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Margin="58, 35, 58, 0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="48" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <TextBlock Name="labelHeadLine" Grid.Row="0" Margin="0,0,0,0" AutomationProperties.AutomationId="FinishPageControl.labelHeadLine" VerticalAlignment="Top" HorizontalAlignment="Stretch" TextWrapping="Wrap" Style="{StaticResource HeaderTextBlockStyle}" Text="{Binding Header}" />
+    <TextBlock Name="labelInfo" Grid.Row="1" Margin="0,2,0,6" AutomationProperties.AutomationId="FinishPageControl.labelInfo" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource HeaderInfoTextBlockStyle}" Text="{Binding HeaderInfo}" />
+    <Grid Row="2" Margin="0,2,0,6">
+      <Border BorderThickness="1" BorderBrush="#FF000000" Height="180" Background="#FFFFFFFF" HorizontalAlignment="Stretch" Visibility="{Binding SummaryVisibility, Converter={StaticResource boolToVisConverter}}">
+        <ContentControl Margin="10,0,0,0" AutomationProperties.AutomationId="FinishPageControl.SummeryControl" Content="{Binding ContentViewModel}">
+          <FrameworkElement.Resources>
+            <ResourceDictionary>
+              <DataTemplate x:Key="{DataTemplateKey {x:Type local:ConfigurationSummaryControlViewModel}}" DataType="{x:Type local:ConfigurationSummaryControlViewModel}">
+                <local:ConfigurationSummaryControl VerticalAlignment="Stretch" />
+              </DataTemplate>
+              <DataTemplate x:Key="{DataTemplateKey {x:Type local:InstallationSummaryControlViewModel}}" DataType="{x:Type local:InstallationSummaryControlViewModel}">
+                <local:InstallationSummaryControl VerticalAlignment="Stretch" />
+              </DataTemplate>
+            </ResourceDictionary>
+          </FrameworkElement.Resources>
+        </ContentControl>
+      </Border>
+    </Grid>
+    <local:WebClientAddressControl Grid.Row="3" Margin="0,2,0,0" Visibility="{Binding WebMobileClientVisibility, Converter={StaticResource boolToVisConverter}}" />
+    <Grid Row="4" Margin="0,2,0,0" Visibility="{Binding OpenClientVisibility, Converter={StaticResource boolToVisConverter}}">
+      <CheckBox Name="ClientCheckbox" AutomationProperties.AutomationId="FinishPageControl.OpenClientCheckbox" IsChecked="{Binding OpenClient}">
+        <TextBlock VerticalAlignment="Center" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding ClientLabel}" />
+      </CheckBox>
+    </Grid>
+    <Grid Row="5" Margin="0,2,0,0" Visibility="{Binding OpenDownloadManagerVisibility, Converter={StaticResource boolToVisConverter}}">
+      <CheckBox Name="DownloadManagerCheckbox" AutomationProperties.AutomationId="FinishPageControl.DownloadManagerCheckbox" IsChecked="{Binding OpenDownloadManager}">
+        <TextBlock VerticalAlignment="Center" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding DownloadManagerLabel}" />
+      </CheckBox>
+    </Grid>
+    <Grid Row="6" Margin="0,2,0,0" Visibility="{Binding PrepareFinalizeVisibility, Converter={StaticResource boolToVisConverter}}">
+      <CheckBox Name="PrepareFinalizeCheckbox" AutomationProperties.AutomationId="FinishPageControl.PrepareFinalizeCheckbox" IsChecked="{Binding PrepareFinalize}">
+        <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding PrepareFinalizeLabel}" />
+      </CheckBox>
+    </Grid>
+    <TextBlock Name="labelPrepareFinalizeLabelExplanation" Grid.Row="7" Margin="12,3,0,0" AutomationProperties.AutomationId="FinishPageControl.labelPrepareFinalizeLabelExplanation" VerticalAlignment="Center" TextWrapping="Wrap" Style="{StaticResource ControlTextBlockStyleSmall}" Visibility="{Binding PrepareFinalizeVisibility, Converter={StaticResource boolToVisConverter}}" Text="{Binding PrepareFinalizeLabelExplanation}" />
+    <Grid Row="8" Margin="0,8,0,0" Visibility="{Binding RemoveInstallLogVisibility, Converter={StaticResource boolToVisConverter}}">
+      <CheckBox Name="RemoveInstallLogCheckBox" AutomationProperties.AutomationId="FinishPageControl.RemoveInstallLogCheckBox" IsChecked="{Binding RemoveInstallLog}">
+        <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding RemoveInstallLogLabel}" />
+      </CheckBox>
+    </Grid>
+  </Grid>
+</UserControl>

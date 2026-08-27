@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.SystemConfigurationPlugin.EditableTextBoxControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:local="clr-namespace:VideoOS.Installer.SystemConfigurationPlugin" x:Name="editableTextBox">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../../ResourceDictionary.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+      <Style x:Key="GridStyle" TargetType="{x:Type Grid}">
+        <Style.Resources>
+          <ResourceDictionary>
+            <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+              <Setter Property="Visibility" Value="Collapsed" />
+              <Style.Triggers>
+                <MultiDataTrigger>
+                  <MultiDataTrigger.Conditions>
+                    <Condition Value="True" Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType=Grid}}" />
+                    <Condition Value="True" Binding="{Binding Path=Editable, ElementName=editableTextBox}" />
+                  </MultiDataTrigger.Conditions>
+                  <MultiDataTrigger.Setters>
+                    <Setter Property="Visibility" Value="Visible" />
+                  </MultiDataTrigger.Setters>
+                </MultiDataTrigger>
+              </Style.Triggers>
+            </Style>
+          </ResourceDictionary>
+        </Style.Resources>
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Style="{StaticResource GridStyle}" Background="#00FFFFFF">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="26px" />
+    </Grid.ColumnDefinitions>
+    <TextBlock Name="CameraNameTextBlock" Grid.Column="0" Margin="3,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" TextTrimming="WordEllipsis" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding Name}" Visibility="{Binding IsEditing, Converter={StaticResource inverseBoolToVisConverter}}" ToolTip="{Binding Name}" />
+    <TextBox Name="CameraNameTextbox" Grid.Column="0" VerticalAlignment="Center" IsUndoEnabled="False" Style="{StaticResource ControlTextBoxStyle}" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding IsEditing, Converter={StaticResource boolToVisConverter}}" IsVisibleChanged="CameraNameTextbox_IsVisibleChanged">
+      <behaviors:Interaction.Triggers xmlns:behaviors="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors">
+        <behaviors:EventTrigger xmlns:behaviors="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors" behaviors:EventTrigger.EventName="LostFocus">
+          <behaviors:InvokeCommandAction behaviors:InvokeCommandAction.CommandParameter="false" behaviors:InvokeCommandAction.Command="{Binding EditCommand}" />
+        </behaviors:EventTrigger>
+      </behaviors:Interaction.Triggers>
+      <UIElement.InputBindings>
+        <KeyBinding Key="Escape" Command="{Binding CancelEditCommand}" />
+        <KeyBinding Key="Enter" CommandParameter="false" Command="{Binding EditCommand}" />
+      </UIElement.InputBindings>
+    </TextBox>
+    <Button Grid.Column="1" AutomationProperties.AutomationId="EditButton" Width="26px" BorderThickness="0" CommandParameter="true" Background="#00FFFFFF" Command="{Binding EditCommand}">
+      <Image Height="16" Width="16" Stretch="None" Source="{StaticResource ImgRename}" />
+    </Button>
+    <Button Grid.Column="1" AutomationProperties.AutomationId="CommitButton" Width="26px" BorderThickness="0" CommandParameter="false" Background="#00FFFFFF" Command="{Binding EditCommand}" Visibility="{Binding IsEditing, Converter={StaticResource boolToVisConverter}}">
+      <Image Height="16" Width="16" Stretch="None" Source="{StaticResource ImgCommit}" />
+    </Button>
+  </Grid>
+</UserControl>

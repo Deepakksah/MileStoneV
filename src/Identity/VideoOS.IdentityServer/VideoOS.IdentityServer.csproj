@@ -1,0 +1,121 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.IdentityServer</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <StartupObject>VideoOS.IdentityServer.Program</StartupObject>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Duende.IdentityServer.EntityFramework.Storage">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Duende.IdentityServer.EntityFramework.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll</HintPath>
+    </Reference>
+    <Reference Include="MediatR">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\MediatR.dll</HintPath>
+    </Reference>
+    <Reference Include="Duende.IdentityServer">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Duende.IdentityServer.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="IdentityModel">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.DataProtection.EntityFrameworkCore">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.AspNetCore.DataProtection.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Duende.IdentityServer.Storage">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Duende.IdentityServer.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="MediatR.Contracts">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\MediatR.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.JsonPatch">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.AspNetCore.JsonPatch.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="NLog.Web.AspNetCore">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\NLog.Web.AspNetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extensions.Logging">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\NLog.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Duende.IdentityServer.EntityFramework">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Duende.IdentityServer.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Duende.IdentityServer.AspNetIdentity">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Duende.IdentityServer.AspNetIdentity.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.DependencyInjectionExtensions">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\FluentValidation.DependencyInjectionExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities.Database\VideoOS.Utilities.Database.csproj" />
+  </ItemGroup>
+</Project>

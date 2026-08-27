@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.SmoothScroller.SmoothScroller" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ClipToBounds="True" xmlns:smoothscroller="clr-namespace:VideoOS.UI.Common.WPF.SmoothScroller;assembly=VideoOS.UI.Common.WPF" SizeChanged="UserControl_SizeChanged" Unloaded="UserControl_Unloaded">
+  <Control.Template>
+    <ControlTemplate TargetType="{x:Type UserControl}">
+      <ContentPresenter />
+    </ControlTemplate>
+  </Control.Template>
+  <Grid>
+    <Canvas Name="_scrollerCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+    <Rectangle Name="_dragRectangle" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Fill="#FFFFFF00" Opacity="0.0" MouseDown="Rectangle_MouseDown" MouseMove="Rectangle_MouseMove" MouseUp="Rectangle_MouseUp" MouseLeave="Rectangle_MouseLeave" />
+  </Grid>
+</UserControl>

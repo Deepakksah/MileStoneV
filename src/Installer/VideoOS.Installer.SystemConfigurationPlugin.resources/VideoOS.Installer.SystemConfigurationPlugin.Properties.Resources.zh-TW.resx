@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="HardwareAddHeader" xml:space="preserve"><value>新增硬體</value></data>
+  <data name="UserPageUserNameLabel" xml:space="preserve"><value>使用者名稱</value></data>
+  <data name="ActivateLicense_Failed" xml:space="preserve"><value>授權啟動失敗。錯誤為: {0}</value></data>
+  <data name="UserNamePasswordHeader" xml:space="preserve"><value>請輸入您的硬體認證並選取協定</value></data>
+  <data name="UserPageRoleLabel" xml:space="preserve"><value>角色</value></data>
+  <data name="HTTPLabel" xml:space="preserve"><value>HTTP (不安全)</value></data>
+  <data name="UserPageHeader" xml:space="preserve"><value>新增使用者</value></data>
+  <data name="FinishPageWebClientUrlLabel" xml:space="preserve"><value>{0} 地址：</value></data>
+  <data name="UserPageUserTypeWindows" xml:space="preserve"><value>Windows 使用者</value></data>
+  <data name="ProgressGettingRoles" xml:space="preserve"><value>從系統中取得已定義的角色...</value></data>
+  <data name="LicensePageTimeoutError" xml:space="preserve"><value>錯誤 - 請求時逾時。 稍後再試。</value></data>
+  <data name="HardwareSelectionMicrophone" xml:space="preserve"><value>麥克風</value></data>
+  <data name="UserPageUserNameTooLong" xml:space="preserve"><value>使用者名稱長度不得超過 256 個字元</value></data>
+  <data name="FinishInstallationPageInstallationInfo" xml:space="preserve"><value>立即關閉並稍後於管理用戶端中設定，或繼續新增硬體和使用者。</value></data>
+  <data name="HardwareSelectionInput" xml:space="preserve"><value>輸入</value></data>
+  <data name="UserPagePasswordComplexityNotMet" xml:space="preserve"><value>密碼不符合複雜度要求</value></data>
+  <data name="FinishInstallationPageAllInstalled" xml:space="preserve"><value>已經在您的電腦上成功安裝 {0}。</value></data>
+  <data name="RecorderOnlineVerfying" xml:space="preserve"><value>正在驗證錄影伺服器...</value></data>
+  <data name="LicensePageDownloadingInfo" xml:space="preserve"><value>正在下載授權檔案...</value></data>
+  <data name="ScanAlreadyRunning" xml:space="preserve"><value>無法開始掃描。另一個掃描工作階段正在錄影伺服器上執行。請稍後重試。</value></data>
+  <data name="FinishInstallationPageOpenDownloadManager" xml:space="preserve"><value>顯示系統元件下載頁面</value></data>
+  <data name="HardwareSelectionCameraComponentName" xml:space="preserve"><value>攝影機：</value></data>
+  <data name="LicensePageBrowseButton" xml:space="preserve"><value>瀏覽</value></data>
+  <data name="ContinueConfigurationButtonText" xml:space="preserve"><value>繼續新增硬體和使用者</value></data>
+  <data name="UserPagePasswordDoNotMatch" xml:space="preserve"><value>密碼不相符</value></data>
+  <data name="HardwareConfigurationHeader" xml:space="preserve"><value>設定裝置</value></data>
+  <data name="LicensePageInfo" xml:space="preserve"><value>使用您從經銷商處購買並收到的 {0} 授權檔案。</value></data>
+  <data name="AddedDefaultViewNumberN" xml:space="preserve"><value>已新增 '預設檢視 {0}'</value></data>
+  <data name="LicensePageNetworkError" xml:space="preserve"><value>錯誤 - 未連線至網路。</value></data>
+  <data name="HardwareSelectionSpeakerComponentName" xml:space="preserve"><value>揚聲器：</value></data>
+  <data name="UserPageHeaderInfo" xml:space="preserve"><value>您可以新增不同類型的使用者來存取系統：Windows 使用者或基本使用者。基本使用者需要使用者名稱和密碼。您必須先將這些使用者指派至操作員角色或管理員角色。</value></data>
+  <data name="UserNamePasswordTip" xml:space="preserve"><value>提示：基於安全性的理由，建議您務必使用安全的連線以避免硬體使用製造商的預設認證</value></data>
+  <data name="CloseAfterConfigurationButtonText" xml:space="preserve"><value>關閉</value></data>
+  <data name="LicenseFormatError" xml:space="preserve"><value>錯誤 - 授權檔案已損毀。</value></data>
+  <data name="AddingCameras" xml:space="preserve"><value>正在新增硬體 {0} ({1}/{2})...</value></data>
+  <data name="FinishConfigurationPageNoHardwareDescription" xml:space="preserve"><value>尚未新增任何硬體</value></data>
+  <data name="LicensePageUnexpectedError" xml:space="preserve"><value>錯誤 - 請求失敗。 稍後再試。</value></data>
+  <data name="HTTPSLabel" xml:space="preserve"><value>HTTPS (安全)</value></data>
+  <data name="HardwareSelectionMetadataComponentName" xml:space="preserve"><value>中繼資料：</value></data>
+  <data name="HardwareScanInfo" xml:space="preserve"><value>正在掃描...</value></data>
+  <data name="HardwareScanStop" xml:space="preserve"><value>停止</value></data>
+  <data name="LicensePageHeader" xml:space="preserve"><value>選擇授權檔案。</value></data>
+  <data name="AddedDefaultView" xml:space="preserve"><value>已新增 '預設檢視'</value></data>
+  <data name="FinishInstallationFirstInstallPageHeaderInfo" xml:space="preserve"><value>系統已順利安裝這些元件。按一下「繼續」以新增硬體和使用者，或按一下「關閉」以便於 {0} 中進行設定。</value></data>
+  <data name="ActivateLicense_Success" xml:space="preserve"><value>已成功啟動授權</value></data>
+  <data name="RecorderOnlineWaiting" xml:space="preserve"><value>正在等待錄影伺服器上線...</value></data>
+  <data name="ConfigurationSummaryCameraHeader" xml:space="preserve"><value>攝影機</value></data>
+  <data name="HardwareSelectionMicrophoneComponentName" xml:space="preserve"><value>麥克風：</value></data>
+  <data name="HardwareConfigurationProgressInfo" xml:space="preserve"><value>正在設定...</value></data>
+  <data name="ActivateLicense_Waiting" xml:space="preserve"><value>正在線上啟動授權...</value></data>
+  <data name="Finish_OpenDownloadLink" xml:space="preserve"><value>顯示系統元件下載頁面</value></data>
+  <data name="Password" xml:space="preserve"><value>密碼</value></data>
+  <data name="ErrorMessage_ExistingSystemsExistCaption" xml:space="preserve"><value>安裝程式偵測到電腦上存在之前安裝的版本。</value></data>
+  <data name="RecorderOnlineStatusConnected" xml:space="preserve"><value>錄影伺服器已上線並已連線</value></data>
+  <data name="FinishInstallationPage_RemoveInstallLog" xml:space="preserve"><value>刪除安裝過程中建立的記錄檔。</value></data>
+  <data name="FinishInstallationPageHeader" xml:space="preserve"><value>安裝完成</value></data>
+  <data name="StartAddingViews" xml:space="preserve"><value>正在新增檢視...</value></data>
+  <data name="HardwareSelectionSpeaker" xml:space="preserve"><value>揚聲器</value></data>
+  <data name="HardwareSelectionDiscoveredHardware" xml:space="preserve"><value>已發現硬體：</value></data>
+  <data name="Finish_GettingStartedLabel" xml:space="preserve"><value>顯示快速入門指南</value></data>
+  <data name="ProgressEnablingHardware" xml:space="preserve"><value>正在啟用硬體：</value></data>
+  <data name="UserPageCouldNotLoadRoles" xml:space="preserve"><value>無法載入角色</value></data>
+  <data name="LicensePageStoringError" xml:space="preserve"><value>錯誤 - 無法將授權檔案儲存至 {0}。 檢查您的存取權限。</value></data>
+  <data name="FinishConfigurationPageHeader" xml:space="preserve"><value>設定完成</value></data>
+  <data name="HardwareConfigurationHeaderInfo" xml:space="preserve"><value>您可以賦予硬體實用的名稱。展開節點來啟用或停用如攝影機、揚聲器和麥克風等裝置。</value></data>
+  <data name="FinishConfigurationPageWebClientHeader" xml:space="preserve"><value>與您的使用者共享這些地址，即可在線上存取此系統。</value></data>
+  <data name="HardwareAddInfo" xml:space="preserve"><value>正在新增...</value></data>
+  <data name="HardwareSelectionNoHardwareMessage" xml:space="preserve"><value>找不到硬體。</value></data>
+  <data name="FinishPageOpenClientLabel" xml:space="preserve"><value>離開時開啟 {0}</value></data>
+  <data name="FinishInstallationPage_PrepareFinalizeExplanation" xml:space="preserve"><value>如果清空此核取方塊，系統將重新開機，而不完成設定。這將使您能夠在準備發佈之前新增其他軟體或修改系統。如需瞭解如何完成實現，請稍後參見《系統構建器》文件。</value></data>
+  <data name="HardwareSelectionOutputComponentName" xml:space="preserve"><value>輸出：</value></data>
+  <data name="HardwareConfigurationFailedHardwareInfo" xml:space="preserve"><value>無法新增硬體。</value></data>
+  <data name="LicensePageDownloadSuccessful" xml:space="preserve"><value>授權檔案已成功下載</value></data>
+  <data name="Finish_LabelHeadLine" xml:space="preserve"><value>安裝完成</value></data>
+  <data name="UserPageRepeatPasswordLabel" xml:space="preserve"><value>重複密碼</value></data>
+  <data name="ProgressCreatingOperatorRole" xml:space="preserve"><value>正在建立操作員角色...</value></data>
+  <data name="UsernamePasswordInfo" xml:space="preserve"><value>如果您已變更製造商預設之使用者名稱及密碼，請在此新增數值。掃描硬體時，系統將檢查製造商預設認證及您的自訂認證。</value></data>
+  <data name="ProgressCreateOperatorRole" xml:space="preserve"><value>正在建立操作員角色...</value></data>
+  <data name="HardwareScanHeader" xml:space="preserve"><value>正在掃描網路上的硬體</value></data>
+  <data name="UserPageInvalidIdentity" xml:space="preserve"><value>無法新增身份 '{0}'。</value></data>
+  <data name="UserName" xml:space="preserve"><value>使用者名稱</value></data>
+  <data name="HardwareScanStopping" xml:space="preserve"><value>正在停止...</value></data>
+  <data name="FinishInstallationPageModifyHeaderInfo" xml:space="preserve"><value>現在已在您的電腦上安裝這些元件:</value></data>
+  <data name="ErrorMessage_GeneralErrorLabelHeadLine" xml:space="preserve"><value>已發生系統錯誤</value></data>
+  <data name="HardwareSelectionInputComponentName" xml:space="preserve"><value>輸入：</value></data>
+  <data name="ProgressDisablingDeviceN" xml:space="preserve"><value>正在停用裝置：{0}</value></data>
+  <data name="Finish_ButtonClose" xml:space="preserve"><value>關閉(&amp;C)</value></data>
+  <data name="FinishPageMobileClientAddressLabel" xml:space="preserve"><value>{0} 地址：</value></data>
+  <data name="Finish_ModifyLabelHeadLine" xml:space="preserve"><value>安裝已變更</value></data>
+  <data name="UserPageUserAlreadyAdded" xml:space="preserve"><value>使用者已經新增</value></data>
+  <data name="UserPageUserTypeLabel" xml:space="preserve"><value>使用者類型</value></data>
+  <data name="UserPageUserTypeBasic" xml:space="preserve"><value>基本使用者</value></data>
+  <data name="ProgressSecurityOnRoleChanged" xml:space="preserve"><value>操作員角色的安全性已變更</value></data>
+  <data name="ProgressEnablingDeviceN" xml:space="preserve"><value>正在啟用裝置：{0}</value></data>
+  <data name="ProgressCreateDefaultViews" xml:space="preserve"><value>正在建立預設檢視...</value></data>
+  <data name="LicensePageUnkownProduct" xml:space="preserve"><value>錯誤 - 您只能下載最新版本為 {0} 的免費授權檔案。 下載最新的安裝程式。</value></data>
+  <data name="FinishInstallationPageModifyHeader" xml:space="preserve"><value>安裝已變更</value></data>
+  <data name="UserPageUserInValidCharaters" xml:space="preserve"><value>使用者名稱不可包含 '?','/','#','[',']','{','}','\'</value></data>
+  <data name="UserPagePasswordTooLong" xml:space="preserve"><value>密碼長度不得超過 256 個字元</value></data>
+  <data name="FinishInstallationPageHeader_HardwareManufacturerMode" xml:space="preserve"><value>已完成</value></data>
+  <data name="FinishInstallationPage_PrepareFinalize" xml:space="preserve"><value>下次重啟時，執行最終化模式。</value></data>
+  <data name="HardwareSelectionOutput" xml:space="preserve"><value>輸出</value></data>
+  <data name="UserPageAddButton" xml:space="preserve"><value>新增</value></data>
+  <data name="LicensePageBrowseLicense" xml:space="preserve"><value>輸入或瀏覽至授權檔案的位置：</value></data>
+  <data name="RecorderOnlineStatusConnecting" xml:space="preserve"><value>錄影伺服器已上線。正在連線...</value></data>
+  <data name="FinishInstallationPage_HardwareManufacturerMode" xml:space="preserve"><value>系統現已準備好建立可配置之磁碟映像檔。</value></data>
+  <data name="HardwareSelectionHeader" xml:space="preserve"><value>選取要新增至系統的硬體</value></data>
+  <data name="zz_Text30" xml:space="preserve"><value>選取安裝位置:</value></data>
+  <data name="zz_Text14" xml:space="preserve"><value>14 天</value></data>
+  <data name="zz_Text15" xml:space="preserve"><value>30 天</value></data>
+  <data name="zz_Text12" xml:space="preserve"><value>上一個</value></data>
+  <data name="zz_Text13" xml:space="preserve"><value>繼續</value></data>
+  <data name="zz_Text10" xml:space="preserve"><value>使用新的使用者名稱和密碼重新掃描</value></data>
+  <data name="zz_Text11" xml:space="preserve"><value>略過</value></data>
+  <data name="zz_Test19" xml:space="preserve"><value>輸入或瀏覽至授權檔案的位置:</value></data>
+  <data name="zz_Test31" xml:space="preserve"><value>安裝與設定完成</value></data>
+  <data name="zz_Test20" xml:space="preserve"><value>瀏覽</value></data>
+  <data name="HardwareSelectionCamera" xml:space="preserve"><value>攝影機</value></data>
+  <data name="ProgressFinishedGettingRoles" xml:space="preserve"><value>已收到定義的角色</value></data>
+  <data name="HardwareConfigurationProgressHeader" xml:space="preserve"><value>正在設定系統</value></data>
+  <data name="ProgressChangingSecurityOnRole" xml:space="preserve"><value>正在變更操作員角色的安全性...</value></data>
+  <data name="Finish_AllInstalled" xml:space="preserve"><value>已經在您的電腦上成功安裝 {0}。</value></data>
+  <data name="FinishConfigurationPageHeaderInfo" xml:space="preserve"><value>已順利將這些項目新增至您的系統</value></data>
+  <data name="LicensePageWhereToBuyReseller" xml:space="preserve"><value>{0} 經銷商</value></data>
+  <data name="UserPageInvalidIdentities" xml:space="preserve"><value>無法新增身份。這可能是由於沒有或有限 Active Directory 的存取權限所致。</value></data>
+  <data name="SkipConfigurationButtonText" xml:space="preserve"><value>關閉</value></data>
+  <data name="ProgressFailedGettingRoles" xml:space="preserve"><value>無法取得角色</value></data>
+  <data name="LicensePageWhereToBuy" xml:space="preserve"><value>造訪 {0} 頁面以尋找經銷商。</value></data>
+  <data name="ScanPageGenericError" xml:space="preserve"><value>掃描硬體失敗。檢查錄影伺服器是否正在運作並再試一次。</value></data>
+  <data name="ProgressCreatingOperatorRoleFailed" xml:space="preserve"><value>無法建立操作員角色</value></data>
+  <data name="HardwareSelectionInvalidHardwareInfo" xml:space="preserve"><value>無效的認證</value></data>
+  <data name="HardwareSelectionMetadata" xml:space="preserve"><value>中繼資料</value></data>
+  <data name="FinishInstallationPageHeaderInfo" xml:space="preserve"><value>已順利安裝這些元件。</value></data>
+  <data name="UserPagePasswordLabel" xml:space="preserve"><value>密碼</value></data>
+  <data name="ProgressOperatorRoleCreated" xml:space="preserve"><value>已建立操作員角色</value></data>
+  <data name="Finish_LabelComponnetsPresent" xml:space="preserve"><value>現在已在您的電腦上安裝這些元件:</value></data>
+  <data name="ProgressOnlineActivation" xml:space="preserve"><value>正在線上啟動授權...</value></data>
+  <data name="zz_Text7" xml:space="preserve"><value>這可能需要一些時間。</value></data>
+  <data name="zz_Text6" xml:space="preserve"><value>此安裝過程需要大量時間。</value></data>
+  <data name="zz_Text5" xml:space="preserve"><value>7 天</value></data>
+  <data name="zz_Text4" xml:space="preserve"><value>視訊錄影的保留時間:</value></data>
+  <data name="zz_Text3" xml:space="preserve"><value>視訊錄影儲存空間的位置:</value></data>
+  <data name="zz_Text2" xml:space="preserve"><value>建議您將視訊錄影儲存在與安裝程式不一樣的位置。</value></data>
+  <data name="zz_Text1" xml:space="preserve"><value>指定您要儲存視訊錄影的位置及儲存多久</value></data>
+  <data name="zz_Text9" xml:space="preserve"><value>全部選取</value></data>
+  <data name="zz_Text8" xml:space="preserve"><value>選取攝影機以新增至您的系統</value></data>
+  <data name="HardwareSelectionDisabled" xml:space="preserve"><value>已停用</value></data>
+  <data name="ConfigurationSummaryUserFailedHeader" xml:space="preserve"><value>使用者失敗</value></data>
+  <data name="HardwareSelectionEnabled" xml:space="preserve"><value>已啟用</value></data>
+  <data name="ConfigurationSummaryUserHeader" xml:space="preserve"><value>使用者</value></data>
+  <data name="SystemConfigurationPlugin_ErrorOccured" xml:space="preserve"><value>無法設定伺服器。如需詳細資訊，請參閱記錄檔。</value></data>
+  <data name="HardwareSelectionAddedHardware" xml:space="preserve"><value>已新增硬體：</value></data>
+  <data name="ScanPageTimeOutError" xml:space="preserve"><value>掃描硬體逾時。未發現任何硬體。</value></data>
+  <data name="Finish_LabelfinishComponentInstall" xml:space="preserve"><value>已順利安裝這些元件。</value></data>
+  <data name="ScanningForHardware" xml:space="preserve"><value>正在掃描硬體...</value></data>
+  </root>

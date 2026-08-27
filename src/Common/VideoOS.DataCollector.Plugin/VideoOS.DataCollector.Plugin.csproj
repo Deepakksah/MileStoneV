@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.DataCollector.Plugin</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json" />
+    
+    
+    
+    
+    <Reference Include="System.Xml" />
+    
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    
+    <Reference Include="System.Core" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.Logging\VideoOS.Installer.Logging.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.ServerConfigurator\VideoOS.Installer.ServerConfigurator.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.Core\VideoOS.Installer.Core.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.Common\VideoOS.Installer.Common.csproj" />
+    <ProjectReference Include="..\..\ServerCore\VideoOS.Server\VideoOS.Server.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.ServerConfigurator.Interfaces\VideoOS.ServerConfigurator.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.Interfaces\VideoOS.Installer.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.Common.Utilities\VideoOS.Installer.Common.Utilities.csproj" />
+    <ProjectReference Include="..\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\..\Installer\VideoOS.Installer.MSI\VideoOS.Installer.MSI.csproj" />
+  </ItemGroup>
+</Project>

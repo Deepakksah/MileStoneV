@@ -1,0 +1,106 @@
+using System.CodeDom.Compiler;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.Runtime.Serialization;
+using VideoOS.Platform.SDK.Interface;
+
+namespace VideoOS.Common.Proxy.Server.WCF;
+
+[DebuggerStepThrough]
+[GeneratedCode("System.Runtime.Serialization", "4.0.0.0")]
+[DataContract(Name = "RetentionOption", Namespace = "http://videoos.net/2/XProtectCSServerCommand")]
+[ExcludeFromCodeCoverage]
+public class RetentionOption : IExtensibleDataObject, IRetentionOption
+{
+	private ExtensionDataObject extensionDataField;
+
+	private RetentionOptionType RetentionOptionTypeField;
+
+	private int RetentionUnitsField;
+
+	public ExtensionDataObject ExtensionData
+	{
+		get
+		{
+			return extensionDataField;
+		}
+		set
+		{
+			extensionDataField = value;
+		}
+	}
+
+	[DataMember]
+	public RetentionOptionType RetentionOptionType
+	{
+		get
+		{
+			return RetentionOptionTypeField;
+		}
+		set
+		{
+			RetentionOptionTypeField = value;
+		}
+	}
+
+	[DataMember]
+	public int RetentionUnits
+	{
+		get
+		{
+			return RetentionUnitsField;
+		}
+		set
+		{
+			RetentionUnitsField = value;
+		}
+	}
+
+	VideoOS.Platform.SDK.Interface.RetentionOptionType IRetentionOption.RetentionOptionType
+	{
+		get
+		{
+			return RetentionOptionType switch
+			{
+				RetentionOptionType.Unused => VideoOS.Platform.SDK.Interface.RetentionOptionType.Unused, 
+				RetentionOptionType.Days => VideoOS.Platform.SDK.Interface.RetentionOptionType.Days, 
+				RetentionOptionType.Weeks => VideoOS.Platform.SDK.Interface.RetentionOptionType.Weeks, 
+				RetentionOptionType.Months => VideoOS.Platform.SDK.Interface.RetentionOptionType.Months, 
+				RetentionOptionType.Years => VideoOS.Platform.SDK.Interface.RetentionOptionType.Years, 
+				RetentionOptionType.UserDefined => VideoOS.Platform.SDK.Interface.RetentionOptionType.UserDefined, 
+				RetentionOptionType.Indefinite => VideoOS.Platform.SDK.Interface.RetentionOptionType.Indefinite, 
+				_ => VideoOS.Platform.SDK.Interface.RetentionOptionType.Unused, 
+			};
+		}
+		set
+		{
+			switch (value)
+			{
+			case VideoOS.Platform.SDK.Interface.RetentionOptionType.Unused:
+				RetentionOptionType = RetentionOptionType.Unused;
+				break;
+			case VideoOS.Platform.SDK.Interface.RetentionOptionType.Days:
+				RetentionOptionType = RetentionOptionType.Days;
+				break;
+			case VideoOS.Platform.SDK.Interface.RetentionOptionType.Weeks:
+				RetentionOptionType = RetentionOptionType.Weeks;
+				break;
+			case VideoOS.Platform.SDK.Interface.RetentionOptionType.Months:
+				RetentionOptionType = RetentionOptionType.Months;
+				break;
+			case VideoOS.Platform.SDK.Interface.RetentionOptionType.Years:
+				RetentionOptionType = RetentionOptionType.Years;
+				break;
+			case VideoOS.Platform.SDK.Interface.RetentionOptionType.UserDefined:
+				RetentionOptionType = RetentionOptionType.UserDefined;
+				break;
+			case VideoOS.Platform.SDK.Interface.RetentionOptionType.Indefinite:
+				RetentionOptionType = RetentionOptionType.Indefinite;
+				break;
+			default:
+				RetentionOptionType = RetentionOptionType.Unused;
+				break;
+			}
+		}
+	}
+}

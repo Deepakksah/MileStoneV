@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ListView x:Class="VideoOS.UI.Common.WPF.HyperlinkListView.HyperLinkListView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" xmlns:hyperlinklistview="clr-namespace:VideoOS.UI.Common.WPF.HyperlinkListView;assembly=VideoOS.UI.Common.WPF">
+  <ItemsControl.ItemContainerStyle>
+    <Style TargetType="{x:Type ListViewItem}">
+      <Setter Property="Focusable" Value="false" />
+    </Style>
+  </ItemsControl.ItemContainerStyle>
+  <ItemsControl.ItemTemplate>
+    <DataTemplate>
+      <TextBlock Name="tx" Text="{Binding Link}" MouseLeave="tx_MouseLeave" MouseLeftButtonDown="tx_MouseLeftButtonDown" MouseLeftButtonUp="tx_MouseLeftButtonUp">
+        <FrameworkElement.Style>
+          <Style TargetType="{x:Type TextBlock}">
+            <Style.Triggers>
+              <Trigger Property="UIElement.IsMouseOver" Value="True">
+                <Setter Property="TextDecorations" Value="Underline" />
+                <Setter Property="FrameworkElement.Cursor" Value="Hand" />
+              </Trigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </TextBlock>
+    </DataTemplate>
+  </ItemsControl.ItemTemplate>
+</ListView>

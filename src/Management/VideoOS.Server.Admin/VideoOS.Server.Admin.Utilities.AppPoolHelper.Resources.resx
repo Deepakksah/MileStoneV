@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Setting_WAMUser_password_on_application_pool" xml:space="preserve"><value>Setting WAMUser password on application pool.</value></data>
+  <data name="Deleting_application_pool_Name" xml:space="preserve"><value>Deleting application pool. Name: {0}</value></data>
+  <data name="Setting_user_information_on_the_application_pool" xml:space="preserve"><value>Setting user information on the application pool!</value></data>
+  <data name="Metadata_path_does_not_include_W3SVCAppPools" xml:space="preserve"><value>Metadata path does not include '/W3SVC/AppPools'</value></data>
+  <data name="Metadata_path_is_null" xml:space="preserve"><value>Metadata path is null or empty</value></data>
+  <data name="Setting_WAMUser" xml:space="preserve"><value>Setting WAMUser</value></data>
+  <data name="Setting_the_managed_runtime_version_for_the_application_pool" xml:space="preserve"><value>Setting the managed runtime version for the application pool</value></data>
+  <data name="Application_pool_deleted" xml:space="preserve"><value>Application pool deleted.</value></data>
+  <data name="Creating_new_application_pool_Named" xml:space="preserve"><value>Creating new application pool. Named: {0}</value></data>
+  <data name="Deleting_existing_application_pool" xml:space="preserve"><value>Deleting existing application pool!</value></data>
+  <data name="Failed_in_CreateAppPool_with_the_following_exception" xml:space="preserve"><value>Failed in CreateAppPool with the following exception: 
+{0}</value></data>
+  <data name="Application_pool_created_Name" xml:space="preserve"><value>Application pool created. Name: {0}</value></data>
+  <data name="The_application_pools_entry_is_null" xml:space="preserve"><value>The application pools entry is null</value></data>
+  <data name="AppPool_name_is_null" xml:space="preserve"><value>Application pool name is null or empty</value></data>
+  <data name="Application_pool_to_delete_is_null" xml:space="preserve"><value>Application pool to delete is null</value></data>
+  <data name="Application_pool_not_found" xml:space="preserve"><value>Application pool is not found. Name {0}</value></data>
+  <data name="Setting_start_mode_on_the_application_pool" xml:space="preserve"><value>Setting start mode on the application pool</value></data>
+  </root>

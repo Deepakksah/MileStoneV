@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Common.Integration.Data</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    
+    
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.Data.SqlClient">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    
+    
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.Utilities.Database\VideoOS.Utilities.Database.csproj" />
+    <ProjectReference Include="..\VideoOS.Common\VideoOS.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Common.Crypto\VideoOS.Common.Crypto.csproj" />
+    <ProjectReference Include="..\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\VideoOS.Vms.Utilities\VideoOS.Vms.Utilities.csproj" />
+    <ProjectReference Include="..\VideoOS.Common.Integration\VideoOS.Common.Integration.csproj" />
+    <ProjectReference Include="..\VideoOS.Utilities.Telemetry\VideoOS.Utilities.Telemetry.csproj" />
+  </ItemGroup>
+</Project>

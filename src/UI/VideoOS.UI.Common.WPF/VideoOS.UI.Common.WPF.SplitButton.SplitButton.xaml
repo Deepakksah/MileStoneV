@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.SplitButton.SplitButton" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:SplitButton="clr-namespace:VideoOS.UI.Common.WPF.SplitButton">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <SolidColorBrush x:Key="DefaultBackgroundBrush" PresentationOptions:Freeze="true" Color="Transparent" />
+      <LinearGradientBrush x:Key="MouseOverBackgroundBrush" PresentationOptions:Freeze="true" EndPoint="0.5,1" StartPoint="0.5,0.0">
+        <GradientStop Color="#FFD7EFF3" Offset="0" />
+        <GradientStop Color="#FFAEDCEC" Offset="1" />
+      </LinearGradientBrush>
+      <LinearGradientBrush x:Key="PopupOpenBackgroundBrush" PresentationOptions:Freeze="true" EndPoint="0.5,1" StartPoint="0.5,0.0">
+        <GradientStop Color="#FFC7DFE3" Offset="0" />
+        <GradientStop Color="#FF7EACBC" Offset="1" />
+      </LinearGradientBrush>
+      <SolidColorBrush x:Key="DefaultBorderBrush" PresentationOptions:Freeze="true" Color="Transparent" />
+      <SolidColorBrush x:Key="MouseOverBorderBrush" PresentationOptions:Freeze="true" Color="#FFA2B2C1" />
+      <SolidColorBrush x:Key="PopupOpenBorderBrush" PresentationOptions:Freeze="true" Color="#FF8292A1" />
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid>
+    <Border Name="_border" BorderThickness="1" CornerRadius="4" SnapsToDevicePixels="True">
+      <FrameworkElement.Style>
+        <Style TargetType="{x:Type Border}">
+          <Setter Property="Background" Value="{StaticResource DefaultBackgroundBrush}" />
+          <Setter Property="BorderBrush" Value="{StaticResource DefaultBorderBrush}" />
+          <Style.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="True">
+              <Setter Property="Background" Value="{StaticResource MouseOverBackgroundBrush}" />
+              <Setter Property="BorderBrush" Value="{StaticResource MouseOverBorderBrush}" />
+            </Trigger>
+            <DataTrigger Value="True" Binding="{Binding ElementName=_itemSelectionPopup, Path=IsOpen}">
+              <Setter Property="Background" Value="{StaticResource PopupOpenBackgroundBrush}" />
+              <Setter Property="BorderBrush" Value="{StaticResource PopupOpenBorderBrush}" />
+            </DataTrigger>
+          </Style.Triggers>
+        </Style>
+      </FrameworkElement.Style>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="auto" />
+          <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <Grid Column="0" Background="#00FFFFFF" MouseDown="Action_MouseDown">
+          <Image Name="_image" Stretch="None" IsHitTestVisible="False" Margin="2, 0, 0, 0" />
+        </Grid>
+        <Rectangle Grid.Column="1" VerticalAlignment="Stretch" Width="1" Fill="{Binding ElementName=_border, Path=BorderBrush}" />
+        <Grid Column="3" Background="#00FFFFFF">
+          <Path Data="M0,0 L3,5 L6,0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3" IsHitTestVisible="False" Fill="{Binding Path=ArrowBrush, RelativeSource={RelativeSource FindAncestor, AncestorType=SplitButton:SplitButton, AncestorLevel=1}}" />
+          <Button Click="Arrow_Click">
+            <FrameworkElement.Style>
+              <Style TargetType="{x:Type Button}">
+                <Setter Property="Template">
+                  <Setter.Value>
+                    <ControlTemplate>
+                      <Rectangle Fill="#00FFFFFF" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    </ControlTemplate>
+                  </Setter.Value>
+                </Setter>
+              </Style>
+            </FrameworkElement.Style>
+          </Button>
+        </Grid>
+      </Grid>
+    </Border>
+    <Popup Name="_itemSelectionPopup" IsOpen="False" StaysOpen="False" AllowsTransparency="True" Placement="Left" HorizontalOffset="{Binding ElementName=_border, Path=ActualWidth}" VerticalOffset="{Binding ElementName=_border, Path=ActualHeight}" Closed="_itemSelectionPopup_Closed">
+      <SplitButton:ItemSelectionControl x:Name="_itemSelectionControl" SelectedItemChangedEvent="_itemSelectionControl_SelectedItemChangedEvent" Margin="0, 0, 3, 3" Background="{Binding Path=PopupBackgroundBrush, RelativeSource={RelativeSource AncestorType=SplitButton:SplitButton}}" Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=SplitButton:SplitButton}}">
+        <UIElement.Effect>
+          <DropShadowEffect Color="Black" ShadowDepth="3" Opacity="0.7" BlurRadius="3" />
+        </UIElement.Effect>
+      </SplitButton:ItemSelectionControl>
+    </Popup>
+  </Grid>
+</UserControl>

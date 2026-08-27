@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaLower.ControlsAreaLower" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaLower.Controls" xmlns:controlsAreaLower="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaLower" Loaded="UserControl_Loaded">
+  <Grid Height="{x:Static controlsAreaLower:ControlsAreaLower.ControlsAreaLowerHeight}" Margin="8,0,8,0">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="auto" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Controls:SetupControl x:Name="_setupControl" SetupButtonClicked="_setupControl_SetupButtonClicked" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+    <ContentControl Name="_livePlaybackTogglePlaceholder" Grid.Column="1" Width="128" Margin="16,0,16,0" />
+    <Controls:SpanControl x:Name="_spanControl" SelectedSpanChanged="_spanControl_SelectedSpanChanged" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+  </Grid>
+</UserControl>

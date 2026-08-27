@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:converters="clr-namespace:VideoOS.Platform.UI.Converters" xmlns:ui="clr-namespace:VideoOS.Platform.UI" xmlns:commands="clr-namespace:VideoOS.Platform.UI.Commands" xmlns:resources="clr-namespace:VideoOS.Platform.UI.Resources" xmlns:extensions="clr-namespace:VideoOS.Platform.UI.Extensions">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/VideoOSBase.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/ContextMenus/VideoOSContextMenuBase.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="{x:Type controls:VideoOSContextMenuSmall}" BasedOn="{StaticResource {x:Static controls:VideoOSBaseInternals.StyleKey}}" TargetType="{x:Type controls:VideoOSContextMenuSmall}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type controls:VideoOSContextMenuSmall}">
+          <FrameworkTemplate.Resources>
+            <ResourceDictionary>
+              <Style x:Key="{x:Static MenuItem.SeparatorStyleKey}" BasedOn="{StaticResource {x:Static controls:VideoOSContextMenuBaseInternals.SeparatorStyleKey}}" TargetType="{x:Type Separator}" />
+              <Style x:Key="{x:Type controls:VideoOSContextMenuItem}" TargetType="{x:Type controls:VideoOSContextMenuItem}">
+                <Setter Property="Template">
+                  <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type controls:VideoOSContextMenuItem}">
+                      <Grid Name="_root" Height="24" SnapsToDevicePixels="True" extensions:UIElementExtensions.IsDragInitiatedAware="{TemplateBinding controls:VideoOSContextMenuItem.IsDraggable}" commands:EventsToCommandMapping.Events="VideoOS.Platform.UI.Extensions.UIElementExtensions.DragInitiated" commands:EventsToCommandMapping.Command="{Binding ItemDragInitiatedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSContextMenuBase}}}" commands:EventsToCommandMapping.CommandParameter="{Binding RelativeSource={RelativeSource TemplatedParent}}">
+                        <Panel.Background>
+                          <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.ItemBackgroundConverter}">
+                            <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                            <Binding Path="IsHighlighted" RelativeSource="{x:Static RelativeSource.TemplatedParent}" />
+                            <Binding Path="IsChecked" RelativeSource="{x:Static RelativeSource.TemplatedParent}" />
+                            <Binding Path="IsPressed" RelativeSource="{RelativeSource TemplatedParent}" />
+                            <Binding Path="CheckedAppearance" RelativeSource="{RelativeSource TemplatedParent}" />
+                            <Binding Path="IsInteractive" RelativeSource="{RelativeSource TemplatedParent}" />
+                            <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                          </MultiBinding>
+                        </Panel.Background>
+                        <Grid Margin="0,0,8,0">
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition SharedSizeGroup="CheckBoxColumnSharedSizeGroup" Width="Auto" />
+                            <ColumnDefinition SharedSizeGroup="IconColumnSharedSizeGroup" Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                          </Grid.ColumnDefinitions>
+                          <controls:VideoOSCheckBoxSmall Grid.Column="0" VerticalAlignment="Center" Margin="8,0,0,0" IsChecked="{TemplateBinding MenuItem.IsChecked}" IsHitTestVisible="False" Focusable="False">
+                            <UIElement.Visibility>
+                              <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.CheckBoxVisibilityConverter}">
+                                <Binding Path="IsCheckable" RelativeSource="{RelativeSource TemplatedParent}" />
+                                <Binding Path="CheckedAppearance" RelativeSource="{RelativeSource TemplatedParent}" />
+                              </MultiBinding>
+                            </UIElement.Visibility>
+                          </controls:VideoOSCheckBoxSmall>
+                          <controls:VideoOSIcon Grid.Column="1" Width="16" Height="16" VerticalAlignment="Center" IconSource="{TemplateBinding controls:VideoOSContextMenuItem.IconSource}" Margin="8,0,0,0" AutoColorBrush="{Binding ElementName=_textBlock, Path=Foreground}" Visibility="{TemplateBinding IconSource, Converter={converters:NullToVisibilityConverter NullResult=Collapsed, NotNullResult=Visible}}" />
+                          <ContentControl Name="_customContent" Grid.Column="2" Margin="8,0,0,0" VerticalContentAlignment="Center" Content="{TemplateBinding controls:VideoOSContextMenuItem.Data}" Visibility="{Binding Path=ContentTemplate, RelativeSource={RelativeSource Self}, Converter={converters:NullToVisibilityConverter NullResult=Collapsed, NotNullResult=Visible}}">
+                            <ContentControl.ContentTemplate>
+                              <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.ContentTemplateConverter}">
+                                <Binding Path="ContentTemplate" RelativeSource="{RelativeSource TemplatedParent}" />
+                                <Binding Path="ContentTemplate" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSContextMenuBase}}" />
+                              </MultiBinding>
+                            </ContentControl.ContentTemplate>
+                          </ContentControl>
+                          <controls:VideoOSTextBlockBodySmall x:Name="_textBlock" Grid.Column="2" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Margin="8,0,0,0" Text="{TemplateBinding Data, Converter={converters:ToStringConverter}}" Appearance="{TemplateBinding IsDestructive, Converter={x:Static controls:VideoOSContextMenuSmallInternals.TextAppearanceConverter}}" Visibility="{Binding ElementName=_customContent, Path=ContentTemplate, Converter={converters:NullToVisibilityConverter NullResult=Visible, NotNullResult=Collapsed}}" />
+                          <controls:VideoOSBadgeExtraSmall Grid.Column="3" VerticalAlignment="Center" Margin="12,0,0,0" Visibility="{TemplateBinding Alert, Converter={converters:NullToVisibilityConverter NullResult=Collapsed, NotNullResult=Visible}}" Count="{Binding Path=Alert.Count, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSContextMenuItem}}}" MaxDisplayCount="{Binding Path=Alert.MaxDisplayCount, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSContextMenuItem}}}" ToolTip="{Binding Path=Alert.ToolTip, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSContextMenuItem}}}" />
+                          <controls:VideoOSActionListHorizontalExtraSmall Grid.Column="4" Actions="{TemplateBinding controls:VideoOSContextMenuItem.Actions}" VerticalAlignment="Center" Margin="8,0,0,0" IsHitTestVisible="{TemplateBinding controls:VideoOSContextMenuItem.IsInteractive}">
+                            <UIElement.Visibility>
+                              <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.ActionsButtonVisibilityConverter}">
+                                <Binding Path="Actions" RelativeSource="{RelativeSource Self}" />
+                                <Binding Path="IsChecked" RelativeSource="{RelativeSource TemplatedParent}" />
+                                <Binding Path="IsOpen" RelativeSource="{RelativeSource Self}" />
+                                <Binding ElementName="_root" Path="IsMouseOver" />
+                                <Binding Path="IsInteractive" RelativeSource="{RelativeSource TemplatedParent}" />
+                                <Binding Path="CheckedAppearance" RelativeSource="{RelativeSource TemplatedParent}" />
+                              </MultiBinding>
+                            </UIElement.Visibility>
+                          </controls:VideoOSActionListHorizontalExtraSmall>
+                          <controls:VideoOSIcon Grid.Column="5" Width="12" Height="12" VerticalAlignment="Center" Margin="8,0,0,0" Visibility="{TemplateBinding Role, Converter={converters:EnumToVisibilityConverter MatchValue={x:Static MenuItemRole.SubmenuHeader}, MatchedResult=Visible, NotMatchedResult=Collapsed}}" IconSource="{controls:VideoOSIconBuiltInSource Chevron_Right_12px, RtlIcon=Chevron_Left_12px}" />
+                          <Popup AllowsTransparency="true" Focusable="false" Placement="Right" commands:EventsToCommandMapping.Events="Opened, Closed" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" PlacementTarget="{Binding ElementName=_root}" commands:EventsToCommandMapping.Command="{Binding SubMenuPopupOpenedClosedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSContextMenuBase}}}" commands:EventsToCommandMapping.CommandParameter="{Binding ElementName=_subMenuScrollViewer}" commands:EventsToCommandMapping.CommandParameter2="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSScrollViewer}}}">
+                            <ContentControl MinWidth="{x:Static controls:VideoOSContextMenuBaseInternals.ContextMenuMinWidth}" MaxWidth="{x:Static controls:VideoOSContextMenuBaseInternals.ContextMenuMaxWidth}">
+                              <Border SnapsToDevicePixels="True" Style="{StaticResource {x:Static controls:VideoOSContextMenuBaseInternals.ItemsListBorderStyleKey}}">
+                                <controls:VideoOSScrollViewer x:Name="_subMenuScrollViewer" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" IsScrollBarContextMenuEnabled="False" MaxHeight="{x:Static controls:VideoOSContextMenuSmallInternals.ContextMenuMaxHeight}">
+                                  <ItemsPresenter Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Cycle" RenderOptions.ClearTypeHint="Enabled" Grid.IsSharedSizeScope="True" Margin="0,4" />
+                                </controls:VideoOSScrollViewer>
+                              </Border>
+                            </ContentControl>
+                          </Popup>
+                        </Grid>
+                      </Grid>
+                    </ControlTemplate>
+                  </Setter.Value>
+                </Setter>
+              </Style>
+              <Style x:Key="{x:Type MenuItem}" TargetType="{x:Type MenuItem}">
+                <Setter Property="Template" Value="{Binding Converter={x:Static controls:VideoOSContextMenuBaseInternals.ThrowOnlyVideoOSContextMenuItemSupportedExceptionConverter}, RelativeSource={RelativeSource Self}}" />
+              </Style>
+            </ResourceDictionary>
+          </FrameworkTemplate.Resources>
+          <Border SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" Style="{StaticResource {x:Static controls:VideoOSContextMenuBaseInternals.ItemsListBorderStyleKey}}">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <StackPanel Grid.Row="0" Orientation="Vertical" Visibility="{TemplateBinding HeaderTemplate, Converter={converters:NullToVisibilityConverter NullResult=Collapsed, NotNullResult=Visible}}">
+                <ContentControl HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" ContentTemplate="{TemplateBinding controls:VideoOSContextMenuBase.HeaderTemplate}" Margin="4" Focusable="False">
+                  <ContentControl.Content>
+                    <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.HeaderFooterContentConverter}">
+                      <Binding Path="DataContext" RelativeSource="{RelativeSource TemplatedParent}" />
+                      <Binding Path="HeaderTemplate" RelativeSource="{RelativeSource TemplatedParent}" />
+                    </MultiBinding>
+                  </ContentControl.Content>
+                </ContentControl>
+                <Rectangle Height="1" Fill="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuSeparatorLineBrush}}" Visibility="{TemplateBinding HasItems, Converter={converters:BoolToVisibilityConverter TrueResult=Visible, FalseResult=Collapsed}}" />
+              </StackPanel>
+              <Grid Row="1">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="4" />
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition>
+                    <RowDefinition.Height>
+                      <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.ControlsAreaGapRowHeightConverter}">
+                        <Binding Path="IsFilterControlsVisible" RelativeSource="{x:Static RelativeSource.TemplatedParent}" />
+                        <Binding Path="IsCheckedControlsVisible" RelativeSource="{x:Static RelativeSource.TemplatedParent}" />
+                      </MultiBinding>
+                    </RowDefinition.Height>
+                  </RowDefinition>
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="4" />
+                  <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <UIElement.Visibility>
+                  <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.ControlsAreaVisibilityConverter}">
+                    <Binding Path="IsFilterControlsVisible" RelativeSource="{x:Static RelativeSource.TemplatedParent}" />
+                    <Binding Path="IsCheckedControlsVisible" RelativeSource="{x:Static RelativeSource.TemplatedParent}" />
+                  </MultiBinding>
+                </UIElement.Visibility>
+                <controls:VideoOSTextBoxSmall Grid.Row="1" Margin="4,0" Mode="Search" PlaceholderText="{x:Static resources:Strings.VideoOSContextMenu_SearchPlaceHolderText}" EnsureFocusIsNotLostWhenActivatedUsingSpaceKey="True" Text="{Binding FilterText, RelativeSource={x:Static RelativeSource.TemplatedParent}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Visibility="{TemplateBinding IsFilterControlsVisible, Converter={converters:BoolToVisibilityConverter TrueResult=Visible, FalseResult=Collapsed}}" />
+                <Grid Row="3" Visibility="{TemplateBinding IsCheckedControlsVisible, Converter={converters:BoolToVisibilityConverter TrueResult=Visible, FalseResult=Collapsed}}">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                  </Grid.ColumnDefinitions>
+                  <controls:VideoOSButtonTextSmall Grid.Column="0" Content="{x:Static resources:Strings.VideoOSContextMenu_ClearCheckedItems}" VerticalAlignment="Center" Margin="8,0,4,0" Command="{Binding ClearCheckedItemsCommand, RelativeSource={RelativeSource TemplatedParent}}" />
+                  <controls:VideoOSToggleButtonIconSmall Grid.Column="1" VerticalAlignment="Center" Margin="0,2,4,2" EnsureFocusIsNotLostWhenActivatedUsingSpaceKey="True" IsChecked="{Binding HideUncheckedItems, RelativeSource={RelativeSource TemplatedParent}}" IconSource="{controls:VideoOSIconBuiltInSource Filter_Selection}" />
+                </Grid>
+                <Rectangle Grid.Row="5" Height="1" Fill="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuSeparatorLineBrush}}" />
+              </Grid>
+              <controls:VideoOSScrollViewer x:Name="PART_RootScrollViewer" Grid.Row="2" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" IsScrollBarContextMenuEnabled="False" MinWidth="{x:Static controls:VideoOSContextMenuBaseInternals.ContextMenuMinWidth}" MaxHeight="{x:Static controls:VideoOSContextMenuSmallInternals.ContextMenuMaxHeight}" Visibility="{TemplateBinding HasItems, Converter={converters:BoolToVisibilityConverter TrueResult=Visible, FalseResult=Collapsed}}">
+                <FrameworkElement.MaxWidth>
+                  <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.ControlsAreaMaxWidthConverter}">
+                    <Binding Path="HeaderTemplate" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Path="FooterTemplate" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}" />
+                  </MultiBinding>
+                </FrameworkElement.MaxWidth>
+                <ItemsPresenter Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Cycle" RenderOptions.ClearTypeHint="Enabled" Grid.IsSharedSizeScope="True" Margin="0,4" />
+              </controls:VideoOSScrollViewer>
+              <Grid Row="2" Visibility="{TemplateBinding NoMatchingItems, Converter={converters:BoolToVisibilityConverter TrueResult=Visible, FalseResult=Collapsed}}">
+                <controls:VideoOSTextBlockEmptyState Text="{x:Static resources:Strings.VideoOSContextMenu_NoMatchingItems}" TextAlignment="Center" Margin="10" TextWrapping="Wrap" />
+              </Grid>
+              <StackPanel Grid.Row="3" Orientation="Vertical" Visibility="{TemplateBinding FooterTemplate, Converter={converters:NullToVisibilityConverter NullResult=Collapsed, NotNullResult=Visible}}">
+                <Rectangle Height="1" Fill="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuSeparatorLineBrush}}" Margin="{TemplateBinding HasItems, Converter={converters:BoolToThicknessConverter TrueResult=0,4,0,0, FalseResult=0}}">
+                  <UIElement.Visibility>
+                    <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.FooterSeparatorVisibilityConverter}">
+                      <Binding Path="HasItems" RelativeSource="{RelativeSource TemplatedParent}" />
+                      <Binding Path="HeaderTemplate" RelativeSource="{RelativeSource TemplatedParent}" />
+                    </MultiBinding>
+                  </UIElement.Visibility>
+                </Rectangle>
+                <ContentControl HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" ContentTemplate="{TemplateBinding controls:VideoOSContextMenuBase.FooterTemplate}" Margin="4" Focusable="False">
+                  <ContentControl.Content>
+                    <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.HeaderFooterContentConverter}">
+                      <Binding Path="DataContext" RelativeSource="{RelativeSource TemplatedParent}" />
+                      <Binding Path="FooterTemplate" RelativeSource="{RelativeSource TemplatedParent}" />
+                    </MultiBinding>
+                  </ContentControl.Content>
+                </ContentControl>
+              </StackPanel>
+            </Grid>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

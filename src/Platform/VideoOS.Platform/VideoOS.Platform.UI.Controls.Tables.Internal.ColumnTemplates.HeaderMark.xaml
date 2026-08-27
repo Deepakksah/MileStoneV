@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentControl x:Class="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.HeaderMark" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:columnTemplates="clr-namespace:VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates" x:Name="_root" Focusable="False" Loaded="HeaderMark_OnLoaded" Unloaded="HeaderMark_OnUnloaded">
+  <controls:VideoOSCheckBoxMedium x:Name="_checkBox" Checked="_checkBox_OnCheckedChanged" Unchecked="_checkBox_OnCheckedChanged">
+    <Control.TabIndex>
+      <MultiBinding Converter="{x:Static columnTemplates:HeaderMarkInternals.TabIndexConverter}">
+        <Binding Path="Column.Column" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridColumnHeader}}" />
+        <Binding Path="Columns" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}" />
+      </MultiBinding>
+    </Control.TabIndex>
+  </controls:VideoOSCheckBoxMedium>
+</ContentControl>

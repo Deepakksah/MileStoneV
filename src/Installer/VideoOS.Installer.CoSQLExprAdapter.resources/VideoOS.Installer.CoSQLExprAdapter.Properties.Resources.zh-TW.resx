@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="SQL_InstallError_SP_Missing" xml:space="preserve"><value>安裝 SQL Express 失敗。錯誤碼 = {0}。請確認您擁有適用於您作業系統的最新 Service Pack，然後再試一次。</value></data>
+  <data name="SQL_UnpackInfo" xml:space="preserve"><value>正在解開 {0}...</value></data>
+  <data name="SQL_UnpackOK" xml:space="preserve"><value>成功解開 SQL Express 檔案{0}</value></data>
+  <data name="SQL_VerifyConnection" xml:space="preserve"><value>正在驗證 SQL Server 連線……</value></data>
+  <data name="SQL_StartInstallInfo" xml:space="preserve"><value>正在安裝 {0}...</value></data>
+  <data name="SQL_InstallError" xml:space="preserve"><value>安裝 SQL Express 失敗。錯誤代碼 = {0}</value></data>
+  <data name="SQL_InstallError_NotCompatible" xml:space="preserve"><value>SQL Express 安裝失敗。SQL Server 2019 不受 Windows 支援</value></data>
+  <data name="SQL_Running" xml:space="preserve"><value>SQL Express 啟動並運作中</value></data>
+  <data name="SQL_InstallException" xml:space="preserve"><value>SQL Express 安裝例外 '{0}'</value></data>
+  <data name="SQL_UnpackError" xml:space="preserve"><value>解開 {0} 失敗。錯誤代碼: {1}</value></data>
+  <data name="SQL_InstallOK" xml:space="preserve"><value>已安裝 SQL Express</value></data>
+  </root>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="TaskRetrievingEdgeRecordings" xml:space="preserve"><value>正在擷取遠端錄影</value></data>
+  <data name="TaskDeleteStorage" xml:space="preserve"><value>正在刪除儲存</value></data>
+  <data name="TaskTruncateDeviceStorage" xml:space="preserve"><value>正在刪除裝置錄影</value></data>
+  <data name="TaskArchiving" xml:space="preserve"><value>正在歸檔</value></data>
+  <data name="TaskActivateLicense" xml:space="preserve"><value>正在啟動授權</value></data>
+  <data name="TaskSetEncryptionPassword" xml:space="preserve"><value>正在套用加密密碼變更</value></data>
+  <data name="TaskMoveArchiveStorage" xml:space="preserve"><value>正在移動封存</value></data>
+  <data name="TaskDeleteArchive" xml:space="preserve"><value>正在刪除封存</value></data>
+  <data name="TaskHardwareScanExpress" xml:space="preserve"><value>掃描網路上的硬體...</value></data>
+  <data name="TaskMoveDevice" xml:space="preserve"><value>正在移動裝置錄影</value></data>
+  <data name="TaskDeleteRecorder" xml:space="preserve"><value>刪除錄影機</value></data>
+  <data name="TaskChangeHardwarePassword" xml:space="preserve"><value>正在變更硬體密碼</value></data>
+  <data name="TaskReplaceHardware" xml:space="preserve"><value>更換硬體</value></data>
+  <data name="TaskHardwareScan" xml:space="preserve"><value>掃描某個硬體</value></data>
+  <data name="TaskGetDevicePresets" xml:space="preserve"><value>獲取裝置預設值</value></data>
+  <data name="TaskRepairing" xml:space="preserve"><value>正在修復資料庫</value></data>
+  <data name="TaskUnmountArchiveStorage" xml:space="preserve"><value>正在卸載歸檔</value></data>
+  <data name="TaskSetEncryptionMethod" xml:space="preserve"><value>正在套用加密方法變更</value></data>
+  <data name="TaskUpdateHardware" xml:space="preserve"><value>更新硬體</value></data>
+  <data name="TaskFirmwareUpgrade" xml:space="preserve"><value>正在更新韌體</value></data>
+  <data name="TaskAddHardware" xml:space="preserve"><value>新增硬體</value></data>
+  <data name="TaskDeleteHardware" xml:space="preserve"><value>刪除硬體</value></data>
+  <data name="EntityNameManagementServer" xml:space="preserve"><value>管理伺服器</value></data>
+  <data name="TaskDeleteIdpUser" xml:space="preserve"><value>刪除 Identity Provider 中的使用者</value></data>
+  <data name="NameOfUnknownStorage" xml:space="preserve"><value>&lt;未知&gt;</value></data>
+  <data name="TaskAddIdpAdmin" xml:space="preserve"><value>新增 Identity Provider 中的管理員身分識別</value></data>
+  <data name="TaskDeleteIdpAdmin" xml:space="preserve"><value>刪除 Identity Provider 中的管理員身分識別</value></data>
+  <data name="TaskMountArchiveStorage" xml:space="preserve"><value>正在安裝歸檔</value></data>
+  <data name="TaskMoveRecordingStorage" xml:space="preserve"><value>移動儲存</value></data>
+  <data name="TaskSetEncryptionMethodInvalidMethod" xml:space="preserve"><value>指定的加密方法無效。</value></data>
+  </root>

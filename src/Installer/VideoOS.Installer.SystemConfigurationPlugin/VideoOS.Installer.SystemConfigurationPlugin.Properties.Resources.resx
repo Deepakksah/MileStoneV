@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="HardwareAddHeader" xml:space="preserve"><value>Adding Hardware</value></data>
+  <data name="UserPageUserNameLabel" xml:space="preserve"><value>User name</value></data>
+  <data name="ActivateLicense_Failed" xml:space="preserve"><value>License activation failed. The error was: {0}</value></data>
+  <data name="UserNamePasswordHeader" xml:space="preserve"><value>Enter credentials for your hardware and select a protocol</value></data>
+  <data name="UserPageRoleLabel" xml:space="preserve"><value>Role</value></data>
+  <data name="HTTPLabel" xml:space="preserve"><value>HTTP (Unsecure)</value></data>
+  <data name="UserPageHeader" xml:space="preserve"><value>Add users</value></data>
+  <data name="FinishPageWebClientUrlLabel" xml:space="preserve"><value>{0} address:</value></data>
+  <data name="UserPageUserTypeWindows" xml:space="preserve"><value>Windows user</value></data>
+  <data name="ProgressGettingRoles" xml:space="preserve"><value>Getting the defined roles from the system...</value></data>
+  <data name="LicensePageTimeoutError" xml:space="preserve"><value>Error - the request timed out. Try again later.</value></data>
+  <data name="HardwareSelectionMicrophone" xml:space="preserve"><value>Microphone</value></data>
+  <data name="UserPageUserNameTooLong" xml:space="preserve"><value>User name cannot be longer than 256 characters</value></data>
+  <data name="FinishInstallationPageInstallationInfo" xml:space="preserve"><value>Close now and configure later in the management client, or continue to add hardware and users.</value></data>
+  <data name="HardwareSelectionInput" xml:space="preserve"><value>Input</value></data>
+  <data name="UserPagePasswordComplexityNotMet" xml:space="preserve"><value>Password does not meet the complexity requirements</value></data>
+  <data name="FinishInstallationPageAllInstalled" xml:space="preserve"><value>{0} has successfully been installed on your computer.</value></data>
+  <data name="RecorderOnlineVerfying" xml:space="preserve"><value>Verifying the recording server...</value></data>
+  <data name="LicensePageDownloadingInfo" xml:space="preserve"><value>Downloading license file...</value></data>
+  <data name="ScanAlreadyRunning" xml:space="preserve"><value>Unable to start scanning. Another scanning session is already running on the recording server. Try again later.</value></data>
+  <data name="FinishInstallationPageOpenDownloadManager" xml:space="preserve"><value>Show system component download page</value></data>
+  <data name="HardwareSelectionCameraComponentName" xml:space="preserve"><value>Cameras:</value></data>
+  <data name="LicensePageBrowseButton" xml:space="preserve"><value>Browse</value></data>
+  <data name="ContinueConfigurationButtonText" xml:space="preserve"><value>Continue adding hardware and users</value></data>
+  <data name="UserPagePasswordDoNotMatch" xml:space="preserve"><value>Passwords do not match</value></data>
+  <data name="HardwareConfigurationHeader" xml:space="preserve"><value>Configure the devices</value></data>
+  <data name="LicensePageInfo" xml:space="preserve"><value>Use the {0} license file that you have purchased and received from your reseller.</value></data>
+  <data name="AddedDefaultViewNumberN" xml:space="preserve"><value>Added 'Default view {0}'</value></data>
+  <data name="LicensePageNetworkError" xml:space="preserve"><value>Error - not connected to the network.</value></data>
+  <data name="HardwareSelectionSpeakerComponentName" xml:space="preserve"><value>Speakers:</value></data>
+  <data name="UserPageHeaderInfo" xml:space="preserve"><value>You can add different types of users to access the system: Windows users or basic users. Basic users require a user name and a password. These users must be assigned to either the Operators role or the Administrators role.</value></data>
+  <data name="UserNamePasswordTip" xml:space="preserve"><value>Tip: For security reasons, it is recommended that you always use a secure connection and to change your hardware's credentials so that the hardware does not use the manufacturer's default credentials</value></data>
+  <data name="CloseAfterConfigurationButtonText" xml:space="preserve"><value>Close</value></data>
+  <data name="LicenseFormatError" xml:space="preserve"><value>Error - the license file is corrupt.</value></data>
+  <data name="AddingCameras" xml:space="preserve"><value>Adding hardware {0} ({1}/{2})...</value></data>
+  <data name="FinishConfigurationPageNoHardwareDescription" xml:space="preserve"><value>No hardware has been added</value></data>
+  <data name="LicensePageUnexpectedError" xml:space="preserve"><value>Error - the request failed. Try again later.</value></data>
+  <data name="HTTPSLabel" xml:space="preserve"><value>HTTPS (Secure)</value></data>
+  <data name="HardwareSelectionMetadataComponentName" xml:space="preserve"><value>Metadata:</value></data>
+  <data name="HardwareScanInfo" xml:space="preserve"><value>Scanning...</value></data>
+  <data name="HardwareScanStop" xml:space="preserve"><value>Stop</value></data>
+  <data name="LicensePageHeader" xml:space="preserve"><value>Select license file</value></data>
+  <data name="AddedDefaultView" xml:space="preserve"><value>Added 'Default view'</value></data>
+  <data name="FinishInstallationFirstInstallPageHeaderInfo" xml:space="preserve"><value>These components have been successfully installed. Click Continue to add hardware and users, or click Close to make the configurations in the {0}.</value></data>
+  <data name="ActivateLicense_Success" xml:space="preserve"><value>License activated successfully</value></data>
+  <data name="RecorderOnlineWaiting" xml:space="preserve"><value>Waiting for recording server to come online...</value></data>
+  <data name="ConfigurationSummaryCameraHeader" xml:space="preserve"><value>Cameras</value></data>
+  <data name="HardwareSelectionMicrophoneComponentName" xml:space="preserve"><value>Microphones:</value></data>
+  <data name="HardwareConfigurationProgressInfo" xml:space="preserve"><value>Configuring...</value></data>
+  <data name="ActivateLicense_Waiting" xml:space="preserve"><value>Activating license online...</value></data>
+  <data name="Finish_OpenDownloadLink" xml:space="preserve"><value>Show system component download page</value></data>
+  <data name="Password" xml:space="preserve"><value>Password</value></data>
+  <data name="ErrorMessage_ExistingSystemsExistCaption" xml:space="preserve"><value>The installer has detected previous installations on the computer.</value></data>
+  <data name="RecorderOnlineStatusConnected" xml:space="preserve"><value>Recording server is online and connected</value></data>
+  <data name="FinishInstallationPage_RemoveInstallLog" xml:space="preserve"><value>Delete log files that were created during installation.</value></data>
+  <data name="FinishInstallationPageHeader" xml:space="preserve"><value>The installation is complete</value></data>
+  <data name="StartAddingViews" xml:space="preserve"><value>Adding views...</value></data>
+  <data name="HardwareSelectionSpeaker" xml:space="preserve"><value>Speaker</value></data>
+  <data name="HardwareSelectionDiscoveredHardware" xml:space="preserve"><value>Discovered hardware:</value></data>
+  <data name="Finish_GettingStartedLabel" xml:space="preserve"><value>Show Quick Getting Started Guide</value></data>
+  <data name="ProgressEnablingHardware" xml:space="preserve"><value>Enabling hardware...</value></data>
+  <data name="UserPageCouldNotLoadRoles" xml:space="preserve"><value>Cannot load roles</value></data>
+  <data name="LicensePageStoringError" xml:space="preserve"><value>Error - cannot save the license file to {0}. Check your access rights.</value></data>
+  <data name="FinishConfigurationPageHeader" xml:space="preserve"><value>The configuration is complete</value></data>
+  <data name="HardwareConfigurationHeaderInfo" xml:space="preserve"><value>You can give the hardware useful names. Expand the nodes to enable or disable devices such as cameras, speakers, and microphones.</value></data>
+  <data name="FinishConfigurationPageWebClientHeader" xml:space="preserve"><value>Share these addresses with your users for online access to the system.</value></data>
+  <data name="HardwareAddInfo" xml:space="preserve"><value>Adding...</value></data>
+  <data name="HardwareSelectionNoHardwareMessage" xml:space="preserve"><value>No hardware found.</value></data>
+  <data name="FinishPageOpenClientLabel" xml:space="preserve"><value>Open {0} upon exit</value></data>
+  <data name="FinishInstallationPage_PrepareFinalizeExplanation" xml:space="preserve"><value>If you clear this check box, the system will reboot without finalizing the configuration. This will allow you to add additional software or modify the system before it is ready for distribution. Consult the System Builder documentation for how to finalize the implementation later.</value></data>
+  <data name="HardwareSelectionOutputComponentName" xml:space="preserve"><value>Output:</value></data>
+  <data name="HardwareConfigurationFailedHardwareInfo" xml:space="preserve"><value>Failed to add hardware.</value></data>
+  <data name="LicensePageDownloadSuccessful" xml:space="preserve"><value>License file downloaded successfully</value></data>
+  <data name="Finish_LabelHeadLine" xml:space="preserve"><value>The installation is complete</value></data>
+  <data name="UserPageRepeatPasswordLabel" xml:space="preserve"><value>Repeat password</value></data>
+  <data name="ProgressCreatingOperatorRole" xml:space="preserve"><value>Creating the Operators role...</value></data>
+  <data name="UsernamePasswordInfo" xml:space="preserve"><value>If you have changed hardware user names and passwords from the manufacturer defaults, add the values here. While scanning for hardware, the system will look for manufacturer default credentials as well as your customized credentials.</value></data>
+  <data name="ProgressCreateOperatorRole" xml:space="preserve"><value>Creating the Operators role...</value></data>
+  <data name="HardwareScanHeader" xml:space="preserve"><value>Scanning the network for hardware</value></data>
+  <data name="UserPageInvalidIdentity" xml:space="preserve"><value>The identity '{0}' cannot be added.</value></data>
+  <data name="UserName" xml:space="preserve"><value>User name</value></data>
+  <data name="HardwareScanStopping" xml:space="preserve"><value>Stopping...</value></data>
+  <data name="FinishInstallationPageModifyHeaderInfo" xml:space="preserve"><value>These components are now installed on your computer:</value></data>
+  <data name="ErrorMessage_GeneralErrorLabelHeadLine" xml:space="preserve"><value>A system error has occurred</value></data>
+  <data name="HardwareSelectionInputComponentName" xml:space="preserve"><value>Input:</value></data>
+  <data name="ProgressDisablingDeviceN" xml:space="preserve"><value>Disabling device: {0}</value></data>
+  <data name="Finish_ButtonClose" xml:space="preserve"><value>&amp;Close</value></data>
+  <data name="FinishPageMobileClientAddressLabel" xml:space="preserve"><value>{0} address:</value></data>
+  <data name="Finish_ModifyLabelHeadLine" xml:space="preserve"><value>Installation changed</value></data>
+  <data name="UserPageUserAlreadyAdded" xml:space="preserve"><value>User is already added</value></data>
+  <data name="UserPageUserTypeLabel" xml:space="preserve"><value>User type</value></data>
+  <data name="UserPageUserTypeBasic" xml:space="preserve"><value>Basic user</value></data>
+  <data name="ProgressSecurityOnRoleChanged" xml:space="preserve"><value>The security of the Operators role is changed</value></data>
+  <data name="ProgressEnablingDeviceN" xml:space="preserve"><value>Enabling device: {0}</value></data>
+  <data name="ProgressCreateDefaultViews" xml:space="preserve"><value>Creating default views...</value></data>
+  <data name="LicensePageUnkownProduct" xml:space="preserve"><value>Error – you can only download a free license file with the latest version of {0}. Download the latest installer.</value></data>
+  <data name="FinishInstallationPageModifyHeader" xml:space="preserve"><value>Installation changed</value></data>
+  <data name="UserPageUserInValidCharaters" xml:space="preserve"><value>User name cannot contain '?','/','#','[',']','{','}','\'</value></data>
+  <data name="UserPagePasswordTooLong" xml:space="preserve"><value>Password cannot be longer than 256 characters</value></data>
+  <data name="FinishInstallationPageHeader_HardwareManufacturerMode" xml:space="preserve"><value>Completed</value></data>
+  <data name="FinishInstallationPage_PrepareFinalize" xml:space="preserve"><value>At next reboot, run Finalize mode.</value></data>
+  <data name="HardwareSelectionOutput" xml:space="preserve"><value>Output</value></data>
+  <data name="UserPageAddButton" xml:space="preserve"><value>Add</value></data>
+  <data name="LicensePageBrowseLicense" xml:space="preserve"><value>Enter or browse to the location of the license file:</value></data>
+  <data name="RecorderOnlineStatusConnecting" xml:space="preserve"><value>Recording server is online. Connecting...</value></data>
+  <data name="FinishInstallationPage_HardwareManufacturerMode" xml:space="preserve"><value>The system is now ready to create a disk image for distribution.</value></data>
+  <data name="HardwareSelectionHeader" xml:space="preserve"><value>Select the hardware to add to the system</value></data>
+  <data name="zz_Text30" xml:space="preserve"><value>Select location for installation:</value></data>
+  <data name="zz_Text14" xml:space="preserve"><value>14 days</value></data>
+  <data name="zz_Text15" xml:space="preserve"><value>30 days</value></data>
+  <data name="zz_Text12" xml:space="preserve"><value>Previous</value></data>
+  <data name="zz_Text13" xml:space="preserve"><value>Continue</value></data>
+  <data name="zz_Text10" xml:space="preserve"><value>Rescan with new user name and password</value></data>
+  <data name="zz_Text11" xml:space="preserve"><value>Skip</value></data>
+  <data name="zz_Test19" xml:space="preserve"><value>Type or browse to the location of the license file:</value></data>
+  <data name="zz_Test31" xml:space="preserve"><value>The installation and configuration is complete</value></data>
+  <data name="zz_Test20" xml:space="preserve"><value>Browse</value></data>
+  <data name="HardwareSelectionCamera" xml:space="preserve"><value>Camera</value></data>
+  <data name="ProgressFinishedGettingRoles" xml:space="preserve"><value>Defined roles received</value></data>
+  <data name="HardwareConfigurationProgressHeader" xml:space="preserve"><value>Configuring the system</value></data>
+  <data name="ProgressChangingSecurityOnRole" xml:space="preserve"><value>Changing the security on the Operators role...</value></data>
+  <data name="Finish_AllInstalled" xml:space="preserve"><value>{0} has successfully been installed on your computer.</value></data>
+  <data name="FinishConfigurationPageHeaderInfo" xml:space="preserve"><value>These items have been successfully added to your system</value></data>
+  <data name="LicensePageWhereToBuyReseller" xml:space="preserve"><value>{0} reseller</value></data>
+  <data name="UserPageInvalidIdentities" xml:space="preserve"><value>Could not add identities. This might be caused by no or limited access to Active Directory.</value></data>
+  <data name="SkipConfigurationButtonText" xml:space="preserve"><value>Close</value></data>
+  <data name="ProgressFailedGettingRoles" xml:space="preserve"><value>Failed to get roles</value></data>
+  <data name="LicensePageWhereToBuy" xml:space="preserve"><value>Visit the {0} page to find a reseller.</value></data>
+  <data name="ScanPageGenericError" xml:space="preserve"><value>Scanning for hardware failed. Check if the recording server is running and try again.</value></data>
+  <data name="ProgressCreatingOperatorRoleFailed" xml:space="preserve"><value>Failed to create the Operators role</value></data>
+  <data name="HardwareSelectionInfo" xml:space="preserve"><value /></data>
+  <data name="HardwareSelectionInvalidHardwareInfo" xml:space="preserve"><value>Invalid credentials</value></data>
+  <data name="HardwareSelectionMetadata" xml:space="preserve"><value>Metadata</value></data>
+  <data name="FinishInstallationPageHeaderInfo" xml:space="preserve"><value>These components have been successfully installed.</value></data>
+  <data name="UserPagePasswordLabel" xml:space="preserve"><value>Password</value></data>
+  <data name="ProgressOperatorRoleCreated" xml:space="preserve"><value>Operators role created</value></data>
+  <data name="Finish_LabelComponnetsPresent" xml:space="preserve"><value>These components are now installed on your computer:</value></data>
+  <data name="ProgressOnlineActivation" xml:space="preserve"><value>Activating license online...</value></data>
+  <data name="zz_Text7" xml:space="preserve"><value>This may take some time.</value></data>
+  <data name="zz_Text6" xml:space="preserve"><value>This installation process takes a significant amount of time.</value></data>
+  <data name="zz_Text5" xml:space="preserve"><value>7 days</value></data>
+  <data name="zz_Text4" xml:space="preserve"><value>Retention time for video recordings:</value></data>
+  <data name="zz_Text3" xml:space="preserve"><value>Location for video recording storage:</value></data>
+  <data name="zz_Text2" xml:space="preserve"><value>It is recommended that you save your video recordings in a separate location from where you install the program.</value></data>
+  <data name="zz_Text1" xml:space="preserve"><value>Specify where you want to store you video recordings and for how long</value></data>
+  <data name="zz_Text9" xml:space="preserve"><value>Select all</value></data>
+  <data name="zz_Text8" xml:space="preserve"><value>Select cameras to add to your system</value></data>
+  <data name="HardwareSelectionDisabled" xml:space="preserve"><value>Disabled</value></data>
+  <data name="ConfigurationSummaryUserFailedHeader" xml:space="preserve"><value>Users failed</value></data>
+  <data name="HardwareSelectionEnabled" xml:space="preserve"><value>Enabled</value></data>
+  <data name="ConfigurationSummaryUserHeader" xml:space="preserve"><value>Users</value></data>
+  <data name="SystemConfigurationPlugin_ErrorOccured" xml:space="preserve"><value>Could not configure the server. See the log file for more information.</value></data>
+  <data name="HardwareSelectionAddedHardware" xml:space="preserve"><value>Added hardware:</value></data>
+  <data name="ScanPageTimeOutError" xml:space="preserve"><value>Scanning for hardware timed out. No hardware discovered.</value></data>
+  <data name="Finish_LabelfinishComponentInstall" xml:space="preserve"><value>These components have been successfully installed.</value></data>
+  <data name="ScanningForHardware" xml:space="preserve"><value>Scanning for hardware...</value></data>
+  </root>

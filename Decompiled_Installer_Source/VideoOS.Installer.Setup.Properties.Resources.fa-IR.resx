@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorFailedUnpack" xml:space="preserve"><value>خارج کردن فایل نصب‌کننده از حالت فشرده انجام نشد:</value></data>
+  <data name="ErrorOccured" xml:space="preserve"><value>خطا رخ داد</value></data>
+  <data name="ExternalArchiveNotFound" xml:space="preserve"><value>این نصب‌کننده به یک آرشیو خارجی '{0}' واقع در همان دایرکتوری که نصب کننده در آن اجرا می‌شود نیاز دارد.</value></data>
+  <data name="ErrorAnotherInstanceRunning" xml:space="preserve"><value>نصب دیگری از قبل در حال انجام است.</value></data>
+  <data name="Unpacking" xml:space="preserve"><value>در حال خارج کردن فایل‌ها از حالت فشرده...</value></data>
+  <data name="ErrorUnexpected" xml:space="preserve"><value>به دلیل خطای زیر، فرایند نصب به طور غیر منتظره ناتمام ماند:
+
+{0}
+
+جهت اطلاع شما، جزئیات خطا در نمایشگر رویداد Windows گزارش شده است</value></data>
+  <data name="ExternalArchiveHashMismatch" xml:space="preserve"><value>آرشیو خارجی '{0}' برای این نصب‌کننده معتبر نیست.</value></data>
+  <data name="ErrorPrereq" xml:space="preserve"><value>.Net Framework 4.7.2 را در رایانه خود نصب کنید. جزء مورد نظر را از سایت دانلود شرکت سازنده دانلود کنید. پس از نصب، '{0}' را راه‌اندازی مجدد نمایید.</value></data>
+  <data name="Preparing" xml:space="preserve"><value>نصب‌کننده در حال آماده شدن است</value></data>
+  <data name="Launching" xml:space="preserve"><value>در حال راه اندازی نصب‌کننده...</value></data>
+  <data name="ExternalArchiveValidate" xml:space="preserve"><value>در حال بررسی اعتبار بسته...</value></data>
+  <data name="ExternalArchiveReadError" xml:space="preserve"><value>خوانش آرشیو خارجی '{0}' ممکن نشد.</value></data>
+  </root>

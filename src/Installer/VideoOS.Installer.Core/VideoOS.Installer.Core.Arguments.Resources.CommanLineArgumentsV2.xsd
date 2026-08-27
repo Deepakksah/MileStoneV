@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="urn:milestone-systems"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            xmlns="urn:milestone-systems" version="0.1"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="ArgumentsXmlV2">
+    <xsd:complexType>
+      <xsd:all>
+        <xsd:element name="Arguments" minOccurs="1" maxOccurs="1" type="ArgumentsType"/>
+      </xsd:all>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!-- ArgumentsType -->
+  <xsd:complexType name="ArgumentsType">
+    <xsd:annotation>
+      <xsd:documentation>
+        Installer parameters
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Argument" minOccurs="0" maxOccurs="unbounded" type="ArgumentType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- ParameterType -->
+  <xsd:complexType name="ArgumentType">
+    <xsd:annotation>
+      <xsd:documentation>
+        Defines a parameter type
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element name="Name" minOccurs="1" maxOccurs="1" type="xsd:string" nillable="false"/>
+      <xsd:element name="Description" minOccurs="0" maxOccurs="1" type="xsd:string" nillable="false"/>
+      <xsd:element name="Value" minOccurs="1" maxOccurs="1" type="xsd:string" nillable="false"/>
+    </xsd:all>
+  </xsd:complexType>
+  
+</xsd:schema>

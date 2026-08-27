@@ -1,0 +1,12 @@
+[package]
+name = "lychee_management"
+version = "2025.3.0"
+edition = "2021"
+description = "Management Server Brain & Configuration API (converted from Milestone src/Management, VideoOS.ConfigurationAPI, VideoOS.Management.Server)"
+
+[dependencies]
+lychee_common = { path = "../lychee_common" }
+lychee_database = { path = "../lychee_database" }
+lychee_identity = { path = "../lychee_identity" }
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4" }

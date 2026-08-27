@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="MsFailoverNodeStartedEventFired" xml:space="preserve"><value>已開始管理伺服器容錯移轉。</value></data>
+  <data name="AuditLiveMetadataDenied" xml:space="preserve"><value>用戶端即時訊源遭拒</value></data>
+  <data name="DeviceEmptyTableFailedLastRetry" xml:space="preserve"><value>刪除所有裝置錄影失敗。</value></data>
+  <data name="HardwarePasswordChangeFailedUserAccessDenied" xml:space="preserve"><value>使用者沒有在硬體裝置 {0} 上進行操作的權限。</value></data>
+  <data name="AuditDeviceShortNameChanged" xml:space="preserve"><value>裝置簡稱「{0}」變更為「{1}」。</value></data>
+  <data name="FailoverServerStoppingHotStandby" xml:space="preserve"><value>正在停止錄影伺服器 '{0}' 的熱待命伺服器。</value></data>
+  <data name="RecordingStorageSetEncryptionMethodBegin" xml:space="preserve"><value>在錄影儲存 '{0}' 上設定新加密方法已啟動。</value></data>
+  <data name="Field_EventType" xml:space="preserve"><value>事件類型</value></data>
+  <data name="FileTransferredToRecorder" xml:space="preserve"><value>檔案「{0}」傳送至錄影伺服器「{1}」已成功完成。</value></data>
+  <data name="AuditSiteSlaveCreated" xml:space="preserve"><value>'{1}' 上的站台 '{0}' 已新增至階層。</value></data>
+  <data name="AutoProvisionedUserUpdated" xml:space="preserve"><value>已更新使用者 {0} 的外部 IDP 中的要求。</value></data>
+  <data name="AuditDeviceShortcutChanged" xml:space="preserve"><value>裝置捷徑「{0}」變更為「{1}」</value></data>
+  <data name="DeviceSetOverflowMode" xml:space="preserve"><value>媒體溢位。 裝置現在處於溢位模式。</value></data>
+  <data name="ErrorHardwareNotEnabled" xml:space="preserve"><value>作業失敗時間 {0}。 此硬體裝置已停用。</value></data>
+  <data name="ArchiveStorageMountBegin" xml:space="preserve"><value>已開始安裝歸檔「{0}」。</value></data>
+  <data name="RecordingStorageMoveBegin" xml:space="preserve"><value>移動錄影儲存空間 '{0}' 已啟動。</value></data>
+  <data name="UserHandlingErrorUnsupported" xml:space="preserve"><value>作業失敗時間： {0}. 不支援使用者處理。</value></data>
+  <data name="Enum_EntrySeverity_Undefined" xml:space="preserve"><value>未定義</value></data>
+  <data name="AuditAuthorizationFailedSelfAuthorization" xml:space="preserve"><value>授權失敗: 使用者無法為自己授權。</value></data>
+  <data name="InconsistentHardwareConfiguration" xml:space="preserve"><value>系統發現硬體 {0} 型號 {1} 的硬體設定不一致</value></data>
+  <data name="ArchiveStorageUnmountBegin" xml:space="preserve"><value>已開始卸載歸檔「{0}」。</value></data>
+  <data name="AuditExportMicrophoneToDBWithEncryption" xml:space="preserve"><value>資料庫匯出已啟動。 有加密。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="AuditBasicUserForcePasswordChangeCleared" xml:space="preserve"><value>基本使用者「{0}」未遭強制變更密碼。</value></data>
+  <data name="ScheduledHardwarePasswordChangeSuccess" xml:space="preserve"><value>以下硬體裝置的排定密碼變更成功： 「{0}」。</value></data>
+  <data name="AuditBasicUserCreated" xml:space="preserve"><value>已建立基本使用者 '{0}'。</value></data>
+  <data name="AuditSiteMasterAuthorizedDenied" xml:space="preserve"><value>站台管理員已拒絕在 {1} 下的階層中包含站台 {0}。</value></data>
+  <data name="AuditRuleEnabled" xml:space="preserve"><value>規則 '{0}' 已啟用</value></data>
+  <data name="Enum_Category_ExternalComponents" xml:space="preserve"><value>外部元件</value></data>
+  <data name="Enum_AccessGranted_Default" xml:space="preserve"><value>預設</value></data>
+  <data name="AuditRoleObjectSecuritySystemTimeProfileToSystemProfileChange" xml:space="preserve"><value>已在「{4}」上將存取權限「{0}」-「{1}」的時間設定檔由系統時間設定檔「{2}」變更為系統時間設定檔「{3}」</value></data>
+  <data name="HardwarePasswordChangeFailedHardwareNotStarted" xml:space="preserve"><value>無法變更硬體裝置 {0} 的密碼。 此硬體裝置已關閉。</value></data>
+  <data name="InitializeWebServerFailed" xml:space="preserve"><value>初始化 web server 時發生錯誤: {0}</value></data>
+  <data name="AuditRecorderRemoved" xml:space="preserve"><value>已移除錄影伺服器 '{0}'</value></data>
+  <data name="AuditRecorderRenamed" xml:space="preserve"><value>錄影伺服器 '{0}' 已重新命名為 '{1}'</value></data>
+  <data name="HardwarePasswordChangeFailedPasswordTooShort" xml:space="preserve"><value>無法變更硬體裝置 {0} 的密碼。 密碼過短或太弱。</value></data>
+  <data name="LegacyRecorderNoEventUpdates" xml:space="preserve"><value>事件定義的更新無法傳送至錄影伺服器 '{0}'，因為它不是最新版本。</value></data>
+  <data name="AuditRecordingStorageCreated" xml:space="preserve"><value>已新增儲存 '{0}'。</value></data>
+  <data name="AuditHardwarePasswordReadFailedInsufficientRights" xml:space="preserve"><value>無法讀取 '{0}' 的硬體密碼。 使用者權限不足</value></data>
+  <data name="AuditDevicePtzManuelSessionTimeoutChanged" xml:space="preserve"><value>手動 PTZ 工作階段逾時於「{0}」變更為「{1}」</value></data>
+  <data name="RecorderAdded" xml:space="preserve"><value>已新增錄影伺服器 '{0}' (未授權)</value></data>
+  <data name="AuditRoleClientLoginRevoked" xml:space="preserve"><value>已撤銷角色「{1}」的「允許 {0} 登入」選項</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionMinutesToMinutes" xml:space="preserve"><value>已在「{4}」上將存取權限「{0}」-「{1}」的限制由受限「{2}」分鐘變更為受限「{3}」分鐘</value></data>
+  <data name="AuditDeviceRecordSettingsChanged" xml:space="preserve"><value>'{0}' 上的錄影設定已變更</value></data>
+  <data name="HardwareUpdateDriverFailed" xml:space="preserve"><value>無法更新硬體 '{0}' 的驅動程式</value></data>
+  <data name="HardwareCommunicationError" xml:space="preserve"><value>通訊錯誤 (硬體)</value></data>
+  <data name="FailedToDistributeGlobalizedEvents" xml:space="preserve"><value>全域事件 '{0}' 未發佈至必要錄影伺服器 錯誤: {1}</value></data>
+  <data name="AuditMetadataSearchCategoryIsDisabled" xml:space="preserve"><value>搜尋類別 '{0}' 的可見性已停用</value></data>
+  <data name="AuditBasicUserChangeOwnPassword" xml:space="preserve"><value>基本使用者 '{0}' 的密碼已變更。</value></data>
+  <data name="ShutdownSmartSearchManagerFailed" xml:space="preserve"><value>關閉 smart search manager 時發生錯誤: {0}</value></data>
+  <data name="AuditDevicePrivacyMaskSettingsChanged" xml:space="preserve"><value>隱私遮蔽設定已變更於 '{0}'</value></data>
+  <data name="AuditVideoWallMonitorLayoutViewApplied" xml:space="preserve"><value>已將檢視 {0} 套用至版面配置</value></data>
+  <data name="HardwarePasswordChangeFailedNoAccess" xml:space="preserve"><value>無法存取硬體裝置 {0}。</value></data>
+  <data name="AuditPlaybackSpeakerRecordingsDenied" xml:space="preserve"><value>不允許用戶端播放語音。</value></data>
+  <data name="InitializeLoadCachedConfigurationFailed" xml:space="preserve"><value>載入快取的錄影伺服器設定時發生錯誤: {0}</value></data>
+  <data name="AuditPlaybackCameraRecordingsDeniedTimeBased" xml:space="preserve"><value>不允許用戶端播放視訊 (時間為基礎)。</value></data>
+  <data name="Enum_AuditType_MetadataSearch" xml:space="preserve"><value>中繼資料搜尋</value></data>
+  <data name="AuditHardwareReplaced" xml:space="preserve"><value>硬體 '{0}' 已由 '{1}' 取代</value></data>
+  <data name="AuditPTZRectangleZoom" xml:space="preserve"><value>PTZ 矩形已啟動。 寬度 '{0}'，高度 '{1}'，左 '{2}'，上 '{3}'，右 '{4}'，下 '{5}'。</value></data>
+  <data name="ArchiveStorageMoveSuccess" xml:space="preserve"><value>歸檔 '{0}' 已刪除。</value></data>
+  <data name="AuditRoleObjectSecurityRevoked" xml:space="preserve"><value>已在「{2}」上撤銷存取權限「{0}」-「{1}」</value></data>
+  <data name="AuditLiveSpeakerStarted" xml:space="preserve"><value>已要求用戶端即時訊源</value></data>
+  <data name="AuditMediaRestrictionLiveUpdated" xml:space="preserve"><value>已更新「{0}」的即時限制。</value></data>
+  <data name="AuditDeviceRecordingStorageSelected" xml:space="preserve"><value>已針對 '{1}' 上的錄影選取儲存 '{0}'。</value></data>
+  <data name="DeviceSettingsChangedError" xml:space="preserve"><value>無法變更設定</value></data>
+  <data name="AuditDevicePtzExtendedManualSessionTimeoutChanged" xml:space="preserve"><value>暫停巡弋工作階段逾時於「{0}」變更為「{1}」</value></data>
+  <data name="EMailErrorRecorderUnavailable" xml:space="preserve"><value>電子郵件傳送至: {0}. 錄影伺服器影像無法使用 '{1}'</value></data>
+  <data name="AuditPlaybackMetadataRecordingsOneLogOnly" xml:space="preserve"><value>正在擷取主要追蹤中 '{0}' 到 '{1}' (UTC 時間) 的錄製中繼資料。</value></data>
+  <data name="Enum_AuditType_Bookmark" xml:space="preserve"><value>書籤</value></data>
+  <data name="AuditRoleObjectSecuritySystemTimeProfileToProfileChange" xml:space="preserve"><value>已在「{4}」上將存取權限「{0}」-「{1}」的時間設定檔由系統時間設定檔「{2}」變更為時間設定檔「{3}」</value></data>
+  <data name="MediaDatabaseUpgradeFailedNoRetry" xml:space="preserve"><value>升級裝置媒體資料庫失敗。</value></data>
+  <data name="Enum_AuditType_PlaybackMetadata" xml:space="preserve"><value>播放中繼資料</value></data>
+  <data name="InitializeDriverServicesFailed" xml:space="preserve"><value>啟動驅動程式服務時發生錯誤: {0}</value></data>
+  <data name="AuditPTZMoveHome" xml:space="preserve"><value>PTZ 移至「初始位置」</value></data>
+  <data name="AuditPTZMoveStop" xml:space="preserve"><value>PTZ 移動「已停止」</value></data>
+  <data name="FailoverServerUnableToUpdateTheRecorderGuid" xml:space="preserve"><value>無法更新錄影伺服器 ID。 找不到配置檔案。</value></data>
+  <data name="ServerSNMPServiceNotInstalled" xml:space="preserve"><value>未安裝 Microsoft SNMP Service。 安裝 Microsoft SNMP Service 前將會停用 SNMP 支援。</value></data>
+  <data name="AuditClientBrowseSequence" xml:space="preserve"><value>已開始播放從 '{0}' 到 '{1}' 的錄影片段。</value></data>
+  <data name="AuditMarkedDataUpdate" xml:space="preserve"><value>標示的資料 (含證據鎖定或書籤) '{0}' 已更新。</value></data>
+  <data name="RecorderConnected" xml:space="preserve"><value>錄影伺服器 '{0}' 已連線</value></data>
+  <data name="DatabaseConnectionRestored" xml:space="preserve"><value>已還原資料庫連線。</value></data>
+  <data name="AuditUserDefinedEventActivated" xml:space="preserve"><value>使用者定義事件 '{0}' 已啟動</value></data>
+  <data name="AuditLoginSuccessFromExternalSource" xml:space="preserve"><value>使用者已成功從外部來源登入系統。</value></data>
+  <data name="Enum_SourceType_Recorder" xml:space="preserve"><value>錄影機</value></data>
+  <data name="Enum_EventGeneratorType_MIPDevice" xml:space="preserve"><value>MIP 裝置</value></data>
+  <data name="Enum_ResourceType_Microphone" xml:space="preserve"><value>麥克風</value></data>
+  <data name="AuditMetadataSearchFilterIsEnabled" xml:space="preserve"><value>搜尋篩選器 '{0}' 的可見性已啟用</value></data>
+  <data name="InitializeSmartSearchManagerFailed" xml:space="preserve"><value>啟動 smart search manager 時發生錯誤: {0}</value></data>
+  <data name="AuditRecordingStorageArchiveMoved" xml:space="preserve"><value>'{1}' 中的歸檔 '{0}' 從 '{2}' 移至 '{3}'。</value></data>
+  <data name="AuditRuleEdited" xml:space="preserve"><value>已編輯規則 '{0}'</value></data>
+  <data name="AuditDeviceCoverageFieldOfViewChanged" xml:space="preserve"><value>裝置視野「{0}」變更為「{1}」。</value></data>
+  <data name="Enum_Category_EdgeStorage" xml:space="preserve"><value>遠端錄影</value></data>
+  <data name="InitializeServerRuleProcessorFailed" xml:space="preserve"><value>啟動管理伺服器 rule processor 時發生錯誤: {0}</value></data>
+  <data name="Enum_ResourceType_Storage" xml:space="preserve"><value>儲存</value></data>
+  <data name="AuditLoginCallingApplictionUnknown" xml:space="preserve"><value>不允許使用者從 '{0}' 登入。 存取遭拒。</value></data>
+  <data name="ShutdownEdgeStorageFailed" xml:space="preserve"><value>關閉遠端錄影管理員時發生錯誤: {0}</value></data>
+  <data name="Enum_Category_MetadataSearch" xml:space="preserve"><value>中繼資料搜尋</value></data>
+  <data name="InitializeDriverEventListenerFailed" xml:space="preserve"><value>啟動 driver event listener 時發生錯誤: {0}</value></data>
+  <data name="AuditRoleOverallSecurityChangeAccessDenied" xml:space="preserve"><value>由於使用者權限不足，無法變更 '{0}' 存取權限。</value></data>
+  <data name="UserHandlingErrorUnknown" xml:space="preserve"><value>作業失敗時間： {0}. 使用者處理中發生未知錯誤。</value></data>
+  <data name="AuditLoginProviderCreated" xml:space="preserve"><value>已建立外部 IDP「{0}」。</value></data>
+  <data name="AuditPlaybackMicrophoneRecordingsDeniedTimeBased" xml:space="preserve"><value>不允許用戶端播放語音 (時間為基礎)。</value></data>
+  <data name="AuditTrustedIssuerCreated" xml:space="preserve"><value>已建立可信核發者 {0}。</value></data>
+  <data name="RecordingStorageSetEncryptionPasswordFailedNoRetry" xml:space="preserve"><value>在錄影儲存空間 '{0}' 上設定新加密密碼失敗。</value></data>
+  <data name="AuditExportMicrophoneCompleted" xml:space="preserve"><value>匯出完成。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="HardwarePasswordChangeFailedHardwareNotEnabled" xml:space="preserve"><value>無法變更硬體裝置 {0} 的密碼。 此硬體裝置已停用。</value></data>
+  <data name="Enum_SourceType_Unknown" xml:space="preserve"><value>未知</value></data>
+  <data name="AuditRoleClaimRemoved" xml:space="preserve"><value>外部 IDP「{1}」中包含值「{3}」的要求「{2}」已從角色「{0}」中移除</value></data>
+  <data name="DeviceCommunicationEstablished" xml:space="preserve"><value>已建立通訊。</value></data>
+  <data name="AuditRoleOverallSecurityRevokedDenied" xml:space="preserve"><value>已撤銷對存取權限「{0}」-「{1}」的「拒絕」狀態</value></data>
+  <data name="FailedToDistributeRuleActions" xml:space="preserve"><value>規則 '{0}' 的動作未發佈至必要錄影伺服器。 錯誤: {1}</value></data>
+  <data name="AuditRoleClientProfileChanged" xml:space="preserve"><value>角色「{3}」的 {0} 設定檔選項由「{1}」變更為「{2}」</value></data>
+  <data name="Enum_EntryStatus_StatusQuo" xml:space="preserve"><value>現狀</value></data>
+  <data name="AuditClientProfileRenamed" xml:space="preserve"><value>{0} 設定檔 '{1}' 已重新命名為 '{2}'。</value></data>
+  <data name="Enum_ResourceType_Speaker" xml:space="preserve"><value>揚聲器</value></data>
+  <data name="RecorderNotCompatible" xml:space="preserve"><value>錄影伺服器已連接，但不是與管理伺服器相同的版本。</value></data>
+  <data name="RecordingStorageSetEncryptionPasswordBegin" xml:space="preserve"><value>在錄影儲存空間 '{0}' 上設定新加密密碼已啟動。</value></data>
+  <data name="LicenseDeviceUnlicensed" xml:space="preserve"><value>裝置未授權。 裝置: {0}</value></data>
+  <data name="Enum_ServerLogType_Audit" xml:space="preserve"><value>稽核</value></data>
+  <data name="AuditDevicePtzReservedSessionTimeoutChanged" xml:space="preserve"><value>保留的 PTZ 工作階段逾時於「{0}」變更為「{1}」</value></data>
+  <data name="AuditBookmarkDeleted" xml:space="preserve"><value>已刪除書籤 '{0}'。</value></data>
+  <data name="Enum_ResourceType_ManagementServer" xml:space="preserve"><value>管理伺服器</value></data>
+  <data name="AuditRoleDefaultTimeProfileChanged" xml:space="preserve"><value>角色「{2}」的預設時間設定檔選項由「{0}」變更為「{1}」</value></data>
+  <data name="Enum_Category_Live" xml:space="preserve"><value>即時影像</value></data>
+  <data name="AuditPlaybackSpeakerRecordingsDeniedTimeBased" xml:space="preserve"><value>不允許用戶端播放語音</value></data>
+  <data name="AuditDeviceRecordingPrebufferDisabled" xml:space="preserve"><value>'{0}' 上已停用事前緩衝。</value></data>
+  <data name="AuditRoleOverallSecurityRevoked" xml:space="preserve"><value>已撤銷對存取權限「{0}」-「{1}」的「允許」狀態</value></data>
+  <data name="HardwarePasswordChangeFailedPasswordInvalidCharacter" xml:space="preserve"><value>無法變更硬體裝置 {0} 的密碼。 密碼無效。</value></data>
+  <data name="AuditExportSpeakerToDBNoEncryption" xml:space="preserve"><value>資料庫匯出已啟動。 無加密。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="RecordingStorageDeleteBegin" xml:space="preserve"><value>刪除錄影儲存空間 '{0}' 已啟動。</value></data>
+  <data name="AuditDeviceStreamSettingsChanged" xml:space="preserve"><value>'{0}' 上的串流設定已變更</value></data>
+  <data name="AuditExportSpeakerToDBWithEncryption" xml:space="preserve"><value>資料庫匯出已啟動。 有加密。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="UserHandlingErrorUserNameNotRecognized" xml:space="preserve"><value>作業失敗時間： {1}. 使用者 '{0}' 未識別。</value></data>
+  <data name="Enum_ResourceType_PerformanceCounterRule" xml:space="preserve"><value>系統儀表板閥值</value></data>
+  <data name="Enum_ResourceType_GenericEvents" xml:space="preserve"><value>一般事件</value></data>
+  <data name="ArchiveStorageDeleteSuccess" xml:space="preserve"><value>歸檔 '{0}' 已刪除。</value></data>
+  <data name="AuditGenericEventsActivated" xml:space="preserve"><value>已啟動一般事件。 已啟用的資料來源: {0}</value></data>
+  <data name="AuditMapImageReplaced" xml:space="preserve"><value>地圖 '{0}' 的地圖影像已由此影像 '{1}' 取代</value></data>
+  <data name="AuditLoginLogoutTimeout" xml:space="preserve"><value>使用者連線逾時</value></data>
+  <data name="Field_ResourceType" xml:space="preserve"><value>資源類型</value></data>
+  <data name="Field_ResourceName" xml:space="preserve"><value>資源名稱</value></data>
+  <data name="RecorderDisconnected" xml:space="preserve"><value>錄影伺服器 '{0}' 已中斷連線</value></data>
+  <data name="LicenseUnLicensedServer" xml:space="preserve"><value>注意: 管理伺服器正在沒有授權的情況下執行。</value></data>
+  <data name="CodecDoesNotSupportThisMedia" xml:space="preserve"><value>&lt;P&gt;不支援選取的編碼譯碼器。請選取有效的編碼譯碼器。&lt;/P&gt;</value></data>
+  <data name="AuditPlaybackMetadataRecordingsDenied" xml:space="preserve"><value>不允許用戶端播放中繼資料。</value></data>
+  <data name="AuditLoginSuccessFromAdministration" xml:space="preserve"><value>使用者已從 {0} 成功登入系統。</value></data>
+  <data name="Enum_ResourceType_AudioMessage" xml:space="preserve"><value>語音訊息</value></data>
+  <data name="AuditLiveMicrophoneDeniedTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，用戶端即時訊源遭拒</value></data>
+  <data name="AuditLiveSpeakToSpeakerDenied" xml:space="preserve"><value>對揚聲器說話遭拒</value></data>
+  <data name="ServerStopped" xml:space="preserve"><value>管理伺服器已停止。</value></data>
+  <data name="ServerStarted" xml:space="preserve"><value>管理伺服器已啟動。</value></data>
+  <data name="Enum_Category_IOAndEvents" xml:space="preserve"><value>IO 和事件</value></data>
+  <data name="AuditVideoWallMonitorLayoutPositionCleared" xml:space="preserve"><value>位置 '{0}' 已清除</value></data>
+  <data name="Enum_ResourceType_TimeProfile" xml:space="preserve"><value>時間設定檔</value></data>
+  <data name="Enum_Category_Security" xml:space="preserve"><value>安全性</value></data>
+  <data name="Enum_EventGeneratorType_RecorderPlugin" xml:space="preserve"><value>錄影機外掛程式</value></data>
+  <data name="AuditOutputActivatedTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，已拒絕啟動輸出 '{0}'</value></data>
+  <data name="Enum_ResourceType_SystemDashboardConfiguration" xml:space="preserve"><value>系統儀表板設定</value></data>
+  <data name="AuditHardwarePasswordChanged" xml:space="preserve"><value>使用者已開始在錄影伺服器「{1}」上變更硬體「{0}」的密碼。</value></data>
+  <data name="AuditHardwarePasswordRead" xml:space="preserve"><value>為 '{0}' 讀取的硬體密碼</value></data>
+  <data name="Enum_ResourceType_Metadata" xml:space="preserve"><value>中繼資料裝置</value></data>
+  <data name="AuditVideoWallPresetDeleted" xml:space="preserve"><value>'{2}' {0} 的 {0} 預設點 '{1}' 已刪除</value></data>
+  <data name="ShutdownRecorderCommandProcessorFailed" xml:space="preserve"><value>關閉 command processor 時發生錯誤: {0}</value></data>
+  <data name="RecordingStorageDeleteFailedLastRetry" xml:space="preserve"><value>刪除錄影儲存空間 '{0}' 失敗。</value></data>
+  <data name="AuditBasicUserForcePasswordChange" xml:space="preserve"><value>基本使用者 '{0}' 必須變更密碼。</value></data>
+  <data name="AuditDeviceGisPointChanged" xml:space="preserve"><value>裝置 GPS 座標「{0}」變更為「{1}」。</value></data>
+  <data name="Enum_AuditType_Export" xml:space="preserve"><value>匯出</value></data>
+  <data name="Enum_SourceType_Server" xml:space="preserve"><value>伺服器</value></data>
+  <data name="HardwarePasswordChangeFailedUnknownResult" xml:space="preserve"><value>無法變更硬體裝置 {0} 的密碼。 錄影伺服器無法識別硬體驅動程式的回應。</value></data>
+  <data name="UserHandlingErrorUserNameClash" xml:space="preserve"><value>作業失敗時間： {1}. 使用者 '{0}' 已存在。</value></data>
+  <data name="Enum_SourceType_System" xml:space="preserve"><value>系統</value></data>
+  <data name="Field_ResourceId" xml:space="preserve"><value>資源ID</value></data>
+  <data name="AuditVideoWallPresetActivate" xml:space="preserve"><value>{0} 預設點 '{1}' 已選取</value></data>
+  <data name="HardwareUpdateNoDefaultDatabase" xml:space="preserve"><value>無法更新硬體 '{0}' 的驅動程式。 已不再支援該錄影伺服器服務版本。 您仍可存取錄影伺服器上的錄影，但必須升級至目前版本才能變更其設定。</value></data>
+  <data name="InitializeServerSNMPManagerFailed" xml:space="preserve"><value>啟動 SNMP manager 時發生錯誤: {0}</value></data>
+  <data name="ArchiveStorageMoveFailedLastRetry" xml:space="preserve"><value>刪除歸檔 '{0}' 失敗。</value></data>
+  <data name="AuditRecordingStorageArchiveUnmounted" xml:space="preserve"><value>「{1}」中的歸檔「{0}」已卸載。</value></data>
+  <data name="AuditExportSpeakerCancelled" xml:space="preserve"><value>匯出已取消。</value></data>
+  <data name="AuditDirectoryCreatedOnRecorder" xml:space="preserve"><value>在錄影伺服器「{0}」上建立了新的目錄： '{1}'</value></data>
+  <data name="RecorderSNMPServiceNotStarted" xml:space="preserve"><value>Microsoft SNMP Service 未啟動。 啟動 Microsoft SNMP Service 前將停用 SNMP 支援。</value></data>
+  <data name="AuditLiveCameraDeniedTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，用戶端即時訊源遭拒</value></data>
+  <data name="AuditPlaybackMicrophoneRecordingsDenied" xml:space="preserve"><value>不允許用戶端播放語音。</value></data>
+  <data name="LoadExternalPluginConfigurationFailed" xml:space="preserve"><value>無法套用外部外掛程式設定: {0}</value></data>
+  <data name="ArchiveStorageMoveBegin" xml:space="preserve"><value>刪除歸檔 '{0}' 已啟動。</value></data>
+  <data name="AuditMediaRestrictionDeleted" xml:space="preserve"><value>已刪除播放限制「{0}」。</value></data>
+  <data name="AuditUserLoginFailedUnknownUser" xml:space="preserve"><value>使用者登入失敗。不明的使用者。</value></data>
+  <data name="ShutdownRuleProcessorFailed" xml:space="preserve"><value>關閉管理伺服器 rule processor 時發生錯誤: {0}</value></data>
+  <data name="AuditExportCameraToAvi" xml:space="preserve"><value>AVI 匯出已啟動。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="Enum_EventGeneratorType_Recorder" xml:space="preserve"><value>錄影機</value></data>
+  <data name="AuditBasicUserForcePasswordChangeIdentityProvider" xml:space="preserve"><value>基本使用者 '{0}' 必須變更密碼。</value></data>
+  <data name="AuditHardwareFirmwareUpdateStarted" xml:space="preserve"><value>使用者已開始在錄影伺服器「{1}」上進行硬體「{0}」韌體更新。</value></data>
+  <data name="AuditRecordingStorageEditArchive" xml:space="preserve"><value>已編輯 '{1}' 中的歸檔 '{0}'。</value></data>
+  <data name="Enum_ResourceType_UserDefinedEvents" xml:space="preserve"><value>使用者定義事件</value></data>
+  <data name="AuditDeviceRecordingPrebufferEnabled" xml:space="preserve"><value>'{0}' 上已啟用事前緩衝。</value></data>
+  <data name="AuditDeviceDatabaseDelete" xml:space="preserve"><value>清空錄影伺服器 '{1}' 上要求的 '{0}' 的儲存裝置。</value></data>
+  <data name="Enum_AuditType_DatabaseAccess" xml:space="preserve"><value>資料庫存取</value></data>
+  <data name="AuditHardwareSettingsChanged" xml:space="preserve"><value>'{0}' 上的設定已變更</value></data>
+  <data name="Enum_Category_Bookmark" xml:space="preserve"><value>書籤</value></data>
+  <data name="AuditExportSpeakerCompleted" xml:space="preserve"><value>匯出完成。 片段 '{0}' 到 '{1}'。</value></data>
+  <data name="AuditRoleObjectSecurityPriorityGranted" xml:space="preserve"><value>已在「{2}」上授予具有預設優先順序 {3} 的存取權限「{0}」-「{1}」</value></data>
+  <data name="ShutdownServerSNMPManagerFailed" xml:space="preserve"><value>關閉 SNMP manager 時發生錯誤: {0}</value></data>
+  <data name="Enum_ResourceType_Map" xml:space="preserve"><value>地圖</value></data>
+  <data name="Enum_AuditType_RecordingSequences" xml:space="preserve"><value>錄影片段</value></data>
+  <data name="UserHandlingErrorUserFixed" xml:space="preserve"><value>作業失敗時間： {1}. 使用者 '{0}' 已被製造商鎖定，無法進行編輯。</value></data>
+  <data name="InitializeServerCommunicationFailed" xml:space="preserve"><value>初始化管理伺服器 communication manager 時發生錯誤: {0}</value></data>
+  <data name="AuditPtzReserveGranted" xml:space="preserve"><value>保留 PTZ 工作階段</value></data>
+  <data name="AuditMarkedDataCreated" xml:space="preserve"><value>標示的資料 (含證據鎖定或書籤) '{0}' 已建立。</value></data>
+  <data name="AuditDeviceDatabaseMove" xml:space="preserve"><value>已移動 '{0}' 的資料庫以使用 '{1}'</value></data>
+  <data name="AuditHardwarePreConfigurationStarted" xml:space="preserve"><value>使用者已開始在錄影伺服器「{1}」上對硬體「{0}」認證進行預先設定。</value></data>
+  <data name="Field_SourceType" xml:space="preserve"><value>來源類型</value></data>
+  <data name="Enum_AuditType_Logout" xml:space="preserve"><value>登出</value></data>
+  <data name="Enum_SourceType_Hardware" xml:space="preserve"><value>硬體</value></data>
+  <data name="Field_AuditType" xml:space="preserve"><value>稽核類型</value></data>
+  <data name="AuditHardwareRenamed" xml:space="preserve"><value>硬體 '{0}' 已重新命名為 '{1}'</value></data>
+  <data name="AuditHardwareRemoved" xml:space="preserve"><value>已移除硬體 '{0}'</value></data>
+  <data name="InitializeRecorderApplyConfigurationFailed" xml:space="preserve"><value>套用新設定時發生錯誤: {0}</value></data>
+  <data name="Enum_AuditType_MapViewing" xml:space="preserve"><value>地圖檢視</value></data>
+  <data name="AuditRoleUserAdded" xml:space="preserve"><value>使用者 '{0}' 已新增至 '{1}' 角色</value></data>
+  <data name="AuditPerfCountStateRuleCreated" xml:space="preserve"><value>系統儀表板閥值 '{0}' 已建立。</value></data>
+  <data name="MediaDatabaseRepairTableErrorUnknown" xml:space="preserve"><value>修復儲存區「{1}」中未知裝置的資料庫表格失敗。 裝置可能已從系統中移除。 裝置 ID: '{0}'</value></data>
+  <data name="AuditVideoWallMonitorPresetEdited" xml:space="preserve"><value>'{2}' {0} 監視器的 {0} 預設點 '{1}' 已編輯</value></data>
+  <data name="ShutdownDriverEventListenerFailed" xml:space="preserve"><value>關閉 driver event listener 時發生錯誤: {0}</value></data>
+  <data name="AuditConfigurationRestored" xml:space="preserve"><value>已還原系統設定。</value></data>
+  <data name="InitializeServerApplyConfigurationFailed" xml:space="preserve"><value>套用新設定時發生錯誤: {0}</value></data>
+  <data name="AuditBookmarkCreated" xml:space="preserve"><value>已新增書籤 '{0}'。 標題: '{1}'，片段開始時間: '{2}' (utc)，書籤時間: '{3}' (utc)，片段結束時間: '{4}' (utc)。</value></data>
+  <data name="Enum_AuditType_ResourceAccess" xml:space="preserve"><value>資源存取</value></data>
+  <data name="AuditMapRenamed" xml:space="preserve"><value>已將地圖 '{0}' 重新命名為 '{1}'</value></data>
+  <data name="ShutdownFailoverResponseServerFailed" xml:space="preserve"><value>關閉 failover response server 時發生錯誤: {0}</value></data>
+  <data name="AuditRoleLoginAuthorizationRequiredRevoked" xml:space="preserve"><value>已撤銷角色「{0}」的「需要登入授權」選項</value></data>
+  <data name="AuditPtzActivatePatrollingProfileDenied" xml:space="preserve"><value>啟動 PTZ 巡弋設定檔 '{0}' 已遭拒</value></data>
+  <data name="AuditRuleDeleted" xml:space="preserve"><value>已刪除規則 '{0}'</value></data>
+  <data name="AuditUserDefinedEventActivatedTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，已拒絕啟動使用者定義事件 '{0}'</value></data>
+  <data name="Enum_Category_Webserver" xml:space="preserve"><value>Web 伺服器</value></data>
+  <data name="AuditDeviceRecordingEdgeStoragePlaybackDisabled" xml:space="preserve"><value>'{0}' 上已停用遠端錄影的播放。</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionDaysToNoRestriction" xml:space="preserve"><value>已在「{3}」上將存取權限「{0}」-「{1}」的限制由受限「{2}」天變更為無任何限制</value></data>
+  <data name="AuditExportMetadataToDBWithEncryption" xml:space="preserve"><value>資料庫匯出已啟動。 有加密。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="AuditRoleObjectSecurityPriorityChanged" xml:space="preserve"><value>「{4}」上存取權限「{0}」-「{1}」的優先順序由「{2}」變更為「{3}」</value></data>
+  <data name="Enum_Category_Management" xml:space="preserve"><value>管理</value></data>
+  <data name="ArchiveStorageDeleteBegin" xml:space="preserve"><value>刪除歸檔 '{0}' 已啟動。</value></data>
+  <data name="HardwareErrorHardwareNotConfigured" xml:space="preserve"><value>無法更新硬體。 在錄影伺服器設定中找不到硬體。 硬體: {0}</value></data>
+  <data name="InitializeMediaDbFailed" xml:space="preserve"><value>初始化媒體資料庫時發生錯誤: {0}</value></data>
+  <data name="AuditClaimDeleted" xml:space="preserve"><value>已刪除要求「{0}」。</value></data>
+  <data name="AuditDevice360LensSettingsChanged" xml:space="preserve"><value>'{0}' 上已變更魚眼鏡頭設定。</value></data>
+  <data name="AuditBasicUserLockedOut" xml:space="preserve"><value>基本使用者 '{0}' 已鎖定。</value></data>
+  <data name="MediaDatabaseStorageDataMoveFailed" xml:space="preserve"><value>無法移動媒體資料</value></data>
+  <data name="Enum_Category_Shutdown" xml:space="preserve"><value>關閉</value></data>
+  <data name="Enum_EntrySeverity_Error" xml:space="preserve"><value>錯誤</value></data>
+  <data name="HardwareUpdateDriverNotPossible" xml:space="preserve"><value>無法更新硬體 '{0}' 的驅動程式。 已不再支援該錄影伺服器服務版本。 您仍可存取錄影伺服器上的錄影，但必須升級至目前版本才能變更其設定。</value></data>
+  <data name="MediaDatabaseArchivingErrorUnknown" xml:space="preserve"><value>無法從封存 '{0}' 的未知裝置進行歸檔。 裝置 ID 為: '{1}'</value></data>
+  <data name="AuditMetadataSearchFilterIsDisabled" xml:space="preserve"><value>搜尋篩選器 '{0}' 的可見性已停用</value></data>
+  <data name="HardwarePasswordChangeFailedOtherHardwareError" xml:space="preserve"><value>由於硬體錯誤，無法變更硬體裝置 {0} 的密碼。</value></data>
+  <data name="HardwareIncompatibleDriverFound" xml:space="preserve"><value>更新的驅動程式與已經設定的硬體不相容。 硬體: {0}. 硬體型號: {1}</value></data>
+  <data name="RecordingStorageDeleteSuccess" xml:space="preserve"><value>刪除錄影儲存空間 '{0}' 已成功完成。</value></data>
+  <data name="MediaDatabaseStorageAvailable" xml:space="preserve"><value>儲存區 '{0}' 再度可用。 路徑為 '{1}'。</value></data>
+  <data name="UserHandlingErrorAccessDenied" xml:space="preserve"><value>作業失敗時間： {1}. 使用者 '{0}' 沒有執行此操作的權限。</value></data>
+  <data name="AuditRoleOverallSecurityDenied" xml:space="preserve"><value>已授予對存取權限「{0}」-「{1}」的「拒絕」狀態</value></data>
+  <data name="AuditAutomaticactivationDisabled" xml:space="preserve"><value>自動啟動已停用。</value></data>
+  <data name="AuditExportCameraCompleted" xml:space="preserve"><value>匯出完成。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="AuditUserLoggedOut" xml:space="preserve"><value>使用者已成功登出。</value></data>
+  <data name="Enum_AuditType_Management" xml:space="preserve"><value>管理</value></data>
+  <data name="Enum_SourceType_IdentityProvider" xml:space="preserve"><value>識別提供者</value></data>
+  <data name="MediaDatabaseUpgradeFailedRetry" xml:space="preserve"><value>升級裝置媒體資料庫暫時失敗。 請稍後重試。</value></data>
+  <data name="AuditSearchDeleted" xml:space="preserve"><value>搜尋 '{0}' 已刪除。</value></data>
+  <data name="AuditUserLoginFailedPasswordChange" xml:space="preserve"><value>使用者登入失敗。必須變更密碼。</value></data>
+  <data name="AuditMediaRestrictionUpdated" xml:space="preserve"><value>已更新播放限制「{0}」。</value></data>
+  <data name="InitializeDriverScanFailed" xml:space="preserve"><value>掃描驅動程式和外掛程式時發生錯誤: {0}</value></data>
+  <data name="InitializeVmoServerObjectFailed" xml:space="preserve"><value>無法主控伺服器上的 VideoOS Management Objects: {0}</value></data>
+  <data name="AuditPerfCountStateRuleUpdated" xml:space="preserve"><value>系統儀表板閥值 '{0}' 已更新。</value></data>
+  <data name="ErrorHardwareBlocked" xml:space="preserve"><value>作業失敗時間 {0}。 此硬體裝置已臨時封鎖。</value></data>
+  <data name="AuditLoginUserNotRegisteredOnTheSystem" xml:space="preserve"><value>不允許使用者登入此系統。 存取遭拒。</value></data>
+  <data name="Enum_EntrySeverity_Info" xml:space="preserve"><value>資訊</value></data>
+  <data name="AuditDeviceRenamed" xml:space="preserve"><value>裝置 '{0}' 已重新命名為 '{1}'</value></data>
+  <data name="AuditVideoWallMonitorLayoutMonitorAppliedTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，已拒絕套用 {0} 版面配置</value></data>
+  <data name="AuditDeviceRemoved" xml:space="preserve"><value>裝置 '{0}' 已移除</value></data>
+  <data name="MediaDatabaseDeleteErrorUnknown" xml:space="preserve"><value>無法從儲存區 '{0}' 中刪除未知裝置的儲存資料。 裝置 ID: '{1}'</value></data>
+  <data name="Field_ServiceName" xml:space="preserve"><value>服務名稱</value></data>
+  <data name="AuditPlaybackCameraEdgeRecordingsOneLogOnly" xml:space="preserve"><value>正在擷取邊緣追蹤中 '{0}' 到 '{1}' (UTC 時間) 的錄製視訊。</value></data>
+  <data name="AuditPTZMoveRelative" xml:space="preserve"><value>PTZ 移動 '{0}'</value></data>
+  <data name="AuditRoleDeleted" xml:space="preserve"><value>已刪除角色 '{0}'</value></data>
+  <data name="InitializeEdgeStorageManagerFailed" xml:space="preserve"><value>啟動遠端錄影管理員時發生錯誤: {0}</value></data>
+  <data name="LicenseChangedMacAddressUpdateNotPossible" xml:space="preserve"><value>無法更新硬體的 MAC 位址 '{0}'。 已不再支援該錄影伺服器服務版本。 您仍可存取錄影伺服器上的錄影，但必須升級至目前版本才能變更其設定。</value></data>
+  <data name="AuditSiteMasterAuthorized" xml:space="preserve"><value>站台管理員已接受在 {1} 下的階層中包含站台 {0}。</value></data>
+  <data name="AuditVideoWallEdited" xml:space="preserve"><value>{0} '{1}' 已編輯</value></data>
+  <data name="LicenseValid" xml:space="preserve"><value>授權有效。</value></data>
+  <data name="AuditOutputActivated" xml:space="preserve"><value>輸出 '{0}' 已啟動</value></data>
+  <data name="AuditLoginSuccessFromHttpRequest" xml:space="preserve"><value>使用者已成功從 HTTP 要求登入系統。</value></data>
+  <data name="Field_GeneratorName" xml:space="preserve"><value>產生器名稱</value></data>
+  <data name="Field_GeneratorType" xml:space="preserve"><value>產生器類型</value></data>
+  <data name="AuditRoleClaimAdded" xml:space="preserve"><value>外部 IDP「{1}」中包含值「{3}」的要求「{2}」已新增至角色「{0}」</value></data>
+  <data name="AuditMediaRestrictionCreated" xml:space="preserve"><value>已建立播放限制「{0}」。</value></data>
+  <data name="AuditAuthorizationFailedInsufficientRights" xml:space="preserve"><value>使用者無法授權 {0}: 使用者權限不足。</value></data>
+  <data name="Enum_Category_SaveSearches" xml:space="preserve"><value>儲存搜尋</value></data>
+  <data name="RecordingStorageMoveSuccess" xml:space="preserve"><value>移動錄影儲存空間 '{0}' 已成功完成。</value></data>
+  <data name="Enum_EventGeneratorType_Server" xml:space="preserve"><value>伺服器</value></data>
+  <data name="Enum_EventGeneratorType_DriverHardware" xml:space="preserve"><value>驅動程式硬體</value></data>
+  <data name="AuditRecordingStorageEdited" xml:space="preserve"><value>已編輯 '{0}' 中的儲存設定。</value></data>
+  <data name="DeviceEmptyTableSuccess" xml:space="preserve"><value>已刪除錄影。</value></data>
+  <data name="Field_LocationIPAddress" xml:space="preserve"><value>位置 IP 位址</value></data>
+  <data name="AuditLoginTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，用戶端存取遭拒</value></data>
+  <data name="AuditRoleGroupAdded" xml:space="preserve"><value>已將使用者群組 '{0}' 新增至 '{1}' 角色</value></data>
+  <data name="Field_EventTypeId" xml:space="preserve"><value>事件類型 ID</value></data>
+  <data name="Enum_EntryStatus_Failure" xml:space="preserve"><value>失敗</value></data>
+  <data name="AuditLoginUnSuccessfulIncorrectPassword" xml:space="preserve"><value>登入失敗 - 密碼不正確</value></data>
+  <data name="ServerSNMPServiceNotStarted" xml:space="preserve"><value>Microsoft SNMP Service 未啟動。 啟動 Microsoft SNMP Service 前將停用 SNMP 支援。</value></data>
+  <data name="Enum_EventGeneratorType_System" xml:space="preserve"><value>系統</value></data>
+  <data name="AuditPlaybackMetadataRecordingsDeniedTimeBased" xml:space="preserve"><value>不允許用戶端播放中繼資料 (時間為基礎)。</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionMinutesToNoRestriction" xml:space="preserve"><value>已在「{3}」上將存取權限「{0}」-「{1}」的限制由受限「{2}」分鐘變更為無任何限制</value></data>
+  <data name="ServerFailed" xml:space="preserve"><value>管理伺服器因發生錯誤而中止: {0}</value></data>
+  <data name="HardwarePasswordChangeFailedUpdateCredentials" xml:space="preserve"><value>成功變更硬體裝置 {0} 的密碼，但無法使用新密碼啟動。</value></data>
+  <data name="AuditHostedHardwareRenamed" xml:space="preserve"><value>遠端連線硬體 '{0}' 已重新命名為 '{1}'。</value></data>
+  <data name="InitializeServerCommandProcessorFailed" xml:space="preserve"><value>初始化管理伺服器 command processor 時發生錯誤: {0}</value></data>
+  <data name="Enum_AuditType_ManualRecording" xml:space="preserve"><value>手動錄影</value></data>
+  <data name="AuditPlaybackSpeakerEdgeRecordingsOneLogOnly" xml:space="preserve"><value>正在擷取邊緣追蹤中 '{0}' 到 '{1}' (UTC 時間) 的錄製語音。</value></data>
+  <data name="AuditLiveCameraDenied" xml:space="preserve"><value>用戶端即時訊源遭拒</value></data>
+  <data name="Enum_Category_SmartWallControl" xml:space="preserve"><value>[SmartWall] 控制</value></data>
+  <data name="AuditHostingServerRenamed" xml:space="preserve"><value>遠端連線伺服器 '{0}' 已重新命名為 '{1}'。</value></data>
+  <data name="AuditGenericEventsDeactivated" xml:space="preserve"><value>已取消啟動一般事件。 已停用所有資料來源。</value></data>
+  <data name="Enum_EventGeneratorType_Unknown" xml:space="preserve"><value>未知</value></data>
+  <data name="Enum_SourceType_Role" xml:space="preserve"><value>角色</value></data>
+  <data name="AuditHostingServerModified" xml:space="preserve"><value>遠端連線伺服器 '{0}' 已修改。</value></data>
+  <data name="AuditBasicUserRenamed" xml:space="preserve"><value>基本使用者 '{0}' 已重新命名為 '{1}'。</value></data>
+  <data name="AuditAudioMessageContentChanged" xml:space="preserve"><value>已變更語音訊息「{0}」內容。</value></data>
+  <data name="FileUploadToServerFailed" xml:space="preserve"><value>未能將檔案上傳至伺服器。 檔案名稱「{0}」，大小 {1}。</value></data>
+  <data name="Field_ResourceLocation" xml:space="preserve"><value>資源位置</value></data>
+  <data name="AuditVideoWallMonitorLayoutMonitorApplied" xml:space="preserve"><value>已將檢視 {0} 套用至版面配置</value></data>
+  <data name="AuditCreateRecordingServer" xml:space="preserve"><value>使用者已建立錄影伺服器: {0}.</value></data>
+  <data name="AuditPTZMoveCenterZoomRelativePositioned" xml:space="preserve"><value>PTZ 置中已啟動。 相對位置</value></data>
+  <data name="AuditLogout" xml:space="preserve"><value>登出</value></data>
+  <data name="MatrixDeleted" xml:space="preserve"><value>Matrix 已刪除： 「{0}」 </value></data>
+  <data name="AuditPtzActivatePatrollingProfileGranted" xml:space="preserve"><value>PTZ 巡弋設定檔 '{0}' 已啟動</value></data>
+  <data name="ShutdownRecorderRuleProcessorFailed" xml:space="preserve"><value>關閉錄影伺服器 rule processor 時發生錯誤: {0}</value></data>
+  <data name="AuditBasicInfoDeleted" xml:space="preserve"><value>已刪除站台資訊 '{0}'。</value></data>
+  <data name="NetworkSettingsManagementErrorNoSuitableInterfaceAddress" xml:space="preserve"><value>作業失敗時間： {0}. 找不到適用的網路介面位址。</value></data>
+  <data name="FailoverServerRecorderFailedToStart" xml:space="preserve"><value>無法啟動容錯移轉錄影伺服器。</value></data>
+  <data name="AuditRecordingStorageArchiveMounted" xml:space="preserve"><value>「{1}」中的歸檔「{0}」已安裝。</value></data>
+  <data name="Enum_ResourceType_MediaRestriction" xml:space="preserve"><value>視訊限制</value></data>
+  <data name="LicenseUpdateFailed" xml:space="preserve"><value>在管理伺服器上套用授權時發生錯誤。 錯誤碼: {0}</value></data>
+  <data name="AutomaticActivationSuccess" xml:space="preserve"><value>自動授權啟動成功。</value></data>
+  <data name="AuditPlaybackCameraRecordingsOneLogOnly" xml:space="preserve"><value>正在擷取主要追蹤中 '{0}' 到 '{1}' (UTC 時間) 的錄製視訊。</value></data>
+  <data name="ArchiveStorageDeleteFailedNoRetry" xml:space="preserve"><value>刪除歸檔 '{0}' 失敗。</value></data>
+  <data name="HardwarePasswordChangeFailedUserLevelAnonymousNotAllowed" xml:space="preserve"><value>硬體裝置 {0} 上不允許匿名使用者層級。</value></data>
+  <data name="AuditMetadataSearchCategoryIsEnabled" xml:space="preserve"><value>搜尋類別 '{0}' 的可見性已啟用</value></data>
+  <data name="MediaDatabaseUpgradeBegin" xml:space="preserve"><value>升級裝置媒體資料庫已啟動。</value></data>
+  <data name="RecordingStorageSetEncryptionPasswordFailedLastRetry" xml:space="preserve"><value>在錄影儲存空間 '{0}' 上設定新加密密碼失敗。</value></data>
+  <data name="Enum_SourceType_Device" xml:space="preserve"><value>裝置</value></data>
+  <data name="ShutdownServerCommunicationManagerFailed" xml:space="preserve"><value>關閉管理伺服器 communication manager 時發生錯誤: {0}</value></data>
+  <data name="AuditRoleRenamed" xml:space="preserve"><value>角色 '{0}' 已重新命名為 '{1}'</value></data>
+  <data name="AuditPTZMoveCenterZoomAbsolutePositioned" xml:space="preserve"><value>PTZ 置中已啟動。 寬度 '{0}'，高度 '{1}'，置中 X '{2}'，置中 Y '{3}'，變焦 '{4}'</value></data>
+  <data name="Enum_SourceType_Failover" xml:space="preserve"><value>容錯移轉</value></data>
+  <data name="AuditRoleGroupRemoved" xml:space="preserve"><value>使用者群組 '{0}' 已從 '{1}' 角色中移除</value></data>
+  <data name="AuditLogoutSuccessFromAdministration" xml:space="preserve"><value>使用者從 {0} 登出系統。</value></data>
+  <data name="RecordingStorageDeleteFailedRetry" xml:space="preserve"><value>刪除錄影儲存空間 '{0}' 暫時失敗。 請稍後重試。</value></data>
+  <data name="FailoverServerRemoveFailoverServer" xml:space="preserve"><value>已移除容錯移轉伺服器 {0}，強制關閉服務...</value></data>
+  <data name="AuditAuthorizeRecorder" xml:space="preserve"><value>使用者已授權錄影伺服器: {0}.</value></data>
+  <data name="AuditPTZMoveAbsolute" xml:space="preserve"><value>PTZ 移動絕對。 平移 '{0}'，傾斜 '{1}'，變焦 '{2}'。</value></data>
+  <data name="MediaDatabaseTableSplitTookLong" xml:space="preserve"><value>建立表格分割花費了過長時間。 裝置: 「{0}」。 儲存區名稱: '{1}'</value></data>
+  <data name="AuditVideoWallPresetRenamed" xml:space="preserve"><value>{0} 預設點 '{1}' 已重新命名為 '{2}'</value></data>
+  <data name="ShutdownEngineFailed" xml:space="preserve"><value>關閉錄影伺服器時發生錯誤: {0}</value></data>
+  <data name="Enum_Category_RecorderCommunicationAndManagement" xml:space="preserve"><value>錄影伺服器通訊與管理</value></data>
+  <data name="NetworkSettingsManagementErrorUnknown" xml:space="preserve"><value>作業失敗時間： {0}. 網路設定作業中發生未知錯誤。</value></data>
+  <data name="ArchiveStorageMoveFailedNoRetry" xml:space="preserve"><value>刪除歸檔 '{0}' 失敗。</value></data>
+  <data name="AuditPlaybackMicrophoneRecordingsOneLogOnly" xml:space="preserve"><value>正在擷取主要追蹤中 '{0}' 到 '{1}' (UTC 時間) 的錄製語音。</value></data>
+  <data name="DeviceSettingsChanged" xml:space="preserve"><value>變更的設定</value></data>
+  <data name="Enum_ResourceType_RemoteConnectHardware" xml:space="preserve"><value>遠端連線硬體</value></data>
+  <data name="AuditLoginUserNotAllowedExternalAccess" xml:space="preserve"><value>使用者登入失敗。 使用者權限不足</value></data>
+  <data name="Field_AccessGranted" xml:space="preserve"><value>已授予存取權限</value></data>
+  <data name="FailoverServerTakingOverTheResponsibilityForRecorder" xml:space="preserve"><value>正在接管錄影伺服器 '{0}' 的責任</value></data>
+  <data name="AuditPtzPresetDeleted" xml:space="preserve"><value>PTZ 預設點位置 '{0}' 已移除</value></data>
+  <data name="Enum_ResourceType_TimeProfiles" xml:space="preserve"><value>時間設定檔</value></data>
+  <data name="InitializePipelinesFailed" xml:space="preserve"><value>啟動 pipeline 時發生錯誤: {0}</value></data>
+  <data name="Enum_Category_Unknown" xml:space="preserve"><value>未知</value></data>
+  <data name="AuditIdentityProviderRegistrationSuccess" xml:space="preserve"><value>已成功註冊服務。</value></data>
+  <data name="ShutdownCommandProcessorFailed" xml:space="preserve"><value>關閉 command processor 時發生錯誤: {0}</value></data>
+  <data name="LicenseInvalid" xml:space="preserve"><value>授權無效。</value></data>
+  <data name="AuditSystemDashboardConfigurationDeleted" xml:space="preserve"><value>系統儀表板設定 '{0}' 已刪除。</value></data>
+  <data name="InitializeLiveMulticastProcessorFailed" xml:space="preserve"><value>初始化 live multicast processor 時發生錯誤: {0}</value></data>
+  <data name="AuditVideoWallMonitorEdited" xml:space="preserve"><value>{0} 監視器 '{1}' 已編輯</value></data>
+  <data name="AuditLiveSpeakToSpeakerEnded" xml:space="preserve"><value>停止對揚聲器說話</value></data>
+  <data name="AuditExportMetadataToDBNoEncryption" xml:space="preserve"><value>資料庫匯出已啟動。 無加密。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="Enum_ResourceType_Hardware" xml:space="preserve"><value>硬體</value></data>
+  <data name="LicenseExpired" xml:space="preserve"><value>授權已過期。</value></data>
+  <data name="AuditLiveMetadataDeniedTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，用戶端即時訊源遭拒</value></data>
+  <data name="AuditVideoWallCreated" xml:space="preserve"><value>{0} '{1}' 已建立</value></data>
+  <data name="Enum_ResourceType_Unknown" xml:space="preserve"><value>未知</value></data>
+  <data name="ExternalPlugIn360LensDefinitionsChanged" xml:space="preserve"><value>已在管理伺服器上變更了一個或多個魚眼鏡頭定義。</value></data>
+  <data name="AuditBasicUserDeleted" xml:space="preserve"><value>已刪除基本使用者 '{0}'。</value></data>
+  <data name="RecordingStorageMoveFailedNoRetry" xml:space="preserve"><value>移動錄影儲存空間 '{0}' 失敗。</value></data>
+  <data name="MediaDatabaseRepairTableError" xml:space="preserve"><value>修復儲存區「{1}」中裝置「{0}」的資料庫表格失敗</value></data>
+  <data name="Enum_ResourceType_Camera" xml:space="preserve"><value>攝影機</value></data>
+  <data name="ArchiveStorageDeleteFailedRetry" xml:space="preserve"><value>刪除歸檔 '{0}' 暫時失敗。 請稍後重試。</value></data>
+  <data name="AuditExportCameraCancelled" xml:space="preserve"><value>匯出已取消。</value></data>
+  <data name="AuditLiveSpeakerDeniedTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，用戶端即時訊源遭拒</value></data>
+  <data name="AuditExportCameraToDBNoEncryption" xml:space="preserve"><value>資料庫匯出已啟動。 無加密。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="AuditDeviceReplacedNoDatabase" xml:space="preserve"><value>裝置 '{0}' 已由 '{1}' 取代。</value></data>
+  <data name="UserHandlingErrorUserNotCreated" xml:space="preserve"><value>作業失敗時間： {1}. 未建立使用者 '{0}'。</value></data>
+  <data name="MediaDatabaseStorageMergeStarted" xml:space="preserve"><value>媒體資料合併已啟動。 來源伺服器:{0}</value></data>
+  <data name="MediaDatabaseStorageMergeStopped" xml:space="preserve"><value>媒體資料合併已結束。</value></data>
+  <data name="AuditTimeProfileRenamed" xml:space="preserve"><value>時間設定檔 '{0}' 已重新命名為 '{1}'</value></data>
+  <data name="AuditLiveSpeakToSpeakerDeniedTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，語音遭拒</value></data>
+  <data name="Enum_AuditType_SaveSearches" xml:space="preserve"><value>儲存搜尋</value></data>
+  <data name="LegacyRecorderNoConfigurationUpdates" xml:space="preserve"><value>設定的更新無法傳送至錄影伺服器 '{0}'，因為它不是最新版本。</value></data>
+  <data name="AuditMarkedDataDeleted" xml:space="preserve"><value>標示的資料 (含證據鎖定或書籤) '{0}' 已刪除。</value></data>
+  <data name="Enum_AccessGranted_Denied" xml:space="preserve"><value>已遭拒</value></data>
+  <data name="AuditExportSpeakerToAvi" xml:space="preserve"><value>AVI 匯出已啟動。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="AuditBasicUserEnabled" xml:space="preserve"><value>基本使用者 '{0}' 現已啟用。</value></data>
+  <data name="FailoverServerAuthorizationFailedWithLocalRecorder" xml:space="preserve"><value>容錯移轉錄影伺服器授權失敗。</value></data>
+  <data name="AuditUserLoggedIn" xml:space="preserve"><value>使用者已成功登入。</value></data>
+  <data name="Enum_SourceType_Database" xml:space="preserve"><value>資料庫</value></data>
+  <data name="ArchiveStorageMoveFailedRetry" xml:space="preserve"><value>刪除歸檔 '{0}' 暫時失敗。 請稍後重試。</value></data>
+  <data name="AuditBasicUserEnabledIdentityProvider" xml:space="preserve"><value>基本使用者 '{0}' 現已啟用。</value></data>
+  <data name="AuditDeviceReplaced" xml:space="preserve"><value>裝置 '{0}' 已由 '{1}' 取代。 繼承資料庫。</value></data>
+  <data name="AuditAutomaticactivationCredentialsChanged" xml:space="preserve"><value>已經變更線上啟動的憑證。</value></data>
+  <data name="AuditClientProfileDeleted" xml:space="preserve"><value>{0} 設定檔 '{1}' 已刪除。</value></data>
+  <data name="ScheduledHardwarePasswordChangeFailure" xml:space="preserve"><value>以下硬體裝置的排定密碼變更失敗： 「{0}」。 失敗原因： 「{1}」。</value></data>
+  <data name="AuditMapDeleted" xml:space="preserve"><value>已刪除地圖 '{0}'</value></data>
+  <data name="AuditLiveMicrophoneEnded" xml:space="preserve"><value>用戶端即時訊源已中止</value></data>
+  <data name="AuditManualRecordingStopped" xml:space="preserve"><value>已停止手動錄影。</value></data>
+  <data name="AuditHardwareEnabled" xml:space="preserve"><value>硬體 '{0}' 已啟用</value></data>
+  <data name="AuditManualRecordingStarted" xml:space="preserve"><value>已開始手動錄影。</value></data>
+  <data name="EdgeStorageRetrievalFailed" xml:space="preserve"><value>無法擷取遠端錄影。</value></data>
+  <data name="HardwareCommunicationStopped" xml:space="preserve"><value>已停止通訊 (硬體)</value></data>
+  <data name="AuditLoginUserNotAdminPriviligesOnTheSystem" xml:space="preserve"><value>使用者登入失敗。 使用者權限不足</value></data>
+  <data name="AuditPTZMoveZoomButtonsActivated" xml:space="preserve"><value>PTZ 移動 '{0}'</value></data>
+  <data name="RecorderFailed" xml:space="preserve"><value>錄影伺服器因發生錯誤而中止: {0}</value></data>
+  <data name="AuditVideoWallMonitorLayoutPresetActivated" xml:space="preserve"><value>{0} 預設點 '{1}' 已選取</value></data>
+  <data name="Enum_ResourceType_Output" xml:space="preserve"><value>輸出</value></data>
+  <data name="HardwareUpdateNoDefinitionChanges" xml:space="preserve"><value>由於未變更定義，因此在驅動程式更新期間未更新驅動程式定義。 硬體: {0}</value></data>
+  <data name="Enum_Category_Plugins" xml:space="preserve"><value>外掛程式</value></data>
+  <data name="InitializeStatusManagerFailed" xml:space="preserve"><value>啟動 status manager 時發生錯誤: {0}</value></data>
+  <data name="AuditUserLoginFailed" xml:space="preserve"><value>使用者登入失敗。密碼無效。</value></data>
+  <data name="AuditDeviceRecordingEdgeStorageEnabled" xml:space="preserve"><value>'{0}' 上已啟用遠端錄影。</value></data>
+  <data name="AuditConfigReportExported" xml:space="preserve"><value>已匯出設定報告。</value></data>
+  <data name="MediaDatabaseUpgradeFailedLastRetry" xml:space="preserve"><value>升級裝置媒體資料庫失敗。</value></data>
+  <data name="AuditPlaybackCameraRecordings" xml:space="preserve"><value>正在播放 '{0}' 到 '{1}' (UTC 時間) 的錄製影像。</value></data>
+  <data name="AuditLoginUserNotAllowed" xml:space="preserve"><value>使用者登入失敗。 使用者權限不足</value></data>
+  <data name="AuditDeviceMulticastEnabledChanged" xml:space="preserve"><value>裝置多點傳送於「{0}」變更為「{1}」</value></data>
+  <data name="AuditPlaybackSpeakerRecordingsOneLogOnly" xml:space="preserve"><value>正在擷取主要追蹤中 '{0}' 到 '{1}' (UTC 時間) 的錄製語音。</value></data>
+  <data name="Enum_EntrySeverity_Warning" xml:space="preserve"><value>警告</value></data>
+  <data name="AuditClaimCreated" xml:space="preserve"><value>已建立要求「{0}」。</value></data>
+  <data name="InitializeLoadCachedSecurityConfigurationFailed" xml:space="preserve"><value>載入快取的安全性設定時發生錯誤: {0}</value></data>
+  <data name="RecordingStorageMoveFailedRetry" xml:space="preserve"><value>移動錄影儲存空間 '{0}' 暫時失敗。 請稍後重試。</value></data>
+  <data name="Enum_Category_Notification" xml:space="preserve"><value>通知</value></data>
+  <data name="AuditRoleObjectSecurityGranted" xml:space="preserve"><value>已在「{2}」上授予存取權限「{0}」-「{1}」</value></data>
+  <data name="AuditBasicUserLockedOutCleared" xml:space="preserve"><value>基本使用者「{0}」的鎖定時間已清除。</value></data>
+  <data name="AuditClientProfileCreated" xml:space="preserve"><value>{0} 設定檔 '{1}' 已建立。</value></data>
+  <data name="AuditLiveMicrophoneDenied" xml:space="preserve"><value>用戶端即時訊源遭拒</value></data>
+  <data name="InitializeMasterEncryptionKeyFailed" xml:space="preserve"><value>載入系統設定密碼或加密金鑰時發生錯誤： {0}</value></data>
+  <data name="Enum_ResourceType_MarkedData" xml:space="preserve"><value>標示資料</value></data>
+  <data name="Enum_ResourceType_SiteInfo" xml:space="preserve"><value>站台資訊</value></data>
+  <data name="Enum_EventGeneratorType_Device" xml:space="preserve"><value>裝置</value></data>
+  <data name="AuditLoginProviderUpdated" xml:space="preserve"><value>已變更外部 IDP「{0}」的設定。</value></data>
+  <data name="AuditHostingServerAdded" xml:space="preserve"><value>遠端連線伺服器 '{0}' 已新增。</value></data>
+  <data name="InitializeTaskManagerFailed" xml:space="preserve"><value>初始化 task manager 時發生錯誤: {0}</value></data>
+  <data name="AuditDeviceCoverageDirectionChanged" xml:space="preserve"><value>裝置方向「{0}」變更為「{1}」。</value></data>
+  <data name="AuditAuthorizationSucessful" xml:space="preserve"><value>使用者授權的 '{0}'</value></data>
+  <data name="AuditExportMicrophoneToDBNoEncryption" xml:space="preserve"><value>資料庫匯出已啟動。 無加密。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="AuditRecordingStorageDeleted" xml:space="preserve"><value>已刪除儲存 '{0}'。</value></data>
+  <data name="AuditMapDeviceServerPlaced" xml:space="preserve"><value>'{0}' 已放置於地圖 '{1}' 上</value></data>
+  <data name="AuditPtzReleaseDenied" xml:space="preserve"><value>PTZ 工作階段釋出已遭拒</value></data>
+  <data name="Enum_AuditType_Login" xml:space="preserve"><value>登入</value></data>
+  <data name="RecorderStopped" xml:space="preserve"><value>錄影伺服器 '{0}' 已停止。</value></data>
+  <data name="AuditDeviceRecordingDisabled" xml:space="preserve"><value>'{0}' 上已停用錄影。</value></data>
+  <data name="RecorderStarted" xml:space="preserve"><value>錄影伺服器 '{0}' 已啟動。</value></data>
+  <data name="AuditRoleUserRemoved" xml:space="preserve"><value>使用者 '{0}' 已從 '{1}' 角色中移除</value></data>
+  <data name="AuditDeviceDisabled" xml:space="preserve"><value>裝置 '{0}' 已停用</value></data>
+  <data name="FailoverServerAuthorizationFailedWithRecorder" xml:space="preserve"><value>錄影伺服器{0}授權失敗。</value></data>
+  <data name="MediaDatabaseArchivingError" xml:space="preserve"><value>歸檔失敗。 裝置 '{0}'。 封存名稱: '{1}'</value></data>
+  <data name="AuditLiveCameraEnded" xml:space="preserve"><value>用戶端即時訊源已中止</value></data>
+  <data name="AuditAutomaticactivationEnabled" xml:space="preserve"><value>自動啟動已啟用。</value></data>
+  <data name="MediaDatabaseUpgradeSuccess" xml:space="preserve"><value>升級裝置媒體資料庫已成功完成。</value></data>
+  <data name="FailoverServerUnableToConnectEncryptedToLocalRecorder" xml:space="preserve"><value>無法建立與容錯移轉記錄伺服器的加密連接。</value></data>
+  <data name="AuditRoleObjectSecurityChangeAccessDenied" xml:space="preserve"><value>由於使用者權限不足，無法變更 '{1}' 上的 '{0}' 存取權限。</value></data>
+  <data name="AuditExportMicrophoneToAvi" xml:space="preserve"><value>AVI 匯出已啟動。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="RecorderSNMPServiceNotInstalled" xml:space="preserve"><value>未安裝 Microsoft SNMP Service。 安裝 Microsoft SNMP Service 前將會停用 SNMP 支援。</value></data>
+  <data name="ArchiveDatabaseStorageUnavailable" xml:space="preserve"><value>封存 '{0}' 無法使用。 路徑為 '{1}'。</value></data>
+  <data name="AuditVideoWallMonitorLayoutChanged" xml:space="preserve"><value>版面配置已變更為 '{0}'</value></data>
+  <data name="InitializeRecorderRuleProcessorStartFailed" xml:space="preserve"><value>啟動錄影伺服器 rule processor 時發生錯誤: {0}</value></data>
+  <data name="InitializeRecorderCommunicationFailed" xml:space="preserve"><value>初始化錄影伺服器 communication manager 時發生錯誤: {0}</value></data>
+  <data name="RecorderNotAllowedToStart" xml:space="preserve"><value>不允許此錄影伺服器啟動。 將再次關閉。</value></data>
+  <data name="AuditPtzReleaseGranted" xml:space="preserve"><value>PTZ 工作階段已釋出</value></data>
+  <data name="AuditMapDisplayed" xml:space="preserve"><value>已顯示地圖 '{0}'</value></data>
+  <data name="Enum_Category_Startup" xml:space="preserve"><value>啟動</value></data>
+  <data name="RecordingStorageSetEncryptionPasswordFailedRetry" xml:space="preserve"><value>在錄影儲存空間 '{0}' 設定新加密密碼暫時失敗。 請稍後重試。</value></data>
+  <data name="TableUnrepairableAway" xml:space="preserve"><value>無法修復表格: {0}. 無法修復的媒體資料已經移出媒體資料庫 {1}</value></data>
+  <data name="AuditClientRedirectUrisSet" xml:space="preserve"><value>'{0}' URI 已設定為 '{1}'。</value></data>
+  <data name="AuditLoginSuccessFromCommandApi" xml:space="preserve"><value>使用者已成功登入</value></data>
+  <data name="AuditBasicUserPasswordChanged" xml:space="preserve"><value>基本使用者 '{0}' 的密碼已變更。</value></data>
+  <data name="AuditExportMetadataCancelled" xml:space="preserve"><value>匯出已取消。</value></data>
+  <data name="DeviceEmptyTableFailedRetry" xml:space="preserve"><value>刪除所有裝置錄影暫時失敗。 請稍後重試。</value></data>
+  <data name="AuditTimeProfileEdited" xml:space="preserve"><value>已編輯時間設定檔 '{0}'</value></data>
+  <data name="AuditAudioMessageCreated" xml:space="preserve"><value>已建立語音訊息「{0}」。</value></data>
+  <data name="Enum_ResourceType_RemoteConnectServer" xml:space="preserve"><value>遠端連線伺服器</value></data>
+  <data name="InitializeRecorderRuleProcessorInitializeFailed" xml:space="preserve"><value>初始化 rule processor 時發生錯誤: {0}</value></data>
+  <data name="AuditRoleOverallSecurityGranted" xml:space="preserve"><value>已授予對存取權限「{0}」-「{1}」的「允許」狀態</value></data>
+  <data name="AuditDeviceEnabled" xml:space="preserve"><value>裝置 '{0}' 已啟用</value></data>
+  <data name="AuditVideoWallMonitorLayoutCleared" xml:space="preserve"><value>版面配置已清除</value></data>
+  <data name="AuditExportMicrophoneCancelled" xml:space="preserve"><value>匯出已取消。</value></data>
+  <data name="MediaDatabaseStorageUnavailable" xml:space="preserve"><value>儲存區 '{0}' 無法使用。 路徑為 '{1}'。</value></data>
+  <data name="MediaDatabaseRepairTableCompletedUnknown" xml:space="preserve"><value>完成修復儲存區「{1}」中未知裝置的資料庫表格。 裝置可能已從系統中移除。 裝置 ID: '{0}'</value></data>
+  <data name="MediaDatabaseStorageDataMoveRetry" xml:space="preserve"><value>移動媒體資料暫時失敗。 請稍後重試。</value></data>
+  <data name="AuditMapDeviceServerRemoved" xml:space="preserve"><value>'{0}' 已從地圖 '{1}' 上移除</value></data>
+  <data name="Enum_ResourceType_Server" xml:space="preserve"><value>伺服器</value></data>
+  <data name="AuditDeviceRecordingEdgeStorageDisabled" xml:space="preserve"><value>'{0}' 上已停用遠端錄影。</value></data>
+  <data name="MediaDatabaseStorageDataMoveBegin" xml:space="preserve"><value>已開始移動媒體資料。</value></data>
+  <data name="AuditSearchEdited" xml:space="preserve"><value>搜尋 '{0}' 已編輯。</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionDaysToDays" xml:space="preserve"><value>已在「{4}」上將存取權限「{0}」-「{1}」的限制由受限「{2}」天變更為受限「{3}」天</value></data>
+  <data name="RecordingStorageDeleteFailedNoRetry" xml:space="preserve"><value>刪除錄影儲存空間 '{0}' 失敗。</value></data>
+  <data name="Enum_ResourceType_Input" xml:space="preserve"><value>輸入</value></data>
+  <data name="AuditLoginUserNotAllowedHttpRequestAccess" xml:space="preserve"><value>使用者登入失敗。 使用者權限不足</value></data>
+  <data name="AuditPlaybackMetadataEdgeRecordingsOneLogOnly" xml:space="preserve"><value>正在擷取邊緣追蹤中 '{0}' 到 '{1}' (UTC 時間) 的錄製中繼資料。</value></data>
+  <data name="Enum_ResourceType_Rules" xml:space="preserve"><value>規則</value></data>
+  <data name="Enum_ResourceType_Roles" xml:space="preserve"><value>角色</value></data>
+  <data name="AuditClaimUpdated" xml:space="preserve"><value>已變更要求「{0}」。</value></data>
+  <data name="AuditMapCreated" xml:space="preserve"><value>已使用此影像 '{1}' 建立地圖 '{0}'</value></data>
+  <data name="AuditRecordingStorageAddArchive" xml:space="preserve"><value>歸檔 '{0}' 已新增至 '{1}'。</value></data>
+  <data name="AuditRecordingStorageDeleteArchive" xml:space="preserve"><value>已從 '{1}' 刪除歸檔 '{0}'。</value></data>
+  <data name="AuditHardwareAdded" xml:space="preserve"><value>已新增硬體 '{0}'</value></data>
+  <data name="Enum_Category_MediaStorage" xml:space="preserve"><value>媒體儲存</value></data>
+  <data name="InitializeLicenseManagerFailed" xml:space="preserve"><value>初始化 license manager 時發生錯誤: {0}</value></data>
+  <data name="AuditHardwareMoved" xml:space="preserve"><value>使用者已開始將硬體 '{0}' 移至錄影伺服器 '{1}'。</value></data>
+  <data name="AuditDeviceCoverageDepthChanged" xml:space="preserve"><value>裝置深度「{0}」變更為「{1}」。</value></data>
+  <data name="AuditConfigurationExported" xml:space="preserve"><value>已匯出系統設定。</value></data>
+  <data name="MediaDatabaseMinimumDiskSpaceReached" xml:space="preserve"><value>已超出儲存區 '{0}' 的最小可用磁碟空間要求。</value></data>
+  <data name="AuditDeviceIconChanged" xml:space="preserve"><value>裝置圖示識別碼「{0}」變更為「{1}」。</value></data>
+  <data name="AuditDeviceMotionDetectionSettingsChanged" xml:space="preserve"><value>'{0}' 上的移動偵測設定已變更</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedNoRestrictionToDays" xml:space="preserve"><value>已在「{3}」上將存取權限「{0}」-「{1}」的限制由無限制變更為受限「{2}」天</value></data>
+  <data name="ShutdownMediaDbFailed" xml:space="preserve"><value>關閉媒體資料庫時發生錯誤: {0}</value></data>
+  <data name="AuditMediaRestrictionLiveModeEntered" xml:space="preserve"><value>'{0}' 已進入受限即時模式。</value></data>
+  <data name="EMailError" xml:space="preserve"><value>傳送電子郵件給下列收件者時發生錯誤: {0}</value></data>
+  <data name="ErrorNoHardwareAccess" xml:space="preserve"><value>無法存取硬體裝置 {0}。</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionMinutesToDays" xml:space="preserve"><value>已在「{4}」上將存取權限「{0}」-「{1}」的限制由受限「{2}」分鐘變更為受限「{3}」天</value></data>
+  <data name="ShutdownWebServerFailed" xml:space="preserve"><value>關閉 web server 時發生錯誤: {0}</value></data>
+  <data name="AuditBasicUserEdited" xml:space="preserve"><value>基本使用者 '{0}' 的設定已變更。</value></data>
+  <data name="AuditRoleLoginAuthorizationRequiredGranted" xml:space="preserve"><value>已授予角色「{0}」的「需要登入授權」選項</value></data>
+  <data name="AuditDevice360LensSettingsEnabled" xml:space="preserve"><value>'{0}' 上已啟用魚眼鏡頭設定。</value></data>
+  <data name="Enum_AuditType_SmartWallControl" xml:space="preserve"><value>[SmartWall] 控制</value></data>
+  <data name="AuditVideoWallDeleted" xml:space="preserve"><value>{0} '{1}' 已刪除</value></data>
+  <data name="AuditHostingServerDeleted" xml:space="preserve"><value>遠端連線伺服器 '{0}' 已移除。</value></data>
+  <data name="AuditPlaybackMicrophoneRecordings" xml:space="preserve"><value>正在播放麥克風從 '{0}' 到 '{1}' (UTC 時間) 的錄製語音。</value></data>
+  <data name="Enum_Category_ExternalIDP" xml:space="preserve"><value>外部 IDP</value></data>
+  <data name="DeviceFirmwareVersionUpdated" xml:space="preserve"><value>硬體裝置的韌體更新成功： 「{0}」。 新韌體版本為： '{1}'</value></data>
+  <data name="AuditPlaybackMicrophoneEdgeRecordingsOneLogOnly" xml:space="preserve"><value>正在擷取邊緣追蹤中 '{0}' 到 '{1}' (UTC 時間) 的錄製語音。</value></data>
+  <data name="Enum_ResourceType_FederatedArchitecture" xml:space="preserve"><value>聯合架構</value></data>
+  <data name="ErrorHardwareNotStarted" xml:space="preserve"><value>作業失敗時間 {0}。 此硬體裝置已關閉。</value></data>
+  <data name="LicenseInitializeFailed" xml:space="preserve"><value>初始化 licensing module 時發生錯誤: {0}</value></data>
+  <data name="AuditRoleObjectSecurityTimeProfileToSystemProfileChange" xml:space="preserve"><value>已在「{4}」上將存取權限「{0}」-「{1}」的時間設定檔由時間設定檔「{2}」變更為系統時間設定檔「{3}」</value></data>
+  <data name="HardwarePasswordChangeFailedPasswordTooLong" xml:space="preserve"><value>無法變更硬體裝置 {0} 的密碼。 密碼過長。</value></data>
+  <data name="NetworkSettingsManagementErrorUnsupported" xml:space="preserve"><value>作業失敗時間： {0}. 不支援網路設定管理。</value></data>
+  <data name="AuditPerfCountStateRuleDeleted" xml:space="preserve"><value>系統儀表板閥值 '{0}' 已刪除。</value></data>
+  <data name="AuditRoleObjectSecurityTimeProfileToProfileChange" xml:space="preserve"><value>已在「{4}」上將存取權限「{0}」-「{1}」的時間設定檔由時間設定檔「{2}」變更為時間設定檔「{3}」</value></data>
+  <data name="RecordingStorageSetEncryptionPasswordSuccess" xml:space="preserve"><value>在錄影儲存空間 '{0}' 上設定新加密密碼已成功完成。</value></data>
+  <data name="FailoverServerServiceHasReturnedFromFailoverState" xml:space="preserve"><value>容錯移轉伺服器服務已從容錯移轉狀態回復。</value></data>
+  <data name="Enum_AuditType_Unknown" xml:space="preserve"><value>未知</value></data>
+  <data name="Enum_AuditType_LiveMetadata" xml:space="preserve"><value>即時中繼資料</value></data>
+  <data name="HardwarePasswordChangeFailedHardwareBlocked" xml:space="preserve"><value>無法變更硬體裝置 {0} 的密碼。 此硬體裝置已臨時封鎖。</value></data>
+  <data name="Enum_ResourceType_SmartWallPreset" xml:space="preserve"><value>[SmartWall] 預設點</value></data>
+  <data name="AuditSiteRenamed" xml:space="preserve"><value>已將監視系統 '{0}' 重新命名為 '{1}'。</value></data>
+  <data name="RecordingStorageMoveFailedLastRetry" xml:space="preserve"><value>移動錄影儲存空間 '{0}' 失敗。</value></data>
+  <data name="AuditPtzPresetCreated" xml:space="preserve"><value>PTZ 預設點位置 '{0}' 已建立</value></data>
+  <data name="ArchiveStorageDeleteFailedLastRetry" xml:space="preserve"><value>刪除歸檔 '{0}' 失敗。</value></data>
+  <data name="ErrorHardwareReadOnly" xml:space="preserve"><value>作業失敗時間 {0}。 硬體裝置是唯讀的。</value></data>
+  <data name="AuditMediaRestrictionLiveDeleted" xml:space="preserve"><value>已刪除即時限制「{0}」。</value></data>
+  <data name="ShutdownDriverServicesFailed" xml:space="preserve"><value>關閉驅動程式服務時發生錯誤: {0}</value></data>
+  <data name="AuditSiteMasterDeleted" xml:space="preserve"><value>從階層分離的站台。</value></data>
+  <data name="FileUploadedToServer" xml:space="preserve"><value>檔案上傳至伺服器已成功完成。 檔案名稱「{0}」，大小 {1}。</value></data>
+  <data name="AuditLiveMetadataStarted" xml:space="preserve"><value>已要求用戶端即時訊源</value></data>
+  <data name="AuditBasicUserDeletedIdentityProvider" xml:space="preserve"><value>已刪除基本使用者 '{0}'。</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionDaysToMinutes" xml:space="preserve"><value>已在「{4}」上將存取權限「{0}」-「{1}」的限制由受限「{2}」天變更為受限「{3}」分鐘</value></data>
+  <data name="AuditLiveSpeakToSpeakerStarted" xml:space="preserve"><value>開始對揚聲器說話</value></data>
+  <data name="AuditRecordingStorageMoved" xml:space="preserve"><value>儲存 '{0}' 已從 '{1}' 移至 '{2}'。</value></data>
+  <data name="AuditLiveCameraStarted" xml:space="preserve"><value>已要求用戶端即時訊源</value></data>
+  <data name="ArchiveStorageMountFailed" xml:space="preserve"><value>已安裝歸檔「{0}」，但目前無法使用。</value></data>
+  <data name="AuditDeviceRequestEdgeStorageRetrieval" xml:space="preserve"><value>'{0}' 上已要求遠端錄影的擷取。</value></data>
+  <data name="AuditClientLiveFeedRequested" xml:space="preserve"><value>已要求用戶端即時影像訊源。</value></data>
+  <data name="LicenseNoMacAddressForHardware" xml:space="preserve"><value>系統無法取得授權。 未針對硬體定義 MAC 位址。 {0}</value></data>
+  <data name="AuditRoleOverallSecurityChanged" xml:space="preserve"><value>角色「{2}」的存取權限「{0}」-「{1}」： {3}</value></data>
+  <data name="AuditRoleAnonymityDuringPtzSessionsGranted" xml:space="preserve"><value>已授予角色「{0}」的「在 PTZ 工作階段期間，將使用者變成匿名使用者」選項</value></data>
+  <data name="AuditDeviceRecordingEnabled" xml:space="preserve"><value>'{0}' 上已啟用錄影。</value></data>
+  <data name="MediaDatabaseRepairTableStartedUnknown" xml:space="preserve"><value>開始修復儲存區「{1}」中未知裝置的資料庫表格。 裝置可能已從系統中移除。 裝置 ID: '{0}'</value></data>
+  <data name="Enum_Category_Failover" xml:space="preserve"><value>容錯移轉</value></data>
+  <data name="AutomaticActivationFailed" xml:space="preserve"><value>自動授權啟動失敗</value></data>
+  <data name="RecorderPluginNotConfigured" xml:space="preserve"><value>未設定裝置的外掛程式: {0}</value></data>
+  <data name="AuditBasicUserSystemLockedOut" xml:space="preserve"><value>由於嘗試登入的失敗次數過多，基本使用者「{0}」已被系統鎖定。</value></data>
+  <data name="AuditSiteSlaveDeleted" xml:space="preserve"><value>'{1}' 上的站台 '{0}' 已脫離階層。</value></data>
+  <data name="HardwareUpdatingDriver" xml:space="preserve"><value>已為設定的硬體安裝新的驅動程式。 正在更新驅動程式。 硬體: {0}. 硬體型號: {1}</value></data>
+  <data name="AuditIdentityProviderAdministratorLoginFailed" xml:space="preserve"><value>管理員登入遭 Identity Provider 拒絕。 存取遭拒。</value></data>
+  <data name="AuditIdentityProviderRegistrationChanged" xml:space="preserve"><value>已成功變更服務註冊。</value></data>
+  <data name="EdgeStorageRetrievalSuccess" xml:space="preserve"><value>遠端錄影的擷取已成功完成。</value></data>
+  <data name="Enum_EventGeneratorType_Timer" xml:space="preserve"><value>計時器</value></data>
+  <data name="Enum_AuditType_IOAndEvents" xml:space="preserve"><value>IO 和事件</value></data>
+  <data name="DatabaseConnectionLost" xml:space="preserve"><value>資料庫連線已遺失。</value></data>
+  <data name="EdgeStorageRetrievalStopped" xml:space="preserve"><value>已停止遠端錄影的擷取。</value></data>
+  <data name="AuditPtzNewSessionDenied" xml:space="preserve"><value>新的 PTZ 工作階段已拒絕使用者 {0}</value></data>
+  <data name="HardwarePasswordChangeFailedUnsupported" xml:space="preserve"><value>無法變更硬體裝置 {0} 的密碼。 此硬體裝置不支援密碼變更。</value></data>
+  <data name="MatrixUpdated" xml:space="preserve"><value>Matrix 已更新： 「{0}」 </value></data>
+  <data name="MatrixCreated" xml:space="preserve"><value>Matrix 已建立： 「{0}」 </value></data>
+  <data name="Enum_ResourceType_BasicUser" xml:space="preserve"><value>基本使用者</value></data>
+  <data name="InitializeServerConnectionFailed" xml:space="preserve"><value>連線至管理伺服器時發生錯誤: {0}</value></data>
+  <data name="InitializeRecorderSNMPManagerFailed" xml:space="preserve"><value>啟動 SNMP manager 時發生錯誤: {0}</value></data>
+  <data name="ArchiveStorageMountSuccess" xml:space="preserve"><value>已安裝歸檔「{0}」。</value></data>
+  <data name="Enum_EventGeneratorType_Hardware" xml:space="preserve"><value>硬體</value></data>
+  <data name="InitializeAudioMessageManagerFailed" xml:space="preserve"><value>語音訊息管理員初始化錯誤： {0}</value></data>
+  <data name="AuditRoleObjectSecurityPriorityRevoked" xml:space="preserve"><value>已在「{2}」上撤銷具有預設優先順序 {3} 的存取權限「{0}」-「{1}」</value></data>
+  <data name="AuditRuleRenamed" xml:space="preserve"><value>規則 '{0}' 已重新命名為 '{1}'</value></data>
+  <data name="AuditDeviceRecordingEdgeStoragePlaybackEnabled" xml:space="preserve"><value>'{0}' 上已啟用遠端錄影的播放。</value></data>
+  <data name="AuditMapHotZoneLinkCreated" xml:space="preserve"><value>已在 '{1}' 上建立到地圖 '{0}' 的熱區連結</value></data>
+  <data name="Enum_Category_ManualRecording" xml:space="preserve"><value>手動錄影</value></data>
+  <data name="AuditVideoWallMonitorAdded" xml:space="preserve"><value>{0} 監視器 '{1}' 已建立</value></data>
+  <data name="Enum_SourceType_External" xml:space="preserve"><value>外部</value></data>
+  <data name="AuditVideoWallMonitorRenamed" xml:space="preserve"><value>{0} 監視器 '{1}' 已重新命名為 '{2}'</value></data>
+  <data name="Field_UserName" xml:space="preserve"><value>使用者名稱</value></data>
+  <data name="InitializePatrollingControllerFailed" xml:space="preserve"><value>載入 patrolling controller 時發生錯誤: {0}</value></data>
+  <data name="AuditHardwareDisabled" xml:space="preserve"><value>硬體 '{0}' 已停用</value></data>
+  <data name="FileTransferToRecorderFailed" xml:space="preserve"><value>未能將檔案「{0}」傳送至錄影伺服器「{1}」。</value></data>
+  <data name="AuditLoginProviderDeleted" xml:space="preserve"><value>已刪除外部 IDP「{0}」。</value></data>
+  <data name="AuditRuleDisabled" xml:space="preserve"><value>規則 '{0}' 已停用</value></data>
+  <data name="AuditBookmarkViewed" xml:space="preserve"><value>已檢視的書籤: 「{0}」。</value></data>
+  <data name="Enum_AuditType_PlaybackAudio" xml:space="preserve"><value>播放語音</value></data>
+  <data name="Enum_ResourceType_MetadataSearch" xml:space="preserve"><value>中繼資料搜尋</value></data>
+  <data name="AuditVideoWallTextViewItemCreated" xml:space="preserve"><value>文字訊息 ('{0}') 已顯示</value></data>
+  <data name="Enum_AuditType_PlaybackVideo" xml:space="preserve"><value>播放視訊</value></data>
+  <data name="AuditBasicUserDescriptionChanged" xml:space="preserve"><value>基本使用者「{0}」的描述已變更。</value></data>
+  <data name="HardwarePasswordChangeFailedPasswordOrUserLevelMayNotBeChanged" xml:space="preserve"><value>可能未在硬體裝置 {0} 上建立密碼或使用者層級。</value></data>
+  <data name="Enum_Category_License" xml:space="preserve"><value>授權</value></data>
+  <data name="AuditRoleCreated" xml:space="preserve"><value>角色 '{0}' 已建立</value></data>
+  <data name="MediaDatabaseRepairTableStarted" xml:space="preserve"><value>開始修復儲存區「{1}」中裝置「{0}」的資料庫表格</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedNoRestrictionToMinutes" xml:space="preserve"><value>已在「{3}」上將存取權限「{0}」-「{1}」的限制由無限制變更為受限「{2}」分鐘</value></data>
+  <data name="AuditBasicInfoEdited" xml:space="preserve"><value>站台資訊 '{0}' 的設定已變更為 '{1}'</value></data>
+  <data name="Field_LogEntryId" xml:space="preserve"><value>記錄項目 ID</value></data>
+  <data name="Enum_ResourceType_ClientProfiles" xml:space="preserve"><value>[SmartClient] 設定檔</value></data>
+  <data name="Enum_Category_HardwareAndDevices" xml:space="preserve"><value>硬體與裝置</value></data>
+  <data name="Enum_ResourceType_ServiceRegistration" xml:space="preserve"><value>服務註冊</value></data>
+  <data name="Enum_AuditType_LiveVideo" xml:space="preserve"><value>即時視訊</value></data>
+  <data name="ShutdownStatusManagerFailed" xml:space="preserve"><value>關閉 Status Manager 時發生錯誤: {0}</value></data>
+  <data name="DeviceCommunicationError" xml:space="preserve"><value>通訊錯誤。</value></data>
+  <data name="AuditPlaybackMetadataRecordings" xml:space="preserve"><value>正在播放 '{0}' 到 '{1}' (UTC 時間) 的錄製中繼資料。</value></data>
+  <data name="DeviceEmptyTableFailedNoRetry" xml:space="preserve"><value>刪除所有裝置錄影失敗。</value></data>
+  <data name="Enum_AuditType_LiveAudio" xml:space="preserve"><value>即時語音</value></data>
+  <data name="Enum_EventGeneratorType_MIP" xml:space="preserve"><value>MIP 項目</value></data>
+  <data name="AuditHostedHardwareDeleted" xml:space="preserve"><value>遠端連線硬體 '{0}' 已移除。</value></data>
+  <data name="InitializeRecorderCommandProcessorFailed" xml:space="preserve"><value>初始化錄影伺服器 command processor 時發生錯誤: {0}</value></data>
+  <data name="Enum_AccessGranted_Granted" xml:space="preserve"><value>已授與</value></data>
+  <data name="InitializeMediaDbConfigureFailed" xml:space="preserve"><value>初始化媒體資料庫時發生錯誤: {0}</value></data>
+  <data name="AuditSearchRenamed" xml:space="preserve"><value>搜尋 '{0}' 已重新命名為 '{1}'.</value></data>
+  <data name="MediaDatabaseTableSplitTookLongUnknown" xml:space="preserve"><value>建立表格分割花費了過長時間。 表格： 「{0}」。 儲存區名稱: '{1}'</value></data>
+  <data name="AuditTrustedIssuerDeleted" xml:space="preserve"><value>已刪除可信核發者 {0}。</value></data>
+  <data name="AuditLiveSpeakerEnded" xml:space="preserve"><value>用戶端即時訊源已中止</value></data>
+  <data name="LegacyRecorderNoSecurityUpdates" xml:space="preserve"><value>安全性設定的更新無法傳送至錄影伺服器 '{0}'，因為它不是最新版本。</value></data>
+  <data name="AuditVideoWallMonitorCameraRemoved" xml:space="preserve"><value>攝影機 '{0}' 已從位置 '{1}' 移除</value></data>
+  <data name="LoadCachedConfigurationNoData" xml:space="preserve"><value>快取的錄影伺服器設定為空白。</value></data>
+  <data name="LicenseGetHardwareMacAddressFailed" xml:space="preserve"><value>錄影伺服器無法從硬體取得 MAC 位址: {0}</value></data>
+  <data name="AuditLoginUnSuccessfulUnknownUser" xml:space="preserve"><value>登入失敗 - 未知的使用者</value></data>
+  <data name="AuditExportCameraToDBWithEncryption" xml:space="preserve"><value>資料庫匯出已啟動。 有加密。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="FailoverServerUnableToConnectEncryptedToRecorder" xml:space="preserve"><value>無法建立與容錯移轉記錄伺服器 '{0}' 的加密連接。</value></data>
+  <data name="LoadCachedSecurityConfigurationNoData" xml:space="preserve"><value>快取的安全性設定為空白。</value></data>
+  <data name="AuditRecordingSequencesRequested" xml:space="preserve"><value>已擷取錄影片段清單。 從 {1} 到 {2} (UTC 時間) 的 {0} 個實例</value></data>
+  <data name="ExternalPlugIn360LensDefinitionsAdded" xml:space="preserve"><value>一個或多個魚眼鏡頭定義已新增至管理伺服器。</value></data>
+  <data name="AuditPtzPatrollingProfileChanged" xml:space="preserve"><value>巡弋設定檔 '{0}' 已變更</value></data>
+  <data name="DeviceDriverLoadFailed" xml:space="preserve"><value>無法載入硬體驅動程式: {0}</value></data>
+  <data name="MatrixLog" xml:space="preserve"><value>無法傳送命令至 Matrix 接收端: {0} 或 {1} 可能不在執行中。</value></data>
+  <data name="EdgeStorageRetrievalBegin" xml:space="preserve"><value>正在擷取遠端錄影...</value></data>
+  <data name="AuditSystemDashboardConfigurationUpdated" xml:space="preserve"><value>系統儀表板設定 '{0}' 已更新。</value></data>
+  <data name="AuditVideoWallRenamed" xml:space="preserve"><value>{0} '{1}' 已重新命名為 '{2}'</value></data>
+  <data name="DeviceCommunicationStopped" xml:space="preserve"><value>已停止通訊。</value></data>
+  <data name="AuditClientProfileEdited" xml:space="preserve"><value>{0} 設定檔 '{1}' 的設定已變更。</value></data>
+  <data name="HardwarePasswordChangeFailedHardwareReadOnly" xml:space="preserve"><value>無法變更硬體裝置 {0} 的密碼。 硬體裝置是唯讀的。</value></data>
+  <data name="MediaDatabaseDeleteError" xml:space="preserve"><value>無法從儲存區刪除資料。 裝置: 「{0}」。 儲存區名稱: '{1}'</value></data>
+  <data name="Enum_AuditType_Security" xml:space="preserve"><value>安全性</value></data>
+  <data name="ArchiveStorageUnmountSuccess" xml:space="preserve"><value>已卸載歸檔「{0}」。</value></data>
+  <data name="AuditTrustedIssuerUpdated" xml:space="preserve"><value>已更新可信核發者 {0}。</value></data>
+  <data name="AuditRetentionOptionRoleRelationUpdated" xml:space="preserve"><value>角色 '{0}' 的預設證據鎖定時間選項已變更為 '{1}'</value></data>
+  <data name="LicenseChangedUpdatedHardwareMacAddressInvalid" xml:space="preserve"><value>無法更新硬體的 MAC 位址 '{0}'。 更新的 MAC 位址無效。</value></data>
+  <data name="AuditVideoWallMonitorLayoutCameraChanged" xml:space="preserve"><value>攝影機 '{0}' 已放置在位置 '{1}'</value></data>
+  <data name="HardwareUpdateDriverSuccess" xml:space="preserve"><value>已成功更新硬體 '{0}' 的驅動程式</value></data>
+  <data name="MediaDatabaseStorageDataMoveFinishSuccess" xml:space="preserve"><value>已順利完成媒體資料的移動</value></data>
+  <data name="AuditRuleCreated" xml:space="preserve"><value>規則 '{0}' 已建立</value></data>
+  <data name="LicenseChangedMacAddressIdentified" xml:space="preserve"><value>找到硬體的已變更 MAC 位址: {0}</value></data>
+  <data name="AuditRoleAnonymityDuringPtzSessionsRevoked" xml:space="preserve"><value>已撤銷角色「{0}」的「在 PTZ 工作階段期間，將使用者變成匿名使用者」選項</value></data>
+  <data name="AuditLiveMetadataEnded" xml:space="preserve"><value>用戶端即時訊源已中止</value></data>
+  <data name="AuditDeviceArchiveSettingsChanged" xml:space="preserve"><value>'{0}' 上的封存設定已變更</value></data>
+  <data name="AuditUserLoginFailedLockedOutByAdmin" xml:space="preserve"><value>使用者登入失敗。管理員已鎖定使用者。</value></data>
+  <data name="DeviceClearOverflowMode" xml:space="preserve"><value>媒體佇列已正常化。 裝置已脫離溢位模式。</value></data>
+  <data name="Enum_EntryStatus_Success" xml:space="preserve"><value>成功</value></data>
+  <data name="AuditPtzReserveDenied" xml:space="preserve"><value>保留 PTZ 工作階段</value></data>
+  <data name="WebServerLoadCertificateFailed" xml:space="preserve"><value>無法載入用於SSL通信的證書。</value></data>
+  <data name="AuditAudioMessageDeleted" xml:space="preserve"><value>已刪除語音訊息「{0}」。</value></data>
+  <data name="AuditFileTransferToRecorderStarted" xml:space="preserve"><value>使用者已開始將檔案「{0}」傳送至錄影伺服器「{1}」。</value></data>
+  <data name="AuditVideoWallMonitorDeleted" xml:space="preserve"><value>{0} 監視器 '{1}' 已刪除</value></data>
+  <data name="AuditDeviceSettingsChanged" xml:space="preserve"><value>'{0}' 上的設定已變更</value></data>
+  <data name="ShutdownServerComplete" xml:space="preserve"><value>關閉完成。</value></data>
+  <data name="AuditPlaybackSpeakerRecordings" xml:space="preserve"><value>正在播放揚聲器從 '{0}' 到 '{1}' (UTC 時間) 的錄製語音。</value></data>
+  <data name="AuditDevice360LensSettingsDisabled" xml:space="preserve"><value>'{0}' 上已停用魚眼鏡頭設定。</value></data>
+  <data name="UserHandlingErrorDeleteCurrentUserNotAllowed" xml:space="preserve"><value>作業失敗時間： {0}. 無法刪除目前作用中使用者。</value></data>
+  <data name="AuditSystemDashboardConfigurationCreated" xml:space="preserve"><value>系統儀表板設定 '{0}' 已建立。</value></data>
+  <data name="SendNotificationError" xml:space="preserve"><value>傳送通知時發生錯誤: {0}</value></data>
+  <data name="AuditRoleOnlyAllowLoginWithinTimeProfileChanged" xml:space="preserve"><value>角色「{2}」的「僅允許時間設定檔範圍內登入」選項由「{0}」變更為「{1}」</value></data>
+  <data name="HardwareDriverNotFound" xml:space="preserve"><value>找不到已設定之硬體的驅動程式。 硬體: {0}. 硬體型號: {1}</value></data>
+  <data name="AuditPlaybackCameraRecordingsDenied" xml:space="preserve"><value>不允許用戶端播放視訊。</value></data>
+  <data name="InitializeLogManagerFailed" xml:space="preserve"><value>初始化 log manager 時發生錯誤: {0}</value></data>
+  <data name="AuditLoginUserNotAllowedCommandApiAccess" xml:space="preserve"><value>使用者登入失敗。 使用者權限不足</value></data>
+  <data name="AuditRoleEdited" xml:space="preserve"><value>角色「{0}」存取權限已變更</value></data>
+  <data name="AuditTimeProfileCreated" xml:space="preserve"><value>時間設定檔 '{0}' 已建立</value></data>
+  <data name="AuditPtzPatrollingProfileDeleted" xml:space="preserve"><value>巡弋設定檔 '{0}' 已刪除</value></data>
+  <data name="AuditPTZMoveStart" xml:space="preserve"><value>PTZ 移動「已啟動」</value></data>
+  <data name="HardwareCommunicationEstablished" xml:space="preserve"><value>已建立通訊 (硬體)</value></data>
+  <data name="Enum_ResourceType_RetentionOptionRoleRelation" xml:space="preserve"><value>證據鎖定</value></data>
+  <data name="HardwarePasswordChangeFailedNetworkIssue" xml:space="preserve"><value>由於網路問題，無法變更硬體裝置 {0} 的密碼。</value></data>
+  <data name="AuditLoginSuccess" xml:space="preserve"><value>使用者已成功登入</value></data>
+  <data name="Field_RuleName" xml:space="preserve"><value>規則名稱</value></data>
+  <data name="Enum_ResourceType_RecordingServers" xml:space="preserve"><value>錄影伺服器</value></data>
+  <data name="ExternalPlugIn360LensDefinitionsRemoved" xml:space="preserve"><value>已從管理伺服器移除一個或多個魚眼鏡頭定義。</value></data>
+  <data name="MediaDatabaseStorageMergeError" xml:space="preserve"><value>無法合併媒體資料。 錯誤: {0}</value></data>
+  <data name="AuditBasicUserCreatedIdentityProvider" xml:space="preserve"><value>已建立基本使用者 '{0}'。</value></data>
+  <data name="ArchiveStorageUnmountFailed" xml:space="preserve"><value>卸載歸檔「{0}」失敗。</value></data>
+  <data name="AuditPTZMoveToPresetPosition" xml:space="preserve"><value>PTZ 預設點位置 '{0}' 已啟動</value></data>
+  <data name="AuditRoleClientLoginGranted" xml:space="preserve"><value>已授予角色「{1}」的「允許 {0} 登入」選項</value></data>
+  <data name="AuditClientLiveFeedTerminated" xml:space="preserve"><value>用戶端即時影像訊源已中止。</value></data>
+  <data name="AuditFileUploadStarted" xml:space="preserve"><value>使用者已開始將檔案上傳至伺服器。 目標檔案名稱「{0}」，大小 {1}。</value></data>
+  <data name="Field_Description" xml:space="preserve"><value>說明</value></data>
+  <data name="Enum_Category_MapViewing" xml:space="preserve"><value>地圖檢視</value></data>
+  <data name="AuditUserTriggeredEvent" xml:space="preserve"><value>已觸發使用者定義事件 '{0}'。</value></data>
+  <data name="AuditBasicUserDisabled" xml:space="preserve"><value>基本使用者「{0}」已遭停用。</value></data>
+  <data name="DeviceFirmwareUpdateFailed" xml:space="preserve"><value>硬體裝置的韌體更新作業失敗： 「{0}」。</value></data>
+  <data name="AuditHostedHardwareModified" xml:space="preserve"><value>遠端連線硬體 '{0}' 已修改。</value></data>
+  <data name="Enum_ResourceType_SmartWallMonitor" xml:space="preserve"><value>[SmartWall] 監視器</value></data>
+  <data name="Field_GeneratorId" xml:space="preserve"><value>產生器 ID</value></data>
+  <data name="AuditHostedHardwareAdded" xml:space="preserve"><value>遠端連線硬體 '{0}' 已新增。</value></data>
+  <data name="MediaDatabaseRepairTableCompleted" xml:space="preserve"><value>完成修復儲存區「{1}」中裝置「{0}」的資料庫表格</value></data>
+  <data name="AuditMapHotZoneLinkRemoved" xml:space="preserve"><value>已從 '{1}' 上移除到地圖 '{0}' 的熱區連結</value></data>
+  <data name="ShutdownRecorderSNMPManagerFailed" xml:space="preserve"><value>關閉  SNMPmanager 時發生錯誤: {0}</value></data>
+  <data name="AuditLiveMicrophoneStarted" xml:space="preserve"><value>已要求用戶端即時訊源</value></data>
+  <data name="InitializeVmoClientFailed" xml:space="preserve"><value>初始化 VideoOS Management Objects 用戶Client Module 時發生錯誤: {0}</value></data>
+  <data name="AuditPtzPatrollingProfileCreated" xml:space="preserve"><value>巡弋設定檔 '{0}' 已建立</value></data>
+  <data name="AuditPtzPresetChanged" xml:space="preserve"><value>PTZ 預設點位置 '{0}' 已變更</value></data>
+  <data name="Enum_EventGeneratorType_External" xml:space="preserve"><value>外部</value></data>
+  <data name="AuditTimeProfileDeleted" xml:space="preserve"><value>已刪除時間設定檔 '{0}'</value></data>
+  <data name="ShutdownPatrollingControllerFailed" xml:space="preserve"><value>關閉 patrolling controller 時發生錯誤: {0}</value></data>
+  <data name="AutoProvisionedUserCreated" xml:space="preserve"><value>使用者 {0} 已建立。</value></data>
+  <data name="InitializeDatabaseFailed" xml:space="preserve"><value>初始化資料庫連接時發生錯誤: {0}</value></data>
+  <data name="AuditBasicInfoCreated" xml:space="preserve"><value>已使用值 '{1}' 建立站台資訊 '{0}'</value></data>
+  <data name="DeviceEmptyTableBegin" xml:space="preserve"><value>已開始刪除所有裝置錄影。</value></data>
+  <data name="RecordingStorageSetEncryptionMethodSuccess" xml:space="preserve"><value>在錄影儲存 '{0}' 上設定新加密方法已成功完成。</value></data>
+  <data name="AuditPtzNewSessionGranted" xml:space="preserve"><value>新的 PTZ 工作階段已由使用者 {0} 啟動</value></data>
+  <data name="Enum_Category_Export" xml:space="preserve"><value>匯出</value></data>
+  <data name="DeviceDriverProxyFailure" xml:space="preserve"><value>为裝置驅動程式 '{0}' 服務的 Proxy 伺服器無法使用。 這會影響下列硬體: 「{1}」。 將初始化重新啟動驅動程式的嘗試。</value></data>
+  <data name="AuditDeviceAdded" xml:space="preserve"><value>已新增裝置 '{0}'</value></data>
+  <data name="AuditBookmarkEdited" xml:space="preserve"><value>書籤 '{0}' 已變更。 標題: '{1}'，片段開始時間: '{2}' (utc)，書籤時間: '{3}' (utc)，片段結束時間: '{4}' (utc)。</value></data>
+  <data name="ArchiveDatabaseStorageAvailable" xml:space="preserve"><value>封存 '{0}' 再度成為可用。 路徑為 '{1}'。</value></data>
+  <data name="Enum_EventGeneratorType_SystemDashboard" xml:space="preserve"><value>系統儀表板</value></data>
+  <data name="AuditPTZControlTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，對 PTZ 工作階段的要求遭拒。</value></data>
+  <data name="Enum_EventGeneratorType_DriverDevice" xml:space="preserve"><value>驅動程式裝置</value></data>
+  <data name="LicenseHardwareUnlicensed" xml:space="preserve"><value>硬體未授權。 硬體: {0}</value></data>
+  <data name="FailoverServerStartingHotStandby" xml:space="preserve"><value>正在啟動錄影伺服器 '{0}' 的熱待命伺服器。</value></data>
+  <data name="ShutdownTaskManagerFailed" xml:space="preserve"><value>關閉 task manager 時發生錯誤: {0}</value></data>
+  <data name="AuditVideoWallPresetAdded" xml:space="preserve"><value>已將 {0} 預設點 '{1}' 新增到 '{2}' {0}</value></data>
+  <data name="Enum_ResourceType_SaveSearches" xml:space="preserve"><value>儲存搜尋</value></data>
+  <data name="AuditExportMetadataCompleted" xml:space="preserve"><value>匯出完成。 片段 '{0}' 到 '{1}'</value></data>
+  <data name="AuditLiveSpeakerDenied" xml:space="preserve"><value>用戶端即時訊源遭拒</value></data>
+  <data name="AuditLogoutTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，用戶端已登出</value></data>
+  <data name="AuditMediaRestrictionLiveModeExited" xml:space="preserve"><value>'{0}' 已結束受限即時模式，並轉換為播放限制 '{1}'</value></data>
+  <data name="AuditSearchCreated" xml:space="preserve"><value>搜尋 '{0}' 已儲存。</value></data>
+  <data name="Enum_Category_Playback" xml:space="preserve"><value>播放</value></data>
+  <data name="AuditVideoWallPresetActivateTimeBased" xml:space="preserve"><value>由於以時間為基礎的安全性限制，已拒絕啟動 {0} 預設點</value></data>
+  <data name="AuditDeviceFailoverSettingChanged" xml:space="preserve"><value>裝置「{0}」的容錯移轉設定已更改為「{1}」</value></data>
+  </root>

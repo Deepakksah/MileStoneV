@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Common.SharedComponent.Data</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.Common\VideoOS.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Common.SharedComponent\VideoOS.Common.SharedComponent.csproj" />
+  </ItemGroup>
+</Project>

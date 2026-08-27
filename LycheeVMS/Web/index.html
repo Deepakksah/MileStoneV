@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milestone XProtect Management Client 2025 R2</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Window Titlebar -->
+  <div class="window-titlebar">
+    <div class="title-left">
+      <span>◆</span>
+      <span>Milestone XProtect Management Client 2025 R2</span>
+    </div>
+    <div class="window-controls">
+      <div class="win-btn">─</div>
+      <div class="win-btn">□</div>
+      <div class="win-btn close">✕</div>
+    </div>
+  </div>
+
+  <!-- Menu Bar -->
+  <div class="menu-bar">
+    <div class="menu-item">File</div>
+    <div class="menu-item">View</div>
+    <div class="menu-item">Action</div>
+    <div class="menu-item">Maintenance</div>
+    <div class="menu-item">Tools</div>
+    <div class="menu-item">Help</div>
+  </div>
+
+  <!-- Icon Toolbar -->
+  <div class="icon-toolbar">
+    <button class="tool-btn" title="Save">💾</button>
+    <button class="tool-btn" title="Refresh">🔄</button>
+    <div class="tool-sep"></div>
+    <button class="tool-btn" title="Back">◀</button>
+    <button class="tool-btn" title="Forward">▶</button>
+    <div class="tool-sep"></div>
+    <button class="tool-btn" title="Help">❓</button>
+  </div>
+
+  <!-- Main Split Workspace -->
+  <div class="main-workspace">
+    
+    <!-- Left Sidebar: Site Navigation -->
+    <aside class="tree-sidebar">
+      <div class="tree-header">
+        <span>Site Navigation</span>
+        <div style="display:flex; gap:6px; font-size:10px; color:#64748b;">
+          <span>📌</span>
+          <span>🗖</span>
+          <span>✕</span>
+        </div>
+      </div>
+
+      <div class="tree-content">
+        <!-- Root Site Node -->
+        <div class="tree-node">
+          <div class="tree-row">
+            <span>▼ 💻</span>
+            <strong>MXM-PS-01 - (25.2a)</strong>
+          </div>
+
+          <div class="tree-children">
+            
+            <!-- Basics Group -->
+            <div class="tree-node">
+              <div class="tree-row"><span>▼ 📁</span> <span>Basics</span></div>
+              <div class="tree-children">
+                <div class="tree-row selected"><span>📄</span> <span>License Information</span></div>
+                <div class="tree-row"><span>📄</span> <span>Site Information</span></div>
+              </div>
+            </div>
+
+            <!-- Servers Group -->
+            <div class="tree-node">
+              <div class="tree-row"><span>▼ 📁</span> <span>Servers</span></div>
+              <div class="tree-children">
+                <div class="tree-row"><span>🖧</span> <span>Recording Servers</span></div>
+                <div class="tree-row"><span>🖧</span> <span>Failover Servers</span></div>
+                <div class="tree-row"><span>🖧</span> <span>Mobile Servers</span></div>
+              </div>
+            </div>
+
+            <!-- Devices Group -->
+            <div class="tree-node">
+              <div class="tree-row"><span>► 📁</span> <span>Devices</span></div>
+            </div>
+
+            <!-- Client Group -->
+            <div class="tree-node">
+              <div class="tree-row"><span>► 📁</span> <span>Client</span></div>
+            </div>
+
+            <!-- Rules and Events Group -->
+            <div class="tree-node">
+              <div class="tree-row"><span>► 📁</span> <span>Rules and Events</span></div>
+            </div>
+
+            <!-- Security Group -->
+            <div class="tree-node">
+              <div class="tree-row"><span>► 📁</span> <span>Security</span></div>
+            </div>
+
+            <!-- System Dashboard Group -->
+            <div class="tree-node">
+              <div class="tree-row"><span>► 📁</span> <span>System Dashboard</span></div>
+            </div>
+
+            <!-- Metadata Use -->
+            <div class="tree-node">
+              <div class="tree-row"><span>► 📁</span> <span>Metadata Use</span></div>
+            </div>
+
+            <!-- Access Control -->
+            <div class="tree-node">
+              <div class="tree-row"><span>► 📁</span> <span>Access Control</span></div>
+            </div>
+
+            <!-- Alarms -->
+            <div class="tree-node">
+              <div class="tree-row"><span>► 📁</span> <span>Alarms</span></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Detail View: License Information -->
+    <main class="content-panel">
+      
+      <!-- Cyan/Blue Top Banner -->
+      <div class="milestone-banner">
+        <div class="banner-logo">
+          <span>◆ milestone</span>
+          <span class="pipe">|</span>
+          <span class="xprotect">XProtect®</span>
+        </div>
+        <div class="banner-wireframe"></div>
+      </div>
+
+      <!-- Main Detail Form Content -->
+      <div class="detail-body">
+        
+        <!-- Section 1: Licensed to & Milestone Care -->
+        <div class="license-info-row">
+          
+          <div class="licensed-to-box">
+            <div class="stamp-icon">🏅</div>
+            <div>
+              <div class="section-label">Licensed to:</div>
+              <div>JINDAL STEEL POWER LIMITED</div>
+              <div>AT - NISHA JINDAL NAGAR</div>
+              <div>759122 Angul</div>
+              <div>Odisha India</div>
+              <a class="link-blue">End-user license agreement</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-label">Milestone Care</div>
+            <div>Your current level: Plus</div>
+            <div style="margin-top: 8px;">
+              <a class="link-blue">Access Milestone Care portal...</a><br>
+              <a class="link-blue">Information about Milestone Care...</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Section 2: Installed Products Table -->
+        <div class="table-section">
+          <div class="section-label">Installed Products</div>
+          <table class="milestone-table">
+            <thead>
+              <tr>
+                <th>Product Version</th>
+                <th>Software License Code</th>
+                <th>Expiration Date</th>
+                <th>Milestone Care Plus</th>
+                <th>Milestone Care Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>XProtect Expert 2025 R2</td>
+                <td><code>M01-C02-252-01-6C43F7</code></td>
+                <td>Unrestricted</td>
+                <td>01-03-2029</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td>XProtect Access 2025 R2</td>
+                <td>N/A</td>
+                <td>20-02-2026</td>
+                <td>20-02-2026</td>
+                <td>N/A</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Section 3: License Overview - All sites Table -->
+        <div class="table-section">
+          <div class="table-header-title">
+            <span class="section-label">License Overview - All sites</span>
+            <a class="link-blue" style="font-weight: normal;">License Details - All Sites...</a>
+          </div>
+          <table class="milestone-table" style="max-width: 320px;">
+            <thead>
+              <tr>
+                <th>License Type</th>
+                <th>Activated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Device Licenses</td>
+                <td>399 out of 400</td>
+              </tr>
+              <tr>
+                <td>Access control door</td>
+                <td>0 out of 4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Section 4: License Details - Current Site: MXM-PS-01 Table -->
+        <div class="table-section">
+          <div class="section-label">License Details - Current Site: MXM-PS-01</div>
+          <table class="milestone-table">
+            <thead>
+              <tr>
+                <th>License Type</th>
+                <th>Activated</th>
+                <th>Changes without activation</th>
+                <th>In Grace Period</th>
+                <th>Grace Period Expired</th>
+                <th>Without License</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Device Licenses</td>
+                <td>391</td>
+                <td>13 out of 59</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Access control door</td>
+                <td>0</td>
+                <td>N/A</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Section 5: Checkbox & Actions -->
+        <div class="actions-section">
+          <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+            <input type="checkbox">
+            <span>Enable automatic license activation</span>
+          </label>
+          <button class="btn-classic">Activate License Manually... ▾</button>
+        </div>
+
+      </div>
+
+      <!-- Bottom Status Bar -->
+      <div class="bottom-statusbar">
+        <span>Last activated: 23 May 2025 11:10:55</span>
+        <span>Information refreshed: 27 August 2026 12:07:39</span>
+        <span style="cursor:pointer;" title="Refresh">🔄</span>
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<recorderfailoverconfig>
+  <version>10.1.0.1</version>
+  <failoverservice>
+    <guid>4DFEFA9E-5C4C-490e-9855-6E91EEB7FAF9</guid>
+    <displayname>Local test recording server</displayname>
+    <checkrecordersevery>500</checkrecordersevery>
+    <recorderresponsetime>2000</recorderresponsetime>
+    <failoverserverresponsetime>2000</failoverserverresponsetime>
+
+    <!-- Seconds between checking the connection to recorders, for which this failover server is not first to take over -->
+    <RecorderConnectionCheckInSeconds>5</RecorderConnectionCheckInSeconds>
+
+    <!-- Maximum un successful recorder startup count. -->
+    <MaxUnSuccessfulRecorderStartupCount>5</MaxUnSuccessfulRecorderStartupCount>
+    <!-- Maximum unsuccessful full recorder startup time.-->
+    <MaxUnSuccessfulRecorderStartupTime>120</MaxUnSuccessfulRecorderStartupTime>
+
+    <!--
+  Should the network testing be done
+    -->
+    <enablenetworktests>true</enablenetworktests>
+
+    <!--
+    The shutdown procedure is initiated when the service is stopped or restarted either via the Service Control Manager or by a user or system initiated
+    restart or shutdown.
+    maxTimeToWait : 
+      Specifies the maximum time in minutes to wait for the service to complete a gracefull 
+      shutdown. When the maxTimeToWait interval has elapsed the service is forcefully closed.
+        Type    : System.Int32
+        Range   : 1 - 60
+        Defalut : 60
+    -->
+    <shutdownProcedure maxTimeToWait="60" />
+    <ClientRegistrationId/>
+    <restapiport>8990</restapiport>
+  </failoverservice>
+  <server>
+    <address>localhost</address>
+    <port>80</port>
+    <authorizationserveraddress/>
+    <timerecurrence>60</timerecurrence>
+    <!-- A boolean value indicating whether secure communication (SSL/TLS) is enabled between servers. -->
+    <SecureCommunicationEnabled>false</SecureCommunicationEnabled>
+    <CertificateHash></CertificateHash>
+  </server>
+  <traycontroller>
+    <port>8967</port>
+  </traycontroller>
+</recorderfailoverconfig>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Platform.UI.ItemPickerWpfUserControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Platform.UI" xmlns:vm="clr-namespace:VideoOS.Platform.UI.ItemPicker.ViewModel" xmlns:apollo="clr-namespace:VideoOS.Platform.UI.Controls">
+  <Grid MinHeight="100" MinWidth="100" Margin="0, 0, 0, 16">
+    <Grid Name="MultiItemGrid" Visibility="Visible">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="20" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="24" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid Row="1">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <apollo:VideoOSTextBoxMedium x:Name="FilterTextMulti" Mode="Search" Margin="0,0,0,16" Grid.Row="0" Text="{Binding Path=SearchString, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding Path=SearchTextboxVisibility}" PlaceholderText="{Binding Path=SearchPlaceholderText}" />
+        <apollo:VideoOSPanel x:Name="MultiTreeviewPanel" Margin="0" IsBorderVisible="True" Grid.Row="1" BackgroundAppearance="Subtle">
+          <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" PreviewMouseWheel="TreeView_ScrollView">
+            <apollo:VideoOSTreeView x:Name="SelectTreeView" MouseUp="ItemPicker_Selected" NodeAppearance="Normal" ItemIconSourcePropertyName="IconSource" ItemIsSelectedPropertyName="IsSelected" ItemIsExpandedPropertyName="AutoExpand" ItemChildrenPropertyName="ChildItems" ItemDataPropertyName="Name" IsBorderVisible="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding Path=ItemViewModels}" />
+          </ScrollViewer>
+        </apollo:VideoOSPanel>
+      </Grid>
+      <GridSplitter Grid.Column="1" Width="24" HorizontalAlignment="Stretch" Grid.Row="2" Background="#00FFFFFF" />
+      <apollo:VideoOSButtonTextMedium x:Name="RemoveAll" Click="RemoveAllTextBox_MouseUpClick" Cursor="Hand" HorizontalAlignment="Right" Margin="0,0,4,1" Grid.Column="2" Grid.Row="0" Content="{Binding Path=RemoveAllButtonText}" />
+      <apollo:VideoOSTextBlockEmptyState x:Name="OverlayLabel" Grid.Column="2" Grid.Row="1" Background="#00FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=EmptyListOverlayText}" Visibility="{Binding Path=EmptyListOverlayVisibility}" />
+      <apollo:VideoOSPanel x:Name="TablePanel" Grid.Column="2" Margin="0, 0, 0, 0" IsBorderVisible="False" Grid.Row="1">
+        <apollo:VideoOSTable x:Name="ChosenListTable" Grid.Column="2" AreColumnHeadersVisible="True" RowSeparator="None" ItemsSource="{Binding Path=SelectedItems}" Columns="{Binding Path=TableColumns}" />
+      </apollo:VideoOSPanel>
+      <apollo:VideoOSInlineMessageSmall Appearance="Error" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=ErrorVisibility}" Content="{Binding Path=ErrorText}" />
+    </Grid>
+    <Grid Name="SingleItemGrid" Visibility="Collapsed" Margin="0,16,0,0">
+      <Grid Column="2">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+          <RowDefinition Height="*" />
+          <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <apollo:VideoOSTextBoxMedium x:Name="FilterTextSingle" AutomationProperties.AutomationId="FilterTextSingle" Mode="Search" Margin="0,0,0,16" Grid.Row="0" Text="{Binding Path=SearchString, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding Path=SearchTextboxVisibility}" PlaceholderText="{Binding Path=SearchPlaceholderText}" />
+        <apollo:VideoOSPanel x:Name="SingleTreeviewPanel" Margin="0" IsBorderVisible="True" BackgroundAppearance="Subtle" Grid.Row="1">
+          <ScrollViewer VerticalScrollBarVisibility="Auto" PreviewMouseWheel="TreeView_ScrollView">
+            <apollo:VideoOSTreeView x:Name="SingleTreeView" MouseUp="ItemPicker_Selected" NodeAppearance="Normal" ItemIconSourcePropertyName="IconSource" ItemIsSelectedPropertyName="IsSelected" ItemIsExpandedPropertyName="AutoExpand" ItemChildrenPropertyName="ChildItems" ItemDataPropertyName="Name" IsBorderVisible="False" HorizontalAlignment="Center" ItemsSource="{Binding Path=ItemViewModels}" />
+          </ScrollViewer>
+        </apollo:VideoOSPanel>
+        <apollo:VideoOSInlineMessageSmall Appearance="Error" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=ErrorVisibility}" Content="{Binding Path=ErrorText}" />
+      </Grid>
+    </Grid>
+  </Grid>
+</UserControl>

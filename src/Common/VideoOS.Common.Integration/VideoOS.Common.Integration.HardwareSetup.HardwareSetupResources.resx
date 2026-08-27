@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="NamingDeviceTemplateHwAddressDeviceTypeIdx" xml:space="preserve"><value>{0} - {1} {2}</value></data>
+  <data name="MsgBoxHardwareDetectionSetupRecorderNotSupported" xml:space="preserve"><value>Unable to read setup information for the hardware on '{0}'.
+
+The recording server service version is no longer supported. You can still access recordings on the recording server, but it must be upgraded to the current version before you can change its configuration.</value></data>
+  <data name="NamingDeviceTemplateDeviceTypeIdxHwName" xml:space="preserve"><value>{0} {1} on {2}</value></data>
+  <data name="MsgBoxHardwareDetectionRemoteSystemLogOnError" xml:space="preserve"><value>Cannot log in to the remote system '{0}'.
+Check that the specified user account is added as a user on the remote system and that it has 'Administrator Access'.</value></data>
+  <data name="MsgBoxHardwareDetectionUnsupportedUnknownVersion" xml:space="preserve"><value>The system cannot recognize the version of the remote system located at '{0}'.
+{1}</value></data>
+  <data name="MsgBoxHardwareDetectionSetupException" xml:space="preserve"><value>It was not possible to connect to or receive information from the hardware '{0}'.
+
+Verify that the following is correct: address, port, user name, password and hardware driver.
+
+Alternatively use auto-detection to find the hardware.</value></data>
+  <data name="MsgBoxHardwareDetectionRemoteSystemNoRecordersError" xml:space="preserve"><value>The system cannot add the remote system '{0}'. Check that the remote system has hardware.</value></data>
+  <data name="NamingHardwareTemplateModelAddress" xml:space="preserve"><value>{0} ({1})</value></data>
+  <data name="DefaultCameraGroupName" xml:space="preserve"><value>Default group</value></data>
+  <data name="MsgBoxHardwareDetectionUnsupportedRemoteSystemId" xml:space="preserve"><value>The remote system has been identified as: {0} {1}</value></data>
+  <data name="NamingDeviceTemplateHwNameDeviceTypeIdx" xml:space="preserve"><value>{0} - {1} {2}</value></data>
+  <data name="MsgBoxHardwareDetectionAlreadyAdded" xml:space="preserve"><value>The hardware located at '{0}' is already defined on this recording server.</value></data>
+  <data name="MsgBoxHardwareDetectionUnsupportedUnknownType" xml:space="preserve"><value>The system cannot recognize the type of the remote system located at '{0}'.
+{1}</value></data>
+  <data name="DeviceTypeMicrophone" xml:space="preserve"><value>Microphone</value></data>
+  <data name="DeviceTypeCamera" xml:space="preserve"><value>Camera</value></data>
+  <data name="MsgBoxHardwareDetectionSetupTimeout" xml:space="preserve"><value>No response received from the recording server while setting up the hardware '{0}'.</value></data>
+  <data name="MsgBoxHardwareDetectionRemoteSystemAdminAccess" xml:space="preserve"><value>Cannot access 'Central' on the remote system '{0}'.
+
+Log in to the remote system and check that:
+- 'Central' is enabled.
+- The specified user account has 'Administrator Access' permission.</value></data>
+  <data name="DeviceTypeOutput" xml:space="preserve"><value>Output</value></data>
+  <data name="MsgBoxHardwareDetectionSetupNoResponse" xml:space="preserve"><value>No response received from the recording server while setting up the hardware '{0}'.</value></data>
+  <data name="MsgBoxHardwareDetectionSetupRecorderUnavailable" xml:space="preserve"><value>Unable to connect to the recording server while setting up the hardware '{0}'.</value></data>
+  <data name="MsgBoxHardwareDetectionUnsupportedUnknownError" xml:space="preserve"><value>The system cannot recognize the remote system located at '{0}'.
+{1}</value></data>
+  <data name="DeviceTypeSpeaker" xml:space="preserve"><value>Speaker</value></data>
+  <data name="DeviceTypeInput" xml:space="preserve"><value>Input</value></data>
+  <data name="MsgBoxHardwareDetectionUnsupportedVersion" xml:space="preserve"><value>The system does not support the version of the remote system located at '{0}.
+{1}</value></data>
+  <data name="MsgBoxHardwareDetectionRemoteSystemSetupError" xml:space="preserve"><value>An unknown error occurred while reading the configuration from the remote system '{0}'.
+The driver provided the following error message: '{1}'</value></data>
+  <data name="NamingDeviceTemplateInterconnectedName" xml:space="preserve"><value>{0} - {1}</value></data>
+  <data name="DeviceTypeMetadata" xml:space="preserve"><value>Metadata</value></data>
+  </root>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="VideoOSMessageBox_ButtonCancel" xml:space="preserve"><value>取消</value></data>
+  <data name="ItemPickerViewModel_RemoveAllButtonText" xml:space="preserve"><value>全部移除</value></data>
+  <data name="VideoOSTabControl_OverflowButtonTooltip" xml:space="preserve"><value>更多標籤</value></data>
+  <data name="VideoOSCalendar_ButtonToday" xml:space="preserve"><value>今天</value></data>
+  <data name="ItemPickerViewModel_RemoveButtonTooltip" xml:space="preserve"><value>從清單中移除項目</value></data>
+  <data name="ItemPickerWindow_DefaultDescriptionText" xml:space="preserve"><value>選擇</value></data>
+  <data name="VideoOSContextMenu_SearchPlaceHolderText" xml:space="preserve"><value>搜尋</value></data>
+  <data name="ItemPickerWindow_DefaultAcceptBtnContent" xml:space="preserve"><value>選擇</value></data>
+  <data name="VideoOSMessageBox_CheckBoxRememberChoice" xml:space="preserve"><value>是否記住我的選擇？</value></data>
+  <data name="VideoOSContextMenu_NoMatchingItems" xml:space="preserve"><value>沒有相符項目</value></data>
+  <data name="VideoOSDropDown_SelectedItemsValue" xml:space="preserve"><value>已選取項目 ({0})</value></data>
+  <data name="ItemPickerViewModel_DefaultSearchPlaceholderText" xml:space="preserve"><value>搜尋項目</value></data>
+  <data name="ItemPickerViewModel_DefaultTableHeaderContent" xml:space="preserve"><value>已選取項目</value></data>
+  <data name="VideoOSMessageBox_ButtonClose" xml:space="preserve"><value>關閉</value></data>
+  <data name="ItemPickerWindow_DefaultCancelBtnContent" xml:space="preserve"><value>取消</value></data>
+  <data name="VideoOSMessageBox_ButtonOK" xml:space="preserve"><value>確定</value></data>
+  <data name="VideoOSMessageBox_ButtonNo" xml:space="preserve"><value>否</value></data>
+  <data name="ItemPickerWindow_DefaultTitle" xml:space="preserve"><value>選取項目</value></data>
+  <data name="VideoOSMessageBox_ButtonYes" xml:space="preserve"><value>是</value></data>
+  <data name="ItemPickerViewModel_DefaultErrorText" xml:space="preserve"><value>未選取項目</value></data>
+  <data name="VideoOSContextMenu_ClearCheckedItems" xml:space="preserve"><value>清除選取範圍</value></data>
+  <data name="ItemPickerViewModel_DefaultEmptyListOverlayText" xml:space="preserve"><value>將項目新增至清單</value></data>
+  <data name="VideoOSActionList_OverflowButtonTooltip" xml:space="preserve"><value>更多動作</value></data>
+  </root>

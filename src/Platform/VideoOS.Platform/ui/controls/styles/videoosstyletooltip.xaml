@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls">
+  <DataTemplate x:Key="{x:Static controls:VideoOSStyleToolTip+VideoOSStyleToolTipInternals.TextTemplateKey}">
+    <controls:VideoOSTextBlockBodySmall Text="{TemplateBinding ContentPresenter.Content}" TextWrapping="Wrap" LineHeight="0" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:VideoOSStyleToolTip+VideoOSStyleToolTipInternals.CustomTemplateKey}">
+    <ContentControl Content="{TemplateBinding ContentPresenter.Content}" />
+  </DataTemplate>
+  <controls:ToolTipContentTemplateSelector x:Key="{x:Static controls:VideoOSStyleToolTip+VideoOSStyleToolTipInternals.ToolTipContentTemplateSelectorKey}" TextTemplate="{StaticResource {x:Static controls:VideoOSStyleToolTipInternals.TextTemplateKey}}" CustomTemplate="{StaticResource {x:Static controls:VideoOSStyleToolTipInternals.CustomTemplateKey}}" />
+  <Style x:Key="{x:Static controls:VideoOSStyleToolTip+VideoOSStyleToolTipInternals.ToolTipStyleKey}" TargetType="{x:Type ToolTip}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ToolTip}">
+          <Border CornerRadius="{x:Static controls:VideoOSStyleToolTipInternals.ToolTipCornerRadius}" MaxWidth="{x:Static controls:VideoOSStyleToolTipInternals.ToolTipMaxWidth}" Background="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSToolTipBackgroundBrush}}" Effect="{DynamicResource {x:Static controls:VideoOSResourceKeys.DropShadowEffect}}" Margin="{DynamicResource {x:Static controls:VideoOSResourceKeys.DropShadowThickness}}" Visibility="{TemplateBinding Content, Converter={x:Static controls:VideoOSStyleToolTipInternals.ToolTipVisibleConverter}}">
+            <ContentControl Content="{TemplateBinding ContentControl.Content}" Margin="8,5" ContentTemplateSelector="{StaticResource {x:Static controls:VideoOSStyleToolTipInternals.ToolTipContentTemplateSelectorKey}}" />
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Static controls:VideoOSStyleToolTip+VideoOSStyleToolTipInternals.ToolTipWithBorderStyleKey}" TargetType="{x:Type ToolTip}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ToolTip}">
+          <Border CornerRadius="{x:Static controls:VideoOSStyleToolTipInternals.ToolTipCornerRadius}" MaxWidth="{x:Static controls:VideoOSStyleToolTipInternals.ToolTipMaxWidth}" Background="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSToolTipBackgroundBrush}}" Effect="{DynamicResource {x:Static controls:VideoOSResourceKeys.DropShadowEffect}}" Margin="{DynamicResource {x:Static controls:VideoOSResourceKeys.DropShadowThickness}}" Visibility="{TemplateBinding Content, Converter={x:Static controls:VideoOSStyleToolTipInternals.ToolTipVisibleConverter}}">
+            <Border CornerRadius="{x:Static controls:VideoOSStyleToolTipInternals.ToolTipCornerRadius}" BorderThickness="1" BorderBrush="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSToolTipBorderBrush}}">
+              <ContentControl Content="{TemplateBinding ContentControl.Content}" Margin="8,5" ContentTemplateSelector="{StaticResource {x:Static controls:VideoOSStyleToolTipInternals.ToolTipContentTemplateSelectorKey}}" />
+            </Border>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

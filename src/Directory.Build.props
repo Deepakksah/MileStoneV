@@ -1,0 +1,60 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseWPF Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">true</UseWPF>
+    <UseWindowsForms Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">true</UseWindowsForms>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    
+    <!-- Comprehensive Warning and Error suppressions for clean decompiled solution builds -->
+    <NoWarn>$(NoWarn);MSB3822;MSB3823;MSB3245;CS0169;CS0649;CS0168;CS0108;CS0114;CS8632;CS0414;CS0219;CS0436;CS8002;CS0618;CS1591;CS0282;CS0672;CS0067;CS0414;CS0281;CS0105;MC6000;MSB3106;MSB3243;NETSDK1136</NoWarn>
+    
+    <!-- Automatic assembly lookup from binaries folder -->
+    <AssemblySearchPaths>
+      $(AssemblySearchPaths);
+      $(MSBuildThisFileDirectory)..\Milestone_Core_Binaries\;
+      $(MSBuildThisFileDirectory)..\MSI_Restored\ManagerServer\;
+      $(MSBuildThisFileDirectory)..\MSI_Audit_All\Extracted\ManagerServerInstaller_x64\named_files\;
+      $(MSBuildThisFileDirectory)Milestone_Core_Binaries\;
+      $(MSBuildThisFileDirectory)MSI_Restored\ManagerServer\;
+      $(MSBuildThisFileDirectory)MSI_Audit_All\Extracted\ManagerServerInstaller_x64\named_files\;
+    </AssemblySearchPaths>
+  </PropertyGroup>
+
+  <!-- Standard framework references for .NET Framework projects only -->
+  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+</Project>

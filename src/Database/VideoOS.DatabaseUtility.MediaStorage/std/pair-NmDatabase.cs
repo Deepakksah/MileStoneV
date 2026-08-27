@@ -1,0 +1,12 @@
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace std;
+
+[StructLayout(LayoutKind.Sequential, Size = 360)]
+[NativeCppClass]
+[UnsafeValueType]
+public struct pair_003CNmDatabase_003A_003AUtility_003A_003ACmTableInfo_0020const_0020_002Cstd_003A_003Alist_003CNmDatabase_003A_003AUtility_003A_003ACmTableInfo_002Cstd_003A_003Aallocator_003CNmDatabase_003A_003AUtility_003A_003ACmTableInfo_003E_0020_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}

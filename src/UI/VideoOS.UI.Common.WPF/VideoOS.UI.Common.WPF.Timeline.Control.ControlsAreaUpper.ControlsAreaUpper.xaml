@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.ControlsAreaUpper" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls" xmlns:controlsAreaUpper="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper" Height="{x:Static controlsAreaUpper:ControlsAreaUpper.ControlsAreaUpperHeight}" Loaded="UserControl_Loaded">
+  <Grid Margin="8,0,8,4">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="auto" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Controls:TimeSelectionControl x:Name="_timeSelectionControl" TimeSelectionModeEnabledChanged="_timeSelectionControl_TimeSelectionModeEnabledChanged" SetTimeSelectionTimesButtonClicked="_timeSelectionControl_SetTimeSelectionTimesButtonClicked" Grid.Column="0" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+    <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="4,0,4,0">
+      <Controls:SecondaryNavigationBackwardControl x:Name="_secondaryNavigationBackwardControl" NavigateFirstButtonClicked="_secondaryNavigationControl_NavigateFirstButtonClicked" NavigatePreviousSequenceButtonClicked="_secondaryNavigationControl_NavigatePreviousSequenceButtonClicked" Margin="0,0,8,0" VerticalAlignment="Center" />
+      <Controls:PrimaryNavigationControl x:Name="_primaryNavigationControl" NavigateNextButtonClicked="_primaryNavigationControl_NavigateNextButtonClicked" NavigatePreviousButtonClicked="_primaryNavigationControl_NavigatePreviousButtonClicked" PlaybackBackwardButtonClicked="_primaryNavigationControl_PlaybackBackwardButtonClicked" PlaybackForwardButtonClicked="_primaryNavigationControl_PlaybackForwardButtonClicked" PlaybackSliderValueChanged="_primaryNavigationControl_PlaybackSliderValueChanged" VerticalAlignment="Center" />
+      <Controls:SecondaryNavigationForwardControl x:Name="_secondaryNavigationForwardControl" NavigateLastButtonClicked="_secondaryNavigationControl_NavigateLastButtonClicked" NavigateNextSequenceButtonClicked="_secondaryNavigationControl_NavigateNextSequenceButtonClicked" Margin="8,0,0,0" VerticalAlignment="Center" />
+    </StackPanel>
+    <Controls:PlaybackSpeedControl x:Name="_playbackSpeedControl" SelectedSpeedChanged="_playbackSpeedControl_SelectedSpeedChanged" Grid.Column="2" VerticalAlignment="Center" />
+  </Grid>
+</UserControl>

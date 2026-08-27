@@ -1,0 +1,10 @@
+﻿/target:exe
+/out:tools\DbDeployer\DbDeployer.exe
+/r:tools\DbDeployer\Microsoft.Extensions.Logging.Abstractions.dll
+/r:tools\DbDeployer\Microsoft.Extensions.Logging.dll
+/r:tools\DbDeployer\VideoOS.Database.dll
+/r:tools\DbDeployer\VideoOS.SqlUpdate.dll
+/r:tools\DbDeployer\VideoOS.Utilities.Database.dll
+/r:tools\DbDeployer\VideoOS.Installer.Common.dll
+/r:System.Data.dll
+tools\DbDeployer\Program.cs

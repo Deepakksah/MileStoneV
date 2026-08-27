@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.ServerPagesSetupPlugin.PrivacySettingsControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Installer.ServerPagesSetupPlugin" xmlns:resx="clr-namespace:VideoOS.Installer.ServerPagesSetupPlugin.Properties" AutomationProperties.AutomationId="PrivacySettingsControl">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../ResourceDictionary.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Margin="58, 40">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="25" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="12" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="12" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="12" />
+      <RowDefinition Height="12" />
+      <RowDefinition Height="12" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <TextBlock AutomationProperties.AutomationId="labelHeadLine" HorizontalAlignment="Stretch" TextWrapping="Wrap" Style="{StaticResource HeaderTextBlockStyle}" Text="{Binding PageHeaderString}" />
+    <RadioButton Grid.Row="2" GroupName="ShareData" AutomationProperties.AutomationId="radioShare" IsChecked="{Binding ShareUsageData}">
+      <TextBlock TextWrapping="Wrap" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding ShareUsageDataString}" />
+    </RadioButton>
+    <Grid Row="4" RowSpan="1">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="20" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <TextBlock Grid.Row="0" Grid.Column="1" Margin="0,0,0,13" HorizontalAlignment="Stretch" TextWrapping="Wrap" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding UsageInfo}" />
+      <TextBlock Grid.Row="1" Grid.Column="1" Margin="0,0,0,13" HorizontalAlignment="Stretch" TextWrapping="Wrap" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding LegalInfo}" />
+    </Grid>
+    <RadioButton Grid.Row="6" GroupName="ShareData" AutomationProperties.AutomationId="radioDoNotShare" IsChecked="{Binding ShareUsageData, Converter={StaticResource inverseBooleanConverter}}">
+      <TextBlock TextWrapping="Wrap" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding DoNotShareUsageDataString}" />
+    </RadioButton>
+    <Grid Row="10" RowSpan="2">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="5" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="20" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource ControlTextBlockStyle}" Text="{Binding PageInfoString}" />
+      <TextBlock Grid.Row="2" Grid.Column="2">
+        <Hyperlink AutomationProperties.AutomationId="hyperlinkMore" NavigateUri="{Binding OnlineInfo}" RequestNavigate="hyperlink_RequestNavigate">
+          <TextBlock Style="{StaticResource HyperlinkTextBlockStyle}" Text="{Binding OnlineInfo}" />
+        </Hyperlink>
+      </TextBlock>
+    </Grid>
+  </Grid>
+</UserControl>

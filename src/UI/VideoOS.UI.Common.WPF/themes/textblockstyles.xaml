@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.UI.Common.WPF.Controls" xmlns:themes="clr-namespace:VideoOS.UI.Common.WPF.Themes" xmlns:internal="clr-namespace:VideoOS.UI.Common.WPF.Controls.Internal">
+  <ToolTip x:Key="VideoOSControlsToolTip" Visibility="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}, Converter={themes:TextBlockTooltipVisibilityConverter}}">
+    <ContentControl.Content>
+      <controls:VideoOSTextBlockBody1 Text="{Binding Path=PlacementTarget.Text, RelativeSource={RelativeSource AncestorType=ToolTip}}" />
+    </ContentControl.Content>
+  </ToolTip>
+  <Style x:Key="{x:Type internal:TooltipSupportTextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}" TargetType="{x:Type internal:TooltipSupportTextBlock}">
+    <Setter Property="FontFamily" Value="Segoe UI" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSTextForegroundBrush}" />
+    <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+    <Setter Property="FrameworkElement.UseLayoutRounding" Value="False" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockTitle}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockTitle}">
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="FontSize" Value="24" />
+    <Setter Property="TextBlock.LineHeight" Value="32" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockHeader1}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockHeader1}">
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="FontSize" Value="18" />
+    <Setter Property="TextBlock.LineHeight" Value="24" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockHeader2}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockHeader2}">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="TextBlock.LineHeight" Value="20" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockEmptyState}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockEmptyState}">
+    <Setter Property="FontWeight" Value="Light" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="TextBlock.LineHeight" Value="20" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSTextEmptyStateForegroundBrush}" />
+    <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockTable}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockTable}">
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="TextBlock.LineHeight" Value="16" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockBody1}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockBody1}">
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="TextBlock.LineHeight" Value="16" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockBody2}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockBody2}">
+    <Setter Property="FontSize" Value="11" />
+    <Setter Property="TextBlock.LineHeight" Value="16" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockLabel1}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockLabel1}">
+    <Setter Property="FontSize" Value="11" />
+    <Setter Property="TextBlock.LineHeight" Value="16" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSTextLabelForegroundBrush}" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockLabel2}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockLabel2}">
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="TextBlock.LineHeight" Value="16" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSTextLabelForegroundBrush}" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockButton1}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockButton1}">
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="TextBlock.LineHeight" Value="20" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSTextButtonForegroundBrush}" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockButton2}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockButton2}">
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="TextBlock.LineHeight" Value="16" />
+    <Setter Property="Foreground" Value="{DynamicResource VideoOSTextButtonForegroundBrush}" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+  <Style x:Key="{x:Type controls:VideoOSTextBlockH3High}" BasedOn="{StaticResource {x:Type internal:TooltipSupportTextBlock}}" TargetType="{x:Type controls:VideoOSTextBlockH3High}">
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="FontSize" Value="11" />
+    <Setter Property="TextBlock.LineHeight" Value="16" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{StaticResource VideoOSControlsToolTip}" />
+  </Style>
+</ResourceDictionary>

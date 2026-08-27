@@ -1,0 +1,12 @@
+{
+  "name": "lychee-vms-studio",
+  "version": "2025.3.0",
+  "description": "LycheeVMS 2025 R3 — Enterprise Video Management & Smart Client Studio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["vms", "milestone", "surveillance", "cctv", "smart-client"],
+  "author": "LycheeVMS Core Team",
+  "license": "MIT"
+}

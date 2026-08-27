@@ -1,0 +1,3 @@
+<Project>
+  <!-- Stop searching parent directory for Directory.Build.props -->
+</Project>

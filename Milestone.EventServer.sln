@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.EventServer.Alarms.RestApi.Client", "src\EventServer\VideoOS.EventServer.Alarms.RestApi.Client\VideoOS.EventServer.Alarms.RestApi.Client.csproj", "{F1406812-9332-47BD-8145-27A0288EA088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.EventServer.Common.RestApi.Client", "src\EventServer\VideoOS.EventServer.Common.RestApi.Client\VideoOS.EventServer.Common.RestApi.Client.csproj", "{F700C50A-60E2-4EA0-B342-116C72694015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.EventServer.Communication", "src\EventServer\VideoOS.EventServer.Communication\VideoOS.EventServer.Communication.csproj", "{10E2D0EF-0749-48B4-A856-9CF5FA6C64A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.EventServer.Events.EventStatusSubscriptionWsApi.Client", "src\EventServer\VideoOS.EventServer.Events.EventStatusSubscriptionWsApi.Client\VideoOS.EventServer.Events.EventStatusSubscriptionWsApi.Client.csproj", "{1D2D27EE-071E-4CE2-89E0-7A9E92FB27AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.EventServer.Events.RestApi.Client", "src\EventServer\VideoOS.EventServer.Events.RestApi.Client\VideoOS.EventServer.Events.RestApi.Client.csproj", "{77352609-F027-479A-B319-5CCA35600525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.EventServer.Shared", "src\EventServer\VideoOS.EventServer.Shared\VideoOS.EventServer.Shared.csproj", "{0F61F567-A626-4092-A38B-D76627937919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.ServiceHost.EventServer", "src\EventServer\VideoOS.ServiceHost.EventServer\VideoOS.ServiceHost.EventServer.csproj", "{E34A9786-FCAF-4D1E-BC33-CF718796598B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1406812-9332-47BD-8145-27A0288EA088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1406812-9332-47BD-8145-27A0288EA088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1406812-9332-47BD-8145-27A0288EA088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1406812-9332-47BD-8145-27A0288EA088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F700C50A-60E2-4EA0-B342-116C72694015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F700C50A-60E2-4EA0-B342-116C72694015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F700C50A-60E2-4EA0-B342-116C72694015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F700C50A-60E2-4EA0-B342-116C72694015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10E2D0EF-0749-48B4-A856-9CF5FA6C64A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E2D0EF-0749-48B4-A856-9CF5FA6C64A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E2D0EF-0749-48B4-A856-9CF5FA6C64A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E2D0EF-0749-48B4-A856-9CF5FA6C64A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D2D27EE-071E-4CE2-89E0-7A9E92FB27AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D2D27EE-071E-4CE2-89E0-7A9E92FB27AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D2D27EE-071E-4CE2-89E0-7A9E92FB27AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D2D27EE-071E-4CE2-89E0-7A9E92FB27AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77352609-F027-479A-B319-5CCA35600525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77352609-F027-479A-B319-5CCA35600525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77352609-F027-479A-B319-5CCA35600525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77352609-F027-479A-B319-5CCA35600525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F61F567-A626-4092-A38B-D76627937919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F61F567-A626-4092-A38B-D76627937919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F61F567-A626-4092-A38B-D76627937919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F61F567-A626-4092-A38B-D76627937919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E34A9786-FCAF-4D1E-BC33-CF718796598B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34A9786-FCAF-4D1E-BC33-CF718796598B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34A9786-FCAF-4D1E-BC33-CF718796598B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34A9786-FCAF-4D1E-BC33-CF718796598B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

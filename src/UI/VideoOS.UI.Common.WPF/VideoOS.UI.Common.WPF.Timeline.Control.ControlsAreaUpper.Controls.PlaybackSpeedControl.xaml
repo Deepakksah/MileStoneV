@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls.PlaybackSpeedControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" xmlns:resources="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls.resources" xmlns:controls1="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="auto" />
+    </Grid.ColumnDefinitions>
+    <controls:VideoOSMenuButtonTransparentSmall Name="_customPlaybackSpeedMenuButton" Grid.Column="1" VerticalAlignment="Center" ToolTip="{x:Static resources:Strings.TooltipPlaybackSpeed}" />
+  </Grid>
+</UserControl>

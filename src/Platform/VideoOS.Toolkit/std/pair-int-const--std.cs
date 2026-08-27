@@ -1,0 +1,17 @@
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace std;
+
+[StructLayout(LayoutKind.Sequential, Size = 24)]
+[NativeCppClass]
+public struct pair_003Cint_0020const_0020_002Cstd_003A_003Ashared_ptr_003CNmToolkit_003A_003AImRendererToolkit_003A_003AImRenderingInformation_0020const_0020_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}
+[StructLayout(LayoutKind.Sequential, Size = 24)]
+[NativeCppClass]
+public struct pair_003Cint_0020const_0020_002Cstd_003A_003Ashared_ptr_003CNmToolkit_003A_003AImRendererToolkit_003A_003AImRenderingParameters_0020const_0020_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}

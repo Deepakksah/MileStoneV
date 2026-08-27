@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ClientProfileValueNormal" xml:space="preserve"><value>一般</value></data>
+  <data name="ClientProfileSettingSequenceExplorerTab" xml:space="preserve"><value>畫面快取模塊索引標籤</value></data>
+  <data name="ClientProfileSettingExportMergeIncludeCameraNames" xml:space="preserve"><value>包含攝影機名稱</value></data>
+  <data name="ClientProfileSectionAlarmManagerName" xml:space="preserve"><value>警報管理員</value></data>
+  <data name="ClientProfileSettingExportDestinationType" xml:space="preserve"><value>匯出至</value></data>
+  <data name="ClientProfileSettingPanesPlaybackRecordingSearch" xml:space="preserve"><value>錄影搜尋窗格</value></data>
+  <data name="ClientProfileValueLogoCustom" xml:space="preserve"><value>自訂標誌</value></data>
+  <data name="ClientProfileSettingPanesPlaybackSystemOverview" xml:space="preserve"><value>攝影機窗格</value></data>
+  <data name="ClientProfileSettingSequenceExplorerPrintToolbarButton" xml:space="preserve"><value>列印工具列按鈕</value></data>
+  <data name="ClientProfileSettingSystemMonitorTab" xml:space="preserve"><value>系統監視器標籤</value></data>
+  <data name="ClientProfileSettingExportMergeAddPadding" xml:space="preserve"><value>新增填充</value></data>
+  <data name="ClientProfileSectionPlaybackHeader" xml:space="preserve"><value>{ClientName} 設定檔設定 - 播放</value></data>
+  <data name="ClientProfileSettingGeneralDefaultVideoBuffer" xml:space="preserve"><value>預設視訊緩衝</value></data>
+  <data name="ClientProfileSectionLiveHeader" xml:space="preserve"><value>{ClientName} 設定檔設定 - 即時</value></data>
+  <data name="ClientProfileSettingTimelineBookmarks" xml:space="preserve"><value>書籤</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Minutes_2" xml:space="preserve"><value>2 分鐘</value></data>
+  <data name="ClientProfileSettingPanesPlaybackTab" xml:space="preserve"><value>播放模式</value></data>
+  <data name="ClientProfileSettingPanesPlaybackPtz" xml:space="preserve"><value>PTZ 窗格</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerSeperator" xml:space="preserve"><value>{BrandName} 格式</value></data>
+  <data name="ClientProfileSettingAdvancedVideoPlayerHardwareDecodingMode" xml:space="preserve"><value>硬體加速</value></data>
+  <data name="ClientProfileValueDefault" xml:space="preserve"><value>預設</value></data>
+  <data name="ClientProfileSettingApplicationRememberPassword" xml:space="preserve"><value>記住密碼</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Until_Logout" xml:space="preserve"><value>直到登出</value></data>
+  <data name="ClientProfileSettingExportVideoClipFrameRate" xml:space="preserve"><value>降低影格速率</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackIndependentPlayback" xml:space="preserve"><value>獨立播放</value></data>
+  <data name="ClientProfileSettingApplicationEvidenceLock" xml:space="preserve"><value>證據鎖定</value></data>
+  <data name="ClientProfileSettingAlarmManagerTab" xml:space="preserve"><value>警報管理員標籤</value></data>
+  <data name="ClientProfileSettingGisMapCreateLayerLocation" xml:space="preserve"><value>新增自訂覆蓋時建立位置</value></data>
+  <data name="ClientProfileSectionGeneralHeader" xml:space="preserve"><value>{ClientName} 設定檔設定 - 一般</value></data>
+  <data name="ClientProfileSettingPanesSetupTab" xml:space="preserve"><value>設定模式</value></data>
+  <data name="ClientProfileValueDisabled" xml:space="preserve"><value>禁用</value></data>
+  <data name="ClientProfileValueNoFilter" xml:space="preserve"><value>無篩選器</value></data>
+  <data name="ClientProfileValueDenied" xml:space="preserve"><value>已遭拒</value></data>
+  <data name="ClientProfileValueUnavailable" xml:space="preserve"><value>無法使用</value></data>
+  <data name="ClientProfileValueCustom" xml:space="preserve"><value>自訂</value></data>
+  <data name="ClientProfileValueNothing" xml:space="preserve"><value>無</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackPrintReportHeadlineText" xml:space="preserve"><value>列印報告 – 自訂標題文字</value></data>
+  <data name="ClientProfileSettingAlarmManagerPlayAlarmSoundNotifications" xml:space="preserve"><value>警報的播放聲音通知</value></data>
+  <data name="ClientProfileValueBrowse" xml:space="preserve"><value>瀏覽...</value></data>
+  <data name="ClientProfileValueBobTop" xml:space="preserve"><value>垂直延展頂部域</value></data>
+  <data name="ClientProfileValueTimelineHideForSmartWallViewsTimeout30Seconds" xml:space="preserve"><value>30 秒後</value></data>
+  <data name="ClientProfileSettingExportMergeQualityOptionHigh" xml:space="preserve"><value>高</value></data>
+  <data name="ClientProfileValueVideoBufferLarge" xml:space="preserve"><value>大 – (1 秒)</value></data>
+  <data name="ClientProfileSettingExportStillImageFormat" xml:space="preserve"><value>可用性</value></data>
+  <data name="ClientProfileSettingTimelineMotion" xml:space="preserve"><value>移動指示</value></data>
+  <data name="ClientProfileValueVideoBufferSmall" xml:space="preserve"><value>小 – (100 毫秒)</value></data>
+  <data name="ClientProfileValueShow" xml:space="preserve"><value>顯示</value></data>
+  <data name="ClientProfileValueNone" xml:space="preserve"><value>無</value></data>
+  <data name="ClientProfileValueLast" xml:space="preserve"><value>最後一個</value></data>
+  <data name="ClientProfileValueHide" xml:space="preserve"><value>隱藏</value></data>
+  <data name="ClientProfileValueAuto" xml:space="preserve"><value>自動</value></data>
+  <data name="ClientProfileSettingGeneralTimeInTitlebar" xml:space="preserve"><value>在標題列中顯示目前時間</value></data>
+  <data name="ClientProfileSettingPanesSetupSystemOverview" xml:space="preserve"><value>系統概觀窗格</value></data>
+  <data name="ClientProfileValueBookmarkAddDetail" xml:space="preserve"><value>新增書籤詳細資料</value></data>
+  <data name="ClientProfileSettingPanesLiveViews" xml:space="preserve"><value>檢視窗格</value></data>
+  <data name="ClientProfileSettingPanesLivePrint" xml:space="preserve"><value>列印功能</value></data>
+  <data name="ClientProfileValueVideoBufferVerySmall" xml:space="preserve"><value>非常小 – (50 毫秒)</value></data>
+  <data name="ClientProfileSettingExportMergeQualityOptionLow" xml:space="preserve"><value>低</value></data>
+  <data name="ClientProfileSettingPanesLiveAudio" xml:space="preserve"><value>語音窗格</value></data>
+  <data name="ClientProfileValueVideoBufferVeryLarge" xml:space="preserve"><value>非常大 – (1.5 秒)</value></data>
+  <data name="ClientProfileSectionAdvancedName" xml:space="preserve"><value>進階</value></data>
+  <data name="ClientProfileSettingGeneralApplicationMaximization" xml:space="preserve"><value>應用程式最大化</value></data>
+  <data name="ClientProfileSettingExportMergeMediaSeperator" xml:space="preserve"><value>媒體播放器格式 - 組合檔案</value></data>
+  <data name="ClientProfileSettingExportMergeMediaSequenceType" xml:space="preserve"><value>版面配置類型</value></data>
+  <data name="ClientProfileSettingApplicationAutoLogin" xml:space="preserve"><value>自動登入</value></data>
+  <data name="ClientProfileValueDoSkipGaps" xml:space="preserve"><value>跳過空白部份</value></data>
+  <data name="ClientProfileSettingExportVideoClipType" xml:space="preserve"><value>選取內容</value></data>
+  <data name="ClientProfileSectionSetupName" xml:space="preserve"><value>設定</value></data>
+  <data name="ClientProfileSettingPanesLiveEvents" xml:space="preserve"><value>事件窗格</value></data>
+  <data name="ClientProfileValueEncryptStregthDES56" xml:space="preserve"><value>56 位元 DES</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerIndividualCommentsMode" xml:space="preserve"><value>管理個別攝影機備註</value></data>
+  <data name="ClientProfileSettingGeneralAllowHtmlItemScripting" xml:space="preserve"><value>HTML 檢視項目指令碼處理</value></data>
+  <data name="ClientProfileSettingApplicationLogoutButton" xml:space="preserve"><value>登出按鈕</value></data>
+  <data name="ClientProfileValueHideSeeHelp" xml:space="preserve"><value>隱藏 (參閱說明)</value></data>
+  <data name="ClientProfileSettingExportVideoClipCodecProperties" xml:space="preserve"><value>視訊編解碼器屬性</value></data>
+  <data name="ClientProfileSettingAdvancedMulticast" xml:space="preserve"><value>多點傳送</value></data>
+  <data name="ClientProfileSettingExportMergeMediaSequenceTypeOptionExportListOrder" xml:space="preserve"><value>單一攝影機視圖</value></data>
+  <data name="ClientProfileSettingFunctionsLiveCameraPlayback" xml:space="preserve"><value>攝影機播放</value></data>
+  <data name="ClientProfileValueOverlayShow" xml:space="preserve"><value>顯示為覆蓋</value></data>
+  <data name="ClientProfileValueVideoPlayerHardwareDecodingModeOff" xml:space="preserve"><value>關閉</value></data>
+  <data name="ClientProfileSectionAdvancedHeader" xml:space="preserve"><value>{ClientName} 設定檔設定 - 進階</value></data>
+  <data name="ClientProfileValuePermitted" xml:space="preserve"><value>允許</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackBoundingBoxes" xml:space="preserve"><value>週框方塊</value></data>
+  <data name="ClientProfileValueHideMouse30Seconds" xml:space="preserve"><value>30 秒後</value></data>
+  <data name="ClientProfileSettingGeneralServerErrors" xml:space="preserve"><value>伺服器錯誤訊息</value></data>
+  <data name="ClientProfileSettingCameraStoppedMessage" xml:space="preserve"><value>即時視訊已停止訊息</value></data>
+  <data name="ClientProfileSettingExportMergeQualityOptionHighest" xml:space="preserve"><value>最高</value></data>
+  <data name="ClientProfileSectionAlarmManagerHeader" xml:space="preserve"><value>{ClientName} 設定檔設定 - 警示管理員</value></data>
+  <data name="ClientProfileSettingFunctionsLiveOverlayButtons" xml:space="preserve"><value>覆蓋按鈕</value></data>
+  <data name="ClientProfileSettingSequenceExplorerBookmarkToolbarButton" xml:space="preserve"><value>書籤工具列按鈕</value></data>
+  <data name="ClientProfileValueClickToCenter" xml:space="preserve"><value>按一下居中</value></data>
+  <data name="ClientProfileValueAvailable" xml:space="preserve"><value>可用</value></data>
+  <data name="ClientProfileSectionPlaybackName" xml:space="preserve"><value>播放</value></data>
+  <data name="ClientProfileValuePixelThree" xml:space="preserve"><value>3 個像素</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Minutes_120" xml:space="preserve"><value>2 小時</value></data>
+  <data name="ClientProfileSettingGisMapOpenStreetMapGeographicLayer" xml:space="preserve"><value>Map 服務</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Minutes_30" xml:space="preserve"><value>30 分</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Minutes_10" xml:space="preserve"><value>10 分鐘</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Minutes_60" xml:space="preserve"><value>1 小時</value></data>
+  <data name="ClientProfileSectionAccessControlName" xml:space="preserve"><value>存取控制</value></data>
+  <data name="ClientProfileValueDoNotInclude" xml:space="preserve"><value>不包含</value></data>
+  <data name="ClientProfileSettingGeneralDefaultPtzPointAndClickMode" xml:space="preserve"><value>預設 PTZ 點選模式</value></data>
+  <data name="ClientProfileSettingAdvancedVideoPlayerDiagnosticLevel" xml:space="preserve"><value>視訊診斷覆蓋</value></data>
+  <data name="ClientProfileWarningGisMap" xml:space="preserve"><value>您即將選取的地圖服務提供者可能會收集個人資料。如果您受歐盟一般資料保護規定 (「GDPR」)的制約，並繼續執行，系統可能不符合 GDPR。
+
+{0} 建議您使用本機安裝 OpenStreetMap 伺服器。
+
+以上僅為建議，您需自行承擔責任並遵循適用的隱私權法律。
+
+請瀏覽我們的《GDPR 隱私權指南》以瞭解在使用 {1} 時如何處理 GDPR 合規性：
+
+{2}
+
+繼續使用選取的地圖服務提供者？</value></data>
+  <data name="ClientProfileSectionTimelineName" xml:space="preserve"><value>時間軸</value></data>
+  <data name="ClientProfileSettingFunctionsLivePrintAvailability" xml:space="preserve"><value>列印功能</value></data>
+  <data name="ClientProfileSettingExportGeneralSeperator" xml:space="preserve"><value>一般</value></data>
+  <data name="ClientProfileValueToDiskMediaBurner" xml:space="preserve"><value>至光碟與媒體燒錄器</value></data>
+  <data name="ClientProfileSettingPanesSetupMIPPlugin" xml:space="preserve"><value>MIP 外掛程式</value></data>
+  <data name="ClientProfileSettingExportMergeMediaPlayerFormat" xml:space="preserve"><value>可用性</value></data>
+  <data name="ClientProfileSettingTimelineOutgoingAudio" xml:space="preserve"><value>傳出語音</value></data>
+  <data name="ClientProfileSettingExportMergeResolutionOptionFullHD" xml:space="preserve"><value>FullHD (1920x1080) (預設)</value></data>
+  <data name="ClientProfileSettingPanesSetupOverlayButtons" xml:space="preserve"><value>快捷按鈕窗格</value></data>
+  <data name="ClientProfileValuePixelTwo" xml:space="preserve"><value>2 個像素</value></data>
+  <data name="ClientProfileValuePixelOne" xml:space="preserve"><value>1 個像素</value></data>
+  <data name="ClientProfileSettingPanesPlaybackAudio" xml:space="preserve"><value>語音窗格</value></data>
+  <data name="ClientProfileSettingPanesPlaybackViews" xml:space="preserve"><value>檢視窗格</value></data>
+  <data name="ClientProfileSettingPanesPlaybackPrint" xml:space="preserve"><value>列印功能</value></data>
+  <data name="ClientProfileSettingPanesLiveTab" xml:space="preserve"><value>即時模式</value></data>
+  <data name="ClientProfileSettingPanesLivePtz" xml:space="preserve"><value>PTZ 窗格</value></data>
+  <data name="ClientProfileSettingApplicationOnlineHelp" xml:space="preserve"><value>線上說明</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerGlobalCommentsContent" xml:space="preserve"><value>專案備註</value></data>
+  <data name="ClientProfileSettingSequenceExplorerExportToolbarButton" xml:space="preserve"><value>匯出工具列按鈕</value></data>
+  <data name="ClientProfileValueTimelineHideForNormalViewsTimeout30Seconds" xml:space="preserve"><value>30 秒後</value></data>
+  <data name="ClientProfileSettingGeneralViewGridSpacer" xml:space="preserve"><value>檢視網格空格字元</value></data>
+  <data name="ClientProfileSettingGeneralCameraErrors" xml:space="preserve"><value>攝影機錯誤訊息</value></data>
+  <data name="ClientProfileSettingSnapshotCameraNameOverlay" xml:space="preserve"><value>快照上的攝影機名稱</value></data>
+  <data name="ClientProfileSettingApplicationHideMousePointerTimeout" xml:space="preserve"><value>隱藏滑鼠指標</value></data>
+  <data name="ClientProfileSectionSetupHeader" xml:space="preserve"><value>{ClientName} 設定檔設定 - 設定</value></data>
+  <data name="ClientProfileSectionExportName" xml:space="preserve"><value>匯出</value></data>
+  <data name="ClientProfileSectionAccessControlHeader" xml:space="preserve"><value>{ClientName} 設定檔設定 - 存取控制</value></data>
+  <data name="ClientProfileValueGisMapCacheCleanWhenFileNotUsed" xml:space="preserve"><value>30 天未使用時</value></data>
+  <data name="ClientProfileSettingPanesPlaybackMIPPlugin" xml:space="preserve"><value>MIP 外掛程式</value></data>
+  <data name="ClientProfileValueFullScreen" xml:space="preserve"><value>全螢幕</value></data>
+  <data name="ClientProfileSettingExportStillImageSeperator" xml:space="preserve"><value>靜態影像</value></data>
+  <data name="ClientProfileValueVideoBufferMedium" xml:space="preserve"><value>中 – (½ 秒)</value></data>
+  <data name="ClientProfileSettingAdvancedAdaptiveStreaming" xml:space="preserve"><value>彈性資料流</value></data>
+  <data name="ClientProfileSettingGisMapGoogleMapPrivateKey" xml:space="preserve"><value>Google Maps 的私人金鑰</value></data>
+  <data name="ClientProfileValue_CentralizedSearchMaxDeviceCount_Count_Unlimited" xml:space="preserve"><value>不受限制</value></data>
+  <data name="ClientProfileSettingPanesPlaybackTimeNavigation" xml:space="preserve"><value>時間導覽窗格</value></data>
+  <data name="ClientProfileValueContentAdaptiveVerticalTemporal" xml:space="preserve"><value>內容調適</value></data>
+  <data name="ClientProfileSettingExportVideoClipDigitalZoom" xml:space="preserve"><value>數位變焦匯出</value></data>
+  <data name="ClientProfileSettingShowAccessRequestNotifications" xml:space="preserve"><value>顯示存取要求通知</value></data>
+  <data name="ClientProfileSettingFunctionsLiveBoundingBoxes" xml:space="preserve"><value>週框方塊</value></data>
+  <data name="ClientProfileSettingApplicationJoystickSetup" xml:space="preserve"><value>操縱桿設定</value></data>
+  <data name="ClientProfileSettingPanesLiveOutputs" xml:space="preserve"><value>輸出窗格</value></data>
+  <data name="ClientProfileSettingExportVideoClipTextsContent" xml:space="preserve"><value>視訊文字</value></data>
+  <data name="ClientProfileSettingPanesLiveSystemOverview" xml:space="preserve"><value>攝影機窗格</value></data>
+  <data name="ClientProfileValueDoNotSkipGaps" xml:space="preserve"><value>不跳過空白部份</value></data>
+  <data name="ClientProfileSettingExportStillImageDigitalZoom" xml:space="preserve"><value>數位變焦匯出</value></data>
+  <data name="ClientProfileSettingPanesLiveMIPPlugin" xml:space="preserve"><value>MIP 外掛程式</value></data>
+  <data name="ClientProfileValueTimelineHideForNormalViewsTimeout5Seconds" xml:space="preserve"><value>5 秒後</value></data>
+  <data name="ClientProfileValueMaximizeNormal" xml:space="preserve"><value>最大化為一般視窗</value></data>
+  <data name="ClientProfileSettingApplicationVideoTutorials" xml:space="preserve"><value>視訊教學</value></data>
+  <data name="ClientProfileSettingGeneralTitleBar" xml:space="preserve"><value>攝影機標題列的預設值</value></data>
+  <data name="ClientProfileValuePixelFour" xml:space="preserve"><value>4 個像素</value></data>
+  <data name="ClientProfileSettingGisMapBingMapKey" xml:space="preserve"><value>Bing Maps 金鑰</value></data>
+  <data name="ClientProfileSettingTimelineAllCamerasTimeline" xml:space="preserve"><value>所有攝影機時間軸</value></data>
+  <data name="ClientProfileSettingFunctionsSetupOverlayButtons" xml:space="preserve"><value>編輯覆蓋按鈕</value></data>
+  <data name="ClientProfileSettingMapEditGisMap" xml:space="preserve"><value>編輯智慧地圖</value></data>
+  <data name="ClientProfileSettingExportMergeVideoClipType" xml:space="preserve"><value>選取內容</value></data>
+  <data name="ClientProfileSettingApplicationNewSCVersionText" xml:space="preserve"><value>新版本 - 其他訊息</value></data>
+  <data name="ClientProfileSettingAdvancedDeinterlacing" xml:space="preserve"><value>去交錯</value></data>
+  <data name="ClientProfileValueHideMouseDisabled" xml:space="preserve"><value>永不</value></data>
+  <data name="ClientProfileValueInclude" xml:space="preserve"><value>包含</value></data>
+  <data name="ClientProfileValueMaximized" xml:space="preserve"><value>最大化</value></data>
+  <data name="ClientProfileValueOptional" xml:space="preserve"><value>選項</value></data>
+  <data name="ClientProfileSettingSnapshotAvailable" xml:space="preserve"><value>快照</value></data>
+  <data name="ClientProfileValueTimeZoneLocalMachine" xml:space="preserve"><value>本地</value></data>
+  <data name="ClientProfileSettingSnapshotTimeStampOverlay" xml:space="preserve"><value>快照時間戳記</value></data>
+  <data name="ClientProfileSectionGisMapName" xml:space="preserve"><value>智慧地圖</value></data>
+  <data name="ClientProfileSettingApplicationLiftPrivacyMaskTimeout" xml:space="preserve"><value>移除隱私遮蔽時間結束</value></data>
+  <data name="ClientProfileSettingCentralizedSearchTab" xml:space="preserve"><value>搜尋標籤</value></data>
+  <data name="ClientProfileSettingApplicationInactivityTimeout" xml:space="preserve"><value>非作用中逾時 (分鐘)</value></data>
+  <data name="ClientProfileSettingPanesPlaybackExport" xml:space="preserve"><value>匯出功能</value></data>
+  <data name="ClientProfileSettingGisMapGoogleMapClientId" xml:space="preserve"><value>Google Maps 的用戶端 ID</value></data>
+  <data name="ClientProfileSettingTimelineSkipGaps" xml:space="preserve"><value>播放</value></data>
+  <data name="ClientProfileValueYes" xml:space="preserve"><value>是</value></data>
+  <data name="ClientProfileValueAsk" xml:space="preserve"><value>詢問</value></data>
+  <data name="ClientProfileSectionTimelineHeader" xml:space="preserve"><value>{ClientName} 設定檔設定 - 時間軸</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerLockForReExport" xml:space="preserve"><value>防止重複匯出</value></data>
+  <data name="ClientProfileValueLogoBlackImage" xml:space="preserve"><value>黑色影像</value></data>
+  <data name="ClientProfileSettingAdvancedTimeZoneCustom" xml:space="preserve"><value>自訂時區</value></data>
+  <data name="ClientProfileValueTimelineHideForSmartWallViewsTimeout10Seconds" xml:space="preserve"><value>10 秒後</value></data>
+  <data name="ClientProfileSettingFunctionsSetupEnableVideoBufferingOption" xml:space="preserve"><value>編輯即時視訊緩衝</value></data>
+  <data name="ClientProfileSettingExportVideoClipOutputType" xml:space="preserve"><value>選取格式</value></data>
+  <data name="ClientProfileValueEncryptStregthAES128" xml:space="preserve"><value>128 位元 AES</value></data>
+  <data name="ClientProfileValueEncryptStregthAES192" xml:space="preserve"><value>192 位元 AES</value></data>
+  <data name="ClientProfileValueEncryptStregthAES256" xml:space="preserve"><value>256 位元 AES</value></data>
+  <data name="ClientProfileSettingExportMergePreventUpscaling" xml:space="preserve"><value>防止升級</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerIncludePlayer" xml:space="preserve"><value>包含 {BrandName} {ClientName} – {ClientPlayerName}</value></data>
+  <data name="ClientProfileSettingAlarmManagerShowAlarmDesktopNotifications" xml:space="preserve"><value>顯示警示的桌面通知</value></data>
+  <data name="ClientProfileSettingExportPrivacyMask" xml:space="preserve"><value>隱私遮蔽</value></data>
+  <data name="ClientProfileSectionGeneralName" xml:space="preserve"><value>一般</value></data>
+  <data name="ClientProfileValueTimelineHideForSmartWallViewsTimeout20Seconds" xml:space="preserve"><value>20 秒後</value></data>
+  <data name="ClientProfileSettingExportVideoClipSeperator" xml:space="preserve"><value>媒體播放器格式 - 單個檔案</value></data>
+  <data name="ClientProfileSettingPanesSetupViews" xml:space="preserve"><value>檢視窗格</value></data>
+  <data name="ClientProfileValueBobBottom" xml:space="preserve"><value>垂直延展底部域</value></data>
+  <data name="ClientProfileValueEnabled" xml:space="preserve"><value>已启用</value></data>
+  <data name="ClientProfileValueTimelineHideForSmartWallViewsTimeoutDisabled" xml:space="preserve"><value>永不</value></data>
+  <data name="ClientProfileSettingGisMapCacheCleanUp" xml:space="preserve"><value>移除快取的智慧地圖檔案</value></data>
+  <data name="ClientProfileValueAudioVideo" xml:space="preserve"><value>語音與視訊</value></data>
+  <data name="ClientProfileValueHideMouse10Seconds" xml:space="preserve"><value>10 秒後</value></data>
+  <data name="ClientProfileValueTimeZoneCustom" xml:space="preserve"><value>自訂時區</value></data>
+  <data name="ClientProfileSettingTimelineMipMarker" xml:space="preserve"><value>其他標記</value></data>
+  <data name="ClientProfileValueOverlayBlackImage" xml:space="preserve"><value>含覆蓋的黑色影像</value></data>
+  <data name="ClientProfileSettingExportMergeMediaSequenceTypeOptionExportAdaptive" xml:space="preserve"><value>自適應視圖</value></data>
+  <data name="ClientProfileValueHideMouse20Seconds" xml:space="preserve"><value>20 秒後</value></data>
+  <data name="ClientProfileSettingTimelineMipData" xml:space="preserve"><value>其他資料</value></data>
+  <data name="ClientProfileValueToMediaBurner" xml:space="preserve"><value>至媒體燒錄器</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackPrintReportUserInformation" xml:space="preserve"><value>列印報告 – 包含使用者資訊</value></data>
+  <data name="ClientProfileValueTimelineHideForNormalViewsTimeoutDisabled" xml:space="preserve"><value>永不</value></data>
+  <data name="ClientProfileValueVideoBufferStandard" xml:space="preserve"><value>標準</value></data>
+  <data name="ClientProfileSettingApplicationKeyboardSetup" xml:space="preserve"><value>鍵盤設定</value></data>
+  <data name="ClientProfileValueVideo" xml:space="preserve"><value>僅視訊</value></data>
+  <data name="ClientProfileValueAudio" xml:space="preserve"><value>僅語音</value></data>
+  <data name="ClientProfileValueVideoPlayerHardwareDecodingModeAuto" xml:space="preserve"><value>自動</value></data>
+  <data name="ClientProfileSettingAdvancedTimeZone" xml:space="preserve"><value>時區</value></data>
+  <data name="ClientProfileSettingExportMergeFormatOptionMP4" xml:space="preserve"><value>MP4 格式</value></data>
+  <data name="ClientProfileSettingExportMergeFormatOptionMKV" xml:space="preserve"><value>MKV 格式</value></data>
+  <data name="ClientProfileSettingApplicationMinimizeButton" xml:space="preserve"><value>最小化按鈕</value></data>
+  <data name="ClientProfileValueTimelineHideForSmartWallViewsTimeout5Seconds" xml:space="preserve"><value>5 秒後</value></data>
+  <data name="ClientProfileSettingExportMergeIncludeTimestamps" xml:space="preserve"><value>包含時間戳記</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerGlobalCommentsMode" xml:space="preserve"><value>管理專案備註</value></data>
+  <data name="ClientProfileValueNo" xml:space="preserve"><value>否</value></data>
+  <data name="ClientProfileSettingExportMergeFramesPerSecondOption30" xml:space="preserve"><value>30 FPS (預設)</value></data>
+  <data name="ClientProfileSettingPanesSetupProperties" xml:space="preserve"><value>屬性窗格</value></data>
+  <data name="ClientProfileSettingCentralizedSearchMaxDeviceCount" xml:space="preserve"><value>搜尋時允許的攝影機</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerEncryptPassword" xml:space="preserve"><value>密碼</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerEncryptDatabases" xml:space="preserve"><value>受密碼保護的資料</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackPrintReportHeadline" xml:space="preserve"><value>列印報告 – 標題模式</value></data>
+  <data name="ClientProfileValueHideMouse5Seconds" xml:space="preserve"><value>5 秒後</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerFormat" xml:space="preserve"><value>可用性</value></data>
+  <data name="ClientProfileSectionExportHeader" xml:space="preserve"><value>{ClientName} 設定檔設定 - 匯出</value></data>
+  <data name="ClientProfileValueGisMapCacheCleanWhenScClose" xml:space="preserve"><value>結束時</value></data>
+  <data name="ClientProfileSectionLiveName" xml:space="preserve"><value>即時</value></data>
+  <data name="ClientProfileValueBookmarkQuick" xml:space="preserve"><value>快速書籤</value></data>
+  <data name="ClientProfileValueVideoBufferMaximum" xml:space="preserve"><value>最大 – (2 秒)</value></data>
+  <data name="ClientProfileSettingExportMergeFramesPerSecond" xml:space="preserve"><value>每秒影格數 (FPS)</value></data>
+  <data name="ClientProfileSettingExportMergeQuality" xml:space="preserve"><value>壓縮品質</value></data>
+  <data name="ClientProfileValueRequired" xml:space="preserve"><value>必須</value></data>
+  <data name="ClientProfileSettingApplicationNewSCVersionWindow" xml:space="preserve"><value>新版本的伺服器訊息</value></data>
+  <data name="ClientProfileSettingTimelineIncomingAudio" xml:space="preserve"><value>傳入語音</value></data>
+  <data name="ClientProfileSettingAdvancedMaxDecodingThreads" xml:space="preserve"><value>最大解碼執行緒</value></data>
+  <data name="ClientProfileValueLogoMilestone" xml:space="preserve"><value>{Company} 標誌</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackExportPath" xml:space="preserve"><value>匯出路徑</value></data>
+  <data name="ClientProfileSettingApplicationTransactTab" xml:space="preserve"><value>Transact 標籤</value></data>
+  <data name="ClientProfileSettingSnapshotPath" xml:space="preserve"><value>快照路徑</value></data>
+  <data name="ClientProfileSettingDefaultFunctionsPlaybackPrintReportHeadlineText" xml:space="preserve"><value>{BrandName} {ClientName} 監視報告</value></data>
+  <data name="ClientProfileSettingGisMapOpenStreetMapAlternativeServer" xml:space="preserve"><value>OpenStreetMap 伺服器</value></data>
+  <data name="ClientProfileSettingExportVideoClipTextsMode" xml:space="preserve"><value>管理視訊文字</value></data>
+  <data name="ClientProfileSettingExportMergeResolution" xml:space="preserve"><value>分辨率</value></data>
+  <data name="ClientProfileSettingPanesPlaybackCreateBookmark" xml:space="preserve"><value>書籤窗格</value></data>
+  <data name="ClientProfileSettingApplicationOptionsDialogButton" xml:space="preserve"><value>設定對話方塊</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerSignData" xml:space="preserve"><value>包含數位簽署</value></data>
+  <data name="ClientProfileValueVideoPlayerDiagnosticLevel3" xml:space="preserve"><value>層級 3</value></data>
+  <data name="ClientProfileValueVideoPlayerDiagnosticLevel2" xml:space="preserve"><value>層級 2</value></data>
+  <data name="ClientProfileValueVideoPlayerDiagnosticLevel1" xml:space="preserve"><value>層級 1</value></data>
+  <data name="ClientProfileValueVideoPlayerDiagnosticLevel0" xml:space="preserve"><value>隱藏</value></data>
+  <data name="ClientProfileSettingGeneralEmptySpaces" xml:space="preserve"><value>在空白檢視位置中顯示</value></data>
+  <data name="ClientProfileValueVideoBufferMinimum" xml:space="preserve"><value>無</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackPrintReportCopyRights" xml:space="preserve"><value>列印報告 – 包含著作權資訊</value></data>
+  <data name="ClientProfileSettingGisMapGoogleMapSigningSecret" xml:space="preserve"><value>Google Maps 的 URL 簽署密碼</value></data>
+  <data name="ClientProfileValueMaximizeFullscreen" xml:space="preserve"><value>最大化為全螢幕</value></data>
+  <data name="ClientProfileSettingExportVideoClipFormat" xml:space="preserve"><value>可用性</value></data>
+  <data name="ClientProfileValueTimelineHideForNormalViewsTimeout20Seconds" xml:space="preserve"><value>20 秒後</value></data>
+  <data name="ClientProfileValueWindow" xml:space="preserve"><value>視窗</value></data>
+  <data name="ClientProfileSettingExportMergeFormat" xml:space="preserve"><value>格式</value></data>
+  <data name="ClientProfileSettingApplicationStartView" xml:space="preserve"><value>還原視窗和索引標籤</value></data>
+  <data name="ClientProfileSettingApplicationStartMode" xml:space="preserve"><value>主視窗的啟動模式</value></data>
+  <data name="ClientProfileSettingExportStillImageTimestamp" xml:space="preserve"><value>包含時間戳記</value></data>
+  <data name="ClientProfileSettingExportVideoClipTimestamp" xml:space="preserve"><value>包含時間戳記</value></data>
+  <data name="ClientProfileValueTimelineHideForNormalViewsTimeout10Seconds" xml:space="preserve"><value>10 秒後</value></data>
+  <data name="ClientProfileSettingMapEditMaps" xml:space="preserve"><value>編輯地圖</value></data>
+  <data name="ClientProfileValueToDisk" xml:space="preserve"><value>至光碟</value></data>
+  <data name="ClientProfileSettingApplicationExitButton" xml:space="preserve"><value>結束按鈕</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerEncryptionStrength" xml:space="preserve"><value>加密強度</value></data>
+  <data name="ClientProfileSettingExportMergeQualityOptionLowest" xml:space="preserve"><value>最低</value></data>
+  <data name="ClientProfileSettingApplicationMaximizeButton" xml:space="preserve"><value>最大化按鈕</value></data>
+  <data name="ClientProfileSettingFunctionsLiveBookmarkMode" xml:space="preserve"><value>書籤功能</value></data>
+  <data name="ClientProfileSettingExportMergeQualityOptionMedium" xml:space="preserve"><value>中 (預設)</value></data>
+  <data name="ClientProfileSettingViewsCustomLogoInEmptySpaces" xml:space="preserve"><value>自訂標誌</value></data>
+  <data name="ClientProfileValueTimeZoneMasterServer" xml:space="preserve"><value>伺服器時區</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackBookmarkMode" xml:space="preserve"><value>書籤功能</value></data>
+  <data name="ClientProfileValueGisMapCacheCleanWhenNever" xml:space="preserve"><value>永不</value></data>
+  <data name="ClientProfileSectionGisMapHeader" xml:space="preserve"><value>{ClientName} 設定檔設定 - 智慧地圖</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackExportPathCustom" xml:space="preserve"><value>匯出路徑 – 自訂</value></data>
+  <data name="ClientProfileValueVirtualJoystick" xml:space="preserve"><value>虛擬操縱桿</value></data>
+  </root>

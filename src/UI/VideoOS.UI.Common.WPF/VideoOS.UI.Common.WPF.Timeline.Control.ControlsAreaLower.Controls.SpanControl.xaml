@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaLower.Controls.SpanControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" xmlns:converters="clr-namespace:VideoOS.UI.Common.WPF.Utils.Converters" xmlns:resources="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaLower.Controls.resources" x:Name="_root" xmlns:controls1="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaLower.Controls">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="{Binding ElementName=_spanSlider, Path=AreTrackAndThumbVisible, Converter={converters:BoolToGridLengthConverter TrueResult=158, FalseResult=Auto}}" />
+    </Grid.ColumnDefinitions>
+    <controls:VideoOSTextBlockLabel Name="_spanTextBlock" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" />
+    <controls:VideoOSSliderHorizontal Name="_spanSlider" Grid.Column="1" Margin="8,0,0,0" VerticalAlignment="Center" IsSnapToTickEnabled="True" TickFrequency="1" SmallChange="1" LargeChange="1" TrackAppearance="Neutral" TrackAndThumbToolTip="{x:Static resources:Strings.TooltipSpanSlider}" SmallDecreaseButtonToolTip="{x:Static resources:Strings.TooltipSpanSliderDecreaseButton}" SmallIncreaseButtonToolTip="{x:Static resources:Strings.TooltipSpanSliderIncreaseButton}" AreTrackAndThumbVisible="{Binding ElementName=_root, Path=ActualWidth, Converter={converters:DoubleToBoolConverter MinMatchValue=250}}" SmallDecreaseButtonIconSource="{controls:VideoOSIconBuiltInSource Minus}" SmallIncreaseButtonIconSource="{controls:VideoOSIconBuiltInSource Plus}" ValueChanged="_spanSlider_ValueChanged" />
+  </Grid>
+</UserControl>

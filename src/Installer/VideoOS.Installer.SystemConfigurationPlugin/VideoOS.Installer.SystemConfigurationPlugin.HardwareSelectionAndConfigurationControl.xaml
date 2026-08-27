@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.SystemConfigurationPlugin.HardwareSelectionAndConfigurationControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Installer.SystemConfigurationPlugin">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../../ResourceDictionary.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <StackPanel Name="selectionPanel">
+    <Grid Row="0" Height="26px">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid Width="26px" Visibility="{Binding EditMode, Converter={StaticResource boolToVisConverter}}">
+        <Button Grid.Column="0" Height="14" Width="14" VerticalContentAlignment="Center" Click="Button_Click">
+          <Image>
+            <Image.Source>
+              <MultiBinding Converter="{StaticResource expandedImageValueConverter}">
+                <Binding Path="ExpandComponents" />
+                <Binding Source="{StaticResource CollapseImg}" />
+                <Binding Source="{StaticResource ExpandImg}" />
+              </MultiBinding>
+            </Image.Source>
+          </Image>
+        </Button>
+      </Grid>
+      <local:HardwareErrorComponentControl Margin="5,0,0,0" Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center" Visibility="{Binding Error, Converter={StaticResource boolToVisConverter}}" />
+      <local:HardwareComponentControl Margin="5,0,0,0" Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center" Visibility="{Binding Error, Converter={StaticResource inverseBoolToVisConverter}}" />
+    </Grid>
+  </StackPanel>
+</UserControl>

@@ -1,0 +1,3 @@
+<Project>
+  <!-- Empty Directory.Build.props to isolate Milestone_Test_App from root .NET Framework properties -->
+</Project>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.ServerConfigurator.CertificateConfigurator.UI.ArcControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.ServerConfigurator.CertificateConfigurator.UI" x:Name="ControlRoot">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <local:ArcConverter x:Key="ArcConverter" />
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid>
+    <Path Stroke="{Binding Path=Brush, ElementName=ControlRoot}" StrokeThickness="{Binding Path=StrokeThickness, ElementName=ControlRoot}">
+      <Path.Data>
+        <PathGeometry>
+          <PathFigure>
+            <PathFigure.StartPoint>
+              <MultiBinding Converter="{StaticResource ArcConverter}" ConverterParameter="PointFromAngle">
+                <Binding Path="Angle1" ElementName="ControlRoot" />
+                <Binding Path="Width" ElementName="ControlRoot" />
+                <Binding Path="Height" ElementName="ControlRoot" />
+                <Binding Path="StrokeThickness" ElementName="ControlRoot" />
+              </MultiBinding>
+            </PathFigure.StartPoint>
+            <ArcSegment x:Name="Arc" SweepDirection="Clockwise">
+              <ArcSegment.Point>
+                <MultiBinding Converter="{StaticResource ArcConverter}" ConverterParameter="PointFromAngle">
+                  <Binding Path="Angle2" ElementName="ControlRoot" />
+                  <Binding Path="Width" ElementName="ControlRoot" />
+                  <Binding Path="Height" ElementName="ControlRoot" />
+                  <Binding Path="StrokeThickness" ElementName="ControlRoot" />
+                </MultiBinding>
+              </ArcSegment.Point>
+              <ArcSegment.Size>
+                <MultiBinding Converter="{StaticResource ArcConverter}" ConverterParameter="ArcSize">
+                  <Binding Path="Width" ElementName="ControlRoot" />
+                  <Binding Path="Height" ElementName="ControlRoot" />
+                  <Binding Path="StrokeThickness" ElementName="ControlRoot" />
+                </MultiBinding>
+              </ArcSegment.Size>
+              <ArcSegment.IsLargeArc>
+                <MultiBinding Converter="{StaticResource ArcConverter}" ConverterParameter="IsLargeArc">
+                  <Binding Path="Angle1" ElementName="ControlRoot" />
+                  <Binding Path="Angle2" ElementName="ControlRoot" />
+                </MultiBinding>
+              </ArcSegment.IsLargeArc>
+            </ArcSegment>
+          </PathFigure>
+        </PathGeometry>
+      </Path.Data>
+    </Path>
+  </Grid>
+</UserControl>

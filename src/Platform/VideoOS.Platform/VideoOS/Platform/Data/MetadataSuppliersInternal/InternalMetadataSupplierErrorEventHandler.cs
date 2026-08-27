@@ -1,0 +1,3 @@
+﻿namespace VideoOS.Platform.Data.MetadataSuppliersInternal;
+
+public delegate void InternalMetadataSupplierErrorEventHandler(object sender, InternalMetadataSupplierErrorEventArgs e);

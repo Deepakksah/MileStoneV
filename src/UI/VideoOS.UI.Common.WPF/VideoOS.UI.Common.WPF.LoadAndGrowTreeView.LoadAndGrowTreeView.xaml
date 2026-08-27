@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TreeView x:Class="VideoOS.UI.Common.WPF.LoadAndGrowTreeView.LoadAndGrowTreeView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:VideoOS.UI.Common.WPF.LoadAndGrowTreeView" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" IsTabStop="True" TreeViewItem.Selected="ItemSelected" TreeViewItem.Expanded="ItemHasExpanded" TreeViewItem.Collapsed="ItemHasCollapsed" PreviewMouseLeftButtonDown="LoadAndGrowTreeView_PreviewMouseLeftButtonDown" PreviewMouseMove="LoadAndGrowTreeView_PreviewMouseMove" PreviewMouseLeftButtonUp="LoadAndGrowTreeView_PreviewMouseLeftButtonUp" SelectedItemChanged="TreeView_SelectedItemChanged">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <Style x:Key="TreeViewItemStyle" TargetType="{x:Type TreeViewItem}">
+        <Setter Property="TreeViewItem.IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+        <Setter Property="TreeViewItem.IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+        <Setter Property="FrameworkElement.ContextMenu" Value="{Binding ContextMenu, Mode=OneWay}" />
+        <Setter Property="KeyboardNavigation.AcceptsReturn" Value="True" />
+        <Setter Property="local:VirtualToggleButton.IsVirtualToggleButton" Value="{Binding CanBeChecked}" />
+        <Setter Property="local:VirtualToggleButton.IsChecked" Value="{Binding IsChecked}" />
+        <Setter Property="Template" Value="{Binding Path=ItemContainerTemplate, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:LoadAndGrowTreeView}}}" />
+        <EventSetter Event="RequestBringIntoView" Handler="TreeViewItem_RequestBringIntoView" />
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <ItemsControl.ItemTemplate>
+    <HierarchicalDataTemplate ItemsSource="{Binding Path=SubItems}">
+      <ContentPresenter Content="{Binding}" ContentTemplate="{Binding Path=HeaderTemplate, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:LoadAndGrowTreeView}}}" />
+    </HierarchicalDataTemplate>
+  </ItemsControl.ItemTemplate>
+</TreeView>

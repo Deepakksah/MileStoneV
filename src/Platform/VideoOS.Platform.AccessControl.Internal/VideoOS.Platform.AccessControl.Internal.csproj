@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Platform.AccessControl.Internal</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.AccessPoint.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.Command.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.DoorClosed.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.DoorClosedLocked.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.DoorController.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.DoorControllerConnected.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.DoorControllerDisconnected.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.DoorControllerUnknown.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.DoorError.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.DoorOpen.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.DoorOpenLocked.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.DoorUnknown.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.None.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.Server.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.ServerConnected.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.ServerDisconnected.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.ServerUnknown.ico" />
+    <None Remove="VideoOS.Platform.AccessControl.Internal.Resources.Unspecified.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.AccessPoint.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.AccessPoint.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.Command.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.Command.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.DoorClosed.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.DoorClosed.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.DoorClosedLocked.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.DoorClosedLocked.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.DoorController.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.DoorController.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.DoorControllerConnected.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.DoorControllerConnected.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.DoorControllerDisconnected.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.DoorControllerDisconnected.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.DoorControllerUnknown.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.DoorControllerUnknown.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.DoorError.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.DoorError.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.DoorOpen.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.DoorOpen.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.DoorOpenLocked.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.DoorOpenLocked.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.DoorUnknown.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.DoorUnknown.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.None.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.None.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.Server.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.Server.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.ServerConnected.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.ServerConnected.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.ServerDisconnected.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.ServerDisconnected.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.ServerUnknown.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.ServerUnknown.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.AccessControl.Internal.Resources.Unspecified.ico" LogicalName="VideoOS.Platform.AccessControl.Internal.Resources.Unspecified.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    
+    <Reference Include="System.Core" />
+    
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="VideoOS.Platform\VideoOS.Platform.csproj" />
+    <ProjectReference Include="VideoOS.Platform.AccessControl\VideoOS.Platform.AccessControl.csproj" />
+  </ItemGroup>
+</Project>

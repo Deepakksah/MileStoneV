@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="MailMediaErrorInConfiguration" xml:space="preserve"><value>&lt;P&gt;Error in configuration file.&lt;/P&gt;</value></data>
+  <data name="MailMediaErrorCodecDoesNotSupportThisMedia" xml:space="preserve"><value>&lt;P&gt;The selected codec is not supported. Select a valid codec.&lt;/P&gt;</value></data>
+  <data name="MailMediaErrorNoImagesAvailable" xml:space="preserve"><value>&lt;P&gt;Error getting pictures. The device might not be recording.&lt;/P&gt;</value></data>
+  <data name="Undefined" xml:space="preserve"><value>Undefined</value></data>
+  <data name="MailMediaErrorNoConfiguration" xml:space="preserve"><value>&lt;P&gt;Could not find configuration file.&lt;/P&gt;</value></data>
+  <data name="MailMediaErrorUnknownError" xml:space="preserve"><value>&lt;P&gt;System error. Consult debug log file.&lt;/P&gt;</value></data>
+  <data name="Mail1" xml:space="preserve"><value>&lt;P&gt;This e-mail notification was triggered by &lt;STRONG&gt;[{0}]&lt;/STRONG&gt;&lt;/P&gt;</value></data>
+  <data name="Mail2" xml:space="preserve"><value>&lt;P&gt;Attachments are from &lt;STRONG&gt;[{0}]&lt;/STRONG&gt;&lt;/P&gt;</value></data>
+  <data name="Mail3" xml:space="preserve"><value>&lt;P&gt;Notification message:&lt;BR/&gt;[{0}]&lt;/P&gt;</value></data>
+  <data name="MailMediaErrorNoCodecSelected" xml:space="preserve"><value>&lt;P&gt;Error generating AVI. No codec is selected.&lt;/P&gt;</value></data>
+  <data name="MailMediaErrorConnectionBroken" xml:space="preserve"><value>&lt;P&gt;Cannot retrieve pictures. Unable to connect to the recording server.&lt;/P&gt;</value></data>
+  </root>

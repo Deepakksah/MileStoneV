@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="CameraGroups" xml:space="preserve"><value>Camera groups</value></data>
+  <data name="EdgeDevice" xml:space="preserve"><value>{0} (Edge)</value></data>
+  <data name="AllHardware" xml:space="preserve"><value>All hardware ({0})</value></data>
+  <data name="GenericEvents" xml:space="preserve"><value>Generic events</value></data>
+  <data name="AllTransactionSources" xml:space="preserve"><value>All transaction sources ({0})</value></data>
+  <data name="AllEvents" xml:space="preserve"><value>All events ({0})</value></data>
+  <data name="AllCameras" xml:space="preserve"><value>All cameras ({0})</value></data>
+  <data name="AllAlerts" xml:space="preserve"><value>All alerts ({0})</value></data>
+  <data name="OutputGroups" xml:space="preserve"><value>Output groups</value></data>
+  <data name="AllMatrix" xml:space="preserve"><value>All Matrix ({0})</value></data>
+  <data name="AllInputs" xml:space="preserve"><value>All inputs ({0})</value></data>
+  <data name="AllMetadataDevices" xml:space="preserve"><value>All metadata devices ({0})</value></data>
+  <data name="EventGroups" xml:space="preserve"><value>Event groups</value></data>
+  <data name="AllOutputs" xml:space="preserve"><value>All outputs ({0})</value></data>
+  <data name="AllMicrophones" xml:space="preserve"><value>All microphones ({0})</value></data>
+  <data name="AllSpeakers" xml:space="preserve"><value>All speakers ({0})</value></data>
+  <data name="MicrophoneGroups" xml:space="preserve"><value>Microphone groups</value></data>
+  <data name="InputGroups" xml:space="preserve"><value>Input groups</value></data>
+  <data name="AlertGroups" xml:space="preserve"><value>Alert groups</value></data>
+  <data name="MetadataDeviceGroups" xml:space="preserve"><value>Metadata device groups</value></data>
+  <data name="SpeakerGroups" xml:space="preserve"><value>Speaker groups</value></data>
+  </root>

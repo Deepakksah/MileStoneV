@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.ServerConfigurator.CertificateConfigurator.UI.CertificateGroupControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:wpf="clr-namespace:VideoOS.UI.Common.WPF.Utils.Converters;assembly=VideoOS.UI.Common.WPF" xmlns:local="clr-namespace:VideoOS.ServerConfigurator.CertificateConfigurator.UI" xmlns:resources="clr-namespace:VideoOS.ServerConfigurator.CertificateConfigurator.UI.Properties" Background="#FFFFFFFF">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="StyleDictionary.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="auto" />
+    </Grid.ColumnDefinitions>
+    <StackPanel Grid.Row="1">
+      <TextBlock Name="CertificateGroupTitle" TextWrapping="Wrap" Style="{StaticResource Body1}" Margin="0,24,0,0" HorizontalAlignment="Left" Grid.Column="0" Text="{Binding Title}" />
+      <TextBlock Name="CertificateGroupSubtitle" TextWrapping="Wrap" Style="{StaticResource Body2}" HorizontalAlignment="Left" Grid.Column="0" Text="{Binding Subtitle}" />
+    </StackPanel>
+    <StackPanel Grid.Row="2" Margin="0,16,0,0">
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+          <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left">
+          <TextBlock Name="EncryptionStatusStateOn" x:Uid="EncryptionStatusStateOn" Text="{x:Static resources:Resources.CertificateGroupControl_EncryptionOn}" Grid.Column="0" Style="{StaticResource H3}" Visibility="{Binding UseEncryption, Converter={wpf:BoolToVisibilityConverter FalseValue=Collapsed, TrueValue=Visible}}" />
+          <TextBlock Name="EncryptionStatusStateOff" x:Uid="EncryptionStatusStateOff" Text="{x:Static resources:Resources.CertificateGroupControl_EncryptionOff}" Grid.Column="0" Style="{StaticResource H3}" Visibility="{Binding UseEncryption, Converter={wpf:BoolToVisibilityConverter FalseValue=Visible, TrueValue=Collapsed}}" />
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="0">
+          <CheckBox Name="EnableEncryptionCheckbox" HorizontalAlignment="Right" Style="{StaticResource AnimatedCheckbox}" IsChecked="{Binding UseEncryption}" IsEnabled="{Binding IsEncryptionUnlocked}" AutomationProperties.AutomationId="{Binding GroupId, StringFormat=EncryptionPage.EnableEncryptionCheckbox_{0}}" />
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1">
+          <Grid Margin="0,8,0,0">
+            <ComboBox DisplayMemberPath="FriendlyName" Style="{StaticResource ComboBoxFlatStyle}" ItemsSource="{Binding Path=AvailableCertificates}" SelectedItem="{Binding Path=SelectedCertificate}" AutomationProperties.AutomationId="{Binding GroupId, StringFormat=EncryptionPage.CertificatesList_{0}}">
+              <UIElement.IsEnabled>
+                <MultiBinding FallbackValue="True" Converter="{wpf:BoolBoolConverter TrueValue=True, FalseValue=False}">
+                  <Binding Path="UseEncryption" />
+                  <Binding Path="IsUnlocked" />
+                </MultiBinding>
+              </UIElement.IsEnabled>
+            </ComboBox>
+            <ContentControl Template="{StaticResource errorTemplate}" Visibility="{Binding CertificateIsValid, Converter={wpf:BoolToVisibilityConverter TrueValue=Collapsed, FalseValue=Visible}}" />
+          </Grid>
+          <TextBlock Name="CertificateExpirationInformationSelected" Margin="0,4,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" Style="{StaticResource Label}" Visibility="{Binding CertificateIsValidOrEmpty, Converter={wpf:BoolToVisibilityConverter TrueValue=Visible, FalseValue=Collapsed}}" Text="{Binding SelectedCertificate.DisplayInfo}" />
+          <TextBlock Name="CertificateExpirationInformationSelectedRed" Margin="0,4,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" Style="{StaticResource ErrorLabel}" FontSize="10" Visibility="{Binding CertificateIsValidOrEmpty, Converter={wpf:BoolToVisibilityConverter TrueValue=Collapsed, FalseValue=Visible}}" Text="{Binding SelectedCertificate.DisplayInfo}" />
+        </StackPanel>
+      </Grid>
+    </StackPanel>
+    <StackPanel Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="24,40,0,15">
+      <Button x:Uid="DetailsButton" VerticalAlignment="Center" Content="{x:Static resources:Resources.CertificateGroupControl_Details}" Style="{StaticResource DetailsButton}" AutomationProperties.AutomationId="{Binding GroupId, StringFormat=EncryptionPage.DetailButton_{0}}" Command="{Binding CertificateDetailsCommand}" />
+    </StackPanel>
+  </Grid>
+</UserControl>

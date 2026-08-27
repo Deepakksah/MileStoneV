@@ -1,0 +1,81 @@
+-- This header is used by the dbupdate tool.
+-- The TARGET property is used to indicate which database the script is
+-- intended to be executed on. The value can be either 'Surveillance' or
+-- 'SurveillanceLog' without the quotes.
+-- =========================================================================
+-- TARGET: Surveillance
+-- =========================================================================
+
+-- Script changes License.IDLicense from CHAR(36) to UNIQUEIDENTIFIER
+--  and
+-- changes the License.Data column from NVARCHAR(MAX) to VARBINARY(MAX)
+-- 
+-- This is done to increase performance when reading from and writing
+-- to license tables.
+
+IF (EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME = 'License' AND CONSTRAINT_NAME = 'PK_License'))
+BEGIN
+	ALTER TABLE [dbo].[License] DROP CONSTRAINT [PK_License];
+END
+GO
+
+ALTER TABLE [dbo].[License]
+ALTER COLUMN [IDLicense] UNIQUEIDENTIFIER NOT NULL
+GO
+
+IF (NOT EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME = 'License' AND CONSTRAINT_NAME = 'PK_License'))
+    ALTER TABLE [dbo].[License] ADD  CONSTRAINT [PK_License] PRIMARY KEY NONCLUSTERED 
+    (
+	    [IDLicense] ASC
+    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+
+IF (EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'License' AND COLUMN_NAME = 'Data' AND DATA_TYPE = 'NVARCHAR')
+    AND NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'License' AND COLUMN_NAME = 'Data2' AND DATA_TYPE = 'VARBINARY'))
+BEGIN
+	ALTER TABLE [License]
+	ADD [Data2] VARBINARY(MAX) NULL
+END
+GO
+
+IF (EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'License' AND COLUMN_NAME = 'Data' AND DATA_TYPE = 'NVARCHAR'))
+BEGIN
+    EXEC('UPDATE [License] SET [Data2] = CAST(COALESCE([Data], N'''') AS xml).value(''xs:base64Binary(.)'', ''VARBINARY(MAX)'')')
+END
+GO
+
+IF (EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'License' AND COLUMN_NAME = 'Data' AND DATA_TYPE = 'NVARCHAR'))
+BEGIN
+	ALTER TABLE [License]
+	DROP COLUMN [Data]
+END
+GO
+
+IF (NOT EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'License' AND COLUMN_NAME = 'Data'))
+BEGIN
+	ALTER TABLE [License]
+	ADD [Data] VARBINARY(MAX) NULL
+END
+GO
+
+IF (EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'License' AND COLUMN_NAME = 'Data2'))
+BEGIN
+	EXEC('UPDATE [License] SET [Data] = [Data2]')
+END
+GO
+
+IF (EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'License' AND COLUMN_NAME = 'Data'))
+BEGIN
+	ALTER TABLE [License]
+	ALTER COLUMN [Data] VARBINARY(MAX) NOT NULL
+END
+GO
+
+IF (EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'License' AND COLUMN_NAME = 'Data2'))
+BEGIN
+	ALTER TABLE [License]
+	DROP COLUMN [Data2]
+END
+GO

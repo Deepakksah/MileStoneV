@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:commands="clr-namespace:VideoOS.Platform.UI.Commands">
+  <Style x:Key="{x:Type controls:VideoOSDialog}" TargetType="{x:Type controls:VideoOSDialog}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type controls:VideoOSDialog}">
+          <AdornerDecorator>
+            <Grid Background="{TemplateBinding Control.Background}">
+              <FrameworkElement.MaxWidth>
+                <MultiBinding Converter="{x:Static controls:VideoOSDialogInternals.ContentMaxWidthConverter}">
+                  <Binding Path="MaxWidth" RelativeSource="{RelativeSource TemplatedParent}" />
+                  <Binding Path="DialogContentMaxWidth" RelativeSource="{RelativeSource TemplatedParent}" />
+                  <Binding ElementName="_actionsCanvas" Path="ActionCanvasDesiredWidth" />
+                </MultiBinding>
+              </FrameworkElement.MaxWidth>
+              <Grid Margin="{x:Static controls:VideoOSDialogInternals.OuterGridMargin}">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <controls:VideoOSScrollViewer x:Name="_scrollViewer" Grid.Row="0" ShowVerticalScrollUnderEdges="{TemplateBinding Content, Converter={x:Static controls:VideoOSDialogInternals.ShowVerticalScrollUnderEdgesConverter}}" Padding="{Binding ElementName=_scrollViewer, Path=VerticalScrollBarVisibility, Converter={x:Static controls:VideoOSDialogInternals.VerticalScrollBarPaddingConverter}}" VerticalScrollBarVisibility="{TemplateBinding Content, Converter={x:Static controls:VideoOSDialogInternals.VerticalScrollBarVisibilityConverter}}">
+                  <ContentPresenter />
+                </controls:VideoOSScrollViewer>
+                <controls:DialogActionsCanvas x:Name="_actionsCanvas" Grid.Row="1" ClipToBounds="True" SizeToContent="{TemplateBinding Window.SizeToContent}" DialogActions="{TemplateBinding controls:VideoOSDialog.DialogActions}" DialogActionsSize="{TemplateBinding controls:VideoOSDialog.DialogActionsSize}" Margin="{Binding Path=DialogActions, Converter={x:Static controls:VideoOSDialogInternals.ActionCanvasMarginConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+              </Grid>
+            </Grid>
+          </AdornerDecorator>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

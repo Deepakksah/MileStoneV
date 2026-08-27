@@ -1,0 +1,23 @@
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace std;
+
+[StructLayout(LayoutKind.Sequential, Size = 16)]
+[NativeCppClass]
+public struct _Tree_temp_node_alloc_003Cstd_003A_003Aallocator_003Cstd_003A_003A_Tree_node_003Cstd_003A_003Apair_003Cint_0020const_0020_002Cstd_003A_003Ashared_ptr_003CNmToolkit_003A_003AImRendererToolkit_003A_003AImRenderingParameters_0020const_0020_003E_0020_003E_002Cvoid_0020_002A_003E_0020_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}
+[StructLayout(LayoutKind.Sequential, Size = 16)]
+[NativeCppClass]
+public struct _Tree_temp_node_alloc_003Cstd_003A_003Aallocator_003Cstd_003A_003A_Tree_node_003Cint_002Cvoid_0020_002A_003E_0020_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}
+[StructLayout(LayoutKind.Sequential, Size = 16)]
+[NativeCppClass]
+public struct _Tree_temp_node_alloc_003Cstd_003A_003Aallocator_003Cstd_003A_003A_Tree_node_003Cstd_003A_003Abasic_string_003Cchar_002Cstd_003A_003Achar_traits_003Cchar_003E_002Cstd_003A_003Aallocator_003Cchar_003E_0020_003E_002Cvoid_0020_002A_003E_0020_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}

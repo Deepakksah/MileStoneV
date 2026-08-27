@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ui="clr-namespace:VideoOS.Platform.UI" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls">
+  <Style x:Key="{x:Static controls:VideoOSContextMenuBase+VideoOSContextMenuBaseInternals.ItemsListBorderStyleKey}" TargetType="{x:Type Border}">
+    <Setter Property="BorderThickness" Value="{x:Static controls:VideoOSContextMenuBaseInternals.PopupBorderThickness}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuOutlineBrush}}" />
+    <Setter Property="Background" Value="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuBackgroundBrush}}" />
+    <Setter Property="Border.CornerRadius" Value="2" />
+    <Setter Property="UIElement.Effect" Value="{DynamicResource {x:Static controls:VideoOSResourceKeys.DropShadowEffect}}" />
+    <Setter Property="Margin">
+      <Setter.Value>
+        <MultiBinding Converter="{x:Static controls:VideoOSContextMenuBaseInternals.DropShadowThicknessConverter}">
+          <Binding Path="." RelativeSource="{RelativeSource Self}" />
+          <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+        </MultiBinding>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Static controls:VideoOSContextMenuBase+VideoOSContextMenuBaseInternals.SeparatorStyleKey}" TargetType="{x:Type Separator}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Separator}">
+          <Rectangle Height="1" Margin="0,4,0,4" Fill="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSContextMenuSeparatorLineBrush}}" />
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

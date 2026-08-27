@@ -1,0 +1,29 @@
+# Large archive files & Installers
+*.iso
+*.zip
+*.msi
+*.7z
+*.rar
+*.cab
+
+# Build artifacts, binaries & native DLL dumps
+[Bb]in/
+[Oo]bj/
+target/
+.vs/
+*.user
+*.suo
+*.dll
+*.pdb
+*.exe
+!build.bat
+!run.bat
+
+# Large extracted & decompiled dumps
+MSI_Extracted/
+MSI_Restored/
+MSI_Audit_All/
+Decompiled_Source/
+**/Milestone_Core_Source/
+**/Milestone_Installer_Source/
+**/Milestone_Core_Binaries/

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.Timeline.Control.TimelineControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:TimelineArea="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea" xmlns:ControlsAreaUpper="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper" xmlns:controlsAreaLower="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaLower" FontFamily="Segoe UI" xmlns:control="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control" MouseRightButtonDown="UserControl_MouseRightButtonDown" Loaded="TimelineControl_OnLoaded">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+    </Grid.RowDefinitions>
+    <ControlsAreaUpper:ControlsAreaUpper x:Name="_controlsAreaUpper" PlaybackNavigationOccurred="playbackNavigationOccurred" Grid.Row="0" />
+    <controlsAreaLower:ControlsAreaLower x:Name="_controlsAreaLower" SetupClicked="_controlsArea_SetupClicked" Grid.Row="2" />
+    <TimelineArea:TimelineArea x:Name="_timelineArea" PlaybackNavigationOccurred="playbackNavigationOccurred" UpperTimelineMarkerHovered="_timelineArea_UpperTimelineMarkerHovered" LowerTimelineMarkerHovered="_timelineArea_LowerTimelineMarkerHovered" Grid.Row="1" />
+  </Grid>
+</UserControl>

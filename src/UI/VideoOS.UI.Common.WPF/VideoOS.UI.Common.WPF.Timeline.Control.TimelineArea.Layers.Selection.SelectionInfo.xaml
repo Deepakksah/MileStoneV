@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Selection.SelectionInfo" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:resources="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Selection.resources" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" xmlns:selection="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Selection">
+  <Grid>
+    <Border CornerRadius="2" Background="{controls:VideoOSInternalDynamicResource TimelineSelectionInfoBackgroundBrush}" Effect="{controls:VideoOSDynamicResource DropShadowEffect}">
+      <Grid Margin="8,4">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="auto" />
+          <ColumnDefinition Width="5" />
+          <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <controls:VideoOSTextBlockBodyExtraSmall Text="{x:Static resources:Strings.SelectionInfoStart}" Grid.Row="0" Grid.Column="0" />
+        <controls:VideoOSTextBlockBodyExtraSmall Text="{x:Static resources:Strings.SelectionInfoEnd}" Grid.Row="1" Grid.Column="0" />
+        <controls:VideoOSTextBlockBodyExtraSmall Text="{x:Static resources:Strings.SelectionInfoDuration}" Grid.Row="2" Grid.Column="0" />
+        <controls:VideoOSTextBlockBodyExtraSmall Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Text="{Binding StartTime}" />
+        <controls:VideoOSTextBlockBodyExtraSmall Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" Text="{Binding EndTime}" />
+        <controls:VideoOSTextBlockBodyExtraSmall Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" Text="{Binding Duration}" />
+      </Grid>
+    </Border>
+  </Grid>
+</UserControl>

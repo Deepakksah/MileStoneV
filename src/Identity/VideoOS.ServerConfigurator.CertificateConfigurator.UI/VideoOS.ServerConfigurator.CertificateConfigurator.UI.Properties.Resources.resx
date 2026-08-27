@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="RegisterClientStatus_InvalidCredentials" xml:space="preserve"><value>Server service(s) registration on the management server failed. Check the user name and password and try again.</value></data>
+  <data name="ServerRegistrationControl_Register" xml:space="preserve"><value>Register</value></data>
+  <data name="ServerEncryptionControl_Recommendation" xml:space="preserve"><value>It is recommended to secure communication with encryption.</value></data>
+  <data name="GeneralStatus_CouldNotStopServer" xml:space="preserve"><value>Unable to stop one or more server service(s). For details, check the application logs located at {0}</value></data>
+  <data name="ServerEncryptionControl_LearnMore" xml:space="preserve"><value>Learn more</value></data>
+  <data name="ConsistencyStatus_SecuritySchemeDoesNotMatch" xml:space="preserve"><value>The encryption state of the server certificate should not be changed. The encryption state must match the encryption state on the computer that runs the management server.</value></data>
+  <data name="ServerRegistrationControl_InvalidManagementServerAddress" xml:space="preserve"><value>Invalid management server address</value></data>
+  <data name="CredentialDialogCaption" xml:space="preserve"><value>Enter credentials</value></data>
+  <data name="RegisterClientStatus_ManagementServerNotFound" xml:space="preserve"><value>Failed to connect. Check the management server address and availability.</value></data>
+  <data name="CertificateView_SelectCertificate" xml:space="preserve"><value>Select certificate...</value></data>
+  <data name="ConsistencyStatus_ServerCertificateIsNotTrusted" xml:space="preserve"><value>The registration cannot be completed because the certificate that verifies the management server is not trusted on this computer. Make the management server certificate trusted on this computer or select another trusted certificate on the management server.</value></data>
+  <data name="ServerRegistrationControl_LearnMore" xml:space="preserve"><value>Learn more</value></data>
+  <data name="MessageBox_ForceEditHostname_Text" xml:space="preserve"><value>Only change the management server address if you are configuring a failover management server. If you change the management server address, you have to register all remote servers. Do you want to change the address?</value></data>
+  <data name="CertificateView_NoCertificateSelected" xml:space="preserve"><value>No certificate selected</value></data>
+  <data name="ServerEncryptionControl_Encryption" xml:space="preserve"><value>Encryption</value></data>
+  <data name="MessageBox_ApplyCertificate_Text" xml:space="preserve"><value>Changes to encryption settings will trigger a restart of the server service(s) running on this computer. Depending on your selections, during restart of the server service(s) you will not have access to your {0} system or data will not be recorded. Do you want to apply the changes now?</value></data>
+  <data name="ApplyStatus_SuccessRegistrationServerNotFound" xml:space="preserve"><value>Encryption configuration is applied, but server service(s) registration on the management server failed. Go to the Registering servers tab. Check the management server address and availability.</value></data>
+  <data name="MessageBox_RegisterServers_Title" xml:space="preserve"><value>Register servers</value></data>
+  <data name="MessageBox_ApplyCertificates_Title" xml:space="preserve"><value>Apply configuration</value></data>
+  <data name="CertificateGroupControl_EncryptionOn" xml:space="preserve"><value>Encryption: On</value></data>
+  <data name="ServerConfiguratorControl_Encryption" xml:space="preserve"><value>Encryption</value></data>
+  <data name="SetServerAddress_UnspecifiedError" xml:space="preserve"><value>An error occurred when setting the management server address on one or more server service(s). For details, check the application logs located at {0}</value></data>
+  <data name="MessageBox_RegisterServers_Text" xml:space="preserve"><value>Registering servers will trigger a restart of the server service﻿(s) running on this computer. During restart of the server service﻿(s) you will not have access to your {0} system or data will not be recorded. Do you want to register now?</value></data>
+  <data name="GeneralStatus_Success" xml:space="preserve"><value>Success</value></data>
+  <data name="SettingsControl_LanguageSelection" xml:space="preserve"><value>Language selection</value></data>
+  <data name="ProgressControl_SomeServicesMayRestart" xml:space="preserve"><value>Some services may automatically restart. This might take several minutes.</value></data>
+  <data name="GeneralStatus_UnexpectedError" xml:space="preserve"><value>An error occurred. For details, check the application logs located at {0}</value></data>
+  <data name="ProgressControl_RegisteringServers" xml:space="preserve"><value>Registering servers...</value></data>
+  <data name="RegisterService_ServiceRegistrationNotFound" xml:space="preserve"><value>One or more installed services are not registered. For details, check the application log files located at {0}.</value></data>
+  <data name="GeneralStatus_CouldNotStartServer" xml:space="preserve"><value>Unable to start one or more server service(s). For details, check the application logs located at {0}</value></data>
+  <data name="SettingsControl_ChooseLanguage" xml:space="preserve"><value>Choose language</value></data>
+  <data name="ServerRegistrationControl_ManagementServerAddress" xml:space="preserve"><value>Management server address</value></data>
+  <data name="MessageBox_Apply" xml:space="preserve"><value>Apply</value></data>
+  <data name="RegisterClientStatus_UnspecifiedError" xml:space="preserve"><value>An error occurred during server service(s) registration on the management server. For details, check the application logs located at {0}</value></data>
+  <data name="MessageBox_ForceEditHostname_Title" xml:space="preserve"><value>Change the management server address</value></data>
+  <data name="ServerRegistrationControl_RegisteringServers" xml:space="preserve"><value>Registering servers</value></data>
+  <data name="MessageBox_Register" xml:space="preserve"><value>Register</value></data>
+  <data name="RegisterClientStatus_InsufficientCredentials" xml:space="preserve"><value>Server service(s) registration on the management server failed. This could be due to one of the following reasons:
+• The user does not have administrator permissions to the management server
+   ◦ Select a user with administrator permissions to the management server and try again
+• A non-secure server is trying to connect to a secure management server
+   ◦ Go to the Encryption tab and apply the correct server certificate</value></data>
+  <data name="WaitCurtain_ApplyingConfiguration" xml:space="preserve"><value>Applying configuration...</value></data>
+  <data name="ApplyStatus_UnspecifiedError" xml:space="preserve"><value>An error occurred during encryption configuration. For details, check the application logs located at {0}</value></data>
+  <data name="ApplyStatus_SuccessUnableToRegister" xml:space="preserve"><value>Encryption configuration is applied, but server service(s) registration on the management server failed. Go to the Registering servers tab and try again. For details, check the application logs located at {0}</value></data>
+  <data name="CertificateGroupControl_Details" xml:space="preserve"><value>Details</value></data>
+  <data name="ServerConfiguratorControl_RegisteringServers" xml:space="preserve"><value>Registering servers</value></data>
+  <data name="CertificateView_DisplayInfo" xml:space="preserve"><value>Certificate issued by {0}. Expires {1}</value></data>
+  <data name="ApplyStatus_SuccessInvalidCredentials" xml:space="preserve"><value>Encryption configuration is applied, but server service(s) registration on the management server failed. Go to the Registering servers tab. Check the user name and password and try again.</value></data>
+  <data name="ApplyStatus_SuccessInsufficientCredentials" xml:space="preserve"><value>Encryption configuration is applied, but server service(s) registration on the management server failed. The user is not authorized for this action. Go to the Registering servers tab. Select a user with permission and try again.</value></data>
+  <data name="ProgressControl_EnablingEncryption" xml:space="preserve"><value>Enabling encryption...</value></data>
+  <data name="SetServerAddress_NotAllowedWhenManagementServerIsLocal" xml:space="preserve"><value>Cannot change the address. The Management Server service is installed on this computer.</value></data>
+  <data name="CredentialDialogMessage" xml:space="preserve"><value>Enter the credentials of your {0} system administrator.</value></data>
+  <data name="ApplyStatus_Success" xml:space="preserve"><value>Encryption configuration successful</value></data>
+  <data name="ProgressControl_DisablingEncryption" xml:space="preserve"><value>Disabling encryption...</value></data>
+  <data name="RegisterTabText" xml:space="preserve"><value>Register VMS components on this computer with the management server. Registration can be required in various situations such as:
+
+• Reestablish communication if the host name has changed
+• Connect a standalone recording server to the management server
+• Restore a backup
+• Configure a failover management server or manage host renaming of the management server</value></data>
+  <data name="RegisterClientStatus_Success" xml:space="preserve"><value>Server service(s) registration on the management server succeeded</value></data>
+  <data name="ServerConfiguratorControl_LanguageSelection" xml:space="preserve"><value>Language selection</value></data>
+  <data name="MessageBox_Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="MessageBox_Change" xml:space="preserve"><value>Change</value></data>
+  <data name="CertificateGroupControl_EncryptionOff" xml:space="preserve"><value>Encryption: Off</value></data>
+  </root>

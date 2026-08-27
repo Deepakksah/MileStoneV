@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.ServerConfigurator.RegistrationProxy</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    
+    
+    
+    
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.ServerConfigurator.Common\VideoOS.ServerConfigurator.Common.csproj" />
+    <ProjectReference Include="..\..\ServerCore\VideoOS.Server\VideoOS.Server.csproj" />
+    <ProjectReference Include="..\VideoOS.ServerConfigurator.RegistrationContainer\VideoOS.ServerConfigurator.RegistrationContainer.csproj" />
+    <ProjectReference Include="..\VideoOS.ServerConfigurator.CertificateRegistration\VideoOS.ServerConfigurator.CertificateRegistration.csproj" />
+    <ProjectReference Include="..\VideoOS.ServerConfigurator.Interfaces\VideoOS.ServerConfigurator.Interfaces.csproj" />
+  </ItemGroup>
+</Project>

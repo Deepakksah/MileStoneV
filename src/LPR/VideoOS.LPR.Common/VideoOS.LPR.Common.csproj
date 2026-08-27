@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.LPR.Common</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net472</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    
+    <Reference Include="CsvHelper">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\CsvHelper.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.IdentityModel" />
+    
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\VideoOS.ServiceHost.Common\VideoOS.ServiceHost.Common.csproj" />
+    <ProjectReference Include="..\..\Platform\VideoOS.Platform\VideoOS.Platform.csproj" />
+    <ProjectReference Include="..\..\EventServer\VideoOS.EventServer.Communication\VideoOS.EventServer.Communication.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common\VideoOS.Common.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\VideoOS.LPR.Plugin.ClientResources\VideoOS.LPR.Plugin.ClientResources.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.EnvironmentServices\VideoOS.Common.EnvironmentServices.csproj" />
+  </ItemGroup>
+</Project>

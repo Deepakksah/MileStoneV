@@ -1,0 +1,150 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Management.Server</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Net.Http" />
+    
+    <Reference Include="System.Runtime.Serialization" />
+    
+    
+    
+    
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="CSCore">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\CSCore.dll</HintPath>
+    </Reference>
+    
+    
+    
+    
+    
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    
+    
+    
+    
+    
+    <Reference Include="System.Runtime.Caching" />
+    
+    
+    <Reference Include="Microsoft.Data.SqlClient">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel.Activation" />
+    
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    
+    
+    
+    <Reference Include="System.DirectoryServices" />
+    
+    
+    
+    <Reference Include="System.Web.Http">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    
+    
+    
+    
+    
+    
+    <Reference Include="Microsoft.SqlServer.Types">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    
+    <Reference Include="System.Management" />
+    
+    <Reference Include="System.Data.DataSetExtensions" />
+    
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Microsoft.CSharp" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\EventServer\VideoOS.EventServer.Alarms.RestApi.Client\VideoOS.EventServer.Alarms.RestApi.Client.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.WebService.Common\VideoOS.WebService.Common.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.MetadataSearch.Common\VideoOS.MetadataSearch.Common.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.SharedTimeProfile\VideoOS.Common.SharedTimeProfile.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.IdentityServer\VideoOS.IdentityServer.csproj" />
+    <ProjectReference Include="..\..\EventServer\VideoOS.EventServer.Common.RestApi.Client\VideoOS.EventServer.Common.RestApi.Client.csproj" />
+    <ProjectReference Include="..\VideoOS.Management.Common\VideoOS.Management.Common.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.IdentityServer.Common\VideoOS.IdentityServer.Common.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities.Telemetry\VideoOS.Utilities.Telemetry.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.Integration\VideoOS.Common.Integration.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Telemetry\VideoOS.Telemetry.csproj" />
+    <ProjectReference Include="..\VideoOS.ConfigurationAPI\VideoOS.ConfigurationAPI.csproj" />
+    <ProjectReference Include="..\..\SCH\VideoOS.SCH.Services.Interfaces\VideoOS.SCH.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Vms.Utilities\VideoOS.Vms.Utilities.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common\VideoOS.Common.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.GisMapSharedData\VideoOS.GisMapSharedData.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.LogServer.Communication\VideoOS.LogServer.Communication.csproj" />
+    <ProjectReference Include="..\..\SCH\VideoOS.SCH.Services.Business.Definitions\VideoOS.SCH.Services.Business.Definitions.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.Crypto\VideoOS.Common.Crypto.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.DriverResources\VideoOS.Common.DriverResources.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.GisMapCommunication\VideoOS.GisMapCommunication.csproj" />
+    <ProjectReference Include="..\..\SCH\VideoOS.SCH.Services\VideoOS.SCH.Services.csproj" />
+    <ProjectReference Include="..\..\EventServer\VideoOS.EventServer.Events.RestApi.Client\VideoOS.EventServer.Events.RestApi.Client.csproj" />
+    <ProjectReference Include="..\VideoOS.Management.VmoClient\VideoOS.Management.VmoClient.csproj" />
+    <ProjectReference Include="..\..\Platform\VideoOS.Platform\VideoOS.Platform.csproj" />
+    <ProjectReference Include="..\..\RulesEngine\VideoOS.Rules.Interfaces\VideoOS.Rules.Interfaces.csproj" />
+    <ProjectReference Include="..\..\ServerCore\VideoOS.Server.Webservice.Shared\VideoOS.Server.Webservice.Shared.csproj" />
+    <ProjectReference Include="..\..\SCH\VideoOS.SCH.Base\VideoOS.SCH.Base.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.Interfaces\VideoOS.Common.Interfaces.csproj" />
+    <ProjectReference Include="..\..\RulesEngine\VideoOS.Rules.Adapters\VideoOS.Rules.Adapters.csproj" />
+    <ProjectReference Include="..\..\LPR\VideoOS.LPR.Common\VideoOS.LPR.Common.csproj" />
+    <ProjectReference Include="..\..\ServerCore\VideoOS.Server\VideoOS.Server.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities.Database\VideoOS.Utilities.Database.csproj" />
+    <ProjectReference Include="..\..\SCH\VideoOS.SCH.Services.Interfaces.Native\VideoOS.SCH.Services.Interfaces.Native.csproj" />
+    <ProjectReference Include="..\..\EventServer\VideoOS.EventServer.Communication\VideoOS.EventServer.Communication.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.EnvironmentServices\VideoOS.Common.EnvironmentServices.csproj" />
+    <ProjectReference Include="..\..\SCH\VideoOS.SCH.Services.Business\VideoOS.SCH.Services.Business.csproj" />
+    <ProjectReference Include="..\..\RulesEngine\VideoOS.Rules\VideoOS.Rules.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.SharedComponent\VideoOS.Common.SharedComponent.csproj" />
+  </ItemGroup>
+</Project>

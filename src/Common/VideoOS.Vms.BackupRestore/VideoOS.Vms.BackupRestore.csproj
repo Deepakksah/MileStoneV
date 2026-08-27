@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Vms.BackupRestore</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    
+    
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Core" />
+    
+    <Reference Include="System.Web" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.Vms.Utilities\VideoOS.Vms.Utilities.csproj" />
+    <ProjectReference Include="..\..\Management\VideoOS.Management.Common\VideoOS.Management.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\VideoOS.Utilities.Database\VideoOS.Utilities.Database.csproj" />
+  </ItemGroup>
+</Project>

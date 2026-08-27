@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<controls:VideoOSDialog x:Class="VideoOS.Common.Help.UI.HelpNotAvailableDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" xmlns:resources="clr-namespace:VideoOS.Common.Help.UI.resources" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Common.Help.UI" AutomationProperties.AutomationId="_dialogHelpNotAvailable" Title="{x:Static resources:Strings.HelpNotAvailableDialogTitle}" Width="700" SizeToContent="Height" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+  <controls:VideoOSDialog.DialogActions>
+    <x:ArrayExtension Type="{x:Type controls:VideoOSDialogActionButtonBase}">
+      <controls:VideoOSDialogActionButtonPrimary Text="{x:Static resources:Strings.CloseButton}" ActivateOnSubmit="True" AutomationId="_btnClose" Click="VideoOSDialogActionButtonBase_OnClick" />
+    </x:ArrayExtension>
+  </controls:VideoOSDialog.DialogActions>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <controls:VideoOSTextBlockH2 Grid.Row="0" Text="{x:Static resources:Strings.HelpNotAvailableDialogText1}" TextWrapping="Wrap" />
+    <controls:VideoOSTextBlockBodyMedium Grid.Row="1" Text="{x:Static resources:Strings.HelpNotAvailableDialogText2}" TextWrapping="Wrap" Margin="0,24,0,0" />
+    <controls:VideoOSPanel Grid.Row="3" IsBorderVisible="True" HorizontalAlignment="Left" Margin="0,24,0,0">
+      <Grid Background="#FFFFFFFF">
+        <Image Width="148" Height="148" AutomationProperties.AutomationId="_qrCodeImage" Source="{Binding QrCodeImage, Mode=OneTime}" />
+      </Grid>
+    </controls:VideoOSPanel>
+    <controls:VideoOSTextBlockBodyMedium Grid.Row="4" Text="{x:Static resources:Strings.HelpNotAvailableDialogText3}" TextWrapping="Wrap" Margin="0,48,0,0" />
+    <Grid Row="5" Margin="0,8,0,0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+      <controls:VideoOSTextBoxMedium IsReadOnly="True" Grid.Column="0" VerticalAlignment="Center" AutomationProperties.AutomationId="_urlTextBox" Text="{Binding HelpUrl, Mode=OneTime}" />
+      <controls:VideoOSButtonPrimaryMedium Grid.Column="1" ToolTip="{x:Static resources:Strings.CopyButtonTooltip}" VerticalAlignment="Center" Margin="10,0,0,0" Command="{Binding CopyToClipboardCommand}" IconSource="{controls:VideoOSIconBuiltInSource Copy}" />
+    </Grid>
+    <controls:VideoOSTextBlockBodyMedium Grid.Row="6" Text="{x:Static resources:Strings.HelpNotAvailableDialogText4}" TextWrapping="Wrap" Margin="0,24,0,24" />
+  </Grid>
+</controls:VideoOSDialog>

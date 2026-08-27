@@ -1,0 +1,113 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using Microsoft.Extensions.Logging;
+using VideoOS.Installer.Common;
+using VideoOS.Installer.Core.Task;
+using VideoOS.Installer.Interfaces;
+using VideoOS.Installer.Logging;
+using VideoOS.Installer.MSI;
+
+namespace VideoOS.GatewayService.InstallerPlugin;
+
+public class GatewayServiceInstallTask : MSIInstallerTask, IInstallationAdapter
+{
+	private IServerConfigurator _configurator;
+
+	private ILogger _log;
+
+	private IServerConfiguratorFactory _configuratorFactory;
+
+	public override bool RunInFinalizeMode => true;
+
+	public override bool RunInHardwareManufacturerMode => true;
+
+	public GatewayServiceInstallTask()
+	{
+		_log = LogManager.InnerLog;
+		_configuratorFactory = new ServerConfiguratorFactory();
+	}
+
+	public GatewayServiceInstallTask(ILogger log, IServerConfiguratorFactory configuratorFactory)
+	{
+		_log = log;
+		_configuratorFactory = configuratorFactory;
+	}
+
+	public bool CheckPrequisite(string fileName, List<IPackageParameter> installParameters)
+	{
+		return false;
+	}
+
+	public void Finalize(List<IPackageParameter> installParameters)
+	{
+	}
+
+	public void Initialize(List<IPackageParameter> installParameters)
+	{
+	}
+
+	public void Install(string fileName, List<IPackageParameter> installParameters)
+	{
+		if (installParameters != null)
+		{
+			_parameters = new List<IPackageParameter>(installParameters);
+		}
+		_configurator = _configuratorFactory.CreateServerConfigurator(installParameters, installation: true);
+	}
+
+	public void Uninstall(string fileName, List<IPackageParameter> installParameters)
+	{
+	}
+
+	protected override void DoRun()
+	{
+		LoggerExtensions.LogDebug(_log, string.Format(CultureInfo.InvariantCulture, "DoRun(): Configuration task installation started"), Array.Empty<object>());
+		bool valueAsBoolean = GlobalData.GetValueAsBoolean("FINALIZE-MODE");
+		bool valueAsBoolean2 = GlobalData.GetValueAsBoolean("HARDWARE-MANUFACTURER-MODE");
+		if (!base.RunOnlyPlugin && !valueAsBoolean)
+		{
+			base.DoRun();
+		}
+		else
+		{
+			_result = TaskResult.Success;
+		}
+		if (Result == TaskResult.Success && !valueAsBoolean2)
+		{
+			try
+			{
+				base.MaximumProgress = _configurator.MaxProgress;
+				base.Message = DefaultMessage;
+				NotifyObservers();
+				_configurator.OnProgressChanged += _configurator_OnProgressChanged;
+				_configurator.RunInstall();
+				base.NeedsReboot = _configurator.RebootRequiered;
+			}
+			catch (Exception ex)
+			{
+				LoggerExtensions.LogError(_log, string.Format(CultureInfo.InvariantCulture, "An error has occurred while running ApiGatewayInstallTask plugin"), new object[2]
+				{
+					ex.StackTrace,
+					TraceEventType.Error
+				});
+				throw new InstallationAdapterException(ex.Message, ex);
+			}
+			finally
+			{
+				_configurator.OnProgressChanged -= _configurator_OnProgressChanged;
+			}
+		}
+		if (Result != TaskResult.Success)
+		{
+			throw LastError;
+		}
+	}
+
+	private void _configurator_OnProgressChanged(object sender, ProgressChangedEventArgs e)
+	{
+		base.CurrentProgress = e.Progress;
+		NotifyObservers();
+	}
+}

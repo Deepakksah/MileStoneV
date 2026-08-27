@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Installer.Bootstrapper</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <StartupObject>VideoOS.Installer.Bootstrapper.Program</StartupObject>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net472</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    
+    
+    <Reference Include="CLRMetaHost" />
+    <Reference Include="System.Core" />
+    
+    
+    
+    
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.Installer.Logging\VideoOS.Installer.Logging.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Sequencer\VideoOS.Installer.Sequencer.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Common\VideoOS.Installer.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Interfaces\VideoOS.Installer.Interfaces.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Manager\VideoOS.Installer.Manager.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.CommandLine\VideoOS.Installer.CommandLine.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.UI\VideoOS.Installer.UI.csproj" />
+  </ItemGroup>
+</Project>

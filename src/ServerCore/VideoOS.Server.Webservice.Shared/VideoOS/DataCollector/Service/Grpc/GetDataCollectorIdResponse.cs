@@ -1,0 +1,192 @@
+using System;
+using System.CodeDom.Compiler;
+using System.Diagnostics;
+using Google.Protobuf;
+using Google.Protobuf.Reflection;
+
+namespace VideoOS.DataCollector.Service.Grpc;
+
+public sealed class GetDataCollectorIdResponse : IMessage<GetDataCollectorIdResponse>, IMessage, IEquatable<GetDataCollectorIdResponse>, IDeepCloneable<GetDataCollectorIdResponse>, IBufferMessage
+{
+	private static readonly MessageParser<GetDataCollectorIdResponse> _parser = new MessageParser<GetDataCollectorIdResponse>(() => new GetDataCollectorIdResponse());
+
+	private UnknownFieldSet _unknownFields;
+
+	public const int ValueFieldNumber = 1;
+
+	private int value_;
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public static MessageParser<GetDataCollectorIdResponse> Parser => _parser;
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public static MessageDescriptor Descriptor => VideoOSDataCollectorServiceReflection.Descriptor.MessageTypes[6];
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	MessageDescriptor IMessage.Descriptor => Descriptor;
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public int Value
+	{
+		get
+		{
+			return value_;
+		}
+		set
+		{
+			value_ = value;
+		}
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public GetDataCollectorIdResponse()
+	{
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public GetDataCollectorIdResponse(GetDataCollectorIdResponse other)
+		: this()
+	{
+		value_ = other.value_;
+		_unknownFields = UnknownFieldSet.Clone(other._unknownFields);
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public GetDataCollectorIdResponse Clone()
+	{
+		return new GetDataCollectorIdResponse(this);
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public override bool Equals(object other)
+	{
+		return Equals(other as GetDataCollectorIdResponse);
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public bool Equals(GetDataCollectorIdResponse other)
+	{
+		if (other == null)
+		{
+			return false;
+		}
+		if (other == this)
+		{
+			return true;
+		}
+		if (Value != other.Value)
+		{
+			return false;
+		}
+		return object.Equals(_unknownFields, other._unknownFields);
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public override int GetHashCode()
+	{
+		int num = 1;
+		if (Value != 0)
+		{
+			num ^= Value.GetHashCode();
+		}
+		if (_unknownFields != null)
+		{
+			num ^= _unknownFields.GetHashCode();
+		}
+		return num;
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public override string ToString()
+	{
+		return JsonFormatter.ToDiagnosticString(this);
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public void WriteTo(CodedOutputStream output)
+	{
+		output.WriteRawMessage(this);
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	void IBufferMessage.InternalWriteTo(ref WriteContext output)
+	{
+		if (Value != 0)
+		{
+			output.WriteRawTag(8);
+			output.WriteInt32(Value);
+		}
+		if (_unknownFields != null)
+		{
+			_unknownFields.WriteTo(ref output);
+		}
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public int CalculateSize()
+	{
+		int num = 0;
+		if (Value != 0)
+		{
+			num += 1 + CodedOutputStream.ComputeInt32Size(Value);
+		}
+		if (_unknownFields != null)
+		{
+			num += _unknownFields.CalculateSize();
+		}
+		return num;
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public void MergeFrom(GetDataCollectorIdResponse other)
+	{
+		if (other != null)
+		{
+			if (other.Value != 0)
+			{
+				Value = other.Value;
+			}
+			_unknownFields = UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+		}
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	public void MergeFrom(CodedInputStream input)
+	{
+		input.ReadRawMessage(this);
+	}
+
+	[DebuggerNonUserCode]
+	[GeneratedCode("protoc", null)]
+	void IBufferMessage.InternalMergeFrom(ref ParseContext input)
+	{
+		uint num;
+		while ((num = input.ReadTag()) != 0)
+		{
+			if (num != 8)
+			{
+				_unknownFields = UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+			}
+			else
+			{
+				Value = input.ReadInt32();
+			}
+		}
+	}
+}

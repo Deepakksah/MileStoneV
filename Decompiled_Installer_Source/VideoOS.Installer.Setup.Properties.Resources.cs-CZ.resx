@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorFailedUnpack" xml:space="preserve"><value>Nepodařilo se rozbalit instalační program:</value></data>
+  <data name="ErrorOccured" xml:space="preserve"><value>Došlo k chybě</value></data>
+  <data name="ExternalArchiveNotFound" xml:space="preserve"><value>Tento instalační program vyžaduje, aby byl externí archiv „{0}“ umístěn ve stejném adresáři jako spustitelný soubor instalačního programu.</value></data>
+  <data name="ErrorAnotherInstanceRunning" xml:space="preserve"><value>Již je spuštěna jiná instalace.</value></data>
+  <data name="Unpacking" xml:space="preserve"><value>Rozbalování souborů…</value></data>
+  <data name="ErrorUnexpected" xml:space="preserve"><value>Instalace se neočekávaně nezdařila z důvodu chyby:
+
+{0}
+
+Chyba byla pro vaši informaci zaznamenána v prohlížeči událostí Windows.</value></data>
+  <data name="ExternalArchiveHashMismatch" xml:space="preserve"><value>Externí archiv „{0}“ není pro tento instalační program platný.</value></data>
+  <data name="ErrorPrereq" xml:space="preserve"><value>Nainstalujte do počítače aplikaci .Net Framework 4.7.2. Stáhněte si komponentu ze stránky se soubory ke stažení na webu výrobce. Po instalaci restartujte aplikaci „{0}“.</value></data>
+  <data name="Preparing" xml:space="preserve"><value>Instalační program se připravuje</value></data>
+  <data name="Launching" xml:space="preserve"><value>Spouštění instalačního programu...</value></data>
+  <data name="ExternalArchiveValidate" xml:space="preserve"><value>Ověřování balíčku…</value></data>
+  <data name="ExternalArchiveReadError" xml:space="preserve"><value>Nepodařilo se načíst externí archiv „{0}“.</value></data>
+  </root>

@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Installer.UI</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    
+    
+    
+    
+    
+    <Reference Include="System.Core" />
+    
+    
+    
+    
+    
+    <Reference Include="PresentationCore" />
+    
+    
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.Installer.Sequencer\VideoOS.Installer.Sequencer.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Configuration\VideoOS.Installer.Configuration.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Manager\VideoOS.Installer.Manager.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common\VideoOS.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.MSI\VideoOS.Installer.MSI.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Common.Utilities\VideoOS.Installer.Common.Utilities.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Interfaces\VideoOS.Installer.Interfaces.csproj" />
+    <ProjectReference Include="..\..\ServerCore\VideoOS.Server\VideoOS.Server.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.UI.Framework\VideoOS.Installer.UI.Framework.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Common\VideoOS.Installer.Common.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.ServerConfigurator.Common\VideoOS.ServerConfigurator.Common.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.EnvironmentServices\VideoOS.Common.EnvironmentServices.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.ServerConfigurator.CertificateConfigurator\VideoOS.ServerConfigurator.CertificateConfigurator.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Logging\VideoOS.Installer.Logging.csproj" />
+    <ProjectReference Include="..\..\UI\VideoOS.UI.Common.WPF\VideoOS.UI.Common.WPF.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.ServerConfigurator.Interfaces\VideoOS.ServerConfigurator.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.ServerConfigurator.CertificateConfigurator.UI\VideoOS.ServerConfigurator.CertificateConfigurator.UI.csproj" />
+  </ItemGroup>
+</Project>

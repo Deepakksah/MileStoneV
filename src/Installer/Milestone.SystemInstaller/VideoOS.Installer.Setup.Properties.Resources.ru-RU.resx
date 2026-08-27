@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorFailedUnpack" xml:space="preserve"><value>Не удалось распаковать установщик:</value></data>
+  <data name="ErrorOccured" xml:space="preserve"><value>Произошла ошибка</value></data>
+  <data name="ExternalArchiveNotFound" xml:space="preserve"><value>Для этого установщика требуется внешний архив {0}, расположенный в том же каталоге, что файл EXE установщика.</value></data>
+  <data name="ErrorAnotherInstanceRunning" xml:space="preserve"><value>Запущен другой экземпляр программы установки.</value></data>
+  <data name="Unpacking" xml:space="preserve"><value>Распаковка файлов…</value></data>
+  <data name="ErrorUnexpected" xml:space="preserve"><value>Установка прервалась из-за неожиданной ошибки:
+
+ {0}
+
+Для справки ошибка была зарегистрирована в средстве просмотра событий Windows.</value></data>
+  <data name="ExternalArchiveHashMismatch" xml:space="preserve"><value>Внешний архив {0} недействителен для этого установщика.</value></data>
+  <data name="ErrorPrereq" xml:space="preserve"><value>Установите .Net Framework 4.7.2 на этот компьютер. Скачайте компонент с сайта загрузок производителя. После установки перезапустите {0}.</value></data>
+  <data name="Preparing" xml:space="preserve"><value>Подготовка установщика</value></data>
+  <data name="Launching" xml:space="preserve"><value>Запуск установщика…</value></data>
+  <data name="ExternalArchiveValidate" xml:space="preserve"><value>Проверка пакета…</value></data>
+  <data name="ExternalArchiveReadError" xml:space="preserve"><value>Не удалось прочитать внешний архив {0}.</value></data>
+  </root>

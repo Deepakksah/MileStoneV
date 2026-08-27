@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Installer.Core</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="VideoOS.Installer.Core.Arguments.Resources.CommanLineArgumentsV1.xsd" />
+    <None Remove="VideoOS.Installer.Core.Arguments.Resources.CommanLineArgumentsV2.xsd" />
+    <EmbeddedResource Include="VideoOS.Installer.Core.Arguments.Resources.CommanLineArgumentsV1.xsd" LogicalName="VideoOS.Installer.Core.Arguments.Resources.CommanLineArgumentsV1.xsd" />
+    <EmbeddedResource Include="VideoOS.Installer.Core.Arguments.Resources.CommanLineArgumentsV2.xsd" LogicalName="VideoOS.Installer.Core.Arguments.Resources.CommanLineArgumentsV2.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+</Project>

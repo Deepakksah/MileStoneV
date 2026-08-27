@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.ServerConfigurator.CertificateConfigurator.UI.WaitCurtain" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.ServerConfigurator.CertificateConfigurator.UI" xmlns:resources="clr-namespace:VideoOS.ServerConfigurator.CertificateConfigurator.UI.Properties" x:Name="ControlRoot">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="StyleDictionary.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <StackPanel Style="{StaticResource LoadingScreen}" Grid.RowSpan="2" />
+    <local:ArcControl Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,5" Width="24" Height="24" Style="{StaticResource Spinner}" Visibility="{Binding ElementName=ControlRoot, Path=Visibility}" />
+    <TextBlock Name="LoadingText" x:Uid="LoadingText" Grid.Row="1" Style="{StaticResource LoadingScreenText}" Text="{x:Static resources:Resources.WaitCurtain_ApplyingConfiguration}" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.ColumnSpan="4" />
+  </Grid>
+</UserControl>

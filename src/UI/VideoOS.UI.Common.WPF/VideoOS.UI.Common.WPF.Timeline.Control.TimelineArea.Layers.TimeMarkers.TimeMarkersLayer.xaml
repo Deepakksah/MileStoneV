@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layers:LayerBase x:Class="VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.TimeMarkers.TimeMarkersLayer" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Layers="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" xmlns:timemarkers="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.TimeMarkers">
+  <Canvas Name="_markerCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="_markerCanvas_Loaded" />
+  <Rectangle Name="_rulerBaselineRectangle" Height="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Fill="{controls:VideoOSInternalDynamicResource TimelineTimeRulerTickMarksPrimaryBrush}" />
+</Layers:LayerBase>

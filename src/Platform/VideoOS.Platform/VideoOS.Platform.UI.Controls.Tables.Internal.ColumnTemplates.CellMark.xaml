@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentControl x:Class="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.CellMark" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" Focusable="False" xmlns:columntemplates="clr-namespace:VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates" Loaded="CellMark_OnLoaded" Unloaded="CellMark_OnUnloaded" DataContextChanged="CellMark_OnDataContextChanged">
+  <controls:VideoOSCheckBoxMedium x:Name="_checkBox" Checked="_checkBox_OnCheckedChanged" Unchecked="_checkBox_OnCheckedChanged" PreviewMouseLeftButtonDown="_checkBox_OnPreviewMouseDown" />
+</ContentControl>

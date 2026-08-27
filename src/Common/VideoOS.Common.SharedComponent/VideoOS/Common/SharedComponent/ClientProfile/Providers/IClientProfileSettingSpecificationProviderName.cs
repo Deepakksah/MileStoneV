@@ -1,0 +1,6 @@
+﻿namespace VideoOS.Common.SharedComponent.ClientProfile.Providers;
+
+public interface IClientProfileSettingSpecificationProviderName
+{
+	string GetClientProfileSettingSpecificationName(string featureId, string clientProfileSettingSpecificationLocalizationId);
+}

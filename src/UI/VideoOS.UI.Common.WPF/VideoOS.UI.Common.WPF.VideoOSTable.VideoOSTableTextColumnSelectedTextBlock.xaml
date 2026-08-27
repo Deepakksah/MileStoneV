@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl markup:Class="VideoOS.UI.Common.WPF.VideoOSTable.VideoOSTableTextColumnSelectedTextBlock" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:markup="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:VideoOS.UI.Common.WPF.VideoOSTable" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" ContentTemplate="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}}, Converter={local:VideoOSTableTextColumnSelectedTextBlockTemplateConverter SelectedTemplate={StaticResource {x:Static local:VideoOSTableTextColumnSelectedTextBlockInternals.SelectedTemplateKey}}, DeselectedTemplate={StaticResource {x:Static local:VideoOSTableTextColumnSelectedTextBlockInternals.DeselectedTemplateKey}}}}">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <DataTemplate markup:Key="{x:Static local:VideoOSTableTextColumnSelectedTextBlock+VideoOSTableTextColumnSelectedTextBlockInternals.DeselectedTemplateKey}">
+        <controls:VideoOSTextBlockBodyMedium VerticalAlignment="Center" Text="{Binding Text, RelativeSource={RelativeSource AncestorType=local:VideoOSTableTextColumnSelectedTextBlock}}" ToolTip="{Binding ToolTip, RelativeSource={RelativeSource AncestorType=local:VideoOSTableTextColumnSelectedTextBlock}}" />
+      </DataTemplate>
+      <DataTemplate markup:Key="{x:Static local:VideoOSTableTextColumnSelectedTextBlock+VideoOSTableTextColumnSelectedTextBlockInternals.SelectedTemplateKey}">
+        <controls:VideoOSTextBlockInteractiveMedium Appearance="HighEmphasis" VerticalAlignment="Center" Text="{Binding Text, RelativeSource={RelativeSource AncestorType=local:VideoOSTableTextColumnSelectedTextBlock}}" ToolTip="{Binding ToolTip, RelativeSource={RelativeSource AncestorType=local:VideoOSTableTextColumnSelectedTextBlock}}" />
+      </DataTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+</UserControl>

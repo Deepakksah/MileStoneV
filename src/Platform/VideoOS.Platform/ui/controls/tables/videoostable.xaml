@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:ui="clr-namespace:VideoOS.Platform.UI" xmlns:converters="clr-namespace:VideoOS.Platform.UI.Converters" xmlns:commands="clr-namespace:VideoOS.Platform.UI.Commands" xmlns:internal="clr-namespace:VideoOS.Platform.UI.Controls.Tables.Internal">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/VideoOSBase.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="{x:Type controls:VideoOSTable}" BasedOn="{StaticResource {x:Static controls:VideoOSBaseInternals.StyleKey}}" TargetType="{x:Type controls:VideoOSTable}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type controls:VideoOSTable}">
+          <Grid Background="#00FFFFFF" SnapsToDevicePixels="True">
+            <internal:VideoOSTableDataGrid x:Name="PART_DataGrid" SnapsToDevicePixels="True" Margin="1" AutoGenerateColumns="False" CanUserAddRows="False" Focusable="True" CanUserDeleteRows="False" CanUserResizeColumns="True" CanUserResizeRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" BorderThickness="0" SelectionUnit="FullRow" Background="#00FFFFFF" controls:VideoOSStyleScrollBar.IsContentBorderVisible="{TemplateBinding controls:VideoOSTable.IsBorderVisible}" HorizontalScrollBarVisibility="{TemplateBinding controls:VideoOSTable.HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding controls:VideoOSTable.VerticalScrollBarVisibility}" HeadersVisibility="{TemplateBinding AreColumnHeadersVisible, Converter={converters:BoolToEnumConverter TrueResult={x:Static DataGridHeadersVisibility.Column}, FalseResult={x:Static DataGridHeadersVisibility.None}}}" GridLinesVisibility="{TemplateBinding RowSeparator, Converter={converters:EnumToEnumConverter MatchValue={x:Static controls:RowSeparators.Line}, MatchedResult={x:Static DataGridGridLinesVisibility.Horizontal}, NotMatchedResult={x:Static DataGridGridLinesVisibility.None}}}" AlternationCount="{TemplateBinding RowSeparator, Converter={converters:EnumToIntegerConverter MatchValue={x:Static controls:RowSeparators.Alternate}, MatchedResult=2, NotMatchedResult=1}}" RowHeight="{Binding RowAppearance, Converter={x:Static controls:VideoOSTableInternals.RowHeightConverter}, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}}" ColumnHeaderHeight="{Binding Path=RowAppearance, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}, Converter={converters:EnumToIntegerConverter MatchValue={x:Static controls:RowAppearances.Compact}, MatchedResult=40, NotMatchedResult=48}}">
+              <DataGrid.HorizontalGridLinesBrush>
+                <MultiBinding Converter="{converters:BoolToResourceConverter TrueResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTableGridLinesIdleBrush}, FalseResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTableGridLinesDisabledBrush}}">
+                  <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                  <Binding Path="IsEnabled" ElementName="PART_DataGrid" />
+                  <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                </MultiBinding>
+              </DataGrid.HorizontalGridLinesBrush>
+              <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                  <Setter Property="Focusable" Value="True" />
+                  <Setter Property="IsTabStop" Value="{Binding Path=Column, Converter={x:Static controls:VideoOSTableInternals.ColumnHeaderAndCellIsTabStopConverter}, RelativeSource={RelativeSource Self}}" />
+                  <Setter Property="commands:EventsToCommandMapping.Events" Value="Click, Loaded" />
+                  <Setter Property="commands:EventsToCommandMapping.Command" Value="{Binding Path=ColumnHeaderEventsCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}}" />
+                  <Setter Property="Template">
+                    <Setter.Value>
+                      <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid>
+                          <Panel.Background>
+                            <MultiBinding Converter="{x:Static controls:VideoOSTableInternals.HeaderBackgroundBrushConverter}">
+                              <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                              <Binding Path="Column.Column" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridColumnHeader}}" />
+                              <Binding Path="IsMouseOver" RelativeSource="{x:Static RelativeSource.Self}" />
+                              <Binding Path="IsPressed" RelativeSource="{x:Static RelativeSource.TemplatedParent}" />
+                              <Binding Path="IsKeyboardFocusWithin" ElementName="PART_DataGrid" />
+                              <Binding Path="IsEnabled" ElementName="PART_DataGrid" />
+                              <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                            </MultiBinding>
+                          </Panel.Background>
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                          </Grid.ColumnDefinitions>
+                          <ContentPresenter Name="_contentPresenter" VerticalAlignment="Center" FocusVisualStyle="{x:Null}" HorizontalAlignment="{Binding Path=Column.Column.HorizontalHeaderAlignment, FallbackValue=Left, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridColumnHeader}}}">
+                            <FrameworkElement.Margin>
+                              <MultiBinding Converter="{x:Static controls:VideoOSTableInternals.HeaderContentMarginConverter}">
+                                <Binding Path="Column.DisplayIndex" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridColumnHeader}}" />
+                                <Binding Path="Columns.Count" ElementName="PART_DataGrid" />
+                                <Binding Path="Column.Column" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridColumnHeader}}" />
+                                <Binding Path="SortColumn" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}" />
+                              </MultiBinding>
+                            </FrameworkElement.Margin>
+                          </ContentPresenter>
+                          <controls:VideoOSIcon Width="12" Height="12" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,12,1" IconSource="{Binding SortDirection, Converter={x:Static controls:VideoOSTableInternals.SortIndicatorIconSourceConverter}, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}}">
+                            <controls:VideoOSIcon.AutoColorBrush>
+                              <MultiBinding Converter="{converters:BoolToResourceConverter TrueResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTableHeaderSortIndicatorForegroundIdleBrush}, FalseResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTableHeaderSortIndicatorForegroundDisabledBrush}}">
+                                <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                                <Binding Path="IsEnabled" ElementName="PART_DataGrid" />
+                                <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                              </MultiBinding>
+                            </controls:VideoOSIcon.AutoColorBrush>
+                            <UIElement.Visibility>
+                              <MultiBinding Converter="{x:Static controls:VideoOSTableInternals.SortIndicatorVisibilityConverter}">
+                                <Binding Path="Column" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridColumnHeader}}" />
+                                <Binding Path="SortColumn" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}" />
+                              </MultiBinding>
+                            </UIElement.Visibility>
+                          </controls:VideoOSIcon>
+                          <Thumb Name="PART_RightHeaderGripper" Grid.Column="0" Width="16" Cursor="SizeWE" Margin="0,0,-7,0" HorizontalAlignment="Right">
+                            <Control.Template>
+                              <ControlTemplate>
+                                <Grid Background="#00FFFFFF" SnapsToDevicePixels="True" commands:EventsToCommandMapping.Events="MouseDown" commands:EventsToCommandMapping.Command="{Binding Path=ColumnHeaderGripperClickedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}}">
+                                  <Rectangle Width="1" HorizontalAlignment="Center" Margin="0,5,0,5" Visibility="{Binding IsMouseOver, ElementName=PART_RightHeaderGripper, Converter={converters:BoolToVisibilityConverter}}">
+                                    <Shape.Fill>
+                                      <MultiBinding Converter="{converters:BoolToResourceConverter TrueResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTableGridLinesIdleBrush}, FalseResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTableGridLinesDisabledBrush}}">
+                                        <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                                        <Binding Path="IsEnabled" ElementName="PART_DataGrid" />
+                                        <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                                      </MultiBinding>
+                                    </Shape.Fill>
+                                  </Rectangle>
+                                </Grid>
+                              </ControlTemplate>
+                            </Control.Template>
+                          </Thumb>
+                        </Grid>
+                      </ControlTemplate>
+                    </Setter.Value>
+                  </Setter>
+                </Style>
+              </DataGrid.ColumnHeaderStyle>
+              <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                  <Setter Property="UIElement.SnapsToDevicePixels" Value="True" />
+                  <Setter Property="UIElement.IsHitTestVisible" Value="{Binding Path=SelectionMode, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}, Converter={converters:EnumToBoolConverter MatchValue={x:Static controls:SelectionModes.Disabled}, MatchedResult=False, NotMatchedResult=True}}" />
+                  <Setter Property="commands:EventsToCommandMapping.Events" Value="MouseDown" />
+                  <Setter Property="commands:EventsToCommandMapping.Command" Value="{Binding Path=RowClickedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}}" />
+                  <Setter Property="Background">
+                    <Setter.Value>
+                      <MultiBinding Converter="{x:Static controls:VideoOSTableInternals.RowBackgroundBrushConverter}">
+                        <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                        <Binding Path="AlternationIndex" RelativeSource="{x:Static RelativeSource.Self}" />
+                        <Binding Path="IsMouseOver" RelativeSource="{x:Static RelativeSource.Self}" />
+                        <Binding Path="IsSelected" RelativeSource="{x:Static RelativeSource.Self}" />
+                        <Binding Path="IsKeyboardFocusWithin" ElementName="PART_DataGrid" />
+                        <Binding Path="SelectionMode" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}" />
+                        <Binding Path="IsEnabled" ElementName="PART_DataGrid" />
+                        <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                      </MultiBinding>
+                    </Setter.Value>
+                  </Setter>
+                </Style>
+              </DataGrid.RowStyle>
+              <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                  <Setter Property="BorderThickness" Value="0" />
+                  <Setter Property="IsTabStop" Value="{Binding Path=Column, Converter={x:Static controls:VideoOSTableInternals.ColumnHeaderAndCellIsTabStopConverter}, RelativeSource={RelativeSource Self}}" />
+                  <Setter Property="Focusable" Value="{Binding Path=IsTabStop, RelativeSource={RelativeSource Self}}" />
+                  <Setter Property="Template">
+                    <Setter.Value>
+                      <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid Background="#00FFFFFF">
+                          <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="{Binding Path=Column.Column.HorizontalAlignment, FallbackValue=Left, RelativeSource={RelativeSource TemplatedParent}}">
+                            <FrameworkElement.Margin>
+                              <MultiBinding Converter="{x:Static controls:VideoOSTableInternals.CellMarginConverter}">
+                                <Binding Path="Column.DisplayIndex" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridCell}}" />
+                                <Binding Path="Columns.Count" ElementName="PART_DataGrid" />
+                              </MultiBinding>
+                            </FrameworkElement.Margin>
+                          </ContentPresenter>
+                        </Grid>
+                      </ControlTemplate>
+                    </Setter.Value>
+                  </Setter>
+                </Style>
+              </DataGrid.CellStyle>
+            </internal:VideoOSTableDataGrid>
+            <Rectangle VerticalAlignment="Top" Height="1" Margin="{TemplateBinding RowAppearance, Converter={converters:EnumToThicknessConverter MatchValue={x:Static controls:RowAppearances.Compact}, MatchedResult=1,40,1,0, NotMatchedResult=1,48,1,0}}" Visibility="{TemplateBinding AreColumnHeadersVisible, Converter={converters:BoolToVisibilityConverter TrueResult=Visible, FalseResult=Collapsed}}">
+              <Shape.Fill>
+                <MultiBinding Converter="{converters:BoolToResourceConverter TrueResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTableBorderIdleBrush}, FalseResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTableBorderDisabledBrush}}">
+                  <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                  <Binding Path="IsEnabled" ElementName="PART_DataGrid" />
+                  <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                </MultiBinding>
+              </Shape.Fill>
+            </Rectangle>
+            <Border BorderThickness="1" CornerRadius="2" SnapsToDevicePixels="True" Visibility="{TemplateBinding IsBorderVisible, Converter={converters:BoolToVisibilityConverter TrueResult=Visible, FalseResult=Hidden}}">
+              <Border.BorderBrush>
+                <MultiBinding Converter="{converters:BoolToResourceConverter TrueResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTableBorderIdleBrush}, FalseResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTableBorderDisabledBrush}}">
+                  <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                  <Binding Path="IsEnabled" ElementName="PART_DataGrid" />
+                  <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                </MultiBinding>
+              </Border.BorderBrush>
+            </Border>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

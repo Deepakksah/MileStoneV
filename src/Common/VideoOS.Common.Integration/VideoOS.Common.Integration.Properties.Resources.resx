@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="AllNodeInTreeMicrophones" xml:space="preserve"><value>All Microphones</value></data>
+  <data name="LogEntryAliasTypeDeviceName" xml:space="preserve"><value>DeviceName</value></data>
+  <data name="TopNodeInTreeDefault" xml:space="preserve"><value>Other Device</value></data>
+  <data name="ServiceTypeReportingServiceGroupName" xml:space="preserve"><value>Reporting servers</value></data>
+  <data name="AllServers" xml:space="preserve"><value>All servers</value></data>
+  <data name="LogEntryAliasTypeRecorderName" xml:space="preserve"><value>RecorderName</value></data>
+  <data name="NotificationEntryAliasDeviceName" xml:space="preserve"><value>DeviceName</value></data>
+  <data name="ValueMustBeString" xml:space="preserve"><value>value type must be a string.</value></data>
+  <data name="NewGroupNameFailover" xml:space="preserve"><value>Failover Group {0}</value></data>
+  <data name="RegisteredServer" xml:space="preserve"><value>Registered server</value></data>
+  <data name="ServiceTypeFailoverServiceName" xml:space="preserve"><value>Failover Servers</value></data>
+  <data name="NewGroupNameInputs" xml:space="preserve"><value>Input Group {0}</value></data>
+  <data name="PtzArgsNull" xml:space="preserve"><value>Arguments identifying the PTZ preset must not be null.</value></data>
+  <data name="ServiceTypeLogServiceGroupName" xml:space="preserve"><value>Log servers</value></data>
+  <data name="TransActServer" xml:space="preserve"><value>Transaction server</value></data>
+  <data name="ServiceTypeIncidentManagerServiceGroupName" xml:space="preserve"><value>Incident Manager services</value></data>
+  <data name="EndTimeEqualToStartTime" xml:space="preserve"><value>The end time must be after the start time.</value></data>
+  <data name="ServiceTypeTransactServiceName" xml:space="preserve"><value>Transact Server</value></data>
+  <data name="BookmarkEntryAliasTriggerTime" xml:space="preserve"><value>TriggerTime</value></data>
+  <data name="ServiceTypeGatewayServiceName" xml:space="preserve"><value>Gateway Service</value></data>
+  <data name="NewGroupNameDefault" xml:space="preserve"><value>Other Device Group {0}</value></data>
+  <data name="ServiceTypeLogServiceName" xml:space="preserve"><value>Log Server</value></data>
+  <data name="OutputDefaultName" xml:space="preserve"><value>Output {0} on {1}</value></data>
+  <data name="TopNodeInTreeSpeakers" xml:space="preserve"><value>Speakers</value></data>
+  <data name="ServiceTypeProcessingServerServiceName" xml:space="preserve"><value>Processing Server</value></data>
+  <data name="BookmarkEntryAliasRuleName" xml:space="preserve"><value>RuleName</value></data>
+  <data name="TopNodeInTreeOutputs" xml:space="preserve"><value>Output</value></data>
+  <data name="AllLPRServers" xml:space="preserve"><value>LPR servers</value></data>
+  <data name="AllRegisteredServers" xml:space="preserve"><value>Registered servers</value></data>
+  <data name="AllNodeInTreeMetadata" xml:space="preserve"><value>All Metadata</value></data>
+  <data name="SingleCameraGroup" xml:space="preserve"><value>Single camera group</value></data>
+  <data name="NotificationEntryAliasRuleName" xml:space="preserve"><value>RuleName</value></data>
+  <data name="ServiceTypeMobileServiceName" xml:space="preserve"><value>Mobile Server</value></data>
+  <data name="NotificationEntryAliasHardwareName" xml:space="preserve"><value>HardwareName</value></data>
+  <data name="SpeakerDefaultName" xml:space="preserve"><value>Speaker {0} on {1}</value></data>
+  <data name="ServiceTypeProcessingServerServiceGroupName" xml:space="preserve"><value>Processing servers</value></data>
+  <data name="AllMobileServers" xml:space="preserve"><value>Mobile servers</value></data>
+  <data name="NewGroupNameSpeakers" xml:space="preserve"><value>Speaker Group {0}</value></data>
+  <data name="NotificationEntryAliasAccessUnitName" xml:space="preserve"><value>AccessUnitName</value></data>
+  <data name="UnknownEvent" xml:space="preserve"><value>Event ({0})</value></data>
+  <data name="ServiceTypeAlarmsServiceName" xml:space="preserve"><value>Alarms Service</value></data>
+  <data name="MobileServer" xml:space="preserve"><value>Mobile server</value></data>
+  <data name="ReportServer" xml:space="preserve"><value>Report server</value></data>
+  <data name="MetadataDefaultName" xml:space="preserve"><value>Metadata {0} on {1}</value></data>
+  <data name="BookmarkEntryAliasEventName" xml:space="preserve"><value>EventName</value></data>
+  <data name="RecordingServer" xml:space="preserve"><value>Recording server</value></data>
+  <data name="LPRServer" xml:space="preserve"><value>LPR server</value></data>
+  <data name="ServiceTypeRegisteredServiceName" xml:space="preserve"><value>Registered Service</value></data>
+  <data name="ServiceName_Format" xml:space="preserve"><value>{0} ({1})</value></data>
+  <data name="NewGroupNameOutputs" xml:space="preserve"><value>Output Group {0}</value></data>
+  <data name="AllGatewayServices" xml:space="preserve"><value>API gateways</value></data>
+  <data name="EventServer" xml:space="preserve"><value>Event server</value></data>
+  <data name="ManagementServer" xml:space="preserve"><value>Management server</value></data>
+  <data name="ServiceTypeUnknownServiceName" xml:space="preserve"><value>Unknown</value></data>
+  <data name="ServiceTypeRecordingServiceGroupName" xml:space="preserve"><value>Recording servers</value></data>
+  <data name="TopNodeInTreeInputs" xml:space="preserve"><value>Input</value></data>
+  <data name="ClientProfileDefaultProfileDescription" xml:space="preserve"><value>This is the default {0} profile used in new roles.</value></data>
+  <data name="AllFailoverServers" xml:space="preserve"><value>Failover servers</value></data>
+  <data name="InputDefaultName" xml:space="preserve"><value>Input {0} on {1}</value></data>
+  <data name="TopNodeInTreeFailover" xml:space="preserve"><value>Failover Groups</value></data>
+  <data name="AllNodeInTreeCameras" xml:space="preserve"><value>All Cameras</value></data>
+  <data name="AllAlarmsServices" xml:space="preserve"><value>Alarms Services</value></data>
+  <data name="InvalidWeeklySchedule" xml:space="preserve"><value>Select at least one day to be part of this weekly schedule.</value></data>
+  <data name="MicrophoneDefaultName" xml:space="preserve"><value>Microphone {0} on {1}</value></data>
+  <data name="AllLogServers" xml:space="preserve"><value>Log servers</value></data>
+  <data name="ServiceTypeEventServiceName" xml:space="preserve"><value>Event Server</value></data>
+  <data name="BookmarkEntryAliasRecorderName" xml:space="preserve"><value>RecorderName</value></data>
+  <data name="FailoverServer" xml:space="preserve"><value>Failover server</value></data>
+  <data name="NewGroupNameMicrophones" xml:space="preserve"><value>Microphone Group {0}</value></data>
+  <data name="AllNodeInTreeDefault" xml:space="preserve"><value>All Other Devices</value></data>
+  <data name="TopNodeInTreeMetadata" xml:space="preserve"><value>Metadata</value></data>
+  <data name="AllNodeInTreeInputs" xml:space="preserve"><value>All Input</value></data>
+  <data name="ServiceTypeLPRServiceGroupName" xml:space="preserve"><value>LPR servers</value></data>
+  <data name="AllTransActServers" xml:space="preserve"><value>Transaction servers</value></data>
+  <data name="AlarmsService" xml:space="preserve"><value>Alarms Service</value></data>
+  <data name="TopNodeInTreeMicrophones" xml:space="preserve"><value>Microphones</value></data>
+  <data name="AllEventServers" xml:space="preserve"><value>Event servers</value></data>
+  <data name="LogEntryAliasTypeTriggerTime" xml:space="preserve"><value>TriggerTime</value></data>
+  <data name="NewGroupNameCameras" xml:space="preserve"><value>Camera Group {0}</value></data>
+  <data name="ServiceTypeEventServiceGroupName" xml:space="preserve"><value>Event servers</value></data>
+  <data name="SingleCamera" xml:space="preserve"><value>Single camera</value></data>
+  <data name="NewGroupNameMetadata" xml:space="preserve"><value>Metadata Group {0}</value></data>
+  <data name="NotificationEntryAliasTriggerTime" xml:space="preserve"><value>TriggerTime</value></data>
+  <data name="ProcessingServer" xml:space="preserve"><value>Processing server</value></data>
+  <data name="AllRecordingServers" xml:space="preserve"><value>Recording servers</value></data>
+  <data name="BookmarkEntryAliasDeviceName" xml:space="preserve"><value>DeviceName</value></data>
+  <data name="AllReportServers" xml:space="preserve"><value>Report servers</value></data>
+  <data name="AllNodeInTreeSpeakers" xml:space="preserve"><value>All Speakers</value></data>
+  <data name="LogEntryAliasTypeEventName" xml:space="preserve"><value>EventName</value></data>
+  <data name="ServiceTypeMobileServiceGroupName" xml:space="preserve"><value>Mobile servers</value></data>
+  <data name="LogEntryAliasTypeRuleName" xml:space="preserve"><value>RuleName</value></data>
+  <data name="ServiceTypeIncidentManagerServiceName" xml:space="preserve"><value>Incident Manager service</value></data>
+  <data name="LogServer" xml:space="preserve"><value>Log server</value></data>
+  <data name="ServiceTypeLicensePlateRecognitionServiceName" xml:space="preserve"><value>LPR Server</value></data>
+  <data name="CameraDefaultName" xml:space="preserve"><value>Camera {0} on {1}</value></data>
+  <data name="GatewayService" xml:space="preserve"><value>API gateway</value></data>
+  <data name="NotificationEntryAliasRecorderName" xml:space="preserve"><value>RecorderName</value></data>
+  <data name="KeyMustBeGuid" xml:space="preserve"><value>key must be of type Guid.</value></data>
+  <data name="TopNodeInTreeCameraes" xml:space="preserve"><value>Cameras</value></data>
+  <data name="AllManagementServers" xml:space="preserve"><value>Management servers</value></data>
+  <data name="ServiceTypeReportServiceName" xml:space="preserve"><value>Report Server</value></data>
+  <data name="AllNodeInTreeOutputs" xml:space="preserve"><value>All Output</value></data>
+  <data name="ServiceTypeOnvifServiceName" xml:space="preserve"><value>Open Network Bridge Server</value></data>
+  <data name="DefaultDefaultName" xml:space="preserve"><value>Other Device {0}{1}</value></data>
+  <data name="ClientProfileDefaultProfileName" xml:space="preserve"><value>Default {0} Profile</value></data>
+  </root>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:ui="clr-namespace:VideoOS.Platform.UI">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/VideoOSBase.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Path x:Key="{x:Static controls:VideoOSIcon+VideoOSIconInternals.PathContentKey}" Width="1" Height="1" Data="{Binding Path.Data}" StrokeThickness="{Binding Path.StrokeThickness}" StrokeDashArray="{Binding Path.StrokeDashArray}" StrokeDashCap="{Binding Path.StrokeDashCap}" StrokeDashOffset="{Binding Path.StrokeDashOffset}" StrokeEndLineCap="{Binding Path.StrokeEndLineCap}" StrokeLineJoin="{Binding Path.StrokeLineJoin}" StrokeMiterLimit="{Binding Path.StrokeMiterLimit}" StrokeStartLineCap="{Binding Path.StrokeStartLineCap}">
+    <UIElement.RenderTransform>
+      <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContentControl}}}" ScaleY="{Binding Path=ActualHeight, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContentControl}}}" />
+    </UIElement.RenderTransform>
+    <Shape.Fill>
+      <MultiBinding Converter="{x:Static controls:VideoOSIconInternals.AutoColorBrushConverter}">
+        <Binding Path="." RelativeSource="{RelativeSource Self}" />
+        <Binding Path="AutoColor" />
+        <Binding Path="AutoColorBrush" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSIcon}}" />
+        <Binding Path="Path.Fill" />
+        <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+      </MultiBinding>
+    </Shape.Fill>
+    <Shape.Stroke>
+      <MultiBinding Converter="{x:Static controls:VideoOSIconInternals.AutoColorBrushConverter}">
+        <Binding Path="." RelativeSource="{RelativeSource Self}" />
+        <Binding Path="AutoColor" />
+        <Binding Path="AutoColorBrush" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSIcon}}" />
+        <Binding Path="Path.Stroke" />
+        <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+      </MultiBinding>
+    </Shape.Stroke>
+  </Path>
+  <DataTemplate x:Key="{x:Static controls:VideoOSIcon+VideoOSIconInternals.BitmapTemplateKey}">
+    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{Binding BitmapSource}" FlowDirection="{Binding Path=FlowDirection, RelativeSource={RelativeSource FindAncestor, AncestorType=ContentControl}}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:VideoOSIcon+VideoOSIconInternals.ResourceTemplateKey}">
+    <controls:IconResourceImage RenderOptions.BitmapScalingMode="HighQuality" ResourceName="{Binding ResourceName}" FlowDirection="{Binding Path=FlowDirection, RelativeSource={RelativeSource FindAncestor, AncestorType=ContentControl}}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:VideoOSIcon+VideoOSIconInternals.UriTemplateKey}">
+    <controls:IconUriImage RenderOptions.BitmapScalingMode="HighQuality" Uri="{Binding Uri}" FlowDirection="{Binding Path=FlowDirection, RelativeSource={RelativeSource FindAncestor, AncestorType=ContentControl}}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:VideoOSIcon+VideoOSIconInternals.PathTemplateKey}">
+    <ContentControl Focusable="False" Content="{StaticResource {x:Static controls:VideoOSIconInternals.PathContentKey}}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:VideoOSIcon+VideoOSIconInternals.MultiPathTemplateKey}">
+    <ItemsControl IsTabStop="False" ItemsSource="{Binding Paths}">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <Grid />
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <ContentControl Focusable="False" Content="{StaticResource {x:Static controls:VideoOSIconInternals.PathContentKey}}" />
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+  </DataTemplate>
+  <controls:IconContentDataTemplateSelector x:Key="{x:Static controls:VideoOSIcon+VideoOSIconInternals.IconContentDataTemplateSelectorKey}" BitmapTemplate="{StaticResource {x:Static controls:VideoOSIconInternals.BitmapTemplateKey}}" ResourceTemplate="{StaticResource {x:Static controls:VideoOSIconInternals.ResourceTemplateKey}}" UriTemplate="{StaticResource {x:Static controls:VideoOSIconInternals.UriTemplateKey}}" PathTemplate="{StaticResource {x:Static controls:VideoOSIconInternals.PathTemplateKey}}" MultiPathTemplate="{StaticResource {x:Static controls:VideoOSIconInternals.MultiPathTemplateKey}}" />
+  <Style x:Key="{x:Type controls:VideoOSIcon}" BasedOn="{StaticResource {x:Static controls:VideoOSBaseInternals.StyleKey}}" TargetType="{x:Type controls:VideoOSIcon}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type controls:VideoOSIcon}">
+          <Grid Background="{TemplateBinding Control.Background}" SnapsToDevicePixels="True">
+            <FrameworkElement.FlowDirection>
+              <MultiBinding Converter="{x:Static controls:VideoOSIconInternals.FlowDirectionConverter}">
+                <Binding Path="IconSource.FollowFlowDirection" RelativeSource="{RelativeSource TemplatedParent}" />
+                <Binding Path="FlowDirection" RelativeSource="{RelativeSource TemplatedParent}" />
+              </MultiBinding>
+            </FrameworkElement.FlowDirection>
+            <ContentControl Focusable="False" ContentTemplateSelector="{StaticResource {x:Static controls:VideoOSIconInternals.IconContentDataTemplateSelectorKey}}">
+              <ContentControl.Content>
+                <MultiBinding Converter="{x:Static controls:VideoOSIconInternals.ContentConverter}">
+                  <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                  <Binding Path="IconSource" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSIcon}}" />
+                  <Binding Path="FlowDirection" RelativeSource="{RelativeSource TemplatedParent}" />
+                  <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                  <Binding Path="IconSource.BuiltInIconSourcePropertyChanged" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSIcon}}" />
+                </MultiBinding>
+              </ContentControl.Content>
+              <UIElement.Opacity>
+                <MultiBinding Converter="{x:Static controls:VideoOSIconInternals.OpacityConverter}">
+                  <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                  <Binding Path="IsEnabled" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSIcon}}" />
+                  <Binding Path="Appearance" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSIcon}}" />
+                  <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                </MultiBinding>
+              </UIElement.Opacity>
+            </ContentControl>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

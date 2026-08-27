@@ -1,0 +1,802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="MsFailoverNodeStartedEventFired" xml:space="preserve"><value>Management server failover started.</value></data>
+  <data name="AuditLiveMetadataDenied" xml:space="preserve"><value>Client live feed denied</value></data>
+  <data name="DeviceEmptyTableFailedLastRetry" xml:space="preserve"><value>Delete all device recordings failed.</value></data>
+  <data name="HardwarePasswordChangeFailedUserAccessDenied" xml:space="preserve"><value>The user does not have access for the operation on hardware device {0}.</value></data>
+  <data name="AuditDeviceShortNameChanged" xml:space="preserve"><value>Short name of device '{0}' changed to '{1}'</value></data>
+  <data name="FailoverServerStoppingHotStandby" xml:space="preserve"><value>Stopping the hot standby server for recording server '{0}'.</value></data>
+  <data name="RecordingStorageSetEncryptionMethodBegin" xml:space="preserve"><value>Set new encryption method on recording storage '{0}' started.</value></data>
+  <data name="Field_EventType" xml:space="preserve"><value>Event type</value></data>
+  <data name="FileTransferredToRecorder" xml:space="preserve"><value>The transfer of file '{0}' to recording server '{1}' completed successfully.</value></data>
+  <data name="AuditSiteSlaveCreated" xml:space="preserve"><value>The site '{0}' on '{1}' was added to the hierarchy.</value></data>
+  <data name="AutoProvisionedUserUpdated" xml:space="preserve"><value>The claims from an external IDP are updated for the user {0}.</value></data>
+  <data name="AuditDeviceShortcutChanged" xml:space="preserve"><value>Shortcut of device '{0}' changed to '{1}'</value></data>
+  <data name="DeviceSetOverflowMode" xml:space="preserve"><value>Media overflow. The device is now in overflow mode.</value></data>
+  <data name="ErrorHardwareNotEnabled" xml:space="preserve"><value>Operation failed on {0}. The hardware device is disabled.</value></data>
+  <data name="ArchiveStorageMountBegin" xml:space="preserve"><value>Mounting the archive '{0}' was started.</value></data>
+  <data name="RecordingStorageMoveBegin" xml:space="preserve"><value>Move recording storage '{0}' started.</value></data>
+  <data name="UserHandlingErrorUnsupported" xml:space="preserve"><value>Operation failed on: {0}. User handling not supported.</value></data>
+  <data name="Enum_EntrySeverity_Undefined" xml:space="preserve"><value>Undefined</value></data>
+  <data name="AuditAuthorizationFailedSelfAuthorization" xml:space="preserve"><value>Authorization failed: User can not authorize himself.</value></data>
+  <data name="InconsistentHardwareConfiguration" xml:space="preserve"><value>The system found inconsistencies in the hardware settings of hardware {0}, model {1}</value></data>
+  <data name="ArchiveStorageUnmountBegin" xml:space="preserve"><value>Unmounting the archive '{0}' was started.</value></data>
+  <data name="AuditExportMicrophoneToDBWithEncryption" xml:space="preserve"><value>Database export started. With encryption. Sequence '{0}' to '{1}'</value></data>
+  <data name="AuditBasicUserForcePasswordChangeCleared" xml:space="preserve"><value>Basic user '{0}' not forced to change password.</value></data>
+  <data name="ScheduledHardwarePasswordChangeSuccess" xml:space="preserve"><value>The scheduled password change was successful for the following hardware device: '{0}'.</value></data>
+  <data name="AuditBasicUserCreated" xml:space="preserve"><value>Basic user '{0}' created.</value></data>
+  <data name="AuditSiteMasterAuthorizedDenied" xml:space="preserve"><value>The site administrator denied the inclusion of the site {0} in the hierarchy under {1}.</value></data>
+  <data name="AuditRuleEnabled" xml:space="preserve"><value>Rule '{0}' enabled</value></data>
+  <data name="Enum_Category_ExternalComponents" xml:space="preserve"><value>External components</value></data>
+  <data name="Enum_AccessGranted_Default" xml:space="preserve"><value>Default</value></data>
+  <data name="AuditRoleObjectSecuritySystemTimeProfileToSystemProfileChange" xml:space="preserve"><value>The time profile is changed for access permission '{0}'-'{1}' from system time profile '{2}' to system time profile '{3}' on '{4}'</value></data>
+  <data name="HardwarePasswordChangeFailedHardwareNotStarted" xml:space="preserve"><value>The password of hardware device {0} could not be changed. The hardware device is switched off.</value></data>
+  <data name="InitializeWebServerFailed" xml:space="preserve"><value>Error initializing web server: {0}</value></data>
+  <data name="AuditRecorderRemoved" xml:space="preserve"><value>Recording server '{0}' removed</value></data>
+  <data name="AuditRecorderRenamed" xml:space="preserve"><value>Recording server '{0}' renamed to '{1}'</value></data>
+  <data name="HardwarePasswordChangeFailedPasswordTooShort" xml:space="preserve"><value>The password of hardware device {0} could not be changed. The password is too short or too weak.</value></data>
+  <data name="LegacyRecorderNoEventUpdates" xml:space="preserve"><value>Updates to event definitions could not be sent to recording server '{0}' because it is not the latest version.</value></data>
+  <data name="AuditRecordingStorageCreated" xml:space="preserve"><value>Storage '{0}' added.</value></data>
+  <data name="AuditHardwarePasswordReadFailedInsufficientRights" xml:space="preserve"><value>Cannot read hardware password for '{0}'. Insufficient user permissions</value></data>
+  <data name="AuditDevicePtzManuelSessionTimeoutChanged" xml:space="preserve"><value>Timeout for manual PTZ session changed on '{0}' to '{1}'</value></data>
+  <data name="RecorderAdded" xml:space="preserve"><value>Recording server '{0}' added (not authorized)</value></data>
+  <data name="AuditRoleClientLoginRevoked" xml:space="preserve"><value>The Allow {0} login option is revoked for the role '{1}'</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionMinutesToMinutes" xml:space="preserve"><value>The restriction is changed for access permission '{0}'-'{1}' from restricted '{2}' minutes to restricted '{3}' minutes on '{4}'</value></data>
+  <data name="AuditDeviceRecordSettingsChanged" xml:space="preserve"><value>Recording settings changed on '{0}'</value></data>
+  <data name="HardwareUpdateDriverFailed" xml:space="preserve"><value>Failed to update driver for hardware '{0}'</value></data>
+  <data name="HardwareCommunicationError" xml:space="preserve"><value>Communication error (hardware)</value></data>
+  <data name="FailedToDistributeGlobalizedEvents" xml:space="preserve"><value>Global event '{0}' was not distributed to the required recording servers. Error: {1}</value></data>
+  <data name="AuditMetadataSearchCategoryIsDisabled" xml:space="preserve"><value>Visibility of search category '{0}' disabled</value></data>
+  <data name="AuditBasicUserChangeOwnPassword" xml:space="preserve"><value>The password for basic user '{0}' is changed.</value></data>
+  <data name="ShutdownSmartSearchManagerFailed" xml:space="preserve"><value>Error shutting down smart search manager: {0}</value></data>
+  <data name="AuditDevicePrivacyMaskSettingsChanged" xml:space="preserve"><value>Privacy mask settings changed on '{0}'</value></data>
+  <data name="AuditVideoWallMonitorLayoutViewApplied" xml:space="preserve"><value>View '{0}' applied to layout</value></data>
+  <data name="HardwarePasswordChangeFailedNoAccess" xml:space="preserve"><value>There is no access to hardware device {0}.</value></data>
+  <data name="AuditPlaybackSpeakerRecordingsDenied" xml:space="preserve"><value>The client was not allowed to play back audio.</value></data>
+  <data name="InitializeLoadCachedConfigurationFailed" xml:space="preserve"><value>Error loading cached recording server configuration: {0}</value></data>
+  <data name="AuditPlaybackCameraRecordingsDeniedTimeBased" xml:space="preserve"><value>The client was not allowed to play back video (time based).</value></data>
+  <data name="Enum_AuditType_MetadataSearch" xml:space="preserve"><value>Metadata search</value></data>
+  <data name="AuditHardwareReplaced" xml:space="preserve"><value>Hardware '{0}' replaced by '{1}'</value></data>
+  <data name="AuditPTZRectangleZoom" xml:space="preserve"><value>PTZ rectangle activated. Width '{0}', Height '{1}', Left '{2}', Top '{3}', Right '{4}', Bottom '{5}'.</value></data>
+  <data name="ArchiveStorageMoveSuccess" xml:space="preserve"><value>The archive '{0}' was deleted.</value></data>
+  <data name="AuditRoleObjectSecurityRevoked" xml:space="preserve"><value>The access permission '{0}'-'{1}' is revoked on '{2}'</value></data>
+  <data name="AuditLiveSpeakerStarted" xml:space="preserve"><value>Client live feed requested</value></data>
+  <data name="AuditMediaRestrictionLiveUpdated" xml:space="preserve"><value>Updated live restriction for '{0}'.</value></data>
+  <data name="AuditDeviceRecordingStorageSelected" xml:space="preserve"><value>Storage '{0}' selected for recording on '{1}'.</value></data>
+  <data name="DeviceSettingsChangedError" xml:space="preserve"><value>Change of settings failed</value></data>
+  <data name="AuditDevicePtzExtendedManualSessionTimeoutChanged" xml:space="preserve"><value>Timeout for pause patrolling session changed on '{0}' to '{1}'</value></data>
+  <data name="EMailErrorRecorderUnavailable" xml:space="preserve"><value>E-mail sent to: {0}. Recording server image unavailable '{1}'</value></data>
+  <data name="AuditPlaybackMetadataRecordingsOneLogOnly" xml:space="preserve"><value>Retrieving recorded metadata in main track from '{0}' to '{1}' (UTC time).</value></data>
+  <data name="Enum_AuditType_Bookmark" xml:space="preserve"><value>Bookmark</value></data>
+  <data name="AuditRoleObjectSecuritySystemTimeProfileToProfileChange" xml:space="preserve"><value>The time profile is changed for access permission '{0}'-'{1}' from system time profile '{2}' to time profile '{3}' on '{4}'</value></data>
+  <data name="MediaDatabaseUpgradeFailedNoRetry" xml:space="preserve"><value>Upgrade device media database failed.</value></data>
+  <data name="Enum_AuditType_PlaybackMetadata" xml:space="preserve"><value>Play back metadata</value></data>
+  <data name="InitializeDriverServicesFailed" xml:space="preserve"><value>Error starting driver services: {0}</value></data>
+  <data name="AuditPTZMoveHome" xml:space="preserve"><value>PTZ move 'Home'</value></data>
+  <data name="AuditPTZMoveStop" xml:space="preserve"><value>PTZ move 'Stopped'</value></data>
+  <data name="FailoverServerUnableToUpdateTheRecorderGuid" xml:space="preserve"><value>Unable to update the recording server id. The configuration file was not found.</value></data>
+  <data name="ServerSNMPServiceNotInstalled" xml:space="preserve"><value>Microsoft SNMP Service not installed. SNMP support will be disabled until the Microsoft SNMP Service has been installed.</value></data>
+  <data name="AuditClientBrowseSequence" xml:space="preserve"><value>Playback of recorded sequence from '{0}' to '{1}' started.</value></data>
+  <data name="AuditMarkedDataUpdate" xml:space="preserve"><value>The marked data (with evidence locks or bookmarks) '{0}' was updated.</value></data>
+  <data name="RecorderConnected" xml:space="preserve"><value>Recording server '{0}' connected</value></data>
+  <data name="DatabaseConnectionRestored" xml:space="preserve"><value>Database connection restored.</value></data>
+  <data name="AuditUserDefinedEventActivated" xml:space="preserve"><value>User-defined event '{0}' activated</value></data>
+  <data name="AuditLoginSuccessFromExternalSource" xml:space="preserve"><value>User successfully logged in to the system from an external source.</value></data>
+  <data name="Enum_SourceType_Recorder" xml:space="preserve"><value>Recorder</value></data>
+  <data name="Enum_EventGeneratorType_MIPDevice" xml:space="preserve"><value>MIP device</value></data>
+  <data name="Enum_ResourceType_Microphone" xml:space="preserve"><value>Microphone</value></data>
+  <data name="AuditMetadataSearchFilterIsEnabled" xml:space="preserve"><value>Visibility of search filter '{0}' enabled</value></data>
+  <data name="InitializeSmartSearchManagerFailed" xml:space="preserve"><value>Error starting smart search manager: {0}</value></data>
+  <data name="AuditRecordingStorageArchiveMoved" xml:space="preserve"><value>Archive '{0}' in '{1}' moved from '{2}' to '{3}'.</value></data>
+  <data name="AuditRuleEdited" xml:space="preserve"><value>Rule '{0}' edited</value></data>
+  <data name="AuditDeviceCoverageFieldOfViewChanged" xml:space="preserve"><value>Field of view of device '{0}' changed to '{1}' degrees</value></data>
+  <data name="Enum_Category_EdgeStorage" xml:space="preserve"><value>Remote recordings</value></data>
+  <data name="InitializeServerRuleProcessorFailed" xml:space="preserve"><value>Error starting management server rule processor: {0}</value></data>
+  <data name="Enum_ResourceType_Storage" xml:space="preserve"><value>Storage</value></data>
+  <data name="AuditLoginCallingApplictionUnknown" xml:space="preserve"><value>User not allowed logging on from '{0}'. Access denied.</value></data>
+  <data name="ShutdownEdgeStorageFailed" xml:space="preserve"><value>Error shutting down remote recording manager: {0}</value></data>
+  <data name="Enum_Category_MetadataSearch" xml:space="preserve"><value>Metadata search</value></data>
+  <data name="InitializeDriverEventListenerFailed" xml:space="preserve"><value>Error starting driver event listener: {0}</value></data>
+  <data name="AuditRoleOverallSecurityChangeAccessDenied" xml:space="preserve"><value>The '{0}' access permissions could not be changed due to insufficient user permissions.</value></data>
+  <data name="UserHandlingErrorUnknown" xml:space="preserve"><value>Operation failed on: {0}. An unknown error occurred during user handling.</value></data>
+  <data name="AuditLoginProviderCreated" xml:space="preserve"><value>External IDP '{0}' was created.</value></data>
+  <data name="AuditPlaybackMicrophoneRecordingsDeniedTimeBased" xml:space="preserve"><value>The client was not allowed to play back audio (time based).</value></data>
+  <data name="AuditTrustedIssuerCreated" xml:space="preserve"><value>The trusted issuer {0} is created.</value></data>
+  <data name="RecordingStorageSetEncryptionPasswordFailedNoRetry" xml:space="preserve"><value>Set new encryption password on recording storage '{0}' failed.</value></data>
+  <data name="AuditExportMicrophoneCompleted" xml:space="preserve"><value>Export completed. Sequence '{0}' to '{1}'</value></data>
+  <data name="HardwarePasswordChangeFailedHardwareNotEnabled" xml:space="preserve"><value>The password of hardware device {0} could not be changed. The hardware device is disabled.</value></data>
+  <data name="Enum_SourceType_Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="AuditRoleClaimRemoved" xml:space="preserve"><value>Claim '{2}' with value '{3}' from external IDP '{1}' was removed from the role '{0}'</value></data>
+  <data name="DeviceCommunicationEstablished" xml:space="preserve"><value>Communication established.</value></data>
+  <data name="AuditRoleOverallSecurityRevokedDenied" xml:space="preserve"><value>The state Deny for the access permission '{0}'-'{1}' is revoked</value></data>
+  <data name="Enum_ResourceType_IdentityProvider" xml:space="preserve"><value>Identity Provider</value></data>
+  <data name="FailedToDistributeRuleActions" xml:space="preserve"><value>Actions for the rule '{0}' were not distributed to the required recording servers. Error: {1}</value></data>
+  <data name="AuditRoleClientProfileChanged" xml:space="preserve"><value>The {0} profile option is changed from '{1}' to '{2}' for the role '{3}'</value></data>
+  <data name="Enum_EntryStatus_StatusQuo" xml:space="preserve"><value>Status quo</value></data>
+  <data name="AuditClientProfileRenamed" xml:space="preserve"><value>The {0} profile '{1}' renamed to '{2}'.</value></data>
+  <data name="Enum_ResourceType_Speaker" xml:space="preserve"><value>Speaker</value></data>
+  <data name="RecorderNotCompatible" xml:space="preserve"><value>Recording server connected, but is not the same version as the management server.</value></data>
+  <data name="RecordingStorageSetEncryptionPasswordBegin" xml:space="preserve"><value>Set new encryption password on recording storage '{0}' started.</value></data>
+  <data name="LicenseDeviceUnlicensed" xml:space="preserve"><value>The device is not licensed. Device: {0}</value></data>
+  <data name="Enum_ServerLogType_Audit" xml:space="preserve"><value>Audit</value></data>
+  <data name="AuditDevicePtzReservedSessionTimeoutChanged" xml:space="preserve"><value>Timeout for reserved PTZ session changed on '{0}' to '{1}'</value></data>
+  <data name="AuditBookmarkDeleted" xml:space="preserve"><value>Bookmark '{0}' deleted.</value></data>
+  <data name="Enum_ResourceType_ManagementServer" xml:space="preserve"><value>Management server</value></data>
+  <data name="AuditRoleDefaultTimeProfileChanged" xml:space="preserve"><value>The Default time profile option is changed from '{0}' to '{1}' for the role '{2}'</value></data>
+  <data name="Enum_Category_Live" xml:space="preserve"><value>Live</value></data>
+  <data name="AuditPlaybackSpeakerRecordingsDeniedTimeBased" xml:space="preserve"><value>The client was not allowed to play back audio</value></data>
+  <data name="AuditDeviceRecordingPrebufferDisabled" xml:space="preserve"><value>Pre-buffer disabled on '{0}'.</value></data>
+  <data name="AuditRoleOverallSecurityRevoked" xml:space="preserve"><value>The state Allow for the access permission '{0}'-'{1}' is revoked</value></data>
+  <data name="HardwarePasswordChangeFailedPasswordInvalidCharacter" xml:space="preserve"><value>The password of hardware device {0} could not be changed. Invalid password.</value></data>
+  <data name="AuditExportSpeakerToDBNoEncryption" xml:space="preserve"><value>Database export started. No encryption. Sequence '{0}' to '{1}'</value></data>
+  <data name="RecordingStorageDeleteBegin" xml:space="preserve"><value>Delete recording storage '{0}' started.</value></data>
+  <data name="AuditDeviceStreamSettingsChanged" xml:space="preserve"><value>Stream settings changed on '{0}'</value></data>
+  <data name="AuditExportSpeakerToDBWithEncryption" xml:space="preserve"><value>Database export started. With encryption. Sequence '{0}' to '{1}'</value></data>
+  <data name="UserHandlingErrorUserNameNotRecognized" xml:space="preserve"><value>Operation failed on: {1}. User '{0}' not recognized.</value></data>
+  <data name="Enum_ResourceType_PerformanceCounterRule" xml:space="preserve"><value>System dashboard thresholds</value></data>
+  <data name="Enum_ResourceType_GenericEvents" xml:space="preserve"><value>Generic events</value></data>
+  <data name="ArchiveStorageDeleteSuccess" xml:space="preserve"><value>The archive '{0}' was deleted.</value></data>
+  <data name="AuditGenericEventsActivated" xml:space="preserve"><value>Generic events activated. Data sources enabled: {0}</value></data>
+  <data name="AuditMapImageReplaced" xml:space="preserve"><value>Map image for map '{0}' replaced with this image '{1}'</value></data>
+  <data name="AuditLoginLogoutTimeout" xml:space="preserve"><value>User connection timed out</value></data>
+  <data name="Field_ResourceType" xml:space="preserve"><value>Resource type</value></data>
+  <data name="Field_ResourceName" xml:space="preserve"><value>Resource name</value></data>
+  <data name="RecorderDisconnected" xml:space="preserve"><value>Recording server '{0}' disconnected</value></data>
+  <data name="LicenseUnLicensedServer" xml:space="preserve"><value>Note: Management server is running without a license.</value></data>
+  <data name="CodecDoesNotSupportThisMedia" xml:space="preserve"><value>&lt;P&gt;The selected codec is not supported. Select a valid codec.&lt;/P&gt;</value></data>
+  <data name="AuditPlaybackMetadataRecordingsDenied" xml:space="preserve"><value>The client was not allowed to play back metadata.</value></data>
+  <data name="AuditLoginSuccessFromAdministration" xml:space="preserve"><value>User successfully logged in to the system from the {0}.</value></data>
+  <data name="Enum_ResourceType_AudioMessage" xml:space="preserve"><value>Audio message</value></data>
+  <data name="AuditLiveMicrophoneDeniedTimeBased" xml:space="preserve"><value>Client live feed denied due to time based security restrictions</value></data>
+  <data name="AuditLiveSpeakToSpeakerDenied" xml:space="preserve"><value>Speaking to speaker denied</value></data>
+  <data name="ServerStopped" xml:space="preserve"><value>Management server stopped.</value></data>
+  <data name="ServerStarted" xml:space="preserve"><value>Management server started.</value></data>
+  <data name="Enum_Category_IOAndEvents" xml:space="preserve"><value>IO and events</value></data>
+  <data name="AuditVideoWallMonitorLayoutPositionCleared" xml:space="preserve"><value>Position '{0}' cleared</value></data>
+  <data name="Enum_ResourceType_TimeProfile" xml:space="preserve"><value>Time profile</value></data>
+  <data name="Enum_Category_Security" xml:space="preserve"><value>Security</value></data>
+  <data name="Enum_EventGeneratorType_RecorderPlugin" xml:space="preserve"><value>Recorder plugin</value></data>
+  <data name="AuditOutputActivatedTimeBased" xml:space="preserve"><value>Activating output '{0}' denied due to time based security restrictions</value></data>
+  <data name="Enum_ResourceType_SystemDashboardConfiguration" xml:space="preserve"><value>System Dashboard Configuration</value></data>
+  <data name="AuditHardwarePasswordChanged" xml:space="preserve"><value>User initiated a password change of the hardware '{0}' on recording server '{1}'.</value></data>
+  <data name="AuditHardwarePasswordRead" xml:space="preserve"><value>Hardware password read for '{0}'</value></data>
+  <data name="Enum_ResourceType_Metadata" xml:space="preserve"><value>Metadata device</value></data>
+  <data name="AuditVideoWallPresetDeleted" xml:space="preserve"><value>{0} preset '{1}' for the '{2}' {0} deleted</value></data>
+  <data name="ShutdownRecorderCommandProcessorFailed" xml:space="preserve"><value>Error shutting down command processor: {0}</value></data>
+  <data name="RecordingStorageDeleteFailedLastRetry" xml:space="preserve"><value>Delete recording storage '{0}' failed.</value></data>
+  <data name="AuditBasicUserForcePasswordChange" xml:space="preserve"><value>Basic user '{0}' must change password.</value></data>
+  <data name="AuditDeviceGisPointChanged" xml:space="preserve"><value>GPS coordinates of device '{0}' changed to '{1}'</value></data>
+  <data name="Enum_AuditType_Export" xml:space="preserve"><value>Export</value></data>
+  <data name="Enum_SourceType_Server" xml:space="preserve"><value>Server</value></data>
+  <data name="HardwarePasswordChangeFailedUnknownResult" xml:space="preserve"><value>The password of hardware device {0} could not be changed. The recording server does not recognize the response from the hardware driver.</value></data>
+  <data name="UserHandlingErrorUserNameClash" xml:space="preserve"><value>Operation failed on: {1}. User '{0}' already exists.</value></data>
+  <data name="Enum_SourceType_System" xml:space="preserve"><value>System</value></data>
+  <data name="Field_LogType" xml:space="preserve"><value>Log type</value></data>
+  <data name="Field_ResourceId" xml:space="preserve"><value>Resource ID</value></data>
+  <data name="AuditVideoWallPresetActivate" xml:space="preserve"><value>{0} preset '{1}' selected</value></data>
+  <data name="HardwareUpdateNoDefaultDatabase" xml:space="preserve"><value>Cannot update driver for hardware '{0}'. The recording server service version is no longer supported. You can still access recordings on the recording server, but it must be upgraded to the current version before you can change its configuration.</value></data>
+  <data name="InitializeServerSNMPManagerFailed" xml:space="preserve"><value>Error starting SNMP manager: {0}</value></data>
+  <data name="ArchiveStorageMoveFailedLastRetry" xml:space="preserve"><value>Deletion of the archive '{0}' failed.</value></data>
+  <data name="AuditRecordingStorageArchiveUnmounted" xml:space="preserve"><value>Archive '{0}' in '{1}' has been unmounted.</value></data>
+  <data name="AuditExportSpeakerCancelled" xml:space="preserve"><value>Export cancelled.</value></data>
+  <data name="AuditDirectoryCreatedOnRecorder" xml:space="preserve"><value>New directory created on recording server '{0}': '{1}'</value></data>
+  <data name="RecorderSNMPServiceNotStarted" xml:space="preserve"><value>Microsoft SNMP Service not started. SNMP support will be disabled until the Microsoft SNMP Service has been started.</value></data>
+  <data name="AuditLiveCameraDeniedTimeBased" xml:space="preserve"><value>Client live feed denied due to time based security restrictions</value></data>
+  <data name="AuditPlaybackMicrophoneRecordingsDenied" xml:space="preserve"><value>The client was not allowed to play back audio.</value></data>
+  <data name="LoadExternalPluginConfigurationFailed" xml:space="preserve"><value>Failed applying external plug-in configurations: {0}</value></data>
+  <data name="ArchiveStorageMoveBegin" xml:space="preserve"><value>Deletion of the archive '{0}' was started.</value></data>
+  <data name="AuditMediaRestrictionDeleted" xml:space="preserve"><value>Deleted playback restriction '{0}'.</value></data>
+  <data name="AuditUserLoginFailedUnknownUser" xml:space="preserve"><value>Login by the user failed. The user is unknown.</value></data>
+  <data name="ShutdownRuleProcessorFailed" xml:space="preserve"><value>Error shutting down management server rule processor: {0}</value></data>
+  <data name="AuditExportCameraToAvi" xml:space="preserve"><value>AVI export started. Sequence '{0}' to '{1}'</value></data>
+  <data name="Enum_EventGeneratorType_Recorder" xml:space="preserve"><value>Recorder</value></data>
+  <data name="AuditBasicUserForcePasswordChangeIdentityProvider" xml:space="preserve"><value>Basic user '{0}' must change password.</value></data>
+  <data name="AuditHardwareFirmwareUpdateStarted" xml:space="preserve"><value>User initiated firmware update for hardware '{0}' on recording server '{1}'.</value></data>
+  <data name="AuditRecordingStorageEditArchive" xml:space="preserve"><value>Archive '{0}' in '{1}' edited.</value></data>
+  <data name="Enum_ResourceType_UserDefinedEvents" xml:space="preserve"><value>User defined events</value></data>
+  <data name="AuditDeviceRecordingPrebufferEnabled" xml:space="preserve"><value>Pre-buffer enabled on '{0}'.</value></data>
+  <data name="AuditDeviceDatabaseDelete" xml:space="preserve"><value>Emptying storage for '{0}' requested on the recording server '{1}'.</value></data>
+  <data name="Enum_AuditType_DatabaseAccess" xml:space="preserve"><value>Database access</value></data>
+  <data name="AuditHardwareSettingsChanged" xml:space="preserve"><value>Settings changed on '{0}'</value></data>
+  <data name="Enum_Category_Bookmark" xml:space="preserve"><value>Bookmark</value></data>
+  <data name="AuditExportSpeakerCompleted" xml:space="preserve"><value>Export completed. Sequence '{0}' to '{1}'.</value></data>
+  <data name="AuditRoleObjectSecurityPriorityGranted" xml:space="preserve"><value>The access permission '{0}'-'{1}' is granted on '{2}' with default priority '{3}'</value></data>
+  <data name="ShutdownServerSNMPManagerFailed" xml:space="preserve"><value>Error shutting down, SNMP manager: {0}</value></data>
+  <data name="Enum_ResourceType_Map" xml:space="preserve"><value>Map</value></data>
+  <data name="Enum_AuditType_RecordingSequences" xml:space="preserve"><value>Recording sequences</value></data>
+  <data name="UserHandlingErrorUserFixed" xml:space="preserve"><value>Operation failed on: {1}. User '{0}' is locked by the manufacturer and cannot be edited.</value></data>
+  <data name="InitializeServerCommunicationFailed" xml:space="preserve"><value>Error initializing management server communication manager: {0}</value></data>
+  <data name="AuditPtzReserveGranted" xml:space="preserve"><value>Reserve PTZ session</value></data>
+  <data name="AuditMarkedDataCreated" xml:space="preserve"><value>Marked data (with evidence locks or bookmarks) '{0}' was created.</value></data>
+  <data name="AuditDeviceDatabaseMove" xml:space="preserve"><value>Database for '{0}' moved to use '{1}'</value></data>
+  <data name="AuditHardwarePreConfigurationStarted" xml:space="preserve"><value>User initiated pre-configuration of credentials for hardware '{0}' on recording server '{1}'.</value></data>
+  <data name="Field_SourceType" xml:space="preserve"><value>Source type</value></data>
+  <data name="Enum_AuditType_Logout" xml:space="preserve"><value>Logout</value></data>
+  <data name="Enum_SourceType_Hardware" xml:space="preserve"><value>Hardware</value></data>
+  <data name="Field_AuditType" xml:space="preserve"><value>Audit type</value></data>
+  <data name="AuditHardwareRenamed" xml:space="preserve"><value>Hardware '{0}' renamed to '{1}'</value></data>
+  <data name="AuditHardwareRemoved" xml:space="preserve"><value>Hardware '{0}' removed</value></data>
+  <data name="InitializeRecorderApplyConfigurationFailed" xml:space="preserve"><value>Error applying new configuration: {0}</value></data>
+  <data name="Enum_AuditType_MapViewing" xml:space="preserve"><value>Map viewing</value></data>
+  <data name="AuditRoleUserAdded" xml:space="preserve"><value>User '{0}' added to the '{1}' role</value></data>
+  <data name="AuditPerfCountStateRuleCreated" xml:space="preserve"><value>The system dashboard threshold '{0}' was created.</value></data>
+  <data name="MediaDatabaseRepairTableErrorUnknown" xml:space="preserve"><value>Repair of database table failed for an unknown device in storage '{1}'. The device might have been removed from the system. Device ID: '{0}'</value></data>
+  <data name="AuditVideoWallMonitorPresetEdited" xml:space="preserve"><value>{0} preset '{1}' for the '{2}' {0} monitor edited</value></data>
+  <data name="ShutdownDriverEventListenerFailed" xml:space="preserve"><value>Error shutting down driver event listener: {0}</value></data>
+  <data name="AuditConfigurationRestored" xml:space="preserve"><value>System configuration was restored.</value></data>
+  <data name="InitializeServerApplyConfigurationFailed" xml:space="preserve"><value>Error applying new configuration: {0}</value></data>
+  <data name="AuditBookmarkCreated" xml:space="preserve"><value>Bookmark '{0}' added. Headline: '{1}', clip start time: '{2}' (utc), bookmark time: '{3}' (utc), clip end time: '{4}' (utc).</value></data>
+  <data name="Enum_AuditType_ResourceAccess" xml:space="preserve"><value>Resource access</value></data>
+  <data name="AuditMapRenamed" xml:space="preserve"><value>Map '{0}' renamed to '{1}'</value></data>
+  <data name="ShutdownFailoverResponseServerFailed" xml:space="preserve"><value>Error shutting down, failover response server: {0}</value></data>
+  <data name="AuditRoleLoginAuthorizationRequiredRevoked" xml:space="preserve"><value>The Login authorization required option is revoked for the role '{0}'</value></data>
+  <data name="AuditPtzActivatePatrollingProfileDenied" xml:space="preserve"><value>Start of PTZ patrolling profile '{0}' was denied</value></data>
+  <data name="AuditRuleDeleted" xml:space="preserve"><value>Rule '{0}' deleted</value></data>
+  <data name="AuditUserDefinedEventActivatedTimeBased" xml:space="preserve"><value>Activation user-defined event '{0}' denied due to time based security restrictions</value></data>
+  <data name="Enum_Category_Webserver" xml:space="preserve"><value>Web server</value></data>
+  <data name="AuditDeviceRecordingEdgeStoragePlaybackDisabled" xml:space="preserve"><value>Playback of remote recording disabled on '{0}'.</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionDaysToNoRestriction" xml:space="preserve"><value>The restriction is changed for access permission '{0}'-'{1}' from restricted '{2}' days to be without any restriction on '{3}'</value></data>
+  <data name="AuditExportMetadataToDBWithEncryption" xml:space="preserve"><value>Database export started. With encryption. Sequence '{0}' to '{1}'</value></data>
+  <data name="AuditRoleObjectSecurityPriorityChanged" xml:space="preserve"><value>The priority is changed for access permission '{0}'-'{1}' from '{2}' to '{3}' on '{4}'</value></data>
+  <data name="Enum_Category_Management" xml:space="preserve"><value>Management</value></data>
+  <data name="ArchiveStorageDeleteBegin" xml:space="preserve"><value>Deletion of the archive '{0}' was started.</value></data>
+  <data name="HardwareErrorHardwareNotConfigured" xml:space="preserve"><value>Failed to update hardware. The hardware is not found in the recording server configuration. Hardware: {0}</value></data>
+  <data name="InitializeMediaDbFailed" xml:space="preserve"><value>Error initializing media database: {0}</value></data>
+  <data name="AuditClaimDeleted" xml:space="preserve"><value>Claim '{0}' was deleted.</value></data>
+  <data name="AuditDevice360LensSettingsChanged" xml:space="preserve"><value>Fisheye lens settings changed on '{0}'.</value></data>
+  <data name="AuditBasicUserLockedOut" xml:space="preserve"><value>Basic user '{0}' is locked out.</value></data>
+  <data name="MediaDatabaseStorageDataMoveFailed" xml:space="preserve"><value>Move of media data has failed</value></data>
+  <data name="Enum_Category_Shutdown" xml:space="preserve"><value>Shutdown</value></data>
+  <data name="Enum_EntrySeverity_Error" xml:space="preserve"><value>Error</value></data>
+  <data name="HardwareUpdateDriverNotPossible" xml:space="preserve"><value>Cannot update driver for hardware '{0}'. The recording server service version is no longer supported. You can still access recordings on the recording server, but it must be upgraded to the current version before you can change its configuration.</value></data>
+  <data name="MediaDatabaseArchivingErrorUnknown" xml:space="preserve"><value>Archiving failed from unknown device in archive '{0}'. The device ID is: '{1}'</value></data>
+  <data name="AuditMetadataSearchFilterIsDisabled" xml:space="preserve"><value>Visibility of search filter '{0}' disabled</value></data>
+  <data name="HardwarePasswordChangeFailedOtherHardwareError" xml:space="preserve"><value>The password of hardware device {0} could not be changed because of a hardware error.</value></data>
+  <data name="HardwareIncompatibleDriverFound" xml:space="preserve"><value>An updated driver is not compatible with already configured hardware. Hardware: {0}. Hardware model: {1}</value></data>
+  <data name="RecordingStorageDeleteSuccess" xml:space="preserve"><value>Delete recording storage '{0}' finished successfully.</value></data>
+  <data name="MediaDatabaseStorageAvailable" xml:space="preserve"><value>The storage '{0}' is available again. The path is '{1}'.</value></data>
+  <data name="UserHandlingErrorAccessDenied" xml:space="preserve"><value>Operation failed on: {1}. User '{0}' does not have access to perform the operation.</value></data>
+  <data name="AuditRoleOverallSecurityDenied" xml:space="preserve"><value>The state Deny for the access permission '{0}'-'{1}' is granted</value></data>
+  <data name="AuditAutomaticactivationDisabled" xml:space="preserve"><value>Automatic activation is disabled.</value></data>
+  <data name="AuditExportCameraCompleted" xml:space="preserve"><value>Export completed. Sequence '{0}' to '{1}'</value></data>
+  <data name="AuditUserLoggedOut" xml:space="preserve"><value>Logout by the user succeeded.</value></data>
+  <data name="Enum_AuditType_Management" xml:space="preserve"><value>Management</value></data>
+  <data name="Enum_SourceType_IdentityProvider" xml:space="preserve"><value>Identity provider</value></data>
+  <data name="MediaDatabaseUpgradeFailedRetry" xml:space="preserve"><value>Upgrade device media database failed temporarily. Trying again later.</value></data>
+  <data name="AuditSearchDeleted" xml:space="preserve"><value>Search '{0}' deleted.</value></data>
+  <data name="AuditUserLoginFailedPasswordChange" xml:space="preserve"><value>Login by the user failed. The password must be changed.</value></data>
+  <data name="AuditMediaRestrictionUpdated" xml:space="preserve"><value>Updated playback restriction '{0}'.</value></data>
+  <data name="InitializeDriverScanFailed" xml:space="preserve"><value>Error scanning for drivers and plug-ins: {0}</value></data>
+  <data name="InitializeVmoServerObjectFailed" xml:space="preserve"><value>Cannot host the VideoOS Management Objects on the server: {0}</value></data>
+  <data name="AuditPerfCountStateRuleUpdated" xml:space="preserve"><value>The system dashboard threshold '{0}' was updated.</value></data>
+  <data name="ErrorHardwareBlocked" xml:space="preserve"><value>Operation failed on {0}. The hardware device is temporarily blocked.</value></data>
+  <data name="AuditLoginUserNotRegisteredOnTheSystem" xml:space="preserve"><value>User not allowed logging in to this system. Access denied.</value></data>
+  <data name="Enum_EntrySeverity_Info" xml:space="preserve"><value>Info</value></data>
+  <data name="AuditDeviceRenamed" xml:space="preserve"><value>Device '{0}' renamed to '{1}'</value></data>
+  <data name="AuditVideoWallMonitorLayoutMonitorAppliedTimeBased" xml:space="preserve"><value>Apply {0} layout denied due to time based security restrictions</value></data>
+  <data name="AuditDeviceRemoved" xml:space="preserve"><value>Device '{0}' removed</value></data>
+  <data name="MediaDatabaseDeleteErrorUnknown" xml:space="preserve"><value>Could not delete data from storage from an unknown device in the storage '{0}'. Device ID: '{1}'</value></data>
+  <data name="Field_ServiceName" xml:space="preserve"><value>Service name</value></data>
+  <data name="AuditPlaybackCameraEdgeRecordingsOneLogOnly" xml:space="preserve"><value>Retrieving recorded video in edge track from '{0}' to '{1}' (UTC time).</value></data>
+  <data name="AuditPTZMoveRelative" xml:space="preserve"><value>PTZ move '{0}'</value></data>
+  <data name="AuditRoleDeleted" xml:space="preserve"><value>Role '{0}' deleted</value></data>
+  <data name="InitializeEdgeStorageManagerFailed" xml:space="preserve"><value>Error starting remote recording manager: {0}</value></data>
+  <data name="LicenseChangedMacAddressUpdateNotPossible" xml:space="preserve"><value>Cannot update MAC address for hardware '{0}'. The recording server service version is no longer supported. You can still access recordings on the recording server, but it must be upgraded to the current version before you can change its configuration.</value></data>
+  <data name="AuditSiteMasterAuthorized" xml:space="preserve"><value>The site administrator accepted the inclusion of the site {0} in the hierarchy under {1}.</value></data>
+  <data name="AuditVideoWallEdited" xml:space="preserve"><value>{0} '{1}' edited</value></data>
+  <data name="LicenseValid" xml:space="preserve"><value>License is valid.</value></data>
+  <data name="AuditOutputActivated" xml:space="preserve"><value>Output '{0}' activated</value></data>
+  <data name="AuditLoginSuccessFromHttpRequest" xml:space="preserve"><value>User successfully logged in to the system from HTTP request.</value></data>
+  <data name="Field_GeneratorName" xml:space="preserve"><value>Generator name</value></data>
+  <data name="Field_GeneratorType" xml:space="preserve"><value>Generator type</value></data>
+  <data name="AuditRoleClaimAdded" xml:space="preserve"><value>Claim '{2}' with value '{3}' from external IDP '{1}' was added to the role '{0}'</value></data>
+  <data name="AuditMediaRestrictionCreated" xml:space="preserve"><value>Created playback restriction '{0}'.</value></data>
+  <data name="AuditAuthorizationFailedInsufficientRights" xml:space="preserve"><value>User failed to authorize {0}: Insufficient user permissions.</value></data>
+  <data name="Enum_Category_SaveSearches" xml:space="preserve"><value>Save search</value></data>
+  <data name="RecordingStorageMoveSuccess" xml:space="preserve"><value>Move recording storage '{0}' finished successfully.</value></data>
+  <data name="Enum_EventGeneratorType_Server" xml:space="preserve"><value>Server</value></data>
+  <data name="Enum_EventGeneratorType_DriverHardware" xml:space="preserve"><value>Driver hardware</value></data>
+  <data name="AuditRecordingStorageEdited" xml:space="preserve"><value>Storage settings in '{0}' edited.</value></data>
+  <data name="DeviceEmptyTableSuccess" xml:space="preserve"><value>Recordings deleted.</value></data>
+  <data name="Field_LocationIPAddress" xml:space="preserve"><value>Location IP address</value></data>
+  <data name="AuditLoginTimeBased" xml:space="preserve"><value>Client access denied due to time based security restrictions</value></data>
+  <data name="AuditRoleGroupAdded" xml:space="preserve"><value>User group '{0}' added to the '{1}' role</value></data>
+  <data name="Field_EventTypeId" xml:space="preserve"><value>Event type ID</value></data>
+  <data name="Enum_EntryStatus_Failure" xml:space="preserve"><value>Failure</value></data>
+  <data name="AuditLoginUnSuccessfulIncorrectPassword" xml:space="preserve"><value>Unsuccessful login - Incorrect password</value></data>
+  <data name="ServerSNMPServiceNotStarted" xml:space="preserve"><value>Microsoft SNMP Service not started. SNMP support will be disabled until the Microsoft SNMP Service has been started.</value></data>
+  <data name="Enum_EventGeneratorType_System" xml:space="preserve"><value>System</value></data>
+  <data name="AuditPlaybackMetadataRecordingsDeniedTimeBased" xml:space="preserve"><value>The client was not allowed to play back metadata (time based).</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionMinutesToNoRestriction" xml:space="preserve"><value>The restriction is changed for access permission '{0}'-'{1}' from restricted '{2}' minutes to be without any restriction on '{3}'</value></data>
+  <data name="ServerFailed" xml:space="preserve"><value>Management server terminated due to errors: {0}</value></data>
+  <data name="HardwarePasswordChangeFailedUpdateCredentials" xml:space="preserve"><value>The password of hardware device {0} was changed successfully, but it failed to start up with the new password.</value></data>
+  <data name="AuditHostedHardwareRenamed" xml:space="preserve"><value>Remote connect hardware '{0}' renamed to '{1}'.</value></data>
+  <data name="InitializeServerCommandProcessorFailed" xml:space="preserve"><value>Error initializing management server command processor: {0}</value></data>
+  <data name="Enum_AuditType_ManualRecording" xml:space="preserve"><value>Manual recording</value></data>
+  <data name="AuditPlaybackSpeakerEdgeRecordingsOneLogOnly" xml:space="preserve"><value>Retrieving recorded audio in edge track from '{0}' to '{1}' (UTC time).</value></data>
+  <data name="AuditLiveCameraDenied" xml:space="preserve"><value>Client live feed denied</value></data>
+  <data name="Enum_Category_SmartWallControl" xml:space="preserve"><value>[SmartWall] control</value></data>
+  <data name="AuditHostingServerRenamed" xml:space="preserve"><value>Remote connect server '{0}' renamed to '{1}'.</value></data>
+  <data name="AuditGenericEventsDeactivated" xml:space="preserve"><value>Generic events deactivated. All data sources are disabled.</value></data>
+  <data name="Enum_EventGeneratorType_Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="Enum_SourceType_Role" xml:space="preserve"><value>Role</value></data>
+  <data name="AuditHostingServerModified" xml:space="preserve"><value>Remote connect server '{0}' modified.</value></data>
+  <data name="AuditBasicUserRenamed" xml:space="preserve"><value>Basic user '{0}' renamed to '{1}'.</value></data>
+  <data name="AuditAudioMessageContentChanged" xml:space="preserve"><value>The content of the audio message '{0}' is changed.</value></data>
+  <data name="FileUploadToServerFailed" xml:space="preserve"><value>The file upload to the server failed. File name '{0}', size {1}.</value></data>
+  <data name="Field_ResourceLocation" xml:space="preserve"><value>Resource location</value></data>
+  <data name="AuditVideoWallMonitorLayoutMonitorApplied" xml:space="preserve"><value>View '{0}' applied to layout</value></data>
+  <data name="AuditCreateRecordingServer" xml:space="preserve"><value>User has created the recording server: {0}.</value></data>
+  <data name="AuditPTZMoveCenterZoomRelativePositioned" xml:space="preserve"><value>PTZ center activated. Relative location</value></data>
+  <data name="AuditLogout" xml:space="preserve"><value>Logout</value></data>
+  <data name="MatrixDeleted" xml:space="preserve"><value>Matrix deleted: '{0}' </value></data>
+  <data name="AuditPtzActivatePatrollingProfileGranted" xml:space="preserve"><value>PTZ patrolling profile '{0}' was started</value></data>
+  <data name="ShutdownRecorderRuleProcessorFailed" xml:space="preserve"><value>Error shutting down recording server rule processor: {0}</value></data>
+  <data name="AuditBasicInfoDeleted" xml:space="preserve"><value>The site information '{0}' is deleted.</value></data>
+  <data name="NetworkSettingsManagementErrorNoSuitableInterfaceAddress" xml:space="preserve"><value>Operation failed on: {0}. Unable to find a suitable network interface address.</value></data>
+  <data name="FailoverServerRecorderFailedToStart" xml:space="preserve"><value>Unable to start failover recording server.</value></data>
+  <data name="AuditRecordingStorageArchiveMounted" xml:space="preserve"><value>Archive '{0}' in '{1}' has been mounted.</value></data>
+  <data name="Enum_ResourceType_MediaRestriction" xml:space="preserve"><value>Video restriction</value></data>
+  <data name="LicenseUpdateFailed" xml:space="preserve"><value>Error applying license on management server. Error code: {0}</value></data>
+  <data name="AutomaticActivationSuccess" xml:space="preserve"><value>Automatic license activation succeeded.</value></data>
+  <data name="AuditPlaybackCameraRecordingsOneLogOnly" xml:space="preserve"><value>Retrieving recorded video in main track from '{0}' to '{1}' (UTC time).</value></data>
+  <data name="ArchiveStorageDeleteFailedNoRetry" xml:space="preserve"><value>Deletion of the archive '{0}' failed.</value></data>
+  <data name="HardwarePasswordChangeFailedUserLevelAnonymousNotAllowed" xml:space="preserve"><value>User level anonymous is not allowed on hardware device {0}.</value></data>
+  <data name="AuditMetadataSearchCategoryIsEnabled" xml:space="preserve"><value>Visibility of search category '{0}' enabled</value></data>
+  <data name="MediaDatabaseUpgradeBegin" xml:space="preserve"><value>Upgrade device media database started.</value></data>
+  <data name="RecordingStorageSetEncryptionPasswordFailedLastRetry" xml:space="preserve"><value>Set new encryption password on recording storage '{0}' failed.</value></data>
+  <data name="Enum_SourceType_Device" xml:space="preserve"><value>Device</value></data>
+  <data name="ShutdownServerCommunicationManagerFailed" xml:space="preserve"><value>Error shutting down management server communication manager: {0}</value></data>
+  <data name="AuditRoleRenamed" xml:space="preserve"><value>Role '{0}' renamed to '{1}'</value></data>
+  <data name="AuditPTZMoveCenterZoomAbsolutePositioned" xml:space="preserve"><value>PTZ center activated. Width '{0}', Height '{1}', Center-X '{2}', Center-Y '{3}', Zoom '{4}'</value></data>
+  <data name="Enum_SourceType_Failover" xml:space="preserve"><value>Failover</value></data>
+  <data name="AuditRoleGroupRemoved" xml:space="preserve"><value>User group '{0}' removed from the '{1}' role</value></data>
+  <data name="AuditLogoutSuccessFromAdministration" xml:space="preserve"><value>User logged out of the system from the {0}.</value></data>
+  <data name="RecordingStorageDeleteFailedRetry" xml:space="preserve"><value>Delete recording storage '{0}' failed temporarily. Trying again later.</value></data>
+  <data name="FailoverServerRemoveFailoverServer" xml:space="preserve"><value>The failover server {0} has been removed, forcing shutdown of the service...</value></data>
+  <data name="AuditAuthorizeRecorder" xml:space="preserve"><value>A user has authorized the recording server: {0}.</value></data>
+  <data name="AuditPTZMoveAbsolute" xml:space="preserve"><value>PTZ move absolute. Pan '{0}', tilt '{1}', zoom '{2}'.</value></data>
+  <data name="MediaDatabaseTableSplitTookLong" xml:space="preserve"><value>Creating a table split took an unusually long time. Device: '{0}'. Storage name: '{1}'</value></data>
+  <data name="AuditVideoWallPresetRenamed" xml:space="preserve"><value>{0} preset '{1}' renamed to '{2}'</value></data>
+  <data name="ShutdownEngineFailed" xml:space="preserve"><value>Error shutting down recording server: {0}</value></data>
+  <data name="Enum_Category_RecorderCommunicationAndManagement" xml:space="preserve"><value>Recording server communication and management</value></data>
+  <data name="NetworkSettingsManagementErrorUnknown" xml:space="preserve"><value>Operation failed on: {0}. An unknown error occurred during a network settings operation.</value></data>
+  <data name="ArchiveStorageMoveFailedNoRetry" xml:space="preserve"><value>Deletion of the archive '{0}' failed.</value></data>
+  <data name="AuditPlaybackMicrophoneRecordingsOneLogOnly" xml:space="preserve"><value>Retrieving recorded audio in main track from '{0}' to '{1}' (UTC time).</value></data>
+  <data name="DeviceSettingsChanged" xml:space="preserve"><value>Settings changed</value></data>
+  <data name="Enum_ResourceType_RemoteConnectHardware" xml:space="preserve"><value>Remote connect hardware</value></data>
+  <data name="AuditLoginUserNotAllowedExternalAccess" xml:space="preserve"><value>Login failed for user. Insufficient user permissions</value></data>
+  <data name="Field_AccessGranted" xml:space="preserve"><value>Access granted</value></data>
+  <data name="FailoverServerTakingOverTheResponsibilityForRecorder" xml:space="preserve"><value>Taking over the responsibilities for recording server '{0}'</value></data>
+  <data name="AuditPtzPresetDeleted" xml:space="preserve"><value>PTZ preset position '{0}' was removed</value></data>
+  <data name="Enum_ResourceType_TimeProfiles" xml:space="preserve"><value>Time profiles</value></data>
+  <data name="InitializePipelinesFailed" xml:space="preserve"><value>Error starting pipelines: {0}</value></data>
+  <data name="Enum_Category_Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="AuditIdentityProviderRegistrationSuccess" xml:space="preserve"><value>Service registered successfully.</value></data>
+  <data name="ShutdownCommandProcessorFailed" xml:space="preserve"><value>Error shutting down command processor: {0}</value></data>
+  <data name="LicenseInvalid" xml:space="preserve"><value>License is invalid.</value></data>
+  <data name="AuditSystemDashboardConfigurationDeleted" xml:space="preserve"><value>The system dashboard configuration '{0}' was deleted.</value></data>
+  <data name="Enum_ResourceType_Matrix" xml:space="preserve"><value>Matrix</value></data>
+  <data name="InitializeLiveMulticastProcessorFailed" xml:space="preserve"><value>Error initializing live multicast processor: {0}</value></data>
+  <data name="AuditVideoWallMonitorEdited" xml:space="preserve"><value>{0} monitor '{1}' edited</value></data>
+  <data name="AuditLiveSpeakToSpeakerEnded" xml:space="preserve"><value>Stop speaking to speakers</value></data>
+  <data name="AuditExportMetadataToDBNoEncryption" xml:space="preserve"><value>Database export started. No encryption. Sequence '{0}' to '{1}'</value></data>
+  <data name="Enum_ResourceType_Hardware" xml:space="preserve"><value>Hardware</value></data>
+  <data name="LicenseExpired" xml:space="preserve"><value>License has expired.</value></data>
+  <data name="AuditLiveMetadataDeniedTimeBased" xml:space="preserve"><value>Client live feed denied due to time based security restrictions</value></data>
+  <data name="AuditVideoWallCreated" xml:space="preserve"><value>{0} '{1}' created</value></data>
+  <data name="Enum_ResourceType_Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="ExternalPlugIn360LensDefinitionsChanged" xml:space="preserve"><value>One or more fisheye lens definitions changed on the management server.</value></data>
+  <data name="AuditBasicUserDeleted" xml:space="preserve"><value>Basic user '{0}' deleted.</value></data>
+  <data name="RecordingStorageMoveFailedNoRetry" xml:space="preserve"><value>Move recording storage '{0}' failed.</value></data>
+  <data name="MediaDatabaseRepairTableError" xml:space="preserve"><value>Repair of database table failed for device '{0}' in storage '{1}'</value></data>
+  <data name="Enum_ResourceType_Camera" xml:space="preserve"><value>Camera</value></data>
+  <data name="ArchiveStorageDeleteFailedRetry" xml:space="preserve"><value>Deletion of the archive '{0}' failed temporarily. Trying again later.</value></data>
+  <data name="AuditExportCameraCancelled" xml:space="preserve"><value>Export cancelled.</value></data>
+  <data name="AuditLiveSpeakerDeniedTimeBased" xml:space="preserve"><value>Client live feed denied due to time based security restrictions</value></data>
+  <data name="AuditExportCameraToDBNoEncryption" xml:space="preserve"><value>Database export started. No encryption. Sequence '{0}' to '{1}'</value></data>
+  <data name="AuditDeviceReplacedNoDatabase" xml:space="preserve"><value>The device '{0}' was replaced with '{1}'.</value></data>
+  <data name="UserHandlingErrorUserNotCreated" xml:space="preserve"><value>Operation failed on: {1}. User '{0}' was not created.</value></data>
+  <data name="MediaDatabaseStorageMergeStarted" xml:space="preserve"><value>Merging of media data has been started. Source server:{0}</value></data>
+  <data name="MediaDatabaseStorageMergeStopped" xml:space="preserve"><value>Merging of media data has ended.</value></data>
+  <data name="AuditTimeProfileRenamed" xml:space="preserve"><value>Time profile '{0}' renamed to '{1}'</value></data>
+  <data name="AuditLiveSpeakToSpeakerDeniedTimeBased" xml:space="preserve"><value>Speech denied due to time based security restriction</value></data>
+  <data name="Enum_AuditType_SaveSearches" xml:space="preserve"><value>Save search</value></data>
+  <data name="LegacyRecorderNoConfigurationUpdates" xml:space="preserve"><value>Updates to the configuration could not be sent to recording server '{0}' because it is not the latest version.</value></data>
+  <data name="AuditMarkedDataDeleted" xml:space="preserve"><value>Marked data (with evidence locks or bookmarks) '{0}' was deleted.</value></data>
+  <data name="Enum_AccessGranted_Denied" xml:space="preserve"><value>Denied</value></data>
+  <data name="Enum_Category_PTZ" xml:space="preserve"><value>PTZ</value></data>
+  <data name="AuditExportSpeakerToAvi" xml:space="preserve"><value>AVI export started. Sequence '{0}' to '{1}'</value></data>
+  <data name="AuditBasicUserEnabled" xml:space="preserve"><value>Basic user '{0}' is now enabled.</value></data>
+  <data name="FailoverServerAuthorizationFailedWithLocalRecorder" xml:space="preserve"><value>Authorization failed with the failover recording server.</value></data>
+  <data name="AuditUserLoggedIn" xml:space="preserve"><value>Login by the user succeeded.</value></data>
+  <data name="Enum_SourceType_Database" xml:space="preserve"><value>Database</value></data>
+  <data name="ArchiveStorageMoveFailedRetry" xml:space="preserve"><value>Deletion of the archive '{0}' failed temporarily. Trying again later.</value></data>
+  <data name="AuditBasicUserEnabledIdentityProvider" xml:space="preserve"><value>Basic user '{0}' is now enabled.</value></data>
+  <data name="AuditDeviceReplaced" xml:space="preserve"><value>The device '{0}' was replaced with '{1}'. It inherits the database.</value></data>
+  <data name="AuditAutomaticactivationCredentialsChanged" xml:space="preserve"><value>The credentials for online activation have been changed.</value></data>
+  <data name="AuditClientProfileDeleted" xml:space="preserve"><value>The {0} profile '{1}' deleted.</value></data>
+  <data name="ScheduledHardwarePasswordChangeFailure" xml:space="preserve"><value>The scheduled password change failed for the following hardware device: '{0}'. Failure reason: '{1}'.</value></data>
+  <data name="AuditMapDeleted" xml:space="preserve"><value>Map '{0}' deleted</value></data>
+  <data name="AuditLiveMicrophoneEnded" xml:space="preserve"><value>Client live feed terminated</value></data>
+  <data name="AuditManualRecordingStopped" xml:space="preserve"><value>Manual recording stopped.</value></data>
+  <data name="AuditHardwareEnabled" xml:space="preserve"><value>Hardware '{0}' enabled</value></data>
+  <data name="AuditManualRecordingStarted" xml:space="preserve"><value>Manual recording started.</value></data>
+  <data name="EdgeStorageRetrievalFailed" xml:space="preserve"><value>Could not retrieve remote recordings.</value></data>
+  <data name="HardwareCommunicationStopped" xml:space="preserve"><value>Communication stopped (hardware)</value></data>
+  <data name="AuditLoginUserNotAdminPriviligesOnTheSystem" xml:space="preserve"><value>Login failed for user. Insufficient user permissions</value></data>
+  <data name="AuditPTZMoveZoomButtonsActivated" xml:space="preserve"><value>PTZ move '{0}'</value></data>
+  <data name="RecorderFailed" xml:space="preserve"><value>Recording server terminated due to errors: {0}</value></data>
+  <data name="AuditVideoWallMonitorLayoutPresetActivated" xml:space="preserve"><value>{0} preset '{1}' selected</value></data>
+  <data name="Enum_ResourceType_Output" xml:space="preserve"><value>Output</value></data>
+  <data name="HardwareUpdateNoDefinitionChanges" xml:space="preserve"><value>The driver definition was not updated during the driver update because the definition was unchanged. Hardware: {0}</value></data>
+  <data name="Enum_Category_Plugins" xml:space="preserve"><value>Plug-ins</value></data>
+  <data name="InitializeStatusManagerFailed" xml:space="preserve"><value>Error starting status manager: {0}</value></data>
+  <data name="AuditUserLoginFailed" xml:space="preserve"><value>Login by the user failed. The password is invalid.</value></data>
+  <data name="AuditDeviceRecordingEdgeStorageEnabled" xml:space="preserve"><value>Remote recording enabled on '{0}'.</value></data>
+  <data name="AuditConfigReportExported" xml:space="preserve"><value>Configuration report exported.</value></data>
+  <data name="MediaDatabaseUpgradeFailedLastRetry" xml:space="preserve"><value>Upgrade device media database failed.</value></data>
+  <data name="AuditPlaybackCameraRecordings" xml:space="preserve"><value>Playing back recorded images '{0}' to '{1}' (UTC time).</value></data>
+  <data name="AuditLoginUserNotAllowed" xml:space="preserve"><value>Login failed for user. Insufficient user permissions</value></data>
+  <data name="AuditDeviceMulticastEnabledChanged" xml:space="preserve"><value>Device multicast changed on '{0}' to '{1}'</value></data>
+  <data name="AuditPlaybackSpeakerRecordingsOneLogOnly" xml:space="preserve"><value>Retrieving recorded audio in main track from '{0}' to '{1}' (UTC time).</value></data>
+  <data name="Enum_EntrySeverity_Warning" xml:space="preserve"><value>Warning</value></data>
+  <data name="AuditClaimCreated" xml:space="preserve"><value>Claim '{0}' was created.</value></data>
+  <data name="InitializeLoadCachedSecurityConfigurationFailed" xml:space="preserve"><value>Error loading cached security configuration: {0}</value></data>
+  <data name="RecordingStorageMoveFailedRetry" xml:space="preserve"><value>Move recording storage '{0}' failed temporarily. Trying again later.</value></data>
+  <data name="Enum_Category_Notification" xml:space="preserve"><value>Notification</value></data>
+  <data name="AuditRoleObjectSecurityGranted" xml:space="preserve"><value>The access permission '{0}'-'{1}' is granted on '{2}'</value></data>
+  <data name="AuditBasicUserLockedOutCleared" xml:space="preserve"><value>Basic user '{0}' locked out time has been cleared.</value></data>
+  <data name="AuditClientProfileCreated" xml:space="preserve"><value>The {0} profile '{1}' created.</value></data>
+  <data name="AuditLiveMicrophoneDenied" xml:space="preserve"><value>Client live feed denied</value></data>
+  <data name="Enum_ResourceType_SmartWall" xml:space="preserve"><value>[SmartWall]</value></data>
+  <data name="InitializeMasterEncryptionKeyFailed" xml:space="preserve"><value>Error loading the system configuration password or the encryption key: {0}</value></data>
+  <data name="Enum_ResourceType_MarkedData" xml:space="preserve"><value>Marked Data</value></data>
+  <data name="Enum_ResourceType_SiteInfo" xml:space="preserve"><value>Site info</value></data>
+  <data name="Enum_EventGeneratorType_Device" xml:space="preserve"><value>Device</value></data>
+  <data name="AuditLoginProviderUpdated" xml:space="preserve"><value>Settings for the external IDP '{0}' were changed.</value></data>
+  <data name="AuditHostingServerAdded" xml:space="preserve"><value>Remote connect server '{0}' added.</value></data>
+  <data name="InitializeTaskManagerFailed" xml:space="preserve"><value>Error initializing task manager: {0}</value></data>
+  <data name="AuditDeviceCoverageDirectionChanged" xml:space="preserve"><value>Direction of device '{0}' changed to '{1}' degrees</value></data>
+  <data name="AuditAuthorizationSucessful" xml:space="preserve"><value>User authorized '{0}'</value></data>
+  <data name="AuditExportMicrophoneToDBNoEncryption" xml:space="preserve"><value>Database export started. No encryption. Sequence '{0}' to '{1}'</value></data>
+  <data name="AuditRecordingStorageDeleted" xml:space="preserve"><value>Storage '{0}' deleted.</value></data>
+  <data name="AuditMapDeviceServerPlaced" xml:space="preserve"><value>'{0}' placed on map '{1}'</value></data>
+  <data name="AuditPtzReleaseDenied" xml:space="preserve"><value>PTZ session release was denied</value></data>
+  <data name="Enum_AuditType_Login" xml:space="preserve"><value>Login</value></data>
+  <data name="RecorderStopped" xml:space="preserve"><value>Recording server '{0}' stopped.</value></data>
+  <data name="AuditDeviceRecordingDisabled" xml:space="preserve"><value>Recording disabled on '{0}'.</value></data>
+  <data name="RecorderStarted" xml:space="preserve"><value>Recording server '{0}' started.</value></data>
+  <data name="AuditRoleUserRemoved" xml:space="preserve"><value>User '{0}' removed from the '{1}' role</value></data>
+  <data name="AuditDeviceDisabled" xml:space="preserve"><value>Device '{0}' disabled</value></data>
+  <data name="FailoverServerAuthorizationFailedWithRecorder" xml:space="preserve"><value>Authorization failed with the recording server '{0}'.</value></data>
+  <data name="MediaDatabaseArchivingError" xml:space="preserve"><value>Archiving failed. Device '{0}'. Archive name: '{1}'</value></data>
+  <data name="AuditLiveCameraEnded" xml:space="preserve"><value>Client live feed terminated</value></data>
+  <data name="AuditAutomaticactivationEnabled" xml:space="preserve"><value>Automatic activation is enabled.</value></data>
+  <data name="MediaDatabaseUpgradeSuccess" xml:space="preserve"><value>Upgrade device media database finished successfully.</value></data>
+  <data name="Enum_AuditType_Ptz" xml:space="preserve"><value>PTZ</value></data>
+  <data name="FailoverServerUnableToConnectEncryptedToLocalRecorder" xml:space="preserve"><value>Unable to establish encrypted connection to failover recording server.</value></data>
+  <data name="AuditRoleObjectSecurityChangeAccessDenied" xml:space="preserve"><value>The '{0}' access permissions on '{1}' could not be changed due to insufficient user permissions.</value></data>
+  <data name="AuditExportMicrophoneToAvi" xml:space="preserve"><value>AVI export started. Sequence '{0}' to '{1}'</value></data>
+  <data name="RecorderSNMPServiceNotInstalled" xml:space="preserve"><value>Microsoft SNMP Service not installed. SNMP support will be disabled until the Microsoft SNMP Service has been installed.</value></data>
+  <data name="ArchiveDatabaseStorageUnavailable" xml:space="preserve"><value>The archive '{0}' is unavailable. The path is '{1}'.</value></data>
+  <data name="AuditVideoWallMonitorLayoutChanged" xml:space="preserve"><value>Layout changed to '{0}'</value></data>
+  <data name="InitializeRecorderRuleProcessorStartFailed" xml:space="preserve"><value>Error starting recording server rule processor: {0}</value></data>
+  <data name="InitializeRecorderCommunicationFailed" xml:space="preserve"><value>Error initializing recording server communication manager: {0}</value></data>
+  <data name="RecorderNotAllowedToStart" xml:space="preserve"><value>This recording server is not allowed to start up. Will shut down again.</value></data>
+  <data name="AuditPtzReleaseGranted" xml:space="preserve"><value>PTZ session was released</value></data>
+  <data name="AuditMapDisplayed" xml:space="preserve"><value>Map '{0}' displayed</value></data>
+  <data name="Enum_Category_Startup" xml:space="preserve"><value>Startup</value></data>
+  <data name="RecordingStorageSetEncryptionPasswordFailedRetry" xml:space="preserve"><value>Set new encryption password on recording storage '{0}' failed temporarily. Trying again later.</value></data>
+  <data name="TableUnrepairableAway" xml:space="preserve"><value>Unable to repair table: {0}. The unrepairable media data has been moved out of media database {1}</value></data>
+  <data name="AuditClientRedirectUrisSet" xml:space="preserve"><value>'{0}' URIs were set to '{1}'.</value></data>
+  <data name="AuditLoginSuccessFromCommandApi" xml:space="preserve"><value>User successfully logged in</value></data>
+  <data name="AuditBasicUserPasswordChanged" xml:space="preserve"><value>The password for basic user '{0}' is changed.</value></data>
+  <data name="AuditExportMetadataCancelled" xml:space="preserve"><value>Export cancelled.</value></data>
+  <data name="DeviceEmptyTableFailedRetry" xml:space="preserve"><value>Delete all device recordings failed temporarily. Trying again later.</value></data>
+  <data name="AuditTimeProfileEdited" xml:space="preserve"><value>Time profile '{0}' edited</value></data>
+  <data name="AuditAudioMessageCreated" xml:space="preserve"><value>Audio message '{0}' created.</value></data>
+  <data name="Enum_ResourceType_RemoteConnectServer" xml:space="preserve"><value>Remote connect server</value></data>
+  <data name="InitializeRecorderRuleProcessorInitializeFailed" xml:space="preserve"><value>Error initializing rule processor: {0}</value></data>
+  <data name="AuditRoleOverallSecurityGranted" xml:space="preserve"><value>The state Allow for the access permission '{0}'-'{1}' is granted</value></data>
+  <data name="AuditDeviceEnabled" xml:space="preserve"><value>Device '{0}' enabled</value></data>
+  <data name="AuditVideoWallMonitorLayoutCleared" xml:space="preserve"><value>Layout cleared</value></data>
+  <data name="AuditExportMicrophoneCancelled" xml:space="preserve"><value>Export cancelled.</value></data>
+  <data name="MediaDatabaseStorageUnavailable" xml:space="preserve"><value>The storage '{0}' is unavailable. The path is '{1}'.</value></data>
+  <data name="MediaDatabaseRepairTableCompletedUnknown" xml:space="preserve"><value>Repair of database table completed for an unknown device in storage '{1}'. The device might have been removed from the system. Device ID: '{0}'</value></data>
+  <data name="MediaDatabaseStorageDataMoveRetry" xml:space="preserve"><value>Move of media data has failed temporarily. Trying again later.</value></data>
+  <data name="AuditMapDeviceServerRemoved" xml:space="preserve"><value>'{0}' removed from map '{1}'</value></data>
+  <data name="Enum_ResourceType_Server" xml:space="preserve"><value>Server</value></data>
+  <data name="AuditDeviceRecordingEdgeStorageDisabled" xml:space="preserve"><value>Remote recording disabled on '{0}'.</value></data>
+  <data name="MediaDatabaseStorageDataMoveBegin" xml:space="preserve"><value>Move of media data has begun.</value></data>
+  <data name="AuditSearchEdited" xml:space="preserve"><value>Search '{0}' edited.</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionDaysToDays" xml:space="preserve"><value>The restriction is changed for access permission '{0}'-'{1}' from restricted '{2}' days to restricted '{3}' days on '{4}'</value></data>
+  <data name="RecordingStorageDeleteFailedNoRetry" xml:space="preserve"><value>Delete recording storage '{0}' failed.</value></data>
+  <data name="Enum_ResourceType_Input" xml:space="preserve"><value>Input</value></data>
+  <data name="AuditLoginUserNotAllowedHttpRequestAccess" xml:space="preserve"><value>Login failed for user. Insufficient user permissions</value></data>
+  <data name="AuditPlaybackMetadataEdgeRecordingsOneLogOnly" xml:space="preserve"><value>Retrieving recorded metadata in edge track from '{0}' to '{1}' (UTC time).</value></data>
+  <data name="Enum_ResourceType_Rules" xml:space="preserve"><value>Rules</value></data>
+  <data name="Enum_ResourceType_Roles" xml:space="preserve"><value>Roles</value></data>
+  <data name="AuditClaimUpdated" xml:space="preserve"><value>Claim '{0}' was changed.</value></data>
+  <data name="AuditMapCreated" xml:space="preserve"><value>Map '{0}' created with this image '{1}'</value></data>
+  <data name="AuditRecordingStorageAddArchive" xml:space="preserve"><value>Archive '{0}' added to '{1}'.</value></data>
+  <data name="AuditRecordingStorageDeleteArchive" xml:space="preserve"><value>Archive '{0}' deleted from '{1}'.</value></data>
+  <data name="AuditHardwareAdded" xml:space="preserve"><value>Hardware '{0}' added</value></data>
+  <data name="Enum_Category_MediaStorage" xml:space="preserve"><value>Media storage</value></data>
+  <data name="InitializeLicenseManagerFailed" xml:space="preserve"><value>Error initializing license manager: {0}</value></data>
+  <data name="AuditHardwareMoved" xml:space="preserve"><value>User initiated a move of the hardware '{0}' to the recording server '{1}'.</value></data>
+  <data name="AuditDeviceCoverageDepthChanged" xml:space="preserve"><value>Depth of device '{0}' changed to '{1}' meters</value></data>
+  <data name="AuditConfigurationExported" xml:space="preserve"><value>System configuration was exported.</value></data>
+  <data name="MediaDatabaseMinimumDiskSpaceReached" xml:space="preserve"><value>The minimum requirement for free disk space in the storage '{0}' has been exceeded.</value></data>
+  <data name="AuditDeviceIconChanged" xml:space="preserve"><value>Icon identifier for device '{0}' changed to '{1}'</value></data>
+  <data name="AuditDeviceMotionDetectionSettingsChanged" xml:space="preserve"><value>Motion detection settings changed on '{0}'</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedNoRestrictionToDays" xml:space="preserve"><value>The restriction is changed for access permission '{0}'-'{1}' from no restriction to be restricted '{2}' days on '{3}'</value></data>
+  <data name="ShutdownMediaDbFailed" xml:space="preserve"><value>Error shutting down media database: {0}</value></data>
+  <data name="AuditMediaRestrictionLiveModeEntered" xml:space="preserve"><value>'{0}' has entered restricted live mode.</value></data>
+  <data name="EMailError" xml:space="preserve"><value>Error sending e-mail to: {0}</value></data>
+  <data name="ErrorNoHardwareAccess" xml:space="preserve"><value>No access to hardware device {0}.</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionMinutesToDays" xml:space="preserve"><value>The restriction is changed for access permission '{0}'-'{1}' from restricted '{2}' minutes to restricted '{3}' days on '{4}'</value></data>
+  <data name="ShutdownWebServerFailed" xml:space="preserve"><value>Error shutting down web server: {0}</value></data>
+  <data name="AuditBasicUserEdited" xml:space="preserve"><value>The settings for basic user '{0}' are changed.</value></data>
+  <data name="AuditRoleLoginAuthorizationRequiredGranted" xml:space="preserve"><value>The Login authorization required option is granted for the role '{0}'</value></data>
+  <data name="AuditDevice360LensSettingsEnabled" xml:space="preserve"><value>Fisheye lens settings enabled on '{0}'.</value></data>
+  <data name="Enum_AuditType_SmartWallControl" xml:space="preserve"><value>[SmartWall] control</value></data>
+  <data name="AuditVideoWallDeleted" xml:space="preserve"><value>{0} '{1}' deleted</value></data>
+  <data name="AuditHostingServerDeleted" xml:space="preserve"><value>Remote connect server '{0}' removed.</value></data>
+  <data name="AuditPlaybackMicrophoneRecordings" xml:space="preserve"><value>Playing back recorded audio from microphones '{0}' to '{1}' (UTC time).</value></data>
+  <data name="Enum_Category_ExternalIDP" xml:space="preserve"><value>External IDP</value></data>
+  <data name="DeviceFirmwareVersionUpdated" xml:space="preserve"><value>The firmware update was successful for hardware device: '{0}'. The new firmware version is: '{1}'</value></data>
+  <data name="Enum_Category_SqlServerConnectivity" xml:space="preserve"><value>SQL Server</value></data>
+  <data name="AuditPlaybackMicrophoneEdgeRecordingsOneLogOnly" xml:space="preserve"><value>Retrieving recorded audio in edge track from '{0}' to '{1}' (UTC time).</value></data>
+  <data name="Enum_ResourceType_FederatedArchitecture" xml:space="preserve"><value>Federated architecture</value></data>
+  <data name="ErrorHardwareNotStarted" xml:space="preserve"><value>Operation failed on {0}. The hardware device is switched off.</value></data>
+  <data name="LicenseInitializeFailed" xml:space="preserve"><value>Error initializing licensing module: {0}</value></data>
+  <data name="AuditRoleObjectSecurityTimeProfileToSystemProfileChange" xml:space="preserve"><value>The time profile is changed for access permission '{0}'-'{1}' from time profile '{2}' to system time profile '{3}' on '{4}'</value></data>
+  <data name="HardwarePasswordChangeFailedPasswordTooLong" xml:space="preserve"><value>The password of hardware device {0} could not be changed. The password is too long.</value></data>
+  <data name="NetworkSettingsManagementErrorUnsupported" xml:space="preserve"><value>Operation failed on: {0}. Network settings management not supported.</value></data>
+  <data name="AuditPerfCountStateRuleDeleted" xml:space="preserve"><value>The system dashboard threshold '{0}' was deleted.</value></data>
+  <data name="AuditRoleObjectSecurityTimeProfileToProfileChange" xml:space="preserve"><value>The time profile is changed for access permission '{0}'-'{1}' from time profile '{2}' to time profile '{3}' on '{4}'</value></data>
+  <data name="RecordingStorageSetEncryptionPasswordSuccess" xml:space="preserve"><value>Set new encryption password on recording storage '{0}' finished successfully.</value></data>
+  <data name="FailoverServerServiceHasReturnedFromFailoverState" xml:space="preserve"><value>Failover server service has returned from failover state.</value></data>
+  <data name="Enum_AuditType_Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="Enum_AuditType_LiveMetadata" xml:space="preserve"><value>Live metadata</value></data>
+  <data name="HardwarePasswordChangeFailedHardwareBlocked" xml:space="preserve"><value>The password of hardware device {0} could not be changed. The hardware device is temporarily blocked.</value></data>
+  <data name="Enum_ResourceType_SmartWallPreset" xml:space="preserve"><value>[SmartWall] preset</value></data>
+  <data name="AuditSiteRenamed" xml:space="preserve"><value>Surveillance system '{0}' renamed to '{1}'.</value></data>
+  <data name="RecordingStorageMoveFailedLastRetry" xml:space="preserve"><value>Move recording storage '{0}' failed.</value></data>
+  <data name="AuditPtzPresetCreated" xml:space="preserve"><value>PTZ preset position '{0}' was created</value></data>
+  <data name="ArchiveStorageDeleteFailedLastRetry" xml:space="preserve"><value>Deletion of the archive '{0}' failed.</value></data>
+  <data name="ErrorHardwareReadOnly" xml:space="preserve"><value>Operation failed on {0}. The hardware device is read-only.</value></data>
+  <data name="AuditMediaRestrictionLiveDeleted" xml:space="preserve"><value>Deleted live restriction '{0}'.</value></data>
+  <data name="ShutdownDriverServicesFailed" xml:space="preserve"><value>Error shutting down driver services: {0}</value></data>
+  <data name="AuditSiteMasterDeleted" xml:space="preserve"><value>Site detached from hierarchy.</value></data>
+  <data name="FileUploadedToServer" xml:space="preserve"><value>The file upload to the server completed successfully. File name '{0}', size {1}.</value></data>
+  <data name="AuditLiveMetadataStarted" xml:space="preserve"><value>Client live feed requested</value></data>
+  <data name="AuditBasicUserDeletedIdentityProvider" xml:space="preserve"><value>Basic user '{0}' deleted.</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedRestrictionDaysToMinutes" xml:space="preserve"><value>The restriction is changed for access permission '{0}'-'{1}' from restricted '{2}' days to restricted '{3}' minutes on '{4}'</value></data>
+  <data name="AuditLiveSpeakToSpeakerStarted" xml:space="preserve"><value>Start speaking to speakers</value></data>
+  <data name="AuditRecordingStorageMoved" xml:space="preserve"><value>Storage '{0}' moved from '{1}' to '{2}'.</value></data>
+  <data name="AuditLiveCameraStarted" xml:space="preserve"><value>Client live feed requested</value></data>
+  <data name="ArchiveStorageMountFailed" xml:space="preserve"><value>The archive '{0}' was mounted, but currently unavailable.</value></data>
+  <data name="AuditDeviceRequestEdgeStorageRetrieval" xml:space="preserve"><value>Retrieval of remote recordings requested on '{0}'.</value></data>
+  <data name="AuditClientLiveFeedRequested" xml:space="preserve"><value>Client live feed requested.</value></data>
+  <data name="LicenseNoMacAddressForHardware" xml:space="preserve"><value>The system could not obtain a license. No MAC address defined for the hardware. {0}</value></data>
+  <data name="AuditRoleOverallSecurityChanged" xml:space="preserve"><value>The access permission '{0}' - '{1}' on role '{2}' has been changed to: {3}</value></data>
+  <data name="AuditRoleAnonymityDuringPtzSessionsGranted" xml:space="preserve"><value>The Make users anonymous during PTZ sessions option is granted for the role '{0}'</value></data>
+  <data name="AuditDeviceRecordingEnabled" xml:space="preserve"><value>Recording enabled on '{0}'.</value></data>
+  <data name="MediaDatabaseRepairTableStartedUnknown" xml:space="preserve"><value>Repair of database table started for an unknown device in storage '{1}'. The device might have been removed from the system. Device ID: '{0}'</value></data>
+  <data name="Enum_Category_Failover" xml:space="preserve"><value>Failover</value></data>
+  <data name="AutomaticActivationFailed" xml:space="preserve"><value>Automatic license activation failed</value></data>
+  <data name="RecorderPluginNotConfigured" xml:space="preserve"><value>Plug-in has not been configured for device: {0}</value></data>
+  <data name="AuditBasicUserSystemLockedOut" xml:space="preserve"><value>Basic user '{0}' has been locked out by the system due to too many failed login attempts.</value></data>
+  <data name="AuditSiteSlaveDeleted" xml:space="preserve"><value>The site '{0}' on '{1}' was detached from hierarchy.</value></data>
+  <data name="HardwareUpdatingDriver" xml:space="preserve"><value>A new driver is installed for configured hardware. Updating driver. Hardware: {0}. Hardware model: {1}</value></data>
+  <data name="AuditIdentityProviderAdministratorLoginFailed" xml:space="preserve"><value>Administrator login was rejected by the Identity Provider. Access denied.</value></data>
+  <data name="AuditIdentityProviderRegistrationChanged" xml:space="preserve"><value>Service registration changed successfully.</value></data>
+  <data name="EdgeStorageRetrievalSuccess" xml:space="preserve"><value>Retrieval of remote recordings has finished successfully.</value></data>
+  <data name="Enum_EventGeneratorType_Timer" xml:space="preserve"><value>Timer</value></data>
+  <data name="Enum_AuditType_IOAndEvents" xml:space="preserve"><value>IO and events</value></data>
+  <data name="DatabaseConnectionLost" xml:space="preserve"><value>Database connection lost.</value></data>
+  <data name="EdgeStorageRetrievalStopped" xml:space="preserve"><value>Retrieval of remote recordings has been stopped.</value></data>
+  <data name="AuditPtzNewSessionDenied" xml:space="preserve"><value>New PTZ session was denied user {0}</value></data>
+  <data name="HardwarePasswordChangeFailedUnsupported" xml:space="preserve"><value>The password of hardware device {0} could not be changed. The hardware device does not support password changes.</value></data>
+  <data name="MatrixUpdated" xml:space="preserve"><value>Matrix updated: '{0}' </value></data>
+  <data name="MatrixCreated" xml:space="preserve"><value>Matrix created: '{0}' </value></data>
+  <data name="Enum_ResourceType_BasicUser" xml:space="preserve"><value>Basic user</value></data>
+  <data name="InitializeServerConnectionFailed" xml:space="preserve"><value>Error connecting to management server: {0}</value></data>
+  <data name="InitializeRecorderSNMPManagerFailed" xml:space="preserve"><value>Error starting SNMP manager: {0}</value></data>
+  <data name="ArchiveStorageMountSuccess" xml:space="preserve"><value>The archive '{0}' was mounted.</value></data>
+  <data name="Enum_EventGeneratorType_Hardware" xml:space="preserve"><value>Hardware</value></data>
+  <data name="InitializeAudioMessageManagerFailed" xml:space="preserve"><value>Error initializing audio message manager: {0}</value></data>
+  <data name="AuditRoleObjectSecurityPriorityRevoked" xml:space="preserve"><value>The access permission '{0}'-'{1}' is revoked on '{2}' with default priority '{3}'</value></data>
+  <data name="AuditRuleRenamed" xml:space="preserve"><value>Rule '{0}' renamed to '{1}'</value></data>
+  <data name="AuditDeviceRecordingEdgeStoragePlaybackEnabled" xml:space="preserve"><value>Playback of remote recording enabled on '{0}'.</value></data>
+  <data name="AuditMapHotZoneLinkCreated" xml:space="preserve"><value>Hot zone link to map '{0}' created on '{1}'</value></data>
+  <data name="Enum_Category_ManualRecording" xml:space="preserve"><value>Manual recording</value></data>
+  <data name="AuditVideoWallMonitorAdded" xml:space="preserve"><value>{0} monitor '{1}' created</value></data>
+  <data name="Enum_SourceType_External" xml:space="preserve"><value>External</value></data>
+  <data name="AuditVideoWallMonitorRenamed" xml:space="preserve"><value>{0} monitor '{1}' renamed to '{2}'</value></data>
+  <data name="Field_UserName" xml:space="preserve"><value>User name</value></data>
+  <data name="InitializePatrollingControllerFailed" xml:space="preserve"><value>Error loading patrolling controller: {0}</value></data>
+  <data name="AuditHardwareDisabled" xml:space="preserve"><value>Hardware '{0}' disabled</value></data>
+  <data name="FileTransferToRecorderFailed" xml:space="preserve"><value>The transfer of file '{0}' to recording server '{1}' failed.</value></data>
+  <data name="AuditLoginProviderDeleted" xml:space="preserve"><value>External IDP '{0}' was deleted.</value></data>
+  <data name="AuditRuleDisabled" xml:space="preserve"><value>Rule '{0}' disabled</value></data>
+  <data name="AuditBookmarkViewed" xml:space="preserve"><value>Bookmark(s) viewed: '{0}'.</value></data>
+  <data name="Enum_AuditType_PlaybackAudio" xml:space="preserve"><value>Play back audio</value></data>
+  <data name="Enum_ResourceType_MetadataSearch" xml:space="preserve"><value>Metadata search</value></data>
+  <data name="AuditVideoWallTextViewItemCreated" xml:space="preserve"><value>Text message ('{0}') displayed</value></data>
+  <data name="Enum_AuditType_PlaybackVideo" xml:space="preserve"><value>Play back video</value></data>
+  <data name="AuditBasicUserDescriptionChanged" xml:space="preserve"><value>Basic user '{0}' description has changed.</value></data>
+  <data name="HardwarePasswordChangeFailedPasswordOrUserLevelMayNotBeChanged" xml:space="preserve"><value>The password or the user level may not be changed on hardware device {0}.</value></data>
+  <data name="Enum_Category_License" xml:space="preserve"><value>Licensing</value></data>
+  <data name="AuditRoleCreated" xml:space="preserve"><value>Role '{0}' created</value></data>
+  <data name="MediaDatabaseRepairTableStarted" xml:space="preserve"><value>Repair of database table started for device '{0}' in storage '{1}'</value></data>
+  <data name="AuditRoleObjectSecurityRestrictedChangedNoRestrictionToMinutes" xml:space="preserve"><value>The restriction is changed for access permission '{0}'-'{1}' from no restriction to be restricted '{2}' minutes on '{3}'</value></data>
+  <data name="AuditBasicInfoEdited" xml:space="preserve"><value>The settings for the site information '{0}' is changed to '{1}'</value></data>
+  <data name="Field_LogEntryId" xml:space="preserve"><value>Log entry ID</value></data>
+  <data name="Enum_ResourceType_ClientProfiles" xml:space="preserve"><value>[SmartClient] profiles</value></data>
+  <data name="Enum_Category_HardwareAndDevices" xml:space="preserve"><value>Hardware and devices</value></data>
+  <data name="Enum_ResourceType_ServiceRegistration" xml:space="preserve"><value>Service registration</value></data>
+  <data name="Enum_AuditType_LiveVideo" xml:space="preserve"><value>Live video</value></data>
+  <data name="ShutdownStatusManagerFailed" xml:space="preserve"><value>Error shutting down, Status Manager: {0}</value></data>
+  <data name="DeviceCommunicationError" xml:space="preserve"><value>Communication error.</value></data>
+  <data name="AuditPlaybackMetadataRecordings" xml:space="preserve"><value>Playing back recorded metadata '{0}' to '{1}' (UTC time).</value></data>
+  <data name="DeviceEmptyTableFailedNoRetry" xml:space="preserve"><value>Delete all device recordings failed.</value></data>
+  <data name="Enum_AuditType_LiveAudio" xml:space="preserve"><value>Live audio</value></data>
+  <data name="Enum_EventGeneratorType_MIP" xml:space="preserve"><value>MIP item</value></data>
+  <data name="AuditHostedHardwareDeleted" xml:space="preserve"><value>Remote connect hardware '{0}' removed.</value></data>
+  <data name="InitializeRecorderCommandProcessorFailed" xml:space="preserve"><value>Error initializing recording server command processor: {0}</value></data>
+  <data name="Enum_AccessGranted_Granted" xml:space="preserve"><value>Granted</value></data>
+  <data name="InitializeMediaDbConfigureFailed" xml:space="preserve"><value>Error initializing media database: {0}</value></data>
+  <data name="AuditSearchRenamed" xml:space="preserve"><value>Search '{0}' renamed to '{1}'.</value></data>
+  <data name="MediaDatabaseTableSplitTookLongUnknown" xml:space="preserve"><value>Creating a table split took an unusually long time. Table: '{0}'. Storage name: '{1}'</value></data>
+  <data name="AuditTrustedIssuerDeleted" xml:space="preserve"><value>The trusted issuer {0} is deleted.</value></data>
+  <data name="AuditLiveSpeakerEnded" xml:space="preserve"><value>Client live feed terminated</value></data>
+  <data name="LegacyRecorderNoSecurityUpdates" xml:space="preserve"><value>Updates to the security configuration could not be sent to recording server '{0}' because it is not the latest version.</value></data>
+  <data name="AuditVideoWallMonitorCameraRemoved" xml:space="preserve"><value>Camera '{0}' removed from position '{1}'</value></data>
+  <data name="LoadCachedConfigurationNoData" xml:space="preserve"><value>The cached recording server configuration was empty.</value></data>
+  <data name="LicenseGetHardwareMacAddressFailed" xml:space="preserve"><value>The recording server could not obtain the MAC address from the hardware: {0}</value></data>
+  <data name="AuditLoginUnSuccessfulUnknownUser" xml:space="preserve"><value>Unsuccessful login - Unknown user</value></data>
+  <data name="AuditExportCameraToDBWithEncryption" xml:space="preserve"><value>Database export started. With encryption. Sequence '{0}' to '{1}'</value></data>
+  <data name="FailoverServerUnableToConnectEncryptedToRecorder" xml:space="preserve"><value>Unable to establish encrypted connection to recording server '{0}'.</value></data>
+  <data name="LoadCachedSecurityConfigurationNoData" xml:space="preserve"><value>The cached security configuration was empty.</value></data>
+  <data name="AuditRecordingSequencesRequested" xml:space="preserve"><value>Recording sequence list retrieved. {0} instances from {1} to {2} (UTC time)</value></data>
+  <data name="ExternalPlugIn360LensDefinitionsAdded" xml:space="preserve"><value>One or more fisheye lens definitions added to the management server.</value></data>
+  <data name="AuditPtzPatrollingProfileChanged" xml:space="preserve"><value>Patrolling profile '{0}' was changed</value></data>
+  <data name="DeviceDriverLoadFailed" xml:space="preserve"><value>Failed to load driver for the hardware: {0}</value></data>
+  <data name="MatrixLog" xml:space="preserve"><value>Failed to send command to Matrix recipient: {0} or {1} may not be running.</value></data>
+  <data name="EdgeStorageRetrievalBegin" xml:space="preserve"><value>Retrieving remote recordings...</value></data>
+  <data name="AuditSystemDashboardConfigurationUpdated" xml:space="preserve"><value>The system dashboard configuration '{0}' was updated.</value></data>
+  <data name="AuditVideoWallRenamed" xml:space="preserve"><value>{0} '{1}' renamed to '{2}'</value></data>
+  <data name="DeviceCommunicationStopped" xml:space="preserve"><value>Communication stopped.</value></data>
+  <data name="AuditClientProfileEdited" xml:space="preserve"><value>Settings for the {0} profile '{1}' changed.</value></data>
+  <data name="HardwarePasswordChangeFailedHardwareReadOnly" xml:space="preserve"><value>The password of hardware device {0} could not be changed. The hardware device is read-only.</value></data>
+  <data name="MediaDatabaseDeleteError" xml:space="preserve"><value>Could not delete data from the storage. Device: '{0}'. Storage name: '{1}'</value></data>
+  <data name="Enum_AuditType_Security" xml:space="preserve"><value>Security</value></data>
+  <data name="ArchiveStorageUnmountSuccess" xml:space="preserve"><value>The archive '{0}' was unmounted.</value></data>
+  <data name="AuditTrustedIssuerUpdated" xml:space="preserve"><value>The trusted issuer {0} is updated.</value></data>
+  <data name="AuditRetentionOptionRoleRelationUpdated" xml:space="preserve"><value>The default evidence lock time option for the role '{0}' was changed to '{1}'</value></data>
+  <data name="LicenseChangedUpdatedHardwareMacAddressInvalid" xml:space="preserve"><value>Cannot update MAC address for hardware '{0}'. The updated MAC address is invalid.</value></data>
+  <data name="AuditVideoWallMonitorLayoutCameraChanged" xml:space="preserve"><value>Camera '{0}' placed at position '{1}'</value></data>
+  <data name="HardwareUpdateDriverSuccess" xml:space="preserve"><value>Driver was successfully updated for hardware '{0}'</value></data>
+  <data name="MediaDatabaseStorageDataMoveFinishSuccess" xml:space="preserve"><value>Move of media data has finished successfully</value></data>
+  <data name="AuditRuleCreated" xml:space="preserve"><value>Rule '{0}' created</value></data>
+  <data name="LicenseChangedMacAddressIdentified" xml:space="preserve"><value>Changed MAC address found for hardware: {0}</value></data>
+  <data name="AuditRoleAnonymityDuringPtzSessionsRevoked" xml:space="preserve"><value>The Make users anonymous during PTZ sessions option is revoked for the role '{0}'</value></data>
+  <data name="AuditLiveMetadataEnded" xml:space="preserve"><value>Client live feed terminated</value></data>
+  <data name="AuditDeviceArchiveSettingsChanged" xml:space="preserve"><value>Archive settings changed on '{0}'</value></data>
+  <data name="AuditUserLoginFailedLockedOutByAdmin" xml:space="preserve"><value>Login by the user failed. The user is locked out by the administrator.</value></data>
+  <data name="DeviceClearOverflowMode" xml:space="preserve"><value>Media queue normalized. The device is no longer in overflow mode.</value></data>
+  <data name="Enum_EntryStatus_Success" xml:space="preserve"><value>Success</value></data>
+  <data name="AuditPtzReserveDenied" xml:space="preserve"><value>Reserve PTZ session</value></data>
+  <data name="WebServerLoadCertificateFailed" xml:space="preserve"><value>Unable to load the certificate used for SSL communication.</value></data>
+  <data name="AuditAudioMessageDeleted" xml:space="preserve"><value>Audio message '{0}' deleted.</value></data>
+  <data name="AuditFileTransferToRecorderStarted" xml:space="preserve"><value>User initiated transfer of file '{0}' to recording server '{1}'.</value></data>
+  <data name="AuditVideoWallMonitorDeleted" xml:space="preserve"><value>{0} monitor '{1}' deleted</value></data>
+  <data name="AuditDeviceSettingsChanged" xml:space="preserve"><value>Settings changed on '{0}'</value></data>
+  <data name="ShutdownServerComplete" xml:space="preserve"><value>Shutdown complete.</value></data>
+  <data name="AuditPlaybackSpeakerRecordings" xml:space="preserve"><value>Playing back recorded audio from speakers '{0}' to '{1}' (UTC time).</value></data>
+  <data name="AuditDevice360LensSettingsDisabled" xml:space="preserve"><value>Fisheye lens settings disabled on '{0}'.</value></data>
+  <data name="UserHandlingErrorDeleteCurrentUserNotAllowed" xml:space="preserve"><value>Operation failed on: {0}. The currently active user cannot be deleted.</value></data>
+  <data name="AuditSystemDashboardConfigurationCreated" xml:space="preserve"><value>The system dashboard configuration '{0}' was created.</value></data>
+  <data name="SendNotificationError" xml:space="preserve"><value>Error sending notification: {0}</value></data>
+  <data name="AuditRoleOnlyAllowLoginWithinTimeProfileChanged" xml:space="preserve"><value>The Only allow login within time profile option is changed from '{0}' to '{1}' for the role '{2}'</value></data>
+  <data name="HardwareDriverNotFound" xml:space="preserve"><value>Unable to find driver for configured hardware. Hardware: {0}. Hardware model: {1}</value></data>
+  <data name="AuditPlaybackCameraRecordingsDenied" xml:space="preserve"><value>The client was not allowed to play back video.</value></data>
+  <data name="InitializeLogManagerFailed" xml:space="preserve"><value>Error initializing log manager: {0}</value></data>
+  <data name="AuditLoginUserNotAllowedCommandApiAccess" xml:space="preserve"><value>Login failed for user. Insufficient user permissions</value></data>
+  <data name="AuditRoleEdited" xml:space="preserve"><value>Role '{0}' access permissions changed</value></data>
+  <data name="AuditTimeProfileCreated" xml:space="preserve"><value>Time profile '{0}' created</value></data>
+  <data name="AuditPtzPatrollingProfileDeleted" xml:space="preserve"><value>Patrolling profile '{0}' was deleted</value></data>
+  <data name="AuditPTZMoveStart" xml:space="preserve"><value>PTZ move 'Started'</value></data>
+  <data name="HardwareCommunicationEstablished" xml:space="preserve"><value>Communication established (hardware)</value></data>
+  <data name="Enum_ResourceType_RetentionOptionRoleRelation" xml:space="preserve"><value>Evidence lock</value></data>
+  <data name="HardwarePasswordChangeFailedNetworkIssue" xml:space="preserve"><value>The password of hardware device {0} could not be changed because of network issues.</value></data>
+  <data name="AuditLoginSuccess" xml:space="preserve"><value>User successfully logged in</value></data>
+  <data name="Field_RuleName" xml:space="preserve"><value>Rule name</value></data>
+  <data name="Enum_ResourceType_RecordingServers" xml:space="preserve"><value>Recording servers</value></data>
+  <data name="ExternalPlugIn360LensDefinitionsRemoved" xml:space="preserve"><value>One or more fisheye lens definitions removed from the management server.</value></data>
+  <data name="MediaDatabaseStorageMergeError" xml:space="preserve"><value>Failed to merge media data. Error: {0}</value></data>
+  <data name="AuditBasicUserCreatedIdentityProvider" xml:space="preserve"><value>Basic user '{0}' created.</value></data>
+  <data name="ArchiveStorageUnmountFailed" xml:space="preserve"><value>Unmounting the archive '{0}' failed.</value></data>
+  <data name="AuditPTZMoveToPresetPosition" xml:space="preserve"><value>PTZ preset position '{0}' activated</value></data>
+  <data name="AuditRoleClientLoginGranted" xml:space="preserve"><value>The Allow {0} login option is granted for the role '{1}'</value></data>
+  <data name="AuditClientLiveFeedTerminated" xml:space="preserve"><value>Client live feed terminated.</value></data>
+  <data name="AuditFileUploadStarted" xml:space="preserve"><value>User initiated a file upload to the server. Target file name '{0}', size {1}.</value></data>
+  <data name="Field_Description" xml:space="preserve"><value>Description</value></data>
+  <data name="Enum_Category_MapViewing" xml:space="preserve"><value>Map viewing</value></data>
+  <data name="AuditUserTriggeredEvent" xml:space="preserve"><value>The user-defined event '{0}' was triggered.</value></data>
+  <data name="GenericRule" xml:space="preserve"><value>{0}</value></data>
+  <data name="AuditBasicUserDisabled" xml:space="preserve"><value>Basic user '{0}' is disabled.</value></data>
+  <data name="DeviceFirmwareUpdateFailed" xml:space="preserve"><value>The firmware update operation failed for hardware device: '{0}'.</value></data>
+  <data name="AuditHostedHardwareModified" xml:space="preserve"><value>Remote connect hardware '{0}' modified.</value></data>
+  <data name="Enum_ResourceType_SmartWallMonitor" xml:space="preserve"><value>[SmartWall] monitor</value></data>
+  <data name="Field_GeneratorId" xml:space="preserve"><value>Generator ID</value></data>
+  <data name="AuditHostedHardwareAdded" xml:space="preserve"><value>Remote connect hardware '{0}' added.</value></data>
+  <data name="MediaDatabaseRepairTableCompleted" xml:space="preserve"><value>Repair of database table completed for device '{0}' in storage '{1}'</value></data>
+  <data name="AuditMapHotZoneLinkRemoved" xml:space="preserve"><value>Hot zone link to map '{0}' removed from '{1}'</value></data>
+  <data name="Enum_ResourceType_MailNotification" xml:space="preserve"><value>MailNotification</value></data>
+  <data name="ShutdownRecorderSNMPManagerFailed" xml:space="preserve"><value>Error shutting down, SNMP manager: {0}</value></data>
+  <data name="AuditLiveMicrophoneStarted" xml:space="preserve"><value>Client live feed requested</value></data>
+  <data name="InitializeVmoClientFailed" xml:space="preserve"><value>Error initializing VideoOS Management Objects Client Module: {0}</value></data>
+  <data name="AuditPtzPatrollingProfileCreated" xml:space="preserve"><value>Patrolling profile '{0}' was created</value></data>
+  <data name="AuditPtzPresetChanged" xml:space="preserve"><value>PTZ preset position '{0}' was changed</value></data>
+  <data name="Enum_EventGeneratorType_External" xml:space="preserve"><value>External</value></data>
+  <data name="AuditTimeProfileDeleted" xml:space="preserve"><value>Time profile '{0}' deleted</value></data>
+  <data name="ShutdownPatrollingControllerFailed" xml:space="preserve"><value>Error shutting down patrolling controller: {0}</value></data>
+  <data name="AutoProvisionedUserCreated" xml:space="preserve"><value>The user {0} is created.</value></data>
+  <data name="InitializeDatabaseFailed" xml:space="preserve"><value>Error initializing database connection: {0}</value></data>
+  <data name="AuditBasicInfoCreated" xml:space="preserve"><value>The site information '{0}' is created with value '{1}'</value></data>
+  <data name="DeviceEmptyTableBegin" xml:space="preserve"><value>Delete all device recordings started.</value></data>
+  <data name="RecordingStorageSetEncryptionMethodSuccess" xml:space="preserve"><value>Set new encryption method on recording storage '{0}' finished successfully.</value></data>
+  <data name="AuditPtzNewSessionGranted" xml:space="preserve"><value>New PTZ session was started by user {0}</value></data>
+  <data name="Enum_Category_Export" xml:space="preserve"><value>Export</value></data>
+  <data name="DeviceDriverProxyFailure" xml:space="preserve"><value>The proxy server serving the device driver '{0}' is unavailable. This affects the following hardware: '{1}'. An attempt to restart the driver will be initiated.</value></data>
+  <data name="AuditDeviceAdded" xml:space="preserve"><value>Device '{0}' added</value></data>
+  <data name="AuditBookmarkEdited" xml:space="preserve"><value>Bookmark '{0}' changed. Headline: '{1}', clip start time: '{2}' (utc), bookmark time: '{3}' (utc), clip end time: '{4}' (utc).</value></data>
+  <data name="ArchiveDatabaseStorageAvailable" xml:space="preserve"><value>The archive '{0}' is available again. The path is '{1}'.</value></data>
+  <data name="Enum_EventGeneratorType_SystemDashboard" xml:space="preserve"><value>System Dashboard</value></data>
+  <data name="AuditPTZControlTimeBased" xml:space="preserve"><value>Request for a PTZ session denied due to time based security restrictions.</value></data>
+  <data name="Enum_EventGeneratorType_DriverDevice" xml:space="preserve"><value>Driver device</value></data>
+  <data name="LicenseHardwareUnlicensed" xml:space="preserve"><value>The hardware is not licensed. Hardware: {0}</value></data>
+  <data name="FailoverServerStartingHotStandby" xml:space="preserve"><value>Starting the hot standby server for recording server '{0}'.</value></data>
+  <data name="ShutdownTaskManagerFailed" xml:space="preserve"><value>Error shutting down task manager: {0}</value></data>
+  <data name="AuditVideoWallPresetAdded" xml:space="preserve"><value>{0} preset '{1}' added to the '{2}' {0}</value></data>
+  <data name="Enum_ResourceType_SaveSearches" xml:space="preserve"><value>Save search</value></data>
+  <data name="AuditExportMetadataCompleted" xml:space="preserve"><value>Export completed. Sequence '{0}' to '{1}'</value></data>
+  <data name="AuditLiveSpeakerDenied" xml:space="preserve"><value>Client live feed denied</value></data>
+  <data name="AuditLogoutTimeBased" xml:space="preserve"><value>Client logged out due to time based security restrictions</value></data>
+  <data name="AuditMediaRestrictionLiveModeExited" xml:space="preserve"><value>'{0}' has exited restricted live mode and has been transformed into playback restriction '{1}'</value></data>
+  <data name="AuditSearchCreated" xml:space="preserve"><value>Search '{0}' saved.</value></data>
+  <data name="Enum_Category_Playback" xml:space="preserve"><value>Playback</value></data>
+  <data name="AuditVideoWallPresetActivateTimeBased" xml:space="preserve"><value>{0} preset activation denied due to time based security restrictions</value></data>
+  <data name="AuditDeviceFailoverSettingChanged" xml:space="preserve"><value>Failover settings of device '{0}' changed to '{1}'</value></data>
+  </root>

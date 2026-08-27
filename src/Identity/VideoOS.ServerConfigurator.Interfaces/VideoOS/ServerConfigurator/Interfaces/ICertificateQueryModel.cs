@@ -1,0 +1,5 @@
+namespace VideoOS.ServerConfigurator.Interfaces;
+
+public interface ICertificateQueryModel : IServerCertificateQueryModel, INonvolatileServerCertificateQueryModel, IClientRegistrationQueryModel, INonvolatileClientRegistrationQueryModel, IApplicationSettingsQueryModel
+{
+}

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="SpeedLabelp50" xml:space="preserve"><value>½x</value></data>
+  <data name="SpeedLabelp10" xml:space="preserve"><value>0.1x</value></data>
+  <data name="SpeedLabelp25" xml:space="preserve"><value>¼x</value></data>
+  <data name="SpanLabel8Hours" xml:space="preserve"><value>8 hours</value></data>
+  <data name="SpanLabel2Hours" xml:space="preserve"><value>2 hours</value></data>
+  <data name="SpanLabel4Hours" xml:space="preserve"><value>4 hours</value></data>
+  <data name="SpanLabel30Minutes" xml:space="preserve"><value>30 minutes</value></data>
+  <data name="SpanLabel10Minutes" xml:space="preserve"><value>10 minutes</value></data>
+  <data name="SpanLabel16Hours" xml:space="preserve"><value>16 hours</value></data>
+  <data name="SpeedLabel16" xml:space="preserve"><value>16x</value></data>
+  <data name="SpeedLabel32" xml:space="preserve"><value>32x</value></data>
+  <data name="SpeedLabel4" xml:space="preserve"><value>4x</value></data>
+  <data name="SpeedLabel1" xml:space="preserve"><value>1x</value></data>
+  <data name="SpeedLabel2" xml:space="preserve"><value>2x</value></data>
+  <data name="SpeedLabel8" xml:space="preserve"><value>8x</value></data>
+  <data name="SpanLabel1Day" xml:space="preserve"><value>1 day</value></data>
+  <data name="SpanLabel5Minutes" xml:space="preserve"><value>5 minutes</value></data>
+  <data name="SpanLabel1Minute" xml:space="preserve"><value>1 minute</value></data>
+  <data name="SpanLabel2Days" xml:space="preserve"><value>2 days</value></data>
+  <data name="SpanLabel1Week" xml:space="preserve"><value>1 week</value></data>
+  <data name="SpanLabel1Hour" xml:space="preserve"><value>1 hour</value></data>
+  </root>

@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:conv="clr-namespace:VideoOS.UI.Common.WPF.Utils.Converters" xmlns:local="clr-namespace:VideoOS.UI.Common.WPF.CustomControls" xmlns:themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" xmlns:resizableDropDown="clr-namespace:VideoOS.UI.Common.WPF.ResizableDropDown" xmlns:search="clr-namespace:VideoOS.UI.Common.WPF.RangeSelector" xmlns:util="clr-namespace:VideoOS.UI.Common.WPF.Utils.MvvmHelpers" xmlns:gl="clr-namespace:System.Globalization;assembly=mscorlib">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="/VideoOS.UI.Common.WPF;component/Themes/TextBlockStyles.xaml" />
+    <ResourceDictionary Source="/VideoOS.UI.Common.WPF;component/Themes/ButtonStyles.xaml" />
+    <ResourceDictionary Source="/VideoOS.UI.Common.WPF;component/Themes/RadioButtonStyle.xaml" />
+    <ResourceDictionary Source="/VideoOS.UI.Common.WPF;component/Themes/TabControlStyles.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="{x:Type local:DropDown}" TargetType="{x:Type local:DropDown}">
+    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Setter Property="Padding" Value="4,2,4,2" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type local:DropDown}">
+          <FrameworkTemplate.Resources>
+            <ResourceDictionary>
+              <Geometry x:Key="DownArrowGeometry">M 0 0 L 5 6 L 10 0 Z</Geometry>
+            </ResourceDictionary>
+          </FrameworkTemplate.Resources>
+          <ToggleButton HorizontalContentAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding Control.VerticalContentAlignment}" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+            <Grid>
+              <Grid Margin="{TemplateBinding Control.Padding}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <ContentPresenter Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="{TemplateBinding ContentControl.Content}" />
+                <Path Name="Arrow" Grid.Column="1" Margin="3,1,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{DynamicResource ViewSelectorArrowFill}" Visibility="{TemplateBinding local:DropDown.ArrowVisibility}" Data="{StaticResource DownArrowGeometry}" />
+              </Grid>
+              <Popup Name="PART_Popup" Width="{TemplateBinding FrameworkElement.ActualWidth}" MaxHeight="{TemplateBinding local:DropDown.MaxDropDownHeight}" MaxWidth="{TemplateBinding local:DropDown.MaxDropDownWidth}" AllowsTransparency="True" HorizontalOffset="{TemplateBinding local:DropDown.HorizontalOffset}" Placement="{TemplateBinding local:DropDown.Placement}" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" StaysOpen="False" VerticalOffset="{TemplateBinding local:DropDown.VerticalOffset}" IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+                <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled">
+                  <ContentPresenter Content="{TemplateBinding local:DropDown.DropDownContent}" />
+                </ScrollViewer>
+              </Popup>
+            </Grid>
+          </ToggleButton>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ComboBoxFocusVisual">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2" />
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ComboBoxReadonlyToggleButton" TargetType="{x:Type ToggleButton}">
+    <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="true" />
+    <Setter Property="IsTabStop" Value="false" />
+    <Setter Property="Focusable" Value="false" />
+    <Setter Property="ButtonBase.ClickMode" Value="Press" />
+    <Setter Property="Background" Value="#00FFFFFF" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ToggleButton}">
+          <Border Name="templateRoot" BorderBrush="{DynamicResource ButtonNormalBorder}" BorderThickness="1" Background="#00FFFFFF" CornerRadius="2" SnapsToDevicePixels="true">
+            <Border Name="splitBorder" BorderBrush="#00FFFFFF" BorderThickness="1" HorizontalAlignment="Right" Margin="0" SnapsToDevicePixels="true" Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}">
+              <Path Name="arrow" Data="{DynamicResource ScDownArrowGeometry}" Fill="{DynamicResource ComboBoxArrowFill}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" />
+            </Border>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="false">
+              <Setter TargetName="templateRoot" Value="{DynamicResource ResizableDropDownMouseNotOverBorder}" Property="Border.BorderBrush" />
+            </Trigger>
+            <MultiDataTrigger>
+              <MultiDataTrigger.Conditions>
+                <Condition Value="true" Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="false" Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" />
+              </MultiDataTrigger.Conditions>
+              <Setter TargetName="templateRoot" Value="{DynamicResource MouseOverBrush}" Property="Border.Background" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+              <MultiDataTrigger.Conditions>
+                <Condition Value="true" Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="false" Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" />
+              </MultiDataTrigger.Conditions>
+              <Setter TargetName="templateRoot" Value="{DynamicResource PressedBrush}" Property="Border.Background" />
+              <Setter TargetName="templateRoot" Value="{DynamicResource PressedBorderBrush}" Property="Border.BorderBrush" />
+            </MultiDataTrigger>
+            <Trigger Property="IsEnabled" Value="false">
+              <Setter TargetName="arrow" Property="Shape.Fill" Value="{StaticResource ComboBox.Disabled.Glyph}" />
+            </Trigger>
+            <MultiDataTrigger>
+              <MultiDataTrigger.Conditions>
+                <Condition Value="false" Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="false" Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" />
+              </MultiDataTrigger.Conditions>
+              <Setter TargetName="templateRoot" Value="{DynamicResource DisabledBackgroundBrush}" Property="Border.Background" />
+              <Setter TargetName="templateRoot" Value="{DynamicResource DisabledBorderBrush}" Property="Border.BorderBrush" />
+            </MultiDataTrigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="DragThumb" TargetType="{x:Type Thumb}">
+    <Setter Property="UIElement.SnapsToDevicePixels" Value="true" />
+    <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="true" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Thumb}">
+          <Canvas Height="{x:Static SystemParameters.VerticalScrollBarWidth}" Width="{x:Static SystemParameters.VerticalScrollBarWidth}">
+            <Rectangle Width="{x:Static SystemParameters.VerticalScrollBarWidth}" Height="{x:Static SystemParameters.VerticalScrollBarWidth}" Fill="#00FFFFFF" Stroke="#00FFFFFF" StrokeThickness="0" />
+            <Line X1="{x:Static SystemParameters.VerticalScrollBarWidth}" Y1="0" X2="0" Y2="{x:Static SystemParameters.VerticalScrollBarWidth}" Stroke="{DynamicResource ScBodyText}" StrokeThickness="1" />
+            <Line X1="{x:Static SystemParameters.VerticalScrollBarWidth}" Y1="4" X2="4" Y2="{x:Static SystemParameters.VerticalScrollBarWidth}" Stroke="{DynamicResource ScBodyText}" StrokeThickness="1" />
+            <Line X1="{x:Static SystemParameters.VerticalScrollBarWidth}" Y1="8" X2="8" Y2="{x:Static SystemParameters.VerticalScrollBarWidth}" Stroke="{DynamicResource ScBodyText}" StrokeThickness="1" />
+            <Line X1="{x:Static SystemParameters.VerticalScrollBarWidth}" Y1="12" X2="12" Y2="{x:Static SystemParameters.VerticalScrollBarWidth}" Stroke="{DynamicResource ScBodyText}" StrokeThickness="1" />
+          </Canvas>
+          <ControlTemplate.Triggers>
+            <Trigger Property="Thumb.IsDragging" Value="True">
+              <Setter Property="FrameworkElement.Cursor" Value="SizeNWSE" />
+            </Trigger>
+            <Trigger Property="Thumb.IsDragging" Value="False">
+              <Setter Property="FrameworkElement.Cursor" Value="SizeNWSE" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type resizableDropDown:ResizableDropDown}" TargetType="{x:Type resizableDropDown:ResizableDropDown}">
+    <Setter Property="FrameworkElement.FocusVisualStyle" Value="{StaticResource ComboBoxFocusVisual}" />
+    <Setter Property="Foreground" Value="{DynamicResource ScBodyText}" />
+    <Setter Property="Background" Value="{DynamicResource ScBackground1}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ButtonNormalBorder}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+    <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+    <Setter Property="Padding" Value="4,3" />
+    <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
+    <Setter Property="ScrollViewer.PanningMode" Value="Both" />
+    <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type resizableDropDown:ResizableDropDown}">
+          <Grid Name="MainGrid" SnapsToDevicePixels="true">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Width="0" />
+            </Grid.ColumnDefinitions>
+            <Popup Name="PART_Popup" AllowsTransparency="true" Grid.ColumnSpan="2" Margin="1" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}">
+              <themes:SystemDropShadowChrome themes:SystemDropShadowChrome.Name="Shdw" themes:SystemDropShadowChrome.Color="Transparent" FrameworkElement.MaxHeight="{TemplateBinding ComboBox.MaxDropDownHeight}">
+                <Border Name="DropDownBorder" BorderBrush="{DynamicResource ButtonNormalBorder}" BorderThickness="1" Background="{DynamicResource ScBackground1}" Height="95" MinHeight="95">
+                  <Grid>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="*" />
+                      <RowDefinition Height="Auto" />
+                      <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ScrollViewer Name="DropDownScrollViewer" Grid.Row="0" HorizontalScrollBarVisibility="Hidden">
+                      <Grid RenderOptions.ClearTypeHint="Enabled">
+                        <Canvas HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
+                          <Rectangle Name="OpaqueRect" Fill="{Binding Background, ElementName=DropDownBorder}" Height="{Binding ActualHeight, ElementName=DropDownBorder}" Width="{Binding ActualWidth, ElementName=DropDownBorder}" />
+                        </Canvas>
+                        <ContentPresenter Name="PART_DropDownContent" Content="{TemplateBinding resizableDropDown:ResizableDropDown.DropDownContent}" />
+                      </Grid>
+                    </ScrollViewer>
+                    <Separator Grid.Row="1" />
+                    <Thumb Name="PART_ResizeButton" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="{x:Static SystemParameters.VerticalScrollBarWidth}" Height="{x:Static SystemParameters.VerticalScrollBarWidth}" Style="{StaticResource DragThumb}" />
+                  </Grid>
+                </Border>
+              </themes:SystemDropShadowChrome>
+            </Popup>
+            <ToggleButton BorderBrush="{TemplateBinding Control.BorderBrush}" Background="{TemplateBinding Control.Background}" Grid.ColumnSpan="2" Style="{StaticResource ComboBoxReadonlyToggleButton}" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+            <ContentPresenter Name="ContentPresenter" ContentTemplate="{TemplateBinding ComboBox.SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemsControl.ItemTemplateSelector}" Content="{TemplateBinding ComboBox.SelectionBoxItem}" ContentStringFormat="{TemplateBinding ComboBox.SelectionBoxItemStringFormat}" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" IsHitTestVisible="false" Margin="6,3,6,3" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger SourceName="PART_Popup" Property="Popup.HasDropShadow" Value="true">
+              <Setter TargetName="Shdw" Property="Margin" Value="0,0,5,5" />
+              <Setter TargetName="Shdw" Property="themes:SystemDropShadowChrome.Color" Value="#71000000" />
+            </Trigger>
+            <Trigger Property="ItemsControl.HasItems" Value="false">
+              <Setter TargetName="DropDownBorder" Property="Height" Value="200" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+              <Setter Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Property="Foreground" />
+              <Setter Property="Background" Value="#FFF4F4F4" />
+            </Trigger>
+            <MultiTrigger>
+              <MultiTrigger.Conditions>
+                <Condition Property="ItemsControl.IsGrouping" Value="true" />
+                <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false" />
+              </MultiTrigger.Conditions>
+              <Setter Property="ScrollViewer.CanContentScroll" Value="false" />
+            </MultiTrigger>
+            <Trigger SourceName="DropDownScrollViewer" Property="ScrollViewer.CanContentScroll" Value="false">
+              <Setter TargetName="OpaqueRect" Property="Canvas.Top" Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}" />
+              <Setter TargetName="OpaqueRect" Property="Canvas.Left" Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <SolidColorBrush x:Key="ScRangeSelectorThumbPressedBrush" Color="#FF4BAFF6" />
+  <Style x:Key="{x:Type search:RangeSelector}" TargetType="{x:Type search:RangeSelector}">
+    <Style.Resources>
+      <ResourceDictionary>
+        <Style x:Key="EditFieldStyle" TargetType="{x:Type TextBox}">
+          <Setter Property="Height" Value="18" />
+          <Setter Property="TextBox.TextAlignment" Value="Center" />
+          <Setter Property="BorderThickness" Value="1" />
+          <Setter Property="BorderBrush" Value="#FF525C5F" />
+          <Setter Property="Background" Value="#FF353535" />
+          <Setter Property="Foreground" Value="#FFFFFFFF" />
+          <Setter Property="MinWidth" Value="36" />
+          <Setter Property="TextBox.MaxLength" Value="13" />
+          <Setter Property="Margin" Value="0,-28,0,0" />
+          <Setter Property="VerticalContentAlignment" Value="Center" />
+          <Setter Property="UIElement.SnapsToDevicePixels" Value="True" />
+        </Style>
+        <Style x:Key="SliderThumbStyle" TargetType="{x:Type Thumb}">
+          <Setter Property="BorderThickness" Value="0" />
+          <Setter Property="Background" Value="#FF3B9FE6" />
+          <Setter Property="Height" Value="20" />
+          <Setter Property="Width" Value="10" />
+          <Setter Property="Margin" Value="0,2,0,0" />
+          <Setter Property="UIElement.SnapsToDevicePixels" Value="True" />
+          <Setter Property="Template">
+            <Setter.Value>
+              <ControlTemplate TargetType="{x:Type Thumb}">
+                <Border Background="{TemplateBinding Control.Background}" BorderThickness="{TemplateBinding Control.BorderThickness}" BorderBrush="{TemplateBinding Control.BorderBrush}" />
+              </ControlTemplate>
+            </Setter.Value>
+          </Setter>
+        </Style>
+      </ResourceDictionary>
+    </Style.Resources>
+    <Setter Property="Background" Value="#FF717171" />
+    <Setter Property="Foreground" Value="#FFFFFFFF" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="VerticalAlignment" Value="Top" />
+    <Setter Property="FrameworkElement.DataContext" Value="{Binding RelativeSource={RelativeSource Mode=Self}}" />
+    <Setter Property="MinHeight" Value="35" />
+    <Setter Property="IsTabStop" Value="False" />
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type search:RangeSelector}">
+          <Grid Name="ControlGrid" Height="24">
+            <TextBlock Name="rangeMinEditEstimator" MinWidth="36" Visibility="Collapsed" HorizontalAlignment="Left" Text="{Binding ElementName=RangeMinEdit, Path=Text}" />
+            <TextBlock Name="rangeMaxEditEstimator" MinWidth="36" Visibility="Collapsed" HorizontalAlignment="Right" Text="{Binding ElementName=RangeMaxEdit, Path=Text}" />
+            <TextBlock Margin="0,-21,0,0" Foreground="#FF525C5F" Text="{Binding Path=MinValue, RelativeSource={RelativeSource AncestorType={x:Type search:RangeSelector}}}" />
+            <TextBlock Margin="0,-21,0,0" HorizontalAlignment="Right" Foreground="#FF525C5F" Text="{Binding Path=MaxValue, RelativeSource={RelativeSource AncestorType={x:Type search:RangeSelector}}}" />
+            <Border Background="#00FFFFFF">
+              <Rectangle Name="BackgroundElement" Height="4" />
+            </Border>
+            <Border Background="#00FFFFFF">
+              <Rectangle Name="SelectedRangeBar" Height="4" HorizontalAlignment="Left" Fill="{TemplateBinding Control.Foreground}" />
+            </Border>
+            <Canvas Name="ContainerCanvas" Background="#00FFFFFF" Focusable="False" FocusVisualStyle="{x:Null}">
+              <TextBox Name="RangeMinEdit" AutomationProperties.Name="RangeMinEdit" util:TextBoxBehavior.SelectTextOnFocusEnter="True" util:TextBoxBehavior.UpdateOnEnterPress="True" util:TextBoxBehavior.SelectTextOnUpdateSource="True" util:TextBoxBehavior.RollbackOnRejectedInput="True" Style="{Binding Path=EditFieldStyle, RelativeSource={RelativeSource AncestorType={x:Type search:RangeSelector}}}" Text="{Binding Path=RangeMin, ConverterCulture={x:Static gl:CultureInfo.CurrentCulture}, Delay=500, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource AncestorType={x:Type search:RangeSelector}}}" Width="{Binding ElementName=rangeMinEditEstimator, Path=Width}" />
+              <Thumb Name="MinThumb" AutomationProperties.Name="MinThumb" Style="{Binding Path=SliderThumbStyle, RelativeSource={RelativeSource AncestorType={x:Type search:RangeSelector}}}" />
+              <TextBox Name="RangeMaxEdit" AutomationProperties.Name="RangeMaxEdit" util:TextBoxBehavior.SelectTextOnFocusEnter="True" util:TextBoxBehavior.UpdateOnEnterPress="True" util:TextBoxBehavior.SelectTextOnUpdateSource="True" util:TextBoxBehavior.RollbackOnRejectedInput="True" Style="{Binding Path=EditFieldStyle, RelativeSource={RelativeSource AncestorType={x:Type search:RangeSelector}}}" Text="{Binding Path=RangeMax, ConverterCulture={x:Static gl:CultureInfo.CurrentCulture}, Delay=500, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource AncestorType={x:Type search:RangeSelector}}}" Width="{Binding ElementName=rangeMaxEditEstimator, Path=Width}" />
+              <Thumb Name="MaxThumb" AutomationProperties.Name="MaxThumb" Style="{Binding Path=SliderThumbStyle, RelativeSource={RelativeSource AncestorType={x:Type search:RangeSelector}}}" />
+              <TextBox Name="RangeEdit" AutomationProperties.Name="RangeEdit" Visibility="Collapsed" util:TextBoxBehavior.SelectTextOnFocusEnter="True" util:TextBoxBehavior.UpdateOnEnterPress="True" util:TextBoxBehavior.SelectTextOnUpdateSource="True" util:TextBoxBehavior.RollbackOnRejectedInput="True" Style="{Binding Path=EditFieldStyle, RelativeSource={RelativeSource AncestorType={x:Type search:RangeSelector}}}" Text="{Binding Path=RangeSingle, ConverterCulture={x:Static gl:CultureInfo.CurrentCulture}, Delay=500, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource AncestorType={x:Type search:RangeSelector}}}" Width="{Binding ElementName=rangeMinEditEstimator, Path=Width}" />
+            </Canvas>
+            <VisualStateManager.VisualStateGroups>
+              <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Normal" />
+                <VisualState x:Name="MinPressed">
+                  <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MinThumb" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ScRangeSelectorThumbPressedBrush}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RangeMinEdit" Storyboard.TargetProperty="CaretBrush">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Brushes.Transparent}" />
+                    </ObjectAnimationUsingKeyFrames>
+                  </Storyboard>
+                </VisualState>
+                <VisualState x:Name="MaxPressed">
+                  <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MaxThumb" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ScRangeSelectorThumbPressedBrush}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RangeMaxEdit" Storyboard.TargetProperty="CaretBrush">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Brushes.Transparent}" />
+                    </ObjectAnimationUsingKeyFrames>
+                  </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Disabled">
+                  <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MinThumb" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MaxThumb" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}" />
+                    </ObjectAnimationUsingKeyFrames>
+                  </Storyboard>
+                </VisualState>
+              </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <DataTrigger Value="True" Binding="{Binding IsMouseOverRangeBar}">
+              <Setter TargetName="BackgroundElement" Property="Shape.Fill" Value="#FFBBBBBB" />
+            </DataTrigger>
+            <DataTrigger Value="False" Binding="{Binding IsMouseOverRangeBar}">
+              <Setter TargetName="BackgroundElement" Property="Shape.Fill" Value="#90BBBBBB" />
+            </DataTrigger>
+            <DataTrigger Value="True" Binding="{Binding IsThumbsOverlapping}">
+              <Setter TargetName="MinThumb" Property="Background" Value="#FF358FCC" />
+            </DataTrigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrroMessage_AddAcountRightUserNotFound" xml:space="preserve"><value>找不到帳戶名稱。</value></data>
+  <data name="ServerConfig_RetentionTimeLabel" xml:space="preserve"><value>錄影保留時間：</value></data>
+  <data name="MessageBox_MakeSureUserHasAccess_Caption" xml:space="preserve"><value>服務帳戶</value></data>
+  <data name="ServerConfig_ManagementServerURLInfo" xml:space="preserve"><value>若管理伺服器設定為安全，請使用 HTTPS：</value></data>
+  <data name="ServerUninstall_KeepMediaArch" xml:space="preserve"><value>保留媒體歸檔</value></data>
+  <data name="ServerConfig_FailoverLicenseNotSupported" xml:space="preserve"><value>選取的管理伺服器授權不支援容錯移轉錄影伺服器。 
+請選取其他管理伺服器，或升級選取的軟體伺服器授權。</value></data>
+  <data name="ErrorMessage_Caption" xml:space="preserve"><value>發生錯誤</value></data>
+  <data name="ServerConfig_ManagementServerURL" xml:space="preserve"><value>管理伺服器位址 (&amp;M)。</value></data>
+  <data name="ErrorMessage_ServerNotFound" xml:space="preserve"><value>伺服器未回應。請確保伺服器處於線上狀態且版本正確。</value></data>
+  <data name="ServiceAccount_HeadLine" xml:space="preserve"><value>選取錄影伺服器的服務帳戶</value></data>
+  <data name="MessageBox_UnableToVerifyAccountType_Caption" xml:space="preserve"><value>格式無效</value></data>
+  <data name="ServerUninstall_KeepDp" xml:space="preserve"><value>保留此電腦上安裝的裝置套件 {0}。</value></data>
+  <data name="ErrroMessage_AddAccountRightGranted" xml:space="preserve"><value>已將「登入為服務」權限授予帳戶 {0}。</value></data>
+  <data name="ServerConfig_MediaDb" xml:space="preserve"><value>選取您的媒體資料庫 (&amp;D) 位置：</value></data>
+  <data name="ServerConfig_MediaDbInfo" xml:space="preserve"><value>建議您將視訊錄影儲存在與安裝程式不一樣的驅動程式。</value></data>
+  <data name="WarningMessage_ConnectionFailed" xml:space="preserve"><value>無法驗證管理伺服器的連線。如果繼續，錄影伺服器的效能資料可能遺失。
+安裝完成後，一旦建立連線，請使用 Server Configurator 註冊錄影伺服器。
+是否要繼續？</value></data>
+  <data name="ErrroMessage_ServiceLogOnSetupDialogErrorCode" xml:space="preserve"><value>錯誤代碼: {0}</value></data>
+  <data name="ServiceAccount_NetworkServiceName" xml:space="preserve"><value>網路服務</value></data>
+  <data name="ErrorMessage_InvalidServerCertificateSelection" xml:space="preserve"><value>您必須選取證書或停用加密才能繼續安裝。</value></data>
+  <data name="ServerUninstall_HeadLine" xml:space="preserve"><value>Recording Server 解除安裝</value></data>
+  <data name="MediaDatabaseLocation_LabelSpaceAvailable" xml:space="preserve"><value>磁碟上的可用空間: {0} GB</value></data>
+  <data name="WarningPageHeadingDetails" xml:space="preserve"><value>GDPR：個人資料的保留時間</value></data>
+  <data name="ErrroMessage_AddAcountRightError" xml:space="preserve"><value>無法將「登入為服務」權限授予帳戶 {0}。</value></data>
+  <data name="ErrorMessage_ConnectionFailed" xml:space="preserve"><value>無法驗證管理伺服器的連線。 </value></data>
+  <data name="WarningMessage_GdprRetention" xml:space="preserve"><value>在此安裝程式中，系統會提示您設置媒體的保留時間，它可能包含個人資料。如果您受歐盟一般資料保護規定 (「GDPR」)的制約，並且保留時間過長，則系統將不符合 GDPR。
+
+如需瞭解在使用 {0} VMS 時如何處理 GDPR 合規性 (包含保留時間) 的詳細資訊，請瀏覽我們的《GDPR 隱私權指南》：
+{1}
+
+我們的《GDPR 隱私權指南》僅適用於一般資訊用途，您需自行承擔責任並遵循與個人資料相關的適用法律。除其他因素外，保留時間可能取決於系統用途和資料處理的用途。您可以洽詢相關的資料保護授權單位以獲取所在地區法律的指南。
+
+</value></data>
+  <data name="ErrorMessage_ServerNameEmpty" xml:space="preserve"><value>輸入伺服器名稱。</value></data>
+  <data name="Logging_ServiceAccountAddRightGranted" xml:space="preserve"><value>已將「登入為服務」權限授予帳戶 {0}</value></data>
+  <data name="MediaDatabaseLocation_LabelSpaceAvailableTb" xml:space="preserve"><value>磁碟上的可用空間: {0} TB</value></data>
+  <data name="MediaDatabaseLocation_LabelSpaceAvailableMb" xml:space="preserve"><value>磁碟上的可用空間: {0} MB</value></data>
+  <data name="ErrorMessage_ServerAddressEmpty" xml:space="preserve"><value>輸入管理伺服器位址。</value></data>
+  <data name="MessageBox_MakeSureUserHasAccess" xml:space="preserve"><value>不會驗證錄影伺服器的使用者帳戶「{0}」。 
+
+請確保選取的使用者帳戶具有在媒體資料庫中存取現有媒體的足夠權限。
+
+是否確定要繼續此安裝?</value></data>
+  <data name="ErrorMessage_EmptyMediaDBPath" xml:space="preserve"><value>輸入媒體資料庫的路徑。</value></data>
+  <data name="ServiceAccount_FailoverSubLine" xml:space="preserve"><value>服務使用這個帳戶，這個帳戶必須有系統管理員權限。如果電腦屬於某個網域，您必須指定網域使用者帳戶。</value></data>
+  <data name="InvalidConfigFileException" xml:space="preserve"><value>錄影機設定檔無效。</value></data>
+  <data name="ServerConfig_ServerName" xml:space="preserve"><value>錄影伺服器名稱(&amp;R)：</value></data>
+  <data name="MessageBox_UnableToVerifyAccountType" xml:space="preserve"><value>使用者名稱的格式不正確，無法自動解析該格式。正確的格式為:
+
+網域使用者:   DOMAIN\USER NAME
+本機使用者:        COMPUTER NAME\USER NAME</value></data>
+  <data name="ErrorMessage_ServiceLogOnSetupDialogPasswordInvalid" xml:space="preserve"><value>帳戶無法登入。帳戶名稱或密碼無效，或者帳戶不存在。</value></data>
+  <data name="ServerConfig_HeadLine" xml:space="preserve"><value>指定 Recording Server 設定</value></data>
+  <data name="ErrorMessage_InvalidMediaDBPath" xml:space="preserve"><value>媒體資料庫的路徑無效。</value></data>
+  <data name="ServerConfig_BrowseButton" xml:space="preserve"><value>瀏覽(&amp;B)...</value></data>
+  <data name="ErrorMessage_InvalidServerURL" xml:space="preserve"><value>{0} 的位址無效。</value></data>
+  <data name="ServerConfig_ManagementServerExample" xml:space="preserve"><value>範例：http://host 或 https://host.domain.com:8443.</value></data>
+  <data name="ServerConfig_RetentionDaysLabel" xml:space="preserve"><value>天</value></data>
+  <data name="ErrorMessage_MustInstallBeforeChangingTracks" xml:space="preserve"><value>無法安裝針對安裝所選取的伺服器類型，因為已安裝另一個類型。</value></data>
+  </root>

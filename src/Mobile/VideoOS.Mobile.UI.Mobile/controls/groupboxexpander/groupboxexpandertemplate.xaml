@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:groupBoxExpander="clr-namespace:VideoOS.Mobile.UI.Controls.GroupBoxExpander">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="../../Styles/GroupBoxExpanderToggleButtonStyle.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <ControlTemplate x:Key="GroupBoxExpanderTemplate" TargetType="{x:Type groupBoxExpander:GroupBoxExpanderControl}">
+    <GroupBox Name="MainGroupBox" Padding="{TemplateBinding Control.Padding}" Header="{Binding HeaderText, RelativeSource={RelativeSource AncestorType={x:Type groupBoxExpander:GroupBoxExpanderControl}}}">
+      <ContentPresenter Name="LayoutPresenter" Content="{Binding Content, RelativeSource={RelativeSource AncestorType={x:Type groupBoxExpander:GroupBoxExpanderControl}}}" />
+      <HeaderedContentControl.HeaderTemplate>
+        <DataTemplate>
+          <ToggleButton Name="ToggleButton" BorderBrush="#FF000000" Style="{StaticResource GroupBoxExpanderToggleButtonStyle}" IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource AncestorType={x:Type groupBoxExpander:GroupBoxExpanderControl}}}">
+            <ContentControl.Content>
+              <TextBlock VerticalAlignment="Center" Text="{Binding}" />
+            </ContentControl.Content>
+          </ToggleButton>
+        </DataTemplate>
+      </HeaderedContentControl.HeaderTemplate>
+    </GroupBox>
+  </ControlTemplate>
+  <Style x:Key="GroupBoxExpanderDefaultStyle" TargetType="{x:Type groupBoxExpander:GroupBoxExpanderControl}">
+    <Setter Property="Template" Value="{StaticResource GroupBoxExpanderTemplate}" />
+  </Style>
+  <Style x:Key="{x:Type groupBoxExpander:GroupBoxExpanderControl}" TargetType="{x:Type groupBoxExpander:GroupBoxExpanderControl}" BasedOn="{StaticResource GroupBoxExpanderDefaultStyle}" />
+</ResourceDictionary>

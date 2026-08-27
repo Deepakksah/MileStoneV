@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ClientProfileValueNormal" xml:space="preserve"><value>Normal</value></data>
+  <data name="ClientProfileSettingSequenceExplorerTab" xml:space="preserve"><value>Sequence Explorer tab</value></data>
+  <data name="ClientProfileSettingExportMergeIncludeCameraNames" xml:space="preserve"><value>Include camera names</value></data>
+  <data name="ClientProfileSectionAlarmManagerName" xml:space="preserve"><value>Alarm Manager</value></data>
+  <data name="ClientProfileSettingExportDestinationType" xml:space="preserve"><value>Export to</value></data>
+  <data name="ClientProfileSettingPanesPlaybackRecordingSearch" xml:space="preserve"><value>Recording Search pane</value></data>
+  <data name="ClientProfileValueLogoCustom" xml:space="preserve"><value>Custom logo</value></data>
+  <data name="ClientProfileSettingPanesPlaybackSystemOverview" xml:space="preserve"><value>Cameras pane</value></data>
+  <data name="ClientProfileSettingSequenceExplorerPrintToolbarButton" xml:space="preserve"><value>Print toolbar button</value></data>
+  <data name="ClientProfileSettingSystemMonitorTab" xml:space="preserve"><value>System Monitor tab</value></data>
+  <data name="ClientProfileSettingExportMergeAddPadding" xml:space="preserve"><value>Add padding</value></data>
+  <data name="ClientProfileSectionPlaybackHeader" xml:space="preserve"><value>{ClientName} profile settings - Playback</value></data>
+  <data name="ClientProfileSettingGeneralDefaultVideoBuffer" xml:space="preserve"><value>Default video buffer</value></data>
+  <data name="ClientProfileSectionLiveHeader" xml:space="preserve"><value>{ClientName} profile settings - Live</value></data>
+  <data name="ClientProfileSettingTimelineBookmarks" xml:space="preserve"><value>Bookmarks</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Minutes_2" xml:space="preserve"><value>2 minutes</value></data>
+  <data name="ClientProfileSettingPanesPlaybackTab" xml:space="preserve"><value>Playback mode</value></data>
+  <data name="ClientProfileSettingPanesPlaybackPtz" xml:space="preserve"><value>PTZ pane</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerSeperator" xml:space="preserve"><value>{BrandName} format</value></data>
+  <data name="ClientProfileSettingExportMergeResolutionOptionSD" xml:space="preserve"><value>SD (640x480)</value></data>
+  <data name="ClientProfileSettingExportMergeResolutionOptionHD" xml:space="preserve"><value>HD (1280x720)</value></data>
+  <data name="ClientProfileSettingAdvancedVideoPlayerHardwareDecodingMode" xml:space="preserve"><value>Hardware acceleration</value></data>
+  <data name="ClientProfileValueDefault" xml:space="preserve"><value>Default</value></data>
+  <data name="ClientProfileSettingApplicationRememberPassword" xml:space="preserve"><value>Remember password</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Until_Logout" xml:space="preserve"><value>Until logged out</value></data>
+  <data name="ClientProfileSettingExportVideoClipFrameRate" xml:space="preserve"><value>Reduce frame rate</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackIndependentPlayback" xml:space="preserve"><value>Independent playback</value></data>
+  <data name="ClientProfileSettingApplicationEvidenceLock" xml:space="preserve"><value>Evidence lock</value></data>
+  <data name="ClientProfileSettingAlarmManagerTab" xml:space="preserve"><value>Alarm Manager tab</value></data>
+  <data name="ClientProfileSettingGisMapCreateLayerLocation" xml:space="preserve"><value>Create location when custom overlay is added</value></data>
+  <data name="ClientProfileSectionGeneralHeader" xml:space="preserve"><value>{ClientName} profile settings - General</value></data>
+  <data name="ClientProfileSettingPanesSetupTab" xml:space="preserve"><value>Setup mode</value></data>
+  <data name="ClientProfileValueDisabled" xml:space="preserve"><value>Disabled</value></data>
+  <data name="ClientProfileValueNoFilter" xml:space="preserve"><value>No filter</value></data>
+  <data name="ClientProfileValueDenied" xml:space="preserve"><value>Denied</value></data>
+  <data name="ClientProfileValueUnavailable" xml:space="preserve"><value>Unavailable</value></data>
+  <data name="ClientProfileValueCustom" xml:space="preserve"><value>Custom</value></data>
+  <data name="ClientProfileValueNothing" xml:space="preserve"><value>Nothing</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackPrintReportHeadlineText" xml:space="preserve"><value>Print report - Custom headline text</value></data>
+  <data name="ClientProfileSettingAlarmManagerPlayAlarmSoundNotifications" xml:space="preserve"><value>Play sound notifications for alarms</value></data>
+  <data name="ClientProfileValueBrowse" xml:space="preserve"><value>Browse...</value></data>
+  <data name="ClientProfileValueBobTop" xml:space="preserve"><value>Vertical stretch top field</value></data>
+  <data name="ClientProfileValueTimelineHideForSmartWallViewsTimeout30Seconds" xml:space="preserve"><value>After 30 seconds</value></data>
+  <data name="ClientProfileSettingDefaultSnapshotPath" xml:space="preserve"><value>c:\Snapshots</value></data>
+  <data name="ClientProfileSettingExportMergeQualityOptionHigh" xml:space="preserve"><value>High</value></data>
+  <data name="ClientProfileValueVideoBufferLarge" xml:space="preserve"><value>Large – (1 second)</value></data>
+  <data name="ClientProfileSettingExportStillImageFormat" xml:space="preserve"><value>Availability</value></data>
+  <data name="ClientProfileSettingTimelineMotion" xml:space="preserve"><value>Motion indication</value></data>
+  <data name="ClientProfileValueVideoBufferSmall" xml:space="preserve"><value>Small – (100 milliseconds)</value></data>
+  <data name="ClientProfileValueShow" xml:space="preserve"><value>Show</value></data>
+  <data name="ClientProfileValueNone" xml:space="preserve"><value>None</value></data>
+  <data name="ClientProfileValueLast" xml:space="preserve"><value>Last</value></data>
+  <data name="ClientProfileValueHide" xml:space="preserve"><value>Hide</value></data>
+  <data name="ClientProfileValueFour" xml:space="preserve"><value>4</value></data>
+  <data name="ClientProfileValueFive" xml:space="preserve"><value>5</value></data>
+  <data name="ClientProfileValueAuto" xml:space="preserve"><value>Auto</value></data>
+  <data name="ClientProfileSettingGeneralTimeInTitlebar" xml:space="preserve"><value>Show current time in title bar</value></data>
+  <data name="ClientProfileSettingPanesSetupSystemOverview" xml:space="preserve"><value>System Overview pane</value></data>
+  <data name="ClientProfileValueBookmarkAddDetail" xml:space="preserve"><value>Add bookmark details</value></data>
+  <data name="ClientProfileSettingPanesLiveViews" xml:space="preserve"><value>Views pane</value></data>
+  <data name="ClientProfileSettingPanesLivePrint" xml:space="preserve"><value>Print function</value></data>
+  <data name="ClientProfileValueVideoBufferVerySmall" xml:space="preserve"><value>Very small – (50 milliseconds)</value></data>
+  <data name="ClientProfileSettingExportMergeQualityOptionLow" xml:space="preserve"><value>Low</value></data>
+  <data name="ClientProfileSettingPanesLiveAudio" xml:space="preserve"><value>Audio pane</value></data>
+  <data name="ClientProfileValueVideoBufferVeryLarge" xml:space="preserve"><value>Very large – (1.5 seconds)</value></data>
+  <data name="ClientProfileSectionAdvancedName" xml:space="preserve"><value>Advanced</value></data>
+  <data name="ClientProfileSettingGeneralApplicationMaximization" xml:space="preserve"><value>Application maximization</value></data>
+  <data name="ClientProfileValueTimeZoneUTC" xml:space="preserve"><value>UTC</value></data>
+  <data name="ClientProfileSettingExportMergeMediaSeperator" xml:space="preserve"><value>Media player format - combined file</value></data>
+  <data name="ClientProfileSettingExportMergeMediaSequenceType" xml:space="preserve"><value>Layout type</value></data>
+  <data name="ClientProfileSettingApplicationAutoLogin" xml:space="preserve"><value>Auto-login</value></data>
+  <data name="ClientProfileValueDoSkipGaps" xml:space="preserve"><value>Skip gaps</value></data>
+  <data name="ClientProfileSettingExportVideoClipType" xml:space="preserve"><value>Select content</value></data>
+  <data name="ClientProfileSectionSetupName" xml:space="preserve"><value>Setup</value></data>
+  <data name="ClientProfileSettingPanesLiveEvents" xml:space="preserve"><value>Event pane</value></data>
+  <data name="ClientProfileValueEncryptStregthDES56" xml:space="preserve"><value>56-bit DES</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerIndividualCommentsMode" xml:space="preserve"><value>Manage individual camera comments</value></data>
+  <data name="ClientProfileSettingGeneralAllowHtmlItemScripting" xml:space="preserve"><value>HTML view item scripting</value></data>
+  <data name="ClientProfileSettingApplicationLogoutButton" xml:space="preserve"><value>Log Out button</value></data>
+  <data name="ClientProfileValueHideSeeHelp" xml:space="preserve"><value>Hide (see the help)</value></data>
+  <data name="ClientProfileSettingExportVideoClipCodecProperties" xml:space="preserve"><value>Video codec properties</value></data>
+  <data name="ClientProfileSettingAdvancedMulticast" xml:space="preserve"><value>Multicast</value></data>
+  <data name="ClientProfileSettingExportMergeMediaSequenceTypeOptionExportListOrder" xml:space="preserve"><value>Single camera view</value></data>
+  <data name="ClientProfileSettingFunctionsLiveCameraPlayback" xml:space="preserve"><value>Camera playback</value></data>
+  <data name="ClientProfileValueOverlayShow" xml:space="preserve"><value>Show as overlay</value></data>
+  <data name="ClientProfileValueVideoPlayerHardwareDecodingModeOff" xml:space="preserve"><value>Off</value></data>
+  <data name="ClientProfileSectionAdvancedHeader" xml:space="preserve"><value>{ClientName} profile settings - Advanced</value></data>
+  <data name="ClientProfileValuePermitted" xml:space="preserve"><value>Permitted</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackBoundingBoxes" xml:space="preserve"><value>Bounding boxes</value></data>
+  <data name="ClientProfileValueHideMouse30Seconds" xml:space="preserve"><value>After 30 seconds</value></data>
+  <data name="ClientProfileSectionAlarmManagerImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0
+ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5T
+aXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdo
+dAAACAgCAAAAAAAAAAAAAAAPAwAAAH4EAAACAAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAA
+IAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAADAwMBXsbGxV6amplempqZXpqamV6amplem
+pqZXpqamV6amplempqZXpqamV6amplempqZXqampV6mpqVepqalXf39//39/f/9/f3//f39//39/
+f/9/f3//f39//39/f/9/f3//f39//39/f/9/f3//f39//39/f/9/f3//f39//39/f//d0c7/+/To
+//vz5f/78uL/+e7e//rt2v/87db/++zU//vr0P/76c3/++jK//vnx//75sT/++XC/39/f/9/f3//
+3dLR//z16//79Oj/pJ7f/3952//c0dj/bGbB/zIwsf8yMKv/a2Wy/9vLxf/86Mn/++fH//vmxP9/
+f3//f39//93S0f/89u7/wr3l/3963f/b09//NjPI/ygmwP8oJrn/KCaz/ycmrf80Mqn/28rF//vo
+yf/858b/f39//39/f//d0tH//Pfv/6Wg5P+8tuP/bmna/yonz/8pJsn/KCbD/ygmvf8oJrf/KCaw
+/2tltv/76cv/++fH/39/f/9/f3//3dLR//z38v9/e+H/49zp/zg13P8sKdf/KifS/56euf+Rkbb/
+KCbB/ygmuv8yL7X//OnN//voyv9/f3//f39//93S0f/8+fP/s67o//z27/9CP+b/MC3g/ywp2v+U
+kuf/jIri/ykmy/8oJsX/Mi+///vr0P/76cz/f39//39/f//d0tH/+/n2/9jU7v/k3+7/f3zt/zw5
+6f80MeT/Livd/ywp2P8rKNP/KifO/21mzf/77NL/++rP/39/f/9/f3//3dLR//z6+P/8+fX//Pjy
+/+Hd8P9TUe7/QD7r/zg25/8xLuH/LSra/zg01v/b0Nf//O3U//zr0f9/f3//f39//93S0f/8+/n/
+/Pr2//v49P/8+PL/49/v/4SB7/9PTe3/R0Tq/3Vw5P/e1N7//O/b//zt1//77NT/f39//39/f//d
+0tH//Pv6//z7+P/7+vf//Pj0//z48f/89u///PXr//z06f/88+X//PHh//vw3v/779r/++3X/39/
+f/9/f3//3dLS/93S0f/d0tH/3dLQ/93Rz//d0c7/3dHN/93QzP/d0Mv/3c/K/93Pyf/dzsj/3c7H
+/93Nxf9/f3//f39///rKmf/4xJH/9r+H//K3ff/ur3L/6adl/+WfWP9/f3//f39//39/f/9/f3//
+f39//39/f/9/f3//f39//39/f//6yZn/+MWS//a/if/yuH7/7rB0/+qoZv/mn1n/f39//wAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/f3//f39//39/f/9/f3//f39//39/f/9/f3//f39//wAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfwAAAP8AAAs=</value></data><data name="ClientProfileSettingGeneralServerErrors" xml:space="preserve"><value>Server error messages</value></data>
+  <data name="ClientProfileSettingCameraStoppedMessage" xml:space="preserve"><value>Live video stopped message</value></data>
+  <data name="ClientProfileSettingExportMergeQualityOptionHighest" xml:space="preserve"><value>Highest</value></data>
+  <data name="ClientProfileSectionAlarmManagerHeader" xml:space="preserve"><value>{ClientName} profile settings - Alarm Manager</value></data>
+  <data name="ClientProfileSettingFunctionsLiveOverlayButtons" xml:space="preserve"><value>Overlay buttons</value></data>
+  <data name="ClientProfileSettingSequenceExplorerBookmarkToolbarButton" xml:space="preserve"><value>Bookmark toolbar button</value></data>
+  <data name="ClientProfileValueClickToCenter" xml:space="preserve"><value>Click-to-center</value></data>
+  <data name="ClientProfileValueAvailable" xml:space="preserve"><value>Available</value></data>
+  <data name="ClientProfileSectionPlaybackName" xml:space="preserve"><value>Playback</value></data>
+  <data name="ClientProfileValuePixelThree" xml:space="preserve"><value>3 pixels</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Minutes_120" xml:space="preserve"><value>2 hours</value></data>
+  <data name="ClientProfileSectionLiveImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAArgIAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAsY8L/GEFAAAAGXRFWHRTb2Z0d2FyZQBB
+ZG9iZSBJbWFnZVJlYWR5ccllPAAAAkBJREFUOE+lkt1rUnEYx3/ddbGLXQf9A11Mtj/Am3DzDbMl
+gnTWkS4qiLwqdycrAgdR0HzJYsFBnHrMtzwzsYsd9cxNO6WSNQyZTY/bhIEMowtJz9M5h7qQvMi6
++MDzfPn+vjw8zw8BwH8xVpyEseIkjBUnAYXDYeT1epHP55uORCKzqVRqkabpW/l8fpll2QeZTOam
+3+8/J3oCgQAiSVIiGAyiUCiEEIZhMpvN5vJ4PHWCIDqC6bsQxMfjcaAoCqLR6NDpcjUsdyyPdTrd
+BYVCcUapVCKVSoWEHiHBzLbb7X69XodisQgMw4yQzWZ/kRPDvt1fWfGbTCaFEDCt1+sRcjgczziO
+Ox0Oh9BsNqFSqUhBhUIBCru7sL3NQIamYSe/I2nlUhnS6TS43e4ti8WyiIxG41mr1XqtVqsdC0uB
+brcLjUYDqtUqFMSgdyx8FOpkMglra0/hFRmEVvNAcPJQKpVOEI7jSKvVImGsGSpBbQ0GAxBpcRzU
+9vaAq32BD+x7WMIwuLqEw5ONJISZT8AdduBrY7+HzGazOIW0ELVaPWW32x8eHx31Or0eHNAZGN5b
+hixJwsysDPQ3rBDd5+F58QR88XT/hcf9EhkMBvGhtFURuVwuTqNZJ4jym0gYEqursO509jWqhdbc
+/JXDu5HPgD8KnWouXcZVyoUplEgkkLBd8RoSYi3cXbzxeTqXu55iclhic3M+SVEyfyA4R8Te3t4I
+RS++jsUk79jf9Rue5//U+R8j/UjzL4wV/x5APwHg1bjUXP2nWQAAAABJRU5ErkJgggs=</value></data><data name="ClientProfileSettingGisMapOpenStreetMapGeographicLayer" xml:space="preserve"><value>Map service</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Minutes_30" xml:space="preserve"><value>30 minutes</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Minutes_10" xml:space="preserve"><value>10 minutes</value></data>
+  <data name="ClientProfileValue_LiftPrivacyMask_Minutes_60" xml:space="preserve"><value>1 hour</value></data>
+  <data name="ClientProfileSectionAccessControlName" xml:space="preserve"><value>Access Control</value></data>
+  <data name="ClientProfileValueDoNotInclude" xml:space="preserve"><value>Do not include</value></data>
+  <data name="ClientProfileSectionAccessControlImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0
+ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5T
+aXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdo
+dAAACAgCAAAAAAAAAAAAAAAPAwAAAH4EAAACAAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAA
+IAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAxAAAAswAAADMAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMQAAAL6ampr/AAAAMwAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADGRqrrq////
+/2VlZf8AAACjAAAAHwAAAB8AAAAfAAAAHwAAAKE9PT3/AQEBwQAAAAAAAAAAAAAAAAAAAAAAAAAx
+jqi46tTr+v/l5eX/AAAAvQAAAEwAAABMAAAATAAAAEyOqLjp/////wEBAcEAAAAAAAAAAAAAAAAA
+AAAAAAAAMYqlturQ6fj/5eXl/wAAANUAAACAAAAAgAAAAIAAAACAhaCw8f////8BAQHBAAAAAAAA
+AAAAAAAAAAAAAAAAADGGorPqzeb2/+Xl5f8AAADpAAAAswAAALMAAACzAAAAs36Yqfj/////AQEB
+wf9IAAT/SAAP/0gAEf9IAAcAAAAxgp+w6snj8//l5eX/AAAA+AAAAOAAAADgCQMAizQPADZkdH7E
+/////wIBAcH/SAAS/0gAvf9IAP//SAAnAAAAMX6brerF4PH/5eXl/wAAAP8AAAD/GwgAOGQcAEr/
+SADfiFVEZ//BqEZuHwE9/0gAV/9IAP//SACG/0gA1QAAADF5l6rqwdzt/+Xl5f8AAAD/AAAA/zIO
+AD3/SADx/0gA/f9IAPH/SADx/0gA8f9IAPb/SAC5/0gAM/9IAP8AAAAxdZOn6r3Z6//l5eX/AAAA
+/wAAAP8bCAA4RxQAQVcZAEZ0VEpg/8GoRnAgAT7/SABc/0gA//9IAGr/SADXAAAAMXGRpOq51uj/
+5eXl/wAAAP8AAAD/AAAA/wAAAP8AAAD/Z4SW//////8CAQHB/0gAEv9IAMP/SAD//0gALgAAADFt
+jqLqttTm/+Xl5f8AAAD/AAAA/wAAAP8AAAD/AAAA/2SClP//////AQEBwf9IAAX/SAAP/0gAEv9I
+AAcAAAAxaYuf6rLR5P/l5eX/AAAA/wAAAP8AAAD/AAAA/wAAAP9gf5L//////wEBAcEAAAAAAAAA
+AAAAAAAAAAAAAAAAMWaIneqwz+L/5eXl/wAAAP8AAAD/AAAA/wAAAP8AAAD/Xn2Q//////8BAQHB
+AAAAAAAAAAAAAAAAAAAAAAAAADFkhpzq/////1BQUP9lhZn5l7bK/67N4P+uzeD/rs3g/67N4P//
+////AQEBwQAAAAAAAAAAAAAAAAAAAAAAAAAxAAAAvjExMf8BAQAqBwcEGwAAALQAAAC0AAAAtAAA
+ALQAAAC0AAAAtAAAAJ4AAAAAAAAAAAAAAAAAAAAAH/8AAA//AAAADwAAAA8AAAAPAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAAPAAAADwAAAA8AAAs=</value></data><data name="ClientProfileSettingGeneralDefaultPtzPointAndClickMode" xml:space="preserve"><value>Default PTZ click mode</value></data>
+  <data name="ClientProfileSettingAdvancedVideoPlayerDiagnosticLevel" xml:space="preserve"><value>Video diagnostics overlay</value></data>
+  <data name="ClientProfileWarningGisMap" xml:space="preserve"><value>The map service provider that you are about to select may collect personal data. If you are subject to the EU General Data Protection Regulation (“GDPR”), and you proceed, the system may not be compliant with the GDPR. 
+
+{0} recommends that you use a locally installed OpenStreetMap server instead. 
+
+The suggestion above is a recommendation only, and you are responsible for your compliance with applicable privacy laws. 
+
+See our GDPR Privacy Guide to learn how you can work with GDPR compliance when using {1}:
+
+{2}
+
+Proceed with the selected map service provider anyway?</value></data>
+  <data name="ClientProfileSettingExportMergeResolutionOptionUHD4K" xml:space="preserve"><value>UHD4K (3840x2160)</value></data>
+  <data name="ClientProfileSectionTimelineName" xml:space="preserve"><value>Timeline</value></data>
+  <data name="ClientProfileSettingFunctionsLivePrintAvailability" xml:space="preserve"><value>Print function</value></data>
+  <data name="ClientProfileSettingExportGeneralSeperator" xml:space="preserve"><value>General</value></data>
+  <data name="ClientProfileValueToDiskMediaBurner" xml:space="preserve"><value>To disk and media burner</value></data>
+  <data name="ClientProfileSectionGisMapImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA3gIAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAABl0
+RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJjSURBVDhPpdNPaNNQHAfw1DERb+6w
+k3/Ai2eP6sHrLrKTt5UxtOgYsiKjuDJjoTDcpBZqXVkNlmLYiAtWngtkC5qSpc2UGZayzYwMlVGH
+tzpY8WEOX9/qaOp5hx/f0++T3/u9F04QBBynWsB8dRGV3CSezyTR2LXh1crYst+h4a3B9zz4ro/m
+mo0N28fSi3H88Qcw6d4KgEilivRgHxLha/i2WYBDBBiGBKeUa6dpSSApCvqVwxfKIVoeDYCBZRvn
+4zE4Q1ewQ+KsIQ6jOPJf6sU4TCGB36z5unIKvHs3AMIfagjxIjIjN0HJKGyZNeYG/wFHqaZ40B+X
+WkDv47OYrEcCIPbZAzcu4OpEHFQfg0UmYIhjcBS+nSRfZM09LeBc+gLSncD63ja4R2mcGc8zIAYr
+H4GeGcJmYbidJJkA/XnxaILLeLJ3OwD8jRWEnhXRPVUANeZgK3mQ3AhcrdjOUpaHI4+1gP5f3bi/
+Gu0AVkWcmDXQNcUmMAkchhAxCdcstVORU5iLuQwItZCHXscSffs1QoKJk09FUOUBTDkGVU6wZR4m
+D1diR2GLJAUdZrGvBRy+hQD4JKHr5Q47hgyqToPm+iHpEujMDShEhVaSoSkpGMocctMHoI1eBoQ7
+gEoBPQsWuKyCjKGCikOsQcWBOAyFgabKY5PIsPUkSpqKdIaibmcDoFnO4J6qgMvrOL3sgGpsEiML
+lX2ZGgIsRWZXKcFiIEnfYY+KR1lbCoDa+1k0q/OIfNxG2NpDdKuBV+tVfN+uwNvfx0Z5AfX6LryV
+WdS0LPsn3uDtwmIAHKc44DgF7i/m8+kKqo9LiQAAAABJRU5ErkJgggs=</value></data><data name="ClientProfileSettingPanesSetupMIPPlugin" xml:space="preserve"><value>MIP Plug-ins</value></data>
+  <data name="ClientProfileSettingExportMergeMediaPlayerFormat" xml:space="preserve"><value>Availability</value></data>
+  <data name="ClientProfileSettingTimelineOutgoingAudio" xml:space="preserve"><value>Outgoing audio</value></data>
+  <data name="ClientProfileSettingExportMergeResolutionOptionFullHD" xml:space="preserve"><value>FullHD (1920x1080) (Default)</value></data>
+  <data name="ClientProfileSettingPanesSetupOverlayButtons" xml:space="preserve"><value>Overlay Buttons pane</value></data>
+  <data name="ClientProfileValuePixelTwo" xml:space="preserve"><value>2 pixels</value></data>
+  <data name="ClientProfileValuePixelOne" xml:space="preserve"><value>1 pixel</value></data>
+  <data name="ClientProfileSettingPanesPlaybackAudio" xml:space="preserve"><value>Audio pane</value></data>
+  <data name="ClientProfileSettingPanesPlaybackViews" xml:space="preserve"><value>Views pane</value></data>
+  <data name="ClientProfileSettingPanesPlaybackPrint" xml:space="preserve"><value>Print function</value></data>
+  <data name="ClientProfileSettingPanesLiveTab" xml:space="preserve"><value>Live mode</value></data>
+  <data name="ClientProfileSettingPanesLivePtz" xml:space="preserve"><value>PTZ pane</value></data>
+  <data name="ClientProfileSettingApplicationOnlineHelp" xml:space="preserve"><value>Online help</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerGlobalCommentsContent" xml:space="preserve"><value>Project comment</value></data>
+  <data name="ClientProfileSettingSequenceExplorerExportToolbarButton" xml:space="preserve"><value>Export toolbar button</value></data>
+  <data name="ClientProfileSectionGeneralImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAAQQAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAsY8L/GEFAAAAGXRFWHRTb2Z0d2FyZQBB
+ZG9iZSBJbWFnZVJlYWR5ccllPAAAA5NJREFUOE9tk11M22UUh1+Uq8VJHSgQ95EtDlGmLtEL3YXE
+C91MmC6LYRtQLMsaYBuF6dQJaEa2uKEdneC6rRSYOugoLZRC6ce/0EKhQr8o/aSgcbO0pNXRoUNb
+yvj5X4lcmF08OTfvec57fskhABJEYzHyTzSatByPJ/+f+H+srCRYefAg+eF7upJ1gdPheGOUomxm
+vd45MTSUYHxw0GnUUk6DSuUc6u93amQy50BXl1MhFruu8XjqGZ8vbV0QuHOnTCPphk6rhXF0FGMj
+Ixil0ajUUCoUUPTJIe0So/3mjxDy+aitqMC01/sSCYVCxB8IEuuEiamR3EIwsoC/aeNiPI5ILIqZ
+uSCmf/PT1Y9Jnw8/Oaag1ulw5uSJqNftziGpz2SQF7alZTeW7LaIK16FrOZtmPuuIrR4D/M0U75Z
+WN0eWNwuDJsmoBoehlTei1NsdtTzUJDyxIYnz72/2SEpz4L0+A788OFWCJnbYBzTwzb9M1Q6I/oo
+HXrVWoh65GgVdYHf3IoTxcVrgjdzMvfLTmbh1ws7EBNkYZb7Mia/zYXdrIDFOwulboRuptCjVOGm
+VApheweuCAQoLSiIelyuHPLua5kfRC5vx2rzc4i1vYJV2V7AWgmrSQbDpAPdSjVu9crRIeuBsKMd
+V9pacZkOkX348JpgcwYj0/5l5m20PY+4OBcwliLk5EFF9UE1pEO7WIIb9NQ2Ov2rQiGarl9Dw6VL
+YB86tEyHuIsQ8hjZ/9Yuznw3E4uKI4i4GjFm6EfD+Ys4U16GU8eOgVNSgqqjR1HJYiXgMJlgHjiw
+6na5skh6Rsaz9Z2GmYGZ+9CMWxEOh+C5HcbguH3pvX37xN/U1qK8qCiexmCUPbVx48HUlJT89NTU
+wqc3bdprs9keJ/nHP+e22P7EDctddNjvYdD2C/RWD0zBZTTyWyab6s6Cw2LFX8zOztu6Zct2BoOx
+gf42SUpKIrSAkNMtlPcrfRhcfRDfGcO4PhaAQGFCr28JnZQZFcwiFOTl4TSbnVintLBwMWfnTj7t
+SDabzbRAZP3js4EAvlD5cY6aw9f6efCGgxCYFtBMOX//vlnwUTOfX9XE45Vy6+vzz9fV7ampqUmv
+rq4mgUCAEBZXaq0cCKNK7scnijlUKwM4S83joiGCCyKddnUltn4vj4Lsfj03t5jbbeGIphaqRPaF
+jzvtdz/ttIfZDRLTO3kH9yzd/+uRjWuA/AsP9qgq+yA0QAAAAABJRU5ErkJgggs=</value></data><data name="ClientProfileValueTimelineHideForNormalViewsTimeout30Seconds" xml:space="preserve"><value>After 30 seconds</value></data>
+  <data name="ClientProfileSectionAdvancedImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0
+ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5T
+aXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdo
+dAAACAgCAAAAAAAAAAAAAAAPAwAAAH4EAAACAAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAA
+IAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAANO6g0m+q39DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAD++/MDqn4YiYZYAJu2fgD1lGMA34ZYAFybbwg+AAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANCcJ8TJjQjq06Exc9epQ525hA//qnwUggAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM+vZZ22fgL7vYQCLgAAAAAAAAAA0qAttpBmCaHl
+39AVAAAAAAAAAAAAAAAAAAAAAOnn5AYAAAAA6ufkBgAAAADdw41vsH4Q9JxrABoAAAAAAAAAAMmP
+DJq7hQ343dCwRwAAAAAAAAAAppByE4h2XbtmVkCPaFc+L3NgRpVXRzOzd2E+HMONE/SJXgDCjWEA
+OaBvAGu1egD8vIsYT/735wMAAAAAAAAAAKKMbhilj3Dtj3hZ/31pTP+AaEf/Z1I35GdSLyzSoTKC
+1KEut613AP/AixLew48Z1q58CDgAAAAA9/PvH49/aI2Yg2bCqpNy/62Ye6qum4F3qZh/rYZxVP9Z
+Riu7c1YdgMyoWSjeu22c1K1WFd+5ZA3dtVkCAAAAAPDp31bHsZP7t59+/6yVdYIAAAAAAAAAAAAA
+AACllHuIgWlJ/21YPvvOy8lGAAAAAAAAAAAAAAAAAAAAAAAAAAD//v0C2siuj6+Yev+gi20YAAAA
+AAAAAAAAAAAAmYRnHYlzVP9zYEaK9PLvAgAAAAAAAAAAAAAAAAAAAAAAAAAA8O3qFMq2m6CvmXv/
+kH5kIgAAAAAAAAAAAAAAAJN8XCiKc1L/YVA4nN/d2hEAAAAAAAAAAAAAAAAAAAAAAAAAAOvl3FfL
+tJf/y7KS/4FxWqaQfWIIAAAAAI55WwqKdFask3ta/3hjRv/KxLxIAAAAAAAAAAAAAAAAAAAAAAAA
+AAD//vwR4M+2WNzJr5fCrI7/i3lh2H5sVLKMd1zbn4dm/5yGZpWlk3pb9PLuDQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAADPuZkOzLWX7ceujf7FsJPvuaKC/455W+qEbU4LAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3cyyD+LUwY3KuqRn0cCpCtPEsG2/sJqKqZd/DQAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+cAAP8BAAD/gQAA/xgAAPUYAADAAAAAwAEA
+AAABAAAOHwAADh8AAA4fAAAEHwAAAB8AAMB/AADAfwAA//8AAAs=</value></data><data name="ClientProfileSettingGeneralViewGridSpacer" xml:space="preserve"><value>View grid spacer</value></data>
+  <data name="ClientProfileSettingGeneralCameraErrors" xml:space="preserve"><value>Camera error messages</value></data>
+  <data name="ClientProfileSettingSnapshotCameraNameOverlay" xml:space="preserve"><value>Camera name on snapshot</value></data>
+  <data name="ClientProfileSettingApplicationHideMousePointerTimeout" xml:space="preserve"><value>Hide mouse pointer</value></data>
+  <data name="ClientProfileSectionSetupHeader" xml:space="preserve"><value>{ClientName} profile settings - Setup</value></data>
+  <data name="ClientProfileSectionExportName" xml:space="preserve"><value>Export</value></data>
+  <data name="ClientProfileSectionAccessControlHeader" xml:space="preserve"><value>{ClientName} profile settings - Access Control</value></data>
+  <data name="ClientProfileValueGisMapCacheCleanWhenFileNotUsed" xml:space="preserve"><value>When not used for 30 days</value></data>
+  <data name="ClientProfileSectionSetupImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAADQQAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAsY8L/GEFAAAAGXRFWHRTb2Z0d2FyZQBB
+ZG9iZSBJbWFnZVJlYWR5ccllPAAAA59JREFUOE9tkw1M1HUYx597Pw5QeXGYHcVxjPfiLgIhAXfd
+EufFUGAX4Etq6gXHAanlCkwyAZWdrIW9jVQCldbJydpJ65Ak3oQ8kI7bYQoYCLkWNGiCnBzf/trF
+1uyz/bbn9+z5Ps+z59lDT+LPvLUbBIKo6H/+RIyt4PGS1nG5gS7P/8BiuTGBcp+QkM0H09OLewIC
+NucT+TJ+X5JI0sqSk/d3iMXJue7u0Z5stsilWoJFbm4JYqWysNlo7ITFMoxt28osLFbQah5PKtu5
+88QvFy50oKioFsHBWbV8fqwXEduldcFmS1erVG83d3ffxOjoJFpa+ha1Wv1POt1H1vr6VjQ09KCi
+woioqC21bLbE+1HRJxAKxbGVlYaJ+/cfYmZmDmNjk7DZxtHVdQuXGq8jM+vYIE8Q+N9BeHjELBeJ
+XnyKKHIZUZiyqqphHAxtbTccudpK++49FYNnTjc9MH5zBdnqAtu6cK81Ej+Jl5soTiwQ+HPI3z+1
+JDX13b5du473Hz58Znx4+B7a2392SAI3FRM9x08IC5YfK0y2Wy9vx41zkdDnSKfWK16/LZPn2ESi
+0FCKiMj+Tq83THd3D2FgYIxpewpv5ugH3QVh/DeSaJmtPsHgGNEA1gRcOSnFO9p87DtwFhkZFTNs
+XngihYZmNh45UjdtMlmYtu2Pk+zRVA5JV4V5t38cpP3LrnMu3kqD+WQEDublo3BfNQreqkFKygez
+yXJxFvn5qXSxsXu/VSjyjGr1oV6DoWOx7lzbwitJr9X8cHrjVUzoMN2pQHmBClt36BfjX9K0yWVb
+L+aq1841HuLWkEgUwxUKo3hEImaxMplGo7/zvdmOzz+5iJa67cBELpyDqWj6NBFx0Wm9GQpfacNR
+4Y7xpuXO9jK67NrFIzi0YkXC+ry8U5Nf1fXgbNUJjPyYDtzdC4yoMW9NhOF40B1DecD5PztW/eFs
+58BcTF88lrJYLPL0lEri43P7S0sv4TN9OWwmBWa7JJjvUwJDauD2y8CgHAtWKdDrjt9qaOq9TaRc
+SuC7Ms4nNGRLdVF+/sKASYX5a89i1kxYsPjA0RsDx/U1cPaF40GrL379kjtuOkC7U5bOjUH2DFF1
+oU9qf6Pyd0dPBGabianEAexP416jN8zve9xs/VB0vvMot6Q0kxUlZKbG+fccYgKJYyxZmTF69dXR
+uWvPY66FC/TxGXEA7jb4PTTu53ytjOQFb3yBTdmJRG58l5CI/gZOz6nrDbdwjwAAAABJRU5ErkJg
+ggs=</value></data><data name="ClientProfileSettingPanesPlaybackMIPPlugin" xml:space="preserve"><value>MIP Plug-ins</value></data>
+  <data name="ClientProfileValueFullScreen" xml:space="preserve"><value>Full screen</value></data>
+  <data name="ClientProfileSettingExportStillImageSeperator" xml:space="preserve"><value>Still images</value></data>
+  <data name="ClientProfileValueVideoBufferMedium" xml:space="preserve"><value>Medium – (½ second)</value></data>
+  <data name="ClientProfileSettingAdvancedAdaptiveStreaming" xml:space="preserve"><value>Adaptive streaming</value></data>
+  <data name="ClientProfileSettingGisMapGoogleMapPrivateKey" xml:space="preserve"><value>Private key for Google Maps</value></data>
+  <data name="ClientProfileSectionPlaybackImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAHwMAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAsY8L/GEFAAAAGXRFWHRTb2Z0d2FyZQBB
+ZG9iZSBJbWFnZVJlYWR5ccllPAAAArFJREFUOE99kmtIU2EYx/etCCpSN3W3s52t0HnJSxaaGmWK
+hSvLS2EfvJS5uSkhZSQUIZJhGGYiGnhJU5Z5v6SFFUQEQgViYRamZWZpF4yiRWxP//fYZEb54XfO
+h/M8v/M+/+cVmXrfu2VaRt0CwqJ1SrFLg8rDfUqj5FI1nOoByAOi5RAduTYiCdoW5ytft6YpbE+q
+NcZQaFXLpGO8QnEWBR3gnHPD34hCdu4Pla1d1RgSnfj96PUXlDPw2RZrLiaV1HMEkksoqgaVzk3O
+iDiJuCUgNOpb+tUnZOqZIUPHa8JYpM+vIBQMq2WycrzrQRlYwZqcEen8gufT6x/bzDfnyNA+ASYF
+ibn/I8WfriWtmp9VSaUlKG4BVcDF0cwQaXnN+O5jpT9MfR/I2PlmQeCQQJp8vp10/sFWjJOLhofg
+HlAuCvDBpJZ6TkdlFPxiIxg7pxYlTJg7+JUikgzESVwJdf1oYnmwcH0FAR6jvFKZhvVN7kjNp+zu
+aTJ2vf1zglnSn6gg5EAb1nuT/+ZIFu4F9NSBLhDIBAfBc17JFXAekvvhCZnC33NufSH9yUpSeXqQ
+VsVTYpGFMi1jFLxdT5y7uEbDcRXou+MIIwU8wgW6qBS7tkUkGWnfmTo0qgXB3lPVCHVO2M7hpqe0
+JfYA8Qp5DwLOcwgYu8AAsPByeRWvUAp/jjteLjSykdjJ2IhZra8oLD7drpJ6PHMWMGLBXZykGbfx
+trdvEKXVDOFyfVoMdkHyjgxtExSZnE0ioqVA4AOGQDfCK/LbFE6HLg8SW/MSSde0sOZ/CRhszz2g
+BRmUePsEzKeU9dvZ5XIIhDwah23/EzBWgyZwBftv8NL5TyQVt9rNfbN2U++MPaNx2OoXEjG+nICx
+EtwANdh/rVateZlQ2GzLah3/Gbg1ZsTLZ2Ppb3eqpQzvtnX9AAAAAElFTkSuQmCCCw==</value></data><data name="ClientProfileValue_CentralizedSearchMaxDeviceCount_Count_Unlimited" xml:space="preserve"><value>Unrestricted</value></data>
+  <data name="ClientProfileSettingPanesPlaybackTimeNavigation" xml:space="preserve"><value>Time Navigation pane</value></data>
+  <data name="ClientProfileValueContentAdaptiveVerticalTemporal" xml:space="preserve"><value>Content adaptive</value></data>
+  <data name="ClientProfileSettingExportVideoClipDigitalZoom" xml:space="preserve"><value>Digital zoom export</value></data>
+  <data name="ClientProfileSettingShowAccessRequestNotifications" xml:space="preserve"><value>Show access request notifications</value></data>
+  <data name="ClientProfileSettingFunctionsLiveBoundingBoxes" xml:space="preserve"><value>Bounding boxes</value></data>
+  <data name="ClientProfileSettingTimelineHideForSmartWallViewsTimeout" xml:space="preserve"><value>Hide the timeline controls in Smart Wall while inactive</value></data>
+  <data name="ClientProfileSettingApplicationJoystickSetup" xml:space="preserve"><value>Joystick setup</value></data>
+  <data name="ClientProfileSettingPanesLiveOutputs" xml:space="preserve"><value>Output pane</value></data>
+  <data name="ClientProfileSettingExportVideoClipTextsContent" xml:space="preserve"><value>Video texts</value></data>
+  <data name="ClientProfileSettingPanesLiveSystemOverview" xml:space="preserve"><value>Cameras pane</value></data>
+  <data name="ClientProfileValueDoNotSkipGaps" xml:space="preserve"><value>Do not skip gaps</value></data>
+  <data name="ClientProfileSettingExportStillImageDigitalZoom" xml:space="preserve"><value>Digital zoom export</value></data>
+  <data name="ClientProfileSettingPanesLiveMIPPlugin" xml:space="preserve"><value>MIP Plug-ins</value></data>
+  <data name="ClientProfileValueTimelineHideForNormalViewsTimeout5Seconds" xml:space="preserve"><value>After 5 seconds</value></data>
+  <data name="ClientProfileValueMaximizeNormal" xml:space="preserve"><value>Maximize as normal window</value></data>
+  <data name="ClientProfileSettingApplicationVideoTutorials" xml:space="preserve"><value>Video tutorials</value></data>
+  <data name="ClientProfileSettingGeneralTitleBar" xml:space="preserve"><value>Default for camera title bar</value></data>
+  <data name="ClientProfileValuePixelFour" xml:space="preserve"><value>4 pixels</value></data>
+  <data name="ClientProfileSettingGisMapBingMapKey" xml:space="preserve"><value>Bing Maps key</value></data>
+  <data name="ClientProfileSettingTimelineAllCamerasTimeline" xml:space="preserve"><value>All cameras timeline</value></data>
+  <data name="ClientProfileSettingFunctionsSetupOverlayButtons" xml:space="preserve"><value>Edit overlay buttons</value></data>
+  <data name="ClientProfileSettingMapEditGisMap" xml:space="preserve"><value>Edit smart map</value></data>
+  <data name="ClientProfileSettingExportMergeVideoClipType" xml:space="preserve"><value>Select content</value></data>
+  <data name="ClientProfileSettingApplicationNewSCVersionText" xml:space="preserve"><value>New version - additional message</value></data>
+  <data name="ClientProfileSettingAdvancedDeinterlacing" xml:space="preserve"><value>Deinterlacing</value></data>
+  <data name="ClientProfileValueHideMouseDisabled" xml:space="preserve"><value>Never</value></data>
+  <data name="ClientProfileValueInclude" xml:space="preserve"><value>Include</value></data>
+  <data name="ClientProfileSectionTimelineImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0
+ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5T
+aXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdo
+dAAACAgCAAAAAAAAAAAAAAAPAwAAAH4EAAACAAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAA
+IAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACysfQ9UlDmr1xa
+569cWuevXFrnr1xa569cWuevXFrnr1xa569cWuevUlDmr6in808AAAAAAAAAAAAAAAAAAAAApaf/
+UC8w8OM7PPHfOzzx4js88eM7PPHjOzvu4zg14uM4NeLjODXi4ywp4eOVlPBnAAAAAAAAAAAAAAAA
+AAAAAOPKlgHcwpUB3MOVENzDlQLcw5UC28GVAuHNqAL08/4C9PP+AvTz/gLz8/4C+fn/AQAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAMWFALvIhwA7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAODBegFrRwBpWT4AgpBkAJ7QkAD/tn8A0FxAAIJbPgCDXUcTg2ZmZoNmZmaDZmZm
+g2ZmZoNmZmaDbGxsdOnp6QfcvnoCCwUA3gAAAP+lcwD/zo8A/8uMAP83JgD/AAAA/wAAAP8AAAD/
+AAAA/wAAAP8AAAD/AAAA/wAAAPTX19cRAAAAAJtpACWjcgCpy40A/8WJAP/KjAD/uYEA6pZmAD+d
+dyA0tbW1NLW1tTS1tbU0tbW1NLW1tTS4uLgt9fX1AgAAAADMigAczY4A7cWJAP/FiQD/xYkA/8qL
+AP/NiwBzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADhwHUEwYAAtMOEAP/DhAD/w4QA
+/8OEAP/DhAD/wYAA/8+bJSoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6dGZJdKiO7HUpTuz
+1KU7s9SlO7PUpTuz1KU7s9KiO7bctl9kAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAMADAADAAwAAwAMAAPP/AAAAAAAAAAAA
+AIAAAACA/wAAAH8AAAB/AAD//wAA//8AAP//AAD//wAA//8AAAs=</value></data><data name="ClientProfileValueMaximized" xml:space="preserve"><value>Maximized</value></data>
+  <data name="ClientProfileValueOptional" xml:space="preserve"><value>Optional</value></data>
+  <data name="ClientProfileSettingSnapshotAvailable" xml:space="preserve"><value>Snapshot</value></data>
+  <data name="ClientProfileValue_CentralizedSearchMaxDeviceCount_Count_50" xml:space="preserve"><value>50</value></data>
+  <data name="ClientProfileValueTimeZoneLocalMachine" xml:space="preserve"><value>Local</value></data>
+  <data name="ClientProfileSettingSnapshotTimeStampOverlay" xml:space="preserve"><value>Timestamp on snapshot</value></data>
+  <data name="ClientProfileSectionGisMapName" xml:space="preserve"><value>Smart map</value></data>
+  <data name="ClientProfileSettingApplicationLiftPrivacyMaskTimeout" xml:space="preserve"><value>Lift privacy masks timeout</value></data>
+  <data name="ClientProfileSettingCentralizedSearchTab" xml:space="preserve"><value>Search tab</value></data>
+  <data name="ClientProfileSettingApplicationInactivityTimeout" xml:space="preserve"><value>Inactive timeout (minutes)</value></data>
+  <data name="ClientProfileSettingPanesPlaybackExport" xml:space="preserve"><value>Export function</value></data>
+  <data name="ClientProfileSettingDefaultFunctionsPlaybackExportPathCustom" xml:space="preserve"><value>C:\Export</value></data>
+  <data name="ClientProfileSettingGisMapGoogleMapClientId" xml:space="preserve"><value>Client ID for Google Maps</value></data>
+  <data name="ClientProfileSettingTimelineSkipGaps" xml:space="preserve"><value>Playback</value></data>
+  <data name="ClientProfileValueYes" xml:space="preserve"><value>Yes</value></data>
+  <data name="ClientProfileValueTwo" xml:space="preserve"><value>2</value></data>
+  <data name="ClientProfileValueSix" xml:space="preserve"><value>6</value></data>
+  <data name="ClientProfileValueOne" xml:space="preserve"><value>1</value></data>
+  <data name="ClientProfileValueMKV" xml:space="preserve"><value>MKV</value></data>
+  <data name="ClientProfileValueAsk" xml:space="preserve"><value>Ask</value></data>
+  <data name="ClientProfileValueAVI" xml:space="preserve"><value>AVI</value></data>
+  <data name="ClientProfileSectionTimelineHeader" xml:space="preserve"><value>{ClientName} profile settings - Timeline</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerLockForReExport" xml:space="preserve"><value>Prevent re-export</value></data>
+  <data name="ClientProfileValueLogoBlackImage" xml:space="preserve"><value>Black image</value></data>
+  <data name="ClientProfileSettingAdvancedTimeZoneCustom" xml:space="preserve"><value>Custom time zone</value></data>
+  <data name="ClientProfileValueTimelineHideForSmartWallViewsTimeout10Seconds" xml:space="preserve"><value>After 10 seconds</value></data>
+  <data name="ClientProfileSettingFunctionsSetupEnableVideoBufferingOption" xml:space="preserve"><value>Edit live video buffering</value></data>
+  <data name="ClientProfileSettingExportVideoClipOutputType" xml:space="preserve"><value>Select format</value></data>
+  <data name="ClientProfileValueEncryptStregthAES128" xml:space="preserve"><value>128-bit AES</value></data>
+  <data name="ClientProfileValueEncryptStregthAES192" xml:space="preserve"><value>192-bit AES</value></data>
+  <data name="ClientProfileValueEncryptStregthAES256" xml:space="preserve"><value>256-bit AES</value></data>
+  <data name="ClientProfileSectionSequenceImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0
+ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5T
+aXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdo
+dAAACAgCAAAAAAAAAAAAAAAPAwAAAH4EAAACAAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAA
+IAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPLy8gSAgIJSbGxuYm9v
+cl1vb3Fgb25xYGloa2Ovr7A7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADr6+wIISEi
+jhEPDaYTEhGaFBMTnBUUE50LCwmlZ2doaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+4eHkE3t2btDX1r2719O3vtDFrMzVzrPJnJeF5lhWWrCtrK80qamqOufo6BEAAAAAAAAAAAAAAAAA
+AAAAAAAAAN7e4RSKhXrC///gn/711KrZz7bV4tm+0q6nleoTExjWBgcMhggJDJDAwMAtAAAAAAAA
+AAAAAAAAAAAAAAAAAADe3uIVjYd8yP//5qP07s6+0bmR7+jJlearl3byQzgt64lsRchMPS3hioyQ
+cbGxszWtrK465+foCgAAAAAAAAAA5ubpD1VST72AfG67eHNnyoVwU/KafVblb11F8WpVPuvZqGfS
+emJF+QQIFMQECBKGEhMYlLy8uxgAAAAAAAAAAO7u7gYqKi1zAwMJhg4NEZVkUTnjfWNCzmRRO+eO
+bkDz4KlW43xiPvZbQw/RjGIHtks6Gtm3ucErAAAAAAAAAAD8/PwC1tbXItjY2R+YmZxmeV8/5KuG
+U8SOcUrgnXlB8cGTSOZpVDj4k2kHvuWcAJxwVBbesrbCMQAAAAAAAAAAAAAAAAAAAAAAAAAAr6+x
+JhUTEZ0cGBORIR0axWRLGOlqTxTYY0oU26x5BrLgmQCbb1QV2rG2wi8AAAAAAAAAAAAAAAAAAAAA
+AAAAANDQ0BdRUVRUVFVZTkRER6FZQhLsbVAR2WtPE9qUagvFrnkHu1xHGua1uMIvAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTU1Q2GBQPoRsWEI8aFRCVFRMRmRMQD5gWFRWeurq6GgAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiYiKIFZWWlRXV11PV1hdUFdYXVBWVlxQW1xe
+UNDQ0Q0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAIB/AACAfwAAgA8AAIAPAACAAQAAgAEA
+AIABAACAAQAA8AEAAPABAAD+AQAA/gEAAP//AAD//wAA//8AAAs=</value></data><data name="ClientProfileSettingExportMergePreventUpscaling" xml:space="preserve"><value>Prevent upscaling</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerIncludePlayer" xml:space="preserve"><value>Include {BrandName} {ClientName} – {ClientPlayerName}</value></data>
+  <data name="ClientProfileSettingAlarmManagerShowAlarmDesktopNotifications" xml:space="preserve"><value>Show desktop notifications for alarms</value></data>
+  <data name="ClientProfileSettingExportPrivacyMask" xml:space="preserve"><value>Privacy mask</value></data>
+  <data name="ClientProfileSectionGeneralName" xml:space="preserve"><value>General</value></data>
+  <data name="ClientProfileValueTimelineHideForSmartWallViewsTimeout20Seconds" xml:space="preserve"><value>After 20 seconds</value></data>
+  <data name="ClientProfileSettingExportVideoClipSeperator" xml:space="preserve"><value>Media player format - individual files</value></data>
+  <data name="ClientProfileSettingPanesSetupViews" xml:space="preserve"><value>Views pane</value></data>
+  <data name="ClientProfileValueBobBottom" xml:space="preserve"><value>Vertical stretch bottom field</value></data>
+  <data name="ClientProfileValueEnabled" xml:space="preserve"><value>Enabled</value></data>
+  <data name="ClientProfileValueTimelineHideForSmartWallViewsTimeoutDisabled" xml:space="preserve"><value>Never</value></data>
+  <data name="ClientProfileSettingGisMapCacheCleanUp" xml:space="preserve"><value>Remove cached smart map files</value></data>
+  <data name="ClientProfileValueAudioVideo" xml:space="preserve"><value>Audio and video</value></data>
+  <data name="ClientProfileValueHideMouse10Seconds" xml:space="preserve"><value>After 10 seconds</value></data>
+  <data name="ClientProfileValueTimeZoneCustom" xml:space="preserve"><value>Custom time zone</value></data>
+  <data name="ClientProfileSettingTimelineMipMarker" xml:space="preserve"><value>Additional markers</value></data>
+  <data name="ClientProfileValueOverlayBlackImage" xml:space="preserve"><value>Black image with overlay</value></data>
+  <data name="ClientProfileSettingExportMergeMediaSequenceTypeOptionExportAdaptive" xml:space="preserve"><value>Adaptive View</value></data>
+  <data name="ClientProfileValueHideMouse20Seconds" xml:space="preserve"><value>After 20 seconds</value></data>
+  <data name="ClientProfileSettingTimelineMipData" xml:space="preserve"><value>Additional data</value></data>
+  <data name="ClientProfileValueToMediaBurner" xml:space="preserve"><value>To media burner</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackPrintReportUserInformation" xml:space="preserve"><value>Print report - Include user information</value></data>
+  <data name="ClientProfileValueTimelineHideForNormalViewsTimeoutDisabled" xml:space="preserve"><value>Never</value></data>
+  <data name="ClientProfileValueVideoBufferStandard" xml:space="preserve"><value>Standard</value></data>
+  <data name="ClientProfileSettingApplicationKeyboardSetup" xml:space="preserve"><value>Keyboard setup</value></data>
+  <data name="ClientProfileSectionExportImage" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0
+ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5T
+aXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdo
+dAAACAgCAAAAAAAAAAAAAAAPAwAAAH4EAAACAAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAA
+IAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAzM3OEc3OzxIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8g
+IBQqJyZ7Z19axol+d+WEeHHmXlVPyiMgHYMICAcbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ACsrLD58c27e6N3T//3w5//w5Nz/4tbN/9nKvv/BsKT/Z1xU5hAPDksAAAAAAAAAAAAAAAAAAAAA
+AAAAAA4ODi2RhoDx///6///9+P/18e7/5+Pf/9fSzv/MxcD/0snB/+zc0v+RhHz4EhISOgAAAAAA
+AAAAAAAAAFJTVAJAOTTB/Ozj//z28v///vz/+/r5/+zq6P/X1NH/y8jD/9jU0P/t5uH///jv/1pS
+TtFDREQHAAAAAAAAAABYWVk1mIl//+/k3P/q5uP/9/b1///////r6un/zMrH/9nX1P/u7ev//Pn4
+/////f/Ft6//TEtLRwAAAAAAAAAAY19bcLysoP+8tK3/2NTR/+Ph3v/LysntS0pKVi4sKk/Hx8Xn
+/////////////vr/8uPb/3NwboQAAAAAAAAAAFNMRH95bGH/MCgb/4B7dP/k4t//aGdlpAAAAAAA
+AAAAe3t7lP/////8+vn//Pj1//bo3/+GgX6aAAAAAOvq6QxCPTWxLiYa/zQsIP8nHhL/g394/729
+vd44ODcuFRMSKJWUkdXp5+X/6OXj/+7o5P/k1cv/dnJwiQAAAADs6uccdWpbiIZ7cf2Ac2L/vLey
+/7q4tP/y8vH/29ra+r+9u/jRz8z/zcrF/9XQzP/j2tP/t6ed/1JRUFAAAAAAAAAAAAAAAABxX0bl
+h25M/7Kmlv///////Pv6//Lx7//j4d//0s/L/8zIwv/MxL7/4dHF/1lPR95BQkMLAAAAAPj39QKT
+gmqJj3la/5F7Xf6MdVb/wLer//r39f/r6OX/39vY/9XQy//QyMH/3M3B/5mJf/8EAwJNAAAAAAAA
+AAD49/UCpZJ5OZF9Ylh0ZU/ykoZ8+uXXzP//9O3/8+nj/+nf2P/l2M//2ci8/4p7cvYRDgxkAAAA
+AAAAAAAAAAAAAAAAAIx4XAF2YEG6hm5M/1FCLdFgVUqYiX124KeakfqilIv7e29n5DUuKqMAAAAw
+AAAAAAAAAAAAAAAAAAAAAPj39QKXh3CSk35h/JiDZvWVgWT0dGVObq+urAq9vb0kvr6+Jbi5ug0A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+/v4C9PLvK/Lv7Cny7+wp8/HtKu3q5SgAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/n8AAPAPAADgBwAAwAMAAIABAACAAQAAgAEA
+AIGBAAAAAQAAAAEAAMABAAAAAwAAAAcAAIAPAAAAPwAAA/8AAAs=</value></data><data name="ClientProfileValue_CentralizedSearchMaxDeviceCount_Count_100" xml:space="preserve"><value>100</value></data>
+  <data name="ClientProfileValue_CentralizedSearchMaxDeviceCount_Count_500" xml:space="preserve"><value>500</value></data>
+  <data name="ClientProfileValueVideo" xml:space="preserve"><value>Video only</value></data>
+  <data name="ClientProfileValueThree" xml:space="preserve"><value>3</value></data>
+  <data name="ClientProfileValueSeven" xml:space="preserve"><value>7</value></data>
+  <data name="ClientProfileValueEight" xml:space="preserve"><value>8</value></data>
+  <data name="ClientProfileValueAudio" xml:space="preserve"><value>Audio only</value></data>
+  <data name="ClientProfileValueVideoPlayerHardwareDecodingModeAuto" xml:space="preserve"><value>Auto</value></data>
+  <data name="ClientProfileSettingAdvancedTimeZone" xml:space="preserve"><value>Time zone</value></data>
+  <data name="ClientProfileSettingExportMergeFormatOptionMP4" xml:space="preserve"><value>MP4 format</value></data>
+  <data name="ClientProfileSettingExportMergeFormatOptionMKV" xml:space="preserve"><value>MKV format</value></data>
+  <data name="ClientProfileSettingApplicationMinimizeButton" xml:space="preserve"><value>Minimize button</value></data>
+  <data name="ClientProfileValueTimelineHideForSmartWallViewsTimeout5Seconds" xml:space="preserve"><value>After 5 seconds</value></data>
+  <data name="ClientProfileSettingExportMergeIncludeTimestamps" xml:space="preserve"><value>Include timestamps</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerGlobalCommentsMode" xml:space="preserve"><value>Manage project comment</value></data>
+  <data name="ClientProfileValueNo" xml:space="preserve"><value>No</value></data>
+  <data name="ClientProfileSettingExportMergeFramesPerSecondOption60" xml:space="preserve"><value>60 FPS</value></data>
+  <data name="ClientProfileSettingExportMergeFramesPerSecondOption30" xml:space="preserve"><value>30 FPS (Default)</value></data>
+  <data name="ClientProfileSettingExportMergeFramesPerSecondOption15" xml:space="preserve"><value>15 FPS</value></data>
+  <data name="ClientProfileSettingExportMergeFramesPerSecondOption24" xml:space="preserve"><value>24 FPS</value></data>
+  <data name="ClientProfileSettingPanesSetupProperties" xml:space="preserve"><value>Properties pane</value></data>
+  <data name="ClientProfileSettingCentralizedSearchMaxDeviceCount" xml:space="preserve"><value>Cameras allowed during search</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerEncryptPassword" xml:space="preserve"><value>Password</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerEncryptDatabases" xml:space="preserve"><value>Password protect data</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackPrintReportHeadline" xml:space="preserve"><value>Print report - Headline mode</value></data>
+  <data name="ClientProfileValueHideMouse5Seconds" xml:space="preserve"><value>After 5 seconds</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerFormat" xml:space="preserve"><value>Availability</value></data>
+  <data name="ClientProfileSectionExportHeader" xml:space="preserve"><value>{ClientName} profile settings - Export</value></data>
+  <data name="ClientProfileValueGisMapCacheCleanWhenScClose" xml:space="preserve"><value>On exit</value></data>
+  <data name="ClientProfileSettingTimelineHideForNormalViewsTimeout" xml:space="preserve"><value>Hide the timeline controls while inactive</value></data>
+  <data name="ClientProfileSectionLiveName" xml:space="preserve"><value>Live</value></data>
+  <data name="ClientProfileValueBookmarkQuick" xml:space="preserve"><value>Quick bookmark</value></data>
+  <data name="ClientProfileValueVideoBufferMaximum" xml:space="preserve"><value>Maximum – (2 seconds)</value></data>
+  <data name="ClientProfileSettingExportMergeFramesPerSecond" xml:space="preserve"><value>Frames per second (FPS)</value></data>
+  <data name="ClientProfileSettingExportMergeQuality" xml:space="preserve"><value>Compression quality</value></data>
+  <data name="ClientProfileValueRequired" xml:space="preserve"><value>Required</value></data>
+  <data name="ClientProfileSettingApplicationNewSCVersionWindow" xml:space="preserve"><value>New version on server message</value></data>
+  <data name="ClientProfileSettingTimelineIncomingAudio" xml:space="preserve"><value>Incoming audio</value></data>
+  <data name="ClientProfileSettingAdvancedMaxDecodingThreads" xml:space="preserve"><value>Maximum decoding threads</value></data>
+  <data name="ClientProfileValueLogoMilestone" xml:space="preserve"><value>{Company} logo</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackExportPath" xml:space="preserve"><value>Export path</value></data>
+  <data name="ClientProfileSettingApplicationTransactTab" xml:space="preserve"><value>Transact tab</value></data>
+  <data name="ClientProfileSettingSnapshotPath" xml:space="preserve"><value>Snapshot path</value></data>
+  <data name="ClientProfileSettingDefaultFunctionsPlaybackPrintReportHeadlineText" xml:space="preserve"><value>{BrandName} {ClientName} Surveillance Report</value></data>
+  <data name="ClientProfileSettingGisMapOpenStreetMapAlternativeServer" xml:space="preserve"><value>OpenStreetMap server</value></data>
+  <data name="ClientProfileSettingExportVideoClipTextsMode" xml:space="preserve"><value>Manage video texts</value></data>
+  <data name="ClientProfileSettingExportMergeResolution" xml:space="preserve"><value>Resolution</value></data>
+  <data name="ClientProfileSettingPanesPlaybackCreateBookmark" xml:space="preserve"><value>Bookmark pane</value></data>
+  <data name="ClientProfileSettingApplicationOptionsDialogButton" xml:space="preserve"><value>Settings dialog</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerSignData" xml:space="preserve"><value>Include digital signature</value></data>
+  <data name="ClientProfileValueVideoPlayerDiagnosticLevel3" xml:space="preserve"><value>Level 3</value></data>
+  <data name="ClientProfileValueVideoPlayerDiagnosticLevel2" xml:space="preserve"><value>Level 2</value></data>
+  <data name="ClientProfileValueVideoPlayerDiagnosticLevel1" xml:space="preserve"><value>Level 1</value></data>
+  <data name="ClientProfileValueVideoPlayerDiagnosticLevel0" xml:space="preserve"><value>Hide</value></data>
+  <data name="ClientProfileSettingGeneralEmptySpaces" xml:space="preserve"><value>Show in empty view positions</value></data>
+  <data name="ClientProfileValueVideoBufferMinimum" xml:space="preserve"><value>None</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackPrintReportCopyRights" xml:space="preserve"><value>Print report - Include copyright information</value></data>
+  <data name="ClientProfileSettingGisMapGoogleMapSigningSecret" xml:space="preserve"><value>URL signing secret for Google Maps</value></data>
+  <data name="ClientProfileValueMaximizeFullscreen" xml:space="preserve"><value>Maximize to full screen</value></data>
+  <data name="ClientProfileSettingExportVideoClipFormat" xml:space="preserve"><value>Availability</value></data>
+  <data name="ClientProfileValueTimelineHideForNormalViewsTimeout20Seconds" xml:space="preserve"><value>After 20 seconds</value></data>
+  <data name="ClientProfileValueWindow" xml:space="preserve"><value>Window</value></data>
+  <data name="ClientProfileSettingExportMergeFormat" xml:space="preserve"><value>Formats</value></data>
+  <data name="ClientProfileSettingApplicationStartView" xml:space="preserve"><value>Restore windows and tabs</value></data>
+  <data name="ClientProfileSettingApplicationStartMode" xml:space="preserve"><value>Start mode of main window</value></data>
+  <data name="ClientProfileSettingExportStillImageTimestamp" xml:space="preserve"><value>Include timestamps</value></data>
+  <data name="ClientProfileSettingExportVideoClipTimestamp" xml:space="preserve"><value>Include timestamps</value></data>
+  <data name="ClientProfileValueTimelineHideForNormalViewsTimeout10Seconds" xml:space="preserve"><value>After 10 seconds</value></data>
+  <data name="ClientProfileSettingMapEditMaps" xml:space="preserve"><value>Edit maps</value></data>
+  <data name="ClientProfileValueToDisk" xml:space="preserve"><value>To disk</value></data>
+  <data name="ClientProfileSettingApplicationExitButton" xml:space="preserve"><value>Exit button</value></data>
+  <data name="ClientProfileSettingExportSmartClientPlayerEncryptionStrength" xml:space="preserve"><value>Encryption strength</value></data>
+  <data name="ClientProfileSettingExportMergeQualityOptionLowest" xml:space="preserve"><value>Lowest</value></data>
+  <data name="ClientProfileSettingApplicationMaximizeButton" xml:space="preserve"><value>Maximize button</value></data>
+  <data name="ClientProfileSettingFunctionsLiveBookmarkMode" xml:space="preserve"><value>Bookmark function</value></data>
+  <data name="ClientProfileSettingExportMergeQualityOptionMedium" xml:space="preserve"><value>Medium (Default)</value></data>
+  <data name="ClientProfileSettingViewsCustomLogoInEmptySpaces" xml:space="preserve"><value>Custom logo</value></data>
+  <data name="ClientProfileValueTimeZoneMasterServer" xml:space="preserve"><value>Server time zone</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackBookmarkMode" xml:space="preserve"><value>Bookmark function</value></data>
+  <data name="ClientProfileValueGisMapCacheCleanWhenNever" xml:space="preserve"><value>Never</value></data>
+  <data name="ClientProfileSectionGisMapHeader" xml:space="preserve"><value>{ClientName} profile settings - smart map</value></data>
+  <data name="ClientProfileSettingFunctionsPlaybackExportPathCustom" xml:space="preserve"><value>Export path - Custom</value></data>
+  <data name="ClientProfileValueVirtualJoystick" xml:space="preserve"><value>Virtual Joystick</value></data>
+  </root>

@@ -1,0 +1,38 @@
+﻿namespace VideoOS.Management.VmoClient;
+
+public enum CameraDevicePermissionSetValue
+{
+	Read,
+	Edit,
+	ViewLive,
+	ViewRestrictedLive,
+	Playback,
+	PlaybackRestrictedMedia,
+	ReadRemoteRecordings,
+	ReadSequences,
+	SmartSearch,
+	Export,
+	CreateBookmarks,
+	ReadBookmarks,
+	EditBookmarks,
+	DeleteBookmarks,
+	CreateEvidenceLock,
+	ReadEvidenceLock,
+	DeleteEvidenceLock,
+	CreateRestrictedMedia,
+	ReadRestrictedMedia,
+	DeleteRestrictedMedia,
+	AuxCommands,
+	PtzControl,
+	ActivatePtzPreset,
+	ManagePresetAndPatrolling,
+	ManageLockPreset,
+	ReservePtzSession,
+	ReleasePtzSession,
+	StartManualRecording,
+	StopManualRecording,
+	DeleteRecordings,
+	LiftPrivacyMasking,
+	AdministrateSecurity,
+	NumberOfElements
+}

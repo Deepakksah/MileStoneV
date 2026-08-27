@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.SearchTextBoxControl.SearchTextBox" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:searchtextboxcontrol="clr-namespace:VideoOS.UI.Common.WPF.SearchTextBoxControl;assembly=VideoOS.UI.Common.WPF" Loaded="SearchTextBox_OnLoaded">
+  <Grid Margin="0">
+    <Border CornerRadius="3" BorderThickness="1" BorderBrush="#888888" Background="#FFFFFFFF">
+      <Grid Margin="2">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <TextBox Name="_searchTextBox" Grid.Column="0" BorderBrush="#00FFFFFF" BorderThickness="0" FontFamily="Segoe UI" FontSize="9pt" FontStyle="Normal" Foreground="#FF000000" Background="#FFFFFFFF" Margin="3,0,3,0" VerticalAlignment="Center" TextChanged="_textBox_OnTextChanged" IsKeyboardFocusedChanged="_textBox_OnIsKeyboardFocusedChanged" KeyDown="_searchTextBox_OnKeyDown">
+          <FrameworkElement.Style>
+            <Style TargetType="{x:Type TextBox}">
+              <Setter Property="FrameworkElement.ContextMenu">
+                <Setter.Value>
+                  <ContextMenu Visibility="Collapsed" />
+                </Setter.Value>
+              </Setter>
+            </Style>
+          </FrameworkElement.Style>
+        </TextBox>
+        <TextBlock Name="_searchTooltipTextBlock" Grid.Column="0" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" IsHitTestVisible="False" FontFamily="Segoe UI" FontSize="9pt" FontStyle="Italic" Foreground="#FFA9A9A9" Background="#FFFFFFFF" Margin="5,0,5,0" Text="{Binding SearchTooltip}" />
+        <Image Name="_searchImage" Grid.Column="1" Width="16" Height="16" Source="Resources/icn_search_magnifier_16x16.png" />
+        <Image Name="_clearImage" Grid.Column="1" Width="16" Height="16" Source="Resources/icn_clear_search_16x16.png" Cursor="Hand" MouseLeftButtonDown="_clearImage_OnMouseLeftButtonDown" />
+      </Grid>
+    </Border>
+  </Grid>
+</UserControl>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.SystemConfigurationPlugin.UserNameTextBoxWithButton" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:local="clr-namespace:VideoOS.Installer.SystemConfigurationPlugin" x:Name="UserNameTextBoxWithButtonContol">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <BooleanToVisibilityConverter x:Key="boolToVisConverter" />
+      <local:InverseBooleanConverter x:Key="inverseBooleanConverter" />
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Margin="0">
+    <Border Name="_userNameBorder" BorderThickness="1" Background="#FFFFFFFF" SnapsToDevicePixels="True">
+      <FrameworkElement.Style>
+        <Style TargetType="{x:Type Border}">
+          <Setter Property="BorderBrush" Value="{Binding UserNameBorderBrush, Converter={local:SolidBorderBrushNullConverter}}" />
+          <Style.Triggers>
+            <DataTrigger Value="True" Binding="{Binding ElementName=_userNameTextBox, Path=IsMouseOver}">
+              <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+            </DataTrigger>
+            <DataTrigger Value="True" Binding="{Binding ElementName=_userNameTextBox, Path=IsKeyboardFocused}">
+              <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+            </DataTrigger>
+            <DataTrigger Value="True" Binding="{Binding ElementName=_userButton, Path=IsMouseOver}">
+              <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+            </DataTrigger>
+          </Style.Triggers>
+        </Style>
+      </FrameworkElement.Style>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <TextBox Name="_userNameTextBox" Grid.Column="0" Margin="3,3,3,3" BorderBrush="#00FFFFFF" BorderThickness="0" FontStyle="Normal" Foreground="#FF000000" Background="#FFFFFFFF" VerticalAlignment="Stretch" VerticalContentAlignment="Center" FontFamily="Tahoma" Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding UserButtonVisible, Converter={StaticResource inverseBooleanConverter}}" TabIndex="{Binding Path=TabIndex, RelativeSource={RelativeSource AncestorType={x:Type local:UserNameTextBoxWithButton}}}">
+          <FrameworkElement.Style>
+            <Style TargetType="{x:Type TextBox}">
+              <Setter Property="FrameworkElement.ContextMenu">
+                <Setter.Value>
+                  <ContextMenu Visibility="Collapsed" />
+                </Setter.Value>
+              </Setter>
+            </Style>
+          </FrameworkElement.Style>
+          <behaviors:Interaction.Triggers xmlns:behaviors="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors">
+            <behaviors:EventTrigger xmlns:behaviors="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors" behaviors:EventTrigger.EventName="TextChanged">
+              <behaviors:InvokeCommandAction behaviors:InvokeCommandAction.Command="{Binding UserNameChangedCommand}" />
+            </behaviors:EventTrigger>
+          </behaviors:Interaction.Triggers>
+        </TextBox>
+        <Button Name="_userButton" Grid.Column="1" Command="{Binding OpenObjectPickerCommand}" Visibility="{Binding UserButtonVisible, Converter={StaticResource boolToVisConverter}}" TabIndex="{Binding Path=TabIndex, RelativeSource={RelativeSource AncestorType={x:Type local:UserNameTextBoxWithButton}}}">
+          <Control.Template>
+            <ControlTemplate>
+              <Border Name="_iconBorder" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1">
+                <Image Source="Resources/address_book_16x16.png" Height="16" Width="16" />
+              </Border>
+              <ControlTemplate.Triggers>
+                <Trigger Property="UIElement.IsMouseOver" Value="True">
+                  <Setter TargetName="_iconBorder" Property="Border.Background" Value="#FFADD8E6" />
+                  <Setter TargetName="_iconBorder" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Property="Border.BorderBrush" />
+                </Trigger>
+              </ControlTemplate.Triggers>
+            </ControlTemplate>
+          </Control.Template>
+        </Button>
+      </Grid>
+    </Border>
+  </Grid>
+</UserControl>

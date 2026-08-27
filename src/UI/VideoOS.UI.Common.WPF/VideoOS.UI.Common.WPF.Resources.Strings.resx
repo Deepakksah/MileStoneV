@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="DisableAlarmsSource" xml:space="preserve"><value>Source</value></data>
+  <data name="MessageBoxIs64BitProcess" xml:space="preserve"><value>64 bit process:</value></data>
+  <data name="CancelButtonText" xml:space="preserve"><value>Cancel</value></data>
+  <data name="FromToTimePickerStartEndModeFromLabelText" xml:space="preserve"><value>Start</value></data>
+  <data name="MessageBoxInnerException" xml:space="preserve"><value>************** Inner Exception **************</value></data>
+  <data name="MessageBoxCancelButton" xml:space="preserve"><value>Cancel</value></data>
+  <data name="DisableAlarmsEvents" xml:space="preserve"><value>Events</value></data>
+  <data name="DisableAlarmsFor" xml:space="preserve"><value>Disable for</value></data>
+  <data name="MessageBoxExceptionType" xml:space="preserve"><value>Exception type:</value></data>
+  <data name="FromToTimePickerInvalidTimeSetButtonDisabledTooltip" xml:space="preserve"><value>One of the selected times is invalid in the selected time zone.</value></data>
+  <data name="SuppressStatusCancelButton" xml:space="preserve"><value>Cancel</value></data>
+  <data name="DateTimePickerCancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="SuppressStatusTimeOut" xml:space="preserve"><value>Timeout</value></data>
+  <data name="MessageBosIPAddress" xml:space="preserve"><value>IP address:</value></data>
+  <data name="DisableAlarmsComboBoxItemHours" xml:space="preserve"><value>Hours</value></data>
+  <data name="SuppressStatusTitle" xml:space="preserve"><value>Ignore operational status on {0}</value></data>
+  <data name="MessageBoxOKButton" xml:space="preserve"><value>OK</value></data>
+  <data name="DisableAlarmsTimeOut" xml:space="preserve"><value>Timeout</value></data>
+  <data name="DisableAlarmsCancelButton" xml:space="preserve"><value>Cancel</value></data>
+  <data name="TreeViewItemLoading" xml:space="preserve"><value>Loading...</value></data>
+  <data name="DisableAlarmsTitle" xml:space="preserve"><value>Disable all new alarms</value></data>
+  <data name="DisableAlarmsUntil" xml:space="preserve"><value>Disable until</value></data>
+  <data name="FlipHeaderTextFormat" xml:space="preserve"><value>{0} of {1}</value></data>
+  <data name="SuppressStatusFor" xml:space="preserve"><value>Ignore for:</value></data>
+  <data name="MessageBoxIPAddress" xml:space="preserve"><value>IP address:</value></data>
+  <data name="FromToTimePickerStartEndModeSetButtonDisabledTooltip" xml:space="preserve"><value>End time must be later than start time.</value></data>
+  <data name="SuppressStatusContextMenuModify" xml:space="preserve"><value>Edit</value></data>
+  <data name="DisableAlarmsManageWindowTitle" xml:space="preserve"><value>Currently disabled alarms</value></data>
+  <data name="DisableAlarmsComboBoxItemMinutes" xml:space="preserve"><value>Minutes</value></data>
+  <data name="MessageBoxShowDetails" xml:space="preserve"><value>Show details</value></data>
+  <data name="FromToTimePickerFromToModeSetButtonDisabledTooltip" xml:space="preserve"><value>The To time must be later than the From time.</value></data>
+  <data name="CloseButtonText" xml:space="preserve"><value>Close</value></data>
+  <data name="SuppressStatusContextMenuDelete" xml:space="preserve"><value>Enable</value></data>
+  <data name="MessageBoxSystemInfo" xml:space="preserve"><value>************** System Info **************</value></data>
+  <data name="MessageBoxOSVersion" xml:space="preserve"><value>OS version:</value></data>
+  <data name="SuppressStatusOKButton" xml:space="preserve"><value>OK</value></data>
+  <data name="MessageBoxIs64BitOperativSystem" xml:space="preserve"><value>64 bit OS:</value></data>
+  <data name="DisableAlarmsComboBoxItemDays" xml:space="preserve"><value>Days</value></data>
+  <data name="MessageBoxExceptionTargetSite" xml:space="preserve"><value>Exception Target Site: </value></data>
+  <data name="FromToTimePickerFromToModeToLabelText" xml:space="preserve"><value>To</value></data>
+  <data name="NoItemsFound" xml:space="preserve"><value>No items found</value></data>
+  <data name="FromToTimePickerStartEndModeToLabelText" xml:space="preserve"><value>End</value></data>
+  <data name="OkButtonText" xml:space="preserve"><value>OK</value></data>
+  <data name="DisableAlarmsOKButton" xml:space="preserve"><value>Disable</value></data>
+  <data name="FromToTimePickerSetButtonText" xml:space="preserve"><value>Set</value></data>
+  <data name="FromToTimePickerCancelButtonText" xml:space="preserve"><value>Cancel</value></data>
+  <data name="SuppressStatusSource" xml:space="preserve"><value>Source</value></data>
+  <data name="SuppressStatusComment" xml:space="preserve"><value>Comment</value></data>
+  <data name="DateTimePickerGoTo" xml:space="preserve"><value>Go To</value></data>
+  <data name="MessageBoxHideDetails" xml:space="preserve"><value>Hide details</value></data>
+  <data name="MessageBoxProcessorCount" xml:space="preserve"><value>Processors count:</value></data>
+  <data name="TruncatingStackPanelOverflowTooltip" xml:space="preserve"><value>+{0} more.</value></data>
+  <data name="DisableAlarmsExpanderHeader" xml:space="preserve"><value>Events that will not trigger alarms</value></data>
+  <data name="SuppressStatusUntill" xml:space="preserve"><value>Ignore until:</value></data>
+  <data name="MessageBoxCurrentUser" xml:space="preserve"><value>Current user:</value></data>
+  <data name="FromToTimePickerFromToModeFromLabelText" xml:space="preserve"><value>From</value></data>
+  <data name="MessageBoxExceptionMessage" xml:space="preserve"><value>Exception message:</value></data>
+  <data name="MessageBoxNoButton" xml:space="preserve"><value>No</value></data>
+  <data name="MessageBoxOuterException" xml:space="preserve"><value>************** Outer Exception **************</value></data>
+  <data name="SearchBoxWatermark" xml:space="preserve"><value>Search...</value></data>
+  <data name="MessageBoxRemoveButton" xml:space="preserve"><value>Remove</value></data>
+  <data name="MessageBoxExceptionSource" xml:space="preserve"><value>Exception source:</value></data>
+  <data name="DisableAlarmsContextMenuModify" xml:space="preserve"><value>Edit</value></data>
+  <data name="SuppressStatusComboBoxItemDays" xml:space="preserve"><value>Days</value></data>
+  <data name="MessageBoxMachineName" xml:space="preserve"><value>Machine Name:</value></data>
+  <data name="DisableAlarmsContextMenuDelete" xml:space="preserve"><value>Enable</value></data>
+  <data name="MessageBoxUnableToGetIP" xml:space="preserve"><value>Cannot obtain network information</value></data>
+  <data name="SuppressStatusComboBoxItemHours" xml:space="preserve"><value>Hours</value></data>
+  <data name="DisableAlarmsComment" xml:space="preserve"><value>Comment</value></data>
+  <data name="AllNewAlarmsTriggeredBy" xml:space="preserve"><value>To disable alarms, select the events that are triggering currently unwanted alarms.
+The events that you select will not trigger alarms for the time period that you choose.</value></data>
+  <data name="MessageBoxYesButton" xml:space="preserve"><value>Yes</value></data>
+  <data name="MessageBoxDateTime" xml:space="preserve"><value>Date and time:</value></data>
+  <data name="SuppressStatusManageWindowTitle" xml:space="preserve"><value>Ignore status</value></data>
+  <data name="SuppressStatusComboBoxItemMinutes" xml:space="preserve"><value>Minutes</value></data>
+  </root>

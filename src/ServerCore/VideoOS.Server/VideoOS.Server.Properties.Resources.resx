@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="StatusSNMPManagerStarted" xml:space="preserve"><value>SNMP module started</value></data>
+  <data name="IServerSqlUniqueIndexOrConstraintViolation" xml:space="preserve"><value>The submitted value already exists. Please verify that the value has not already been added by another user.</value></data>
+  <data name="VmoDatabaseConfigMissingRow" xml:space="preserve"><value>VMO61005: Invalid database configuration, missing row, please contact your server administrator.</value></data>
+  <data name="DatabaseConfigExtraRows" xml:space="preserve"><value>VMO61004: Invalid database configuration, extra rows, please contact your server administrator.</value></data>
+  <data name="StatusStartDatabase" xml:space="preserve"><value>Initializing database connection.</value></data>
+  <data name="StatusStartLogManager" xml:space="preserve"><value>Initializing log module.</value></data>
+  <data name="InvalidClientVersionConfigDirectory" xml:space="preserve"><value>Could not find client version directory.</value></data>
+  <data name="StatusCommandProcessorShutdown" xml:space="preserve"><value>Shutting down command processor.</value></data>
+  <data name="StatusInitializeCommunicationClientsFailed" xml:space="preserve"><value>Failed to initialize communication clients, contact support</value></data>
+  <data name="StatusStopSNMPManager" xml:space="preserve"><value>Shutting down SNMP module</value></data>
+  <data name="StatusStartRuleProcessor" xml:space="preserve"><value>Starting rule processor.</value></data>
+  <data name="NotificationManager_CustomEvent" xml:space="preserve"><value>Custom Event: '{0}'</value></data>
+  <data name="StatusStartCommandProcessor" xml:space="preserve"><value>Initializing command processor.</value></data>
+  <data name="EventGeneratorSourceUnknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="StatusActivateRecorderSuccess" xml:space="preserve"><value>Successfully activated recording server {0}</value></data>
+  <data name="StatusStartApplyConfiguration" xml:space="preserve"><value>Applying configuration.</value></data>
+  <data name="StatusStartVmoClient" xml:space="preserve"><value>Initializing VideoOS Management Objects Client Module.</value></data>
+  <data name="IServerSqlError" xml:space="preserve"><value>Cannot connect to SQL Server. The server may be offline.</value></data>
+  <data name="StatusStartExternalPluginConfig" xml:space="preserve"><value>Initializing external plug-in configurations.</value></data>
+  <data name="StatusStartLicenseManager" xml:space="preserve"><value>Initializing license module.</value></data>
+  <data name="NotificationManager_SystemEvent" xml:space="preserve"><value>System Event: '{0}'</value></data>
+  <data name="SNMPSourceType" xml:space="preserve"><value>Source type: {0}</value></data>
+  <data name="SNMPSourceName" xml:space="preserve"><value>Source name: {0}</value></data>
+  <data name="IServerApiInvalidToken" xml:space="preserve"><value>Invalid token</value></data>
+  <data name="VmoDatabaseConfigExtraRows" xml:space="preserve"><value>VMO61004: Invalid database configuration, extra rows, please contact your server administrator.</value></data>
+  <data name="StatusWaitForSqlServer" xml:space="preserve"><value>Waiting for SQL server to be online.</value></data>
+  <data name="NotificationManager_TimesEvent" xml:space="preserve"><value>Timer Event</value></data>
+  <data name="AuthenticationBrokenMessage" xml:space="preserve"><value>The management server has stopped because its internal registration is broken. Re-install the management server.</value></data>
+  <data name="EventGeneratorSourceExternal" xml:space="preserve"><value>External</value></data>
+  <data name="StatusInitializeCommunicationClients" xml:space="preserve"><value>Starting initializing communication clients</value></data>
+  <data name="StatusInitializeRuleProcessor" xml:space="preserve"><value>Initializing rule processor.</value></data>
+  <data name="IServerApiExpiredToken" xml:space="preserve"><value>Invalid token (token has expired)</value></data>
+  <data name="EvidenceLockCommand_TimeoutReceived" xml:space="preserve"><value>Timeout.</value></data>
+  <data name="StatusSendCompleteConfiguration" xml:space="preserve"><value>Returning configuration to recording server: {0}.</value></data>
+  <data name="ExternalPluginConfigDirNull" xml:space="preserve"><value>Could not find external plugin configuration directory.</value></data>
+  <data name="EventGeneratorSourceSystem" xml:space="preserve"><value>System</value></data>
+  <data name="EventGeneratorSourceServer" xml:space="preserve"><value>Management Server</value></data>
+  <data name="IServerInternalError" xml:space="preserve"><value>Internal error</value></data>
+  <data name="StatusServerShutdown" xml:space="preserve"><value>Shutting down...</value></data>
+  <data name="StatusNoDomainUserOnDomainComputer" xml:space="preserve"><value>Warning! When the computer is joined a domain the user account that starts the service must be a domain user account.</value></data>
+  <data name="EventNameUnknown" xml:space="preserve"><value>Unknown event</value></data>
+  <data name="InvalidTemporaryLicenseFile" xml:space="preserve"><value>The content of the temporary license file is invalid. Error code : {0}</value></data>
+  <data name="VmoGetSidException" xml:space="preserve"><value>VMO61011: Unable to retrieve a SID for an identity from Active Directory.</value></data>
+  <data name="UnauthorizedAccessException" xml:space="preserve"><value>VMO61008: The following account does not have sufficient permissions to complete the operation: {0}. Check the permissions for the account and allow the appropriate permissions to perform this operation.</value></data>
+  <data name="LookupSidException" xml:space="preserve"><value>There was an error looking up the SID for {0}.</value></data>
+  <data name="StatusStartSNMPManager" xml:space="preserve"><value>Starting SNMP module</value></data>
+  <data name="StatusErrorRegistrationIdpServer" xml:space="preserve"><value>Failed to get token from Identity Provider, contact support</value></data>
+  <data name="StatusStartRecorderCommunication" xml:space="preserve"><value>Initializing recording server communication module.</value></data>
+  <data name="VmoInvalidDomain" xml:space="preserve"><value>VMO61010: An error occurred attempting to read information from the following Active Directory domain: {0}. The Active Directory domain is unknown or could not be found.</value></data>
+  <data name="StatusLicenseUpdated" xml:space="preserve"><value>Successfully updated Management Server license.</value></data>
+  <data name="StatusStartTaskManager" xml:space="preserve"><value>Initializing task manager module.</value></data>
+  <data name="StatusStartIdp" xml:space="preserve"><value>Initializing connection to Identity Provider</value></data>
+  <data name="EvidenceLock_Restored" xml:space="preserve"><value>Restored</value></data>
+  <data name="StatusRuleProcessorShutdown" xml:space="preserve"><value>Shutting down rule processor</value></data>
+  <data name="IServerSqlConcurrencyError" xml:space="preserve"><value>SQL database concurrency error</value></data>
+  <data name="StatusActivateRecorderFailed" xml:space="preserve"><value>Failed to activate recording server {0}</value></data>
+  <data name="IServerFeatureNotLicensed" xml:space="preserve"><value>Feature not licensed</value></data>
+  <data name="DatabaseConfigMissingRow" xml:space="preserve"><value>VMO61005: Invalid database configuration, missing row, please contact your server administrator.</value></data>
+  <data name="SLCInvalidInLicense" xml:space="preserve"><value>The SLC is not valid</value></data>
+  <data name="StatusWaitForIdpServer" xml:space="preserve"><value>Waiting for Identity Provider to be online</value></data>
+  <data name="NoNullAllowedException" xml:space="preserve"><value>No command prepared</value></data>
+  <data name="GenerelSqlError" xml:space="preserve"><value>Error occurred while trying to do the task on the SQL Server.</value></data>
+  </root>

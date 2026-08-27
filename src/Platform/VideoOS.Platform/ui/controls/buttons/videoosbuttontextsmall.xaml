@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:converters="clr-namespace:VideoOS.Platform.UI.Converters">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/VideoOSBase.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="{x:Type controls:VideoOSButtonTextSmall}" BasedOn="{StaticResource {x:Static controls:VideoOSBaseInternals.StyleKey}}" TargetType="{x:Type controls:VideoOSButtonTextSmall}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type controls:VideoOSButtonTextSmall}">
+          <BulletDecorator Height="16" Background="#00FFFFFF" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" SnapsToDevicePixels="True" Margin="{Binding ElementName=_buttonText, Path=Text, Converter={converters:StringNullOrEmptyToThicknessConverter NotNullOrEmptyResult=0, NullOrEmptyResult=0,0,-4,0}}">
+            <BulletDecorator.Bullet>
+              <controls:VideoOSIcon Width="16" Height="16" VerticalAlignment="Center" IconSource="{TemplateBinding controls:VideoOSButtonBase.IconSource}" Visibility="{TemplateBinding IconSource, Converter={converters:NullToVisibilityConverter NullResult=Collapsed, NotNullResult=Visible}}" AutoColorBrush="{Binding ElementName=_buttonText, Path=Foreground}" />
+            </BulletDecorator.Bullet>
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <controls:VideoOSTextBlockInteractiveSmall x:Name="_buttonText" Grid.Column="0" Text="{TemplateBinding ContentControl.Content}" VerticalAlignment="Center" Appearance="{Binding IsDestructive, Converter={x:Static controls:VideoOSButtonBaseInternals.VideoOSTextBlockInteractiveSmallAppearanceConverter}, RelativeSource={RelativeSource TemplatedParent}}" Margin="{TemplateBinding IconSource, Converter={converters:NullToThicknessConverter NotNullResult=4,0,0,0, NullResult=0}}">
+                <controls:VideoOSTextBlockInteractiveSmall.InteractiveState>
+                  <MultiBinding Converter="{x:Static controls:VideoOSButtonBaseInternals.VideoOSTextBlockInteractiveSmallInteractiveStateConverter}">
+                    <Binding Path="ForcePressedState" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Path="IsMouseOver" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Path="IsPressed" RelativeSource="{RelativeSource TemplatedParent}" />
+                  </MultiBinding>
+                </controls:VideoOSTextBlockInteractiveSmall.InteractiveState>
+              </controls:VideoOSTextBlockInteractiveSmall>
+              <controls:VideoOSIcon Grid.Column="1" Width="12" Height="12" Margin="8,0,0,0" VerticalAlignment="Center" AutoColorBrush="{Binding ElementName=_buttonText, Path=Foreground}" Visibility="{TemplateBinding IsChevronDownIconVisible, Converter={converters:BoolToVisibilityConverter TrueResult=Visible, FalseResult=Collapsed}}" IconSource="{controls:VideoOSIconBuiltInSource Chevron_Down_12px}" />
+            </Grid>
+          </BulletDecorator>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

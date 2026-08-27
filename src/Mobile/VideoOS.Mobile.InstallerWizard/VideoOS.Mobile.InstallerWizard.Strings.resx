@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="EnteredCertificateKasExpired" xml:space="preserve"><value>Entered certificate has expired.</value></data>
+  <data name="WizardPageVmsAccount_Description" xml:space="preserve"><value>Use an existing VMS user. If the Service account is not a member of a domain to which the management server has access, select Basic user.</value></data>
+  <data name="COULDNOTLOGIN" xml:space="preserve"><value>Validating the user account failed. Check the user permissions for access to the surveillance system.</value></data>
+  <data name="InvalidCertificateCredentials" xml:space="preserve"><value>Invalid credentials for the given certificate.</value></data>
+  <data name="INVALIDHTTPSECUREPORT" xml:space="preserve"><value>Invalid HTTPS port value.</value></data>
+  <data name="WizardPageVmsAccount_Headline" xml:space="preserve"><value>Connect to the surveillance system</value></data>
+  <data name="INVALIDCERTIFICATIONFILE" xml:space="preserve"><value>Invalid certification file.</value></data>
+  <data name="MessageBox_UnableToVerifyAccountType_Caption" xml:space="preserve"><value>Invalid Format</value></data>
+  <data name="WizardPageVmsAccount_RadioButton_ServiceUser" xml:space="preserve"><value>Service account:</value></data>
+  <data name="WizardPagePorts_SpecifyPortsForCommunicationWithServer" xml:space="preserve"><value>Specify the connection ports for communication with the mobile server</value></data>
+  <data name="ServerCertificateControl_Selection_NoSelectionText" xml:space="preserve"><value>&lt;No selection&gt;</value></data>
+  <data name="INVALIDUSERNAME" xml:space="preserve"><value>The entered user name is not valid</value></data>
+  <data name="WizardPageControl_DetermineSystemAccountName_UserAccount" xml:space="preserve"><value>User account</value></data>
+  <data name="REQUIREADMINISTRATIVERIGHTS" xml:space="preserve"><value>Validating account user permissions failed. Retry running the process as administrator.</value></data>
+  <data name="VALIDATING" xml:space="preserve"><value>Validating...</value></data>
+  <data name="INVALIDHTTPWCFPORT" xml:space="preserve"><value>Invalid HTTP WCF port value</value></data>
+  <data name="WizardPageServiceAccount_Headline" xml:space="preserve"><value>Select service account for mobile server</value></data>
+  <data name="ServerCertificateControl_Error_CannotLoadStore" xml:space="preserve"><value>Unable to open certificate store</value></data>
+  <data name="CertificateIsStillNotValid" xml:space="preserve"><value>Entered certificate is still not valid. Could be applied after {0}</value></data>
+  <data name="CHECKUSERPASSWORD" xml:space="preserve"><value>Enter a user name and password to connect to a surveillance system.</value></data>
+  <data name="ServerCertificateControl_Selection_NoCertAvailable_Text" xml:space="preserve"><value>&lt;No certificate available&gt;</value></data>
+  <data name="error_16x16" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA3AIAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlw
+SFlzAAAOxAAADsQBlSsOGwAAAnFJREFUOE9lk99PUmEYx8/1e0CniBlgWGqE0zVm86otr1wNitVV
+tW6iLopV7iyzlQvM6fSiCxtXZXbZRBsOSy1s6weiYiAKxNRggrh10V+guX17zhHk17M929l73s/3
+eb7PeQ5XHCHPFJL9VqQt7UiZDYifb0bU2IaVuzew5JpA5lpp+H3zSA5Y8edqKzZblYjqZQjreKw2
+8gg28PDrKuFtqsXX65ex6PUWColwutOMrXYt1pt4xE4xRE4yrDUyrDQw/DzBsHScwadl8GgVcLcZ
+sJAvkrDfRvLcMazrGf6ODmPnuVAA+wmOP32AnREHvtUyuGsqMH7JdCAQnHZh29yEDT0vwfv7+1Ju
+9woI5MHZ89RrB+aOMryVyfDF6QS3KVzDhkEhtZ3usuDf7u7h5S2bgHhPDhbfRe5b8LmG4X2VDK86
+OsD9Np7GLxpYVHfgOfmwUKQEpuozR8hGNY8BtQpc7KwWkQwcIs+BempZIJG9vZwAPefDHyknqxh6
+ysvBhVrVWKOJZ2HRcyKv7WzGngiYzcDuarKgYOgWBZbO1EnfOUjwcjFMlfM7CT8WJNhF1ccrGbpU
+ZOH7lQ4s1peVwFnP4XuFM1ntFqTqo3IGmzhE79g7zKrkWKhjSL3oK4A95HmWJh6y5kSig30Yq2B4
+xPOYEj+jGJPmC5ipkeMHLUliyH4IfyJ4mjxPUduBOxZE+u1S6y9lPHpNmUUSQ1zLEUMzJpQyzKlo
+XYvgSeXB0JxUeZhgoaUF88X/g48OHCYjhuiCk6qIw5JAGpgIvilj6KS2nxmNpXB+fCBfgxdNEDRq
+3GIMNymtGg1s1LI76/kwOO4/dGM0myxai3wAAAAASUVORK5CYIIL</value></data><data name="ServerCertificateControl_Selection_CustomCert_Text" xml:space="preserve"><value>&lt;Custom certificate selection&gt;</value></data>
+  <data name="CertificateWithoutPrivateKey" xml:space="preserve"><value>Entered certificate does not have a private key.</value></data>
+  <data name="Temp_SERVERNOTFOUND" xml:space="preserve"><value>The management server is not responding. Make sure that: The management server is online; HTTPS is used if the management server is configured to be secure; the versions of the management server and the component that you are about to install are compatible.</value></data>
+  <data name="WizardPageVmsAccount_RadioButton_BasicUser" xml:space="preserve"><value>Basic user:</value></data>
+  <data name="INVALIDHTTPPORT" xml:space="preserve"><value>Invalid HTTP port value.</value></data>
+  <data name="WizardPageControl_LabelTitle_TypicalMode" xml:space="preserve"><value>Specify the primary management server</value></data>
+  <data name="SERVERNOTFOUND" xml:space="preserve"><value>The server is not responding. There is no connection or the server that you are trying to connect to is not compatible.</value></data>
+  <data name="WizardPageControl_LabelTitle_CustomMode" xml:space="preserve"><value>Specify the primary management server and connection ports</value></data>
+  <data name="INVALIDURI" xml:space="preserve"><value>Invalid URL.</value></data>
+  <data name="MUSTDEFINEONEPORT" xml:space="preserve"><value>At least one protocol and port must be enabled.</value></data>
+  <data name="MessageBox_UnableToVerifyAccountType" xml:space="preserve"><value>The format of the user name is incorrect and could not be resolved automatically. The correct format is:
+
+For domain users:   DOMAIN\USER NAME
+For local users:        COMPUTER NAME\USER NAME</value></data>
+  <data name="CANNOTBESAME" xml:space="preserve"><value>The HTTP and HTTPS ports cannot be the same.</value></data>
+  <data name="ServerCertificateControl_Selection_Invalid" xml:space="preserve"><value>&lt;Invalid certificate selection&gt;</value></data>
+  </root>

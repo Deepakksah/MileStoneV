@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.IM.Server.Repository.EntityFramework</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    
+    
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    
+    <Reference Include="ErikEJ.EntityFramework.SqlServer">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\ErikEJ.EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.IM.Common.GlobalDefinitions\VideoOS.IM.Common.GlobalDefinitions.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Server.Repository\VideoOS.IM.Server.Repository.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Server.Logger\VideoOS.IM.Server.Logger.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Server.RepositoryModel\VideoOS.IM.Server.RepositoryModel.csproj" />
+  </ItemGroup>
+</Project>

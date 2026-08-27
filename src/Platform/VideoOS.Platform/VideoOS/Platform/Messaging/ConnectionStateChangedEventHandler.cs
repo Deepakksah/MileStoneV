@@ -1,0 +1,3 @@
+namespace VideoOS.Platform.Messaging;
+
+public delegate void ConnectionStateChangedEventHandler(object sender, ConnectionStateChangedEventArgs connectionStateChangedEventArgs);

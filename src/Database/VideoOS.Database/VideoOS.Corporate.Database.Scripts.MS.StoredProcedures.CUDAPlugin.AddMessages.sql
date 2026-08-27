@@ -1,0 +1,27 @@
+﻿IF OBJECT_ID ( '[CUDAPlugin].[AddMessages]', 'P' ) IS NOT NULL 
+    DROP PROCEDURE [CUDAPlugin].[AddMessages];
+GO
+
+CREATE PROCEDURE [CUDAPlugin].[AddMessages] (@newMessages dbo.CUDAMessages READONLY)
+AS
+BEGIN
+	SET NOCOUNT ON	
+	SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
+	BEGIN TRY
+		BEGIN TRANSACTION ADDMESSAGES
+		INSERT INTO [CUDAPlugin].[Message] (ReceiveTime,CUDAInfo, SourceId, EventId)
+		SELECT SYSUTCDATETIME(), nm.CUDAInfo, nm.SourceId, nm.EventId FROM @newMessages nm	
+		COMMIT TRANSACTION ADDMESSAGES		
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRANSACTION ADDMESSAGES
+    SELECT
+        ERROR_NUMBER() AS ErrorNumber
+        ,ERROR_SEVERITY() AS ErrorSeverity
+        ,ERROR_STATE() AS ErrorState
+        ,ERROR_PROCEDURE() AS ErrorProcedure
+        ,ERROR_LINE() AS ErrorLine
+        ,ERROR_MESSAGE() AS ErrorMessage;
+	END CATCH
+END
+GO

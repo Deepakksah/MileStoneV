@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="UnitTerabyte" xml:space="preserve"><value>TB</value></data>
+  <data name="BytesFormatTwoDigits" xml:space="preserve"><value>{0:F2} {1}</value></data>
+  <data name="TimeFormatOneHour" xml:space="preserve"><value>1 hour</value></data>
+  <data name="UnitExabyte" xml:space="preserve"><value>EB</value></data>
+  <data name="TimeFormatDays" xml:space="preserve"><value>{0} days</value></data>
+  <data name="BytesFormatOneByte" xml:space="preserve"><value>1 byte</value></data>
+  <data name="TimeFormatHours" xml:space="preserve"><value>{0} hours</value></data>
+  <data name="BytesFormatOneDigit" xml:space="preserve"><value>{0:F1} {1}</value></data>
+  <data name="UnitPetabyte" xml:space="preserve"><value>PB</value></data>
+  <data name="TimeFormatOneMinute" xml:space="preserve"><value>1 minute</value></data>
+  <data name="UnitGigabyte" xml:space="preserve"><value>GB</value></data>
+  <data name="UnitKilobyte" xml:space="preserve"><value>KB</value></data>
+  <data name="BytesFormatZeroDigits" xml:space="preserve"><value>{0:F0} {1}</value></data>
+  <data name="TimeFormatOneDay" xml:space="preserve"><value>1 day</value></data>
+  <data name="UnitMegabyte" xml:space="preserve"><value>MB</value></data>
+  <data name="BytesFormatBytes" xml:space="preserve"><value>{0} bytes</value></data>
+  <data name="TimeFormatMinutes" xml:space="preserve"><value>{0} minutes</value></data>
+  </root>

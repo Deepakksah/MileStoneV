@@ -1,0 +1,11 @@
+[package]
+name = "lychee_mobile"
+version = "2025.3.0"
+edition = "2021"
+description = "Mobile Server Gateway & WebRTC Streaming (converted from Milestone src/Mobile, VideoOS.Mobile, VideoOS.Mobile.SDK.Portable)"
+
+[dependencies]
+lychee_common = { path = "../lychee_common" }
+lychee_platform = { path = "../lychee_platform" }
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4" }

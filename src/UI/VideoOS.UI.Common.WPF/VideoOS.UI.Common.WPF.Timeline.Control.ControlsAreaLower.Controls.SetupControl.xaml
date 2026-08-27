@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaLower.Controls.SetupControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:resources="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaLower.Controls.resources" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" xmlns:controls1="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaLower.Controls">
+  <Grid>
+    <StackPanel Orientation="Horizontal">
+      <controls:VideoOSButtonTransparentSmall Name="_setupButton" ToolTip="{x:Static resources:Strings.TooltipSetupButton}" IconSource="{controls:VideoOSIconBuiltInSource Settings}" Click="_setupButton_Click" />
+    </StackPanel>
+  </Grid>
+</UserControl>

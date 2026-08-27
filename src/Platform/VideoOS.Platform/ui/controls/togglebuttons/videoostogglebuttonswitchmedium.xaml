@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:ui="clr-namespace:VideoOS.Platform.UI" xmlns:converters="clr-namespace:VideoOS.Platform.UI.Converters">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/VideoOSBase.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="{x:Type controls:VideoOSToggleButtonSwitchMedium}" BasedOn="{StaticResource {x:Static controls:VideoOSBaseInternals.StyleKey}}" TargetType="{x:Type controls:VideoOSToggleButtonSwitchMedium}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type controls:VideoOSToggleButtonSwitchMedium}">
+          <FrameworkTemplate.Resources>
+            <ResourceDictionary>
+              <Storyboard x:Key="{x:Static controls:VideoOSToggleButtonSwitchMedium+VideoOSToggleButtonSwitchMediumInternals.ToggleOnStoryboardKey}">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="_dot" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+                  <SplineDoubleKeyFrame KeyTime="00:00:00.2" Value="17" />
+                </DoubleAnimationUsingKeyFrames>
+              </Storyboard>
+              <Storyboard x:Key="{x:Static controls:VideoOSToggleButtonSwitchMedium+VideoOSToggleButtonSwitchMediumInternals.ToggleOffStoryboardKey}">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="_dot" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+                  <SplineDoubleKeyFrame KeyTime="00:00:00.2" Value="0" />
+                </DoubleAnimationUsingKeyFrames>
+              </Storyboard>
+            </ResourceDictionary>
+          </FrameworkTemplate.Resources>
+          <BulletDecorator Background="#00FFFFFF" SnapsToDevicePixels="True">
+            <BulletDecorator.Bullet>
+              <Border Grid.Column="0" Width="32" Height="16" CornerRadius="8" Padding="1,0" BorderThickness="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Converter={converters:BoolToDoubleConverter TrueResult=0, FalseResult=1}}">
+                <Border.BorderBrush>
+                  <MultiBinding Converter="{x:Static controls:VideoOSToggleButtonSwitchBaseInternals.OutlineBrushConverter}">
+                    <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                    <Binding Path="IsMouseOver" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Path="IsPressed" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Path="IsEnabled" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                  </MultiBinding>
+                </Border.BorderBrush>
+                <Border.Background>
+                  <MultiBinding Converter="{x:Static controls:VideoOSToggleButtonSwitchBaseInternals.BackgroundBrushConverter}">
+                    <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                    <Binding Path="IsMouseOver" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Path="IsPressed" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Path="IsEnabled" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Path="IsChecked" RelativeSource="{RelativeSource TemplatedParent}" />
+                    <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                  </MultiBinding>
+                </Border.Background>
+                <Ellipse Name="_dot" Width="12" Height="12" HorizontalAlignment="Left">
+                  <Shape.Fill>
+                    <MultiBinding Converter="{x:Static controls:VideoOSToggleButtonSwitchBaseInternals.DotBrushConverter}">
+                      <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                      <Binding Path="IsMouseOver" RelativeSource="{RelativeSource TemplatedParent}" />
+                      <Binding Path="IsPressed" RelativeSource="{RelativeSource TemplatedParent}" />
+                      <Binding Path="IsEnabled" RelativeSource="{RelativeSource TemplatedParent}" />
+                      <Binding Path="IsChecked" RelativeSource="{RelativeSource TemplatedParent}" />
+                      <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                    </MultiBinding>
+                  </Shape.Fill>
+                  <UIElement.RenderTransform>
+                    <TranslateTransform X="0" Y="0" />
+                  </UIElement.RenderTransform>
+                </Ellipse>
+              </Border>
+            </BulletDecorator.Bullet>
+            <controls:VideoOSTextBlockBodyMedium Text="{TemplateBinding ContentControl.Content}" Margin="8,0,0,0" Appearance="HighEmphasis" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" MinLines="{TemplateBinding controls:VideoOSToggleButtonSwitchBase.MinLines}" MaxLines="{TemplateBinding controls:VideoOSToggleButtonSwitchBase.MaxLines}" Visibility="{Binding Text, RelativeSource={RelativeSource Self}, Converter={converters:StringNullOrEmptyToVisibilityConverter NullOrEmptyResult=Collapsed, NotNullOrEmptyResult=Visible}}" />
+          </BulletDecorator>
+          <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard Storyboard="{StaticResource {x:Static controls:VideoOSToggleButtonSwitchMediumInternals.ToggleOnStoryboardKey}}" />
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard Storyboard="{StaticResource {x:Static controls:VideoOSToggleButtonSwitchMediumInternals.ToggleOffStoryboardKey}}" />
+              </TriggerBase.ExitActions>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

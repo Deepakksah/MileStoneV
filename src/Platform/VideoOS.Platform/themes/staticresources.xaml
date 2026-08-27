@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/Styles/VideoOSStyleToolTip.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/Styles/VideoOSStyleFocusVisualStyle.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/Styles/VideoOSStyleScrollBar.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/Dialogs/DialogActionTemplates.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/MessageBoxes/ContentTemplates.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="{x:Static controls:VideoOSStaticResourceKeys.ToolTipStyleKey}" BasedOn="{StaticResource {x:Static controls:VideoOSStyleToolTipInternals.ToolTipStyleKey}}" TargetType="{x:Type ToolTip}" />
+  <Style x:Key="{x:Static controls:VideoOSStaticResourceKeys.ToolTipWithBorderStyleKey}" BasedOn="{StaticResource {x:Static controls:VideoOSStyleToolTipInternals.ToolTipWithBorderStyleKey}}" TargetType="{x:Type ToolTip}" />
+  <Style x:Key="{x:Static controls:VideoOSStaticResourceKeys.ScrollBarStyleKey}" BasedOn="{StaticResource {x:Static controls:VideoOSStyleScrollBarInternals.ScrollBarStyleKey}}" TargetType="{x:Type ScrollBar}">
+    <Setter Property="controls:VideoOSStyleScrollBar.IsContentBorderVisible" Value="False" />
+  </Style>
+  <Style x:Key="{x:Static controls:VideoOSStaticResourceKeys.ScrollBarWithContentBorderStyleKey}" BasedOn="{StaticResource {x:Static controls:VideoOSStyleScrollBarInternals.ScrollBarStyleKey}}" TargetType="{x:Type ScrollBar}">
+    <Setter Property="controls:VideoOSStyleScrollBar.IsContentBorderVisible" Value="True" />
+  </Style>
+  <Style x:Key="{x:Static controls:VideoOSStaticResourceKeys.ScrollViewerStyleKey}" BasedOn="{StaticResource {x:Static controls:VideoOSStyleScrollBarInternals.ScrollViewerStyleKey}}" TargetType="{x:Type ScrollViewer}">
+    <Setter Property="controls:VideoOSStyleScrollBar.IsContentBorderVisible" Value="False" />
+  </Style>
+  <Style x:Key="{x:Static controls:VideoOSStaticResourceKeys.ScrollViewerWithContentBorderStyleKey}" BasedOn="{StaticResource {x:Static controls:VideoOSStyleScrollBarInternals.ScrollViewerStyleKey}}" TargetType="{x:Type ScrollViewer}">
+    <Setter Property="controls:VideoOSStyleScrollBar.IsContentBorderVisible" Value="True" />
+  </Style>
+</ResourceDictionary>

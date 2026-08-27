@@ -1,0 +1,122 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Installer.LogServerPlugins</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.ConfigurationMessagesAndRetention.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.DefaultValues.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Functions.ExpandMessageInstancePage.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Functions.FilterMessageInstances.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Functions.ReadMessageInstancePage.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.MessageInstanceStructure.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.MessageInstance_0_update.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Schema.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.DeleteExpiredMessageInstances.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.DeleteVersionStoredProcedures.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.MoveMessageInstancesAndUpdateExpiration.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.MoveNonExpiredMessageInstances.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadConfiguration.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesCategory.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesEventType.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesRuleName.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesServiceName.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesSourceName.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesSourceType.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampEventType.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampRuleName.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampServiceName.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampSourceName.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampUser.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampUserLocation.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesUser.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesUserLocation.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadMessageInstances.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadRetentionConfiguration.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.RegisterCategories.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.RegisterMessages.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.RegisterSourceTypes.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.WriteConfiguration.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.WriteMessageInstance.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.WriteRetentionConfiguration.sql" />
+    <None Remove="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.TableTypes.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.ConfigurationMessagesAndRetention.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.ConfigurationMessagesAndRetention.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.DefaultValues.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.DefaultValues.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Functions.ExpandMessageInstancePage.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Functions.ExpandMessageInstancePage.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Functions.FilterMessageInstances.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Functions.FilterMessageInstances.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Functions.ReadMessageInstancePage.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Functions.ReadMessageInstancePage.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.MessageInstanceStructure.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.MessageInstanceStructure.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.MessageInstance_0_update.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.MessageInstance_0_update.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Schema.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.Schema.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.DeleteExpiredMessageInstances.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.DeleteExpiredMessageInstances.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.DeleteVersionStoredProcedures.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.DeleteVersionStoredProcedures.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.MoveMessageInstancesAndUpdateExpiration.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.MoveMessageInstancesAndUpdateExpiration.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.MoveNonExpiredMessageInstances.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.MoveNonExpiredMessageInstances.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadConfiguration.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadConfiguration.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesCategory.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesCategory.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesEventType.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesEventType.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesRuleName.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesRuleName.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesServiceName.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesServiceName.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesSourceName.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesSourceName.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesSourceType.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesSourceType.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampEventType.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampEventType.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampRuleName.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampRuleName.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampServiceName.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampServiceName.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampSourceName.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampSourceName.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampUser.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampUser.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampUserLocation.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesTimestampUserLocation.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesUser.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesUser.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesUserLocation.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadFilterValuesUserLocation.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadMessageInstances.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadMessageInstances.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadRetentionConfiguration.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.ReadRetentionConfiguration.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.RegisterCategories.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.RegisterCategories.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.RegisterMessages.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.RegisterMessages.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.RegisterSourceTypes.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.RegisterSourceTypes.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.WriteConfiguration.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.WriteConfiguration.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.WriteMessageInstance.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.WriteMessageInstance.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.WriteRetentionConfiguration.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.StoredProcedures.WriteRetentionConfiguration.sql" />
+    <EmbeddedResource Include="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.TableTypes.sql" LogicalName="VideoOS.Installer.LogServerPlugins.DatabaseSetup.Scripts.TableTypes.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    
+    
+    <Reference Include="System.Data" />
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    
+    
+    
+    
+    
+    
+    
+    <Reference Include="System.Core" />
+    
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.Installer.Core\VideoOS.Installer.Core.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.ServerConfigurator.Interfaces\VideoOS.ServerConfigurator.Interfaces.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Interfaces\VideoOS.Installer.Interfaces.csproj" />
+    <ProjectReference Include="..\..\ServerCore\VideoOS.Server\VideoOS.Server.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\..\Database\VideoOS.SqlUpdate\VideoOS.SqlUpdate.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Common\VideoOS.Installer.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.DatabasePlugin\VideoOS.Installer.DatabasePlugin.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities.Database.Authentication\VideoOS.Utilities.Database.Authentication.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.MSI\VideoOS.Installer.MSI.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.Logging\VideoOS.Installer.Logging.csproj" />
+    <ProjectReference Include="..\VideoOS.Installer.ServerConfigurator\VideoOS.Installer.ServerConfigurator.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities.Database\VideoOS.Utilities.Database.csproj" />
+  </ItemGroup>
+</Project>

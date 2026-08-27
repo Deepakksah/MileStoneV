@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.LPR.Common.UI.LPRServiceStatus.ServiceStatusUserControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Resources="clr-namespace:VideoOS.LPR.Common.UI.LPRServiceStatus.Resources" xmlns:lprservicestatus="clr-namespace:VideoOS.LPR.Common.UI.LPRServiceStatus" Loaded="UserControl_Loaded">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid Row="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Label Grid.Row="0" Grid.Column="0" Content="{x:Static Resources:Strings.ServiceStatusUserControlStatusLabel}" Margin="0,-2,0,-2" />
+      <Label Name="_statusLabel" Grid.Row="0" Grid.Column="1" Margin="0,-2,0,-2" />
+      <Label Grid.Row="1" Grid.Column="0" Content="{x:Static Resources:Strings.ServiceStatusUserControlServiceUpTimeLabel}" Margin="0,-2,0,-2" />
+      <Label Name="_uptimeLabel" Grid.Row="1" Grid.Column="1" Margin="0,-2,0,-2" />
+      <Label Grid.Row="2" Grid.Column="0" Content="{x:Static Resources:Strings.ServiceStatusUserControlCpuUsageLabel}" Margin="0,-2,0,-2" />
+      <Label Name="_cpuLabel" Grid.Row="2" Grid.Column="1" Margin="0,-2,0,-2" />
+      <Label Grid.Row="3" Grid.Column="0" Content="{x:Static Resources:Strings.ServiceStatusUserControlMemoryAvailableLabel}" Margin="0,-2,0,-2" />
+      <Label Name="_memoryLabel" Grid.Row="3" Grid.Column="1" Margin="0,-2,0,-2" />
+      <Label Grid.Row="4" Grid.Column="0" Content="{x:Static Resources:Strings.ServiceStatusUserControlLicensePlatesDetectedLabel}" Margin="0,-2,0,-2" />
+      <Label Name="_detectedLicensePlatesCountLabel" Grid.Row="4" Grid.Column="1" Margin="0,-2,0,-2" />
+      <Label Grid.Row="5" Grid.Column="0" Content="{x:Static Resources:Strings.ServiceStatusUserControlVideoSourcesLabel}" Margin="0,-2,0,-2" />
+    </Grid>
+    <ListView Name="_videoSourcesListView" Grid.Row="1" Margin="5,0,5,5" SelectionChanged="_videoSourcesListView_SelectionChanged">
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal">
+            <Image Width="16" Height="16" Source="{Binding Path=Icon}" />
+            <Rectangle Width="5" />
+            <TextBlock VerticalAlignment="Center" Text="{Binding Path=Text}" />
+            <Rectangle Width="10" />
+            <TextBlock VerticalAlignment="Center" Text="{Binding Path=ErrorText}" />
+          </StackPanel>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ListView>
+  </Grid>
+</UserControl>

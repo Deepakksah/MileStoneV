@@ -1,0 +1,153 @@
+using System.CodeDom.Compiler;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.Runtime.Serialization;
+using VideoOS.Platform.SDK.Interface;
+
+namespace VideoOS.Common.Proxy.Server.WCF;
+
+[DebuggerStepThrough]
+[GeneratedCode("System.Runtime.Serialization", "4.0.0.0")]
+[DataContract(Name = "MarkedDataResult", Namespace = "http://videoos.net/2/XProtectCSServerCommand")]
+[ExcludeFromCodeCoverage]
+public class MarkedDataResult : IExtensibleDataObject, IMarkedDataResult
+{
+	private ExtensionDataObject extensionDataField;
+
+	private FaultDevice[] FaultDevicesField;
+
+	private MarkedData MarkedDataField;
+
+	private ResultStatus StatusField;
+
+	public ExtensionDataObject ExtensionData
+	{
+		get
+		{
+			return extensionDataField;
+		}
+		set
+		{
+			extensionDataField = value;
+		}
+	}
+
+	[DataMember]
+	public FaultDevice[] FaultDevices
+	{
+		get
+		{
+			return FaultDevicesField;
+		}
+		set
+		{
+			FaultDevicesField = value;
+		}
+	}
+
+	[DataMember]
+	public MarkedData MarkedData
+	{
+		get
+		{
+			return MarkedDataField;
+		}
+		set
+		{
+			MarkedDataField = value;
+		}
+	}
+
+	[DataMember]
+	public ResultStatus Status
+	{
+		get
+		{
+			return StatusField;
+		}
+		set
+		{
+			StatusField = value;
+		}
+	}
+
+	IFaultDevice[] IMarkedDataResult.FaultDevices
+	{
+		get
+		{
+			return FaultDevices;
+		}
+		set
+		{
+			FaultDevices = (FaultDevice[])value;
+		}
+	}
+
+	IMarkedData IMarkedDataResult.MarkedData
+	{
+		get
+		{
+			return MarkedData;
+		}
+		set
+		{
+			MarkedData = (MarkedData)value;
+		}
+	}
+
+	IResultStatus IMarkedDataResult.Status
+	{
+		get
+		{
+			return Status switch
+			{
+				ResultStatus.Undefined => IResultStatus.Undefined, 
+				ResultStatus.Success => IResultStatus.Success, 
+				ResultStatus.PartlySuccess => IResultStatus.PartlySuccess, 
+				ResultStatus.Failed => IResultStatus.Failed, 
+				ResultStatus.MarkedDataNotFound => IResultStatus.MarkedDataNotFound, 
+				ResultStatus.FeatureNotLicensed => IResultStatus.FeatureNotLicensed, 
+				ResultStatus.RecorderNotFound => IResultStatus.RecorderNotFound, 
+				ResultStatus.ManagementServerUnavailable => IResultStatus.ManagementServerUnavailable, 
+				ResultStatus.Unauthorized => IResultStatus.Unauthorized, 
+				_ => IResultStatus.Undefined, 
+			};
+		}
+		set
+		{
+			switch (value)
+			{
+			case IResultStatus.Undefined:
+				Status = ResultStatus.Undefined;
+				break;
+			case IResultStatus.Success:
+				Status = ResultStatus.Success;
+				break;
+			case IResultStatus.PartlySuccess:
+				Status = ResultStatus.PartlySuccess;
+				break;
+			case IResultStatus.Failed:
+				Status = ResultStatus.Failed;
+				break;
+			case IResultStatus.MarkedDataNotFound:
+				Status = ResultStatus.MarkedDataNotFound;
+				break;
+			case IResultStatus.FeatureNotLicensed:
+				Status = ResultStatus.FeatureNotLicensed;
+				break;
+			case IResultStatus.RecorderNotFound:
+				Status = ResultStatus.RecorderNotFound;
+				break;
+			case IResultStatus.ManagementServerUnavailable:
+				Status = ResultStatus.ManagementServerUnavailable;
+				break;
+			case IResultStatus.Unauthorized:
+				Status = ResultStatus.Unauthorized;
+				break;
+			default:
+				Status = ResultStatus.Undefined;
+				break;
+			}
+		}
+	}
+}

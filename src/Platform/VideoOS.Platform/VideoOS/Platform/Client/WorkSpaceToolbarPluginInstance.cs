@@ -1,0 +1,180 @@
+﻿using System.ComponentModel;
+using VideoOS.Platform.UI.Controls;
+
+namespace VideoOS.Platform.Client;
+
+public abstract class WorkSpaceToolbarPluginInstance
+{
+	public static readonly string PropertyNameTitle = "Title";
+
+	public static readonly string PropertyNameTooltip = "Tooltip";
+
+	public static readonly string PropertyNameIconSource = "IconSource";
+
+	public static readonly string PropertyNameVisible = "Visible";
+
+	public static readonly string PropertyNameEnabled = "Enabled";
+
+	public static readonly string PropertyNameIsChecked = "IsChecked";
+
+	public static readonly string PropertyNameIsHeld = "IsHeld";
+
+	private string _title = string.Empty;
+
+	private string _tooltip = string.Empty;
+
+	private VideoOSIconSourceBase _iconSource;
+
+	private bool _visible = true;
+
+	private bool _enabled = true;
+
+	private bool _isChecked;
+
+	private bool _isHeld;
+
+	public string Title
+	{
+		get
+		{
+			return _title;
+		}
+		protected set
+		{
+			if (_title != value)
+			{
+				_title = value;
+				FireToolbarPropertyChanged(PropertyNameTitle);
+			}
+		}
+	}
+
+	public string Tooltip
+	{
+		get
+		{
+			return _tooltip;
+		}
+		protected set
+		{
+			if (_tooltip != value)
+			{
+				_tooltip = value;
+				FireToolbarPropertyChanged(PropertyNameTooltip);
+			}
+		}
+	}
+
+	public VideoOSIconSourceBase IconSource
+	{
+		get
+		{
+			return _iconSource;
+		}
+		protected set
+		{
+			if (_iconSource != value)
+			{
+				_iconSource = value;
+				FireToolbarPropertyChanged(PropertyNameIconSource);
+			}
+		}
+	}
+
+	public bool Visible
+	{
+		get
+		{
+			return _visible;
+		}
+		protected set
+		{
+			if (_visible != value)
+			{
+				_visible = value;
+				FireToolbarPropertyChanged(PropertyNameVisible);
+			}
+		}
+	}
+
+	public bool Enabled
+	{
+		get
+		{
+			return _enabled;
+		}
+		protected set
+		{
+			if (_enabled != value)
+			{
+				_enabled = value;
+				FireToolbarPropertyChanged(PropertyNameEnabled);
+			}
+		}
+	}
+
+	public bool IsChecked
+	{
+		get
+		{
+			return _isChecked;
+		}
+		set
+		{
+			if (_isChecked != value)
+			{
+				_isChecked = value;
+				OnIsCheckedChanged();
+				FireToolbarPropertyChanged(PropertyNameIsChecked);
+			}
+		}
+	}
+
+	public bool IsHeld
+	{
+		get
+		{
+			return _isHeld;
+		}
+		public set
+		{
+			if (_isHeld != value)
+			{
+				_isHeld = value;
+				OnIsHeldChanged();
+				FireToolbarPropertyChanged(PropertyNameIsHeld);
+			}
+		}
+	}
+
+	public event PropertyChangedEventHandler ToolbarPropertyChanged;
+
+	public abstract void Init(Item window);
+
+	public virtual ToolbarPluginWpfUserControl GenerateWpfUserControl()
+	{
+		return null;
+	}
+
+	public virtual void Activate()
+	{
+	}
+
+	public virtual void OnIsCheckedChanged()
+	{
+	}
+
+	public virtual void OnIsHeldChanged()
+	{
+	}
+
+	public abstract void Close();
+
+	private void FireToolbarPropertyChanged(string propertyName)
+	{
+		if (this.ToolbarPropertyChanged != null)
+		{
+			this.ToolbarPropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}

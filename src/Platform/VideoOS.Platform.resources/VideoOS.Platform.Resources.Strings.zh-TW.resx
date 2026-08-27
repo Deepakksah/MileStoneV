@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="SmartClientViewItem" xml:space="preserve"><value>用戶端檢視項目</value></data>
+  <data name="AccessControlBuiltInStateTypeCategories_Error" xml:space="preserve"><value>錯誤</value></data>
+  <data name="AccessControlBuiltInStateTypeCategories_ServerStatusConnectionConnected" xml:space="preserve"><value>系統已連線</value></data>
+  <data name="Speaker" xml:space="preserve"><value>揚聲器</value></data>
+  <data name="PersonAgeSearchFilter_Name" xml:space="preserve"><value>使用期限 (年)</value></data>
+  <data name="AccessControlBuiltInUnitTypeCategories_Door" xml:space="preserve"><value>門</value></data>
+  <data name="RestrictedMedia" xml:space="preserve"><value>視訊限制</value></data>
+  <data name="VehicleColorSearchFilter_SearchWatermark" xml:space="preserve"><value>搜尋顏色...</value></data>
+  <data name="VehicleColorSearchFilter_ColorYellow" xml:space="preserve"><value>黃色</value></data>
+  <data name="PlaybackUserControlMini_MultiMinutes" xml:space="preserve"><value>{0} 分</value></data>
+  <data name="SmartClientWindow" xml:space="preserve"><value>用戶端視窗</value></data>
+  <data name="Camera" xml:space="preserve"><value>攝影機</value></data>
+  <data name="WorkSpace" xml:space="preserve"><value>用戶端工作空間</value></data>
+  <data name="PlaybackUserControlMini_SingleDay" xml:space="preserve"><value>1 天</value></data>
+  <data name="AccessControlBuiltInEventTypeCategories_Ignore" xml:space="preserve"><value>忽略</value></data>
+  <data name="AccessControlUnit" xml:space="preserve"><value>存取控制單位</value></data>
+  <data name="VehicleColorSearchFilter_ColorGrey" xml:space="preserve"><value>灰色</value></data>
+  <data name="VehicleColorSearchFilter_ColorBlue" xml:space="preserve"><value>藍色</value></data>
+  <data name="PersonGenderSearchFilter_GenderNotSelected" xml:space="preserve"><value>未選取性別</value></data>
+  <data name="Output" xml:space="preserve"><value>輸出</value></data>
+  <data name="Layout" xml:space="preserve"><value>版面配置</value></data>
+  <data name="PhysicalScreen" xml:space="preserve"><value>實體顯示器</value></data>
+  <data name="VehicleColorSearchFilter_ColorRed" xml:space="preserve"><value>紅色</value></data>
+  <data name="PersonGenderSearchFilter_Description" xml:space="preserve"><value>性別</value></data>
+  <data name="AccessControlBuiltInCommandTypeCategories_GrantAccess" xml:space="preserve"><value>授予存取</value></data>
+  <data name="AccessControlBuiltInEventTypeCategories_CredentialHolderAccessGranted" xml:space="preserve"><value>已授予存取</value></data>
+  <data name="PlaybackUserControlMini_MultiHours" xml:space="preserve"><value>{0} 小時</value></data>
+  <data name="PlaybackUserControlMini_MultiWeeks" xml:space="preserve"><value>{0} 週</value></data>
+  <data name="Hardware" xml:space="preserve"><value>硬體</value></data>
+  <data name="Server" xml:space="preserve"><value>伺服器</value></data>
+  <data name="AccessControlBuiltInEventTypeCategories_AccessRequest" xml:space="preserve"><value>存取要求</value></data>
+  <data name="Preset" xml:space="preserve"><value>預設點</value></data>
+  <data name="ColorSearchFilter_ColorNotSelected" xml:space="preserve"><value>未選取顏色</value></data>
+  <data name="SmartwallPreset" xml:space="preserve"><value>電視牆預設</value></data>
+  <data name="VehicleColorSearchFilter_Name" xml:space="preserve"><value>彩色</value></data>
+  <data name="PersonGenderSearchFilter_GenderFemale" xml:space="preserve"><value>女性</value></data>
+  <data name="LayoutGroup" xml:space="preserve"><value>版面配置群組</value></data>
+  <data name="SmartClientView" xml:space="preserve"><value>用戶端檢視</value></data>
+  <data name="AccessControlBuiltInEventTypeCategories_Warning" xml:space="preserve"><value>警告</value></data>
+  <data name="PlaybackUserControlMini_SingleMinute" xml:space="preserve"><value>1 分</value></data>
+  <data name="PersonAgeSearchFilter_Description" xml:space="preserve"><value>年齡範圍</value></data>
+  <data name="GisMapLocation" xml:space="preserve"><value>地圖上的位置</value></data>
+  <data name="SystemFolder" xml:space="preserve"><value>系統資料夾</value></data>
+  <data name="SmartWall" xml:space="preserve"><value>電視牆</value></data>
+  <data name="RestrictedMediaLive" xml:space="preserve"><value>即時限制</value></data>
+  <data name="AccessControlBuiltInStateTypeCategories_DoorStateClosed" xml:space="preserve"><value>門關閉</value></data>
+  <data name="AllGisMapLocations" xml:space="preserve"><value>GIS 地圖位置</value></data>
+  <data name="PersonGenderSearchFilter_GenderMale" xml:space="preserve"><value>男性</value></data>
+  <data name="TimeProfile" xml:space="preserve"><value>時間設定檔</value></data>
+  <data name="SelectionFilterValueFallbackDisplayValue" xml:space="preserve"><value>已選取 {0} 個選項</value></data>
+  <data name="AccessControlSystem" xml:space="preserve"><value>存取控制系統</value></data>
+  <data name="AccessControlBuiltInStateTypeCategories_DoorStateLocked" xml:space="preserve"><value>門已上鎖</value></data>
+  <data name="VehicleColorSearchFilter_ColorGreen" xml:space="preserve"><value>綠色</value></data>
+  <data name="All" xml:space="preserve"><value>全部</value></data>
+  <data name="VehicleColorSearchFilter_ColorBlack" xml:space="preserve"><value>黑色</value></data>
+  <data name="VehicleColorSearchFilter_ColorBeige" xml:space="preserve"><value>米黃</value></data>
+  <data name="Event" xml:space="preserve"><value>事件</value></data>
+  <data name="Alert" xml:space="preserve"><value>警示</value></data>
+  <data name="AccessControlBuiltInStateProperties_ServerStatusConnectionMessage" xml:space="preserve"><value>连接状态</value></data>
+  <data name="VehicleColorSearchFilter_ColorWhite" xml:space="preserve"><value>白色</value></data>
+  <data name="AccessControlBuiltInStateTypeCategories_DoorStateOpen" xml:space="preserve"><value>門開啟</value></data>
+  <data name="PersonGenderSearchFilter_Name" xml:space="preserve"><value>性別</value></data>
+  <data name="AccessControlUnitGroupName" xml:space="preserve"><value>單位</value></data>
+  <data name="VehicleColorSearchFilter_Description" xml:space="preserve"><value>車輛顏色</value></data>
+  <data name="PlaybackUserControlMini_MultiDays" xml:space="preserve"><value>{0} 天</value></data>
+  <data name="Microphone" xml:space="preserve"><value>麥克風</value></data>
+  <data name="AccessControlBuiltInStateTypeCategories_ServerStatusConnectionNotConnected" xml:space="preserve"><value>系統未連線</value></data>
+  <data name="AccessControlBuiltInCommandTypeCategories_AccessRequest" xml:space="preserve"><value>存取要求</value></data>
+  <data name="VehicleLicensePlateSearchFilter_Description" xml:space="preserve"><value>車輛的車牌</value></data>
+  <data name="Monitor" xml:space="preserve"><value>監視器</value></data>
+  <data name="AccessControlEventSourceKind" xml:space="preserve"><value>存取控制事件來源</value></data>
+  <data name="AccessControlBuiltInUnitTypeCategories_AccessPoint" xml:space="preserve"><value>存取點</value></data>
+  <data name="AllVideoWalls" xml:space="preserve"><value>所有電視牆</value></data>
+  <data name="PlaybackUserControlMini_SingleWeek" xml:space="preserve"><value>1 周</value></data>
+  <data name="PlaybackUserControlMini_SingleHour" xml:space="preserve"><value>1 小時</value></data>
+  <data name="Loading" xml:space="preserve"><value>正在載入...</value></data>
+  <data name="Metadata" xml:space="preserve"><value>中繼資料</value></data>
+  <data name="ImageViewerWpfControlNotAvailable" xml:space="preserve"><value>ImageViewerWpfControl 程序未讀取</value></data>
+  <data name="VehicleLicensePlateSearchFilter_Watermark" xml:space="preserve"><value>輸入車牌</value></data>
+  <data name="Bookmark" xml:space="preserve"><value>書籤</value></data>
+  <data name="InputEvent" xml:space="preserve"><value>輸入事件</value></data>
+  <data name="AccessControlBuiltInStateTypeCategories_DoorStateUnlocked" xml:space="preserve"><value>門已解鎖</value></data>
+  <data name="AccessControlBuiltInStateTypeCategories_Disabled" xml:space="preserve"><value>禁用</value></data>
+  <data name="AccessControlBuiltInEventTypeCategories_Alarm" xml:space="preserve"><value>警報</value></data>
+  <data name="AccessControlBuiltInEventTypeCategories_Error" xml:space="preserve"><value>錯誤</value></data>
+  <data name="VehicleLicensePlateSearchFilter_Name" xml:space="preserve"><value>車牌</value></data>
+  <data name="PersonAgeSearchFilter_Name_WithoutUnit" xml:space="preserve"><value>年齡</value></data>
+  <data name="AllLayoutGroups" xml:space="preserve"><value>所有版面配置群組</value></data>
+  <data name="AccessControlBuiltInEventTypeCategories_CredentialHolderAccessDenied" xml:space="preserve"><value>存取被拒</value></data>
+  <data name="AccessControlBuiltInStateTypeCategories_Warning" xml:space="preserve"><value>警告</value></data>
+  <data name="AllLayouts" xml:space="preserve"><value>所有版面配置</value></data>
+  <data name="User" xml:space="preserve"><value>使用者</value></data>
+  <data name="Role" xml:space="preserve"><value>角色</value></data>
+  </root>

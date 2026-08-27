@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorFailedUnpack" xml:space="preserve"><value>فشل فك حزمة المثبِّت:</value></data>
+  <data name="ErrorOccured" xml:space="preserve"><value>حدث خطأ</value></data>
+  <data name="ExternalArchiveNotFound" xml:space="preserve"><value>يتطلب هذا المثبِّت أرشيف "{0}" الخارجي الموجود في نفس الدليل الذي يوجد فيه ملف التثبيت التنفيذي.</value></data>
+  <data name="ErrorAnotherInstanceRunning" xml:space="preserve"><value>توجد عملية تثبيت أخرى قيد التشغيل بالفعل.</value></data>
+  <data name="Unpacking" xml:space="preserve"><value>جارٍ فك حزمة الملفات…</value></data>
+  <data name="ErrorUnexpected" xml:space="preserve"><value>فشلت عملية التثبيت بشكل غير متوقع بسبب الخطأ: {0} تم تسجيل الخطأ في Windows عارض الأحداث للرجوع إليه</value></data>
+  <data name="ExternalArchiveHashMismatch" xml:space="preserve"><value>الأرشيف الخارجي "{0}" غير صالح لهذا المثبِّت.</value></data>
+  <data name="ErrorPrereq" xml:space="preserve"><value>ثبّت .Net Framework 4.7.2 على الكمبيوتر الخاص بك. نزّل المكوّن من موقع التنزيل الخاص بالشركة المصنعة. عند اكتمال التثبيت، أعِد تشغيل "{0}".</value></data>
+  <data name="Preparing" xml:space="preserve"><value>جارٍ تجهيز هذا المثبِّت</value></data>
+  <data name="Launching" xml:space="preserve"><value>جارٍ بدء المثبِّت...</value></data>
+  <data name="ExternalArchiveValidate" xml:space="preserve"><value>جارٍ التحقق من صحة الحزمة…</value></data>
+  <data name="ExternalArchiveReadError" xml:space="preserve"><value>تتعذر قراءة الأرشيف الخارجي "{0}".</value></data>
+  </root>

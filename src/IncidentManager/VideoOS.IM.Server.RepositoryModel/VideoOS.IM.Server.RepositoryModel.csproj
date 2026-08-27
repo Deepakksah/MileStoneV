@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.IM.Server.RepositoryModel</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\EntityFramework.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.IM.Common.GlobalDefinitions\VideoOS.IM.Common.GlobalDefinitions.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Common.Dto\VideoOS.IM.Common.Dto.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Server.Repository\VideoOS.IM.Server.Repository.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Server.Logger\VideoOS.IM.Server.Logger.csproj" />
+  </ItemGroup>
+</Project>

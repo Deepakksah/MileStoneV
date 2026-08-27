@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<InstallerConfig xmlns="urn:milestone-systems">
+    <InstallerPrerequisites>
+        <InstallerPrerequisite Type ="ByUser">
+            <PrerequisiteInfo>
+                <ProductCode>dotnet4.7</ProductCode>
+                <!--Name of the directory where executable file and product xml are stored -->
+                <DisplayName TrId="T18">.Net Framework 4.7</DisplayName>
+                <ManufactureLink>https://www.microsoft.com/en-us/download/details.aspx?id=55167</ManufactureLink>
+                <ManifestResourceFolderName>GlobalDotNetFX</ManifestResourceFolderName>
+                <ProductManifest Filename="Product.xml" Format="Microsoft" Version="1"/>
+            </PrerequisiteInfo>
+        </InstallerPrerequisite>
+        <InstallerPrerequisite Type ="ByUser">
+            <PrerequisiteInfo>
+                <ProductCode>61C833E7-FB1B-4D6E-BB49-9A1D70B1A3A9</ProductCode>
+                <!--Name of the directory where executable file and product xml are stored -->
+                <DisplayName TrId="T18">Microsoft Windows Installer 4.5</DisplayName>
+                <ManufactureLink>http://www.microsoft.com/en-us/download/details.aspx?id=8483</ManufactureLink>
+                <ManifestResourceFolderName>GlobalWindowsInstaller</ManifestResourceFolderName>
+                <ProductManifest Filename="Product.xml" Format="Microsoft" Version="1"/>
+            </PrerequisiteInfo>
+        </InstallerPrerequisite>
+    </InstallerPrerequisites>    
+</InstallerConfig>

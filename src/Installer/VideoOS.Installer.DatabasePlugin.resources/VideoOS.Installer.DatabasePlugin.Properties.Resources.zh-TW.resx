@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Database_ErrorDbNotFound" xml:space="preserve"><value>找不到資料庫。</value></data>
+  <data name="DatabaseAdvancedSetup_TryConnect_Success" xml:space="preserve"><value>已建立連線。</value></data>
+  <data name="KeyManagementConfirmPasswordPageHeader" xml:space="preserve"><value>請輸入系統設定密碼</value></data>
+  <data name="DatabaseRestore_ButtonRestore_Description" xml:space="preserve"><value>使用針對每個已設定資料庫所找到的備份，將資料庫還原到升級前的狀態。</value></data>
+  <data name="DatabaseAdvancedSetup_WindowsAuthenticationTrusted" xml:space="preserve"><value>Windows 驗證，信任伺服器憑證</value></data>
+  <data name="DatabaseRestore_Success_Description" xml:space="preserve"><value>已使用指定的備份，成功還原資料庫。</value></data>
+  <data name="DatabaseInstall_UserRightsError" xml:space="preserve"><value>缺少管理員權限</value></data>
+  <data name="DatabaseRestore_ConfirmDelete_Header" xml:space="preserve"><value>是否刪除現有的自動備份？</value></data>
+  <data name="DatabaseRestore_BackupDescription_Header" xml:space="preserve"><value>備份說明：</value></data>
+  <data name="DatabaseExistType_DatabaseName" xml:space="preserve"><value>資料庫名稱:</value></data>
+  <data name="DatabaseInstallType_ConnectionErrorHeadLine" xml:space="preserve"><value>發生資料庫連線錯誤。</value></data>
+  <data name="DatabaseInstall_InstallNew" xml:space="preserve"><value>在此電腦上安裝 Microsoft® SQL Server® Express</value></data>
+  <data name="KeyStorageExceptionGenericMessage" xml:space="preserve"><value>資料庫密碼無法驗證</value></data>
+  <data name="DatabaseRestore_Delete" xml:space="preserve"><value>&amp;刪除現有備份</value></data>
+  <data name="DatabaseInstall_InstalledVersionNotSupported" xml:space="preserve"><value>不支援所選 SQL 的版本。若要繼續安裝，請選取其他 SQL Server，或安裝 SQL Server {0} 或更新版本。</value></data>
+  <data name="KeyManagementErrorIncorrectPassword" xml:space="preserve"><value>密碼不正確。您輸入的密碼與目前的系統設定密碼不符。</value></data>
+  <data name="DatabaseExternallyManaged_PreCreated_Description" xml:space="preserve"><value>如果資料庫是由對資料庫伺服器具有管理員權限者預先建立的，請使用此選項。僅在現有資料庫中建立或升級內容。</value></data>
+  <data name="DatabaseInstallType_UnsupportedComponent" xml:space="preserve"><value>無法擷取連線字串。不支援的元件安裝。</value></data>
+  <data name="DatabaseAdvancedSetup_TryConnect_MissingDatabaseName" xml:space="preserve"><value>請提供資料庫名稱。</value></data>
+  <data name="DatabaseAdvancedSetup_DatabaseHeader" xml:space="preserve"><value>資料庫名稱:</value></data>
+  <data name="DatabaseRestore_ConfirmDelete_Description" xml:space="preserve"><value>將會移除先前由安裝程式建立的備份。此動作無法復原。是否確定要繼續？</value></data>
+  <data name="KeyManagementPasswordPageInfo" xml:space="preserve"><value>系統設定密碼可保護整體系統設定。在系統恢復或擴充系統時，系統管理員將需要此密碼來存取整個系統設定。</value></data>
+  <data name="Database_ConfirmMessageOverwriteCaption" xml:space="preserve"><value>覆寫資料庫</value></data>
+  <data name="Database_ErrorOverwriteImpossible" xml:space="preserve"><value>無法覆寫資料庫。資料庫不存在，或者 SQL Server 登入沒有指定名稱的資料庫的存取。</value></data>
+  <data name="Database_ConfirmMessageOverwriteText" xml:space="preserve"><value>是否確定要覆寫資料庫並刪除資料庫中的所有資料?</value></data>
+  <data name="DatabaseExistType_SubLine" xml:space="preserve"><value>選取您要建立新的資料庫或使用現有資料庫。如果要使用現有資料庫，請指定應該對現有資料採取的動作。</value></data>
+  <data name="NewPasswordInvalid" xml:space="preserve"><value>密碼無效。</value></data>
+  <data name="DatabaseAdvancedSetup_TryConnect_MissingServerName" xml:space="preserve"><value>請提供伺服器名稱。</value></data>
+  <data name="DatabaseInstall_InstalledVersionNotSupportedHeadLine" xml:space="preserve"><value>不受支援的 SQL 伺服器版本</value></data>
+  <data name="DatabaseRestore_Skip_Header" xml:space="preserve"><value>忽略升級復原備份的還原</value></data>
+  <data name="DatabaseRestore_ButtonRestore_Header" xml:space="preserve"><value>&amp;立即使用備份來還原資料庫</value></data>
+  <data name="DatabaseExternallyManaged_Description" xml:space="preserve"><value>選擇您希望使用的資料庫類型</value></data>
+  <data name="DatabaseAdvancedSetup_TryConnect_Unexpected" xml:space="preserve"><value>未知錯誤發生，請檢查安裝程式記錄檔。</value></data>
+  <data name="KeyManagementPassword" xml:space="preserve"><value>密碼</value></data>
+  <data name="DatabaseRestore_ConfirmApply_Header" xml:space="preserve"><value>是否使用自動備份來還原資料庫？</value></data>
+  <data name="DatabaseExistType_FailedLoadServers" xml:space="preserve"><value>未找到 SQL Servers</value></data>
+  <data name="DatabaseInstall_ServerNotFoundError" xml:space="preserve"><value>未找到或缺少 SQL Server 管理員權限</value></data>
+  <data name="DatabaseExternallyManaged_XProtect_Description" xml:space="preserve"><value>使用此選項來建立或升級整個資料庫，包括安裝 SQL Express 的選項。</value></data>
+  <data name="KeyManagementDoNotAssignPassword" xml:space="preserve"><value>我選擇不使用系統設定密碼，並了解不會加密系統設定。</value></data>
+  <data name="DatabaseExistType_UseExistDb" xml:space="preserve"><value>使用現有資料庫</value></data>
+  <data name="DatabaseAdvancedSetup_LogServer" xml:space="preserve"><value>記錄伺服器：</value></data>
+  <data name="KeyManagementConfirmPassword" xml:space="preserve"><value>確認密碼</value></data>
+  <data name="Database_ErrorServerNotFound" xml:space="preserve"><value>找不到 SQL Server。</value></data>
+  <data name="DatabaseExistType_ExistDataKeep" xml:space="preserve"><value>保留</value></data>
+  <data name="DatabaseExternallyManaged_PreCreated" xml:space="preserve"><value>使用預先建立的資料庫</value></data>
+  <data name="DatabaseInstallType_InsertServerAddress" xml:space="preserve"><value>輸入主機名稱或 IP 位址</value></data>
+  <data name="DatabaseRestore_Description" xml:space="preserve"><value>找到先前執行安裝程式時建立的升級復原備份。此備份可用於將以下說明的資料庫還原至升級前的狀態。</value></data>
+  <data name="DatabaseAdvancedSetupStandalone_ConnectionStringLabel" xml:space="preserve"><value>參數：</value></data>
+  <data name="DatabaseExistType_UseExistOptions" xml:space="preserve"><value>要如何處理現有資料?</value></data>
+  <data name="DatabaseAdvancedSetup_ManagementServer" xml:space="preserve"><value>管理伺服器:</value></data>
+  <data name="DatabaseInstallType_PrepareSQLServers" xml:space="preserve"><value>正在搜尋 SQL Server...</value></data>
+  <data name="KeyManagementPasswordPageInfoWarning" xml:space="preserve"><value>系統管理員務必儲存此密碼並確保其安全。否則可能無法復原系統設定。</value></data>
+  <data name="Database_NotSupportedSQLVersion" xml:space="preserve"><value>不支援所選 SQL 的版本。若要繼續安裝，請選取其他 SQL Server，或安裝 SQL Server {0} 或更新版本。</value></data>
+  <data name="DatabaseInstall_SqlServerName" xml:space="preserve"><value>SQL Server 名稱:</value></data>
+  <data name="DatabaseAdvancedSetup_TryConnect_Fail" xml:space="preserve"><value>未建立連線。</value></data>
+  <data name="DatabaseInstall_UseInstalled" xml:space="preserve"><value>在此電腦上使用 SQL Server</value></data>
+  <data name="DatabaseInstall_UseExisting" xml:space="preserve"><value>透過搜尋選取您網路上的 SQL Server</value></data>
+  <data name="DatabaseRestore_Skip_Description" xml:space="preserve"><value>如果您擁有自己的資料復原計畫，可在故障時用來復原系統，請選擇此選項。</value></data>
+  <data name="NewPasswordEmpty" xml:space="preserve"><value>密碼欄位不可為空白。</value></data>
+  <data name="DatabaseRestore_Success_Header" xml:space="preserve"><value>還原操作成功</value></data>
+  <data name="DatabaseRestore_Headline" xml:space="preserve"><value>&amp;使用升級復原備份來還原資料庫</value></data>
+  <data name="DatabaseAdvancedSetup_ServerHeader" xml:space="preserve"><value>伺服器：</value></data>
+  <data name="Database_ErrorLogin" xml:space="preserve"><value>SQL Server 登入無效。</value></data>
+  <data name="Database_CoundNotRestartService" xml:space="preserve"><value>無法重新啟動 SQL Server。</value></data>
+  <data name="DatabaseInstall_HeadLine" xml:space="preserve"><value>選取 Microsoft SQL Server</value></data>
+  <data name="DatabaseRestore_ConfirmApply_Description" xml:space="preserve"><value>現有的備份內容會套用至資料庫。此動作無法復原。是否確定要繼續？</value></data>
+  <data name="DatabaseRestore_Failure_Description" xml:space="preserve"><value>嘗試還原資料庫時發生錯誤，請檢查安裝程式記錄以獲得更多資訊。</value></data>
+  <data name="NewPasswordPasswordsDoNotMatch" xml:space="preserve"><value>密碼不相符。</value></data>
+  <data name="AccessDenied_ErrorOccurred" xml:space="preserve"><value>拒絕存取保留系統設定密碼的檔案。</value></data>
+  <data name="NewPasswordDoesNotMeetComplexityPolicy" xml:space="preserve"><value>密碼不符合 Windows 複雜度要求。</value></data>
+  <data name="Database_Exists" xml:space="preserve"><value>選取的資料庫已經存在。</value></data>
+  <data name="DatabaseAdvancedSetup_Description" xml:space="preserve"><value>請向已選取元件提供伺服器名稱和資料庫名稱，並選擇驗證類型。</value></data>
+  <data name="KeyManagementPasswordPageHeader" xml:space="preserve"><value>請指派系統設定密碼</value></data>
+  <data name="DatabaseAdvancedSetup_Headline" xml:space="preserve"><value>進階資料庫設定</value></data>
+  <data name="DatabaseExistType_CreateNewdb" xml:space="preserve"><value>建立新的資料庫</value></data>
+  <data name="NewPasswordTooShort" xml:space="preserve"><value>密碼過短。</value></data>
+  <data name="DatabaseExistType_HeadLine" xml:space="preserve"><value>選取資料庫</value></data>
+  <data name="DatabaseRestore_Failure_Header" xml:space="preserve"><value>嘗試還原資料庫時發生錯誤</value></data>
+  <data name="DatabaseExistType_ExistDataOverwrite" xml:space="preserve"><value>覆寫</value></data>
+  <data name="Database_dbupdateException" xml:space="preserve"><value>更新資料庫時發生例外。</value></data>
+  <data name="Database_RestartSQLServerNeededText" xml:space="preserve"><value>請重新啟動您的 SQL 服務，然後再繼續安裝。</value></data>
+  <data name="DatabaseAdvancedSetup_AuthenticationTypeHeader" xml:space="preserve"><value>驗證類型：</value></data>
+  <data name="Database_dbupdateFailed" xml:space="preserve"><value>更新資料庫失敗。</value></data>
+  <data name="DatabaseAdvancedSetup_MicrosoftEntraManagedIdentity" xml:space="preserve"><value>Microsoft Entra Managed Identity，不信任伺服器憑證</value></data>
+  <data name="DatabaseInstall_ManualSelectServer" xml:space="preserve"><value>在您的網路中選取一個 SQL Server</value></data>
+  <data name="DatabaseAdvancedSetup_WindowsAuthentication" xml:space="preserve"><value>Windows 驗證，不信任伺服器憑證（建議）</value></data>
+  <data name="DatabaseExternallyManaged_XProtect" xml:space="preserve"><value>請讓安裝程式建立或重建資料庫</value></data>
+  <data name="DatabaseInstall_SubLine" xml:space="preserve"><value>系統在 SQL 資料庫中儲存設定檔案、警示、事件和記錄訊息等。</value></data>
+  <data name="Database_ErrorAdminRights" xml:space="preserve"><value>您必須擁有資料庫的 Sysadmin 角色，才能繼續。</value></data>
+  <data name="DatabaseExternallyManaged_Headline" xml:space="preserve"><value>資料庫設定</value></data>
+  <data name="NewPasswordTooLong" xml:space="preserve"><value>密碼過長。</value></data>
+  <data name="KeyManagementNoExistingPassword" xml:space="preserve"><value>此系統不使用系統設定密碼。</value></data>
+  <data name="DatabaseAdvancedSetup_MicrosoftEntraIntegrated" xml:space="preserve"><value>Microsoft Entra Integrated，不信任伺服器憑證（建議）</value></data>
+  <data name="KeyManagementConfirmPasswordPageInfo" xml:space="preserve"><value>系統設定密碼可保護整體系統設定。此密碼最早是在管理伺服器安裝期間指定的。請輸入目前的系統設定密碼。</value></data>
+  </root>

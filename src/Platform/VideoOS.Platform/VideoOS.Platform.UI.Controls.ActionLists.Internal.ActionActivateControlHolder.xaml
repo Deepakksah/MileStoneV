@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentControl x:Class="VideoOS.Platform.UI.Controls.ActionLists.Internal.ActionActivateControlHolder" x:ClassModifier="internal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:internal="clr-namespace:VideoOS.Platform.UI.Controls.ActionLists.Internal" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Focusable="False" Content="{Binding}">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonPrimaryExtraSmallDataTemplateName}">
+        <controls:VideoOSButtonPrimarySmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonPrimarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonPrimarySmallDataTemplateName}">
+        <controls:VideoOSButtonPrimarySmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonPrimarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonPrimaryMediumDataTemplateName}">
+        <controls:VideoOSButtonPrimaryMedium Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonPrimaryMedium>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonSecondaryExtraSmallDataTemplateName}">
+        <controls:VideoOSButtonSecondarySmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonSecondarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonSecondarySmallDataTemplateName}">
+        <controls:VideoOSButtonSecondarySmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonSecondarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonSecondaryMediumDataTemplateName}">
+        <controls:VideoOSButtonSecondaryMedium Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonSecondaryMedium>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonTertiaryExtraSmallDataTemplateName}">
+        <controls:VideoOSButtonTertiarySmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonTertiarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonTertiarySmallDataTemplateName}">
+        <controls:VideoOSButtonTertiarySmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonTertiarySmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonTertiaryMediumDataTemplateName}">
+        <controls:VideoOSButtonTertiaryMedium Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonTertiaryMedium>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonTransparentExtraSmallDataTemplateName}">
+        <controls:VideoOSButtonTransparentExtraSmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonTransparentExtraSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonTransparentSmallDataTemplateName}">
+        <controls:VideoOSButtonTransparentSmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonTransparentSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonTransparentMediumDataTemplateName}">
+        <controls:VideoOSButtonTransparentMedium Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonTransparentMedium>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonTextExtraSmallDataTemplateName}">
+        <controls:VideoOSButtonTextSmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonTextSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonTextSmallDataTemplateName}">
+        <controls:VideoOSButtonTextSmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonTextSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonTextMediumDataTemplateName}">
+        <controls:VideoOSButtonTextMedium Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonTextMedium>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonHyperlinkExtraSmallDataTemplateName}">
+        <controls:VideoOSButtonHyperlinkSmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonHyperlinkSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonHyperlinkSmallDataTemplateName}">
+        <controls:VideoOSButtonHyperlinkSmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonHyperlinkSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonHyperlinkMediumDataTemplateName}">
+        <controls:VideoOSButtonHyperlinkMedium Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonHyperlinkMedium>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonAccentExtraSmallDataTemplateName}">
+        <controls:VideoOSButtonAccentExtraSmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonAccentExtraSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonAccentSmallDataTemplateName}">
+        <controls:VideoOSButtonAccentSmall Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonAccentSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionActivateControlHolder.ButtonAccentMediumDataTemplateName}">
+        <controls:VideoOSButtonAccentMedium Click="ActionControlActivated" Content="{Binding Text}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSButtonAccentMedium>
+      </DataTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <ContentControl.ContentTemplate>
+    <MultiBinding Converter="{x:Static internal:ActionActivateControlHolder.ContentDataTemplateConverter}">
+      <Binding Path="." RelativeSource="{RelativeSource Self}" />
+      <Binding Path="Appearance" />
+    </MultiBinding>
+  </ContentControl.ContentTemplate>
+</ContentControl>

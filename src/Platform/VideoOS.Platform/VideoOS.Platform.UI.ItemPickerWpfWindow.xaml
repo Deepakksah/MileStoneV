@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<apollo:VideoOSDialog x:Class="VideoOS.Platform.UI.ItemPickerWpfWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:apollo="clr-namespace:VideoOS.Platform.UI.Controls" AutomationProperties.AutomationId="ItemPickerWindow" Width="500" Height="450" xmlns:ui="clr-namespace:VideoOS.Platform.UI" Title="{Binding Path=Header}">
+  <apollo:VideoOSDialog.DialogActions>
+    <x:ArrayExtension Type="{x:Type apollo:VideoOSDialogActionBase}">
+      <apollo:VideoOSDialogActionButtonText Click="HelpButton_Click" x:Name="HelpBtn" AutomationId="HelpBtn" Placement="Left" Text="Help" IsVisible="False" />
+      <apollo:VideoOSDialogActionButtonSecondary Click="CancelButton_Click" x:Name="CancelBtn" AutomationId="CancelBtn" Placement="Right" Text="Cancel" IsVisible="True" />
+      <apollo:VideoOSDialogActionButtonPrimary Click="AcceptButton_Click" x:Name="OkBtn" AutomationId="OkBtn" Placement="Right" Text="Select" IsVisible="True" IsEnabled="True" />
+    </x:ArrayExtension>
+  </apollo:VideoOSDialog.DialogActions>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <apollo:VideoOSTextBlockH1 x:Name="HeaderText" Margin="0, 0, 24, 24" Text="{Binding Path=Header}" />
+    <apollo:VideoOSTextBlockBodySmall x:Name="DescriptionText" Grid.Row="1" Margin="0, 0, 24, 0" VerticalAlignment="Top" Text="{Binding Path=Description}" />
+    <ContentControl Name="ItemPickerContent" Grid.Row="2" />
+  </Grid>
+</apollo:VideoOSDialog>

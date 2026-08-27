@@ -1,0 +1,79 @@
+using System.Runtime.Serialization;
+
+namespace VideoOS.WebService.Common.ServerCommandService;
+
+[DataContract(Namespace = "http://videoos.net/2/XProtectCSServerCommand")]
+public sealed class CameraSecurityInfo
+{
+	[DataMember]
+	public bool Live { get; set; }
+
+	[DataMember]
+	public bool Browse { get; set; }
+
+	[DataMember]
+	public bool ExportAvi { get; set; }
+
+	[DataMember]
+	public bool ExportJpeg { get; set; }
+
+	[DataMember]
+	public bool SmartSearch { get; set; }
+
+	[DataMember]
+	public bool GetSequences { get; set; }
+
+	[DataMember]
+	public bool ExportDatabase { get; set; }
+
+	[DataMember]
+	public bool StartRecording { get; set; }
+
+	[DataMember]
+	public bool StopRecording { get; set; }
+
+	[DataMember]
+	public PtzSecurityInfo PtzSecurity { get; set; }
+
+	[DataMember]
+	public bool BookmarkView { get; set; }
+
+	[DataMember]
+	public bool BookmarkAdd { get; set; }
+
+	[DataMember]
+	public bool BookmarkEdit { get; set; }
+
+	[DataMember]
+	public bool BookmarkDelete { get; set; }
+
+	[DataMember]
+	public bool RetentionView { get; set; }
+
+	[DataMember]
+	public bool RetentionCreate { get; set; }
+
+	[DataMember]
+	public bool RetentionRemove { get; set; }
+
+	[DataMember]
+	public bool ManagePresets { get; set; }
+
+	[DataMember]
+	public bool ManagePatrollingProfiles { get; set; }
+
+	[DataMember]
+	public bool ManagePresetLocks { get; set; }
+
+	[DataMember]
+	public bool RetrieveEdgeRecordings { get; set; }
+
+	[DataMember]
+	public bool RestrictedMediaView { get; set; }
+
+	[DataMember]
+	public bool RestrictedMediaCreate { get; set; }
+
+	[DataMember]
+	public bool RestrictedMediaRemove { get; set; }
+}

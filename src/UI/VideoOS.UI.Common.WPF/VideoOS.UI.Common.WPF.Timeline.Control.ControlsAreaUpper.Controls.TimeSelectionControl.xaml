@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls.TimeSelectionControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:resources="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls.resources" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" xmlns:controls1="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls">
+  <Grid>
+    <StackPanel Orientation="Horizontal">
+      <controls:VideoOSToggleButtonIconSmall Name="_timeSelectionModeEnabledToggleButton" ToolTip="{x:Static resources:Strings.TooltipTimeSelectionModeToggleButton}" IconSource="{controls:VideoOSIconBuiltInSource Time_Selection_Mode}" Click="_timeSelectionModeEnabledCheckBox_Click" />
+      <controls:VideoOSButtonTransparentSmall Name="_setTimeSelectionTimesButton" Margin="8,0,0,0" ToolTip="{x:Static resources:Strings.TooltipTimeSelectionModeSetTimeButton}" IconSource="{controls:VideoOSIconBuiltInSource Time_Selection_Mode_Date_Time}" Click="_setTimeSelectionTimesButton_Click" />
+    </StackPanel>
+  </Grid>
+</UserControl>

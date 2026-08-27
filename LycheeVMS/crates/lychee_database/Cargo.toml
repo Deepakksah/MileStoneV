@@ -1,0 +1,9 @@
+[package]
+name = "lychee_database"
+version = "2025.3.0"
+edition = "2021"
+
+[dependencies]
+lychee_common = { path = "../lychee_common" }
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4" }

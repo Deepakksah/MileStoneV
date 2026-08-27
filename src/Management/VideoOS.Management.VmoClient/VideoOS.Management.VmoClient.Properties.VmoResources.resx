@@ -1,0 +1,1052 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="VMO66001" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The password is too short or too weak.</value></data>
+  <data name="VMO66000" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The password is too long.</value></data>
+  <data name="VMO66003" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The hardware device does not support password changes.</value></data>
+  <data name="VMO66002" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. Invalid password.</value></data>
+  <data name="VMO66005" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The hardware device is switched off.</value></data>
+  <data name="VMO66004" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed because of a hardware error.</value></data>
+  <data name="VMO66007" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The hardware device is temporarily blocked.</value></data>
+  <data name="VMO66006" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The hardware device is disabled.</value></data>
+  <data name="VMO66009" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The hardware device accepted the new password but updating the credentials in the VMS failed.</value></data>
+  <data name="VMO66008" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The hardware device is read-only.</value></data>
+  <data name="VMO66010" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The recording server that hosts the device is unavailable.</value></data>
+  <data name="VMO66011" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The recording server that hosts the device is not compatible with the management server.</value></data>
+  <data name="VMO66012" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The operation timed out.</value></data>
+  <data name="VMO66013" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. An unknown error occurred in the recording server.</value></data>
+  <data name="VMO66014" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed. The recording server does not recognize the response from the hardware driver.</value></data>
+  <data name="VMO66015" xml:space="preserve"><value>The password of hardware device '{0}' could not be changed because of network issues.</value></data>
+  <data name="VMO66016" xml:space="preserve"><value>There is no access to hardware device '{0}'.</value></data>
+  <data name="VMO66017" xml:space="preserve"><value>Anonymous user level is not allowed on device '{0}'.</value></data>
+  <data name="VMO66018" xml:space="preserve"><value>User name not recognized on device '{0}'.</value></data>
+  <data name="VMO66019" xml:space="preserve"><value>Password or user level may not be changed on device '{0}'.</value></data>
+  <data name="VMO66020" xml:space="preserve"><value>The user does not have access for the operation on device '{0}'.</value></data>
+  <data name="VMO66032" xml:space="preserve"><value>Password must have at least one lower case letter</value></data>
+  <data name="VMO66033" xml:space="preserve"><value>Password must have at least one number</value></data>
+  <data name="VMO66030" xml:space="preserve"><value>Password can only use printable ASCII characters and no special characters like '#', '$', '~', etc.</value></data>
+  <data name="VMO66031" xml:space="preserve"><value>Password must have at least one upper case letter</value></data>
+  <data name="VMO66034" xml:space="preserve"><value>Error in password validation. Check the logs or try different password</value></data>
+  <data name="VMO66035" xml:space="preserve"><value>Invalid password length. Password has to be between {0} and {1} characters long.</value></data>
+  <data name="VMO66040" xml:space="preserve"><value>You cannot remove the last member from the Administrator role.</value></data>
+  <data name="VMO66050" xml:space="preserve"><value>Could not update the search. The search does not exist.</value></data>
+  <data name="VMO66051" xml:space="preserve"><value>Could not delete the search. The search does not exist.</value></data>
+  <data name="VMO66052" xml:space="preserve"><value>The search does not exist.</value></data>
+  <data name="VMO66101" xml:space="preserve"><value>Could not open firmware file.</value></data>
+  <data name="VMO66102" xml:space="preserve"><value>A network error occurred.</value></data>
+  <data name="VMO66103" xml:space="preserve"><value>The connection to the hardware device could not be reestablished after firmware update.</value></data>
+  <data name="VMO66104" xml:space="preserve"><value>The hardware device is not compatible with the provided firmware file.</value></data>
+  <data name="VMO66105" xml:space="preserve"><value>Firmware update already in progress.</value></data>
+  <data name="VMO66106" xml:space="preserve"><value>Firmware update is not supported by the hardware device.</value></data>
+  <data name="VMO66107" xml:space="preserve"><value>The firmware update completed successfully. However, the firmware version reported by the hardware device did not change.</value></data>
+  <data name="VMO66108" xml:space="preserve"><value>An unknown error has occurred.</value></data>
+  <data name="VMO66109" xml:space="preserve"><value>Could not transfer the firmware file.</value></data>
+  <data name="VMO66111" xml:space="preserve"><value>The allocated file storage no longer exists.</value></data>
+  <data name="VMO66110" xml:space="preserve"><value>File checksum mismatch.</value></data>
+  <data name="VMO66113" xml:space="preserve"><value>Could not open allocated file storage.</value></data>
+  <data name="VMO66112" xml:space="preserve"><value>Could not allocate file storage.</value></data>
+  <data name="VMO66115" xml:space="preserve"><value>Unknown file transfer error.</value></data>
+  <data name="VMO66114" xml:space="preserve"><value>The allocated storage quota was exceeded.</value></data>
+  <data name="VMO67011" xml:space="preserve"><value>Could not update the hardware. Unable to connect to the recording server while setting up the hardware.</value></data>
+  <data name="VMO67010" xml:space="preserve"><value>Could not update the hardware. Unknown error. Could not read the configuration from the remote system. The driver provided the following error message: '{0}'</value></data>
+  <data name="VMO67013" xml:space="preserve"><value>Could not update the hardware. No response received from the recording server.</value></data>
+  <data name="VMO67012" xml:space="preserve"><value>Could not update the hardware, because the recording server service version is no longer supported.</value></data>
+  <data name="VMO67015" xml:space="preserve"><value>Could not update the hardware. It was not possible to connect to or receive information from the hardware. Verify that the following is correct: address, port, user name, password and hardware driver.</value></data>
+  <data name="VMO67014" xml:space="preserve"><value>Could not update the hardware. It was not possible to connect to or receive information from the hardware. Verify that the following is correct: address, port, user name, password and hardware driver.</value></data>
+  <data name="VMO67017" xml:space="preserve"><value>Unable to update hardware that has changed its MAC address.</value></data>
+  <data name="VMO67016" xml:space="preserve"><value>Could not update the hardware. It does not exist.</value></data>
+  <data name="VMO67001" xml:space="preserve"><value>Update hardware is only supported for MIP drivers</value></data>
+  <data name="VMO67002" xml:space="preserve"><value>Session data timed out: {0}</value></data>
+  <data name="VMO67003" xml:space="preserve"><value>Invalid SessionDataId for {0}</value></data>
+  <data name="VMO67004" xml:space="preserve"><value>Failed to update hardware {0} with {1} [Error: {2}]</value></data>
+  <data name="VMO67005" xml:space="preserve"><value>Failed to update hardware {0} with {1}</value></data>
+  <data name="VMO67006" xml:space="preserve"><value>Could not update the hardware. No response from recording server.</value></data>
+  <data name="VMO67007" xml:space="preserve"><value>Could not update the hardware. Caller does not have admin rights.</value></data>
+  <data name="VMO67008" xml:space="preserve"><value>Could not update the hardware. Cannot log in to the remote system.</value></data>
+  <data name="VMO67009" xml:space="preserve"><value>Could not update the hardware. No recording server found on the remote system.</value></data>
+  <data name="VMO64021" xml:space="preserve"><value>The configuration contains remotely connected hardware or a secure tunnel server. Your license does not support this.</value></data>
+  <data name="VMO64020" xml:space="preserve"><value>The configuration contains a storage which uses the signing feature. Your license does not support this.</value></data>
+  <data name="VMO64023" xml:space="preserve"><value>The configuration contains too many {0} profiles. Your license does not support this.</value></data>
+  <data name="VMO64022" xml:space="preserve"><value>The configuration contains rules with bookmarks. Your license does not support this.</value></data>
+  <data name="VMO64025" xml:space="preserve"><value>The configuration contains rules with SNMP traps. Your license does not support this.</value></data>
+  <data name="VMO64024" xml:space="preserve"><value>The configuration contains a Smart Wall preset. Your license does not support this.</value></data>
+  <data name="VMO64027" xml:space="preserve"><value>The configuration contains bookmarks. Your license does not support this.</value></data>
+  <data name="VMO64026" xml:space="preserve"><value>The configuration contains evidence locked data. Your license does not support this.</value></data>
+  <data name="VMO64029" xml:space="preserve"><value>The configuration contains roles that use differentiated administration security settings. Your license does not support this.</value></data>
+  <data name="VMO64028" xml:space="preserve"><value>The configuration contains marked data (evidence locks or bookmarks). Your license does not support this.</value></data>
+  <data name="VMO64030" xml:space="preserve"><value>The configuration contains settings for remote recording. Your license does not support this.</value></data>
+  <data name="VMO64031" xml:space="preserve"><value>The configuration contains rules with remote recording functionality. Your license does not support this.</value></data>
+  <data name="VMO64032" xml:space="preserve"><value>The configuration contains more rules with PTZ priority than supported by your license.</value></data>
+  <data name="VMO64033" xml:space="preserve"><value>The configuration contains security settings with more PTZ priority levels than supported by your license.</value></data>
+  <data name="VMO64034" xml:space="preserve"><value>The configuration must contain only the default {0} profile. Your license only supports this.</value></data>
+  <data name="VMO64035" xml:space="preserve"><value>The configuration contains a master site. Your license does not support this.</value></data>
+  <data name="VMO64036" xml:space="preserve"><value>The configuration contains more recording servers than your license allows.</value></data>
+  <data name="VMO64037" xml:space="preserve"><value>The configuration contains roles with anonymous PTZ session functionality. Your license does not support this.</value></data>
+  <data name="VMO64038" xml:space="preserve"><value>The configuration contains locked camera presets. Your license does not support this.</value></data>
+  <data name="VMO64039" xml:space="preserve"><value>The configuration contains one or more cameras that are set up to use hardware accelerated motion detection. Your license does not support this.</value></data>
+  <data name="VMO64003" xml:space="preserve"><value>Could not apply the license. The license is expired.</value></data>
+  <data name="VMO64002" xml:space="preserve"><value>The number of archives per storage has reached its limit.</value></data>
+  <data name="VMO64001" xml:space="preserve"><value>The feature is not licensed.</value></data>
+  <data name="VMO64000" xml:space="preserve"><value>A general license error has occurred. See the log files for more information.</value></data>
+  <data name="VMO64007" xml:space="preserve"><value>The SLC was not registered.</value></data>
+  <data name="VMO64006" xml:space="preserve"><value>The specified user name or password was not correct.</value></data>
+  <data name="VMO64005" xml:space="preserve"><value>Could not apply the license. The Software License Code does not match the code in the system. To change the license, right-click the Management Server tray icon and select Change License.</value></data>
+  <data name="VMO64004" xml:space="preserve"><value>Could not apply the license. The license file is invalid.</value></data>
+  <data name="VMO64009" xml:space="preserve"><value>The license has been activated on multiple systems.</value></data>
+  <data name="VMO64008" xml:space="preserve"><value>The specified user is not allowed to activate this system.</value></data>
+  <data name="VMO64012" xml:space="preserve"><value>The configuration uses Axis One-click. Your license does not support this.</value></data>
+  <data name="VMO64013" xml:space="preserve"><value>The configuration contains sub sites. Your license does not support this.</value></data>
+  <data name="VMO64010" xml:space="preserve"><value>The configuration contains a storage that uses a reduced frame rate. Your license does not support this.</value></data>
+  <data name="VMO64011" xml:space="preserve"><value>The configuration contains roles or security settings with time profiles. Your license does not support this.</value></data>
+  <data name="VMO64016" xml:space="preserve"><value>The configuration contains devices that use multicast. Your license does not support this.</value></data>
+  <data name="VMO64017" xml:space="preserve"><value>The configuration contains storage with too many archives. Your license does not support this.</value></data>
+  <data name="VMO64014" xml:space="preserve"><value>The configuration contains interconnected hardware devices. Your license does not support this.</value></data>
+  <data name="VMO64015" xml:space="preserve"><value>The configuration contains devices that use multiple streams. Your license does not support this.</value></data>
+  <data name="VMO64018" xml:space="preserve"><value>The configuration contains failover recording servers or groups. Your license does not support this.</value></data>
+  <data name="VMO64019" xml:space="preserve"><value>The configuration contains a storage which uses the encryption. Your license does not support this.</value></data>
+  <data name="VMO64060" xml:space="preserve"><value>The configuration contains devices that have been set up to record multiple streams.
+
+Your license does not support multiple stream recording.</value></data>
+  <data name="VMO64043" xml:space="preserve"><value>The configuration contains media restrictions. Your license does not support this.</value></data>
+  <data name="VMO64042" xml:space="preserve"><value>The configuration contains one or more devices that are generated by the video processing framework. Your license does not support this.</value></data>
+  <data name="VMO64041" xml:space="preserve"><value>The configuration contains one or more devices that are set up to use AAC audio encoding. Your license does not support this.</value></data>
+  <data name="VMO64040" xml:space="preserve"><value>The configuration contains one or more cameras that are set up to use privacy masking. Your license does not support this.</value></data>
+  <data name="VMO64056" xml:space="preserve"><value>You have already used one or more licenses on another system.</value></data>
+  <data name="VMO64057" xml:space="preserve"><value>You have replaced too much hardware.</value></data>
+  <data name="VMO64054" xml:space="preserve"><value>You have installed more recording servers than your license allows.</value></data>
+  <data name="VMO64055" xml:space="preserve"><value>The system could not register the SLC for an installed product.</value></data>
+  <data name="VMO64052" xml:space="preserve"><value>You have requested too many licenses for hardware.</value></data>
+  <data name="VMO64053" xml:space="preserve"><value>You have requested too many licenses for {0} camera feeds.</value></data>
+  <data name="VMO64050" xml:space="preserve"><value>Access denied.</value></data>
+  <data name="VMO64051" xml:space="preserve"><value>You have requested more licenses for camera feeds than you have licenses for.</value></data>
+  <data name="VMO64058" xml:space="preserve"><value>The system is unable to communicate with the license activation server.</value></data>
+  <data name="VMO64059" xml:space="preserve"><value>Cannot activate your licenses. You need to register your SLC first.</value></data>
+  <data name="VMO64102" xml:space="preserve"><value>Could not update the patrolling profile. The patrolling profile does not exist.</value></data>
+  <data name="VMO64103" xml:space="preserve"><value>Could not rename the patrolling profile. A patrolling profile with the name '{0}' already exists on the camera.</value></data>
+  <data name="VMO64100" xml:space="preserve"><value>Could not create the patrolling profile. A patrolling profile with the name '{0}' already exists on the camera.</value></data>
+  <data name="VMO64101" xml:space="preserve"><value>Could not create the patrolling profile. The camera does not support PTZ.</value></data>
+  <data name="VMO64104" xml:space="preserve"><value>Could not delete the patrolling profile. The patrolling profile does not exist.</value></data>
+  <data name="VMO64105" xml:space="preserve"><value>The patrolling profile does not exist.</value></data>
+  <data name="VMO65020" xml:space="preserve"><value>Could not delete credentials for the detected hardware because the row with ID '{0}' does not exist.</value></data>
+  <data name="VMO65021" xml:space="preserve"><value>Could not insert information about the detected hardware because automatic hardware detection is disabled.</value></data>
+  <data name="VMO65022" xml:space="preserve"><value>Failed to create recording server. A recording server with the same ID already exists.</value></data>
+  <data name="VMO65013" xml:space="preserve"><value>Could not insert information about the detected hardware because a row with ID '{0}' already exists.</value></data>
+  <data name="VMO65012" xml:space="preserve"><value>Could not insert information about the detected hardware because a row with MAC address '{0}' already exists.</value></data>
+  <data name="VMO65011" xml:space="preserve"><value>Could not update the permission. The time profile with the ID '{0}' does not exist.</value></data>
+  <data name="VMO65010" xml:space="preserve"><value>Could not update the time profile of the Administrator role.</value></data>
+  <data name="VMO65017" xml:space="preserve"><value>The driver number does not exist in the device driver table: '{0}'</value></data>
+  <data name="VMO65016" xml:space="preserve"><value>The detected hardware does not exist.</value></data>
+  <data name="VMO65015" xml:space="preserve"><value>Could not update information about the detected hardware because the row with ID '{0}' does not exist.</value></data>
+  <data name="VMO65014" xml:space="preserve"><value>Could not delete information about the detected hardware because the row with ID '{0}' does not exist.</value></data>
+  <data name="VMO65019" xml:space="preserve"><value>Could not update credentials for the detected hardware because the row with ID '{0}' does not exist.</value></data>
+  <data name="VMO65018" xml:space="preserve"><value>Could not insert credentials for the detected hardware because a row with ID '{0}' already exists.</value></data>
+  <data name="VMO65002" xml:space="preserve"><value>An internal server error occurred.</value></data>
+  <data name="VMO65003" xml:space="preserve"><value>Performance state counter rule was not found.</value></data>
+  <data name="VMO65000" xml:space="preserve"><value>An internal error occurred when registering object. {0}, {1}, {2}</value></data>
+  <data name="VMO65001" xml:space="preserve"><value>An internal error occurred when unregistering object. {0}, {1}, {2}</value></data>
+  <data name="VMO65006" xml:space="preserve"><value>The value '{0}' is invalid for the system setting '{1}'.</value></data>
+  <data name="VMO65007" xml:space="preserve"><value>Could not include your add-on products in the license request file. Message: '{0}'.</value></data>
+  <data name="VMO65004" xml:space="preserve"><value>System monitor state source was not found.</value></data>
+  <data name="VMO65005" xml:space="preserve"><value>The system setting '{0}' is not supported.</value></data>
+  <data name="VMO65008" xml:space="preserve"><value>The system setting '{0}' does not exist in the database.</value></data>
+  <data name="VMO65009" xml:space="preserve"><value>The system cannot enable automatic license activation due to missing license activation user credentials.</value></data>
+  <data name="VMO62500" xml:space="preserve"><value>Permission denied.</value></data>
+  <data name="VMO62005" xml:space="preserve"><value>The maximum size must be between 0 and 1 exabyte.</value></data>
+  <data name="VMO62004" xml:space="preserve"><value>The retainMinutes argument must be between 0 and 999 years.</value></data>
+  <data name="VMO62007" xml:space="preserve"><value>The specified device does not support retrieval of remote recordings.</value></data>
+  <data name="VMO62006" xml:space="preserve"><value>The target frame rate must be between 0.00028 and 100 frames per second.</value></data>
+  <data name="VMO62001" xml:space="preserve"><value>The argument is not valid.</value></data>
+  <data name="VMO62003" xml:space="preserve"><value>Invalid object ID.</value></data>
+  <data name="VMO62002" xml:space="preserve"><value>The argument cannot be null.</value></data>
+  <data name="VMO62008" xml:space="preserve"><value>The argument is missing.</value></data>
+  <data name="VMO62014" xml:space="preserve"><value>The following account name is not valid: '{0}'.</value></data>
+  <data name="VMO62015" xml:space="preserve"><value>The following distinguished name (DN) has an incorrect formatting or contains an empty string: '{0}'.  Make sure that the formatting is according to the LDAP API naming conventions.</value></data>
+  <data name="VMO62016" xml:space="preserve"><value>The SID named '{0}' is not a valid security identifier.</value></data>
+  <data name="VMO62017" xml:space="preserve"><value>Could not retrieve a SID for an identity from Active Directory.</value></data>
+  <data name="VMO62010" xml:space="preserve"><value>The argument {1} contains an invalid security object identifier ('{0}')</value></data>
+  <data name="VMO62011" xml:space="preserve"><value>The argument {1} contains an invalid action identifier ('{0}').</value></data>
+  <data name="VMO62012" xml:space="preserve"><value>The argument {1} contains an invalid object class identifier ('{0}').</value></data>
+  <data name="VMO62013" xml:space="preserve"><value>The argument {1} contains an invalid SID ('{0}').</value></data>
+  <data name="VMO62018" xml:space="preserve"><value>Could not read information from the following Active Directory domain: {0}. The Active Directory domain is unknown or could not be found.</value></data>
+  <data name="VMO62019" xml:space="preserve"><value>The argument {0} is zero length. Include at least one SID element.</value></data>
+  <data name="VMO62027" xml:space="preserve"><value>The "End Time" argument is referring to a future date-time. Make sure date-time is synchronized on all Recording Server(s), Management Server(s) and Smart Client(s) installations</value></data>
+  <data name="VMO62026" xml:space="preserve"><value>The argument {0} contains an unknown encryption method.</value></data>
+  <data name="VMO62025" xml:space="preserve"><value>The argument {0} must be between 0 and 100.</value></data>
+  <data name="VMO62024" xml:space="preserve"><value>The argument {0} is zero length. Include at least one address element.</value></data>
+  <data name="VMO62023" xml:space="preserve"><value>The argument {0} is invalid. The object ('{1}') cannot inherit from itself.</value></data>
+  <data name="VMO62022" xml:space="preserve"><value>The argument {0} is zero length. Include at least one name element.</value></data>
+  <data name="VMO62021" xml:space="preserve"><value>The argument {0} is zero length. Include at least one object identifier element.</value></data>
+  <data name="VMO62020" xml:space="preserve"><value>The argument {0} is zero length. Include at least one action identifier element.</value></data>
+  <data name="VMO63015" xml:space="preserve"><value>#No L10N# Processing asynchronous event of the following type: '{0}'</value></data>
+  <data name="VMO63014" xml:space="preserve"><value>Application error</value></data>
+  <data name="VMO63016" xml:space="preserve"><value>{0} is not installed.</value></data>
+  <data name="VMO63011" xml:space="preserve"><value>#No L10N# Processing of the request is being shut down due to the exception shown below.</value></data>
+  <data name="VMO63010" xml:space="preserve"><value>Unable to execute, no stored procedure prepared.</value></data>
+  <data name="VMO63013" xml:space="preserve"><value>An unhandled exception occurred.</value></data>
+  <data name="VMO63012" xml:space="preserve"><value>Fatal error. Could not initialize the Management Server web services.</value></data>
+  <data name="VMO63007" xml:space="preserve"><value>The trace switch '{0}' is not a valid VideoOS Management Server trace switch.</value></data>
+  <data name="VMO63008" xml:space="preserve"><value>#No L10N# The file {0} specified to store the trace output could not be found or created. Confirm that the file name is correct and that your user account has permission to access the file: {1}</value></data>
+  <data name="VMO63009" xml:space="preserve"><value>#No L10N# You must specify an event log source for your application.</value></data>
+  <data name="VMO60601" xml:space="preserve"><value>Could not create the hosting server. Another hosting server with the name '{0}' already exists.</value></data>
+  <data name="VMO60603" xml:space="preserve"><value>Could not update hosting server. A hosting server with the ID '{0}' does not exist.</value></data>
+  <data name="VMO60602" xml:space="preserve"><value>Could not update the hosting server. Another hosting server with the name '{0}' already exists.</value></data>
+  <data name="VMO60605" xml:space="preserve"><value>The hosting server '{0}' cannot be deleted because it contains one or more cameras.</value></data>
+  <data name="VMO60604" xml:space="preserve"><value>Could not delete the hosting server. A hosting server with the ID '{0}' does not exist.</value></data>
+  <data name="VMO60611" xml:space="preserve"><value>Could not create the hosted hardware. Another hosted hardware with the name '{0}' already exists.</value></data>
+  <data name="VMO60612" xml:space="preserve"><value>Could not update the hosted hardware. Another hosted hardware with the name '{0}' already exists.</value></data>
+  <data name="VMO60613" xml:space="preserve"><value>Could not update the hosted hardware. A hosted hardware with the ID '{0}' does not exist.</value></data>
+  <data name="VMO60614" xml:space="preserve"><value>Could not delete the hosted hardware. A hosted hardware with the ID '{0}' does not exist.</value></data>
+  <data name="VMO60615" xml:space="preserve"><value>Constraint error. Hosted hardware id {0} already exists in the Hardware table.</value></data>
+  <data name="VMO60616" xml:space="preserve"><value>Could not create the hosted hardware. This hardware has already been added.</value></data>
+  <data name="VMO60632" xml:space="preserve"><value>Could not auto-detect hardware on the recording server. Try again or check the recording server’s log files.</value></data>
+  <data name="VMO60633" xml:space="preserve"><value>Could not scan for hardware. The recording server must be offline.</value></data>
+  <data name="VMO60630" xml:space="preserve"><value>Unable to start scanning on the recording server.</value></data>
+  <data name="VMO60631" xml:space="preserve"><value>Unable to start scanning. Another scanning session is already running on the recording server. Try again later.</value></data>
+  <data name="VMO60636" xml:space="preserve"><value>Unable to scan for hardware because the Recording Server service version is no longer supported.</value></data>
+  <data name="VMO60637" xml:space="preserve"><value>Unknown error occurred doing scanning. Verify that the following is correct: address, port, user name and password.</value></data>
+  <data name="VMO60634" xml:space="preserve"><value>No response received from the recording server while scanning for the hardware.</value></data>
+  <data name="VMO60635" xml:space="preserve"><value>Unable to connect to the recording server while scanning for the hardware.</value></data>
+  <data name="VMO60638" xml:space="preserve"><value>No driver for hardware found. Verify that the following is correct: address, port, user name and password.</value></data>
+  <data name="VMO60650" xml:space="preserve"><value>Unable to delete the hardware. No reponses received within one minute.</value></data>
+  <data name="VMO60651" xml:space="preserve"><value>Unable to delete the hardware. An unknown error occurred.</value></data>
+  <data name="VMO60661" xml:space="preserve"><value>Could not delete the rule. The rule does not exist.</value></data>
+  <data name="VMO60660" xml:space="preserve"><value>Could not update the rule. The rule does not exist.</value></data>
+  <data name="VMO60701" xml:space="preserve"><value>Could not create the client profile. A client profile with the name '{0}' already exists.</value></data>
+  <data name="VMO60702" xml:space="preserve"><value>Could not update the client profile. The client profile does not exist.</value></data>
+  <data name="VMO60703" xml:space="preserve"><value>Could not rename the client profile. A client profile with the name '{0}' already exists.</value></data>
+  <data name="VMO60704" xml:space="preserve"><value>Could not delete the client profile. The client profile does not exist.</value></data>
+  <data name="VMO60705" xml:space="preserve"><value>The client profile does not exist.</value></data>
+  <data name="VMO60403" xml:space="preserve"><value>The device is not in restricted live mode.</value></data>
+  <data name="VMO60402" xml:space="preserve"><value>Could not attach the site. A site with the same ID is already attached.</value></data>
+  <data name="VMO60401" xml:space="preserve"><value>The site already has a master attached.</value></data>
+  <data name="VMO60400" xml:space="preserve"><value>The site does not exist.</value></data>
+  <data name="VMO60407" xml:space="preserve"><value>Could not unmount the archive.
+
+Only the last archive in a storage configuration can be unmounted.</value></data>
+  <data name="VMO60406" xml:space="preserve"><value>Could not connect from site '{0}' to site '{1}'</value></data>
+  <data name="VMO60405" xml:space="preserve"><value>An error occurred. Not possible to delete the home site.</value></data>
+  <data name="VMO60404" xml:space="preserve"><value>An error occurred. The home site does not exist.</value></data>
+  <data name="VMO60409" xml:space="preserve"><value>Could not unmount the archive.
+
+The archive does not exist.</value></data>
+  <data name="VMO60408" xml:space="preserve"><value>Could not mount the archive.
+
+The archive does not exist.</value></data>
+  <data name="VMO60412" xml:space="preserve"><value>Could not update the trusted issuer. The trusted issuer does not exist.</value></data>
+  <data name="VMO60413" xml:space="preserve"><value>Could not update the trusted issuer. A trusted issuer with the same issuer already exists.</value></data>
+  <data name="VMO60410" xml:space="preserve"><value>Could not move the archive.
+
+The archive cannot be moved while it is unmounted.</value></data>
+  <data name="VMO60411" xml:space="preserve"><value>Could not delete the trusted issuer. The trusted issuer does not exist.</value></data>
+  <data name="VMO60416" xml:space="preserve"><value>Could not update the trusted issuer. A trusted issuer with the same address already exists.</value></data>
+  <data name="VMO60417" xml:space="preserve"><value>Could not create the trusted issuer. A trusted issuer with the same address already exists.</value></data>
+  <data name="VMO60414" xml:space="preserve"><value>Could not retrieve the trusted issuer. The trusted issuer does not exist.</value></data>
+  <data name="VMO60415" xml:space="preserve"><value>Could not create the trusted issuer. A trusted issuer with the same issuer already exists.</value></data>
+  <data name="VMO60465" xml:space="preserve"><value>The relationship between role and retention option does not exist.</value></data>
+  <data name="VMO60464" xml:space="preserve"><value>The relationship between role and retention option does not exist.</value></data>
+  <data name="VMO60461" xml:space="preserve"><value>Could not create the relationship between role and retention option.</value></data>
+  <data name="VMO60460" xml:space="preserve"><value>Could not update the failover server. Only one failover server can be set as a hot standby server.</value></data>
+  <data name="VMO60474" xml:space="preserve"><value>The MIP Kind does not exist.</value></data>
+  <data name="VMO60475" xml:space="preserve"><value>Existing items of the specified Kind were found. A Kind cannot be deleted if items of that Kind exist.</value></data>
+  <data name="VMO60476" xml:space="preserve"><value>The MIP item already exists and the “latestModificationTime” parameter is not provided.</value></data>
+  <data name="VMO60477" xml:space="preserve"><value>The MIP item could not be saved.</value></data>
+  <data name="VMO60470" xml:space="preserve"><value>The MIP object does not exist.</value></data>
+  <data name="VMO60471" xml:space="preserve"><value>The MIP action does not exist.</value></data>
+  <data name="VMO60472" xml:space="preserve"><value>The description text is not valid.</value></data>
+  <data name="VMO60473" xml:space="preserve"><value>The MIP item does not exist.</value></data>
+  <data name="VMO60456" xml:space="preserve"><value>Your new password and your old password must not be the same.</value></data>
+  <data name="VMO60454" xml:space="preserve"><value>Could not delete the site information. The site information does not exist.</value></data>
+  <data name="VMO60455" xml:space="preserve"><value>The site information does not exist.</value></data>
+  <data name="VMO60452" xml:space="preserve"><value>Could not update the site information. The site information does not exist.</value></data>
+  <data name="VMO60453" xml:space="preserve"><value>Password does not meet the complexity requirements.</value></data>
+  <data name="VMO60451" xml:space="preserve"><value>Could not create the site information. The information '{0}' already exists.</value></data>
+  <data name="VMO60483" xml:space="preserve"><value>The plug-in event does not exist. The system could not update it.</value></data>
+  <data name="VMO60482" xml:space="preserve"><value>Could not rename the plug-in event. Another event with the name '{0}' already exists.</value></data>
+  <data name="VMO60481" xml:space="preserve"><value>A plug-in event with the ID {0} or name {1} already exists.</value></data>
+  <data name="VMO60480" xml:space="preserve"><value>The plug-in event does not exist.</value></data>
+  <data name="VMO60484" xml:space="preserve"><value>Could not remove the plug-in event. There is no plug-in event with the ID '{0}'.</value></data>
+  <data name="VMO60520" xml:space="preserve"><value>Could not replace the hardware.
+
+Could not read the configuration from the remote system. The driver returned the following error message: '{0}'.</value></data>
+  <data name="VMO60521" xml:space="preserve"><value>Could not replace the hardware.
+
+An unknown error has occurred.</value></data>
+  <data name="VMO60502" xml:space="preserve"><value>Could not update the task. The task does not exist.</value></data>
+  <data name="VMO60501" xml:space="preserve"><value>Could not stop the task. The task does not exist.</value></data>
+  <data name="VMO60531" xml:space="preserve"><value>Unable to remove recording server, Unknown error.</value></data>
+  <data name="VMO60530" xml:space="preserve"><value>Unable to write changes to the configuration database.</value></data>
+  <data name="VMO60513" xml:space="preserve"><value>Could not replace the hardware. 
+
+Unable to connect to the recording server while setting up the hardware.</value></data>
+  <data name="VMO60512" xml:space="preserve"><value>Could not replace the hardware. 
+
+No response from recording server.</value></data>
+  <data name="VMO60511" xml:space="preserve"><value>Failed to replace hardware {0} with {1}</value></data>
+  <data name="VMO60510" xml:space="preserve"><value>Failed to replace hardware {0} with {1} [Error: {2}]</value></data>
+  <data name="VMO60517" xml:space="preserve"><value>Could not replace the hardware. 
+
+This hardware does not exist.</value></data>
+  <data name="VMO60516" xml:space="preserve"><value>Could not replace the hardware. 
+
+It was not possible to connect to or receive information from the hardware. 
+Verify that the following parameters are correct: address, port, user name, password, and hardware driver.</value></data>
+  <data name="VMO60515" xml:space="preserve"><value>Could not replace the hardware. 
+
+It was not possible to connect to or receive information from the hardware.
+Verify that the following parameters are correct: address, port, user name, password, and hardware driver.</value></data>
+  <data name="VMO60514" xml:space="preserve"><value>Could not replace the hardware.
+
+The Recording Server service version is no longer supported.</value></data>
+  <data name="VMO60519" xml:space="preserve"><value>Could not replace the hardware. 
+
+The existing hardware contains more devices than the new hardware.
+The hardware replacement process will delete disabled redundant devices.
+
+You must disable all devices that may be deleted.</value></data>
+  <data name="VMO60518" xml:space="preserve"><value>Could not replace the hardware.
+
+The existing hardware contains more devices than the new hardware.
+The hardware replacement process will delete disabled redundant devices.
+
+You must enable the deletion of disabled devices.</value></data>
+  <data name="VMO60241" xml:space="preserve"><value>Could not update the stream configuration.
+
+The number of streams to be updated does not match the number of configured streams.</value></data>
+  <data name="VMO60240" xml:space="preserve"><value>Could not update the stream configuration.
+
+The device does not support the specified stream type.</value></data>
+  <data name="VMO60243" xml:space="preserve"><value>Could not authorize the recording server. The license is invalid.</value></data>
+  <data name="VMO60242" xml:space="preserve"><value>Could not authorize the recording server. The version of the Recording Server service is not supported by the management server.</value></data>
+  <data name="VMO60245" xml:space="preserve"><value>Could not block the hardware. The hardware does not exist.</value></data>
+  <data name="VMO60244" xml:space="preserve"><value>Could not authorize the recording server. An unexpected error occurred.</value></data>
+  <data name="VMO60247" xml:space="preserve"><value>Could not move the hardware to another recording server. The hardware was not found on the specified recording server or the recording server does not exist.</value></data>
+  <data name="VMO60246" xml:space="preserve"><value>Could not unblocking hardware that is locked by the system. The hardware block does not exist.</value></data>
+  <data name="VMO60249" xml:space="preserve"><value>Could not move the hardware to another recording server. The target recording storage does not exist.</value></data>
+  <data name="VMO60248" xml:space="preserve"><value>Could not move the hardware to another recording server. The target recording server does not exist.</value></data>
+  <data name="VMO60250" xml:space="preserve"><value>Could not remove the custom property. The property does not exist.</value></data>
+  <data name="VMO60251" xml:space="preserve"><value>Could not add the hardware. The recording server does not exist.</value></data>
+  <data name="VMO60252" xml:space="preserve"><value>Another user has already updated the license. Cannot save the changes.</value></data>
+  <data name="VMO60253" xml:space="preserve"><value>Could not update the settings.
+
+The value or property named '{0}' is not licensed.</value></data>
+  <data name="VMO60254" xml:space="preserve"><value>Could not complete the task. Internal error on server.</value></data>
+  <data name="VMO60255" xml:space="preserve"><value>Could not authorize the recording server.
+
+The recording server is unavailable.</value></data>
+  <data name="VMO60256" xml:space="preserve"><value>Could not authorize the recording server.
+
+The Recording Server service version is no longer supported.</value></data>
+  <data name="VMO60257" xml:space="preserve"><value>Could not authorize the recording server.
+
+Communication with the recording server timed out.</value></data>
+  <data name="VMO60258" xml:space="preserve"><value>Could not authorize the recording server.
+
+The license is invalid.</value></data>
+  <data name="VMO60259" xml:space="preserve"><value>Could not authorize the recording server.
+
+The configuration contains more recording servers than your license supports.</value></data>
+  <data name="VMO60263" xml:space="preserve"><value>Could not move the hardware.
+The target recording server is not included in the configuration.</value></data>
+  <data name="VMO60262" xml:space="preserve"><value>Could not move the hardware.
+
+The target recording server is not the latest version.</value></data>
+  <data name="VMO60261" xml:space="preserve"><value>Could not move the hardware.
+
+The target recording server is in failover mode or not connected.</value></data>
+  <data name="VMO60260" xml:space="preserve"><value>Could not authorize the recording server.
+
+An unexpected error occurred.</value></data>
+  <data name="VMO60267" xml:space="preserve"><value>Could not move the hardware.
+
+The hardware does not exist.</value></data>
+  <data name="VMO60266" xml:space="preserve"><value>Could not move the hardware.
+
+The source recording server is not included in the configuration.</value></data>
+  <data name="VMO60265" xml:space="preserve"><value>Could not move the hardware.
+
+The source recording server is not the latest version.</value></data>
+  <data name="VMO60264" xml:space="preserve"><value>Could not move the hardware.
+
+The source recording server is in failover mode or not connected.</value></data>
+  <data name="VMO60269" xml:space="preserve"><value>Could not move the hardware.
+
+Stopping the hardware on the current recording server failed.</value></data>
+  <data name="VMO60268" xml:space="preserve"><value>Could not move the hardware.
+
+Could not communicate with the configuration database.</value></data>
+  <data name="VMO60272" xml:space="preserve"><value>Could not move the hardware.
+
+Updating the configuration failed.</value></data>
+  <data name="VMO60273" xml:space="preserve"><value>Could not move the hardware.
+
+The source recording server is connected but does not allow that hardware is moved from it.</value></data>
+  <data name="VMO60270" xml:space="preserve"><value>Could not move the hardware.
+
+Could not remove the PTZ preset. The preset is used by one or more patrolling profiles.</value></data>
+  <data name="VMO60271" xml:space="preserve"><value>Could not move the hardware.
+
+Stopping the hardware on the current recording server timed out.</value></data>
+  <data name="VMO60276" xml:space="preserve"><value>Could not add the hardware.
+
+The hardware is already defined on the recording server.</value></data>
+  <data name="VMO60277" xml:space="preserve"><value>Could not add the hardware.
+
+Unable to connect to the recording server while setting up the hardware.</value></data>
+  <data name="VMO60274" xml:space="preserve"><value>Could not add the hardware.
+
+Failed to find the default recording storage for the recording server.</value></data>
+  <data name="VMO60275" xml:space="preserve"><value>Could not add the hardware.
+
+No response received from the recording server while setting up the hardware.</value></data>
+  <data name="VMO60278" xml:space="preserve"><value>Could not add the hardware.
+
+Unable to add hardware because the Recording Server service version is no longer supported.</value></data>
+  <data name="VMO60279" xml:space="preserve"><value>Could not add the hardware.
+
+No response received from the recording server while setting up the hardware.</value></data>
+  <data name="VMO60205" xml:space="preserve"><value>The Smart Wall preset does not exist. The system could not update it.</value></data>
+  <data name="VMO60204" xml:space="preserve"><value>A Smart Wall preset with the name {0} already exists on the Smart Wall {1}.</value></data>
+  <data name="VMO60207" xml:space="preserve"><value>The Smart Wall preset does not exist. The system could not remove it.</value></data>
+  <data name="VMO60206" xml:space="preserve"><value>A Smart Wall preset with the name {0} already exists on the Smart Wall {1}. The system could not rename the Smart Wall preset.</value></data>
+  <data name="VMO60201" xml:space="preserve"><value>The Smart Wall does not exist. The system could not update it.</value></data>
+  <data name="VMO60200" xml:space="preserve"><value>A Smart Wall with the name {0} already exists on the server.</value></data>
+  <data name="VMO60203" xml:space="preserve"><value>The Smart Wall does not exist. The system could not remove it.</value></data>
+  <data name="VMO60202" xml:space="preserve"><value>A Smart Wall named {0} already exists. The system could not rename it.</value></data>
+  <data name="VMO60209" xml:space="preserve"><value>The Smart Wall does not exist. The system could not create the Smart Wall preset.</value></data>
+  <data name="VMO60208" xml:space="preserve"><value>The Smart Wall does not exist. The system could not create the monitor.</value></data>
+  <data name="VMO60214" xml:space="preserve"><value>A view with the name {0} already exists on the server.</value></data>
+  <data name="VMO60215" xml:space="preserve"><value>The view does not exist. The system could not update it.</value></data>
+  <data name="VMO60216" xml:space="preserve"><value>A view with the name {0} already exists. The system could not rename it.</value></data>
+  <data name="VMO60217" xml:space="preserve"><value>The view does not exist. The system could not remove it.</value></data>
+  <data name="VMO60210" xml:space="preserve"><value>A monitor with the name {0} already exists on the Smart Wall {1}.</value></data>
+  <data name="VMO60211" xml:space="preserve"><value>Could not update the monitor. The monitor does not exist.</value></data>
+  <data name="VMO60212" xml:space="preserve"><value>Could not rename the monitor. A monitor with the name {0} already exists on the Smart Wall {1}.</value></data>
+  <data name="VMO60213" xml:space="preserve"><value>Could not remove the monitor. The monitor does not exist.</value></data>
+  <data name="VMO60218" xml:space="preserve"><value>A view item with the ID '{0}' already exists on the server.</value></data>
+  <data name="VMO60219" xml:space="preserve"><value>A view item with the ID '{0}' already exists on the server.</value></data>
+  <data name="VMO60227" xml:space="preserve"><value>Could not remove the stream. The stream does not exist.</value></data>
+  <data name="VMO60226" xml:space="preserve"><value>Could not add a new stream. The maximum number of streams has been reached.</value></data>
+  <data name="VMO60225" xml:space="preserve"><value>The device does not support streams.</value></data>
+  <data name="VMO60224" xml:space="preserve"><value>A time profile with the name '{0}' already exists. The system could not create the time profile.</value></data>
+  <data name="VMO60223" xml:space="preserve"><value>The time profile does not exist. The system could not remove it.</value></data>
+  <data name="VMO60222" xml:space="preserve"><value>A time profile with the name {0} already exists. The system could not rename it.</value></data>
+  <data name="VMO60221" xml:space="preserve"><value>The time profile does not exist. The system could not update it.</value></data>
+  <data name="VMO60220" xml:space="preserve"><value>The monitor preset does not exist. The system could not update it.</value></data>
+  <data name="VMO60229" xml:space="preserve"><value>Could not update the stream configuration.</value></data>
+  <data name="VMO60228" xml:space="preserve"><value>Could not remove the stream. You cannot remove the last stream.</value></data>
+  <data name="VMO60236" xml:space="preserve"><value>Could not update the stream configuration.
+
+The device can only support a single stream.</value></data>
+  <data name="VMO60237" xml:space="preserve"><value>Could not update the stream configuration.
+
+You must configure exactly one default live stream.</value></data>
+  <data name="VMO60234" xml:space="preserve"><value>Could not update the stream configuration.
+
+The recording stream must run plug-ins and the default live stream must be configured for live streaming.</value></data>
+  <data name="VMO60235" xml:space="preserve"><value>Could not update the stream configuration.
+
+The device does not support the selected combination of streams.</value></data>
+  <data name="VMO60232" xml:space="preserve"><value>Could not update the stream configuration.
+
+Streams must have a name.</value></data>
+  <data name="VMO60233" xml:space="preserve"><value>Could not update the stream configuration.
+
+You must configure all streams as either live, recording streams, or both.</value></data>
+  <data name="VMO60230" xml:space="preserve"><value>Could not update the stream configuration.
+
+You can only configure the same stream once.</value></data>
+  <data name="VMO60231" xml:space="preserve"><value>Could not update the stream configuration.
+
+Stream names must be unique.</value></data>
+  <data name="VMO60238" xml:space="preserve"><value>Could not update the stream configuration.
+
+You must configure exactly one stream as the recording stream.</value></data>
+  <data name="VMO60239" xml:space="preserve"><value>Could not update the stream configuration.
+
+Your license only supports one live stream and one recording stream.</value></data>
+  <data name="VMO60289" xml:space="preserve"><value>Could not add the hardware.
+The system does not support the version of the remote system.</value></data>
+  <data name="VMO60288" xml:space="preserve"><value>Could not add the hardware.
+
+The system cannot recognize the version of the remote system.
+
+The remote system has been identified as: {0} {1}</value></data>
+  <data name="VMO60285" xml:space="preserve"><value>Could not add the hardware.
+
+The system cannot recognize the type of the remote system.</value></data>
+  <data name="VMO60284" xml:space="preserve"><value>Could not add the hardware.
+
+Unknown error. Could not read the configuration from the remote system. The driver provided the following error message: '{0}'</value></data>
+  <data name="VMO60287" xml:space="preserve"><value>Could not add the hardware.
+
+The system cannot recognize the version of the remote system.</value></data>
+  <data name="VMO60286" xml:space="preserve"><value>Could not add the hardware.
+
+The system cannot recognize the type of the remote system.
+
+The remote system has been identified as: {0} {1}</value></data>
+  <data name="VMO60281" xml:space="preserve"><value>Could not add the hardware.
+
+It was not possible to connect to or receive information from the hardware. Verify that the following is correct: address, port, user name, password and hardware driver.</value></data>
+  <data name="VMO60280" xml:space="preserve"><value>Could not add the hardware.
+
+It was not possible to connect to or receive information from the hardware. Verify that the following is correct: address, port, user name, password and hardware driver.</value></data>
+  <data name="VMO60283" xml:space="preserve"><value>Could not add the hardware.
+
+Cannot log in to the remote system.</value></data>
+  <data name="VMO60282" xml:space="preserve"><value>Could not add the hardware.
+
+The remote system reported: The specified user account does not have 'Administrator Access' on the remote system.</value></data>
+  <data name="VMO60298" xml:space="preserve"><value>The system cannot receive video from the moved hardware, because it uses a driver that does not exist on the target recording server.
+
+Install the missing driver on the target recording server or configure the hardware to use another driver.</value></data>
+  <data name="VMO60299" xml:space="preserve"><value>The moved hardware uses a driver that exists in a different version on the target recording server.
+The driver is automatically updated on the target recording server when the hardware is moved.
+
+You must manually check that the driver is updated correctly and that the connected devices start.</value></data>
+  <data name="VMO60294" xml:space="preserve"><value>Could not add the hardware.
+Unable to read from the configuration database.</value></data>
+  <data name="VMO60295" xml:space="preserve"><value>Could not add the hardware.
+The hardware definition is invalid.</value></data>
+  <data name="VMO60296" xml:space="preserve"><value>Could not add the hardware.
+No recording server found on the remote system.</value></data>
+  <data name="VMO60297" xml:space="preserve"><value>Could not move the hardware.
+
+The hardware is already located on the target recording server.</value></data>
+  <data name="VMO60290" xml:space="preserve"><value>Could not add the hardware.
+The system does not support the version of the remote system.
+
+The remote system has been identified as: {0} {1}</value></data>
+  <data name="VMO60291" xml:space="preserve"><value>Could not add the hardware.
+The system cannot recognize the remote system.</value></data>
+  <data name="VMO60292" xml:space="preserve"><value>Could not add the hardware.
+The system cannot recognize the remote system.
+
+The remote system has been identified as: {0} {1}</value></data>
+  <data name="VMO60293" xml:space="preserve"><value>Could not add the hardware.
+Unable to write changes to the configuration database.
+      </value></data>
+  <data name="VMO60340" xml:space="preserve"><value>Could not remove claim from the role.
+
+A claim from '{0}' with the name '{1}' does not exist on the role.</value></data>
+  <data name="VMO60341" xml:space="preserve"><value>Could not add claim to the role.
+
+A claim from '{0}' with the name '{1}' does not exist.</value></data>
+  <data name="VMO60342" xml:space="preserve"><value>Could not add claim to the role.
+
+An identical claim already exists on the role.</value></data>
+  <data name="VMO60343" xml:space="preserve"><value>Could not change password for the user.
+
+Passwords for users that log on through an external IDP cannot be changed.</value></data>
+  <data name="VMO60344" xml:space="preserve"><value>Could not allow user to set password.
+
+Passwords for users that log on through an external IDP cannot be set.</value></data>
+  <data name="VMO60345" xml:space="preserve"><value>Could not enforce that user must change password.
+      
+Changing password cannot be enforced for users that log on through an external IDP.</value></data>
+  <data name="VMO60346" xml:space="preserve"><value>Could not create the user.
+
+Setting the user to be locked out by the system is not allowed.</value></data>
+  <data name="VMO60347" xml:space="preserve"><value>Could not update the user.
+
+Setting the user to be locked out by the system is not allowed.</value></data>
+  <data name="VMO60348" xml:space="preserve"><value>Could not create the claim.
+      
+A claim with the name '{0}' already exists for the external IDP.</value></data>
+  <data name="VMO60349" xml:space="preserve"><value>Could not create the claim.
+      
+A claim with the display name '{0}' already exists for the external IDP.</value></data>
+  <data name="VMO60362" xml:space="preserve"><value>Could not update the external IDP.
+
+The external IDP does not exist.</value></data>
+  <data name="VMO60363" xml:space="preserve"><value>Could not update the external IDP.
+
+An external IDP with the same name already exists.</value></data>
+  <data name="VMO60360" xml:space="preserve"><value>Could not create the external IDP.
+
+An external IDP with the same name already exists.</value></data>
+  <data name="VMO60361" xml:space="preserve"><value>Could not create the external IDP.
+
+An external IDP with the same authentication authority already exists.</value></data>
+  <data name="VMO60366" xml:space="preserve"><value>Could not update the claim.
+
+A claim with the display name '{0}' already exists for the external IDP.</value></data>
+  <data name="VMO60367" xml:space="preserve"><value>Could not update the claim.
+
+The claim does not exist.</value></data>
+  <data name="VMO60364" xml:space="preserve"><value>Could not update the external IDP.
+
+An external IDP with the same authentication authority already exists.</value></data>
+  <data name="VMO60365" xml:space="preserve"><value>Could not delete the external IDP.
+
+The external IDP does not exist.</value></data>
+  <data name="VMO60368" xml:space="preserve"><value>Could not delete the external IDP.
+          
+There are still claims registered for the external IDP.</value></data>
+  <data name="VMO60369" xml:space="preserve"><value>Could not delete the external IDP.
+        
+There are still users present in the VMS from the external IDP.</value></data>
+  <data name="VMO60351" xml:space="preserve"><value>Could not create the basic user.
+
+A basic user with the user name '{0}' already exists.</value></data>
+  <data name="VMO60350" xml:space="preserve"><value>Could not delete the claim.
+      
+The claim does not exist.</value></data>
+  <data name="VMO60353" xml:space="preserve"><value>Could not rename the basic user. A basic user named {0} already exists.</value></data>
+  <data name="VMO60352" xml:space="preserve"><value>Could not update the basic user. The basic user does not exist.</value></data>
+  <data name="VMO60355" xml:space="preserve"><value>The basic user does not exist</value></data>
+  <data name="VMO60354" xml:space="preserve"><value>Could not delete the basic user. The basic user does not exist.</value></data>
+  <data name="VMO60357" xml:space="preserve"><value>Could not load the external IDP.
+
+The external IDP does not exist.</value></data>
+  <data name="VMO60356" xml:space="preserve"><value>Could not change the password. The password provided does not meet the length, complexity or history requirements.</value></data>
+  <data name="VMO60359" xml:space="preserve"><value>Could not create the external IDP.
+
+The external IDP already exists.</value></data>
+  <data name="VMO60358" xml:space="preserve"><value>Could not create the external IDP.
+
+Only one external IDP can be configured.</value></data>
+  <data name="VMO60304" xml:space="preserve"><value>Could not create the audio message.
+
+An audio message with the same name already exists.</value></data>
+  <data name="VMO60305" xml:space="preserve"><value>Could not delete the audio message.
+
+The audio message does not exist.</value></data>
+  <data name="VMO60306" xml:space="preserve"><value>Could not delete the archive.
+
+The archive contains evidence locked data.</value></data>
+  <data name="VMO60307" xml:space="preserve"><value>The failover server does not exist.</value></data>
+  <data name="VMO60300" xml:space="preserve"><value>The system cannot check for potential driver issues after the move.
+
+You must manually check that the moved hardware sends video to the system.</value></data>
+  <data name="VMO60301" xml:space="preserve"><value>Could not add the hardware.
+
+The recording server must be offline.</value></data>
+  <data name="VMO60302" xml:space="preserve"><value>Could not update the device.
+
+The defined pre-buffer period exceeds the limit for storing in the memory.</value></data>
+  <data name="VMO60303" xml:space="preserve"><value>Could not delete the recording storage.
+
+The recording storage contains evidence locked data.</value></data>
+  <data name="VMO60308" xml:space="preserve"><value>Could not move the hardware.
+
+The configuration was changed while performing the move. Try again.</value></data>
+  <data name="VMO60309" xml:space="preserve"><value>Could not delete the recordings. The device does not exist.</value></data>
+  <data name="VMO60373" xml:space="preserve"><value>Could not update the claim.
+
+A claim with the name '{0}' already exists for the external IDP.</value></data>
+  <data name="VMO60372" xml:space="preserve"><value>The operation failed.</value></data>
+  <data name="VMO60371" xml:space="preserve"><value>The operation was cancelled.</value></data>
+  <data name="VMO60370" xml:space="preserve"><value>Could not delete the claim.
+
+The claim is still in use on one or more roles.</value></data>
+  <data name="VMO60377" xml:space="preserve"><value>The device is already in restricted live mode.</value></data>
+  <data name="VMO60376" xml:space="preserve"><value>Cannot delete the media restriction.
+
+The media restriction does not exist.</value></data>
+  <data name="VMO60375" xml:space="preserve"><value>Cannot update the media restriction.
+
+The media restriction does not exist.</value></data>
+  <data name="VMO60374" xml:space="preserve"><value>Media restrictions are not supported for this device type.</value></data>
+  <data name="VMO60379" xml:space="preserve"><value>Cannot enter restricted live mode.
+
+One or more of the devices does not exist.</value></data>
+  <data name="VMO60378" xml:space="preserve"><value>Cannot enter restricted live mode.
+
+One or more of the devices are already in restricted live mode.</value></data>
+  <data name="VMO60326" xml:space="preserve"><value>The hardware {0} was moved, but the license information was not updated. The system updates the license information automatically later.</value></data>
+  <data name="VMO60327" xml:space="preserve"><value>Could not move the hardware.
+
+The source recording storage is unavailable.
+      </value></data>
+  <data name="VMO60324" xml:space="preserve"><value>The privacy mask is not valid.</value></data>
+  <data name="VMO60325" xml:space="preserve"><value>Could not retrieve information for the security namespace. The namespace does not exist.</value></data>
+  <data name="VMO60322" xml:space="preserve"><value>Could not update the privacy mask. The privacy mask regions do not match the grid size.</value></data>
+  <data name="VMO60323" xml:space="preserve"><value>Could not update the privacy mask. Only 0 (zero) or 1 is allowed as mask region value.</value></data>
+  <data name="VMO60320" xml:space="preserve"><value>Another device preset with internal id '{0}' already exists.</value></data>
+  <data name="VMO60321" xml:space="preserve"><value>Could not create the audio message.
+
+Too many audio messages exist in the system.</value></data>
+  <data name="VMO60328" xml:space="preserve"><value>Could not move the hardware.
+
+All recording storages on the target recording server must be available.
+      </value></data>
+  <data name="VMO60329" xml:space="preserve"><value>DateTime value cannot be earlier than 1900-01-01.</value></data>
+  <data name="VMO60315" xml:space="preserve"><value>Could not update the audio message.
+
+The audio message does not exist.</value></data>
+  <data name="VMO60314" xml:space="preserve"><value>Could not update the audio message.
+
+An audio message with the same name already exists.</value></data>
+  <data name="VMO60317" xml:space="preserve"><value>The size of the audio message is too big.</value></data>
+  <data name="VMO60316" xml:space="preserve"><value>The audio message does not exist.</value></data>
+  <data name="VMO60311" xml:space="preserve"><value>The function '{0}' is not supported by the server.</value></data>
+  <data name="VMO60310" xml:space="preserve"><value>Could not delete the recordings. The recording server does not exist.</value></data>
+  <data name="VMO60313" xml:space="preserve"><value>Could not update the audio message.
+
+The audio message does not exist.</value></data>
+  <data name="VMO60312" xml:space="preserve"><value>Could not move the hardware to another recording server. The hardware is already configured on the target recording server.</value></data>
+  <data name="VMO60319" xml:space="preserve"><value>The format of the audio message is not supported.</value></data>
+  <data name="VMO60318" xml:space="preserve"><value>The content of the audio message is invalid.</value></data>
+  <data name="VMO60337" xml:space="preserve"><value>Evidence locks will be applied when recording server is online.</value></data>
+  <data name="VMO60336" xml:space="preserve"><value>Could not create or update evidence lock for device on a legacy recording server.</value></data>
+  <data name="VMO60335" xml:space="preserve"><value>Could not select remote playback for device with evidence locks: 
+{0}</value></data>
+  <data name="VMO60334" xml:space="preserve"><value>Unable to delete the recording server.
+
+The recording server has recordings on it from devices that have evidence locks.</value></data>
+  <data name="VMO60333" xml:space="preserve"><value>Playback from remote system is enabled for the device.</value></data>
+  <data name="VMO60332" xml:space="preserve"><value>Bookmarking is not supported for this device type.</value></data>
+  <data name="VMO60331" xml:space="preserve"><value>Evidence locks are not supported for this device type.</value></data>
+  <data name="VMO60330" xml:space="preserve"><value>DateTime ticks value cannot be less than zero.</value></data>
+  <data name="VMO60339" xml:space="preserve"><value>A device with the IDHardware '{0}', DeviceType '{1}', DeviceIndex '{2}' already exists.</value></data>
+  <data name="VMO60338" xml:space="preserve"><value>Another user has already updated the hardware. Cannot save the changes.</value></data>
+  <data name="VMO60388" xml:space="preserve"><value>Could not update the stream configuration.
+
+Only one stream can be configured as default playback stream.</value></data>
+  <data name="VMO60389" xml:space="preserve"><value>Could not update the stream configuration.
+
+One stream must be configured as default playback stream.</value></data>
+  <data name="VMO60384" xml:space="preserve"><value>Cannot replace hardware.
+
+Hardware replacement is not supported for hardware using an interconnected product driver.</value></data>
+  <data name="VMO60385" xml:space="preserve"><value>Cannot replace hardware.
+
+Changing from an ordinary driver type to an interconnected product driver is not supported.</value></data>
+  <data name="VMO60386" xml:space="preserve"><value>Could not update the stream configuration.
+
+Only one stream can be configured as default live stream.</value></data>
+  <data name="VMO60387" xml:space="preserve"><value>Could not update the stream configuration.
+
+One stream must be configured as default live stream.</value></data>
+  <data name="VMO60380" xml:space="preserve"><value>Cannot update the live media restriction.
+
+The live media restriction does not exist.</value></data>
+  <data name="VMO60381" xml:space="preserve"><value>Cannot delete the live media restriction.
+
+The live media restriction does not exist.</value></data>
+  <data name="VMO60382" xml:space="preserve"><value>Cannot replace hardware.
+
+Hardware replacement is not supported for hardware using a VPS driver.</value></data>
+  <data name="VMO60383" xml:space="preserve"><value>Cannot replace hardware.
+
+Hardware replacement is not supported for hardware using 'Remote Connect Services'.</value></data>
+  <data name="VMO60399" xml:space="preserve"><value>Could not unmount the archive.
+
+The archive is already unmounted.</value></data>
+  <data name="VMO60398" xml:space="preserve"><value>Could not unmount the archive.
+
+A conflicting task already exists.</value></data>
+  <data name="VMO60395" xml:space="preserve"><value>Could not update the stream configuration.
+      
+Your license only supports one recording stream.</value></data>
+  <data name="VMO60394" xml:space="preserve"><value>Could not update the stream configuration.
+
+The default live stream must be a configured for live streaming.</value></data>
+  <data name="VMO60397" xml:space="preserve"><value>Could not mount the archive.
+
+The archive is already mounted</value></data>
+  <data name="VMO60396" xml:space="preserve"><value>Could not mount the archive.
+
+A conflicting task already exists.</value></data>
+  <data name="VMO60391" xml:space="preserve"><value>Could not update the stream configuration.
+
+One stream must be configured as the primary recording stream.</value></data>
+  <data name="VMO60390" xml:space="preserve"><value>Could not update the stream configuration.
+
+Only one stream can be configured as the primary recording stream.</value></data>
+  <data name="VMO60393" xml:space="preserve"><value>Could not update the stream configuration.
+
+One or more streams contain an invalid recording setting.</value></data>
+  <data name="VMO60392" xml:space="preserve"><value>Could not update the stream configuration.
+
+Two or more streams contain the same recording setting.</value></data>
+  <data name="VMO60061" xml:space="preserve"><value>Could not update the server group. A server group with the name {0} already exists.</value></data>
+  <data name="VMO60060" xml:space="preserve"><value>Could not update the server group. The server group does not exist.</value></data>
+  <data name="VMO60063" xml:space="preserve"><value>Could not update the hardware template. The hardware template does not exist.</value></data>
+  <data name="VMO60062" xml:space="preserve"><value>Could not create the hardware template. The hardware template already exists.</value></data>
+  <data name="VMO60065" xml:space="preserve"><value>Could not create the hardware template. The hardware does not exist.</value></data>
+  <data name="VMO60064" xml:space="preserve"><value>Could not update the device. The device does not exist.</value></data>
+  <data name="VMO60067" xml:space="preserve"><value>You cannot remove the 'Private' view group.</value></data>
+  <data name="VMO60066" xml:space="preserve"><value>Could not update the hardware template. The hardware template already exists.</value></data>
+  <data name="VMO60069" xml:space="preserve"><value>Could not create the device plug-in. The device plug-in with the ID {0} and device ID {1} already exists.</value></data>
+  <data name="VMO60068" xml:space="preserve"><value>Could not remove the hardware template. The hardware template does not exist.</value></data>
+  <data name="VMO60070" xml:space="preserve"><value>Could not create the device plug-in template. The device plug-in template with the ID {0} and device ID {1} already exists.</value></data>
+  <data name="VMO60071" xml:space="preserve"><value>The device does not exist.</value></data>
+  <data name="VMO60072" xml:space="preserve"><value>Could not move the server group. The parent server group does not exist.</value></data>
+  <data name="VMO60073" xml:space="preserve"><value>Could not move the server group. The server group does not exist.</value></data>
+  <data name="VMO60074" xml:space="preserve"><value>The server group or one of its subgroups has members. The system could not remove it.</value></data>
+  <data name="VMO60075" xml:space="preserve"><value>Could not remove the server group. The uppermost server group cannot be removed.</value></data>
+  <data name="VMO60076" xml:space="preserve"><value>Could not move the server group. The uppermost server group cannot be moved.</value></data>
+  <data name="VMO60077" xml:space="preserve"><value>Could not move the server group. The server group cannot be moved to one its descendants.</value></data>
+  <data name="VMO60078" xml:space="preserve"><value>Could not move the server group. The server group cannot have itself as parent.</value></data>
+  <data name="VMO60079" xml:space="preserve"><value>Could not move the recording server. The recording server does not exist.</value></data>
+  <data name="VMO60043" xml:space="preserve"><value>Could not move the failover server. The target group is the current group for the failover server.</value></data>
+  <data name="VMO60042" xml:space="preserve"><value>Could not move the failover server. The failover group {0} already contains a failover server with the name {1}.</value></data>
+  <data name="VMO60041" xml:space="preserve"><value>Could not move the failover server. The failover group with the ID '{0}' does not exist.</value></data>
+  <data name="VMO60040" xml:space="preserve"><value>Could not rename the failover server. A failover server named '{0}' already exists in the failover group {1}.</value></data>
+  <data name="VMO60047" xml:space="preserve"><value>The recording server does not exist. The system could not update it.</value></data>
+  <data name="VMO60046" xml:space="preserve"><value>Could not create or append to the specified file. Either 'Scripting.FileSystemObject' is not available on the SQL Server or the permission to do 'Ole Automation Procedures' is disabled.</value></data>
+  <data name="VMO60045" xml:space="preserve"><value>The hardware does not exist.</value></data>
+  <data name="VMO60044" xml:space="preserve"><value>Could not remove the user-defined event. There is no user-defined event with the ID '{0}'.</value></data>
+  <data name="VMO60049" xml:space="preserve"><value>An archive with the name {0} already exists on the recording server {1}.</value></data>
+  <data name="VMO60048" xml:space="preserve"><value>Could not remove the failover server. There is no failover server with the ID '{0}'.</value></data>
+  <data name="VMO60052" xml:space="preserve"><value>Could not remove the archive. The archive does not exist.</value></data>
+  <data name="VMO60053" xml:space="preserve"><value>Another user has already updated the hardware. Refresh and try again.</value></data>
+  <data name="VMO60050" xml:space="preserve"><value>Could not rename the archive. An archive with the name {0} already exists on the recording server {1}.</value></data>
+  <data name="VMO60051" xml:space="preserve"><value>Could not update the archive. The archive does not exist.</value></data>
+  <data name="VMO60056" xml:space="preserve"><value>Could not create the server group. The parent server group does not exist.</value></data>
+  <data name="VMO60057" xml:space="preserve"><value>Could not create the server group. The maximum group depth of 12 levels has been exceeded.</value></data>
+  <data name="VMO60054" xml:space="preserve"><value>Could not move the recording server. The server group does not exist.</value></data>
+  <data name="VMO60055" xml:space="preserve"><value>Could not create the server group. A server group with the name {0} already exists under the group {1}.</value></data>
+  <data name="VMO60058" xml:space="preserve"><value>Could not update the hardware. The hardware does not exist.</value></data>
+  <data name="VMO60059" xml:space="preserve"><value>Could not remove the server group. The server group does not exist.</value></data>
+  <data name="VMO60025" xml:space="preserve"><value>A recording storage with the name {0} already exists on the recording server '{1}'.</value></data>
+  <data name="VMO60024" xml:space="preserve"><value>Could not delete the access control entry for: object {0}, permission {1}, user {2}. It does not exist.</value></data>
+  <data name="VMO60027" xml:space="preserve"><value>The recording storage does not exist. The system cannot update it.</value></data>
+  <data name="VMO60026" xml:space="preserve"><value>Could not rename the recording storage. A recording storage named '{0}' already exists on the recording server '{1}'.</value></data>
+  <data name="VMO60021" xml:space="preserve"><value>Could not create the access entry. The object with the ID {0} does not exist.</value></data>
+  <data name="VMO60020" xml:space="preserve"><value>A failover server with the name {0} already exists.</value></data>
+  <data name="VMO60023" xml:space="preserve"><value>Query class actions failed. The class {0} does not exist.</value></data>
+  <data name="VMO60022" xml:space="preserve"><value>Could not create the access entry. One of the specified actions does not exist.</value></data>
+  <data name="VMO60029" xml:space="preserve"><value>Could not remove the recording storage. You cannot remove the default recording storage.</value></data>
+  <data name="VMO60028" xml:space="preserve"><value>The recording storage does not exist. The system cannot remove it.</value></data>
+  <data name="VMO60034" xml:space="preserve"><value>Could not remove the failover group. There is no failover group with the ID '{0}'.</value></data>
+  <data name="VMO60035" xml:space="preserve"><value>Could not remove the failover group. You cannot remove built-in failover groups.</value></data>
+  <data name="VMO60036" xml:space="preserve"><value>Could not remove the failover group. The failover group is not empty. Before removal, all failover servers must be moved to another failover group.</value></data>
+  <data name="VMO60037" xml:space="preserve"><value>A failover server with the name {0} already exists in the failover group {1}.</value></data>
+  <data name="VMO60030" xml:space="preserve"><value>Could not retrieve the failover servers. The failover group with the ID {0} does not exist.</value></data>
+  <data name="VMO60031" xml:space="preserve"><value>A failover group with the name {0} already exists.</value></data>
+  <data name="VMO60032" xml:space="preserve"><value>Could not update the failover group. The failover group with the ID '{0}' does not exist.</value></data>
+  <data name="VMO60033" xml:space="preserve"><value>A failover group with the name {0} already exists.</value></data>
+  <data name="VMO60038" xml:space="preserve"><value>Could not create the failover server. There is no failover group with the ID {0}.</value></data>
+  <data name="VMO60039" xml:space="preserve"><value>Could not update the failover server. The failover server with the ID '{0}' does not exist.</value></data>
+  <data name="VMO60007" xml:space="preserve"><value>The role {0} already has the member {1}.</value></data>
+  <data name="VMO60006" xml:space="preserve"><value>Could not add the role member. The role with the ID {0} does not exist.</value></data>
+  <data name="VMO60005" xml:space="preserve"><value>Could not remove the role. You cannot remove built-in security roles.</value></data>
+  <data name="VMO60004" xml:space="preserve"><value>Could not remove the role. There is no role with the ID {0}.</value></data>
+  <data name="VMO60003" xml:space="preserve"><value>Could not rename the role. A role named {0} already exists.</value></data>
+  <data name="VMO60002" xml:space="preserve"><value>Could not update the role. The role with the ID {0} does not exist.</value></data>
+  <data name="VMO60001" xml:space="preserve"><value>A role with the name '{0}' already exists.</value></data>
+  <data name="VMO60000" xml:space="preserve"><value>There has been an unexpected database error. Please contact your server administrator.</value></data>
+  <data name="VMO60009" xml:space="preserve"><value>There is no role with the name {0}. The system could not remove it.</value></data>
+  <data name="VMO60008" xml:space="preserve"><value>Error in the internal stored procedure. The stored procedure cannot be run outside of a transaction.</value></data>
+  <data name="VMO60016" xml:space="preserve"><value>Could not register the object. The object with the ID {0} already exists.</value></data>
+  <data name="VMO60017" xml:space="preserve"><value>Could not register the object. The object class with the ID {0} does not exist.</value></data>
+  <data name="VMO60014" xml:space="preserve"><value>A user-defined event with the name {0} already exists.</value></data>
+  <data name="VMO60015" xml:space="preserve"><value>Could not rename the user-defined event. The event named '{0}' already exists.</value></data>
+  <data name="VMO60012" xml:space="preserve"><value>Could not retrieve the information for the security object {0}.</value></data>
+  <data name="VMO60013" xml:space="preserve"><value>Could not retrieve information for the security action {0}.</value></data>
+  <data name="VMO60010" xml:space="preserve"><value>You cannot remove the BUILTIN\Administrators member from the Administrator role.</value></data>
+  <data name="VMO60011" xml:space="preserve"><value>There is no role member with the security identifier (SID) {0}. The system could not remove the role member.</value></data>
+  <data name="VMO60018" xml:space="preserve"><value>Could not register the object. The parent object with the ID {0} does not exist.</value></data>
+  <data name="VMO60019" xml:space="preserve"><value>Security object '{1}' is from a different class than the security object '{0}' and can therefore not be the parent object.</value></data>
+  <data name="VMO60089" xml:space="preserve"><value>Could not query the recording server. The server group does not exist.</value></data>
+  <data name="VMO60088" xml:space="preserve"><value>Could not move the server group. The maximum group depth of 12 levels has been exceeded.</value></data>
+  <data name="VMO60087" xml:space="preserve"><value>Could not move the server group. A server group with the name {0} already exists under the group {1}.</value></data>
+  <data name="VMO60086" xml:space="preserve"><value>Could not query the server group. The parent server group does not exist.</value></data>
+  <data name="VMO60085" xml:space="preserve"><value>Could not query the device by hardware and type. The hardware does not exist.</value></data>
+  <data name="VMO60084" xml:space="preserve"><value>Could not query the device by hardware. The hardware does not exist.</value></data>
+  <data name="VMO60083" xml:space="preserve"><value>Could not create the hardware. The recording server does not exist.</value></data>
+  <data name="VMO60082" xml:space="preserve"><value>Could not delete the hardware. The hardware does not exist.</value></data>
+  <data name="VMO60081" xml:space="preserve"><value>Could not query the hardware drivers. The recording server does not exist.</value></data>
+  <data name="VMO60080" xml:space="preserve"><value>Could not query the hardware by recording server. The recording server does not exist.</value></data>
+  <data name="VMO60098" xml:space="preserve"><value>Encryption is disabled. You must enable encryption before you can to make changes. The system could not configure the encryption.</value></data>
+  <data name="VMO60099" xml:space="preserve"><value>The user-defined event does not exist. The system could not update it.</value></data>
+  <data name="VMO60096" xml:space="preserve"><value>The hardware does not exist. The system could not retrieve its settings.</value></data>
+  <data name="VMO60097" xml:space="preserve"><value>Could not configure the encryption for the recording storage. Incorrect password specified.</value></data>
+  <data name="VMO60094" xml:space="preserve"><value>Encryption already enabled for the recording storage. A new password has not been set.</value></data>
+  <data name="VMO60095" xml:space="preserve"><value>Could not configure the encryption for the recording storage. Another encryption configuration change is pending.</value></data>
+  <data name="VMO60092" xml:space="preserve"><value>The encryption methods 'None' and 'Unknown' are not valid values. The system could not configure the encryption.</value></data>
+  <data name="VMO60093" xml:space="preserve"><value>Could not configure the encryption for the recording storage. The recording storage does not exist.</value></data>
+  <data name="VMO60090" xml:space="preserve"><value>Could not query the device by device group. The device group does not exist.</value></data>
+  <data name="VMO60091" xml:space="preserve"><value>The bookmark does not exist.</value></data>
+  <data name="VMO60160" xml:space="preserve"><value>Internal error: The database procedure {0} returned the wrong number of rows.</value></data>
+  <data name="VMO60161" xml:space="preserve"><value>The server could not connect to the database. Verify that the server that is hosting the database is operational, and that network problems are not blocking communication with the server.</value></data>
+  <data name="VMO60162" xml:space="preserve"><value>The server could not return the result set because the number of rows exceeds the allowed maximum number of rows. Confirm that the parameters in the query are correct. If the parameters are correct or the problem persists, please contact your server administrator and request that the row limit be increased. Current Limit: {0}</value></data>
+  <data name="VMO60163" xml:space="preserve"><value>The marked data (evidence lock or bookmark) does not exist.</value></data>
+  <data name="VMO60164" xml:space="preserve"><value>The user is not authorized for login.</value></data>
+  <data name="VMO60165" xml:space="preserve"><value>The user cannot authorize himself.</value></data>
+  <data name="VMO60166" xml:space="preserve"><value>The user is not allowed to authorize.</value></data>
+  <data name="VMO60167" xml:space="preserve"><value>The device does not support PTZ presets.</value></data>
+  <data name="VMO60168" xml:space="preserve"><value>The device preset does not exist.</value></data>
+  <data name="VMO60169" xml:space="preserve"><value>Another device preset with this name already exists.</value></data>
+  <data name="VMO60142" xml:space="preserve"><value>Could not connect to the Management Server service.</value></data>
+  <data name="VMO60143" xml:space="preserve"><value>The recording server is unavailable.</value></data>
+  <data name="VMO60140" xml:space="preserve"><value>The path is not a valid recording storage path on the recording server.</value></data>
+  <data name="VMO60141" xml:space="preserve"><value>The path is not a valid archive path on the recording server.</value></data>
+  <data name="VMO60146" xml:space="preserve"><value>Failed to create archive.
+
+The retention time for the archive must not be identical to the retention time for another archive.</value></data>
+  <data name="VMO60147" xml:space="preserve"><value>Could not set the retention time for the recording storage.
+
+The retention time must be lower than the retention time of the first archive.</value></data>
+  <data name="VMO60144" xml:space="preserve"><value>Communication with the recording server timed out.</value></data>
+  <data name="VMO60145" xml:space="preserve"><value>Could not create the archive.
+
+The retention time for the archive must be higher than the retention time of the recording storage.</value></data>
+  <data name="VMO60148" xml:space="preserve"><value>Could not set the retention time for the archive.
+
+The retention time must be higher than the retention time of the previous archive.</value></data>
+  <data name="VMO60149" xml:space="preserve"><value>Could not set the retention time for the archive.
+
+The retention time must be lower than the retention time of the next archive.</value></data>
+  <data name="VMO60175" xml:space="preserve"><value>The specified group does not exist. The system could not add devices to it.</value></data>
+  <data name="VMO60174" xml:space="preserve"><value>The recording server service version is no longer supported. You can still access recordings on the recording server, but it must be upgraded to the current version before you can change its configuration.</value></data>
+  <data name="VMO60177" xml:space="preserve"><value>One or more of the specified devices does not exist. The system could not add devices to the group.</value></data>
+  <data name="VMO60176" xml:space="preserve"><value>You cannot add devices to built-in device groups.</value></data>
+  <data name="VMO60179" xml:space="preserve"><value>One or more of the specified devices already exists in the device group. The system could not add the devices.</value></data>
+  <data name="VMO60178" xml:space="preserve"><value>One or more of the specified devices is not compatible with the group type. The system could not add the devices to the group.</value></data>
+  <data name="VMO60124" xml:space="preserve"><value>Could not delete the device group member. The device group member does not exist.</value></data>
+  <data name="VMO60125" xml:space="preserve"><value>Could not move the device group. You cannot move a device group to one of its subgroups.</value></data>
+  <data name="VMO60126" xml:space="preserve"><value>Could not move the device group. A device group cannot have itself as parent.</value></data>
+  <data name="VMO60127" xml:space="preserve"><value>Could not update the hardware settings. The hardware does not exist.</value></data>
+  <data name="VMO60120" xml:space="preserve"><value>Could not add the device group member. It is not possible to add members to built-in device groups.</value></data>
+  <data name="VMO60121" xml:space="preserve"><value>Could not add the device group member. The device does not exist.</value></data>
+  <data name="VMO60122" xml:space="preserve"><value>Could not add the device group member. The device must be of the same type as the device group.</value></data>
+  <data name="VMO60123" xml:space="preserve"><value>Could not add the device group member. A device with the name {0} is already a member of the group {1}.</value></data>
+  <data name="VMO60128" xml:space="preserve"><value>Could not create the task. The task already exists.</value></data>
+  <data name="VMO60129" xml:space="preserve"><value>Could not delete the task. The task does not exist.</value></data>
+  <data name="VMO60153" xml:space="preserve"><value>Could not create the archive.
+
+The path is invalid.</value></data>
+  <data name="VMO60152" xml:space="preserve"><value>Could not create the recording storage.
+
+The path is invalid.</value></data>
+  <data name="VMO60151" xml:space="preserve"><value>Could not delete the archive.
+
+Only the last archive in a storage configuration can be deleted.</value></data>
+  <data name="VMO60150" xml:space="preserve"><value>Could not set the retention time for the archive.
+
+The retention time must be higher than the retention time of the recording storage.</value></data>
+  <data name="VMO60157" xml:space="preserve"><value>Could not load the hardware driver.
+
+The hardware driver does not exist.</value></data>
+  <data name="VMO60156" xml:space="preserve"><value>The SID named '{0}' is not a valid security identifier.</value></data>
+  <data name="VMO60155" xml:space="preserve"><value>Could not look up the SID for '{0}'.</value></data>
+  <data name="VMO60154" xml:space="preserve"><value>Active Directory search did not return an identity.</value></data>
+  <data name="VMO60159" xml:space="preserve"><value>Could not create the device group. A device group with the same name already exists.</value></data>
+  <data name="VMO60158" xml:space="preserve"><value>Could not clean up the task.
+
+The task is not completed.</value></data>
+  <data name="VMO60106" xml:space="preserve"><value>Could not create the device group. The parent device group does not exist.</value></data>
+  <data name="VMO60107" xml:space="preserve"><value>Could not create the device group. It is not possible to add new device groups to built-in device groups.</value></data>
+  <data name="VMO60104" xml:space="preserve"><value>Could not enable archiving. No archive has been defined for the device with the name {0}.</value></data>
+  <data name="VMO60105" xml:space="preserve"><value>Could not create or append to the specified file. The SQL user does not have the required permissions to access the specified file.</value></data>
+  <data name="VMO60102" xml:space="preserve"><value>Could not remove the archive. The archive with the name {0} is in use by one or more devices.</value></data>
+  <data name="VMO60103" xml:space="preserve"><value>Could not remove the recording storage. The recording storage with the name {0} is in use by one or more devices.</value></data>
+  <data name="VMO60100" xml:space="preserve"><value>Could not define the default recording storage. The recording storage does not exist.</value></data>
+  <data name="VMO60101" xml:space="preserve"><value>Could not define the default archive. The archive does not exist.</value></data>
+  <data name="VMO60108" xml:space="preserve"><value>Could not create the device group. A device group with the name {0} already exists under the group {1}.</value></data>
+  <data name="VMO60109" xml:space="preserve"><value>Could not update the device group. The device group does not exist.</value></data>
+  <data name="VMO60135" xml:space="preserve"><value>Could not delete archive. A conflicting task already exists.</value></data>
+  <data name="VMO60134" xml:space="preserve"><value>Could not delete storage. A conflicting task already exists.</value></data>
+  <data name="VMO60137" xml:space="preserve"><value>Could not move the recordings. A conflicting task already exists.</value></data>
+  <data name="VMO60136" xml:space="preserve"><value>Could not delete the recordings. A conflicting task already exists.</value></data>
+  <data name="VMO60131" xml:space="preserve"><value>Could not enable the frame rate reduction. The archive does not exist.</value></data>
+  <data name="VMO60130" xml:space="preserve"><value>Could not update the task. The task does not exist.</value></data>
+  <data name="VMO60133" xml:space="preserve"><value>Could not move archive. A conflicting task already exists.</value></data>
+  <data name="VMO60132" xml:space="preserve"><value>Could not move the storage. A conflicting task already exists.</value></data>
+  <data name="VMO60139" xml:space="preserve"><value>Could not apply the encryption password changes. A conflicting task already exists.</value></data>
+  <data name="VMO60138" xml:space="preserve"><value>Could not apply the encryption method changes. A conflicting task already exists.</value></data>
+  <data name="VMO60117" xml:space="preserve"><value>Could not move the device group. The source device group must be of the same type as the target device group.</value></data>
+  <data name="VMO60116" xml:space="preserve"><value>Could not move the device group. A device group with the name {0} already exists under the group {1}.</value></data>
+  <data name="VMO60115" xml:space="preserve"><value>Could not move the device group. It is not possible to move device groups to built-in device groups.</value></data>
+  <data name="VMO60114" xml:space="preserve"><value>Could not move the device group. It is not possible to move built-in device groups.</value></data>
+  <data name="VMO60113" xml:space="preserve"><value>Could not move the device group. The target device group does not exist.</value></data>
+  <data name="VMO60112" xml:space="preserve"><value>Could not move the device group. The source device group does not exist.</value></data>
+  <data name="VMO60111" xml:space="preserve"><value>Could not update the device group. A device group with the name {0} already exists under the group {1}.</value></data>
+  <data name="VMO60110" xml:space="preserve"><value>Could not update the device group. It is not possible to change built-in device groups.</value></data>
+  <data name="VMO60119" xml:space="preserve"><value>Could not add the device group member. The device group does not exist.</value></data>
+  <data name="VMO60118" xml:space="preserve"><value>Could not remove the device group. The device group does not exist.</value></data>
+  <data name="VMO60188" xml:space="preserve"><value>The device does not exist. The system could not retrieve its settings.</value></data>
+  <data name="VMO60189" xml:space="preserve"><value>The system could not find the hardware driver definition.</value></data>
+  <data name="VMO60186" xml:space="preserve"><value>Could not delete the device group. The group is built-in and cannot be deleted.</value></data>
+  <data name="VMO60187" xml:space="preserve"><value>Could not delete the device group. The group is not empty.</value></data>
+  <data name="VMO60184" xml:space="preserve"><value>The recording frame rate must be larger than 0.</value></data>
+  <data name="VMO60185" xml:space="preserve"><value>Could not delete the device group. The group does not exist.</value></data>
+  <data name="VMO60182" xml:space="preserve"><value>One or more of the specified devices does not exist in the group. The system could not remove the devices.</value></data>
+  <data name="VMO60183" xml:space="preserve"><value>The argument must be a positive number.</value></data>
+  <data name="VMO60180" xml:space="preserve"><value>The specified group does not exist. The system could not remove the devices.</value></data>
+  <data name="VMO60181" xml:space="preserve"><value>You cannot remove devices from a built-in device group.</value></data>
+  <data name="VMO60199" xml:space="preserve"><value>A preset with the specified ID already exists.</value></data>
+  <data name="VMO60198" xml:space="preserve"><value>Another user has already updated the device. Cannot save the changes.</value></data>
+  <data name="VMO60197" xml:space="preserve"><value>The device preset cannot be updated.</value></data>
+  <data name="VMO60196" xml:space="preserve"><value>Could not update the settings.
+
+The value for the setting named '{0}' is out of range.</value></data>
+  <data name="VMO60195" xml:space="preserve"><value>The setting '{0}' cannot be updated.</value></data>
+  <data name="VMO60194" xml:space="preserve"><value>The setting '{0}' is read-only. The system could not update the settings.</value></data>
+  <data name="VMO60193" xml:space="preserve"><value>The name '{0}' is not valid. The system could not update the setting.</value></data>
+  <data name="VMO60192" xml:space="preserve"><value>Another user has already updated the device. Refresh and try again.
+Could not update the settings.</value></data>
+  <data name="VMO60191" xml:space="preserve"><value>The device does not exist. The system could not update the settings.</value></data>
+  <data name="VMO60190" xml:space="preserve"><value>The system could not find the hardware. The system could not retrieve its settings.</value></data>
+  <data name="VMO61035" xml:space="preserve"><value>You cannot update or delete a built-in layout.</value></data>
+  <data name="VMO61034" xml:space="preserve"><value>Name already used.</value></data>
+  <data name="VMO61031" xml:space="preserve"><value>The view does not exist.</value></data>
+  <data name="VMO61030" xml:space="preserve"><value>The view layout does not exist.</value></data>
+  <data name="VMO61033" xml:space="preserve"><value>A newer version of the custom setting exists on the server.</value></data>
+  <data name="VMO61032" xml:space="preserve"><value>The object was not found.</value></data>
+  <data name="VMO61024" xml:space="preserve"><value>Change state of the recording server service failed.</value></data>
+  <data name="VMO61025" xml:space="preserve"><value>The Smart Wall does not exist. The system could not connect to the Smart Wall.</value></data>
+  <data name="VMO61026" xml:space="preserve"><value>The monitor does not exist. The system could not receive the monitor.</value></data>
+  <data name="VMO61027" xml:space="preserve"><value>The Smart Wall preset does not exist. The system could not connect to the monitor.</value></data>
+  <data name="VMO61021" xml:space="preserve"><value>The system could not communicate with the recording server.</value></data>
+  <data name="VMO61022" xml:space="preserve"><value>It is not possible to execute the command '{0}' because the recording server service has status '{1}'</value></data>
+  <data name="VMO61023" xml:space="preserve"><value>The recording server service is not available.</value></data>
+  <data name="VMO61028" xml:space="preserve"><value>The custom property does not exist.</value></data>
+  <data name="VMO61029" xml:space="preserve"><value>The user-defined event does not exist.</value></data>
+  <data name="VMO61015" xml:space="preserve"><value>The device group does not exist.</value></data>
+  <data name="VMO61013" xml:space="preserve"><value>The recording server does not exist.</value></data>
+  <data name="VMO61012" xml:space="preserve"><value>The server group does not exist.</value></data>
+  <data name="VMO61011" xml:space="preserve"><value>Could not retrieve a SID for an identity from Active Directory.</value></data>
+  <data name="VMO61010" xml:space="preserve"><value>Could not read information from the following Active Directory domain: {0}. The Active Directory domain is unknown or could not be found.</value></data>
+  <data name="VMO61006" xml:space="preserve"><value>The following role name is not a valid name: {0}</value></data>
+  <data name="VMO61007" xml:space="preserve"><value>The following user-defined event does not exist: {0}.</value></data>
+  <data name="VMO61004" xml:space="preserve"><value>Invalid database configuration. Extra rows. Please contact your server administrator.</value></data>
+  <data name="VMO61005" xml:space="preserve"><value>Invalid database configuration. Missing row. Please contact your server administrator.</value></data>
+  <data name="VMO61002" xml:space="preserve"><value>You must specify an identity to remove from the role.</value></data>
+  <data name="VMO61003" xml:space="preserve"><value>You must specify a role to remove a member from the role.</value></data>
+  <data name="VMO61000" xml:space="preserve"><value>You must specify a valid role when adding a member to a role.</value></data>
+  <data name="VMO61001" xml:space="preserve"><value>You must specify an identity to add to the role.</value></data>
+  <data name="VMO61008" xml:space="preserve"><value>You do not have sufficient permissions to complete the operation.</value></data>
+  <data name="VMO61009" xml:space="preserve"><value>The following argument cannot be empty: {0}.</value></data>
+  <data name="VMO61110" xml:space="preserve"><value>The archive is unavailable.</value></data>
+  <data name="VMO61107" xml:space="preserve"><value>Could not configure the encryption for the recording storage. The storage is unavailable.</value></data>
+  <data name="VMO61106" xml:space="preserve"><value>A conflicting task already exists.</value></data>
+  <data name="VMO61105" xml:space="preserve"><value>The system cannot receive the archive information.</value></data>
+  <data name="VMO61104" xml:space="preserve"><value>The system could not receive the recording server information.</value></data>
+  <data name="VMO61103" xml:space="preserve"><value>The system could not receive the recording storage information.</value></data>
+  <data name="VMO61100" xml:space="preserve"><value>You have already defined one home site and you cannot have more. Change cancelled.</value></data>
+  <data name="VMO61109" xml:space="preserve"><value>The recording storage is unavailable.</value></data>
+  <data name="VMO61108" xml:space="preserve"><value>Could not configure the encryption for the recording storage. The archive '{0}' is unavailable.</value></data>
+  <data name="VMO68000" xml:space="preserve"><value>An unexpected error occurred while calling the Identity Provider. Please contact your server administrator.</value></data>
+  <data name="VMO69000" xml:space="preserve"><value>Invalid directory</value></data>
+  </root>

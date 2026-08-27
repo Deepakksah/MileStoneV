@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layers:LayerBase x:Class="VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Selection.SelectionLayer" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Layers="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers" xmlns:Selection="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Selection" xmlns:Timeline="clr-namespace:VideoOS.UI.Common.WPF.Timeline" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" xmlns:resources="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Selection.resources" Loaded="LayerBase_Loaded">
+  <Canvas Name="_outOfScopeMarkersCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+    <StackPanel Orientation="Horizontal" Canvas.Left="0" Canvas.Top="0">
+      <controls:VideoOSButtonAccentExtraSmall Name="_fromSelectionMarkerLeftOutOfScopeButton" Margin="2,0" ToolTip="{x:Static resources:Strings.FromSelectionMarkerRightOutOfScopeButtonToolTip}" IconSource="{controls:VideoOSIconBuiltInSource Go_To_Selection_Start_From_Right_12px}" Click="_fromSelectionMarkerLeftOutOfScopeButton_Click" />
+      <controls:VideoOSButtonAccentExtraSmall Name="_centerSelectionMarkerLeftOutOfScopeButton" Margin="2,0" ToolTip="{x:Static resources:Strings.CenterSelectionMarkerRightOutOfScopeButtonToolTip}" IconSource="{controls:VideoOSIconBuiltInSource Selection_Bookmark_Start_12px}" Click="_centerSelectionMarkerLeftOutOfScopeButton_Click" />
+      <controls:VideoOSButtonAccentExtraSmall Name="_toSelectionMarkerLeftOutOfScopeButton" Margin="2,0" ToolTip="{x:Static resources:Strings.ToSelectionMarkerRightOutOfScopeButtonToolTip}" IconSource="{controls:VideoOSIconBuiltInSource Go_To_Selection_End_From_Right_12px}" Click="_toSelectionMarkerLeftOutOfScopeButton_Click" />
+    </StackPanel>
+    <StackPanel Orientation="Horizontal" Canvas.Right="0" Canvas.Top="0">
+      <controls:VideoOSButtonAccentExtraSmall Name="_fromSelectionMarkerRightOutOfScopeButton" Margin="2,0" ToolTip="{x:Static resources:Strings.FromSelectionMarkerRightOutOfScopeButtonToolTip}" IconSource="{controls:VideoOSIconBuiltInSource Go_To_Selection_Start_From_Left_12px}" Click="_fromSelectionMarkerRightOutOfScopeButton_Click" />
+      <controls:VideoOSButtonAccentExtraSmall Name="_centerSelectionMarkerRightOutOfScopeButton" Margin="2,0" ToolTip="{x:Static resources:Strings.CenterSelectionMarkerRightOutOfScopeButtonToolTip}" IconSource="{controls:VideoOSIconBuiltInSource Selection_Bookmark_End_12px}" Click="_centerSelectionMarkerRightOutOfScopeButton_Click" />
+      <controls:VideoOSButtonAccentExtraSmall Name="_toSelectionMarkerRightOutOfScopeButton" Margin="2,0" ToolTip="{x:Static resources:Strings.ToSelectionMarkerRightOutOfScopeButtonToolTip}" IconSource="{controls:VideoOSIconBuiltInSource Go_To_Selection_End_From_Left_12px}" Click="_toSelectionMarkerRightOutOfScopeButton_Click" />
+    </StackPanel>
+  </Canvas>
+  <Canvas>
+    <Selection:SelectionInfo x:Name="_selectionInfo" Visibility="Hidden" Canvas.Top="100" />
+  </Canvas>
+  <Canvas Name="_selectionMarkerCanvas" SnapsToDevicePixels="False" UseLayoutRounding="True">
+    <Selection:SelectionMarker x:Name="_centerSelectionMarker" MarkerMouseLeftButtonDown="_selectionMarker_MarkerMouseLeftButtonDown" MarkerMouseMove="_selectionMarker_MarkerMouseMove" MarkerMouseLeftButtonUp="_selectionMarker_MarkerMouseLeftButtonUp" MouseRightButtonDown="_centerSelectionMarker_MouseRightButtonDown" Visibility="Visible" SelectionMarkerType="Center" Height="{Binding ElementName=_selectionMarkerCanvas, Path=ActualHeight}" />
+    <Selection:SelectionMarker x:Name="_fromSelectionMarker" MarkerMouseLeftButtonDown="_selectionMarker_MarkerMouseLeftButtonDown" MarkerMouseMove="_selectionMarker_MarkerMouseMove" MarkerMouseLeftButtonUp="_selectionMarker_MarkerMouseLeftButtonUp" MouseRightButtonDown="_fromSelectionMarker_MouseRightButtonDown" Visibility="Visible" SelectionMarkerType="From" Height="{Binding ElementName=_selectionMarkerCanvas, Path=ActualHeight}" />
+    <Selection:SelectionMarker x:Name="_toSelectionMarker" MarkerMouseLeftButtonDown="_selectionMarker_MarkerMouseLeftButtonDown" MarkerMouseMove="_selectionMarker_MarkerMouseMove" MarkerMouseLeftButtonUp="_selectionMarker_MarkerMouseLeftButtonUp" MouseRightButtonDown="_toSelectionMarker_MouseRightButtonDown" Visibility="Visible" SelectionMarkerType="To" Height="{Binding ElementName=_selectionMarkerCanvas, Path=ActualHeight}" />
+    <Rectangle Name="_selectionAreaTopLine" Visibility="Visible" Height="1" Canvas.Bottom="0" Fill="{controls:VideoOSInternalDynamicResource TimelineSelectionControlsBrush}" />
+    <Rectangle Name="_selectionAreaBottomLine" Visibility="Visible" Height="1" Canvas.Bottom="0" Fill="{controls:VideoOSInternalDynamicResource TimelineSelectionControlsBrush}" />
+  </Canvas>
+</Layers:LayerBase>

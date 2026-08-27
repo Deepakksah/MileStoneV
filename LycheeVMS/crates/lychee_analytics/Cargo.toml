@@ -1,0 +1,11 @@
+[package]
+name = "lychee_analytics"
+version = "2025.3.0"
+edition = "2021"
+description = "Analytics, LPR/ANPR Engine & Incident Manager (converted from Milestone src/IncidentManager, src/LPR)"
+
+[dependencies]
+lychee_common = { path = "../lychee_common" }
+lychee_events = { path = "../lychee_events" }
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4" }

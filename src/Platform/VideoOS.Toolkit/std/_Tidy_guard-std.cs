@@ -1,0 +1,17 @@
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace std;
+
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+[NativeCppClass]
+public struct _Tidy_guard_003Cstd_003A_003Avector_003Cunsigned_0020char_002Cstd_003A_003Aallocator_003Cunsigned_0020char_003E_0020_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+[NativeCppClass]
+public struct _Tidy_guard_003Cstd_003A_003Avector_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_002Cstd_003A_003Aallocator_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_003E_0020_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}

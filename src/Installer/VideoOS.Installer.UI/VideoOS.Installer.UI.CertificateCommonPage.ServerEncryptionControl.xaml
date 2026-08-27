@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.UI.CertificateCommonPage.ServerEncryptionControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:prop="clr-namespace:VideoOS.Installer.UI.Properties" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Installer.UI.CertificateCommonPage" xmlns:external="clr-namespace:VideoOS.ServerConfigurator.CertificateConfigurator.UI;assembly=VideoOS.ServerConfigurator.CertificateConfigurator.UI" xmlns:wpf="clr-namespace:VideoOS.UI.Common.WPF.Utils.Converters;assembly=VideoOS.UI.Common.WPF" x:Uid="UserControl_1">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="{DataTemplateKey {x:Type external:CertificateGroupViewModel}}" DataType="{x:Type external:CertificateGroupViewModel}">
+        <local:CertificateGroupControl />
+      </DataTemplate>
+      <Style x:Key="LearnMoreButton" TargetType="{x:Type Button}">
+        <Setter Property="Foreground" Value="#0097db" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Background" Value="#00FFFFFF" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Style.Triggers>
+          <Trigger Property="UIElement.IsMouseOver" Value="True">
+            <Setter Property="FrameworkElement.Cursor" Value="Hand" />
+            <Setter Property="Foreground" Value="#007bb3" />
+            <Setter Property="Background" Value="#00FFFFFF" />
+          </Trigger>
+          <Trigger Property="IsPressed" Value="True">
+            <Setter Property="Foreground" Value="#006999" />
+          </Trigger>
+        </Style.Triggers>
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Margin="50, 40, 50, 0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Orientation="Vertical">
+      <TextBlock x:Uid="EncryptionTitle" Text="{x:Static prop:Resources.CertificateCommonEncryptionTitle}" AutomationProperties.AutomationId="EncryptionPage.LabelHeadLine" FontFamily="Arial" FontSize="22" />
+      <TextBlock x:Uid="EncryptionSubtitle" TextWrapping="Wrap" FontSize="12" FontFamily="Tahoma" AutomationProperties.AutomationId="EncryptionPage.LabelInfo" Margin="0,24,0,0">
+        <Run x:Uid="EncryptionSubtitleRun" Text="{x:Static prop:Resources.CertificateCommonEncryptionSubTitleRun}" /> <Hyperlink x:Uid="EncryptionSubtitleHyperlink" AutomationProperties.AutomationId="EncryptionPage.EncryptionSubtitleHyperlink" Command="{Binding LearnMoreCommand}"><TextBlock x:Uid="HyperlinkText" Text="{x:Static prop:Resources.CertificateCommonHyperLinkText}"><UIElement.Visibility><Binding><Ctor xmlns="https://github.com/icsharpcode/ILSpy">LearnMoreAvailable</Ctor><Binding.Converter><wpf:BoolToVisibilityConverter wpf:BoolToVisibilityConverter.FalseValue="Collapsed" wpf:BoolToVisibilityConverter.TrueValue="Visible" /></Binding.Converter></Binding></UIElement.Visibility></TextBlock></Hyperlink></TextBlock>
+    </StackPanel>
+    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch" Margin="0,10, 0,10">
+      <ItemsControl AutomationProperties.AutomationId="EncryptionPage.CertificateGroupsList" Margin="0,0, 0,-10" ItemsSource="{Binding CertificateGroupsToBeInstalled}" />
+    </ScrollViewer>
+  </Grid>
+</UserControl>

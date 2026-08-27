@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorFailedUnpack" xml:space="preserve"><value>A telepítőprogram kicsomagolása meghiúsult:</value></data>
+  <data name="ErrorOccured" xml:space="preserve"><value>Hiba történt</value></data>
+  <data name="ExternalArchiveNotFound" xml:space="preserve"><value>Olyan külső „{0}” archívumra van szükség, amely ugyanabban a könyvtárban található, mint a végrehajtható telepítőprogram.</value></data>
+  <data name="ErrorAnotherInstanceRunning" xml:space="preserve"><value>Egy másik telepítés folyamatban van.</value></data>
+  <data name="Unpacking" xml:space="preserve"><value>A fájlok kicsomagolása folyamatban…</value></data>
+  <data name="ErrorUnexpected" xml:space="preserve"><value>A telepítés váratlanul meghiúsult a következő hiba miatt:
+
+{0}
+
+Az eseményt a rendszer naplózta a Windows Eseménynaplóban az Ön tájékoztatása céljából</value></data>
+  <data name="ExternalArchiveHashMismatch" xml:space="preserve"><value>A(z) „{0}” külső archívum nem érvényes a jelen telepítőprogram esetében.</value></data>
+  <data name="ErrorPrereq" xml:space="preserve"><value>Telepítse a .Net Framework 4.7.2. verzióját a számítógépére. Töltse le a komponenst a gyártó letöltési webhelyéről. A telepítés után indítsa újra a következőt: „{0}”.</value></data>
+  <data name="Preparing" xml:space="preserve"><value>A telepítőprogram előkészítés alatt áll</value></data>
+  <data name="Launching" xml:space="preserve"><value>A telepítőprogram elindítása folyamatban...</value></data>
+  <data name="ExternalArchiveValidate" xml:space="preserve"><value>A csomag hitelesítése folyamatban…</value></data>
+  <data name="ExternalArchiveReadError" xml:space="preserve"><value>A(z) „{0}” külső archívum nem olvasható.</value></data>
+  </root>

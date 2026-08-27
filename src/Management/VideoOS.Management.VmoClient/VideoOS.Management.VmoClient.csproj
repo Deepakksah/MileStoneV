@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Management.VmoClient</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    
+    <Reference Include="System.ServiceModel" />
+    
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.IdentityModel" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Identity\VideoOS.IdentityServer.Common\VideoOS.IdentityServer.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Management.Common\VideoOS.Management.Common.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.IdentityServer\VideoOS.IdentityServer.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="VMO66001" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。密碼過短或太弱。</value></data>
+  <data name="VMO66000" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。密碼過長。</value></data>
+  <data name="VMO66003" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。此硬體裝置不支援密碼變更。</value></data>
+  <data name="VMO66002" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。密碼無效。</value></data>
+  <data name="VMO66005" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。此硬體裝置已關閉。</value></data>
+  <data name="VMO66004" xml:space="preserve"><value>由於硬體錯誤，無法變更硬體裝置「{0}」的密碼。</value></data>
+  <data name="VMO66007" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。此硬體裝置已臨時封鎖。</value></data>
+  <data name="VMO66006" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。此硬體裝置已停用。</value></data>
+  <data name="VMO66009" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。此硬體裝置已接受新密碼，但無法更新 VMS 中的認證。</value></data>
+  <data name="VMO66008" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。此硬體裝置是唯讀的。</value></data>
+  <data name="VMO66010" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。無法使用承載此裝置的錄影伺服器。</value></data>
+  <data name="VMO66011" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。承載此裝置的錄影伺服器與管理伺服器不相容。</value></data>
+  <data name="VMO66012" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。作業逾時。</value></data>
+  <data name="VMO66013" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。錄影伺服器出現未知錯誤。</value></data>
+  <data name="VMO66014" xml:space="preserve"><value>無法變更硬體裝置「{0}」的密碼。錄影伺服器無法識別硬體驅動程式的回應。</value></data>
+  <data name="VMO66015" xml:space="preserve"><value>由於網路問題，無法變更硬體裝置「{0}」的密碼。</value></data>
+  <data name="VMO66016" xml:space="preserve"><value>無法存取硬體裝置 '{0}'。</value></data>
+  <data name="VMO66017" xml:space="preserve"><value>裝置 '{0}' 上不允許匿名使用者層級。</value></data>
+  <data name="VMO66018" xml:space="preserve"><value>使用者名稱在裝置 '{0}' 上未識別。</value></data>
+  <data name="VMO66019" xml:space="preserve"><value>可能未在裝置 '{0}' 上建立密碼或使用者層級。</value></data>
+  <data name="VMO66020" xml:space="preserve"><value>使用者沒有在裝置 '{0}' 上進行操作的權限。</value></data>
+  <data name="VMO66032" xml:space="preserve"><value>密碼必須至少包含一個小寫字母</value></data>
+  <data name="VMO66033" xml:space="preserve"><value>密碼必須至少包含一個數字</value></data>
+  <data name="VMO66030" xml:space="preserve"><value>密碼僅可使用可列印的 ASCII 字元，不可使用如 '#'、'$'、'~' 等特殊字元。</value></data>
+  <data name="VMO66031" xml:space="preserve"><value>密碼必須至少包含一個大寫字母</value></data>
+  <data name="VMO66034" xml:space="preserve"><value>密碼驗證錯誤。請檢查記錄或嘗試輸入其他密碼</value></data>
+  <data name="VMO66035" xml:space="preserve"><value>無效的密碼長度。密碼長度必須介於 {0} 和 {1} 個字元之間。</value></data>
+  <data name="VMO66040" xml:space="preserve"><value>您無法從管理員角色移除最後一個成員。</value></data>
+  <data name="VMO66050" xml:space="preserve"><value>無法更新搜尋。搜尋不存在。</value></data>
+  <data name="VMO66051" xml:space="preserve"><value>無法刪除搜尋。搜尋不存在。</value></data>
+  <data name="VMO66052" xml:space="preserve"><value>搜尋不存在。</value></data>
+  <data name="VMO66101" xml:space="preserve"><value>無法開啟韌體檔案。</value></data>
+  <data name="VMO66102" xml:space="preserve"><value>發生網路錯誤。</value></data>
+  <data name="VMO66103" xml:space="preserve"><value>在韌體更新後，無法重新建立與硬體裝置的連線。</value></data>
+  <data name="VMO66104" xml:space="preserve"><value>硬體裝置與提供的韌體檔案不相容。</value></data>
+  <data name="VMO66105" xml:space="preserve"><value>正在進行韌體更新。</value></data>
+  <data name="VMO66106" xml:space="preserve"><value>硬體裝置不支援韌體更新。</value></data>
+  <data name="VMO66107" xml:space="preserve"><value>韌體更新已成功完成。但硬體裝置報告的韌體版本未變更。</value></data>
+  <data name="VMO66108" xml:space="preserve"><value>發生未知錯誤。</value></data>
+  <data name="VMO66109" xml:space="preserve"><value>無法傳送韌體檔案。</value></data>
+  <data name="VMO66111" xml:space="preserve"><value>分配的檔案儲存空間不再存在。</value></data>
+  <data name="VMO66110" xml:space="preserve"><value>檔案總和檢查碼不符。</value></data>
+  <data name="VMO66113" xml:space="preserve"><value>無法開啟配置的檔案儲存。</value></data>
+  <data name="VMO66112" xml:space="preserve"><value>無法開啟配置的檔案儲存。</value></data>
+  <data name="VMO66115" xml:space="preserve"><value>未知的檔案傳送錯誤。</value></data>
+  <data name="VMO66114" xml:space="preserve"><value>已超出配置的儲存配額。</value></data>
+  <data name="VMO67011" xml:space="preserve"><value>無法更新硬體。設定硬體時，無法連線至錄影伺服器。</value></data>
+  <data name="VMO67010" xml:space="preserve"><value>無法更新硬體。未知錯誤。無法從遠端系統讀取設定。驅動程式提供下列錯誤訊息: '{0}'</value></data>
+  <data name="VMO67013" xml:space="preserve"><value>無法更新硬體。未收到錄影伺服器的任何回應。</value></data>
+  <data name="VMO67012" xml:space="preserve"><value>不再支援錄影伺服器服務版本，無法更新硬體。</value></data>
+  <data name="VMO67015" xml:space="preserve"><value>無法更新硬體。無法從硬體連線或接收資訊。請確認以下是否正確: 位址、連接埠、使用者名稱、密碼和硬體驅動程式。</value></data>
+  <data name="VMO67014" xml:space="preserve"><value>無法更新硬體。無法從硬體連線或接收資訊。請確認以下是否正確: 位址、連接埠、使用者名稱、密碼和硬體驅動程式。</value></data>
+  <data name="VMO67017" xml:space="preserve"><value>無法更新已變更其 MAC 位址的硬體。</value></data>
+  <data name="VMO67016" xml:space="preserve"><value>無法更新硬體。硬體不存在。</value></data>
+  <data name="VMO67001" xml:space="preserve"><value>硬體更新僅對 MIP 驅動程式有效。</value></data>
+  <data name="VMO67002" xml:space="preserve"><value>工作階段資料逾時：{0}</value></data>
+  <data name="VMO67003" xml:space="preserve"><value>{0} 的 SessionDataId 無效</value></data>
+  <data name="VMO67004" xml:space="preserve"><value>無法更新帶有 {1} 的 {0} [錯誤：{2}]</value></data>
+  <data name="VMO67005" xml:space="preserve"><value>無法更新帶有 {1} 的硬體 {0}</value></data>
+  <data name="VMO67006" xml:space="preserve"><value>無法更新硬體。未收到錄影伺服器的任何回應。</value></data>
+  <data name="VMO67007" xml:space="preserve"><value>無法更新硬體。呼叫者沒有管理員權限。</value></data>
+  <data name="VMO67008" xml:space="preserve"><value>無法更新硬體。無法登入遠端系統。</value></data>
+  <data name="VMO67009" xml:space="preserve"><value>無法更新硬體。在遠端系統上找不到錄影伺服器。</value></data>
+  <data name="VMO64021" xml:space="preserve"><value>設定包含遠端連線的硬體或安全通道伺服器。您的授權不支援。</value></data>
+  <data name="VMO64020" xml:space="preserve"><value>設定包含使用簽署功能的儲存區域。您的授權不支援。</value></data>
+  <data name="VMO64023" xml:space="preserve"><value>設定包含太多 {0} 設定檔。您的授權不支援。</value></data>
+  <data name="VMO64022" xml:space="preserve"><value>設定包含具有書籤的規則。您的授權不支援。</value></data>
+  <data name="VMO64025" xml:space="preserve"><value>設定包含具有 SNMP 設陷的規則。您的授權不支援。</value></data>
+  <data name="VMO64024" xml:space="preserve"><value>設定包含 Smart Wall 預設點。您的授權不支援。</value></data>
+  <data name="VMO64027" xml:space="preserve"><value>設定包含書籤。您的授權不支援。</value></data>
+  <data name="VMO64026" xml:space="preserve"><value>設定包含證據鎖定資料。您的授權不支援。</value></data>
+  <data name="VMO64029" xml:space="preserve"><value>設定包含使用區別的管理安全性設定的角色。您的授權不支援。</value></data>
+  <data name="VMO64028" xml:space="preserve"><value>設定包含標示資料 (證據鎖定或書籤)。您的授權不支援。</value></data>
+  <data name="VMO64030" xml:space="preserve"><value>設定包含遠端錄影的設定。您的授權不支援。</value></data>
+  <data name="VMO64031" xml:space="preserve"><value>設定包含具有遠端錄影功能的規則。您的授權不支援。</value></data>
+  <data name="VMO64032" xml:space="preserve"><value>相較於授權支援的數目，設定包含更多具有 PTZ 優先權的規則。</value></data>
+  <data name="VMO64033" xml:space="preserve"><value>相較於授權支援的數目，設定包含更多具有 PTZ 優先權層級的安全性設定。</value></data>
+  <data name="VMO64034" xml:space="preserve"><value>設定必須只包含預設的 {0} 設定檔。您的授權只支援這個。</value></data>
+  <data name="VMO64035" xml:space="preserve"><value>設定包含主要站台。您的授權不支援。</value></data>
+  <data name="VMO64036" xml:space="preserve"><value>相較於授權所允許的數目，設定包含更多錄影伺服器。</value></data>
+  <data name="VMO64037" xml:space="preserve"><value>設定包含具有匿名 PTZ 工作階段功能的規則。您的授權不支援。</value></data>
+  <data name="VMO64038" xml:space="preserve"><value>設定包含鎖定的攝影機預設點。您的授權不支援。</value></data>
+  <data name="VMO64039" xml:space="preserve"><value>此配置包含一台或多台設定為使用硬體加速運動偵測之攝影機。您的授權不支援此部分。</value></data>
+  <data name="VMO64003" xml:space="preserve"><value>無法套用授權。授權已過期。</value></data>
+  <data name="VMO64002" xml:space="preserve"><value>每個儲存的封存數目已達到其限制。</value></data>
+  <data name="VMO64001" xml:space="preserve"><value>功能未授權。</value></data>
+  <data name="VMO64000" xml:space="preserve"><value>發生一般授權錯誤。如需詳細資訊，請參閱記錄檔。</value></data>
+  <data name="VMO64007" xml:space="preserve"><value>SLC 未註冊。</value></data>
+  <data name="VMO64006" xml:space="preserve"><value>指定的使用者名稱或密碼不正確。</value></data>
+  <data name="VMO64005" xml:space="preserve"><value>無法套用授權。軟體授權碼與系統中的授權碼不符。若要變更授權，以滑鼠右鍵按一下管理伺服器系統匣圖示，然後選取「變更授權」。</value></data>
+  <data name="VMO64004" xml:space="preserve"><value>無法套用授權。授權檔無效。</value></data>
+  <data name="VMO64009" xml:space="preserve"><value>已在多個系統上啟動此授權。</value></data>
+  <data name="VMO64008" xml:space="preserve"><value>不允許指定的使用者啟動此系統。</value></data>
+  <data name="VMO64012" xml:space="preserve"><value>設定使用 Axis One-click。您的授權不支援。</value></data>
+  <data name="VMO64013" xml:space="preserve"><value>設定包含子站台。您的授權不支援。</value></data>
+  <data name="VMO64010" xml:space="preserve"><value>設定包含使用低影格速率的儲存區域。您的授權不支援。</value></data>
+  <data name="VMO64011" xml:space="preserve"><value>設定包含具有時間設定檔的角色或安全性設定。您的授權不支援。</value></data>
+  <data name="VMO64016" xml:space="preserve"><value>設定包含使用多點傳送的裝置。您的授權不支援。</value></data>
+  <data name="VMO64017" xml:space="preserve"><value>設定包含封存過多的儲存區域。您的授權不支援。</value></data>
+  <data name="VMO64014" xml:space="preserve"><value>設定包含互連的硬體裝置。您的授權不支援。</value></data>
+  <data name="VMO64015" xml:space="preserve"><value>設定包含使用多個串流的裝置。您的授權不支援。</value></data>
+  <data name="VMO64018" xml:space="preserve"><value>設定包含容錯移轉錄影伺服器或群組。您的授權不支援。</value></data>
+  <data name="VMO64019" xml:space="preserve"><value>設定包含使用加密的儲存區域。您的授權不支援。</value></data>
+  <data name="VMO64060" xml:space="preserve"><value>此設定包含已設置為錄影多個串流的裝置。
+
+您的權限不足以支持多串流錄製。</value></data>
+  <data name="VMO64043" xml:space="preserve"><value>設定包含媒體限制。您的授權不支援此設定。</value></data>
+  <data name="VMO64042" xml:space="preserve"><value>此設定包含由視訊處理框架產生的一個或多個裝置，而您的權限不足以支持此功能。</value></data>
+  <data name="VMO64041" xml:space="preserve"><value>設定中包含一個或多個設定為使用 AAC 音訊編碼的裝置。您的授權不支援此部分。</value></data>
+  <data name="VMO64040" xml:space="preserve"><value>設定中包含一個或多個設定為使用隱私遮蔽的攝影機。您的授權不支援此部分。</value></data>
+  <data name="VMO64056" xml:space="preserve"><value>您已經在其他系統上使用一或多個授權。</value></data>
+  <data name="VMO64057" xml:space="preserve"><value>您已經更換太多硬體。</value></data>
+  <data name="VMO64054" xml:space="preserve"><value>相較於授權所允許的數目，您已經安裝更多錄影伺服器。</value></data>
+  <data name="VMO64055" xml:space="preserve"><value>系統無法為已安裝的產品註冊 SLC。</value></data>
+  <data name="VMO64052" xml:space="preserve"><value>您已經要求太多硬體的授權。</value></data>
+  <data name="VMO64053" xml:space="preserve"><value>您已經要求太多 {0} 攝影機訊源的授權。</value></data>
+  <data name="VMO64050" xml:space="preserve"><value>存取遭拒。</value></data>
+  <data name="VMO64051" xml:space="preserve"><value>您所要求的攝影機訊源授權比您所擁有的攝影機訊源授權還多。</value></data>
+  <data name="VMO64058" xml:space="preserve"><value>系統無法與授權啟動伺服器通訊。</value></data>
+  <data name="VMO64059" xml:space="preserve"><value>無法啟用您的授權。您需要先註冊 SLC。</value></data>
+  <data name="VMO64102" xml:space="preserve"><value>無法更新巡弋設定檔。巡弋設定檔不存在。</value></data>
+  <data name="VMO64103" xml:space="preserve"><value>無法重新命名巡弋設定檔。名稱為 '{0}' 的巡弋設定檔已存在於攝影機上。</value></data>
+  <data name="VMO64100" xml:space="preserve"><value>無法建立巡弋設定檔。名稱為 '{0}' 的巡弋設定檔已存在於攝影機上。</value></data>
+  <data name="VMO64101" xml:space="preserve"><value>無法建立巡弋設定檔。攝影機不支援 PTZ。</value></data>
+  <data name="VMO64104" xml:space="preserve"><value>無法刪除巡弋設定檔。巡弋設定檔不存在。</value></data>
+  <data name="VMO64105" xml:space="preserve"><value>巡弋設定檔不存在。</value></data>
+  <data name="VMO65020" xml:space="preserve"><value>無法刪除偵測到的硬體認證，因為 ID 為「{0}」的列不存在。</value></data>
+  <data name="VMO65021" xml:space="preserve"><value>無法插入與偵測到的硬體相關的資訊，因為自動硬體偵測已停用。</value></data>
+  <data name="VMO65022" xml:space="preserve"><value>無法建立錄影伺服器。相同 ID 的錄影伺服器已存在。</value></data>
+  <data name="VMO65013" xml:space="preserve"><value>無法插入與偵測到的硬體相關的資訊，因為 ID 為「{0}」的列已存在。</value></data>
+  <data name="VMO65012" xml:space="preserve"><value>無法插入與偵測到的硬體相關的資訊，因為 MAC 位址為「{0}」的列已存在。</value></data>
+  <data name="VMO65011" xml:space="preserve"><value>無法更新授權。ID 為「{0}」的時間設定檔不存在。</value></data>
+  <data name="VMO65010" xml:space="preserve"><value>無法更新管理員角色的時間設定檔。</value></data>
+  <data name="VMO65017" xml:space="preserve"><value>驅動程式編號不存在於裝置驅動程式表中: '{0}'</value></data>
+  <data name="VMO65016" xml:space="preserve"><value>偵測到的硬體不存在。</value></data>
+  <data name="VMO65015" xml:space="preserve"><value>無法更新與偵測到的硬體相關的資訊，因為 ID 為「{0}」的列不存在。</value></data>
+  <data name="VMO65014" xml:space="preserve"><value>無法刪除與偵測到的硬體相關的資訊，因為 ID 為「{0}」的列不存在。</value></data>
+  <data name="VMO65019" xml:space="preserve"><value>無法更新偵測到的硬體認證，因為 ID 為「{0}」的列不存在。</value></data>
+  <data name="VMO65018" xml:space="preserve"><value>無法插入偵測到的硬體認證，因為 ID 為「{0}」的列已存在。</value></data>
+  <data name="VMO65002" xml:space="preserve"><value>發生伺服器內部錯誤。</value></data>
+  <data name="VMO65003" xml:space="preserve"><value>找不到效能狀態計數器規則。</value></data>
+  <data name="VMO65000" xml:space="preserve"><value>註冊物件時發生內部錯誤。{0}、{1}、{2}</value></data>
+  <data name="VMO65001" xml:space="preserve"><value>取消註冊物件時發生內部錯誤。{0}、{1}、{2}</value></data>
+  <data name="VMO65006" xml:space="preserve"><value>系統設定 '{1}' 的值 '{0}' 無效。</value></data>
+  <data name="VMO65007" xml:space="preserve"><value>無法在授權要求檔案中包含您的加值產品。訊息: '{0}'。</value></data>
+  <data name="VMO65004" xml:space="preserve"><value>找不到系統監視器狀態來源。</value></data>
+  <data name="VMO65005" xml:space="preserve"><value>不支援系統設定 '{0}'。</value></data>
+  <data name="VMO65008" xml:space="preserve"><value>系統設定 '{0}' 不存在於資料庫中。</value></data>
+  <data name="VMO65009" xml:space="preserve"><value>遺漏授權啟動使用者認證，系統無法啟用自動授權啟動。</value></data>
+  <data name="VMO62500" xml:space="preserve"><value>權限已遭拒。</value></data>
+  <data name="VMO62005" xml:space="preserve"><value>大小上限必須介於 0 和 1 Exabyte 之間。</value></data>
+  <data name="VMO62004" xml:space="preserve"><value>retainMinutes 引數必須介於 0 和 999 年之間。</value></data>
+  <data name="VMO62007" xml:space="preserve"><value>指定的裝置不支援擷取遠端錄影。</value></data>
+  <data name="VMO62006" xml:space="preserve"><value>目標影格速率必須介於 0.00028 和 100 每秒影格數之間。</value></data>
+  <data name="VMO62001" xml:space="preserve"><value>引數無效。</value></data>
+  <data name="VMO62003" xml:space="preserve"><value>物件 ID 無效。</value></data>
+  <data name="VMO62002" xml:space="preserve"><value>引數不得為 Null。</value></data>
+  <data name="VMO62008" xml:space="preserve"><value>遺漏引數。</value></data>
+  <data name="VMO62014" xml:space="preserve"><value>下列帳戶名稱無效: '{0}'。</value></data>
+  <data name="VMO62015" xml:space="preserve"><value>以下辨別名稱 (DN) 的格式錯誤或包含空字串: '{0}'。請確認格式遵循 LDAP API 命名慣例。</value></data>
+  <data name="VMO62016" xml:space="preserve"><value>名為 '{0}' 的 SID 不是有效的安全性識別碼。</value></data>
+  <data name="VMO62017" xml:space="preserve"><value>無法從 Active Directory 擷取身份的 SID。</value></data>
+  <data name="VMO62010" xml:space="preserve"><value>引數 {1} 包含無效的安全性物件識別碼 ('{0}')</value></data>
+  <data name="VMO62011" xml:space="preserve"><value>引數 {1} 包含無效的動作識別碼 ('{0}')。</value></data>
+  <data name="VMO62012" xml:space="preserve"><value>引數 {1} 包含無效的物件等級識別碼 ('{0}')。</value></data>
+  <data name="VMO62013" xml:space="preserve"><value>引數 {1} 包含無效的 SID ('{0}')。</value></data>
+  <data name="VMO62018" xml:space="preserve"><value>無法從下列 Active Directory 網域讀取資訊: {0}。Active Directory 網域未知或找不到。</value></data>
+  <data name="VMO62019" xml:space="preserve"><value>引數 {0} 的長度為零。請至少包含一個 SID 元素。</value></data>
+  <data name="VMO62027" xml:space="preserve"><value>「結束時間」引數係指未來的日期時間。請確定已同步所有錄影伺服器、管理伺服器和 Smart Client 安裝上的日期時間</value></data>
+  <data name="VMO62026" xml:space="preserve"><value>引數 {0} 包含未知的加密方法。</value></data>
+  <data name="VMO62025" xml:space="preserve"><value>引數 {0} 必須介於 0 和 100 之間。</value></data>
+  <data name="VMO62024" xml:space="preserve"><value>引數 {0} 的長度為零。請至少包含一個位址元素。</value></data>
+  <data name="VMO62023" xml:space="preserve"><value>引數 {0} 無效。物件 ('{1}') 無法從其本身繼承。</value></data>
+  <data name="VMO62022" xml:space="preserve"><value>引數 {0} 的長度為零。請至少包含一個名稱元素。</value></data>
+  <data name="VMO62021" xml:space="preserve"><value>引數 {0} 的長度為零。請至少包含一個物件識別碼元素。</value></data>
+  <data name="VMO62020" xml:space="preserve"><value>引數 {0} 的長度為零。請至少包含一個動作識別碼元素。</value></data>
+  <data name="VMO63014" xml:space="preserve"><value>應用程式錯誤</value></data>
+  <data name="VMO63016" xml:space="preserve"><value>未安裝 {0}。</value></data>
+  <data name="VMO63010" xml:space="preserve"><value>未準備預存程序，無法執行。</value></data>
+  <data name="VMO63013" xml:space="preserve"><value>發生無法處理的例外。</value></data>
+  <data name="VMO63012" xml:space="preserve"><value>嚴重錯誤。無法初始化管理伺服器 Web 服務。</value></data>
+  <data name="VMO63007" xml:space="preserve"><value>追蹤參數'{0}'不是有效的VideoOS管理伺服器追蹤參數。</value></data>
+  <data name="VMO60601" xml:space="preserve"><value>無法建立主控伺服器。名稱為 '{0}' 的其他主控伺服器已存在。</value></data>
+  <data name="VMO60603" xml:space="preserve"><value>無法更新主控伺服器。ID 為 '{0}' 的主控伺服器不存在。</value></data>
+  <data name="VMO60602" xml:space="preserve"><value>無法更新主控伺服器。名稱為 '{0}' 的其他主控伺服器已存在。</value></data>
+  <data name="VMO60605" xml:space="preserve"><value>無法刪除主控伺服器 '{0}'，因為其中包含一或多部攝影機。</value></data>
+  <data name="VMO60604" xml:space="preserve"><value>無法刪除主控伺服器。ID 為 '{0}' 的主控伺服器不存在。</value></data>
+  <data name="VMO60611" xml:space="preserve"><value>無法建立主控硬體。名稱為 '{0}' 的其他主控硬體已存在。</value></data>
+  <data name="VMO60612" xml:space="preserve"><value>無法更新主控硬體。名稱為 '{0}' 的其他主控硬體已存在。</value></data>
+  <data name="VMO60613" xml:space="preserve"><value>無法更新主控硬體。ID 為 '{0}' 的主控硬體不存在。</value></data>
+  <data name="VMO60614" xml:space="preserve"><value>無法刪除主控硬體。ID 為 '{0}' 的主控硬體不存在。</value></data>
+  <data name="VMO60615" xml:space="preserve"><value>限制錯誤。主控硬體 ID {0} 已存在於硬體表中。</value></data>
+  <data name="VMO60616" xml:space="preserve"><value>無法建立主控硬體。已新增此硬體。</value></data>
+  <data name="VMO60632" xml:space="preserve"><value>無法自動偵測錄影伺服器上的硬體。請重試或檢查錄影伺服器的記錄檔。</value></data>
+  <data name="VMO60633" xml:space="preserve"><value>無法掃描硬體。錄影伺服器必須離線。</value></data>
+  <data name="VMO60630" xml:space="preserve"><value>無法在錄影伺服器上開始掃描。</value></data>
+  <data name="VMO60631" xml:space="preserve"><value>無法開始掃描。另一個掃描工作階段正在錄影伺服器上執行。請稍後重試。</value></data>
+  <data name="VMO60636" xml:space="preserve"><value>不再支援 Recording Server 服務版本，故無法掃描硬體。</value></data>
+  <data name="VMO60637" xml:space="preserve"><value>掃描過程中發生未知錯誤。請確認以下是否正確: 位址、連接埠、使用者名稱和密碼。</value></data>
+  <data name="VMO60634" xml:space="preserve"><value>掃描硬體時未從錄影伺服器收到任何回應。</value></data>
+  <data name="VMO60635" xml:space="preserve"><value>掃描硬體時無法連線至錄影伺服器。</value></data>
+  <data name="VMO60638" xml:space="preserve"><value>找不到硬體的驅動程式。請確認以下是否正確: 位址、連接埠、使用者名稱和密碼。</value></data>
+  <data name="VMO60650" xml:space="preserve"><value>無法刪除硬體。一分鐘內未收到回應。</value></data>
+  <data name="VMO60651" xml:space="preserve"><value>無法刪除硬體。發生未知錯誤。</value></data>
+  <data name="VMO60661" xml:space="preserve"><value>無法刪除規則。規則不存在。</value></data>
+  <data name="VMO60660" xml:space="preserve"><value>無法更新規則。規則不存在。</value></data>
+  <data name="VMO60701" xml:space="preserve"><value>無法建立用戶端設定檔。名稱為 '{0}' 的用戶端設定檔已存在。</value></data>
+  <data name="VMO60702" xml:space="preserve"><value>無法更新用戶端設定檔。用戶端設定檔不存在。</value></data>
+  <data name="VMO60703" xml:space="preserve"><value>無法重新命名用戶端設定檔。名稱為 '{0}' 的用戶端設定檔已存在。</value></data>
+  <data name="VMO60704" xml:space="preserve"><value>無法刪除用戶端設定檔。用戶端設定檔不存在。</value></data>
+  <data name="VMO60705" xml:space="preserve"><value>用戶端設定檔不存在。</value></data>
+  <data name="VMO60403" xml:space="preserve"><value>該裝置未處於受限即時模式。</value></data>
+  <data name="VMO60402" xml:space="preserve"><value>無法附加站台。已附加具有相同 ID 的站台。</value></data>
+  <data name="VMO60401" xml:space="preserve"><value>站台已經有連接的主機。</value></data>
+  <data name="VMO60400" xml:space="preserve"><value>站台不存在。</value></data>
+  <data name="VMO60407" xml:space="preserve"><value>無法卸載歸檔。
+
+只能卸載儲存設定中的最後一次歸檔。</value></data>
+  <data name="VMO60406" xml:space="preserve"><value>無法從站台 '{0}' 連線到站台 '{1}'</value></data>
+  <data name="VMO60405" xml:space="preserve"><value>發生錯誤。無法刪除主站台。</value></data>
+  <data name="VMO60404" xml:space="preserve"><value>發生錯誤。主站台不存在。</value></data>
+  <data name="VMO60409" xml:space="preserve"><value>無法卸載歸檔。
+
+歸檔不存在。</value></data>
+  <data name="VMO60408" xml:space="preserve"><value>無法安裝歸檔。
+
+歸檔不存在。</value></data>
+  <data name="VMO60412" xml:space="preserve"><value>無法更新可信核發者，可信核發者不存在。</value></data>
+  <data name="VMO60413" xml:space="preserve"><value>無法更新可信核發者，已存在具有同一核發者的可信核發者。</value></data>
+  <data name="VMO60410" xml:space="preserve"><value>無法移動歸檔。
+
+歸檔在卸載時無法移動。</value></data>
+  <data name="VMO60411" xml:space="preserve"><value>無法刪除可信核發者，可信核發者不存在。</value></data>
+  <data name="VMO60416" xml:space="preserve"><value>無法更新可信核發者，已存在具有同一地址的可信核發者。</value></data>
+  <data name="VMO60417" xml:space="preserve"><value>無法建立可信核發者，已存在具有同一地址的可信核發者。</value></data>
+  <data name="VMO60414" xml:space="preserve"><value>無法擷取可信核發者，可信核發者不存在。</value></data>
+  <data name="VMO60415" xml:space="preserve"><value>無法建立可信核發者，已存在具有同一核發者的可信核發者。</value></data>
+  <data name="VMO60465" xml:space="preserve"><value>角色與保留選項之間的關係不存在。</value></data>
+  <data name="VMO60464" xml:space="preserve"><value>角色與保留選項之間的關係不存在。</value></data>
+  <data name="VMO60461" xml:space="preserve"><value>無法在角色與保留選項之間建立關係。</value></data>
+  <data name="VMO60460" xml:space="preserve"><value>無法更新移轉伺服器，只能將一台移轉伺服器設定為熱待機伺服器。</value></data>
+  <data name="VMO60474" xml:space="preserve"><value>MIP Kind 不存在。</value></data>
+  <data name="VMO60475" xml:space="preserve"><value>已找到指定 Kind 的現有項目。如果該 Kind 的項目存在，則無法刪除 Kind。</value></data>
+  <data name="VMO60476" xml:space="preserve"><value>MIP 項目已存在，且未提供「latestModificationTime」參數。</value></data>
+  <data name="VMO60477" xml:space="preserve"><value>MIP 項目無法儲存。</value></data>
+  <data name="VMO60470" xml:space="preserve"><value>MIP 物件不存在。</value></data>
+  <data name="VMO60471" xml:space="preserve"><value>MIP 動作不存在。</value></data>
+  <data name="VMO60472" xml:space="preserve"><value>說明文字無效。</value></data>
+  <data name="VMO60473" xml:space="preserve"><value>MIP 項目不存在。</value></data>
+  <data name="VMO60456" xml:space="preserve"><value>新密碼和舊密碼不得相同。</value></data>
+  <data name="VMO60454" xml:space="preserve"><value>無法刪除站台資訊。站台資訊不存在。</value></data>
+  <data name="VMO60455" xml:space="preserve"><value>站台資訊不存在。</value></data>
+  <data name="VMO60452" xml:space="preserve"><value>無法更新站台資訊。站台資訊不存在。</value></data>
+  <data name="VMO60453" xml:space="preserve"><value>密碼不符合複雜度要求。</value></data>
+  <data name="VMO60451" xml:space="preserve"><value>無法建立站台資訊。資訊「{0}」已存在。</value></data>
+  <data name="VMO60483" xml:space="preserve"><value>外掛程式事件不存在。系統無法更新它。</value></data>
+  <data name="VMO60482" xml:space="preserve"><value>無法重新命名外掛程式事件。名稱為 '{0}' 的其他事件已存在。</value></data>
+  <data name="VMO60481" xml:space="preserve"><value>ID 為 {0} 或名稱為 {1} 的外掛程式事件已存在。</value></data>
+  <data name="VMO60480" xml:space="preserve"><value>外掛程式事件不存在。</value></data>
+  <data name="VMO60484" xml:space="preserve"><value>無法移除外掛程式事件。沒有 ID 為 '{0}' 的外掛程式事件。</value></data>
+  <data name="VMO60520" xml:space="preserve"><value>無法更換硬體。
+
+無法從遠端系統讀取配置。驅動程式傳回以下錯誤訊息：'{0}'。</value></data>
+  <data name="VMO60521" xml:space="preserve"><value>無法更換硬體。
+
+發生未知錯誤。</value></data>
+  <data name="VMO60502" xml:space="preserve"><value>無法更新工作。工作不存在。</value></data>
+  <data name="VMO60501" xml:space="preserve"><value>無法停止工作。工作不存在。</value></data>
+  <data name="VMO60531" xml:space="preserve"><value>無法移除錄影伺服器，未知錯誤。</value></data>
+  <data name="VMO60530" xml:space="preserve"><value>無法將變更寫入至設定資料庫。</value></data>
+  <data name="VMO60513" xml:space="preserve"><value>無法更換硬體。
+
+設定硬體時，無法連線至錄影伺服器。</value></data>
+  <data name="VMO60512" xml:space="preserve"><value>無法更換硬體。
+
+未收到錄影伺服器的任何回應。</value></data>
+  <data name="VMO60511" xml:space="preserve"><value>無法將硬體從 {0} 取代為 {1}</value></data>
+  <data name="VMO60510" xml:space="preserve"><value>無法將硬體從 {0} 取代為 {1} [錯誤：{2}]</value></data>
+  <data name="VMO60517" xml:space="preserve"><value>無法更換硬體。
+
+此硬體不存在。</value></data>
+  <data name="VMO60516" xml:space="preserve"><value>無法更換硬體。
+
+無法從硬體連線或接收資訊。
+請確認以下參數是否正確：位址、連接埠、使用者名稱、密碼和硬體驅動程式。</value></data>
+  <data name="VMO60515" xml:space="preserve"><value>無法更換硬體。
+
+無法從硬體連線或接收資訊。
+請確認以下參數是否正確：位址、連接埠、使用者名稱、密碼和硬體驅動程式。</value></data>
+  <data name="VMO60514" xml:space="preserve"><value>無法更換硬體。
+
+不再支援 Recording Server 服務版本。</value></data>
+  <data name="VMO60519" xml:space="preserve"><value>無法更換硬體。 
+
+現存硬體包含的裝置比新硬體多。
+硬體更換程序將刪除已停用的冗余裝置。
+
+您必須停用所有可能被刪除的裝置。</value></data>
+  <data name="VMO60518" xml:space="preserve"><value>無法更換硬體。
+
+現存硬體包含的裝置比新硬體多。
+硬體更換程序將刪除已停用的冗余裝置。
+
+您必須刪除已停用裝置。</value></data>
+  <data name="VMO60241" xml:space="preserve"><value>無法更新串流設定。
+
+將被更新的串流數目與已設定的串流數目不符。</value></data>
+  <data name="VMO60240" xml:space="preserve"><value>無法更新串流設定。
+
+裝置不支援指定的串流類型。</value></data>
+  <data name="VMO60243" xml:space="preserve"><value>無法授權錄影伺服器。授權無效。</value></data>
+  <data name="VMO60242" xml:space="preserve"><value>無法授權錄影伺服器。管理伺服器不支援 Recording Server 服務的版本。</value></data>
+  <data name="VMO60245" xml:space="preserve"><value>無法封鎖硬體。硬體不存在。</value></data>
+  <data name="VMO60244" xml:space="preserve"><value>無法授權錄影伺服器。發生非預期的錯誤。</value></data>
+  <data name="VMO60247" xml:space="preserve"><value>無法將硬體移至其他錄影伺服器。指定錄影伺服器中找不到任何硬體，或錄影伺服器不存在。</value></data>
+  <data name="VMO60246" xml:space="preserve"><value>無法解除封鎖系統鎖定的硬體。硬體封鎖不存在。</value></data>
+  <data name="VMO60249" xml:space="preserve"><value>無法將硬體移至其他錄影伺服器。目標錄影儲存不存在。</value></data>
+  <data name="VMO60248" xml:space="preserve"><value>無法將硬體移至其他錄影伺服器。目標錄影伺服器不存在。</value></data>
+  <data name="VMO60250" xml:space="preserve"><value>無法移除自訂屬性。屬性不存在。</value></data>
+  <data name="VMO60251" xml:space="preserve"><value>無法新增硬體。錄影伺服器不存在。</value></data>
+  <data name="VMO60252" xml:space="preserve"><value>其他使用者已經更新授權。無法儲存變更。</value></data>
+  <data name="VMO60253" xml:space="preserve"><value>無法更新設定。
+
+未授權名稱為 '{0}' 的值或屬性。</value></data>
+  <data name="VMO60254" xml:space="preserve"><value>無法完成工作。伺服器發生內部錯誤。</value></data>
+  <data name="VMO60255" xml:space="preserve"><value>無法授權錄影伺服器。
+
+無法使用錄影伺服器。</value></data>
+  <data name="VMO60256" xml:space="preserve"><value>無法授權錄影伺服器。
+
+不再支援 Recording Server 服務版本。</value></data>
+  <data name="VMO60257" xml:space="preserve"><value>無法授權錄影伺服器。
+
+與錄影伺服器的通訊逾時。</value></data>
+  <data name="VMO60258" xml:space="preserve"><value>無法授權錄影伺服器。
+
+授權無效。</value></data>
+  <data name="VMO60259" xml:space="preserve"><value>無法授權錄影伺服器。
+
+設定包含的錄影伺服器數目比授權所允許的數目要多。</value></data>
+  <data name="VMO60263" xml:space="preserve"><value>無法移動硬體。
+設定中未包含目標錄影伺服器。</value></data>
+  <data name="VMO60262" xml:space="preserve"><value>無法移動硬體。
+
+目標錄影伺服器不是最新版本。</value></data>
+  <data name="VMO60261" xml:space="preserve"><value>無法移動硬體。
+
+目標錄影伺服器位於容錯移轉模式或未連線。</value></data>
+  <data name="VMO60260" xml:space="preserve"><value>無法授權錄影伺服器。
+
+發生非預期的錯誤。</value></data>
+  <data name="VMO60267" xml:space="preserve"><value>無法移動硬體。
+
+硬體不存在。</value></data>
+  <data name="VMO60266" xml:space="preserve"><value>無法移動硬體。
+
+設定中未包含來源錄影伺服器。</value></data>
+  <data name="VMO60265" xml:space="preserve"><value>無法移動硬體。
+
+來源錄影伺服器不是最新版本。</value></data>
+  <data name="VMO60264" xml:space="preserve"><value>無法移動硬體。
+
+來源錄影伺服器位於容錯移轉模式或未連線。</value></data>
+  <data name="VMO60269" xml:space="preserve"><value>無法移動硬體。
+
+無法停止目前錄影伺服器的硬體。</value></data>
+  <data name="VMO60268" xml:space="preserve"><value>無法移動硬體。
+
+無法與設定資料庫通訊。</value></data>
+  <data name="VMO60272" xml:space="preserve"><value>無法移動硬體。
+
+無法更新設定。</value></data>
+  <data name="VMO60273" xml:space="preserve"><value>無法移動硬體。
+
+來源錄影伺服器已連線，但不允許硬體從來源錄影伺服器中移出。</value></data>
+  <data name="VMO60270" xml:space="preserve"><value>無法移動硬體。
+
+無法移除 PTZ 預設點。預設點由一個或多個巡弋設定檔使用。</value></data>
+  <data name="VMO60271" xml:space="preserve"><value>無法移動硬體。
+
+停止目前錄影伺服器的硬體時逾時。</value></data>
+  <data name="VMO60276" xml:space="preserve"><value>無法新增硬體。
+
+錄影伺服器上已定義硬體。</value></data>
+  <data name="VMO60277" xml:space="preserve"><value>無法新增硬體。
+
+設定硬體時，無法連線至錄影伺服器。</value></data>
+  <data name="VMO60274" xml:space="preserve"><value>無法新增硬體。
+    
+找不到錄影伺服器的預設錄影儲存空間。</value></data>
+  <data name="VMO60275" xml:space="preserve"><value>無法新增硬體。
+
+設定硬體時未從錄影伺服器收到任何回應。</value></data>
+  <data name="VMO60278" xml:space="preserve"><value>無法新增硬體。
+
+不再支援 Recording Server 服務版本，故無法新增硬體。</value></data>
+  <data name="VMO60279" xml:space="preserve"><value>無法新增硬體。
+
+設定硬體時未從錄影伺服器收到任何回應。</value></data>
+  <data name="VMO60205" xml:space="preserve"><value>Smart Wall預設點不存在。系統無法更新它。</value></data>
+  <data name="VMO60204" xml:space="preserve"><value>名稱為 {0} 的 Smart Wall 預設點已存在於 Smart Wall {1} 上。</value></data>
+  <data name="VMO60207" xml:space="preserve"><value>Smart Wall預設點不存在。系統無法移除它。</value></data>
+  <data name="VMO60206" xml:space="preserve"><value>名稱為 {0} 的 Smart Wall 預設點已存在於 Smart Wall {1} 上。系統無法重新命名 Smart Wall 預設點。</value></data>
+  <data name="VMO60201" xml:space="preserve"><value>Smart Wall不存在。系統無法更新它。</value></data>
+  <data name="VMO60200" xml:space="preserve"><value>名稱為{0}的Smart Wall已存在於伺服器上。</value></data>
+  <data name="VMO60203" xml:space="preserve"><value>Smart Wall不存在。系統無法移除它。</value></data>
+  <data name="VMO60202" xml:space="preserve"><value>名稱為{0}的Smart Wall已存在。系統無法重新命名它。</value></data>
+  <data name="VMO60209" xml:space="preserve"><value>Smart Wall不存在。系統無法建立Smart Wall預設點。</value></data>
+  <data name="VMO60208" xml:space="preserve"><value>Smart Wall不存在。系統無法建立監視螢幕。</value></data>
+  <data name="VMO60214" xml:space="preserve"><value>名稱為 {0} 的檢視已存在於伺服器上。</value></data>
+  <data name="VMO60215" xml:space="preserve"><value>檢視不存在。系統無法更新它。</value></data>
+  <data name="VMO60216" xml:space="preserve"><value>名稱為 {0} 的檢視已存在。系統無法重新命名它。</value></data>
+  <data name="VMO60217" xml:space="preserve"><value>檢視不存在。系統無法移除它。</value></data>
+  <data name="VMO60210" xml:space="preserve"><value>名稱為 {0} 的監視器已存在於 Smart Wall {1} 上。</value></data>
+  <data name="VMO60211" xml:space="preserve"><value>無法更新監視器。監視器不存在。</value></data>
+  <data name="VMO60212" xml:space="preserve"><value>無法重新命名監視器。Smart Wall {1} 上已存在名為 {0} 的監視器。</value></data>
+  <data name="VMO60213" xml:space="preserve"><value>無法移除監視器。監視器不存在。</value></data>
+  <data name="VMO60218" xml:space="preserve"><value>ID 為 '{0}' 的檢視項目已存在於伺服器上。</value></data>
+  <data name="VMO60219" xml:space="preserve"><value>ID 為 '{0}' 的檢視項目已存在於伺服器上。</value></data>
+  <data name="VMO60227" xml:space="preserve"><value>無法移除字串。字串不存在。</value></data>
+  <data name="VMO60226" xml:space="preserve"><value>無法加入新串流。已經到達最大串流數目。</value></data>
+  <data name="VMO60225" xml:space="preserve"><value>裝置不支援串流。</value></data>
+  <data name="VMO60224" xml:space="preserve"><value>名稱為 '{0}' 的時間設定檔已存在。系統無法建立時間設定檔。</value></data>
+  <data name="VMO60223" xml:space="preserve"><value>時間設定檔不存在。系統無法移除它。</value></data>
+  <data name="VMO60222" xml:space="preserve"><value>名稱為 {0} 的時間設定檔已存在。系統無法重新命名它。</value></data>
+  <data name="VMO60221" xml:space="preserve"><value>時間設定檔不存在。系統無法更新它。</value></data>
+  <data name="VMO60220" xml:space="preserve"><value>監視器預設不存在。系統無法更新它。</value></data>
+  <data name="VMO60229" xml:space="preserve"><value>無法更新串流設定。</value></data>
+  <data name="VMO60228" xml:space="preserve"><value>無法移除串流。您無法移除最後一個串流。</value></data>
+  <data name="VMO60236" xml:space="preserve"><value>無法更新串流設定。
+
+該裝置僅支授單一串流。</value></data>
+  <data name="VMO60237" xml:space="preserve"><value>無法更新串流設定。
+
+您必須只設定一個預設即時串流。</value></data>
+  <data name="VMO60234" xml:space="preserve"><value>無法更新串流設定。
+
+錄影串流必須執行外掛程式，且必須按照即時串流來設定預設的即時串流。</value></data>
+  <data name="VMO60235" xml:space="preserve"><value>無法更新串流設定。
+
+該裝置不支援已選取的串流組合。</value></data>
+  <data name="VMO60232" xml:space="preserve"><value>無法更新串流設定。
+
+串流必須有名稱。</value></data>
+  <data name="VMO60233" xml:space="preserve"><value>無法更新串流設定。
+
+您必須將所有串流設定為即時串流、錄影串流，或將其同時設定為上述兩者。</value></data>
+  <data name="VMO60230" xml:space="preserve"><value>無法更新串流設定。
+
+您只能設定相同的串流一次。</value></data>
+  <data name="VMO60231" xml:space="preserve"><value>無法更新串流設定。
+
+串流名稱必須是唯一的。</value></data>
+  <data name="VMO60238" xml:space="preserve"><value>無法更新串流設定。
+
+您必須只設定一個串流作為錄影串流。</value></data>
+  <data name="VMO60239" xml:space="preserve"><value>無法更新串流設定。
+
+您的授權僅支援一個即時串流與一個錄影串流。</value></data>
+  <data name="VMO60289" xml:space="preserve"><value>無法新增硬體。
+系統不支援遠端系統版本。</value></data>
+  <data name="VMO60288" xml:space="preserve"><value>無法新增硬體。
+
+系統無法辨識遠端系統的版本。
+
+已將遠端系統識別為: {0} {1}</value></data>
+  <data name="VMO60285" xml:space="preserve"><value>無法新增硬體。
+
+系統無法辨識遠端系統的類型。</value></data>
+  <data name="VMO60284" xml:space="preserve"><value>無法新增硬體。
+
+未知錯誤。無法從遠端系統讀取設定。驅動程式提供下列錯誤訊息: '{0}'</value></data>
+  <data name="VMO60287" xml:space="preserve"><value>無法新增硬體。
+
+系統無法辨識遠端系統的版本。</value></data>
+  <data name="VMO60286" xml:space="preserve"><value>無法新增硬體。
+
+系統無法辨識遠端系統的類型。
+
+已將遠端系統識別為: {0} {1}</value></data>
+  <data name="VMO60281" xml:space="preserve"><value>無法新增硬體。
+
+無法從硬體連線或接收資訊。請確認以下是否正確: 位址、連接埠、使用者名稱、密碼和硬體驅動程式。</value></data>
+  <data name="VMO60280" xml:space="preserve"><value>無法新增硬體。
+
+無法從硬體連線或接收資訊。請確認以下是否正確: 位址、連接埠、使用者名稱、密碼和硬體驅動程式。</value></data>
+  <data name="VMO60283" xml:space="preserve"><value>無法新增硬體。
+
+無法登入遠端系統。</value></data>
+  <data name="VMO60282" xml:space="preserve"><value>無法新增硬體。
+
+遠端系統已報告: 指定的使用者帳戶沒有遠端系統的「管理員存取權」。</value></data>
+  <data name="VMO60298" xml:space="preserve"><value>系統無法從已移動的硬體接收視訊，因為它使用不存在於目標錄影伺服器上的驅動程式。
+
+在目標錄影伺服器安裝遺漏的驅動程式，或設定硬體使用其他驅動程式。</value></data>
+  <data name="VMO60299" xml:space="preserve"><value>已移動的硬體使用存在於目標錄影伺服器上不同版本的驅動程式。
+硬體移動時，會自動在目標錄影伺服器上更新驅動程式。
+
+您必須手動檢查是否正確更新驅動程式，且連線的裝置是否啟動。</value></data>
+  <data name="VMO60294" xml:space="preserve"><value>無法新增硬體。
+無法從設定資料庫讀取。</value></data>
+  <data name="VMO60295" xml:space="preserve"><value>無法新增硬體。
+硬體定義無效。</value></data>
+  <data name="VMO60296" xml:space="preserve"><value>無法新增硬體。
+在遠端系統上找不到錄影伺服器。</value></data>
+  <data name="VMO60297" xml:space="preserve"><value>無法移動硬體。
+
+硬體已位於目標錄影伺服器。</value></data>
+  <data name="VMO60290" xml:space="preserve"><value>無法新增硬體。
+系統不支援遠端系統的版本。
+
+已將遠端系統識別為: {0} {1}</value></data>
+  <data name="VMO60291" xml:space="preserve"><value>無法新增硬體。
+系統無法辨識遠端系統。</value></data>
+  <data name="VMO60292" xml:space="preserve"><value>無法新增硬體。
+系統無法辨識遠端系統。
+
+已將遠端系統識別為: {0} {1}</value></data>
+  <data name="VMO60293" xml:space="preserve"><value>無法新增硬體。
+無法將變更寫入至配置資料庫。
+      </value></data>
+  <data name="VMO60340" xml:space="preserve"><value>無法將要求從角色中移除。
+
+名稱為「{1}」的「{0}」中的要求不存在於該角色中。</value></data>
+  <data name="VMO60341" xml:space="preserve"><value>無法將要求新增至角色。
+
+名稱為「{1}」的「{0}」中的要求不存在。</value></data>
+  <data name="VMO60342" xml:space="preserve"><value>無法將要求新增至角色。
+
+該角色中已存在相同的要求。</value></data>
+  <data name="VMO60343" xml:space="preserve"><value>無法變更使用者密碼。
+
+無法變更透過外部 IDP 登入的使用者密碼。</value></data>
+  <data name="VMO60344" xml:space="preserve"><value>無法允許使用者設定密碼。
+
+無法設定透過外部 IDP 登入的使用者密碼。</value></data>
+  <data name="VMO60345" xml:space="preserve"><value>無法強制變更使用者密碼。
+      
+無法對透過外部 IDP 登入的使用者強制變更密碼。</value></data>
+  <data name="VMO60346" xml:space="preserve"><value>無法建立使用者。
+
+不允許將使用者設定為被系統鎖定。</value></data>
+  <data name="VMO60347" xml:space="preserve"><value>無法更新使用者。
+
+不允許將使用者設定為被系統鎖定。</value></data>
+  <data name="VMO60348" xml:space="preserve"><value>無法建立此要求。
+      
+外部 IDP 的名稱為「{0}」的要求已存在。</value></data>
+  <data name="VMO60349" xml:space="preserve"><value>無法建立此要求。
+      
+外部 IDP 的顯示名稱為「{0}」的要求已存在。</value></data>
+  <data name="VMO60362" xml:space="preserve"><value>無法更新外部 IDP。
+
+外部 IDP 不存在。</value></data>
+  <data name="VMO60363" xml:space="preserve"><value>無法更新外部 IDP。
+
+已存在帶有相同名稱的外部 IDP。</value></data>
+  <data name="VMO60360" xml:space="preserve"><value>無法建立外部 IDP。
+
+已存在帶有相同名稱的外部 IDP。</value></data>
+  <data name="VMO60361" xml:space="preserve"><value>無法建立外部 IDP。
+
+已存在帶有相同驗證授權單位的外部 IDP。</value></data>
+  <data name="VMO60366" xml:space="preserve"><value>無法更新此要求。
+      
+外部 IDP 的顯示名稱為「{0}」的要求已存在。</value></data>
+  <data name="VMO60367" xml:space="preserve"><value>無法更新此要求。
+
+此要求不存在。</value></data>
+  <data name="VMO60364" xml:space="preserve"><value>無法更新外部 IDP。
+
+已存在帶有相同驗證授權單位的外部 IDP。</value></data>
+  <data name="VMO60365" xml:space="preserve"><value>無法刪除外部 IDP。
+
+外部 IDP 不存在。</value></data>
+  <data name="VMO60368" xml:space="preserve"><value>無法刪除外部 IDP。
+          
+仍有針對外部 IDP 註冊的要求。</value></data>
+  <data name="VMO60369" xml:space="preserve"><value>無法刪除外部 IDP。
+        
+無法刪除外部 IDP。VMS 中仍存在來自外部 IDP 的使用者。</value></data>
+  <data name="VMO60351" xml:space="preserve"><value>無法建立基本使用者。
+
+使用者名稱為「{0}」的基本使用者已存在。</value></data>
+  <data name="VMO60350" xml:space="preserve"><value>無法刪除此要求。
+      
+此要求不存在。</value></data>
+  <data name="VMO60353" xml:space="preserve"><value>無法重新命名基本使用者。名稱為 {0} 的基本使用者已存在。</value></data>
+  <data name="VMO60352" xml:space="preserve"><value>無法更新基本使用者。基本使用者不存在。</value></data>
+  <data name="VMO60355" xml:space="preserve"><value>基本使用者不存在</value></data>
+  <data name="VMO60354" xml:space="preserve"><value>無法刪除基本使用者。基本使用者不存在。</value></data>
+  <data name="VMO60357" xml:space="preserve"><value>無法載入外部 IDP。
+
+外部 IDP 不存在。</value></data>
+  <data name="VMO60356" xml:space="preserve"><value>無法變更密碼。所提供的密碼不符合長度、複雜度或歷史記錄要求。</value></data>
+  <data name="VMO60359" xml:space="preserve"><value>無法建立外部 IDP。
+
+外部 IDP 已存在。</value></data>
+  <data name="VMO60358" xml:space="preserve"><value>無法建立外部 IDP。
+
+僅可設定一個外部 IDP。</value></data>
+  <data name="VMO60304" xml:space="preserve"><value>無法建立語音訊息
+
+系統中已有具相同名稱之語音訊息存在。</value></data>
+  <data name="VMO60305" xml:space="preserve"><value>無法刪除語音訊息
+
+語音訊息不存在。</value></data>
+  <data name="VMO60306" xml:space="preserve"><value>無法刪除歸檔。
+
+歸檔包含證據鎖定的資料。</value></data>
+  <data name="VMO60307" xml:space="preserve"><value>容錯移轉伺服器不存在。</value></data>
+  <data name="VMO60300" xml:space="preserve"><value>系統無法在移動之後檢查潛在的驅動程式問題。
+
+您必須手動檢查已移動的硬體是否將視訊傳送至系統。</value></data>
+  <data name="VMO60301" xml:space="preserve"><value>無法新增硬體。
+
+錄影伺服器必須離線。</value></data>
+  <data name="VMO60302" xml:space="preserve"><value>無法更新裝置。
+
+定義的事前緩衝期間超過儲存在記憶體中的限制。</value></data>
+  <data name="VMO60303" xml:space="preserve"><value>無法刪除錄影儲存空間。
+
+錄影儲存空間包含證據鎖定的資料。</value></data>
+  <data name="VMO60308" xml:space="preserve"><value>無法移動硬體。
+
+執行移動時已變更設定。請重試。</value></data>
+  <data name="VMO60309" xml:space="preserve"><value>無法刪除錄影。此裝置不存在。</value></data>
+  <data name="VMO60373" xml:space="preserve"><value>無法更新此要求。
+
+外部 IDP 的名稱為 '{0}' 的要求已存在。</value></data>
+  <data name="VMO60372" xml:space="preserve"><value>作業失敗。</value></data>
+  <data name="VMO60371" xml:space="preserve"><value>作業取消。</value></data>
+  <data name="VMO60370" xml:space="preserve"><value>無法刪除此要求。
+
+此要求仍在一個或多個角色中使用。</value></data>
+  <data name="VMO60377" xml:space="preserve"><value>該裝置已處於受限即時模式。</value></data>
+  <data name="VMO60376" xml:space="preserve"><value>無法刪除媒體限制。
+
+不存在媒體限制。</value></data>
+  <data name="VMO60375" xml:space="preserve"><value>無法更新媒體限制。
+
+不存在媒體限制。</value></data>
+  <data name="VMO60374" xml:space="preserve"><value>不支援此裝置類型的媒體限制。</value></data>
+  <data name="VMO60379" xml:space="preserve"><value>無法進入受限制的即時模式。
+
+一或多個裝置不存在。</value></data>
+  <data name="VMO60378" xml:space="preserve"><value>無法進入受限制的即時模式。
+
+一個或多個裝置已處於受限制的即時模式。</value></data>
+  <data name="VMO60326" xml:space="preserve"><value>硬體 {0} 已移動，不過授權資訊未更新。系統稍後將自動更新授權資訊。</value></data>
+  <data name="VMO60327" xml:space="preserve"><value>無法移動硬體。
+
+來源錄影儲存空間無法使用。
+      </value></data>
+  <data name="VMO60324" xml:space="preserve"><value>無效的隱私遮蔽。</value></data>
+  <data name="VMO60325" xml:space="preserve"><value>無法擷取安全性命名空間的資訊。該命名空間不存在。</value></data>
+  <data name="VMO60322" xml:space="preserve"><value>無法更新隱私遮蔽。隱私遮蔽區域與網格大小不相符。</value></data>
+  <data name="VMO60323" xml:space="preserve"><value>無法更新隱私遮蔽。只允許 0 (零) 或 1 為遮蔽區域值。</value></data>
+  <data name="VMO60320" xml:space="preserve"><value>擁有內部 ID '{0}' 的其他裝置預設點已存在。</value></data>
+  <data name="VMO60321" xml:space="preserve"><value>無法建立語音訊息
+
+系統中有太多語音訊息。</value></data>
+  <data name="VMO60328" xml:space="preserve"><value>無法移動硬體。
+
+目標錄影伺服器中的所有錄影儲存空間必須可用。
+      </value></data>
+  <data name="VMO60329" xml:space="preserve"><value>DateTime值不能早於 1900 年 1 月 1 日。</value></data>
+  <data name="VMO60315" xml:space="preserve"><value>無法更新語音訊息
+
+語音訊息不存在。</value></data>
+  <data name="VMO60314" xml:space="preserve"><value>無法更新語音訊息
+
+系統中已有具相同名稱之語音訊息存在。</value></data>
+  <data name="VMO60317" xml:space="preserve"><value>語音訊息太大。</value></data>
+  <data name="VMO60316" xml:space="preserve"><value>語音訊息不存在。</value></data>
+  <data name="VMO60311" xml:space="preserve"><value>伺服器不支援 '{0}' 功能。</value></data>
+  <data name="VMO60310" xml:space="preserve"><value>無法刪除錄影。錄影伺服器不存在。</value></data>
+  <data name="VMO60313" xml:space="preserve"><value>無法更新語音訊息
+
+語音訊息不存在。</value></data>
+  <data name="VMO60312" xml:space="preserve"><value>無法將硬體移至其他錄影伺服器。該硬體已在目標錄影伺服器中設定。</value></data>
+  <data name="VMO60319" xml:space="preserve"><value>不支援語音訊息格式。</value></data>
+  <data name="VMO60318" xml:space="preserve"><value>語音訊息內容無效。</value></data>
+  <data name="VMO60337" xml:space="preserve"><value>證據鎖定將在錄影伺服器上線時套用。</value></data>
+  <data name="VMO60336" xml:space="preserve"><value>無法為舊錄影伺服器中的裝置建立或更新證據鎖定。</value></data>
+  <data name="VMO60335" xml:space="preserve"><value>無法為帶有證據鎖定的裝置選取遠端播放：
+{0}</value></data>
+  <data name="VMO60334" xml:space="preserve"><value>無法刪除錄影伺服器。
+
+錄影伺服器中的錄影所在的裝置包含證據鎖定。</value></data>
+  <data name="VMO60333" xml:space="preserve"><value>此裝置支援從遠端系統播放。</value></data>
+  <data name="VMO60332" xml:space="preserve"><value>此裝置類型不支援加入書籤。</value></data>
+  <data name="VMO60331" xml:space="preserve"><value>此裝置類型不支援證據鎖定。</value></data>
+  <data name="VMO60330" xml:space="preserve"><value>DateTime刻度值不能小於零。</value></data>
+  <data name="VMO60339" xml:space="preserve"><value>包含 IDHardware「{0}」、DeviceType「{1}」、DeviceIndex「{2}」的裝置已存在。</value></data>
+  <data name="VMO60338" xml:space="preserve"><value>其他使用者已經更新硬體。無法儲存變更。</value></data>
+  <data name="VMO60388" xml:space="preserve"><value>無法更新串流設定。
+
+只能將一個串流設定為預設播放串流。</value></data>
+  <data name="VMO60389" xml:space="preserve"><value>無法更新串流設定。
+
+必須將一個串流設定為預設播放串流。</value></data>
+  <data name="VMO60384" xml:space="preserve"><value>無法替換硬體。
+
+不支援使用互連式產品驅動程式的硬體替換。</value></data>
+  <data name="VMO60385" xml:space="preserve"><value>無法替換硬體。
+
+不支援從一般驅動程式類型變更為互連產品驅動程式。</value></data>
+  <data name="VMO60386" xml:space="preserve"><value>無法更新串流設定。
+
+只能將一個串流設定為預設即時串流。</value></data>
+  <data name="VMO60387" xml:space="preserve"><value>無法更新串流設定。
+
+必須將一個串流設定為預設即時串流。</value></data>
+  <data name="VMO60380" xml:space="preserve"><value>無法更新即時媒體限制。
+
+不存在即時媒體限制。</value></data>
+  <data name="VMO60381" xml:space="preserve"><value>無法刪除即時媒體限制。
+
+不存在即時媒體限制。</value></data>
+  <data name="VMO60382" xml:space="preserve"><value>無法替換硬體。
+
+不支援使用 VPS 驅動程式的硬體替換。</value></data>
+  <data name="VMO60383" xml:space="preserve"><value>無法替換硬體。
+
+使用「遠端連接服務」的硬體不支援硬體更換。</value></data>
+  <data name="VMO60399" xml:space="preserve"><value>無法卸載歸檔。
+
+歸檔已卸載。</value></data>
+  <data name="VMO60398" xml:space="preserve"><value>無法卸載歸檔。
+
+有衝突的工作已存在。</value></data>
+  <data name="VMO60395" xml:space="preserve"><value>無法更新串流設定。
+      
+您的權限僅足以支援一個錄影串流。</value></data>
+  <data name="VMO60394" xml:space="preserve"><value>無法更新串流設定。
+
+必須將預設即時串流按照即時串流來設定。</value></data>
+  <data name="VMO60397" xml:space="preserve"><value>無法安裝歸檔。
+
+歸檔已安裝。</value></data>
+  <data name="VMO60396" xml:space="preserve"><value>無法安裝歸檔。
+
+有衝突的工作已存在。</value></data>
+  <data name="VMO60391" xml:space="preserve"><value>無法更新串流設定。
+
+必須將一個串流設定為主錄影串流。</value></data>
+  <data name="VMO60390" xml:space="preserve"><value>無法更新串流設定。
+
+只能將一個串流設定為主錄影串流。</value></data>
+  <data name="VMO60393" xml:space="preserve"><value>無法更新串流設定。
+
+一個或多個串流包含無效的錄影設定。</value></data>
+  <data name="VMO60392" xml:space="preserve"><value>無法更新串流設定。
+
+多於一個串流包含相同的錄影設定。</value></data>
+  <data name="VMO60061" xml:space="preserve"><value>無法更新伺服器群組。名為 {0} 的伺服器群組已存在。</value></data>
+  <data name="VMO60060" xml:space="preserve"><value>無法更新伺服器群組。伺服器群組不存在。</value></data>
+  <data name="VMO60063" xml:space="preserve"><value>無法更新硬體範本。硬體範本不存在。</value></data>
+  <data name="VMO60062" xml:space="preserve"><value>無法建立硬體範本。硬體範本已存在。</value></data>
+  <data name="VMO60065" xml:space="preserve"><value>無法建立硬體範本。硬體不存在。</value></data>
+  <data name="VMO60064" xml:space="preserve"><value>無法更新裝置。裝置不存在。</value></data>
+  <data name="VMO60067" xml:space="preserve"><value>您無法移除「私人」檢視群組。</value></data>
+  <data name="VMO60066" xml:space="preserve"><value>無法更新硬體範本。硬體範本已存在。</value></data>
+  <data name="VMO60069" xml:space="preserve"><value>無法建立裝置外掛程式。ID 為 {0} 的裝置外掛程式和 ID 為 {1} 的裝置已存在。</value></data>
+  <data name="VMO60068" xml:space="preserve"><value>無法移除硬體範本。硬體範本不存在。</value></data>
+  <data name="VMO60070" xml:space="preserve"><value>無法建立裝置外掛程式範本。ID 為 {0} 的裝置外掛程式範本和 ID 為 {1} 的裝置已存在。</value></data>
+  <data name="VMO60071" xml:space="preserve"><value>裝置不存在。</value></data>
+  <data name="VMO60072" xml:space="preserve"><value>無法移動伺服器群組。父伺服器群組不存在。</value></data>
+  <data name="VMO60073" xml:space="preserve"><value>無法移動伺服器群組。伺服器群組不存在。</value></data>
+  <data name="VMO60074" xml:space="preserve"><value>伺服器群組或其中一個子群組包含成員。系統無法移除它。</value></data>
+  <data name="VMO60075" xml:space="preserve"><value>無法移除伺服器群組。無法移除最上層的伺服器群組。</value></data>
+  <data name="VMO60076" xml:space="preserve"><value>無法移動伺服器群組。無法移動最上層的伺服器群組。</value></data>
+  <data name="VMO60077" xml:space="preserve"><value>無法移動伺服器群組。無法將伺服器群組移至其中一個子系。</value></data>
+  <data name="VMO60078" xml:space="preserve"><value>無法移動伺服器群組。伺服器群組不能以其本身作為父系。</value></data>
+  <data name="VMO60079" xml:space="preserve"><value>無法移動錄影伺服器。錄影伺服器不存在。</value></data>
+  <data name="VMO60043" xml:space="preserve"><value>無法移動容錯移轉伺服器。目標群組是容錯移轉伺服器的目前群組。</value></data>
+  <data name="VMO60042" xml:space="preserve"><value>無法移動容錯移轉伺服器。容錯移轉群組 {0} 已包含名為 {1} 的容錯移轉伺服器。</value></data>
+  <data name="VMO60041" xml:space="preserve"><value>無法移動容錯移轉伺服器。ID 為 '{0}' 的容錯移轉群組不存在。</value></data>
+  <data name="VMO60040" xml:space="preserve"><value>無法重新命名容錯移轉伺服器。容錯移轉群組 {1} 中已有名為 '{0}' 的容錯移轉伺服器。</value></data>
+  <data name="VMO60047" xml:space="preserve"><value>錄影伺服器不存在。系統無法更新它。</value></data>
+  <data name="VMO60046" xml:space="preserve"><value>無法建立或附加至指定的檔案。無法在 SQL Server 上使用 'Scripting.FileSystemObject'，或執行 'Ole Automation Procedures' 的權限已停用。</value></data>
+  <data name="VMO60045" xml:space="preserve"><value>硬體不存在。</value></data>
+  <data name="VMO60044" xml:space="preserve"><value>無法移除使用者定義的事件。沒有 ID 為 '{0}' 的使用者定義事件。</value></data>
+  <data name="VMO60049" xml:space="preserve"><value>錄影伺服器 {1} 上已有名為 {0} 的歸檔。</value></data>
+  <data name="VMO60048" xml:space="preserve"><value>無法移除容錯移轉伺服器。沒有 ID 為 '{0}' 的容錯移轉伺服器。</value></data>
+  <data name="VMO60052" xml:space="preserve"><value>無法移除歸檔。歸檔不存在。</value></data>
+  <data name="VMO60053" xml:space="preserve"><value>其他使用者已經更新硬體。請重新整理並再試一次。</value></data>
+  <data name="VMO60050" xml:space="preserve"><value>無法重新命名歸檔。錄影伺服器 {1} 上已有名為 {0} 的歸檔。</value></data>
+  <data name="VMO60051" xml:space="preserve"><value>無法更新歸檔。歸檔不存在。</value></data>
+  <data name="VMO60056" xml:space="preserve"><value>無法建立伺服器群組。父伺服器群組不存在。</value></data>
+  <data name="VMO60057" xml:space="preserve"><value>無法建立伺服器群組。已超過 12 個層級的最大群組深度。</value></data>
+  <data name="VMO60054" xml:space="preserve"><value>無法移動錄影伺服器。伺服器群組不存在。</value></data>
+  <data name="VMO60055" xml:space="preserve"><value>無法建立伺服器群組。群組 {1} 下已有名為 {0} 的伺服器群組。</value></data>
+  <data name="VMO60058" xml:space="preserve"><value>無法更新硬體。硬體不存在。</value></data>
+  <data name="VMO60059" xml:space="preserve"><value>無法移除伺服器群組。伺服器群組不存在。</value></data>
+  <data name="VMO60025" xml:space="preserve"><value>錄影伺服器 '{1}' 上已有名為 {0} 的錄影儲存空間。</value></data>
+  <data name="VMO60024" xml:space="preserve"><value>無法刪除物件 {0}、權限 {1}、使用者 {2} 的存取控制項目。它並不存在。</value></data>
+  <data name="VMO60027" xml:space="preserve"><value>錄影儲存空間不存在。系統無法更新它。</value></data>
+  <data name="VMO60026" xml:space="preserve"><value>無法重新命名錄影儲存空間。名稱為「{0}」的錄影儲存空間已存在於錄影伺服器「{1}」。</value></data>
+  <data name="VMO60021" xml:space="preserve"><value>無法建立存取項目。ID 為 {0} 的物件不存在。</value></data>
+  <data name="VMO60020" xml:space="preserve"><value>名為 {0} 的容錯移轉伺服器已存在。</value></data>
+  <data name="VMO60023" xml:space="preserve"><value>查詢類別動作失敗。類別 {0} 不存在。</value></data>
+  <data name="VMO60022" xml:space="preserve"><value>無法建立存取項目。其中一個指定的動作不存在。</value></data>
+  <data name="VMO60029" xml:space="preserve"><value>無法移除錄影儲存空間。您無法移除預設錄影儲存空間。</value></data>
+  <data name="VMO60028" xml:space="preserve"><value>錄影儲存空間不存在。系統無法移除它。</value></data>
+  <data name="VMO60034" xml:space="preserve"><value>無法移除容錯移轉群組。沒有 ID 為 '{0}' 的容錯移轉群組。</value></data>
+  <data name="VMO60035" xml:space="preserve"><value>無法移除容錯移轉群組。您無法移除內建的容錯移轉群組。</value></data>
+  <data name="VMO60036" xml:space="preserve"><value>無法移除容錯移轉群組。容錯移轉群組不是空的。必須將所有容錯移轉伺服器移動到其他容錯移轉群組後，才能進行移除。</value></data>
+  <data name="VMO60037" xml:space="preserve"><value>名為 {0} 的容錯移轉伺服器已存在於容錯移轉群組 {1} 中。</value></data>
+  <data name="VMO60030" xml:space="preserve"><value>無法擷取容錯移轉伺服器。ID 為 {0} 的容錯移轉群組不存在。</value></data>
+  <data name="VMO60031" xml:space="preserve"><value>名為 {0} 的容錯移轉群組已存在。</value></data>
+  <data name="VMO60032" xml:space="preserve"><value>無法更新容錯移轉伺服器。ID 為 '{0}' 的容錯移轉群組不存在。</value></data>
+  <data name="VMO60033" xml:space="preserve"><value>名為 {0} 的容錯移轉群組已存在。</value></data>
+  <data name="VMO60038" xml:space="preserve"><value>無法建立容錯移轉伺服器。沒有 ID 為 {0} 的容錯移轉群組。</value></data>
+  <data name="VMO60039" xml:space="preserve"><value>無法更新容錯移轉伺服器。ID 為 '{0}' 的容錯移轉伺服器不存在。</value></data>
+  <data name="VMO60007" xml:space="preserve"><value>角色 {0} 已經有成員 {1}。</value></data>
+  <data name="VMO60006" xml:space="preserve"><value>無法新增角色成員。ID 為 {0} 的角色不存在。</value></data>
+  <data name="VMO60005" xml:space="preserve"><value>無法移除角色。您無法移除內建的安全性角色。</value></data>
+  <data name="VMO60004" xml:space="preserve"><value>無法移除角色。沒有 ID 為 {0} 的角色。</value></data>
+  <data name="VMO60003" xml:space="preserve"><value>無法重新命名角色。名稱為 {0} 的角色已存在。</value></data>
+  <data name="VMO60002" xml:space="preserve"><value>無法更新該角色。不存在 ID 為 {0} 的角色。</value></data>
+  <data name="VMO60001" xml:space="preserve"><value>名為 '{0}' 的角色已存在。</value></data>
+  <data name="VMO60000" xml:space="preserve"><value>發生未預期的資料庫錯誤。請聯絡您的伺服器管理員。</value></data>
+  <data name="VMO60009" xml:space="preserve"><value>沒有名稱為 {0} 的角色。系統無法移除它。</value></data>
+  <data name="VMO60008" xml:space="preserve"><value>內部預存程序發生錯誤。預存程序無法在交易之外執行。</value></data>
+  <data name="VMO60016" xml:space="preserve"><value>無法註冊物件。ID 為 {0} 的物件已存在。</value></data>
+  <data name="VMO60017" xml:space="preserve"><value>無法註冊物件。ID 為 {0} 的物件類別不存在。</value></data>
+  <data name="VMO60014" xml:space="preserve"><value>名為 {0} 的使用者定義事件已存在。</value></data>
+  <data name="VMO60015" xml:space="preserve"><value>無法重新命名使用者定義的事件。名為 '{0}' 的事件已存在。</value></data>
+  <data name="VMO60012" xml:space="preserve"><value>無法擷取安全物件 {0} 的資訊。</value></data>
+  <data name="VMO60013" xml:space="preserve"><value>無法擷取安全操作 {0} 的資訊。</value></data>
+  <data name="VMO60010" xml:space="preserve"><value>您無法從管理員角色移除 BUILTIN\Administrators 成員。</value></data>
+  <data name="VMO60011" xml:space="preserve"><value>沒有安全性識別碼 (SID) 為 {0} 的角色成員。系統無法移除該角色成員。</value></data>
+  <data name="VMO60018" xml:space="preserve"><value>無法註冊物件。ID 為 {0} 的父物件不存在。</value></data>
+  <data name="VMO60019" xml:space="preserve"><value>安全性物件 '{1}' 來自與安全性物件 '{0}' 不同的類別，因此不得為父物件。</value></data>
+  <data name="VMO60089" xml:space="preserve"><value>無法查詢錄影伺服器。伺服器群組不存在。</value></data>
+  <data name="VMO60088" xml:space="preserve"><value>無法移動伺服器群組。已超過 12 個層級的最大群組深度。</value></data>
+  <data name="VMO60087" xml:space="preserve"><value>無法移動伺服器群組。群組 {1} 下已有名為 {0} 的伺服器群組。</value></data>
+  <data name="VMO60086" xml:space="preserve"><value>無法查詢伺服器群組。父伺服器群組不存在。</value></data>
+  <data name="VMO60085" xml:space="preserve"><value>無法依據硬體和類型查詢裝置。硬體不存在。</value></data>
+  <data name="VMO60084" xml:space="preserve"><value>無法依據硬體查詢裝置。硬體不存在。</value></data>
+  <data name="VMO60083" xml:space="preserve"><value>無法建立硬體。錄影伺服器不存在。</value></data>
+  <data name="VMO60082" xml:space="preserve"><value>無法刪除硬體。硬體不存在。</value></data>
+  <data name="VMO60081" xml:space="preserve"><value>無法查詢硬體驅動程式。錄影伺服器不存在。</value></data>
+  <data name="VMO60080" xml:space="preserve"><value>無法依據錄影伺服器查詢硬體。錄影伺服器不存在。</value></data>
+  <data name="VMO60098" xml:space="preserve"><value>加密已停用。您必須先啟用加密，然後才能進行變更。系統無法設定加密。</value></data>
+  <data name="VMO60099" xml:space="preserve"><value>使用者定義事件不存在。系統無法更新它。</value></data>
+  <data name="VMO60096" xml:space="preserve"><value>硬體不存在。系統無法擷取其設定。</value></data>
+  <data name="VMO60097" xml:space="preserve"><value>無法設定錄影儲存空間的加密。指定的密碼不正確。</value></data>
+  <data name="VMO60094" xml:space="preserve"><value>已啟用錄影儲存的加密。尚未設定新密碼。</value></data>
+  <data name="VMO60095" xml:space="preserve"><value>無法設定錄影儲存空間的加密。另一個加密設定變更擱置中。</value></data>
+  <data name="VMO60092" xml:space="preserve"><value>加密方法「None」和「Unknown」不是有效的值。系統無法設定加密。</value></data>
+  <data name="VMO60093" xml:space="preserve"><value>無法設定錄影儲存空間的加密。錄影儲存空間不存在。</value></data>
+  <data name="VMO60090" xml:space="preserve"><value>無法依據裝置群組查詢裝置。裝置群組不存在。</value></data>
+  <data name="VMO60091" xml:space="preserve"><value>書籤不存在。</value></data>
+  <data name="VMO60160" xml:space="preserve"><value>內部錯誤: 資料庫程序 {0} 傳回錯誤的列數。</value></data>
+  <data name="VMO60161" xml:space="preserve"><value>伺服器無法連線至資料庫。請確認主控資料庫的伺服器可以運作，且網路問題沒有阻擋與伺服器的通訊。</value></data>
+  <data name="VMO60162" xml:space="preserve"><value>列數超出允許的列數上限，伺服器無法傳回結果集。請確認查詢中的參數是否正確。如果參數正確或問題仍然存在，請聯絡伺服器管理員並要求增加列數限制。目前的限制: {0}</value></data>
+  <data name="VMO60163" xml:space="preserve"><value>標示資料 (證據鎖定或書籤) 不存在。</value></data>
+  <data name="VMO60164" xml:space="preserve"><value>未授權使用者登入。</value></data>
+  <data name="VMO60165" xml:space="preserve"><value>使用者無法為自己授權。</value></data>
+  <data name="VMO60166" xml:space="preserve"><value>不允許使用者授權。</value></data>
+  <data name="VMO60167" xml:space="preserve"><value>裝置不支援 PTZ 預設位置。</value></data>
+  <data name="VMO60168" xml:space="preserve"><value>裝置預設點不存在。</value></data>
+  <data name="VMO60169" xml:space="preserve"><value>擁有此名稱的裝置預設點已存在。</value></data>
+  <data name="VMO60142" xml:space="preserve"><value>無法連線至 Management Server 服務。</value></data>
+  <data name="VMO60143" xml:space="preserve"><value>無法使用錄影伺服器。</value></data>
+  <data name="VMO60140" xml:space="preserve"><value>路徑不是錄影伺服器上的有效錄影儲存路徑。</value></data>
+  <data name="VMO60141" xml:space="preserve"><value>路徑不是錄影伺服器上的有效歸檔路徑。</value></data>
+  <data name="VMO60146" xml:space="preserve"><value>無法建立歸檔。
+
+歸檔的保留時間不得與其他歸檔的保留時間相同。</value></data>
+  <data name="VMO60147" xml:space="preserve"><value>無法設定錄影儲存空間的保留時間。
+
+保留時間必須低於首次歸檔的保留時間。</value></data>
+  <data name="VMO60144" xml:space="preserve"><value>與錄影伺服器的通訊逾時。</value></data>
+  <data name="VMO60145" xml:space="preserve"><value>無法建立歸檔。
+
+歸檔的保留時間必須高於錄影儲存空間的保留時間。</value></data>
+  <data name="VMO60148" xml:space="preserve"><value>無法設定歸檔的保留時間。
+
+保留時間必須高於上一次歸檔的保留時間。</value></data>
+  <data name="VMO60149" xml:space="preserve"><value>無法設定歸檔的保留時間。
+
+保留時間必須低於下一次歸檔的保留時間。</value></data>
+  <data name="VMO60175" xml:space="preserve"><value>指定的群組不存在。系統無法在其中新增裝置。</value></data>
+  <data name="VMO60174" xml:space="preserve"><value>已不再支援 recording server 服務版本。您仍然可以存取錄影伺服器上的錄影，但是必須先升級為最新版本，才能變更其組態。</value></data>
+  <data name="VMO60177" xml:space="preserve"><value>一或多個指定的裝置不存在。系統無法將裝置新增至群組中。</value></data>
+  <data name="VMO60176" xml:space="preserve"><value>您無法將裝置新增至內建的裝置群組中。</value></data>
+  <data name="VMO60179" xml:space="preserve"><value>一或多個指定的裝置已存在於裝置群組中。系統無法新增裝置。</value></data>
+  <data name="VMO60178" xml:space="preserve"><value>一或多個指定的裝置與群組類型不相容。系統無法將裝置新增至群組中。</value></data>
+  <data name="VMO60124" xml:space="preserve"><value>無法刪除裝置群組成員。裝置群組成員不存在。</value></data>
+  <data name="VMO60125" xml:space="preserve"><value>無法移動裝置群組。您無法將裝置群組移到它的其中一個子群組。</value></data>
+  <data name="VMO60126" xml:space="preserve"><value>無法移動裝置群組。裝置群組不能以其本身作為父系。</value></data>
+  <data name="VMO60127" xml:space="preserve"><value>無法更新硬體設定。硬體不存在。</value></data>
+  <data name="VMO60120" xml:space="preserve"><value>無法新增裝置群組成員。無法將成員新增至內建裝置群組。</value></data>
+  <data name="VMO60121" xml:space="preserve"><value>無法新增裝置群組成員。裝置不存在。</value></data>
+  <data name="VMO60122" xml:space="preserve"><value>無法新增裝置群組成員。裝置必須與裝置群組具有相同類型。</value></data>
+  <data name="VMO60123" xml:space="preserve"><value>無法新增裝置群組成員。名為 {0} 的裝置已經是群組 {1} 的成員。</value></data>
+  <data name="VMO60128" xml:space="preserve"><value>無法建立工作。工作已存在。</value></data>
+  <data name="VMO60129" xml:space="preserve"><value>無法刪除工作。工作不存在。</value></data>
+  <data name="VMO60153" xml:space="preserve"><value>無法建立歸檔。
+
+路徑無效。</value></data>
+  <data name="VMO60152" xml:space="preserve"><value>無法建立錄影儲存空間。
+
+路徑無效。</value></data>
+  <data name="VMO60151" xml:space="preserve"><value>無法刪除歸檔。
+
+只能刪除儲存設定中的最後一次歸檔。</value></data>
+  <data name="VMO60150" xml:space="preserve"><value>無法設定歸檔的保留時間。
+
+保留時間必須高於錄影儲存空間的保留時間。</value></data>
+  <data name="VMO60157" xml:space="preserve"><value>無法載入硬體驅動程式。
+
+硬體驅動程式不存在。</value></data>
+  <data name="VMO60156" xml:space="preserve"><value>名為 '{0}' 的 SID 不是有效的安全性識別碼。</value></data>
+  <data name="VMO60155" xml:space="preserve"><value>無法查找 '{0}' 的 SID。</value></data>
+  <data name="VMO60154" xml:space="preserve"><value>Active Directory 搜尋未傳回身份。</value></data>
+  <data name="VMO60159" xml:space="preserve"><value>無法建立裝置群組。名稱相同的裝置群組已存在。</value></data>
+  <data name="VMO60158" xml:space="preserve"><value>無法清除工作。
+
+工作未完成。</value></data>
+  <data name="VMO60106" xml:space="preserve"><value>無法建立裝置群組。父裝置群組不存在。</value></data>
+  <data name="VMO60107" xml:space="preserve"><value>無法建立裝置群組。無法將裝置群組新增至內建裝置群組。</value></data>
+  <data name="VMO60104" xml:space="preserve"><value>無法啟用歸檔。名為 {0} 的裝置未定義歸檔。</value></data>
+  <data name="VMO60105" xml:space="preserve"><value>無法建立或附加至指定的檔案。SQL 使用者沒有存取指定檔案所需的權限。</value></data>
+  <data name="VMO60102" xml:space="preserve"><value>無法移除歸檔。名為 {0} 的歸檔正由一個或多個裝置使用。</value></data>
+  <data name="VMO60103" xml:space="preserve"><value>無法移除錄影儲存空間。名為 {0} 的錄影儲存空間正由一個或多個裝置使用中。</value></data>
+  <data name="VMO60100" xml:space="preserve"><value>無法定義預設錄影儲存空間。錄影儲存空間不存在。</value></data>
+  <data name="VMO60101" xml:space="preserve"><value>無法定義預設歸檔。歸檔不存在。</value></data>
+  <data name="VMO60108" xml:space="preserve"><value>無法建立裝置群組。群組 {1} 下已有名為 {0} 的裝置群組。</value></data>
+  <data name="VMO60109" xml:space="preserve"><value>無法更新裝置群組。裝置群組不存在。</value></data>
+  <data name="VMO60135" xml:space="preserve"><value>無法刪除歸檔。有衝突的工作已存在。</value></data>
+  <data name="VMO60134" xml:space="preserve"><value>無法刪除儲存空間。有衝突的工作已存在。</value></data>
+  <data name="VMO60137" xml:space="preserve"><value>無法移動錄影。有衝突的工作已存在。</value></data>
+  <data name="VMO60136" xml:space="preserve"><value>無法刪除錄影。有衝突的工作已存在。</value></data>
+  <data name="VMO60131" xml:space="preserve"><value>無法啟用影格速率降低。歸檔不存在。</value></data>
+  <data name="VMO60130" xml:space="preserve"><value>無法更新工作。工作不存在。</value></data>
+  <data name="VMO60133" xml:space="preserve"><value>無法移動歸檔。有衝突的工作已存在。</value></data>
+  <data name="VMO60132" xml:space="preserve"><value>無法移動儲存空間。有衝突的工作已存在。</value></data>
+  <data name="VMO60139" xml:space="preserve"><value>無法套用加密密碼變更。有衝突的工作已存在。</value></data>
+  <data name="VMO60138" xml:space="preserve"><value>無法套用加密方法變更。有衝突的工作已存在。</value></data>
+  <data name="VMO60117" xml:space="preserve"><value>無法移動裝置群組。來源裝置群組必須與目標裝置群組具有相同類型。</value></data>
+  <data name="VMO60116" xml:space="preserve"><value>無法移動裝置群組。群組 {1} 下已有名為 {0} 的裝置群組。</value></data>
+  <data name="VMO60115" xml:space="preserve"><value>無法移動裝置群組。無法將裝置群組移動至內建裝置群組。</value></data>
+  <data name="VMO60114" xml:space="preserve"><value>無法移動裝置群組。無法移動內建裝置群組。</value></data>
+  <data name="VMO60113" xml:space="preserve"><value>無法移動裝置群組。目標裝置群組不存在。</value></data>
+  <data name="VMO60112" xml:space="preserve"><value>無法移動裝置群組。來源裝置群組不存在。</value></data>
+  <data name="VMO60111" xml:space="preserve"><value>無法更新裝置群組。群組 {1} 下已有名為 {0} 的裝置群組。</value></data>
+  <data name="VMO60110" xml:space="preserve"><value>無法更新裝置群組。無法變更內建裝置群組。</value></data>
+  <data name="VMO60119" xml:space="preserve"><value>無法新增裝置群組成員。裝置群組不存在。</value></data>
+  <data name="VMO60118" xml:space="preserve"><value>無法移除裝置群組。裝置群組不存在。</value></data>
+  <data name="VMO60188" xml:space="preserve"><value>裝置不存在。系統無法擷取其設定。</value></data>
+  <data name="VMO60189" xml:space="preserve"><value>系統找不到硬體驅動程式定義。</value></data>
+  <data name="VMO60186" xml:space="preserve"><value>無法刪除裝置群組。此群組是內建的，無法刪除。</value></data>
+  <data name="VMO60187" xml:space="preserve"><value>無法刪除裝置群組。此群組不是空的。</value></data>
+  <data name="VMO60184" xml:space="preserve"><value>錄影影格速率必須大於 0。</value></data>
+  <data name="VMO60185" xml:space="preserve"><value>無法刪除裝置群組。群組不存在。</value></data>
+  <data name="VMO60182" xml:space="preserve"><value>一或多個指定的裝置不存在於群組中。系統無法移除裝置。</value></data>
+  <data name="VMO60183" xml:space="preserve"><value>引數必須為正數。</value></data>
+  <data name="VMO60180" xml:space="preserve"><value>指定的群組不存在。系統無法移除裝置。</value></data>
+  <data name="VMO60181" xml:space="preserve"><value>您無法從內建的裝置群組移除裝置。</value></data>
+  <data name="VMO60199" xml:space="preserve"><value>擁有指定 ID 的預設點已存在。</value></data>
+  <data name="VMO60198" xml:space="preserve"><value>其他使用者已經更新裝置。無法儲存變更。</value></data>
+  <data name="VMO60197" xml:space="preserve"><value>無法更新裝置預設點。</value></data>
+  <data name="VMO60196" xml:space="preserve"><value>無法更新設定。
+
+名稱為 '{0}' 之設定的值超出範圍。</value></data>
+  <data name="VMO60195" xml:space="preserve"><value>無法更新設定 '{0}'。</value></data>
+  <data name="VMO60194" xml:space="preserve"><value>設定 '{0}' 是唯讀的。系統無法更新設定。</value></data>
+  <data name="VMO60193" xml:space="preserve"><value>名稱 '{0}' 無效。系統無法更新設定。</value></data>
+  <data name="VMO60192" xml:space="preserve"><value>其他使用者已經更新裝置。請重新整理並再試一次。
+無法更新設定。</value></data>
+  <data name="VMO60191" xml:space="preserve"><value>裝置不存在。系統無法更新設定。</value></data>
+  <data name="VMO60190" xml:space="preserve"><value>系統找不到硬體。系統無法擷取其設定。</value></data>
+  <data name="VMO61035" xml:space="preserve"><value>您無法更新或刪除內建版面配置。</value></data>
+  <data name="VMO61034" xml:space="preserve"><value>名稱已使用。</value></data>
+  <data name="VMO61031" xml:space="preserve"><value>檢視不存在。</value></data>
+  <data name="VMO61030" xml:space="preserve"><value>檢視版面配置不存在。</value></data>
+  <data name="VMO61033" xml:space="preserve"><value>伺服器上有較新版的自訂設定。</value></data>
+  <data name="VMO61032" xml:space="preserve"><value>找不到物件。</value></data>
+  <data name="VMO61024" xml:space="preserve"><value>變更 Recording Server 服務的狀態失敗。</value></data>
+  <data name="VMO61025" xml:space="preserve"><value>Smart Wall不存在。系統無法連線至Smart Wall。</value></data>
+  <data name="VMO61026" xml:space="preserve"><value>監視器不存在。系統無法接收監視器。</value></data>
+  <data name="VMO61027" xml:space="preserve"><value>Smart Wall預設點不存在。系統無法連線至監視螢幕。</value></data>
+  <data name="VMO61021" xml:space="preserve"><value>系統無法與錄影伺服器進行通訊。</value></data>
+  <data name="VMO61022" xml:space="preserve"><value>Recording Server 服務狀態為'{0}'，無法執行命令'{1}'</value></data>
+  <data name="VMO61023" xml:space="preserve"><value>無法使用 Recording Server 服務。</value></data>
+  <data name="VMO61028" xml:space="preserve"><value>自訂屬性不存在。</value></data>
+  <data name="VMO61029" xml:space="preserve"><value>使用者定義事件不存在。</value></data>
+  <data name="VMO61015" xml:space="preserve"><value>裝置群組不存在。</value></data>
+  <data name="VMO61013" xml:space="preserve"><value>錄影伺服器不存在。</value></data>
+  <data name="VMO61012" xml:space="preserve"><value>伺服器群組不存在。</value></data>
+  <data name="VMO61011" xml:space="preserve"><value>無法從 Active Directory 擷取身份的 SID。</value></data>
+  <data name="VMO61010" xml:space="preserve"><value>無法從下列 Active Directory 網域讀取資訊: {0}。Active Directory 網域未知或找不到。</value></data>
+  <data name="VMO61006" xml:space="preserve"><value>下列角色名稱不是有效的名稱: {0}</value></data>
+  <data name="VMO61007" xml:space="preserve"><value>下列使用者定義事件不存在: {0}。</value></data>
+  <data name="VMO61004" xml:space="preserve"><value>資料庫配置無效。超出列數。請聯絡您的伺服器管理員。</value></data>
+  <data name="VMO61005" xml:space="preserve"><value>資料庫配置無效。遺失列數。請聯絡您的伺服器管理員。</value></data>
+  <data name="VMO61002" xml:space="preserve"><value>您必須指定要從角色中移除的身份。</value></data>
+  <data name="VMO61003" xml:space="preserve"><value>您必須指定角色以從角色中移除成員。</value></data>
+  <data name="VMO61000" xml:space="preserve"><value>將成員新增至角色時，必須指定有效的角色。</value></data>
+  <data name="VMO61001" xml:space="preserve"><value>您必須指定要新增至角色的身份。</value></data>
+  <data name="VMO61008" xml:space="preserve"><value>您的權限不足，無法完成此作業。</value></data>
+  <data name="VMO61009" xml:space="preserve"><value>下列引數不可為空白: {0}。</value></data>
+  <data name="VMO61110" xml:space="preserve"><value>封存無法使用。</value></data>
+  <data name="VMO61107" xml:space="preserve"><value>無法設定錄影儲存空間的加密。沒有儲存空間可用。</value></data>
+  <data name="VMO61106" xml:space="preserve"><value>已存在衝突的工作。</value></data>
+  <data name="VMO61105" xml:space="preserve"><value>系統無法接收歸檔資訊。</value></data>
+  <data name="VMO61104" xml:space="preserve"><value>系統無法接收錄影伺服器資訊。</value></data>
+  <data name="VMO61103" xml:space="preserve"><value>系統無法接收錄影儲存資訊。</value></data>
+  <data name="VMO61100" xml:space="preserve"><value>您已經定義一個主站台，因此您不得擁有其他主站台。變更已取消。</value></data>
+  <data name="VMO61109" xml:space="preserve"><value>錄影儲存區無法使用。</value></data>
+  <data name="VMO61108" xml:space="preserve"><value>無法設定錄影儲存空間的加密。歸檔 '{0}' 無法使用。</value></data>
+  <data name="VMO68000" xml:space="preserve"><value>呼叫 Identity Provider 時發生非預期的錯誤。請聯絡您的伺服器管理員。</value></data>
+  <data name="VMO69000" xml:space="preserve"><value>無效的目錄</value></data>
+  </root>

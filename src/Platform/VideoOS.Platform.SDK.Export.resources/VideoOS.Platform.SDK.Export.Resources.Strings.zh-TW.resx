@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="AVIExporterError_FilenameNotSet" xml:space="preserve"><value>檔案名稱未設定</value></data>
+  <data name="AVIExporterError_NoVideoInSelectedTimePeriodForCamera" xml:space="preserve"><value>於選定時間範圍內無視訊：攝影機 {0}</value></data>
+  <data name="AVIExporterError_NoVideoInSelectedTimePeriod" xml:space="preserve"><value>於選定時間範圍內無視訊</value></data>
+  <data name="BookmarkExporterError_UnknownErrorDuringBookmarkExport" xml:space="preserve"><value>於匯出書籤時發生未知錯誤</value></data>
+  <data name="BookmarkExporterError_WriteErrorDuringBookmarkExport" xml:space="preserve"><value>於匯出書籤時發生寫入錯誤</value></data>
+  <data name="BookmarkExporterError_ServerCommunicationErrorDuringBookmarkExport" xml:space="preserve"><value>於匯出書籤時發生伺服器連線錯誤</value></data>
+  <data name="AVIExporterError_RecorderOffline" xml:space="preserve"><value>錄影伺服器已離線</value></data>
+  <data name="AVIExporterError_NoExportSourcesSet" xml:space="preserve"><value>未設定匯出來源</value></data>
+  <data name="AVIExporterError_RecorderOfflineForCamera" xml:space="preserve"><value>錄影伺服器已離線：攝影機 {0}</value></data>
+  <data name="AVIExporterError_NotAuthorized" xml:space="preserve"><value>您未獲授權可匯出一個或多個提供的裝置</value></data>
+  <data name="DBExporterError_ExportFailed" xml:space="preserve"><value>發生 '{0}' 匯入錯誤: {1}</value></data>
+  <data name="AVIExporterError_FailedToCreateCameraConfigurationXML" xml:space="preserve"><value>無法為攝影機建立設定 XML</value></data>
+  <data name="AVIExporterError_ExportAlreadyRunning" xml:space="preserve"><value>匯出已在執行中</value></data>
+  <data name="AVIExporterError_OverlayImageInvalidPosition" xml:space="preserve"><value>指定自訂覆蓋影像位置無效</value></data>
+  <data name="AVIExporterError_OverlayImageNotSet" xml:space="preserve"><value>未定義自訂覆蓋影像</value></data>
+  <data name="AVIExporterError_NoSequencesProvided" xml:space="preserve"><value>片段未提供</value></data>
+  </root>

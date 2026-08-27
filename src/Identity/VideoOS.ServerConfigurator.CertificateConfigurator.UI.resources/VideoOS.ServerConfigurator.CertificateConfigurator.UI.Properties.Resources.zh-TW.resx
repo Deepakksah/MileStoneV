@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="RegisterClientStatus_InvalidCredentials" xml:space="preserve"><value>管理伺服器中的伺服器服務註冊失敗。請檢查使用者名稱和密碼，然後再試一次。</value></data>
+  <data name="ServerRegistrationControl_Register" xml:space="preserve"><value>註冊</value></data>
+  <data name="ServerEncryptionControl_Recommendation" xml:space="preserve"><value>建議使用加密確保安全通訊。</value></data>
+  <data name="GeneralStatus_CouldNotStopServer" xml:space="preserve"><value>無法停止一個或多個伺服器服務。請檢查位於 {0} 的應用程式記錄，以瞭解詳細資訊。</value></data>
+  <data name="ServerEncryptionControl_LearnMore" xml:space="preserve"><value>瞭解更多</value></data>
+  <data name="ConsistencyStatus_SecuritySchemeDoesNotMatch" xml:space="preserve"><value>伺服器憑證的加密狀態不應變更。加密狀態必須與執行管理伺服器的電腦中的加密狀態相符。</value></data>
+  <data name="ServerRegistrationControl_InvalidManagementServerAddress" xml:space="preserve"><value>管理伺服器位址無效</value></data>
+  <data name="CredentialDialogCaption" xml:space="preserve"><value>輸入憑證</value></data>
+  <data name="RegisterClientStatus_ManagementServerNotFound" xml:space="preserve"><value>無法連線。請檢查管理伺服器位址和可用性。</value></data>
+  <data name="CertificateView_SelectCertificate" xml:space="preserve"><value>選取憑證...</value></data>
+  <data name="ConsistencyStatus_ServerCertificateIsNotTrusted" xml:space="preserve"><value>無法完成此註冊，因為驗證管理伺服器的憑證在本電腦上不受信任。請使管理伺服器憑證在本電腦上受信任，或選擇管理伺服器上其他受信任的憑證。</value></data>
+  <data name="ServerRegistrationControl_LearnMore" xml:space="preserve"><value>瞭解更多</value></data>
+  <data name="MessageBox_ForceEditHostname_Text" xml:space="preserve"><value>在設定容錯移轉管理伺服器時，應僅變更管理伺服器位址。若變更管理伺服器位址，必須註冊所有遠端伺服器。是否要變更位址?</value></data>
+  <data name="CertificateView_NoCertificateSelected" xml:space="preserve"><value>未選取憑證</value></data>
+  <data name="ServerEncryptionControl_Encryption" xml:space="preserve"><value>加密</value></data>
+  <data name="MessageBox_ApplyCertificate_Text" xml:space="preserve"><value>變更為加密設定將觸發在此電腦上執行的伺服器服務的重新啟動。根據您的選項，在重新啟動伺服器服務時，將無法存取您的 {0} 系統或錄製資料。是否要立即套用此變更？</value></data>
+  <data name="ApplyStatus_SuccessRegistrationServerNotFound" xml:space="preserve"><value>已套用加密設定，但管理伺服器中的伺服器服務註冊失敗。移至註冊伺服器標籤。檢查管理伺服器位址和可用性。</value></data>
+  <data name="MessageBox_RegisterServers_Title" xml:space="preserve"><value>註冊伺服器</value></data>
+  <data name="MessageBox_ApplyCertificates_Title" xml:space="preserve"><value>套用設定</value></data>
+  <data name="CertificateGroupControl_EncryptionOn" xml:space="preserve"><value>加密：開啟</value></data>
+  <data name="ServerConfiguratorControl_Encryption" xml:space="preserve"><value>加密</value></data>
+  <data name="SetServerAddress_UnspecifiedError" xml:space="preserve"><value>在一或多個伺服器服務中設定管理伺服器位址時發生錯誤。請檢查位於 {0} 的應用程式記錄，以瞭解詳細資訊。</value></data>
+  <data name="MessageBox_RegisterServers_Text" xml:space="preserve"><value>註冊伺服器將觸發在此電腦上執行的伺服器服務的重新啟動。在重新啟動伺服器服務時，將無法存取您的 {0} 系統或錄製資料。是否要立即註冊？</value></data>
+  <data name="GeneralStatus_Success" xml:space="preserve"><value>成功</value></data>
+  <data name="SettingsControl_LanguageSelection" xml:space="preserve"><value>語言選擇</value></data>
+  <data name="ProgressControl_SomeServicesMayRestart" xml:space="preserve"><value>某些服務可能會自動重新啟動。可能需花費幾分鐘。</value></data>
+  <data name="GeneralStatus_UnexpectedError" xml:space="preserve"><value>發生錯誤。請檢查位於 {0} 的應用程式記錄，以瞭解詳細資訊。</value></data>
+  <data name="ProgressControl_RegisteringServers" xml:space="preserve"><value>正在註冊伺服器...</value></data>
+  <data name="RegisterService_ServiceRegistrationNotFound" xml:space="preserve"><value>未註冊一個或多個已安裝的服務。請檢查位於 {0} 的應用程式記錄檔，以瞭解詳細資訊。</value></data>
+  <data name="GeneralStatus_CouldNotStartServer" xml:space="preserve"><value>無法啟動一個或多個伺服器服務。請檢查位於 {0} 的應用程式記錄，以瞭解詳細資訊。</value></data>
+  <data name="SettingsControl_ChooseLanguage" xml:space="preserve"><value>選擇語言</value></data>
+  <data name="ServerRegistrationControl_ManagementServerAddress" xml:space="preserve"><value>管理伺服器位址</value></data>
+  <data name="MessageBox_Apply" xml:space="preserve"><value>套用</value></data>
+  <data name="RegisterClientStatus_UnspecifiedError" xml:space="preserve"><value>在管理服務器上註冊伺服器服務時發生錯誤。請檢查位於 {0} 的應用程式記錄，以瞭解詳細資訊。</value></data>
+  <data name="MessageBox_ForceEditHostname_Title" xml:space="preserve"><value>變更管理伺服器位址。</value></data>
+  <data name="ServerRegistrationControl_RegisteringServers" xml:space="preserve"><value>註冊伺服器</value></data>
+  <data name="MessageBox_Register" xml:space="preserve"><value>註冊</value></data>
+  <data name="RegisterClientStatus_InsufficientCredentials" xml:space="preserve"><value>管理伺服器上的伺服器服務註冊失敗。這可能是因為下列原因之一：
+• 使用者對管理伺服器沒有管理權限
+   ◦ 選取一個對管理伺服器具有管理權限的使用者，然後再試一次
+• 不安全的伺服器正在嘗試與安全管理伺服器連線
+   ◦ 移至「加密」標籤並套用正確的伺服器憑證</value></data>
+  <data name="WaitCurtain_ApplyingConfiguration" xml:space="preserve"><value>正在套用設定...</value></data>
+  <data name="ApplyStatus_UnspecifiedError" xml:space="preserve"><value>加密設定時發生錯誤。請檢查位於 {0} 的應用程式記錄，以瞭解詳細資訊。</value></data>
+  <data name="ApplyStatus_SuccessUnableToRegister" xml:space="preserve"><value>已套用加密設定，但管理伺服器中的伺服器服務註冊失敗。移至註冊伺服器標籤，然後再試一次。請檢查位於 {0} 的應用程式記錄，以瞭解詳細資訊。</value></data>
+  <data name="CertificateGroupControl_Details" xml:space="preserve"><value>詳細資料</value></data>
+  <data name="ServerConfiguratorControl_RegisteringServers" xml:space="preserve"><value>註冊伺服器</value></data>
+  <data name="CertificateView_DisplayInfo" xml:space="preserve"><value>憑證簽發者為 {0}。到期 {1}</value></data>
+  <data name="ApplyStatus_SuccessInvalidCredentials" xml:space="preserve"><value>已套用加密設定，但管理伺服器中的伺服器服務註冊失敗。移至註冊伺服器標籤。請檢查使用者名稱和密碼，然後再試一次。</value></data>
+  <data name="ApplyStatus_SuccessInsufficientCredentials" xml:space="preserve"><value>已套用加密設定，但管理伺服器中的伺服器服務註冊失敗。未授權使用者執行此動作。移至註冊伺服器標籤。請選取具備權限的使用者，然後再試一次。</value></data>
+  <data name="ProgressControl_EnablingEncryption" xml:space="preserve"><value>正在啟用加密...</value></data>
+  <data name="SetServerAddress_NotAllowedWhenManagementServerIsLocal" xml:space="preserve"><value>無法變更位址。此電腦中安裝了管理伺服器服務。</value></data>
+  <data name="CredentialDialogMessage" xml:space="preserve"><value>輸入您的 {0} 系統管理員認證。</value></data>
+  <data name="ApplyStatus_Success" xml:space="preserve"><value>加密設定已成功</value></data>
+  <data name="ProgressControl_DisablingEncryption" xml:space="preserve"><value>正在停用加密...</value></data>
+  <data name="RegisterTabText" xml:space="preserve"><value>向管理伺服器註冊此電腦上的 VMS 元件。在各種情況下可能需要註冊，例如：
+
+• 如果主機名稱稱已變更，則重新建立通訊
+• 將獨立的錄製伺服器連接到管理伺服器
+• 恢復備份
+• 設定容錯移轉管理伺服器或管理伺服器的主機重新命名</value></data>
+  <data name="RegisterClientStatus_Success" xml:space="preserve"><value>管理伺服器中的伺服器服務已成功註冊</value></data>
+  <data name="ServerConfiguratorControl_LanguageSelection" xml:space="preserve"><value>語言選擇</value></data>
+  <data name="MessageBox_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="MessageBox_Change" xml:space="preserve"><value>變更</value></data>
+  <data name="CertificateGroupControl_EncryptionOff" xml:space="preserve"><value>加密：關閉</value></data>
+  </root>

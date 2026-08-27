@@ -1,0 +1,20 @@
+{
+  "LogConfiguration_Disabled": {
+    "Providers": {
+      "OpenTelemetry-Server": {
+        "Exporters": [
+          {
+            "Endpoint": "http://localhost:4318/v1/logs"
+          }
+        ]
+      }
+    },
+    "LocalizedLoggers": {
+      "Server": {
+        "LogLanguage": "en-US",
+        "LogLevel": "Information",
+        "Providers": [ "OpenTelemetry-Server" ]
+      }
+    }
+  }
+}

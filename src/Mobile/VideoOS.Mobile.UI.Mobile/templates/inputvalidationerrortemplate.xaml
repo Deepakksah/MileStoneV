@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Style x:Key="ErrorToolTipStyle" TargetType="{x:Type ToolTip}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ToolTip}">
+          <Border Padding="4,0" Background="#00FFFFFF">
+            <Border Background="#FFFF0000" Padding="6,4">
+              <TextBlock Text="{TemplateBinding ContentControl.Content}" Foreground="#FFFFFFFF" />
+            </Border>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <ControlTemplate x:Key="InputValidationErrorTemplate">
+    <Grid>
+      <DockPanel LastChildFill="True">
+        <DockPanel Name="ErrorIconPanel" LastChildFill="True" Dock="Right">
+          <Image Name="ErrorIcon" Source="../Images/Exclamation_icon.png" Width="3" Height="13" Margin="2,0,0,0" VerticalAlignment="Center">
+            <FrameworkElement.Resources>
+              <ResourceDictionary>
+                <Style x:Key="{x:Type ToolTip}" TargetType="{x:Type ToolTip}" BasedOn="{StaticResource ErrorToolTipStyle}" />
+              </ResourceDictionary>
+            </FrameworkElement.Resources>
+          </Image>
+        </DockPanel>
+        <Border Name="ErrorBorder" BorderBrush="#FFFF0000" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+          <AdornedElementPlaceholder Name="AdornerElement" />
+        </Border>
+      </DockPanel>
+      <Popup Name="ErrorPopup" AllowsTransparency="False" HorizontalOffset="-2" HorizontalAlignment="Right" VerticalOffset="-25" Placement="Right" PopupAnimation="Slide" Focusable="False" PlacementTarget="{Binding ElementName=ErrorIconPanel}" IsOpen="{Binding ElementName=AdornerElement, Path=AdornedElement.IsMouseOver, Mode=OneWay}">
+        <Border Background="#FFFF0000" Padding="6,4">
+          <TextBlock Foreground="#FFFFFFFF" Text="{Binding ElementName=AdornerElement, Path=AdornedElement.(Validation.Errors)[0].ErrorContent, Mode=OneWay}" />
+        </Border>
+      </Popup>
+    </Grid>
+  </ControlTemplate>
+</ResourceDictionary>

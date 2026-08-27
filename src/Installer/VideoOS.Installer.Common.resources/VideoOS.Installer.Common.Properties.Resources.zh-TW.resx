@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorMessage_ServerAuthorizationFailed" xml:space="preserve"><value>登入選取的伺服器失敗。使用者的使用者權限不足。</value></data>
+  <data name="Action_ErorrStartService" xml:space="preserve"><value>無法啟動服務 {0}。詳細資料: {0}</value></data>
+  <data name="KeyManagementErrorIncorrectPassword" xml:space="preserve"><value>密碼不正確。您輸入的密碼與目前的系統設定密碼不符。</value></data>
+  <data name="MessageBox_InvalidResourceSignatureText" xml:space="preserve"><value>資源檔案的簽章檢查失敗。這通常是在變更資源檔案而未更新簽章時發生。</value></data>
+  <data name="ErrorMessage_CouldNotGetToken" xml:space="preserve"><value>無法從 IDP 取得標記。</value></data>
+  <data name="ErrorMessage_CertificateNotTrusted" xml:space="preserve"><value>無法建立與伺服器的信任關係。伺服器中的憑證不是此電腦的信任憑證。</value></data>
+  <data name="MessageBox_InvalidResourceSignatureCaption" xml:space="preserve"><value>資源簽章無效</value></data>
+  <data name="Temp_ErrorMessage_CertificateNotTrusted" xml:space="preserve"><value>無法在此電腦與伺服器之間建立信任關係。管理伺服器中的憑證不受此電腦的信任。</value></data>
+  <data name="Action_ErrorStopService" xml:space="preserve"><value>無法停止服務 {0}。詳細資料: {0}</value></data>
+  </root>

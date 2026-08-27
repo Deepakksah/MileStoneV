@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.MultipleSelectComboBoxControl.MultipleSelectComboBoxItem" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:converters="clr-namespace:VideoOS.UI.Common.WPF.Utils.Converters" xmlns:multipleSelectComboBoxControl2="clr-namespace:VideoOS.UI.Common.WPF.MultipleSelectComboBoxControl" Loaded="MultipleSelectComboBoxItem_OnLoaded" MouseDown="MultipleSelectComboBoxItem_OnMouseDown">
+  <UIElement.CommandBindings>
+    <CommandBinding Command="multipleSelectComboBoxControl2:Commands.UpdateAllCheckBoxCommand" Executed="OnUpdateAllCheckBox" />
+  </UIElement.CommandBindings>
+  <Grid Margin="8,2,8,2" SnapsToDevicePixels="True">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <CheckBox Name="_allCheckbox" Grid.Row="0" IsThreeState="True" Style="{Binding Path=CheckBoxStyle, RelativeSource={RelativeSource AncestorType=multipleSelectComboBoxControl2:MultipleSelectComboBoxItem}}" Click="_allCheckbox_OnClick">
+      <TextBlock Margin="0,6,0,6" Style="{Binding Path=TextBlockStyle, RelativeSource={RelativeSource AncestorType=multipleSelectComboBoxControl2:MultipleSelectComboBoxItem}}" Text="{Binding Path=AllItemsCheckBoxLabel, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type multipleSelectComboBoxControl2:MultipleSelectComboBox}}}" />
+    </CheckBox>
+    <ListBox Name="_itemsListView" Grid.Row="1" MaxHeight="300" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" BorderThickness="0" SnapsToDevicePixels="True" ItemsSource="{Binding}" Style="{Binding Path=ListBoxStyle, RelativeSource={RelativeSource AncestorType=multipleSelectComboBoxControl2:MultipleSelectComboBoxItem}}">
+      <FrameworkElement.Resources>
+        <ResourceDictionary>
+          <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+          <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+        </ResourceDictionary>
+      </FrameworkElement.Resources>
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <Grid HorizontalAlignment="Stretch" SnapsToDevicePixels="True" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter TrueValue=Visible, FalseValue=Collapsed}}">
+            <CheckBox Margin="10,0,0,0" HorizontalAlignment="Stretch" Command="multipleSelectComboBoxControl2:Commands.UpdateAllCheckBoxCommand" IsChecked="{Binding IsSelected}" IsEnabled="{Binding IsEnabled}" Style="{Binding Path=CheckBoxStyle, RelativeSource={RelativeSource AncestorType=multipleSelectComboBoxControl2:MultipleSelectComboBoxItem}}" ToolTip="{Binding Tooltip}">
+              <TextBlock Margin="0,6,0,6" Style="{Binding Path=TextBlockStyle, RelativeSource={RelativeSource AncestorType=multipleSelectComboBoxControl2:MultipleSelectComboBoxItem}}" Text="{Binding Text}" />
+            </CheckBox>
+          </Grid>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel />
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+    </ListBox>
+    <ListBox Name="_customItemsListBox" Grid.Row="2" BorderThickness="0" ItemsSource="{Binding Path=CustomItems, RelativeSource={RelativeSource FindAncestor, AncestorType=multipleSelectComboBoxControl2:MultipleSelectComboBox}}" Style="{Binding Path=ListBoxStyle, RelativeSource={RelativeSource AncestorType=multipleSelectComboBoxControl2:MultipleSelectComboBoxItem}}" SelectionChanged="_customItemsListView_OnSelectionChanged">
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <Grid HorizontalAlignment="Stretch" SnapsToDevicePixels="True">
+            <TextBlock Margin="0,6,0,6" Style="{Binding Path=TextBlockStyle, RelativeSource={RelativeSource AncestorType=multipleSelectComboBoxControl2:MultipleSelectComboBoxItem}}" Text="{Binding Label}" />
+          </Grid>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ListBox>
+  </Grid>
+</UserControl>

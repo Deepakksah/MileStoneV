@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentControl x:Class="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.CellTimestamp" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:columnTemplates="clr-namespace:VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates" x:Name="_root" Focusable="False">
+  <columnTemplates:CellText>
+    <columnTemplates:CellText.Text>
+      <MultiBinding Converter="{columnTemplates:TimestampConverter}">
+        <Binding Path="Timestamp" ElementName="_root" />
+        <Binding Path="Format" ElementName="_root" />
+      </MultiBinding>
+    </columnTemplates:CellText.Text>
+  </columnTemplates:CellText>
+</ContentControl>

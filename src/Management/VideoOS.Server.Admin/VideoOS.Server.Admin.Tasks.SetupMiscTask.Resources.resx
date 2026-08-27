@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Server_address_was_already_present_in_database" xml:space="preserve"><value>Server address was already present in database. Address: {0}</value></data>
+  <data name="Updating_the_Report_server_connection_string" xml:space="preserve"><value>Updating the Report server connection string. DataSource={0}. InitialCatalog={1}</value></data>
+  <data name="Management_server_install_directory_is_null_or_empty" xml:space="preserve"><value>Management server install directory is null or empty</value></data>
+  <data name="System_setting_was_not_found_in_the_database" xml:space="preserve"><value>System setting '{0}' was not found in the database</value></data>
+  <data name="Inserting_new_server_address" xml:space="preserve"><value>Inserting new server address. New address: {0}</value></data>
+  <data name="Backup_share_folder_created" xml:space="preserve"><value>Backup share folder created</value></data>
+  <data name="Database_name_is_null_or_empty" xml:space="preserve"><value>Database name is null or empty</value></data>
+  <data name="Management_server_is_0_or_less" xml:space="preserve"><value>Management server is 0 or less</value></data>
+  <data name="Creating_backup_share_folder" xml:space="preserve"><value>Creating backup share folder</value></data>
+  <data name="Error_updating_the_report_server_connection_string" xml:space="preserve"><value>Error updating the report server connection string. Exception : {0}</value></data>
+  <data name="Setting_server_address_in_database_if_it_is_not_present" xml:space="preserve"><value>Setting server address in database if it is not present</value></data>
+  <data name="Updated_the_Report_server_connection_string" xml:space="preserve"><value>Updated the Report server connection string</value></data>
+  <data name="Database_server_is_null_or_empty" xml:space="preserve"><value>Database server is null or empty</value></data>
+  <data name="Backup_share_folder" xml:space="preserve"><value>Backup share folder: {0}</value></data>
+  <data name="Setting_config_file_paths_for_both_32bit_and_64bit_registry" xml:space="preserve"><value>Setting config file paths for both 32bit and 64bit registry</value></data>
+  <data name="Report_server_settings_file_path_is_null_or_empty" xml:space="preserve"><value>Report server settings file path is null or empty</value></data>
+  </root>

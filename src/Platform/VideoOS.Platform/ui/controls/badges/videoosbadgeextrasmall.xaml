@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:converters="clr-namespace:VideoOS.Platform.UI.Converters" xmlns:ui="clr-namespace:VideoOS.Platform.UI">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/VideoOSBase.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="{x:Type controls:VideoOSBadgeExtraSmall}" BasedOn="{StaticResource {x:Static controls:VideoOSBaseInternals.StyleKey}}" TargetType="{x:Type controls:VideoOSBadgeExtraSmall}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type controls:VideoOSBadgeExtraSmall}">
+          <Border Height="16" MinWidth="16" CornerRadius="8" SnapsToDevicePixels="True" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Border.Background>
+              <MultiBinding Converter="{converters:BoolToResourceConverter TrueResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSBadgeBackgroundIdleBrush}, FalseResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSBadgeBackgroundDisabledBrush}}">
+                <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                <Binding Path="IsEnabled" RelativeSource="{RelativeSource Self}" />
+                <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+              </MultiBinding>
+            </Border.Background>
+            <controls:VideoOSTextBlockInteractiveExtraSmall x:Name="PART_TextBlock" Appearance="HighEmphasis" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,5,1" IsAutoToolTipEnabled="False">
+              <TextBlock.Text>
+                <MultiBinding Converter="{x:Static controls:VideoOSBadgeBaseInternals.BadgeTextConverter}">
+                  <Binding Path="Count" RelativeSource="{RelativeSource TemplatedParent}" />
+                  <Binding Path="MaxDisplayCount" RelativeSource="{RelativeSource TemplatedParent}" />
+                </MultiBinding>
+              </TextBlock.Text>
+            </controls:VideoOSTextBlockInteractiveExtraSmall>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

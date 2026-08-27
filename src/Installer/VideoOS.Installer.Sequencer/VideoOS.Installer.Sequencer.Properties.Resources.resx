@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="SSRegistrationTask_DisplayName" xml:space="preserve"><value>Registering products</value></data>
+  <data name="Sequencer_IisIsntallFailedWorkstation" xml:space="preserve"><value>The automatic installation of Internet Information Services (IIS) failed.
+
+In the Group Policy Editor, check that the ‘Specify settings for optional component installation and component repair’ setting is enabled. The setting is located at Computer Configuration\Administrative Templates\System. In addition, select the ‘Contact Windows Update directly to download repair content instead of Windows Server Update Services (WSUS)’ check box.
+
+If the Group Policy settings were already correct, you must install IIS manually.</value></data>
+  <data name="Sequencer_IisIsntallFailed" xml:space="preserve"><value>The automatic installation of Internet Information Services (IIS) failed.
+
+In the Group Policy Editor, check that the ‘Specify settings for optional component installation and component repair’ setting is enabled. The setting is located at Computer Configuration\Administrative Templates\System. In addition, select the ‘Contact Windows Update directly to download repair content instead of Windows Server Update Services (WSUS)’ check box.
+
+If the Group Policy settings were already correct, you must install IIS manually.</value></data>
+  <data name="Install_CopingFiles" xml:space="preserve"><value>Finalizing installation...</value></data>
+  <data name="Sequencer_Uninstalling" xml:space="preserve"><value>Uninstalling '{0}'...</value></data>
+  <data name="InstallerStatus_Paused" xml:space="preserve"><value>Paused</value></data>
+  <data name="InstallerStatus_Terminating" xml:space="preserve"><value>Exiting...</value></data>
+  <data name="Message_IISInstRebootRequired" xml:space="preserve"><value>Restart your computer to complete the installation of Internet Information Service (IIS).</value></data>
+  <data name="Sequencer_Installing" xml:space="preserve"><value>Installing '{0}'...</value></data>
+  <data name="Sequencer_UnknownFormat" xml:space="preserve"><value>Unknown package format {0}.</value></data>
+  <data name="Sequencer_UninstallingFailed" xml:space="preserve"><value>Could not uninstall {0}. Uninstall this product manually.</value></data>
+  <data name="InstallerStatus_NotStarted" xml:space="preserve"><value>Not started</value></data>
+  <data name="InstallerStatus_Completed" xml:space="preserve"><value>Completed</value></data>
+  <data name="Message_RestartAfterPrereqInstalled" xml:space="preserve"><value>{0} was successfully installed. Restart the computer to continue the installation.</value></data>
+  <data name="InstallerStatus_Started" xml:space="preserve"><value>Started</value></data>
+  </root>

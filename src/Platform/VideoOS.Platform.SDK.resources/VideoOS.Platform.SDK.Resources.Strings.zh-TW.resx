@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="CameraGroups" xml:space="preserve"><value>攝影機群組</value></data>
+  <data name="EdgeDevice" xml:space="preserve"><value>{0}（邊緣）</value></data>
+  <data name="AllHardware" xml:space="preserve"><value>全部硬體 （{0}）</value></data>
+  <data name="GenericEvents" xml:space="preserve"><value>一般事件</value></data>
+  <data name="AllTransactionSources" xml:space="preserve"><value>所有交易來源 （{0}）</value></data>
+  <data name="AllEvents" xml:space="preserve"><value>所有事件 （{0}）</value></data>
+  <data name="AllCameras" xml:space="preserve"><value>所有攝影機 （{0}）</value></data>
+  <data name="AllAlerts" xml:space="preserve"><value>所有警示 （{0}）</value></data>
+  <data name="OutputGroups" xml:space="preserve"><value>輸出群組</value></data>
+  <data name="AllMatrix" xml:space="preserve"><value>所有 Matrix （{0}）</value></data>
+  <data name="AllInputs" xml:space="preserve"><value>所有輸入 （{0}）</value></data>
+  <data name="AllMetadataDevices" xml:space="preserve"><value>所有中繼資料裝置 （{0}）</value></data>
+  <data name="EventGroups" xml:space="preserve"><value>事件群組</value></data>
+  <data name="AllOutputs" xml:space="preserve"><value>所有輸出 （{0}）</value></data>
+  <data name="AllMicrophones" xml:space="preserve"><value>所有麥克風 （{0}）</value></data>
+  <data name="AllSpeakers" xml:space="preserve"><value>所有揚聲器 （{0}）</value></data>
+  <data name="MicrophoneGroups" xml:space="preserve"><value>麥克風群組</value></data>
+  <data name="InputGroups" xml:space="preserve"><value>輸入群組</value></data>
+  <data name="AlertGroups" xml:space="preserve"><value>警示群組</value></data>
+  <data name="MetadataDeviceGroups" xml:space="preserve"><value>中繼資料裝置群組</value></data>
+  <data name="SpeakerGroups" xml:space="preserve"><value>揚聲器群組</value></data>
+  </root>

@@ -1,0 +1,13 @@
+[workspace]
+members = [
+    "crates/lychee_common",
+    "crates/lychee_database",
+    "crates/lychee_identity",
+    "crates/lychee_management",
+    "crates/lychee_platform",
+    "crates/lychee_events",
+    "crates/lychee_mobile",
+    "crates/lychee_analytics",
+    "Desktop",
+]
+resolver = "2"

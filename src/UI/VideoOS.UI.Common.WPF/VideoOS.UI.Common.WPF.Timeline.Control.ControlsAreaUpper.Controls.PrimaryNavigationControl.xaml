@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls.PrimaryNavigationControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:resources="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls.resources" xmlns:converters="clr-namespace:VideoOS.UI.Common.WPF.Utils.Converters" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" xmlns:controls1="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid>
+    <StackPanel Orientation="Horizontal">
+      <controls:VideoOSButtonTransparentMedium Name="_navigatePreviousButton" VerticalAlignment="Center" ToolTip="{x:Static resources:Strings.TooltipNavigatePreviousButton}" IsEnabled="{Binding NavigationControlsEnabled}" IconSource="{controls:VideoOSIconBuiltInSource Frame_Previous, RtlIcon=Frame_Next}" Click="_navigatePreviousButton_Click" />
+      <controls:VideoOSButtonTransparentMedium Name="_playbackBackwardButton" Margin="16,0,0,0" VerticalAlignment="Center" ToolTip="{Binding PlaybackBackwardPauseState, Converter={converters:BoolConverter TrueValue={x:Static resources:Strings.TooltipPlaybackPauseButton}, FalseValue={x:Static resources:Strings.TooltipPlaybackBackwardButton}}}" Visibility="{Binding ShowPlaybackPlayPauseControls, Converter={StaticResource BooleanToVisibilityConverter}}" Click="_playbackBackwardButton_Click">
+        <FrameworkElement.Style>
+          <Style TargetType="{x:Type controls:VideoOSButtonTransparentBase}">
+            <Setter Property="controls:VideoOSButtonBase.IconSource" Value="{controls:VideoOSIconBuiltInSource Play_Backward, RtlIcon=Play_Forward}" />
+            <Style.Triggers>
+              <DataTrigger Value="True" Binding="{Binding PlaybackBackwardPauseState}">
+                <Setter Property="controls:VideoOSButtonBase.IconSource" Value="{controls:VideoOSIconBuiltInSource Pause}" />
+              </DataTrigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </controls:VideoOSButtonTransparentMedium>
+      <controls:VideoOSSliderHorizontal Name="_playbackSlider" Margin="8,0,0,0" Minimum="-1000" Maximum="1000" Width="106" ThumbAppearance="Shuttle" IsTabStop="False" Focusable="False" VerticalAlignment="Center" TrackAndThumbToolTip="{x:Static resources:Strings.TooltipPlaybackSlider}" ValueChanged="_playbackSlider_ValueChanged" PreviewMouseLeftButtonUp="_playbackSlider_OnMouseLeftButtonUp" />
+      <controls:VideoOSButtonTransparentMedium Name="_playbackForwardButton" Margin="8,0,0,0" VerticalAlignment="Center" ToolTip="{Binding PlaybackForwardPauseState, Converter={converters:BoolConverter TrueValue={x:Static resources:Strings.TooltipPlaybackPauseButton}, FalseValue={x:Static resources:Strings.TooltipPlaybackForwardButton}}}" Visibility="{Binding ShowPlaybackPlayPauseControls, Converter={StaticResource BooleanToVisibilityConverter}}" Click="_playbackForwardButton_Click">
+        <FrameworkElement.Style>
+          <Style TargetType="{x:Type controls:VideoOSButtonTransparentBase}">
+            <Setter Property="controls:VideoOSButtonBase.IconSource" Value="{controls:VideoOSIconBuiltInSource Play_Forward, RtlIcon=Play_Backward}" />
+            <Style.Triggers>
+              <DataTrigger Value="True" Binding="{Binding PlaybackForwardPauseState}">
+                <Setter Property="controls:VideoOSButtonBase.IconSource" Value="{controls:VideoOSIconBuiltInSource Pause}" />
+              </DataTrigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </controls:VideoOSButtonTransparentMedium>
+      <controls:VideoOSButtonTransparentMedium Name="_navigateNextButton" Margin="16,0,0,0" VerticalAlignment="Center" ToolTip="{x:Static resources:Strings.TooltipNavigateNextButton}" IsEnabled="{Binding NavigationControlsEnabled}" IconSource="{controls:VideoOSIconBuiltInSource Frame_Next, RtlIcon=Frame_Previous}" Click="_navigateNextButton_Click" />
+    </StackPanel>
+  </Grid>
+</UserControl>

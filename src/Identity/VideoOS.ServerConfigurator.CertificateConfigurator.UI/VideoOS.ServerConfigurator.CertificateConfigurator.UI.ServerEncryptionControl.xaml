@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.ServerConfigurator.CertificateConfigurator.UI.ServerEncryptionControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.ServerConfigurator.CertificateConfigurator.UI" xmlns:wpf="clr-namespace:VideoOS.UI.Common.WPF.Utils.Converters;assembly=VideoOS.UI.Common.WPF" xmlns:resources="clr-namespace:VideoOS.ServerConfigurator.CertificateConfigurator.UI.Properties" Background="#FFFFFFFF">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="StyleDictionary.xaml" />
+        <ResourceDictionary>
+          <DataTemplate x:Key="{DataTemplateKey {x:Type local:CertificateGroupViewModel}}" x:Name="EntryTemplate" DataType="{x:Type local:CertificateGroupViewModel}">
+            <local:CertificateGroupControl />
+          </DataTemplate>
+        </ResourceDictionary>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="auto" />
+    </Grid.RowDefinitions>
+    <local:StatusMessageBar Grid.Row="0" />
+    <StackPanel Grid.Row="1" Width="500" Margin="0,24,0,10">
+      <TextBlock Name="EncryptionTitle" x:Uid="EncryptionTitle" Style="{StaticResource Title}" Text="{x:Static resources:Resources.ServerEncryptionControl_Encryption}" />
+      <TextBlock Name="EncryptionSubtitle" x:Uid="EncryptionSubtitle" Grid.Column="0" TextWrapping="Wrap" Style="{StaticResource Label2}" Margin="0,8,0,0">
+        <Run x:Uid="EncryptionSubtitleRun" Text="{x:Static resources:Resources.ServerEncryptionControl_Recommendation}" /> <Hyperlink x:Uid="EncryptionSubtitleHyperlink" Style="{StaticResource HyperLink}" AutomationProperties.AutomationId="EncryptionPage.EncryptionSubtitleHyperlink" Command="{Binding LearnMoreCommand}"><TextBlock x:Uid="HyperlinkText" AutomationProperties.AutomationId="HyperlinkText" Text="{x:Static resources:Resources.ServerEncryptionControl_LearnMore}" Visibility="{Binding LearnMoreAvailable, Converter={wpf:BoolToVisibilityConverter FalseValue=Collapsed, TrueValue=Visible}}" /></Hyperlink></TextBlock>
+    </StackPanel>
+    <ScrollViewer Grid.Row="2" Style="{StaticResource ScrollViewer}">
+      <ItemsControl IsTabStop="False" Width="500" AutomationProperties.AutomationId="EncryptionPage.CertificateGroupsList" ItemsSource="{Binding CertificateGroups}" />
+    </ScrollViewer>
+    <DockPanel Grid.Row="3" HorizontalAlignment="Center" Width="500" Height="72">
+      <Button Name="ApplyButton" x:Uid="ApplyButton" Margin="0,8,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource PrimaryButton}" Content="Apply" AutomationProperties.AutomationId="EncryptionPage.ApplyButton" Command="{Binding ApplyCommand}" />
+    </DockPanel>
+  </Grid>
+</UserControl>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorEmptyPassword" xml:space="preserve"><value>שדה הסיסמה אינו יכול להיות ריק.</value></data>
+  <data name="ClientInitiatedLoginPageTitle" xml:space="preserve"><value>כניסה</value></data>
+  <data name="MessageLoggedOut" xml:space="preserve"><value>היציאה הושלמה בהצלחה</value></data>
+  <data name="LogoutConfirmation" xml:space="preserve"><value>האם ברצונכם לצאת?</value></data>
+  <data name="LoginTitle" xml:space="preserve"><value>כניסה</value></data>
+  <data name="SuccessAuthentication" xml:space="preserve"><value>האימות הצליח</value></data>
+  <data name="ErrorEmptyField" xml:space="preserve"><value>שם המשתמש והסיסמה אינם יכולים להיות ריקים.</value></data>
+  <data name="ManageAccount" xml:space="preserve"><value>נהל את החשבון</value></data>
+  <data name="PasswordRequirementMinPasswordLength" xml:space="preserve"><value>אורך מזערי {0} תווים</value></data>
+  <data name="TitleAuthentication" xml:space="preserve"><value>אימות</value></data>
+  <data name="PasswordRequirementMinimumUnique" xml:space="preserve"><value>תווים ייחודיים - מספר מזערי {0}</value></data>
+  <data name="CurrentPassword" xml:space="preserve"><value>סיסמה נוכחית</value></data>
+  <data name="PageForbidden" xml:space="preserve"><value>העמוד שאתה מחפש אסור.</value></data>
+  <data name="PasswordRequirementUppercaseLetters" xml:space="preserve"><value>אותיות רישיות</value></data>
+  <data name="PasswordMismatch" xml:space="preserve"><value>הסיסמה אינה נכונה.</value></data>
+  <data name="PasswordChangedTitle" xml:space="preserve"><value>שינוי הסיסמה הצליח</value></data>
+  <data name="CurrentCredentialsSubtitle" xml:space="preserve"><value>לשינוי סיסמתך, הזן את האישורים הנוכחיים שלך.</value></data>
+  <data name="ErrorStrongPassword" xml:space="preserve"><value>סיסמתך אינה עומדת בדרישות המורכבות.</value></data>
+  <data name="ButtonSignin" xml:space="preserve"><value>כניסה</value></data>
+  <data name="Password" xml:space="preserve"><value>סיסמה</value></data>
+  <data name="UnexpectedError" xml:space="preserve"><value>אירעה שגיאה בלתי צפויה.</value></data>
+  <data name="ButtonReturnTo" xml:space="preserve"><value>חזרה אל {0}</value></data>
+  <data name="DirectLoginPageTitle" xml:space="preserve"><value>שנה סיסמה</value></data>
+  <data name="ButtonYes" xml:space="preserve"><value>כן</value></data>
+  <data name="ButtonCancel" xml:space="preserve"><value>ביטול</value></data>
+  <data name="ButtonContinueWith" xml:space="preserve"><value>המשיכו באמצעות {0}</value></data>
+  <data name="ErrorDontMatchPasswords" xml:space="preserve"><value>הסיסמאות אינן תואמות.</value></data>
+  <data name="PasswordRequirementLowercaseLetters" xml:space="preserve"><value>אותיות קטנות</value></data>
+  <data name="UnexpectedErrorFooter" xml:space="preserve"><value>אם הבעיה נמשכת פנה למנהל הרשת שלך.</value></data>
+  <data name="ButtonContinueToLogin" xml:space="preserve"><value>המשיכו לכניסה</value></data>
+  <data name="UserName" xml:space="preserve"><value>שם משתמש</value></data>
+  <data name="PasswordRequireementMaxLength" xml:space="preserve"><value>אורך מרבי {0} תווים</value></data>
+  <data name="PasswordInfo" xml:space="preserve"><value>דרישות של מורכבות הסיסמה:</value></data>
+  <data name="CurrentCredentialsTitle" xml:space="preserve"><value>הזן אישורים נוכחיים</value></data>
+  <data name="PageNotFound" xml:space="preserve"><value>לא ניתן למצוא את העמוד שביקשת.</value></data>
+  <data name="CloseWindow" xml:space="preserve"><value>כעת אתה יכול לסגור את עמוד דפדפן זה</value></data>
+  <data name="ButtonSave" xml:space="preserve"><value>שמור</value></data>
+  <data name="ButtonNext" xml:space="preserve"><value>הבא</value></data>
+  <data name="ChangePasswordTitle" xml:space="preserve"><value>הגדר סיסמה</value></data>
+  <data name="PasswordChangedPageTitle" xml:space="preserve"><value>שינוי הסיסמה הושלם בהצלחה</value></data>
+  <data name="ChangePasswordPageTitle" xml:space="preserve"><value>שנה סיסמה</value></data>
+  <data name="CancelLoginSessionMessage" xml:space="preserve"><value>ההתחברות שלך בוטלה. נותקת מהמערכת.</value></data>
+  <data name="ExpiredLoginSessionMessage" xml:space="preserve"><value>תוקף ההתחברות שלך פג. נותקת מהמכרכת.</value></data>
+  <data name="SetPasswordTitle" xml:space="preserve"><value>הגדר סיסמה חדשה</value></data>
+  <data name="PasswordRequirementDigits" xml:space="preserve"><value>ספרות בסיס 10 (0 עד 9)</value></data>
+  <data name="NewPassword" xml:space="preserve"><value>סיסמה חדשה</value></data>
+  <data name="Clarification" xml:space="preserve"><value>אם שכחתם את האישורים הנוכחיים שלכם או אם חשבונכם ננעל, יש לפנות אל מנהל המערכת.</value></data>
+  <data name="ErrorWrongField" xml:space="preserve"><value>שם המשתמש או הסיסמה שגויים.</value></data>
+  <data name="PasswordRequirementSpecialCharacters" xml:space="preserve"><value>תווים מיוחדים (~!@#$%^&amp;*_-+=`|\(){}[]:;"'&lt;&gt;,.?/)</value></data>
+  <data name="ErrorLockAccount" xml:space="preserve"><value>חשבונך ננעל. לקבלת מידע נוסף, פנה למנהל המערכת שלך.</value></data>
+  <data name="ConfirmPassword" xml:space="preserve"><value>אשר את הסיסמה החדשה</value></data>
+  <data name="ErrorTheSamePasswords" xml:space="preserve"><value>הסיסמה החדשה חייבת להיות שונה מהסיסמה הישנה.</value></data>
+  </root>

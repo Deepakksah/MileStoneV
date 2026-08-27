@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Grid x:Class="VideoOS.Platform.UI.Controls.Popups.PopoverContent" x:ClassModifier="internal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:ui="clr-namespace:VideoOS.Platform.UI" xmlns:converters="clr-namespace:VideoOS.Platform.UI.Converters" xmlns:popups="clr-namespace:VideoOS.Platform.UI.Controls.Popups" x:Name="_root" SnapsToDevicePixels="True" FlowDirection="LeftToRight">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="{x:Static popups:PopoverContent+PopoverContentInternals.TextTemplateKey}">
+        <controls:VideoOSTextBlockBodySmall Text="{TemplateBinding ContentPresenter.Content}" TextWrapping="Wrap" LineHeight="0" Appearance="HighEmphasis" TextAlignment="{Binding Path=TextAlignment, Converter={x:Static popups:PopoverContentInternals.TextAlignmentConverter}, RelativeSource={RelativeSource FindAncestor, AncestorType=popups:PopoverContent}}" />
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static popups:PopoverContent+PopoverContentInternals.CustomTemplateKey}">
+        <ContentControl Content="{TemplateBinding ContentPresenter.Content}" />
+      </DataTemplate>
+      <popups:PopoverContentTemplateSelector x:Key="{x:Static popups:PopoverContent+PopoverContentInternals.ContentTemplateSelectorKey}" TextTemplate="{StaticResource {x:Static popups:PopoverContentInternals.TextTemplateKey}}" CustomTemplate="{StaticResource {x:Static popups:PopoverContentInternals.CustomTemplateKey}}" />
+      <Style x:Key="{x:Static popups:PopoverContent+PopoverContentInternals.AnchorStyleKey}" TargetType="{x:Type Polygon}">
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="Fill">
+          <Setter.Value>
+            <MultiBinding Converter="{x:Static popups:PopoverContentInternals.BackgroundConverter}">
+              <Binding Path="." RelativeSource="{RelativeSource Self}" />
+              <Binding ElementName="_root" Path="Appearance" />
+              <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+            </MultiBinding>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="{x:Static popups:PopoverContent+PopoverContentInternals.AnchorShadowStyleKey}" TargetType="{x:Type Polygon}">
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="UIElement.Effect" Value="{DynamicResource {x:Static controls:VideoOSResourceKeys.DropShadowEffect}}" />
+        <Setter Property="Fill">
+          <Setter.Value>
+            <MultiBinding Converter="{x:Static popups:PopoverContentInternals.BackgroundConverter}">
+              <Binding Path="." RelativeSource="{RelativeSource Self}" />
+              <Binding ElementName="_root" Path="Appearance" />
+              <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+            </MultiBinding>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Margin="5" SnapsToDevicePixels="True">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Polygon Name="_topLeftAnchorShadow" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Points="5.5,0 12,8 0,8" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_topCenterAnchorShadow" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Points="5.5,0 12,8 0,8" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_topRightAnchorShadow" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Points="5.5,0 12,8 0,8" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_leftTopAnchorShadow" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Points="0,5.5 8,0 8,12" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_leftCenterAnchorShadow" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Points="0,5.5 8,0 8,12" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_leftBottomAnchorShadow" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Points="0,5.5 8,0 8,12" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_bottomRightAnchorShadow" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Points="0,0 12,0 5.5,8" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_bottomCenterAnchorShadow" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Points="0,0 12,0 5.5,8" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_bottomLeftAnchorShadow" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Points="0,0 12,0 5.5,8" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_rightBottomAnchorShadow" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Points="0,0 8,5.5 0,12" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_rightCenterAnchorShadow" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Points="0,0 8,5.5 0,12" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Polygon Name="_rightTopAnchorShadow" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Points="0,0 8,5.5 0,12" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorShadowStyleKey}}" />
+    <Border Grid.Column="1" Grid.Row="1" CornerRadius="{x:Static controls:VideoOSStyleToolTipInternals.ToolTipCornerRadius}" Effect="{DynamicResource {x:Static controls:VideoOSResourceKeys.DropShadowEffect}}" MaxWidth="{Binding ElementName=_root, Path=Content, Converter={x:Static popups:PopoverContentInternals.MaxWidthConverter}}">
+      <Border.Background>
+        <MultiBinding Converter="{x:Static popups:PopoverContentInternals.BackgroundConverter}">
+          <Binding Path="." RelativeSource="{RelativeSource Self}" />
+          <Binding ElementName="_root" Path="Appearance" />
+          <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+        </MultiBinding>
+      </Border.Background>
+      <ContentControl Name="_contentControl" Margin="8" ContentTemplateSelector="{StaticResource {x:Static popups:PopoverContentInternals.ContentTemplateSelectorKey}}" Content="{Binding ElementName=_root, Path=Content}" />
+    </Border>
+    <Polygon Name="_topLeftAnchor" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Points="5.5,0 12,8 0,8" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_topCenterAnchor" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Points="5.5,0 12,8 0,8" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_topRightAnchor" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Points="5.5,0 12,8 0,8" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_leftTopAnchor" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Points="0,5.5 8,0 8,12" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_leftCenterAnchor" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Points="0,5.5 8,0 8,12" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_leftBottomAnchor" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Points="0,5.5 8,0 8,12" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_bottomRightAnchor" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Points="0,0 12,0 5.5,8" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_bottomCenterAnchor" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Points="0,0 12,0 5.5,8" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_bottomLeftAnchor" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Points="0,0 12,0 5.5,8" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_rightBottomAnchor" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Points="0,0 8,5.5 0,12" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_rightCenterAnchor" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Points="0,0 8,5.5 0,12" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+    <Polygon Name="_rightTopAnchor" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Points="0,0 8,5.5 0,12" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Visibility="Hidden" Style="{StaticResource {x:Static popups:PopoverContentInternals.AnchorStyleKey}}" />
+  </Grid>
+</Grid>

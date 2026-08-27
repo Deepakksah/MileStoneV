@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="EnteredCertificateKasExpired" xml:space="preserve"><value>輸入的憑證已到期。</value></data>
+  <data name="WizardPageVmsAccount_Description" xml:space="preserve"><value>使用現有的 VMS 使用者。若服務帳戶不是管理伺服器存取的網域成員之一，請選擇「基本使用者」。</value></data>
+  <data name="COULDNOTLOGIN" xml:space="preserve"><value>驗證使用者帳戶失敗。檢查使用者存取監視系統的權限。</value></data>
+  <data name="InvalidCertificateCredentials" xml:space="preserve"><value>指定證書的認證無效。</value></data>
+  <data name="INVALIDHTTPSECUREPORT" xml:space="preserve"><value>HTTPS 連接埠值無效。</value></data>
+  <data name="WizardPageVmsAccount_Headline" xml:space="preserve"><value>連接至監視系統</value></data>
+  <data name="INVALIDCERTIFICATIONFILE" xml:space="preserve"><value>認證檔案無效。</value></data>
+  <data name="MessageBox_UnableToVerifyAccountType_Caption" xml:space="preserve"><value>格式無效</value></data>
+  <data name="WizardPageVmsAccount_RadioButton_ServiceUser" xml:space="preserve"><value>服務帳戶：</value></data>
+  <data name="WizardPagePorts_SpecifyPortsForCommunicationWithServer" xml:space="preserve"><value>指定與 Mobile 伺服器通訊的連接埠</value></data>
+  <data name="ServerCertificateControl_Selection_NoSelectionText" xml:space="preserve"><value>&lt;沒有選擇&gt;</value></data>
+  <data name="INVALIDUSERNAME" xml:space="preserve"><value>輸入的使用者名稱無效</value></data>
+  <data name="WizardPageControl_DetermineSystemAccountName_UserAccount" xml:space="preserve"><value>使用者帳戶</value></data>
+  <data name="REQUIREADMINISTRATIVERIGHTS" xml:space="preserve"><value>驗證帳戶使用者權限失敗。以管理員身分重試執行該程序。</value></data>
+  <data name="VALIDATING" xml:space="preserve"><value>正在驗證...</value></data>
+  <data name="INVALIDHTTPWCFPORT" xml:space="preserve"><value>HTTP WCF 連接埠值無效</value></data>
+  <data name="WizardPageServiceAccount_Headline" xml:space="preserve"><value>選取行動伺服器的服務帳戶</value></data>
+  <data name="ServerCertificateControl_Error_CannotLoadStore" xml:space="preserve"><value>無法開啟憑證存放區</value></data>
+  <data name="CertificateIsStillNotValid" xml:space="preserve"><value>輸入的憑證仍然無效。可以在 {0} 之後套用</value></data>
+  <data name="CHECKUSERPASSWORD" xml:space="preserve"><value>輸入連接監視系統所用的使用者名稱及密碼。</value></data>
+  <data name="ServerCertificateControl_Selection_NoCertAvailable_Text" xml:space="preserve"><value>&lt;沒有可用的證書&gt;</value></data>
+  <data name="ServerCertificateControl_Selection_CustomCert_Text" xml:space="preserve"><value>&lt;自定義證書選擇&gt;</value></data>
+  <data name="CertificateWithoutPrivateKey" xml:space="preserve"><value>輸入的證書沒有有效的私人金鑰。</value></data>
+  <data name="Temp_SERVERNOTFOUND" xml:space="preserve"><value>管理伺服器沒有回應。請確保：管理伺服器是否已上線；如果管理伺服器設定為安全，請使用 HTTPS；管理伺服器版本與您即將安裝的元件不相容。</value></data>
+  <data name="WizardPageVmsAccount_RadioButton_BasicUser" xml:space="preserve"><value>基本使用者：</value></data>
+  <data name="INVALIDHTTPPORT" xml:space="preserve"><value>HTTP 連接埠值無效。</value></data>
+  <data name="WizardPageControl_LabelTitle_TypicalMode" xml:space="preserve"><value>指定主管理伺服器</value></data>
+  <data name="SERVERNOTFOUND" xml:space="preserve"><value>伺服器沒有回應。沒有連線或與您嘗試連線的伺服器不相容。</value></data>
+  <data name="WizardPageControl_LabelTitle_CustomMode" xml:space="preserve"><value>指定主管理伺服器和連接埠</value></data>
+  <data name="INVALIDURI" xml:space="preserve"><value>URL 無效。</value></data>
+  <data name="MUSTDEFINEONEPORT" xml:space="preserve"><value>必須至少啟用一個通訊協定及連接埠。</value></data>
+  <data name="MessageBox_UnableToVerifyAccountType" xml:space="preserve"><value>使用者名稱的格式不正確，無法自動解析該格式。正確的格式為:
+
+網域使用者:   DOMAIN\USER NAME
+本機使用者:        COMPUTER NAME\USER NAME</value></data>
+  <data name="CANNOTBESAME" xml:space="preserve"><value>HTTP 和 HTTPS 連接埠不可相同。</value></data>
+  <data name="ServerCertificateControl_Selection_Invalid" xml:space="preserve"><value>&lt;無效證書選擇&gt;</value></data>
+  </root>

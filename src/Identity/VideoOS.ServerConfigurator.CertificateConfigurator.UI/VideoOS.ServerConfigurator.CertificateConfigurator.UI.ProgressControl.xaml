@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.ServerConfigurator.CertificateConfigurator.UI.ProgressControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.ServerConfigurator.CertificateConfigurator.UI" xmlns:wpf="clr-namespace:VideoOS.UI.Common.WPF.Utils.Converters;assembly=VideoOS.UI.Common.WPF" xmlns:resources="clr-namespace:VideoOS.ServerConfigurator.CertificateConfigurator.UI.Properties">
+  <FrameworkElement.Resources>
+    <ResourceDictionary Source="StyleDictionary.xaml" />
+  </FrameworkElement.Resources>
+  <StackPanel Orientation="Vertical">
+    <local:ArcControl HorizontalAlignment="Center" Width="24" Height="24" Style="{StaticResource Spinner}" Visibility="{Binding ElementName=ControlRoot, Path=Visibility}" />
+    <Grid Margin="0,24,0,0">
+      <TextBlock Text="{x:Static resources:Resources.ProgressControl_RegisteringServers}" Style="{StaticResource Body1Bold}" TextAlignment="Center" x:Uid="ProgressControlTitleRegisteringServers" Visibility="{Binding Register, Converter={wpf:BoolToVisibilityConverter FalseValue=Collapsed, TrueValue=Visible}}" />
+      <TextBlock Text="{x:Static resources:Resources.ProgressControl_EnablingEncryption}" Style="{StaticResource Body1Bold}" TextAlignment="Center" x:Uid="ProgressControlTitleEnablingEncryption" Visibility="{Binding EnableEncryption, Converter={wpf:BoolToVisibilityConverter FalseValue=Collapsed, TrueValue=Visible}}" />
+      <TextBlock Text="{x:Static resources:Resources.ProgressControl_DisablingEncryption}" Style="{StaticResource Body1Bold}" TextAlignment="Center" x:Uid="ProgressControlTitleDisablingEncryption" Visibility="{Binding DisableEncryption, Converter={wpf:BoolToVisibilityConverter FalseValue=Collapsed, TrueValue=Visible}}" />
+    </Grid>
+    <TextBlock Text="{x:Static resources:Resources.ProgressControl_SomeServicesMayRestart}" Margin="0,8,0,0" Style="{StaticResource Body1Dim}" TextAlignment="Center" TextWrapping="Wrap" x:Uid="ProgressControlStatusMessage" />
+  </StackPanel>
+</UserControl>

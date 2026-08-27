@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="AuditLogMessageIncidentDeleted" xml:space="preserve"><value>Incident {id} deleted</value></data>
+  <data name="AuditLogMessageTypeDeleted" xml:space="preserve"><value>Type {id} deleted</value></data>
+  <data name="AuditLogMessageStatusCreated" xml:space="preserve"><value>Status {id} created</value></data>
+  <data name="Enum_ServerLogType_Audit" xml:space="preserve"><value>Audit</value></data>
+  <data name="Field_ResourceName" xml:space="preserve"><value>Resource name</value></data>
+  <data name="Enum_PermissionType_Denied" xml:space="preserve"><value>Denied</value></data>
+  <data name="Field_LogType" xml:space="preserve"><value>Log type</value></data>
+  <data name="Field_SourceType" xml:space="preserve"><value>Source type</value></data>
+  <data name="Field_AuditType" xml:space="preserve"><value>Audit type</value></data>
+  <data name="DUMMY_TEST_STRING" xml:space="preserve"><value>None</value></data>
+  <data name="AuditLogMessageCategoryCreated" xml:space="preserve"><value>Category {id} created</value></data>
+  <data name="TestString" xml:space="preserve"><value>Minutes</value></data>
+  <data name="Field_LocationIPAddress" xml:space="preserve"><value>Location IP address</value></data>
+  <data name="Field_ResourceLocation" xml:space="preserve"><value>Resource location</value></data>
+  <data name="Enum_PermissionType_Granted" xml:space="preserve"><value>Granted</value></data>
+  <data name="Field_AccessGranted" xml:space="preserve"><value>Access granted</value></data>
+  <data name="AuditLogMessageIncidentCreated" xml:space="preserve"><value>Incident {id} created</value></data>
+  <data name="AuditLogMessageIncidentCategoriesModified" xml:space="preserve"><value>Incident categories modified</value></data>
+  <data name="AuditLogMessageStatusDeleted" xml:space="preserve"><value>Status {id} deleted</value></data>
+  <data name="Enum_PermissionType_Default" xml:space="preserve"><value>Default</value></data>
+  <data name="AuditLogMessageReportPrinted" xml:space="preserve"><value>Report for incident {id} printed</value></data>
+  <data name="AuditLogMessageCategory" xml:space="preserve"><value>Incidents</value></data>
+  <data name="AuditLogMessageTypeCreated" xml:space="preserve"><value>Type {id} created</value></data>
+  <data name="AuditLogMessageStatusModified" xml:space="preserve"><value>Status {id} modified</value></data>
+  <data name="AuditLogMessageCategoryDeleted" xml:space="preserve"><value>Category {id} deleted</value></data>
+  <data name="AuditLogMessageCategoryModified" xml:space="preserve"><value>Category {id} modified</value></data>
+  <data name="Field_UserName" xml:space="preserve"><value>User name</value></data>
+  <data name="Field_LogEntryId" xml:space="preserve"><value>Log entry ID</value></data>
+  <data name="Field_Description" xml:space="preserve"><value>Description</value></data>
+  <data name="AuditLogMessageSourceType" xml:space="preserve"><value>Audit</value></data>
+  <data name="AuditLogMessageTypeModified" xml:space="preserve"><value>Type {id} modified</value></data>
+  </root>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="DeviceNotificationsEnabledChanged" xml:space="preserve"><value>Mobile server ‘{0}’: {1} push notifications for registered device ‘{2}’</value></data>
+  <data name="ExportLocation" xml:space="preserve"><value>Export location</value></data>
+  <data name="VideoPlayback" xml:space="preserve"><value>Mobile server '{0}': Playing back recorded images from {1} to {2} (UTC time).</value></data>
+  <data name="InvestigationDeleted" xml:space="preserve"><value>Mobile server '{0}': Deleted investigation
+Investigation name: '{1}'
+Sequence: '{2}' to '{3}'
+Devices included: {4}
+(All times in UTC)</value></data>
+  <data name="VideoPushStopped" xml:space="preserve"><value>Mobile server '{0}': The video push stopped.</value></data>
+  <data name="VideoPushStarted" xml:space="preserve"><value>Mobile server '{0}': The video push started.</value></data>
+  <data name="InvestigationCreated" xml:space="preserve"><value>Mobile server '{0}': Created investigation
+Investigation name: '{1}'
+Sequence: '{2}' to '{3}'
+Devices included: {4}
+(All times in UTC)</value></data>
+  <data name="ExportTypeDb" xml:space="preserve"><value>Database</value></data>
+  <data name="SettingChanged" xml:space="preserve"><value>Mobile server '{0}': '{1}' changed from '{2}' to '{3}'</value></data>
+  <data name="ItemRemoved" xml:space="preserve"><value>Mobile server '{0}': {1} was removed with configuration: 
+{2}</value></data>
+  <data name="ItemAdded" xml:space="preserve"><value>Mobile server '{0}': {1} was added with configuration:
+{2}</value></data>
+  <data name="TwoStepCorrectCodeEntered" xml:space="preserve"><value>Mobile server '{0}': Verification code was applied successfully.</value></data>
+  <data name="LoggedOutByServer" xml:space="preserve"><value>Mobile server '{0}': Logout initiated by the system</value></data>
+  <data name="InvestigationStateCompleted" xml:space="preserve"><value>Completed</value></data>
+  <data name="ConfigExport" xml:space="preserve"><value>Mobile server '{0}': Configuration exported to '{1}'</value></data>
+  <data name="DeviceDeleted" xml:space="preserve"><value>Mobile server ‘{0}’: Device ’{1}’ removed from registered devices list.</value></data>
+  <data name="LoggedOutByClient" xml:space="preserve"><value>Mobile server '{0}': Logout initiated by the user</value></data>
+  <data name="TwoStepCodeSent" xml:space="preserve"><value>Mobile server '{0}': Verification code was sent.</value></data>
+  <data name="ExportCreated" xml:space="preserve"><value>Mobile server '{0}': Prepared export of investigation
+Investigation name: '{1}'
+Sequence: '{2}' to '{3}'
+Devices included: {4}
+Password-protected: {5}
+Audio included: {6}
+Export format: {7}
+(All times in UTC)</value></data>
+  <data name="InvestigationUpdated" xml:space="preserve"><value>Mobile server '{0}': Changed investigation details
+Investigation name:
+- Before change: '{1}'
+- After change: '{2}'
+Sequence:
+- Before change: '{3}' to '{4}'
+- After change: '{5}' to '{6}'
+Devices included: {7}
+New state: {8}
+(All times in UTC)</value></data>
+  <data name="ExportTypeMkv" xml:space="preserve"><value>MKV</value></data>
+  <data name="ExportTypeAvi" xml:space="preserve"><value>AVI</value></data>
+  <data name="TwoStepIncorrectCodeEntered" xml:space="preserve"><value>Mobile server '{0}': Incorrect verification code was entered.</value></data>
+  <data name="InvestigationStateOngoing" xml:space="preserve"><value>Ongoing</value></data>
+  <data name="TwoStepUserNotAllowed" xml:space="preserve"><value>Mobile server '{0}': Login was not completed due to two-step verification issues.</value></data>
+  <data name="ExportDownloaded" xml:space="preserve"><value>Mobile server '{0}': Downloaded export of investigation
+Investigation name: '{1}'
+Sequence: '{2}' to '{3}'
+Devices included: {4}
+Password-protected: {5}
+Audio included: {6}
+Export format: {7}
+(All times in UTC)</value></data>
+  <data name="ItemUpdated" xml:space="preserve"><value>Mobile server '{0}': '{1}' was updated 
+From: 
+{2}
+To: 
+{3}</value></data>
+  <data name="ExportDeleted" xml:space="preserve"><value>Mobile server '{0}': Deleted export of investigation
+Investigation name: '{1}'
+Sequence: '{2}' to '{3}'
+Devices included: {4}
+Export format: {5}
+(All times in UTC)</value></data>
+  </root>

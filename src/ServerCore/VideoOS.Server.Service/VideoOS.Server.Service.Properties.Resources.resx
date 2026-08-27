@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ServerServiceDescription" xml:space="preserve"><value>Manages communication, configuration and log-data for associated recording servers</value></data>
+  <data name="StatusShutdownKill" xml:space="preserve"><value>Service did not stop in a timely fashion - the process will be terminated</value></data>
+  <data name="StatusNoAdminPrivileges" xml:space="preserve"><value>The account that started the service does not have administrative privileges. The service can not run without administrative privileges.</value></data>
+  <data name="StatusTerminateFatal" xml:space="preserve"><value>Terminating, fatal error: {0}</value></data>
+  <data name="StatusConfigLoadFailed" xml:space="preserve"><value>Error loading configuration file: {0}</value></data>
+  <data name="StatusFailedToReadConfig" xml:space="preserve"><value>Failed to read ServerConfig.xml</value></data>
+  <data name="StatusForcingShutdown" xml:space="preserve"><value>Forcing shutdown of the service...</value></data>
+  <data name="StatusErrorDuringInitialization" xml:space="preserve"><value>An error has occurred during initialization of the service: {0}</value></data>
+  <data name="StatusServerStarting" xml:space="preserve"><value>Management Server starting...</value></data>
+  <data name="StatusInformationProviderFailed" xml:space="preserve"><value>Unable to start status information provider: {0}</value></data>
+  <data name="StatusInformationProviderPortFailed" xml:space="preserve"><value>Unable to start status information provider, port {0} already in use</value></data>
+  </root>

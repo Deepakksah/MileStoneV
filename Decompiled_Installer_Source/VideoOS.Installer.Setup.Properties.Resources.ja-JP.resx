@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorFailedUnpack" xml:space="preserve"><value>インストーラーの展開に失敗しました：</value></data>
+  <data name="ErrorOccured" xml:space="preserve"><value>エラーが発生しました</value></data>
+  <data name="ExternalArchiveNotFound" xml:space="preserve"><value>このインストーラーには、インストーラーの実行ファイルと同じディレクトリにある外部アーカイブ「{0}」が必要です。</value></data>
+  <data name="ErrorAnotherInstanceRunning" xml:space="preserve"><value>別のインストールが既に実行中です。</value></data>
+  <data name="Unpacking" xml:space="preserve"><value>ファイルを展開中…</value></data>
+  <data name="ErrorUnexpected" xml:space="preserve"><value>エラーにより、インストールが予期せず失敗しました：
+
+{0}
+
+このエラーは、参照用にWindowsイベントビューアーに記録されています。
+</value></data>
+  <data name="ExternalArchiveHashMismatch" xml:space="preserve"><value>外部アーカイブ「{0}」は、このインストーラーでは有効ではありません。</value></data>
+  <data name="ErrorPrereq" xml:space="preserve"><value>.Net Framework 4.7.2をお使いのコンピューターにインストールします。メーカーのダウンロードサイトからコンポーネントをダウンロードしてください。インストール完了後、「{0}」を再起動してください。</value></data>
+  <data name="Preparing" xml:space="preserve"><value>インストーラーを準備しています</value></data>
+  <data name="Launching" xml:space="preserve"><value>インストーラーを起動中...</value></data>
+  <data name="ExternalArchiveValidate" xml:space="preserve"><value>パッケージを検証中…</value></data>
+  <data name="ExternalArchiveReadError" xml:space="preserve"><value>外部アーカイブ「{0}」を読み取れませんでした。</value></data>
+  </root>

@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Server.Failover.Configurator</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net472</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management.Automation" />
+    
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="System.ServiceProcess" />
+    
+    
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.2">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Infragistics2.Win.UltraWinTabControl.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.2">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Infragistics2.Win.Misc.v10.2.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="System.Core" />
+    <Reference Include="Infragistics2.Win.v10.2">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Infragistics2.Win.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v10.2">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Infragistics2.Shared.v10.2.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="VideoOS.Server\VideoOS.Server.csproj" />
+  </ItemGroup>
+</Project>

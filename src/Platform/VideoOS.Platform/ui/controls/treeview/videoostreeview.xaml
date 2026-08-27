@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:converters="clr-namespace:VideoOS.Platform.UI.Converters" xmlns:ui="clr-namespace:VideoOS.Platform.UI" xmlns:internal="clr-namespace:VideoOS.Platform.UI.Controls.TreeView.Internal">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/VideoOSBase.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="{x:Type controls:VideoOSTreeView}" BasedOn="{StaticResource {x:Static controls:VideoOSBaseInternals.StyleKey}}" TargetType="{x:Type controls:VideoOSTreeView}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type controls:VideoOSTreeView}">
+          <Border SnapsToDevicePixels="True" Background="#00FFFFFF" CornerRadius="{TemplateBinding IsBorderVisible, Converter={converters:BoolToCornerRadiusConverter TrueResult=2, FalseResult=0}}" BorderThickness="{TemplateBinding IsBorderVisible, Converter={converters:BoolToThicknessConverter TrueResult=1, FalseResult=0}}">
+            <Border.BorderBrush>
+              <MultiBinding Converter="{converters:BoolToResourceConverter TrueResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewBorderIdleBrush}, FalseResult={x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewBorderDisabledBrush}}">
+                <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                <Binding Path="IsEnabled" ElementName="PART_TreeView" />
+                <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+              </MultiBinding>
+            </Border.BorderBrush>
+            <internal:CustomTreeView x:Name="PART_TreeView" SnapsToDevicePixels="True" ClipToBounds="True" ScrollViewer.VerticalScrollBarVisibility="{TemplateBinding controls:VideoOSTreeView.VerticalScrollBarVisibility}" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" controls:VideoOSStyleScrollBar.IsContentBorderVisible="{TemplateBinding controls:VideoOSTreeView.IsBorderVisible}" ItemsSource="{TemplateBinding controls:VideoOSTreeView.ItemsSource}" Background="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSTreeViewBackgroundBrush}}">
+              <FrameworkElement.Resources>
+                <ResourceDictionary>
+                  <DataTemplate x:Key="{x:Static controls:VideoOSTreeView+VideoOSTreeViewInternals.TallItemContentDataTemplateKey}">
+                    <controls:VideoOSTextBlockBodyMedium Text="{Binding Converter={converters:ToStringConverter}}" />
+                  </DataTemplate>
+                  <DataTemplate x:Key="{x:Static controls:VideoOSTreeView+VideoOSTreeViewInternals.NormalItemContentDataTemplateKey}">
+                    <controls:VideoOSTextBlockBodySmall Text="{Binding Converter={converters:ToStringConverter}}" />
+                  </DataTemplate>
+                </ResourceDictionary>
+              </FrameworkElement.Resources>
+              <Control.Template>
+                <ControlTemplate>
+                  <controls:VideoOSScrollViewer CanContentScroll="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" Background="#00FFFFFF" Focusable="False" Margin="0,0,-0.5,0">
+                    <ItemsPresenter Name="PART_ItemsPresenter" />
+                  </controls:VideoOSScrollViewer>
+                </ControlTemplate>
+              </Control.Template>
+              <ItemsControl.ItemContainerStyle>
+                <Style TargetType="{x:Type internal:CustomTreeViewItem}">
+                  <Setter Property="UIElement.IsHitTestVisible" Value="{Binding IsEnabled}" />
+                  <Setter Property="controls:VideoOSStyleFocusVisualStyle.IsEnabled" Value="False" />
+                  <Setter Property="Template">
+                    <Setter.Value>
+                      <ControlTemplate TargetType="{x:Type internal:CustomTreeViewItem}">
+                        <Grid>
+                          <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                          </Grid.RowDefinitions>
+                          <Grid Name="_nodeBackground" Row="0">
+                            <FrameworkElement.Margin>
+                              <MultiBinding Converter="{x:Static controls:VideoOSTreeViewInternals.TreeNodeBackgroundMarginConverter}">
+                                <Binding ElementName="PART_TreeView" />
+                                <Binding ElementName="_nodeCanvas" />
+                                <Binding Path="ActualWidth" RelativeSource="{RelativeSource TemplatedParent}" />
+                              </MultiBinding>
+                            </FrameworkElement.Margin>
+                            <Panel.Background>
+                              <MultiBinding Converter="{x:Static controls:VideoOSTreeViewInternals.TreeNodeBackgroundBrushConverter}">
+                                <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                                <Binding Path="IsEnabled" RelativeSource="{RelativeSource TemplatedParent}" />
+                                <Binding ElementName="_nodeGrid" Path="IsMouseOver" />
+                                <Binding Path="IsMouseOver" RelativeSource="{RelativeSource Self}" />
+                                <Binding Path="IsSelected" RelativeSource="{RelativeSource TemplatedParent}" />
+                                <Binding Path="IsSelectionActive" RelativeSource="{RelativeSource TemplatedParent}" />
+                                <Binding ElementName="_commandActionList" Path="IsOpen" />
+                                <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                              </MultiBinding>
+                            </Panel.Background>
+                          </Grid>
+                          <Canvas Name="_nodeCanvas" Grid.Row="0" HorizontalAlignment="Left" Margin="4,0,0,0" Width="{Binding ElementName=_nodeGrid, Path=ActualWidth}" Height="{Binding Path=VideoOSTreeView.NodeAppearance, RelativeSource={RelativeSource TemplatedParent}, Converter={converters:EnumToDoubleConverter MatchValue={x:Static controls:NodeAppearances.Normal}, MatchedResult={x:Static controls:VideoOSTreeViewInternals.NormalNodeHeight}, NotMatchedResult={x:Static controls:VideoOSTreeViewInternals.TallNodeHeight}}}">
+                            <Grid Name="_nodeGrid" SnapsToDevicePixels="True" Background="#00FFFFFF" Height="{Binding Path=VideoOSTreeView.NodeAppearance, RelativeSource={RelativeSource TemplatedParent}, Converter={converters:EnumToDoubleConverter MatchValue={x:Static controls:NodeAppearances.Normal}, MatchedResult={x:Static controls:VideoOSTreeViewInternals.NormalNodeHeight}, NotMatchedResult={x:Static controls:VideoOSTreeViewInternals.TallNodeHeight}}}">
+                              <FrameworkElement.MinWidth>
+                                <MultiBinding Converter="{x:Static controls:VideoOSTreeViewInternals.TreeNodeGridMinWidthConverter}">
+                                  <Binding ElementName="_nodeBackground" Path="Margin.Left" />
+                                  <Binding Path="VideoOSTreeView.ActionButtonAlignment" RelativeSource="{RelativeSource TemplatedParent}" />
+                                  <Binding Path="VideoOSTreeView.ConstrainedContentWidth" RelativeSource="{RelativeSource TemplatedParent}" />
+                                </MultiBinding>
+                              </FrameworkElement.MinWidth>
+                              <FrameworkElement.MaxWidth>
+                                <MultiBinding Converter="{x:Static controls:VideoOSTreeViewInternals.TreeNodeGridMaxWidthConverter}">
+                                  <Binding ElementName="PART_TreeView" />
+                                  <Binding ElementName="_nodeCanvas" />
+                                  <Binding Path="VideoOSTreeView.ConstrainedContentWidth" RelativeSource="{RelativeSource TemplatedParent}" />
+                                  <Binding Path="(Canvas.Left)" RelativeSource="{RelativeSource Self}" />
+                                </MultiBinding>
+                              </FrameworkElement.MaxWidth>
+                              <Canvas.Left>
+                                <MultiBinding Converter="{x:Static controls:VideoOSTreeViewInternals.TreeNodeGridCanvasLeftConverter}">
+                                  <Binding ElementName="PART_TreeView" />
+                                  <Binding ElementName="_nodeCanvas" />
+                                  <Binding Path="VideoOSTreeView.NodeAppearance" RelativeSource="{RelativeSource TemplatedParent}" />
+                                  <Binding Path="VideoOSTreeView.ConstrainedContentWidth" RelativeSource="{RelativeSource TemplatedParent}" />
+                                </MultiBinding>
+                              </Canvas.Left>
+                              <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                              </Grid.ColumnDefinitions>
+                              <controls:VideoOSButtonTransparentSmall Grid.Column="0" VerticalAlignment="Center" Focusable="False" Visibility="{TemplateBinding HasItems, Converter={converters:BoolToEnumConverter TrueResult={x:Static Visibility.Visible}, FalseResult={x:Static Visibility.Hidden}}}" Command="{Binding Path=VideoOSTreeView.ToggleTreeNodeExpansionCommand, RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="{Binding RelativeSource={RelativeSource TemplatedParent}}" IconSource="{Binding Path=IsExpanded, Converter={x:Static controls:VideoOSTreeViewInternals.ExpanderButtonIconSourceConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+                              <controls:VideoOSIcon Grid.Column="1" Width="16" Height="16" Margin="6,0,0,0" IconSource="{Binding Path=IconSource, RelativeSource={RelativeSource TemplatedParent}}" Visibility="{TemplateBinding IconSource, Converter={converters:NullToVisibilityConverter NullResult=Collapsed, NotNullResult=Visible}}">
+                                <controls:VideoOSIcon.AutoColorBrush>
+                                  <MultiBinding Converter="{x:Static controls:VideoOSTreeViewInternals.NodeIconAutoColorBrushConverter}">
+                                    <Binding Path="." RelativeSource="{RelativeSource Self}" />
+                                    <Binding Path="IsEnabled" RelativeSource="{RelativeSource TemplatedParent}" />
+                                    <Binding ElementName="_nodeGrid" Path="IsMouseOver" />
+                                    <Binding ElementName="_nodeBackground" Path="IsMouseOver" />
+                                    <Binding Path="IsSelected" RelativeSource="{RelativeSource TemplatedParent}" />
+                                    <Binding Path="IsSelectionActive" RelativeSource="{RelativeSource TemplatedParent}" />
+                                    <Binding Source="{x:Static ui:ThemeManager.Instance}" Path="SelectedTheme" />
+                                  </MultiBinding>
+                                </controls:VideoOSIcon.AutoColorBrush>
+                              </controls:VideoOSIcon>
+                              <ContentControl Grid.Column="2" VerticalAlignment="Center" IsTabStop="False" Margin="6,0,4,0" Content="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}}">
+                                <ContentControl.ContentTemplate>
+                                  <MultiBinding Converter="{x:Static controls:VideoOSTreeViewInternals.NodeContentTemplateConverter}">
+                                    <Binding Path="ContentTemplate" RelativeSource="{RelativeSource TemplatedParent}" />
+                                    <Binding Path="VideoOSTreeView.NodeAppearance" RelativeSource="{RelativeSource TemplatedParent}" />
+                                    <Binding Source="{StaticResource {x:Static controls:VideoOSTreeViewInternals.TallItemContentDataTemplateKey}}" />
+                                    <Binding Source="{StaticResource {x:Static controls:VideoOSTreeViewInternals.NormalItemContentDataTemplateKey}}" />
+                                  </MultiBinding>
+                                </ContentControl.ContentTemplate>
+                              </ContentControl>
+                              <controls:VideoOSActionListHorizontalSmall x:Name="_commandActionList" Grid.Column="3" VerticalAlignment="Center" Margin="0,0,4,0" IsTabStop="False" AreActionsFocusable="False" Actions="{Binding Path=Actions, RelativeSource={RelativeSource TemplatedParent}}">
+                                <UIElement.Visibility>
+                                  <MultiBinding Converter="{x:Static controls:VideoOSTreeViewInternals.CommandActionListVisibilityConverter}">
+                                    <Binding Path="Actions" RelativeSource="{RelativeSource Self}" />
+                                    <Binding Path="IsOpen" RelativeSource="{RelativeSource Self}" />
+                                    <Binding Path="IsSelected" RelativeSource="{RelativeSource TemplatedParent}" />
+                                    <Binding ElementName="_nodeGrid" Path="IsMouseOver" />
+                                    <Binding ElementName="_nodeBackground" Path="IsMouseOver" />
+                                  </MultiBinding>
+                                </UIElement.Visibility>
+                              </controls:VideoOSActionListHorizontalSmall>
+                            </Grid>
+                          </Canvas>
+                          <ItemsPresenter Name="ItemsHost" HorizontalAlignment="Stretch" Grid.Row="1" Visibility="{TemplateBinding IsExpanded, Converter={converters:BoolToEnumConverter TrueResult={x:Static Visibility.Visible}, FalseResult={x:Static Visibility.Collapsed}}}" Margin="{Binding Path=VideoOSTreeView.NodeAppearance, Converter={x:Static controls:VideoOSTreeViewInternals.TreeViewNodeItemsPresenterMarginConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Grid>
+                      </ControlTemplate>
+                    </Setter.Value>
+                  </Setter>
+                  <Setter Property="ItemsPanel">
+                    <Setter.Value>
+                      <ItemsPanelTemplate>
+                        <VirtualizingStackPanel HorizontalAlignment="Stretch" />
+                      </ItemsPanelTemplate>
+                    </Setter.Value>
+                  </Setter>
+                </Style>
+              </ItemsControl.ItemContainerStyle>
+              <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                  <VirtualizingStackPanel HorizontalAlignment="Stretch" />
+                </ItemsPanelTemplate>
+              </ItemsControl.ItemsPanel>
+            </internal:CustomTreeView>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

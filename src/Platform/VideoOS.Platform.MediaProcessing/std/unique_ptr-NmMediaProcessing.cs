@@ -1,0 +1,41 @@
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace std;
+
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+[NativeCppClass]
+public struct unique_ptr_003CNmMediaProcessing_003A_003AImVideoAnalyzer_002Cstd_003A_003Adefault_delete_003CNmMediaProcessing_003A_003AImVideoAnalyzer_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+[NativeCppClass]
+public struct unique_ptr_003CNmMediaProcessing_003A_003AImGenericVideoDecoder_002Cstd_003A_003Adefault_delete_003CNmMediaProcessing_003A_003AImGenericVideoDecoder_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+[NativeCppClass]
+public struct unique_ptr_003CNmMediaProcessing_003A_003AImImageTransformation_002Cstd_003A_003Adefault_delete_003CNmMediaProcessing_003A_003AImImageTransformation_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+[NativeCppClass]
+public struct unique_ptr_003CNmMediaProcessing_003A_003ACmMotionLevelGrid_002Cstd_003A_003Adefault_delete_003CNmMediaProcessing_003A_003ACmMotionLevelGrid_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+[NativeCppClass]
+public struct unique_ptr_003CNmMediaProcessing_003A_003ACmMotionHistogramGrid_002Cstd_003A_003Adefault_delete_003CNmMediaProcessing_003A_003ACmMotionHistogramGrid_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+[NativeCppClass]
+public struct unique_ptr_003CNmMediaProcessing_003A_003ACmByteDataHeaderSpecificAnalyzer_002Cstd_003A_003Adefault_delete_003CNmMediaProcessing_003A_003ACmByteDataHeaderSpecificAnalyzer_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}

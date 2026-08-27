@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile", "src\Mobile\VideoOS.Mobile\VideoOS.Mobile.csproj", "{F5835B2F-516B-4A89-B49C-EB991B6C85F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.CommonUtilities", "src\Mobile\VideoOS.Mobile.CommonUtilities\VideoOS.Mobile.CommonUtilities.csproj", "{D106168A-F225-4363-9AA7-8345C74D0AC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.Helpers", "src\Mobile\VideoOS.Mobile.Helpers\VideoOS.Mobile.Helpers.csproj", "{BA89B2D0-2D05-4329-970D-7279D56C9159}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.InstallerWizard", "src\Mobile\VideoOS.Mobile.InstallerWizard\VideoOS.Mobile.InstallerWizard.csproj", "{007CB4BF-7A9E-42C3-BEB1-D73CD315363C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.InstallerWizard.resources", "src\Mobile\VideoOS.Mobile.InstallerWizard.resources\VideoOS.Mobile.InstallerWizard.resources.csproj", "{A09CA7E0-6624-44C6-B1D6-7A12FE818B75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.MP4Muxing", "src\Mobile\VideoOS.Mobile.MP4Muxing\VideoOS.Mobile.MP4Muxing.csproj", "{0651CAF2-21EB-4131-B188-AC558A7CD17A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.Portable", "src\Mobile\VideoOS.Mobile.Portable\VideoOS.Mobile.Portable.csproj", "{E5F89B8D-CCE6-4E4D-9C80-730031316A3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.resources", "src\Mobile\VideoOS.Mobile.resources\VideoOS.Mobile.resources.csproj", "{DB07C32A-8C6C-4176-B08A-6112A5206FE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.SDK.Portable", "src\Mobile\VideoOS.Mobile.SDK.Portable\VideoOS.Mobile.SDK.Portable.csproj", "{87D8D9F0-3023-46B7-B1B8-A0F73B484ADD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.UI.Mobile", "src\Mobile\VideoOS.Mobile.UI.Mobile\VideoOS.Mobile.UI.Mobile.csproj", "{E55F99D8-9C31-47BA-BF55-064270FA3704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.UI.Mobile.resources", "src\Mobile\VideoOS.Mobile.UI.Mobile.resources\VideoOS.Mobile.UI.Mobile.resources.csproj", "{E77A0779-F9EF-4A63-989C-BDC85D345106}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOS.Mobile.UI.ViewModel", "src\Mobile\VideoOS.Mobile.UI.ViewModel\VideoOS.Mobile.UI.ViewModel.csproj", "{E8C60145-E070-42F5-8BBC-EB48B590893C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5835B2F-516B-4A89-B49C-EB991B6C85F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5835B2F-516B-4A89-B49C-EB991B6C85F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5835B2F-516B-4A89-B49C-EB991B6C85F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5835B2F-516B-4A89-B49C-EB991B6C85F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D106168A-F225-4363-9AA7-8345C74D0AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D106168A-F225-4363-9AA7-8345C74D0AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D106168A-F225-4363-9AA7-8345C74D0AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D106168A-F225-4363-9AA7-8345C74D0AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA89B2D0-2D05-4329-970D-7279D56C9159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA89B2D0-2D05-4329-970D-7279D56C9159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA89B2D0-2D05-4329-970D-7279D56C9159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA89B2D0-2D05-4329-970D-7279D56C9159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007CB4BF-7A9E-42C3-BEB1-D73CD315363C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007CB4BF-7A9E-42C3-BEB1-D73CD315363C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007CB4BF-7A9E-42C3-BEB1-D73CD315363C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007CB4BF-7A9E-42C3-BEB1-D73CD315363C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A09CA7E0-6624-44C6-B1D6-7A12FE818B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A09CA7E0-6624-44C6-B1D6-7A12FE818B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A09CA7E0-6624-44C6-B1D6-7A12FE818B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A09CA7E0-6624-44C6-B1D6-7A12FE818B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0651CAF2-21EB-4131-B188-AC558A7CD17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0651CAF2-21EB-4131-B188-AC558A7CD17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0651CAF2-21EB-4131-B188-AC558A7CD17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0651CAF2-21EB-4131-B188-AC558A7CD17A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5F89B8D-CCE6-4E4D-9C80-730031316A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F89B8D-CCE6-4E4D-9C80-730031316A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5F89B8D-CCE6-4E4D-9C80-730031316A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5F89B8D-CCE6-4E4D-9C80-730031316A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB07C32A-8C6C-4176-B08A-6112A5206FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB07C32A-8C6C-4176-B08A-6112A5206FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB07C32A-8C6C-4176-B08A-6112A5206FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB07C32A-8C6C-4176-B08A-6112A5206FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87D8D9F0-3023-46B7-B1B8-A0F73B484ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D8D9F0-3023-46B7-B1B8-A0F73B484ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D8D9F0-3023-46B7-B1B8-A0F73B484ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D8D9F0-3023-46B7-B1B8-A0F73B484ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E55F99D8-9C31-47BA-BF55-064270FA3704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E55F99D8-9C31-47BA-BF55-064270FA3704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E55F99D8-9C31-47BA-BF55-064270FA3704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E55F99D8-9C31-47BA-BF55-064270FA3704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E77A0779-F9EF-4A63-989C-BDC85D345106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77A0779-F9EF-4A63-989C-BDC85D345106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77A0779-F9EF-4A63-989C-BDC85D345106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77A0779-F9EF-4A63-989C-BDC85D345106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8C60145-E070-42F5-8BBC-EB48B590893C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C60145-E070-42F5-8BBC-EB48B590893C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C60145-E070-42F5-8BBC-EB48B590893C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C60145-E070-42F5-8BBC-EB48B590893C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

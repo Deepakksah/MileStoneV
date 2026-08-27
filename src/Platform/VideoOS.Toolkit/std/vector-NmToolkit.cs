@@ -1,0 +1,32 @@
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace std;
+
+[StructLayout(LayoutKind.Sequential, Size = 24)]
+[NativeCppClass]
+public struct vector_003CNmToolkit_003A_003AImMediaData_0020const_0020_002A_002Cstd_003A_003Aallocator_003CNmToolkit_003A_003AImMediaData_0020const_0020_002A_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+}
+[StructLayout(LayoutKind.Sequential, Size = 24)]
+[NativeCppClass]
+public struct vector_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_002Cstd_003A_003Aallocator_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_003E_0020_003E
+{
+	private long _003Calignment_0020member_003E;
+
+	[SpecialName]
+	public unsafe static void _003CMarshalCopy_003E(vector_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_002Cstd_003A_003Aallocator_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_003E_0020_003E* A_0, vector_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_002Cstd_003A_003Aallocator_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_003E_0020_003E* A_1)
+	{
+		if (A_0 != null)
+		{
+			global::_003CModule_003E.std_002Evector_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_002Cstd_003A_003Aallocator_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_003E_0020_003E_002E_007Bctor_007D(A_0, A_1);
+		}
+	}
+
+	[SpecialName]
+	public unsafe static void _003CMarshalDestroy_003E(vector_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_002Cstd_003A_003Aallocator_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_003E_0020_003E* A_0)
+	{
+		global::_003CModule_003E.std_002Evector_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_002Cstd_003A_003Aallocator_003CNmToolkit_003A_003AImDigitalZoomController_003A_003APoint_003E_0020_003E_002E_Tidy(A_0);
+	}
+}

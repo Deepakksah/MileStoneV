@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="SetConfigFilePathFailed" xml:space="preserve"><value>Failed to set path to config files in registry</value></data>
+  <data name="SetupHtmlHelpVirtualDirFailed" xml:space="preserve"><value>Failed to create HtmlHelp virtual directory</value></data>
+  <data name="IISResetNotFound" xml:space="preserve"><value>iisreset.exe not found.</value></data>
+  <data name="SetupServerConnectorVirtualDirFailed" xml:space="preserve"><value>Failed to create ServerConnector virtual directory</value></data>
+  <data name="InvalidAccount" xml:space="preserve"><value>CFG64014: The account '{0}' is not a valid account. Must be in the following format: Domain\UserName</value></data>
+  <data name="FailedToSetDatabaseOwner" xml:space="preserve"><value>CFG64016: Failed to set database owner '{0}' on database {1}.</value></data>
+  <data name="FailedToGetIISVersion" xml:space="preserve"><value>Failed to get IIS version</value></data>
+  <data name="SetupMgmtServerVirtualDirFailed" xml:space="preserve"><value>Failed to create ManagementServer virtual directory</value></data>
+  <data name="NullStoredProcedure" xml:space="preserve"><value>Unable to execute, no stored procedure</value></data>
+  <data name="AspNetInstallFailed" xml:space="preserve"><value>Failed to allow the ASP.NET web service extension</value></data>
+  <data name="SetupInstallationVirtualDirFailed" xml:space="preserve"><value>Failed to create Installation virtual directory</value></data>
+  <data name="ServerUninstallConfiguration" xml:space="preserve"><value>Failed while deleting the virtual directories</value></data>
+  <data name="WriteServerConfigFailed" xml:space="preserve"><value>Failed to write to the server config file</value></data>
+  <data name="StartIISFailed" xml:space="preserve"><value>Failed to start IIS</value></data>
+  <data name="SetupServerVirtualDirFailed" xml:space="preserve"><value>Failed to create Server virtual directory</value></data>
+  <data name="NotSufficientPrivileges" xml:space="preserve"><value>CFG64013: This tool requires administrative privileges.</value></data>
+  <data name="FaultToConfigureDatabaseAccount" xml:space="preserve"><value>CFG64017: Failed to configure database account '{0}' on database server {1}. Error: {2}</value></data>
+  <data name="SetupInstallationAdminVirtualDirFailed" xml:space="preserve"><value>Failed to create Installation\\Admin virtual directory</value></data>
+  <data name="WriteWebConfigFailed" xml:space="preserve"><value>Failed to write to the web config file</value></data>
+  <data name="FailedToConfigureServer" xml:space="preserve"><value>Failed to configure server</value></data>
+  <data name="SetupSystemInformationVirtualDirFailed" xml:space="preserve"><value>Failed to create SystemInformation virtual directory</value></data>
+  <data name="AccountNameNullOrEmpty" xml:space="preserve"><value>The account Name may not be Null or empty</value></data>
+  <data name="WindowsCommunicationFoundationInstallFailed" xml:space="preserve"><value>Failed to install Windows Communication Foundation on this machine</value></data>
+  <data name="UpdateIIS7HandlerPreConditionFailed" xml:space="preserve"><value>Failed to update IIS 7 handler pre conditions</value></data>
+  <data name="FailedToCreateLogin" xml:space="preserve"><value>CFG64015: Failed to create login '{0}' on database server {1}. Error: {2}</value></data>
+  <data name="FailedToConfigureServiceAccount" xml:space="preserve"><value>CFG64018: Failed to configure service account '{0}' on database {1}. Error: {2}</value></data>
+  <data name="UpdateUrlFilesFailed" xml:space="preserve"><value>Failed to update url files with port number</value></data>
+  <data name="GrantAccessFailed" xml:space="preserve"><value>Failed to grant access to the IIS metabase</value></data>
+  </root>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Error_certutil_not_found" xml:space="preserve"><value>certutil.exe not found</value></data>
+  <data name="Error_netsh_not_found" xml:space="preserve"><value>netsh.exe not found</value></data>
+  <data name="CertificateHttps_creating_https_binding" xml:space="preserve"><value>Creating HTTPS binding</value></data>
+  <data name="Error_Invalid_IIS_version" xml:space="preserve"><value>Invalid IIS version {0}</value></data>
+  <data name="Error_Add_SSL_cert" xml:space="preserve"><value>Cannot add SSL certificate</value></data>
+  <data name="Error_Set_secure_bindings" xml:space="preserve"><value>Cannot set secure bindings</value></data>
+  <data name="CertificateHttps_certificate_store_hash_binding_hash" xml:space="preserve"><value>Store hash: '{0}', SSL binding hash: '{1}'</value></data>
+  <data name="Management_server_address" xml:space="preserve"><value>Management server address: {0}</value></data>
+  <data name="Restarting_the_IIS_service" xml:space="preserve"><value>Re-starting the IIS service.</value></data>
+  <data name="Deleting_certificate" xml:space="preserve"><value>Deleting certificate {0}</value></data>
+  <data name="CertificateHttps_set_securebindings" xml:space="preserve"><value>Trying to set SecureBindings property</value></data>
+  <data name="CertificateHttps_certificate_hashes_not_equal" xml:space="preserve"><value>Hashes for certificates in store and SSL binding are not equal</value></data>
+  <data name="Error_Query_SSL_cert" xml:space="preserve"><value>Cannot query SSL certificate</value></data>
+  <data name="CertificateHttps_for_IIS_version" xml:space="preserve"><value>for IIS version {0}</value></data>
+  <data name="CertificateHttps_certificate_binding_hash_not_in_store" xml:space="preserve"><value>Certificate hash '{0}' for SSL binding is not in store</value></data>
+  <data name="Error_Cannot_create_certificate" xml:space="preserve"><value>Cannot create certificate {0}</value></data>
+  <data name="CertificateHttps_secure_bindings_ok" xml:space="preserve"><value>Secure bindings for SSL port {0} is OK</value></data>
+  <data name="Could_not_find_IIS_directory" xml:space="preserve"><value>Could not find the IIS application.</value></data>
+  <data name="Not_yet_synchronized_Check_authentication_timed_out" xml:space="preserve"><value>Not yet synchronized. Check authentication timed out.</value></data>
+  <data name="CertificateHttps_certificate_or_https_binding_not_ok" xml:space="preserve"><value>Certificate or HTTPS binding are NOT OK.</value></data>
+  <data name="CertificateHttps_clear_securebindings" xml:space="preserve"><value>Clearing SecureBindings property</value></data>
+  <data name="Could_not_get_name_of_the_web_site" xml:space="preserve"><value>Could not get name of the web site</value></data>
+  <data name="Failed_to_grant_access_for_user" xml:space="preserve"><value>Failed to grant access for user {0}.
+Aspnet_regiis.exe returned: {1}.
+Output: {2}</value></data>
+  <data name="CertificateHttps_ssl_port_in_binding_not_found" xml:space="preserve"><value>SSL port not found for HTTPS binding</value></data>
+  <data name="Not_yet_synchronized_abort" xml:space="preserve"><value>Not yet synchronized...aborting...</value></data>
+  <data name="CertificateHttps_service_started" xml:space="preserve"><value>Service '{0}' started</value></data>
+  <data name="CertificateHttps_service_stopped" xml:space="preserve"><value>Service '{0}' stopped</value></data>
+  <data name="Error_No_default_website" xml:space="preserve"><value>No default website</value></data>
+  <data name="Error_Set_SSL_cert" xml:space="preserve"><value>Cannot set SSL certificate</value></data>
+  <data name="SettingPreloadEnabled" xml:space="preserve"><value>Setting Preload Enabled on: {0} Value: {1}</value></data>
+  <data name="CertificateHttps_certificate_hash_ok" xml:space="preserve"><value>certificate hash {0} is OK</value></data>
+  <data name="Error_Show_SSL_cert" xml:space="preserve"><value>Cannot show SSL certificate</value></data>
+  <data name="Starting_the_IIS_service" xml:space="preserve"><value>Starting the IIS service.</value></data>
+  <data name="Error_Cannot_read_certificate_store" xml:space="preserve"><value>Cannot read certificate store</value></data>
+  <data name="CertificateHttps_creating_ssl_certificate_binding" xml:space="preserve"><value>Creating SSL certificate binding</value></data>
+  <data name="Error_Invalid_certificate_hash" xml:space="preserve"><value>Invalid certificate hash</value></data>
+  <data name="up_but_not_synchronized" xml:space="preserve"><value>up but not synchronized</value></data>
+  <data name="Synchronization_complete" xml:space="preserve"><value>Synchronization complete - current user: {0}</value></data>
+  <data name="Could_not_find_the_IIS_registry" xml:space="preserve"><value>Could not find the IIS registry key. Key : {0}</value></data>
+  <data name="Service_up_but_not_yet_synchronized_Error_occurred_while_trying_to_check_authentication" xml:space="preserve"><value>Service up but not yet synchronized. Error occurred while trying to check authentication:</value></data>
+  <data name="CertificateHttps_certificate_and_https_binding_ok" xml:space="preserve"><value>Both certificate and HTTPS binding is OK. Returning...</value></data>
+  <data name="CertificateHttps_expected_ssl_port_and_found_string" xml:space="preserve"><value>Expected SSL port: '{0}', found string: '{1}'</value></data>
+  <data name="CertificateHttps_starting_services" xml:space="preserve"><value>Starting services</value></data>
+  <data name="Creating_https_binding" xml:space="preserve"><value>Creating https binding</value></data>
+  <data name="Retrying_in_4_seconds" xml:space="preserve"><value>Retrying in 4 seconds ({0}/{1})...</value></data>
+  <data name="Error_Cannot_import_certificate" xml:space="preserve"><value>Cannot import certificate from file {0}</value></data>
+  <data name="Error_Iis_no_services_to_start" xml:space="preserve"><value>No IIS services to start</value></data>
+  <data name="CertificateHttps_stopping_services" xml:space="preserve"><value>Stopping services</value></data>
+  <data name="Error_Get_secure_bindings" xml:space="preserve"><value>Cannot get secure bindings</value></data>
+  <data name="Error_net_not_found" xml:space="preserve"><value>net.exe not found</value></data>
+  <data name="Creating_certificate" xml:space="preserve"><value>Creating certificate {0}</value></data>
+  <data name="CertificateHttps_check_certificate_and_https_binding" xml:space="preserve"><value>Creating certificate and HTTPS binding on web site {0} if needed</value></data>
+  <data name="Error_Iis_controlled_start" xml:space="preserve"><value>Cannot start IIS services</value></data>
+  <data name="Could_not_get_root_website_or_one_of_its_children" xml:space="preserve"><value>Could not get root website or one of its children</value></data>
+  <data name="CertificateHttps_deleting_ssl_certificate_binding" xml:space="preserve"><value>Deleting SSL certificate binding</value></data>
+  <data name="Service_up_but_not_yet_synchronized" xml:space="preserve"><value>Service up but not yet synchronized.</value></data>
+  <data name="CertificateHttps_add_securebindings" xml:space="preserve"><value>Adding '{0}' to SecureBindings property</value></data>
+  <data name="Error_Delete_secure_bindings" xml:space="preserve"><value>Cannot delete secure bindings</value></data>
+  <data name="Stopping_the_IIS_service" xml:space="preserve"><value>Stopping the IIS service.</value></data>
+  <data name="Error_adsutil_not_found" xml:space="preserve"><value>adsutil.vbs not found</value></data>
+  <data name="CertificateHttps_deleting_https_binding" xml:space="preserve"><value>Deleting HTTPS binding</value></data>
+  <data name="Not_yet_synchronized_Error_occurred_while_trying_to_check_authentication" xml:space="preserve"><value>Not yet synchronized. Error occurred while trying to check authentication:</value></data>
+  <data name="Error_cscript_not_found" xml:space="preserve"><value>cscript.exe not found</value></data>
+  <data name="Error_httpcfg_not_found" xml:space="preserve"><value>httpcfg.exe not found</value></data>
+  <data name="CertificateHttps_COMException" xml:space="preserve"><value>got System.Runtime.InteropServices.COMException</value></data>
+  <data name="Unable_to_find_the_web_site" xml:space="preserve"><value>Unable to find the web site</value></data>
+  <data name="Error_authenticating_user_service" xml:space="preserve"><value>Error authenticating user, service is {0}</value></data>
+  <data name="Error_Iis_controlled_stop" xml:space="preserve"><value>Cannot stop IIS services</value></data>
+  <data name="CertificateHttps_ssl_port_in_certificate_ok" xml:space="preserve"><value>SSL port {0} in certificate binding is OK</value></data>
+  <data name="CertificateHttps_retry" xml:space="preserve"><value>Retry {0}</value></data>
+  <data name="Error_Https_binding_on_website_and_port_has_no_certificate_associated" xml:space="preserve"><value>Https binding on web site '{0}' with IP port {1} has no certificate associated</value></data>
+  </root>

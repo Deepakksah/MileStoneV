@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:milestone-systems" elementFormDefault="qualified" targetNamespace="urn:milestone-systems" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CommandLineArguments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="InstallEnvironment" type="tns:InstallEnvironment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="InstallEnvironment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="tns:ArrayOfKeyValueParametersOfStringString" />
+    </xs:sequence>
+    <xs:attribute name="License" type="tns:LicenseType" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfKeyValueParametersOfStringString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueParametersOfStringString" nillable="true" type="tns:KeyValueParametersOfStringString" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="KeyValueParametersOfStringString">
+    <xs:all>
+      <xs:element name="Key" type="xs:string" />
+      <xs:element name="Value" type="xs:string" />
+    </xs:all>
+  </xs:complexType>
+  <xs:simpleType name="LicenseType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LicenseKey" />
+      <xs:enumeration value="LicenseService" />
+      <xs:enumeration value="LicenseFile" />
+      <xs:enumeration value="Trial" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

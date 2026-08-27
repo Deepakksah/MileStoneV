@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="HelpButton" xml:space="preserve"><value>說明</value></data>
+  <data name="SlideName" xml:space="preserve"><value>投影片</value></data>
+  <data name="LightBlue" xml:space="preserve"><value>淺藍色</value></data>
+  <data name="VideoTextsTitle" xml:space="preserve"><value>視訊文字</value></data>
+  <data name="PostSlidesTitle" xml:space="preserve"><value>後置投影片</value></data>
+  <data name="Orange" xml:space="preserve"><value>橙色</value></data>
+  <data name="BackgroundColor" xml:space="preserve"><value>背景顏色</value></data>
+  <data name="PreSlidesTitle" xml:space="preserve"><value>前置投影片</value></data>
+  <data name="DarkBlue" xml:space="preserve"><value>深藍色</value></data>
+  <data name="DarkGray" xml:space="preserve"><value>深灰色</value></data>
+  <data name="DeleteButton" xml:space="preserve"><value>刪除</value></data>
+  <data name="VideoTextsInstruction" xml:space="preserve"><value>輸入要在匯出視訊前或後顯示的文字。</value></data>
+  <data name="ClearList" xml:space="preserve"><value>清除清單</value></data>
+  <data name="Yellow" xml:space="preserve"><value>黃色</value></data>
+  <data name="ForegroundColor" xml:space="preserve"><value>字型色彩：</value></data>
+  <data name="DarkRed" xml:space="preserve"><value>深紅色</value></data>
+  <data name="LightYellow" xml:space="preserve"><value>淺黃色</value></data>
+  <data name="DeleteSlideTitle" xml:space="preserve"><value>刪除投影片</value></data>
+  <data name="RemoveSlide" xml:space="preserve"><value>移除投影片</value></data>
+  <data name="AddNewSlide" xml:space="preserve"><value>+ 新增投影片</value></data>
+  <data name="FontSize" xml:space="preserve"><value>字型大小</value></data>
+  <data name="CancelButton" xml:space="preserve"><value>取消</value></data>
+  <data name="Red" xml:space="preserve"><value>紅色</value></data>
+  <data name="Green" xml:space="preserve"><value>綠色</value></data>
+  <data name="Black" xml:space="preserve"><value>黑色</value></data>
+  <data name="White" xml:space="preserve"><value>白色</value></data>
+  <data name="PreSlideTitle" xml:space="preserve"><value>前置投影片</value></data>
+  <data name="DeleteSlidesTitle" xml:space="preserve"><value>刪除投影片</value></data>
+  <data name="VideoTextDefault" xml:space="preserve"><value>在此處輸入文字……</value></data>
+  <data name="DarkGreen" xml:space="preserve"><value>深綠色</value></data>
+  <data name="DeleteSlideContent" xml:space="preserve"><value>您確定要刪除此投影片?</value></data>
+  <data name="PostSlideTitle" xml:space="preserve"><value>後置投影片</value></data>
+  <data name="DeleteSlidesContent" xml:space="preserve"><value>您確定要清空此清單？此舉將刪除所有投影片。</value></data>
+  <data name="SaveButton" xml:space="preserve"><value>儲存</value></data>
+  <data name="FontFamily" xml:space="preserve"><value>字型</value></data>
+  <data name="TextColumn" xml:space="preserve"><value>文字</value></data>
+  <data name="Duration" xml:space="preserve"><value>持續期間 (秒)</value></data>
+  <data name="Blue" xml:space="preserve"><value>藍色</value></data>
+  <data name="Text" xml:space="preserve"><value>文字</value></data>
+  <data name="Pink" xml:space="preserve"><value>粉紅色</value></data>
+  <data name="LightGreen" xml:space="preserve"><value>淺綠色</value></data>
+  </root>

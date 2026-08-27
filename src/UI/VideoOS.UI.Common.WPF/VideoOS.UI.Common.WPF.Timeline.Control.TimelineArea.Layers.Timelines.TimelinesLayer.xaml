@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layers:LayerBase x:Class="VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Timelines.TimelinesLayer" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Layers="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers" xmlns:SlicedTimeline="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Timelines.SlicedTimeline" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" Loaded="LayerBase_Loaded" xmlns:timelines="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Timelines">
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="1*" MaxWidth="113" />
+    <ColumnDefinition Width="2*" />
+    <ColumnDefinition Width="1*" MaxWidth="113" />
+  </Grid.ColumnDefinitions>
+  <Canvas Name="_contentCanvas" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Bottom">
+    <Rectangle Name="_upperTimelineBackground" Canvas.Left="0" Width="{Binding ElementName=_contentCanvas, Path=ActualWidth}" />
+    <Rectangle Name="_lowerTimelineBackground" Canvas.Left="0" Width="{Binding ElementName=_contentCanvas, Path=ActualWidth}" />
+    <SlicedTimeline:SlicedTimeline x:Name="_slicedTimeline" Left="0" Top="0" Width="{Binding ElementName=_contentCanvas, Path=ActualWidth}" />
+    <Grid Name="_intervalSelectionLeftGrid" Visibility="Visible" Height="{Binding ElementName=_contentCanvas, Path=ActualHeight}">
+      <Rectangle Fill="{controls:VideoOSInternalDynamicResource TimelineTimeSelectionExcludedAreaOverlayBrush}" />
+    </Grid>
+    <Grid Name="_intervalSelectionRightGrid" Visibility="Visible" Height="{Binding ElementName=_contentCanvas, Path=ActualHeight}">
+      <Rectangle Fill="{controls:VideoOSInternalDynamicResource TimelineTimeSelectionExcludedAreaOverlayBrush}" />
+    </Grid>
+  </Canvas>
+  <Rectangle Grid.Column="0" Fill="{controls:VideoOSInternalDynamicResource TimelineTracksFadeInBrush}" />
+  <Rectangle Grid.Column="2" Fill="{controls:VideoOSInternalDynamicResource TimelineTracksFadeOutBrush}" />
+</Layers:LayerBase>

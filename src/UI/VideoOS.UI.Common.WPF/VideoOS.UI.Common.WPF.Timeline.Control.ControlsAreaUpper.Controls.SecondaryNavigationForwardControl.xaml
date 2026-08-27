@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls.SecondaryNavigationForwardControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:resources="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls.resources" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" xmlns:controls1="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.ControlsAreaUpper.Controls">
+  <Grid>
+    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+      <controls:VideoOSButtonTransparentMedium Name="_navigateNextSequenceButton" ToolTip="{x:Static resources:Strings.TooltipNavigateNextSequenceButton}" IsEnabled="{Binding NavigationControlsEnabled}" IconSource="{controls:VideoOSIconBuiltInSource Sequence_Next, RtlIcon=Sequence_Previous}" Click="_navigateNextSequenceButton_Click" />
+      <controls:VideoOSButtonTransparentMedium Name="_navigateLastButton" Margin="8,0,0,0" ToolTip="{x:Static resources:Strings.TooltipNavigateLastButton}" IsEnabled="{Binding NavigationControlsEnabled}" IconSource="{controls:VideoOSIconBuiltInSource Sequence_Last, RtlIcon=Sequence_First}" Click="_navigateLastButton_Click" />
+    </StackPanel>
+  </Grid>
+</UserControl>

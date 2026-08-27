@@ -1,0 +1,67 @@
+-- This header is used by the dbupdate tool.
+-- The TARGET property is used to indicate which database the script is
+-- intended to be executed on. The value can be either 'Surveillance' or
+-- 'SurveillanceLog' without the quotes.
+-- =========================================================================
+-- TARGET: Surveillance
+-- =========================================================================
+
+IF EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[update_perfcounter_state_rule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [update_perfcounter_state_rule]
+GO
+
+CREATE PROCEDURE [update_perfcounter_state_rule]
+	@CounterStateRuleId [UNIQUEIDENTIFIER],
+	@CriticalThreshold FLOAT,
+	@WarningThreshold FLOAT,
+	@TimeWindow [int],
+	@Name NVARCHAR(50),
+	@Disabled BIT,
+	@session_id [GuidType]
+AS	
+BEGIN
+	SET NOCOUNT ON
+ 
+	-- Initialize the ProcedureName for error messages.
+	DECLARE @procedureName SYSNAME
+	SELECT  @procedureName = @@SERVERNAME + '.' + db_name() + '..' + object_name(@@PROCID)
+	DECLARE @ErrorArgs NVARCHAR(500)
+
+	BEGIN TRY
+		DECLARE @rowCount INT
+
+		BEGIN TRAN
+
+		UPDATE [PerformanceCounterStateRule]
+		SET 
+			[critical_threshold] = @CriticalThreshold,
+			[warning_threshold] = @WarningThreshold,
+			[time_window] = @TimeWindow,
+			[rule_name] = @Name,
+			[disabled] = @Disabled
+		WHERE [counter_state_rule_id] = @CounterStateRuleId
+		SELECT @rowCount = @@ROWCOUNT 
+
+		-- Does the performance counter rule exist?
+		IF(@rowCount <> 1)
+		BEGIN
+			;THROW 65003, @procedureName, 1;
+		END
+
+		COMMIT TRAN
+
+		EXEC create_pending_log @session_id, 22019, @CounterStateRuleId, @Name
+	END TRY
+	BEGIN CATCH 
+		IF @@TRANCOUNT > 0
+		BEGIN
+			ROLLBACK TRANSACTION
+		END;
+		DECLARE @shouldReThrowError BIT = dbo.[ShouldReThrowError](ERROR_NUMBER(), ERROR_SEVERITY())
+		IF(@shouldReThrowError = 1)
+			THROW;
+		SET @ErrorArgs = dbo.[FormatErrorMessage](ERROR_NUMBER(), ERROR_SEVERITY(), ERROR_STATE(), ERROR_PROCEDURE(), ERROR_LINE(), ERROR_MESSAGE())
+		;THROW 60000, @ErrorArgs, 1;
+	END CATCH;
+END
+GO

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:commands="clr-namespace:VideoOS.Platform.UI.Commands" xmlns:converters="clr-namespace:VideoOS.Platform.UI.Converters">
+  <DataTemplate x:Key="{x:Static controls:DialogActionsCanvas+DialogActionsCanvasInternals.PrimaryButtonLargeTemplateKey}" DataType="controls:VideoOSDialogActionButtonPrimary">
+    <controls:VideoOSButtonPrimaryLarge Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter}}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" Command="{Binding ClickCommand}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:DialogActionsCanvas+DialogActionsCanvasInternals.PrimaryButtonMediumTemplateKey}" DataType="controls:VideoOSDialogActionButtonPrimary">
+    <controls:VideoOSButtonPrimaryMedium Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter}}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" Command="{Binding ClickCommand}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:DialogActionsCanvas+DialogActionsCanvasInternals.SecondaryButtonLargeTemplateKey}" DataType="controls:VideoOSDialogActionButtonSecondary">
+    <controls:VideoOSButtonSecondaryLarge Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter}}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" Command="{Binding ClickCommand}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:DialogActionsCanvas+DialogActionsCanvasInternals.SecondaryButtonMediumTemplateKey}" DataType="controls:VideoOSDialogActionButtonSecondary">
+    <controls:VideoOSButtonSecondaryMedium Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter}}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" Command="{Binding ClickCommand}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:DialogActionsCanvas+DialogActionsCanvasInternals.TertiaryButtonLargeTemplateKey}" DataType="controls:VideoOSDialogActionButtonTertiary">
+    <controls:VideoOSButtonTertiaryLarge Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter}}" IconSource="{Binding IconSource}" Command="{Binding ClickCommand}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:DialogActionsCanvas+DialogActionsCanvasInternals.TertiaryButtonMediumTemplateKey}" DataType="controls:VideoOSDialogActionButtonTertiary">
+    <controls:VideoOSButtonTertiaryMedium Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter}}" IconSource="{Binding IconSource}" Command="{Binding ClickCommand}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:DialogActionsCanvas+DialogActionsCanvasInternals.TransparentButtonLargeTemplateKey}" DataType="controls:VideoOSDialogActionButtonTransparent">
+    <controls:VideoOSButtonTransparentLarge Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter}}" IconSource="{Binding IconSource}" Command="{Binding ClickCommand}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:DialogActionsCanvas+DialogActionsCanvasInternals.TransparentButtonMediumTemplateKey}" DataType="controls:VideoOSDialogActionButtonTransparent">
+    <controls:VideoOSButtonTransparentMedium Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter}}" IconSource="{Binding IconSource}" Command="{Binding ClickCommand}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:DialogActionsCanvas+DialogActionsCanvasInternals.TextButtonTemplateKey}" DataType="controls:VideoOSDialogActionButtonText">
+    <controls:VideoOSButtonTextMedium Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter}}" IconSource="{Binding IconSource}" IsDestructive="{Binding IsDestructive}" Command="{Binding ClickCommand}" />
+  </DataTemplate>
+  <DataTemplate x:Key="{x:Static controls:DialogActionsCanvas+DialogActionsCanvasInternals.CheckBoxTemplateKey}" DataType="controls:VideoOSDialogActionCheckBox">
+    <controls:VideoOSCheckBoxMedium MaxLines="1" commands:EventsToCommandMapping.Events="Checked, Unchecked" Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" Visibility="{Binding IsVisible, Converter={converters:BoolToVisibilityConverter}}" commands:EventsToCommandMapping.Command="{Binding CheckedUncheckedCommand}" />
+  </DataTemplate>
+</ResourceDictionary>

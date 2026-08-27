@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentControl x:Class="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.CellActions" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:columnTemplates="clr-namespace:VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates" x:Name="_root" ContentTemplate="{Binding Path=RowAppearance, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSTable}}, Converter={columnTemplates:CellActionsContentTemplateConverter TallTemplate={StaticResource {x:Static columnTemplates:CellActionsInternals.TallTemplateKey}}, NormalTemplate={StaticResource {x:Static columnTemplates:CellActionsInternals.NormalTemplateKey}}, CompactTemplate={StaticResource {x:Static columnTemplates:CellActionsInternals.CompactTemplateKey}}}}" PreviewMouseLeftButtonDown="CellActions_OnPreviewMouseLeftButtonDown">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="{x:Static columnTemplates:CellActions+CellActionsInternals.TallTemplateKey}">
+        <controls:VideoOSActionListHorizontalSmall Actions="{Binding ElementName=_root, Path=Actions}" Spacing="{Binding ElementName=_root, Path=Spacing}" HorizontalContentAlignment="{Binding Path=Column.Column.HorizontalAlignment, FallbackValue=Left, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridCell}}}">
+          <UIElement.Visibility>
+            <MultiBinding Converter="{x:Static columnTemplates:CellActionsInternals.ActionListVisibilityConverter}">
+              <Binding Path="IsMouseOver" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}}" />
+              <Binding Path="IsOpen" RelativeSource="{RelativeSource Self}" />
+              <Binding Path="IsSelected" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}}" />
+            </MultiBinding>
+          </UIElement.Visibility>
+        </controls:VideoOSActionListHorizontalSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static columnTemplates:CellActions+CellActionsInternals.NormalTemplateKey}">
+        <controls:VideoOSActionListHorizontalSmall Actions="{Binding ElementName=_root, Path=Actions}" Spacing="{Binding ElementName=_root, Path=Spacing}" HorizontalContentAlignment="{Binding Path=Column.Column.HorizontalAlignment, FallbackValue=Left, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridCell}}}">
+          <UIElement.Visibility>
+            <MultiBinding Converter="{x:Static columnTemplates:CellActionsInternals.ActionListVisibilityConverter}">
+              <Binding Path="IsMouseOver" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}}" />
+              <Binding Path="IsOpen" RelativeSource="{RelativeSource Self}" />
+              <Binding Path="IsSelected" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}}" />
+            </MultiBinding>
+          </UIElement.Visibility>
+        </controls:VideoOSActionListHorizontalSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static columnTemplates:CellActions+CellActionsInternals.CompactTemplateKey}">
+        <controls:VideoOSActionListHorizontalExtraSmall Actions="{Binding ElementName=_root, Path=Actions}" Spacing="{Binding ElementName=_root, Path=Spacing}" HorizontalContentAlignment="{Binding Path=Column.Column.HorizontalAlignment, FallbackValue=Left, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridCell}}}">
+          <UIElement.Visibility>
+            <MultiBinding Converter="{x:Static columnTemplates:CellActionsInternals.ActionListVisibilityConverter}">
+              <Binding Path="IsMouseOver" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}}" />
+              <Binding Path="IsOpen" RelativeSource="{RelativeSource Self}" />
+              <Binding Path="IsSelected" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}}" />
+            </MultiBinding>
+          </UIElement.Visibility>
+        </controls:VideoOSActionListHorizontalExtraSmall>
+      </DataTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+</ContentControl>

@@ -1,0 +1,10 @@
+[package]
+name = "lychee_events"
+version = "2025.3.0"
+edition = "2021"
+description = "Event Server, Alarm Pipeline & Rules Engine (converted from Milestone src/EventServer, src/RulesEngine)"
+
+[dependencies]
+lychee_common = { path = "../lychee_common" }
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4" }

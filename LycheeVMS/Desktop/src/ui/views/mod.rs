@@ -1,0 +1,9 @@
+pub mod alarms_view;
+pub mod analytics_view;
+pub mod cameras_view;
+pub mod license_view;
+pub mod logs_view;
+pub mod mobile_view;
+pub mod security_view;
+pub mod servers_view;
+pub mod site_view;

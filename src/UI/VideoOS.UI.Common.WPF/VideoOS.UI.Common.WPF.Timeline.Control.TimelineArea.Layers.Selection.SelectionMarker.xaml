@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Grid x:Class="VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Selection.SelectionMarker" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls;assembly=VideoOS.Platform" Width="1" Cursor="SizeWE" xmlns:selection="clr-namespace:VideoOS.UI.Common.WPF.Timeline.Control.TimelineArea.Layers.Selection;assembly=VideoOS.UI.Common.WPF" Loaded="Grid_Loaded">
+  <Canvas VerticalAlignment="Top">
+    <Grid Name="_timeTextGrid" VerticalAlignment="Top" Canvas.Top="0" Effect="{controls:VideoOSDynamicResource DropShadowEffect}">
+      <Border Name="_timeTextBorder" CornerRadius="3" Margin="2,0" Background="{controls:VideoOSInternalDynamicResource TimelinePlayheadBackgroundBrush}" SizeChanged="_timeTextBlockGrid_OnSizeChanged">
+        <StackPanel Orientation="Horizontal">
+          <controls:VideoOSIcon Width="12" Height="12" VerticalAlignment="Center" Margin="4,0,0,0" IconSource="{controls:VideoOSIconBuiltInSource Time_Date_Select}" />
+          <controls:VideoOSTextBlockInteractiveSmall Name="_timeTekstBlock" Margin="6,0,4,0" VerticalAlignment="Center" AutomationProperties.AutomationId="_dateTimeTextBlock" Appearance="HighEmphasis" FontWeight="Bold" />
+        </StackPanel>
+      </Border>
+    </Grid>
+  </Canvas>
+  <Canvas Name="_markerCanvas" VerticalAlignment="Bottom" MouseLeftButtonDown="_markerCanvas_MouseLeftButtonDown" MouseMove="_markerCanvas_MouseMove" MouseLeftButtonUp="_markerCanvas_MouseLeftButtonUp">
+    <Rectangle Width="9" Fill="#00FFFFFF" Canvas.Left="-4" Height="{Binding ElementName=_markerCanvas, Path=ActualHeight}" />
+    <Border Name="_fromBorder" Width="2.5" CornerRadius="3,0,0,3" Canvas.Left="-1.5" SnapsToDevicePixels="False" Background="{controls:VideoOSInternalDynamicResource TimelineSelectionControlsBrush}" Height="{Binding ElementName=_markerCanvas, Path=ActualHeight}" />
+    <Path Name="_fromTriangle" Data="M-4,0 L0,-6 L0,6 L-4,0" VerticalAlignment="Center" Canvas.Right="2" Fill="{controls:VideoOSInternalDynamicResource TimelineSelectionControlsBrush}" />
+    <Border Name="_toBorder" Width="2.5" CornerRadius="0,3,3,0" Canvas.Right="-1.5" SnapsToDevicePixels="False" Background="{controls:VideoOSInternalDynamicResource TimelineSelectionControlsBrush}" Height="{Binding ElementName=_markerCanvas, Path=ActualHeight}" />
+    <Path Name="_toTriangle" Data="M4,0 L0,-6 L0,6 L4,0" VerticalAlignment="Center" Canvas.Left="2" Fill="{controls:VideoOSInternalDynamicResource TimelineSelectionControlsBrush}" />
+    <Rectangle Name="_centerRectangle" Width="3" Canvas.Left="-1" Canvas.Top="1" Fill="{controls:VideoOSInternalDynamicResource TimelineSelectionBookmarkBrush}" Height="{Binding ElementName=_markerCanvas, Path=ActualHeight}" />
+    <Image Name="_centerImage" Canvas.Bottom="0" Effect="{controls:VideoOSDynamicResource DropShadowEffect}" />
+  </Canvas>
+</Grid>

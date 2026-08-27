@@ -1,0 +1,20 @@
+using System.CodeDom.Compiler;
+using System.Runtime.Serialization;
+
+namespace ServerCommandService;
+
+[GeneratedCode("System.Runtime.Serialization", "4.0.0.0")]
+[DataContract(Name = "IntegrationType", Namespace = "http://videoos.net/2/XProtectCSServerCommand")]
+public enum IntegrationType
+{
+	[EnumMember]
+	Client,
+	[EnumMember]
+	Administration,
+	[EnumMember]
+	EventServer,
+	[EnumMember]
+	Standalone,
+	[EnumMember]
+	DeviceDriver
+}

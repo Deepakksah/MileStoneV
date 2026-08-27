@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.UI.CertificateCommonPage.CertificateGroupControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:prop="clr-namespace:VideoOS.Installer.UI.Properties" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Installer.UI.CertificateCommonPage" xmlns:wpf="clr-namespace:VideoOS.UI.Common.WPF.Utils.Converters;assembly=VideoOS.UI.Common.WPF">
+  <StackPanel Grid.Row="0" Margin="0,0,5,10" Width="auto">
+    <Border BorderBrush="#acacac" BorderThickness="1" Padding="8">
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+          <RowDefinition Height="auto" />
+          <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical">
+          <TextBlock TextWrapping="Wrap" FontFamily="Arial" FontSize="9pt" HorizontalAlignment="Left" Text="{Binding Title}" />
+          <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0,3,0,0" FontFamily="Arial" FontSize="9pt" Foreground="#8d8d8d" Text="{Binding Subtitle}" />
+        </StackPanel>
+        <Grid Margin="0,4,0,0" Row="1">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" MaxWidth="288" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+          <CheckBox Content="{x:Static prop:Resources.CertificateCommonCheckmarkEncrypt}" FontFamily="Arial" FontSize="9pt" x:Uid="EnableEncryptionCheckbox" VerticalContentAlignment="Center" Grid.Column="0" IsChecked="{Binding UseEncryption}" IsEnabled="{Binding IsEncryptionUnlocked}" AutomationProperties.AutomationId="{Binding GroupId, StringFormat=EncryptionPage.EnableEncryptionCheckbox_{0}}" />
+          <ComboBox DisplayMemberPath="FriendlyName" Margin="10,0,0,0" FontFamily="Arial" FontSize="9pt" Grid.Column="1" MinHeight="20" ItemsSource="{Binding Path=AvailableCertificates}" SelectedItem="{Binding Path=SelectedCertificate}" AutomationProperties.AutomationId="{Binding GroupId, StringFormat=EncryptionPage.CertificatesList_{0}}">
+            <UIElement.IsEnabled>
+              <MultiBinding FallbackValue="True">
+                <MultiBinding.Converter>
+                  <wpf:BoolBoolConverterExtension wpf:BoolBoolConverterExtension.TrueValue="True" wpf:BoolBoolConverterExtension.FalseValue="False" />
+                </MultiBinding.Converter>
+                <Binding Path="UseEncryption" />
+                <Binding Path="IsUnlocked" />
+              </MultiBinding>
+            </UIElement.IsEnabled>
+          </ComboBox>
+          <Button Grid.Column="2" MinWidth="97" Content="{x:Static prop:Resources.CertificateCommonButtonDetails}" Padding="5,0,5,0" x:Uid="DetailsButton" Margin="10,0,0,0" AutomationProperties.AutomationId="{Binding GroupId, StringFormat=EncrpytionPage.DetailsButton_{0}}" Command="{Binding CertificateDetailsCommand}" />
+        </Grid>
+        <StackPanel Grid.Row="2">
+          <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontFamily="Tahoma" FontSize="9pt" Margin="0,5,0,0" Foreground="#FF000000" Text="{Binding SelectedCertificate.DisplayInfo}" />
+        </StackPanel>
+      </Grid>
+    </Border>
+  </StackPanel>
+</UserControl>

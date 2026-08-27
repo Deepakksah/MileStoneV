@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="QueryDuplicateDevicesInfo" xml:space="preserve"><value>-- First, parse all rules to extract all contained guids into the #RuleGuids table
+IF OBJECT_ID('TempDb..#RuleGuids', 'U') IS NOT NULL DROP TABLE #RuleGuids;
+CREATE TABLE #RuleGuids (
+                rule_id CHAR(36) COLLATE SQL_Latin1_General_CP1_CI_AS,
+                guid_value CHAR(36) COLLATE SQL_Latin1_General_CP1_CI_AS INDEX IX_Rule_Guid CLUSTERED)
+DECLARE @guidPattern VARCHAR(512) = '%[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]-[0-9a-f][0-9a-f][0-9a-f][0-9a-f]-[0-9a-f][0-9a-f][0-9a-f][0-9a-f]-[0-9a-f][0-9a-f][0-9a-f][0-9a-f]-[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]%'
+ 
+;WITH rule_guids_cte(rule_id, guid_val, def2, start_pos, [Definition])
+AS (
+    SELECT    IDRule
+            , SUBSTRING([Def], [StartPos], 36)
+            , SUBSTRING([Def], [StartPos] + 36, LEN([Def]) - 36)
+            , PATINDEX(@guidPattern, SUBSTRING([Def], [StartPos] + 36, LEN([Def])))
+            , [Definition]
+    FROM    
+            (SELECT
+                  IDRule
+                , CAST([Definition] AS VARCHAR(MAX)) AS [Def]
+                , PATINDEX(@guidPattern, CAST([Definition] AS VARCHAR(MAX))) AS [StartPos]
+                , [Definition]
+             FROM
+                Rules) R
+    WHERE
+            StartPos &gt; 0
+    
+    UNION ALL
+ 
+    SELECT    rule_id
+            , SUBSTRING(def2, start_pos, 36)
+            , SUBSTRING(def2, start_pos + 36, LEN(def2) - 36)
+            , PATINDEX(@guidPattern, SUBSTRING(def2, start_pos + 36, LEN(def2)))
+            , [Definition]
+    FROM    
+            rule_guids_cte
+    WHERE
+            start_pos &gt; 0
+)
+INSERT INTO #RuleGuids
+    SELECT DISTINCT rule_id, guid_val
+    FROM rule_guids_cte
+OPTION (MAXRECURSION 0)
+
+IF OBJECT_ID('TempDb..#AllDuplicateDevices', 'U') IS NOT NULL DROP TABLE #AllDuplicateDevices;
+CREATE TABLE #AllDuplicateDevices (
+                    [IDHardware] CHAR(36) COLLATE SQL_Latin1_General_CP1_CI_AS,
+                    [IDDevice] CHAR(36) COLLATE SQL_Latin1_General_CP1_CI_AS INDEX IX_AllDuplicateDevices_IDDevice CLUSTERED,
+                    [DeviceType] VARCHAR(256) COLLATE SQL_Latin1_General_CP1_CI_AS,
+                    [DeviceIndex] INT,
+                    [Enabled] BIT
+                )
+INSERT INTO #AllDuplicateDevices
+                SELECT
+                        d1.[IDHardware],
+                        d1.[IDDevice],
+                        d1.[DeviceType],
+                        d1.[DeviceIndex],
+                        d1.[Enabled]
+                FROM    [Devices] d1
+                WHERE   EXISTS (
+                        SELECT  1
+                        FROM    [Devices] d2
+                        WHERE   d2.[IDHardware] = d1.[IDHardware]
+                                AND d2.[IDDevice] &lt;&gt; d1.[IDDevice]
+                                AND d2.[DeviceType] = d1.[DeviceType]
+                                AND d2.[DeviceIndex] = d1.[DeviceIndex]
+                        )
+            
+ 
+-- Now, find all the duplicates
+;WITH Duplicates_CTE ([DeviceType], [DeviceIndex], [DeviceImportance], [Enabled], [GroupCount], [RuleCount], [DeviceLinkCount], [IDDevice], [RowNumber])
+AS (
+    SELECT
+            [DeviceType],
+            [DeviceIndex],
+            [DeviceImportance],
+            DuplicateDeviceWithImportance.[Enabled],
+            [GroupCount],
+            [RuleCount],
+            [DeviceLinkCount],
+            [IDDevice],
+            ROW_NUMBER() OVER (PARTITION BY DuplicateDeviceWithImportance.[IDHardware], [DeviceType], [DeviceIndex] ORDER BY [DeviceImportance] DESC)
+    FROM
+        (SELECT
+                [IDHardware],
+                [IDDevice],
+                [DeviceType],
+                [DeviceIndex],
+                [Enabled],
+                (SELECT COUNT(1) FROM DeviceGroupMembers dgm INNER JOIN DeviceGroups dg ON dg.IDDeviceGroup = dgm.IDDeviceGroup WHERE dgm.IDDevice = AllDuplicateDevices.IDDevice AND dg.BuiltIn &lt;&gt; 1) AS GroupCount,
+                (SELECT COUNT(1) FROM #RuleGuids WHERE [guid_value] = AllDuplicateDevices.IDDevice) AS RuleCount,
+                (SELECT COUNT(*) FROM (
+                        SELECT 1 AS C FROM DeviceLinks dl1 WHERE dl1.IDDevice = AllDuplicateDevices.IDDevice
+                        UNION ALL
+                        SELECT 1 AS C FROM DeviceLinks dl2 WHERE dl2.IDDeviceLinked = AllDuplicateDevices.IDDevice) LNK
+                ) AS DeviceLinkCount
+        FROM 
+                #AllDuplicateDevices AllDuplicateDevices
+        ) DuplicateDeviceWithImportance
+    CROSS APPLY (
+                SELECT [Enabled] + [GroupCount] + [RuleCount] + [DeviceLinkCount] AS [Deviceimportance]
+    ) Importance
+)
+ 
+SELECT  DISTINCT
+        rd.[IsRecordingDevice],
+        [DeviceImportance]
+FROM    Duplicates_CTE
+        INNER JOIN [RegisteredDeviceTypes] rd ON rd.[DeviceType] = Duplicates_CTE.[DeviceType]
+WHERE   [RowNumber] &gt; 1
+
+
+DROP TABLE #RuleGuids
+DROP TABLE #AllDuplicateDevices
+</value></data>
+  <data name="CheckForLegacyRecordingServers" xml:space="preserve"><value>IF (NOT EXISTS (SELECT 1 FROM sys.tables WHERE [object_id] = OBJECT_ID(N'RecordingServerService')))
+	OR (NOT EXISTS (SELECT 1 FROM sys.columns WHERE [object_id] = OBJECT_ID(N'RecordingServerService') AND [name] = N'version'))
+BEGIN
+	-- No RecordingServerService table
+	-- or
+	-- RecordingServerService exists, but does not have version column.
+	-- 
+	-- Both means that version is before we introduced column, so all recorders must be older than 2020 R1
+	SELECT	COUNT(1) AS [legacy_recorders_count]
+	FROM	[Recorders]
+	RETURN
+END
+ELSE
+BEGIN
+	EXEC('
+	DECLARE @primary_recorder_type INT = 0
+
+	SELECT	COUNT(1) AS [legacy_recorders_count]
+	FROM	[Recorders] r
+			INNER JOIN [RecordingServerServiceRecorder] rssr ON r.[IDRecorder] = rssr.[recorder_id] AND rssr.[type] = @primary_recorder_type
+			INNER JOIN (SELECT	[pkid],
+								CONVERT(INT, LEFT([version], CHARINDEX(''.'', [version]) - 1)) AS [Major],
+								CONVERT(INT, SUBSTRING([version], CHARINDEX(''.'', [version]) + 1, CHARINDEX(''.'', [version], CHARINDEX(''.'', [version]) + 1) - CHARINDEX(''.'', [version]) - 1)) AS [Minor]
+						FROM	[RecordingServerService]
+						) rss ON rss.[pkid] = rssr.[recording_server_service_id]
+	WHERE	rss.[Major] &lt; 20
+			OR (rss.[Major] = 20 AND rss.[Minor] &lt; 2)
+	')
+END
+</value></data>
+  </root>

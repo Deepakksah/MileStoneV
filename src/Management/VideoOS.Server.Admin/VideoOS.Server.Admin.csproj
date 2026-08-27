@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Server.Admin</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    
+    
+    <Reference Include="Microsoft.Web.Administration" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml" />
+    
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    
+    
+    
+    
+    
+    
+    
+    
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\ServerCore\VideoOS.Server\VideoOS.Server.csproj" />
+    <ProjectReference Include="..\VideoOS.Management.VmoClient\VideoOS.Management.VmoClient.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common\VideoOS.Common.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.Crypto\VideoOS.Common.Crypto.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Vms.Utilities\VideoOS.Vms.Utilities.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\VideoOS.Management.Server\VideoOS.Management.Server.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Vms.BackupRestore\VideoOS.Vms.BackupRestore.csproj" />
+    <ProjectReference Include="..\..\Database\VideoOS.SqlUpdate\VideoOS.SqlUpdate.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities.Database.Authentication\VideoOS.Utilities.Database.Authentication.csproj" />
+    <ProjectReference Include="..\VideoOS.Management.Common\VideoOS.Management.Common.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Common.EnvironmentServices\VideoOS.Common.EnvironmentServices.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities.Database\VideoOS.Utilities.Database.csproj" />
+  </ItemGroup>
+</Project>

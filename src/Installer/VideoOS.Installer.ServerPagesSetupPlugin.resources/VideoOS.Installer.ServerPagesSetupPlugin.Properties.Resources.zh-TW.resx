@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ConfirmBackup_Description" xml:space="preserve"><value>建議在執行升級前，先備份您的系統設定。您可以在 {0} 建立備份。</value></data>
+  <data name="Database_UpdateFailed_DuplicateDevicesFound" xml:space="preserve"><value>無法升級該系統，因為設定資料庫包含重複的裝置。
+
+如需移除重複裝置的說明，請聯絡支援 {0}。</value></data>
+  <data name="ErrorMessage_FipsEnabledOnSQLUpgradeLinkText" xml:space="preserve"><value>Microsoft 支援入口網站</value></data>
+  <data name="Database_UpdateFailed_" xml:space="preserve"><value>無法更新 SQL Server {0}，資料庫 {1}。離開代碼: {2}</value></data>
+  <data name="Database_DuplicateDevices_Found" xml:space="preserve"><value>找到含重複的裝置。</value></data>
+  <data name="PrivacySettingsPageHeader" xml:space="preserve"><value>隱私權設定</value></data>
+  <data name="Database_ConnectionStringFoundText" xml:space="preserve"><value>您在此電腦上安裝的舊版在您的網路上使用下列 SQL 監視資料庫:
+
+伺服器: {0}
+SQL 資料庫: {1}
+
+建議您繼續使用此 SQL 資料庫，因為這能夠讓您重複使用組態，並且在多部電腦上分攤工作負載。
+
+SQL 資料庫將升級，以符合您新的安裝。
+
+是否要重複使用組態?
+
+
+
+</value></data>
+  <data name="PrivacySettingsConfirmationAccept" xml:space="preserve"><value>我接受並繼續</value></data>
+  <data name="ConfirmBackup_Headline" xml:space="preserve"><value>確認系統設定已完成備份</value></data>
+  <data name="ErrorMessage_FipsEnabledOnSQLUpgradeTitle" xml:space="preserve"><value>SQL Server 在符合 FIPS 140-2 的模式下執行</value></data>
+  <data name="Database_DBCreateFailure" xml:space="preserve"><value>無法建立資料庫。請確定使用者擁有建立資料庫的權限。</value></data>
+  <data name="ErrorMessage_FipsEnabledOnSQLUpgrade" xml:space="preserve"><value>若要符合 FIPS，您的資料必須由更強的加密類型加密。為此，SQL Server 在升級時不得在符合 FIPS 140-2 的模式下執行。
+
+若要深入了解執行符合 FIPS 140-2 的 SQL Server，請造訪 {0}。</value></data>
+  <data name="Database_ConnectionStringFoundCaption" xml:space="preserve"><value>找到連線字串</value></data>
+  <data name="PrivacySettingsPageInfo" xml:space="preserve"><value>讀取所收集使用資料的詳細清單：</value></data>
+  <data name="PrivacySettingsConfirmationCancel" xml:space="preserve"><value>取消</value></data>
+  <data name="PrivacySettingsConfirmationTitle" xml:space="preserve"><value>共用使用資料</value></data>
+  <data name="PrivacySettingsPageDoNotShareUsageData" xml:space="preserve"><value>請勿共用使用資料（{0}、{1} 用戶端與 {2}）。</value></data>
+  <data name="Database_UpdateDatabaseTypeFailed" xml:space="preserve"><value>現有的資料庫與選取的
+{0} 授權檔案不相容。</value></data>
+  <data name="Database_UpdateFailed_DuplicateDevicesFound_QuietInstall" xml:space="preserve"><value>無法升級該系統，因為設定資料庫包含重複的裝置。
+如需移除重複裝置的說明，請聯絡支援 {0}。</value></data>
+  <data name="Database_UpdateFailed_DuplicateDevicesFound_NoSupportUrl" xml:space="preserve"><value>無法升級該系統，因為設定資料庫包含重複的裝置。
+
+如需移除重複裝置的說明，請聯絡支援。</value></data>
+  <data name="ConfirmBackup_LabelMoreInformation" xml:space="preserve"><value>如需更多資訊，請參考管理員手冊。</value></data>
+  <data name="PrivacySettingsConfirmationQuestion" xml:space="preserve"><value>是否接受使用資料?</value></data>
+  <data name="LicenseWarning_Detail" xml:space="preserve"><value>請造訪 {0} 以深入了解 {1} 如何計算裝置授權總數及各個裝置要求的裝置授權數量。</value></data>
+  <data name="VideoLoss_Body" xml:space="preserve"><value>您的某些裝置正在使用多個裝置通道，並要求其他裝置授權。
+{0}</value></data>
+  <data name="Logging_ServiceAccountAddRightGranted" xml:space="preserve"><value>已將「登入為服務」權限授予帳戶 {0}</value></data>
+  <data name="WhatToDo_Subheading" xml:space="preserve"><value>我需要做什麼？</value></data>
+  <data name="ConfirmBackup_CheckBoxConfirm" xml:space="preserve"><value>我確認已建立系統設定的備份。</value></data>
+  <data name="PrivacySettingsPageShareUsageData" xml:space="preserve"><value>共用使用資料並幫助我們改進服務。</value></data>
+  <data name="ConfirmBackup_InstructionsHeader" xml:space="preserve"><value>若要在 {0} 建立備份：</value></data>
+  <data name="Database_UpdateFailed_SupportLink_Here" xml:space="preserve"><value>此處</value></data>
+  <data name="LicenseWarning_BodyLinkText" xml:space="preserve"><value>按一下此處以獲取要求其他裝置授權的系統中的裝置數量。</value></data>
+  <data name="LicenseWarning_DetailLinkText" xml:space="preserve"><value>支援的裝置清單</value></data>
+  <data name="Database_ErrorOccurred" xml:space="preserve"><value>發生錯誤</value></data>
+  <data name="VideoLoss_Heading" xml:space="preserve"><value>您沒有足夠的裝置授權以覆蓋您的所有通道。如果您在沒有足夠授權的情況下繼續執行，VMS 將遺失視訊資料。</value></data>
+  <data name="PrivacySettingsPageShareUsageDataLegalInfo" xml:space="preserve"><value>請注意，{0} 使用已被指示在歐盟境內儲存任何個人資料的第三方提供商的技術。 但是，我們通知您，歐盟法院總體上認定 (Schrems II)，從歐盟的角度來看，美國沒有適當的保障措施，因為美國擁有的公司（例如 Google）可能需要在沒有任何司法審查的情況下向美國情報界提供資料存取權。</value></data>
+  <data name="Database_UpdateFailed_DuplicateDevicesFound_QuietInstall_NoSupportUrl" xml:space="preserve"><value>無法升級該系統，因為設定資料庫包含重複的裝置。
+如需移除重複裝置的說明，請聯絡支援。</value></data>
+  <data name="LicenseUseageHeading" xml:space="preserve"><value>您的某些裝置使用多個授權，並要求其他裝置授權正常運作。</value></data>
+  <data name="PrivacySettingsPageShareUsageDataInfo" xml:space="preserve"><value>將收集用於 {0}、{1} 用戶端和 {2} 的共用使用資料。</value></data>
+  <data name="Database_NoRightToCreateDB_" xml:space="preserve"><value>必須將建立資料庫的權限授予 SQL Server 登入。</value></data>
+  <data name="ConfirmBackup_Instructions" xml:space="preserve"><value>1. 從選單列選取「檔案」&gt;「設定備份」。
+2. 閱讀對話方塊中的備註，然後按一下「備份」。
+3. 輸入 .cnf 檔案的名稱。
+4. 輸入資料夾目的地，然後按一下「儲存」。
+5.等待備份完成，然後按一下「關閉」。</value></data>
+  </root>

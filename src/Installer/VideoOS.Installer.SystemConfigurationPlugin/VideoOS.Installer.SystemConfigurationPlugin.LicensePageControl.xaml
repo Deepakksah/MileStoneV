@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.SystemConfigurationPlugin.LicensePageControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:framework="clr-namespace:VideoOS.Installer.UI.Framework;assembly=VideoOS.Installer.UI.Framework" xmlns:conv="clr-namespace:VideoOS.UI.Common.WPF.Utils.Converters;assembly=VideoOS.UI.Common.WPF" AutomationProperties.AutomationId="LicensePageControl" xmlns:systemconfigurationplugin="clr-namespace:VideoOS.Installer.SystemConfigurationPlugin;assembly=VideoOS.Installer.SystemConfigurationPlugin">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <BooleanToVisibilityConverter x:Key="boolToVisConverter" />
+      <conv:StringToVisibilityConverter x:Key="stringToVisibilityConverter" />
+      <Style x:Key="{x:Type TextBlock}" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="#FF000000" />
+        <Setter Property="FontSize" Value="9pt" />
+        <Setter Property="FontFamily" Value="Tahoma" />
+      </Style>
+      <Style x:Key="{x:Type TextBox}" TargetType="{x:Type TextBox}">
+        <Setter Property="Foreground" Value="#FF000000" />
+        <Setter Property="FontSize" Value="9pt" />
+        <Setter Property="FontFamily" Value="Tahoma" />
+      </Style>
+      <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+        <Setter Property="Foreground" Value="#FF000000" />
+        <Setter Property="FontSize" Value="9pt" />
+        <Setter Property="FontFamily" Value="Tahoma" />
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Margin="49, 40, 52, 40" Height="362">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <TextBlock AutomationProperties.AutomationId="labelHeadLine" FontSize="16pt" FontFamily="Arial" Foreground="#FF000000" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextWrapping="Wrap" Grid.Row="0" Text="{Binding HeaderText}" />
+    <TextBlock AutomationProperties.AutomationId="labelInfo" TextWrapping="Wrap" Margin="0,21,0,0" Grid.Row="1" Text="{Binding InfoText}" />
+    <Border BorderBrush="#FF000000" BorderThickness="1" Margin="0,22,0,0" Grid.Row="2">
+      <Grid Margin="16,20,20,16">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock AutomationProperties.AutomationId="labelBrowseLicense" TextWrapping="Wrap" Grid.Row="0" Text="{Binding BrowseLicenseText}" />
+        <Grid Row="1" Margin="0,12,0,0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+          <TextBox Height="20px" VerticalContentAlignment="Center" IsReadOnly="False" Grid.Column="0" AutomationProperties.AutomationId="LicensePathTextBox" Text="{Binding LicensePath, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding NotDownloadingFreeLicense}" />
+          <Button Height="20px" Grid.Column="1" Margin="10,0,0,0" AutomationProperties.AutomationId="LicenseBrowseButton" Content="{Binding BrowseButtonText}" Command="{Binding Browse}" IsEnabled="{Binding NotDownloadingFreeLicense}" />
+        </Grid>
+      </Grid>
+    </Border>
+    <TextBlock Grid.Row="4" AutomationProperties.AutomationId="labelWhereToBuy" Margin="0,21,0,0" TextWrapping="Wrap" framework:TextLinkFormatHelper.ContentLinkText="{Binding WhereToBuyText}" />
+  </Grid>
+</UserControl>

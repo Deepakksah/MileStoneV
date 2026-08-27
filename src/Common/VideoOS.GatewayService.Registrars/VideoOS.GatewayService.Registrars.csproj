@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.GatewayService.Registrars</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    
+    
+    
+    
+    
+    <Reference Include="Microsoft.Web.Administration" />
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    
+    
+    <Reference Include="System.Core" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.GatewayService.Utilities\VideoOS.GatewayService.Utilities.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.ServerConfigurator.CertificateRegistration\VideoOS.ServerConfigurator.CertificateRegistration.csproj" />
+    <ProjectReference Include="..\VideoOS.WebService.Common\VideoOS.WebService.Common.csproj" />
+    <ProjectReference Include="..\..\ServerCore\VideoOS.Server\VideoOS.Server.csproj" />
+    <ProjectReference Include="..\VideoOS.Common\VideoOS.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Common.Crypto\VideoOS.Common.Crypto.csproj" />
+    <ProjectReference Include="..\VideoOS.Common.EnvironmentServices\VideoOS.Common.EnvironmentServices.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.CertificateRegistration.Common\VideoOS.CertificateRegistration.Common.csproj" />
+    <ProjectReference Include="..\..\Management\VideoOS.Server.Admin\VideoOS.Server.Admin.csproj" />
+  </ItemGroup>
+</Project>

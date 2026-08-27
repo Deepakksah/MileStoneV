@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.Installer.SystemConfigurationPlugin.ScanHardwareControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:VideoOS.Installer.SystemConfigurationPlugin" xmlns:resx="clr-namespace:VideoOS.Installer.SystemConfigurationPlugin.Properties" AutomationProperties.AutomationId="ScanHardwareControl">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../ResourceDictionary.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Margin="58, 40">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="12" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="21" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <TextBlock Name="labelHeadLine" AutomationProperties.AutomationId="labelHeadLine" Text="{x:Static resx:Resources.HardwareScanHeader}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource HeaderTextBlockStyle}" />
+    <Grid Row="2" Margin="0,1,0,21" RowSpan="2">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="16" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="labelInfo" AutomationProperties.AutomationId="labelComponentProgress" TextWrapping="NoWrap" TextTrimming="WordEllipsis" Style="{StaticResource ControlTextBlockStyle}" Grid.Row="0" Margin="0,41,0,22" Grid.RowSpan="2" Text="{Binding Header, UpdateSourceTrigger=PropertyChanged}" ToolTip="{Binding Header, UpdateSourceTrigger=PropertyChanged}" />
+      <Grid RowSpan="2" Margin="0,58,0,11">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition>
+            <FrameworkContentElement.Style>
+              <Style TargetType="{x:Type ColumnDefinition}">
+                <Setter Property="Width" Value="50" />
+                <Style.Triggers>
+                  <DataTrigger Value="False" Binding="{Binding OperationCanBeStopped}">
+                    <Setter Property="Width" Value="0" />
+                  </DataTrigger>
+                </Style.Triggers>
+              </Style>
+            </FrameworkContentElement.Style>
+          </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ProgressBar Minimum="0" Maximum="100" RenderTransformOrigin="0.5,0.5" Height="10" IsIndeterminate="{Binding Stopping}" Value="{Binding Path=CurrentProgress, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}">
+          <UIElement.RenderTransform>
+            <TransformGroup>
+              <ScaleTransform ScaleY="-1" />
+              <SkewTransform />
+              <RotateTransform />
+              <TranslateTransform />
+            </TransformGroup>
+          </UIElement.RenderTransform>
+        </ProgressBar>
+        <Button Name="StopButton" AutomationProperties.AutomationId="buttonStopScan" Content="{x:Static resx:Resources.HardwareScanStop}" Width="40" Margin="5,0" Grid.Column="1" HorizontalAlignment="Right" Command="{Binding Path=StopCommand}" IsEnabled="{Binding Stopping, Converter={StaticResource inverseBoolConverter}}" Visibility="{Binding OperationCanBeStopped, Converter={StaticResource boolToVisConverter}}" />
+      </Grid>
+    </Grid>
+  </Grid>
+</UserControl>

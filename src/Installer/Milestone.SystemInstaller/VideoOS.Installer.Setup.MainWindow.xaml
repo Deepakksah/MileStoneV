@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="VideoOS.Installer.Setup.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:VideoOS.Installer.Setup.Properties" xmlns:setup="clr-namespace:VideoOS.Installer.Setup" Title="{x:Static p:Resources.Preparing}" Width="305" Height="160" ResizeMode="NoResize">
+  <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="265" Height="130" Margin="10,0,10,0">
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition />
+      <RowDefinition />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <Image Width="32" Grid.Row="0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Source="pack://application:,,,/images/1336650470_adept_installer.ico" />
+    <TextBlock Grid.Row="1" HorizontalAlignment="Left" Height="17" Width="260" VerticalAlignment="Bottom" Text="{Binding StatusProgressState}" />
+    <ProgressBar Grid.Row="2" Width="260" Height="20" Value="{Binding ProgressBarProgress}" />
+  </Grid>
+</Window>

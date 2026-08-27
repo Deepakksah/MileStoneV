@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<topics>
+	<!--- 
+	Help topics launched from the HTML pages in the manager, the uri on the page is in the format navigation://help/topicname
+	When the lookup is performed "HTML_" is inserted before the topicname
+	-->
+	<!--- Basics page-->
+	<topic id="HTML_Description">2806</topic>
+	<!--- Welcome page-->
+	<topic id="HTML_Welcome">2000</topic>
+	<!--- = Basics-->
+	<topic id="HTML_security">2961</topic>
+	<topic id="HTML_serverlogs">9503</topic>
+	<topic id="HTML_recorders">9685</topic>
+	<!--- = Servers-->
+	<topic id="HTML_devices">9741</topic>
+	<topic id="HTML_RulesEvents">9686</topic>
+	<topic id="HTML_licensing">9442</topic>
+	<topic id="HTML_RemoteConnectServers">2746</topic>
+	<topic id="HTML_SystemDashboard">9449</topic>
+
+	<!--- 
+		Help topics launched from the main navigation tree, the name of the topic is taken from the <entry ID="name"> setting in the NavigationTree.xml
+		When the lookup is performed "NAV_" is inserted before the topicname
+	-->
+	<topic id="NAV_Root">9378</topic>
+	<!--- Pointing to MC elements toptopic-->
+	<topic id="NAV_Basics">2806</topic>
+	<topic id="NAV_LicenseInformation">9442</topic>
+	<topic id="NAV_BasicInfo">10084</topic>
+	<topic id='NAV_Servers'>9685</topic>
+	<topic id="NAV_RemoteConnectServers">9383</topic>
+	<topic id="NAV_AxisOneClick">9383</topic>
+	<topic id='NAV_Recorders'>9631</topic>
+	<topic id="NAV_FailoverServers">9879</topic>
+	<topic id="NAV_Devices">9741</topic>
+	<topic id="NAV_Cameras">9804</topic>
+	<topic id="NAV_AudioInput">9813</topic>
+	<topic id="NAV_AudioOutput">9919</topic>
+	<topic id="NAV_Metadata">10081</topic>
+	<topic id="NAV_Inputs">9821</topic>
+	<topic id="NAV_Outputs">9829</topic>
+	<topic id="NAV_Client">9922</topic>
+	<topic id="NAV_VideoWall">9408</topic>
+	<topic id="NAV_ViewGroups">9421</topic>
+	<topic id="NAV_ClientProfiles">9428</topic>
+	<topic id="NAV_ManagementClientProfiles">10503</topic>
+	<topic id="NAV_Matrix">9433</topic>
+	<topic id="NAV_RulesEvents">9686</topic>
+	<topic id="NAV_Rules">9700</topic>
+	<topic id="NAV_TimeProfiles">9708</topic>
+	<topic id="NAV_NotificationProfiles">9714</topic>
+	<topic id="NAV_Events">9719</topic>
+	<!--- = user-defined-->
+	<topic id="NAV_Security">2961</topic>
+	<topic id="NAV_Roles">9893</topic>
+	<topic id="NAV_BasicUser">10315</topic>
+	<topic id="NAV_SystemDashboard">9449</topic>
+	<topic id="NAV_SystemMonitor">9450</topic>
+	<topic id="NAV_SystemMonitorThreshold">56112</topic>
+	<topic id="NAV_EvidenceLock">10438</topic>
+	<topic id="NAV_CurrentTasks">9452</topic>
+	<topic id="NAV_ConfigReports">9453</topic>
+	<topic id="NAV_ServerLogs">9503</topic>
+	<topic id="NAV_SystemLog">9511</topic>
+	<topic id="NAV_AuditLog">10280</topic>
+	<topic id="NAV_RuleLog">10281</topic>
+	<topic id="NAV_MetadataUse">9538</topic>
+	<topic id="NAV_MetadataSearch">9538</topic>
+	<topic id="NAV_AccessControl">10462</topic>
+
+	<!--- Federated Site Hierarchy -->
+	<topic id="Sites_Root">9588</topic>
+	<topic id="DialogAddSlaveSite">9582</topic>
+
+	<!--- Hardware Detection Wizard -->
+	<topic id="HardwareDetectionWizard_Page_Welcome">9675</topic>
+	<topic id="HardwareDetectionWizard_Page_Credentials">9675</topic>
+	<topic id="HardwareDetectionWizard_Page_Drivers">9675</topic>
+	<topic id="HardwareDetectionWizard_Page_ScanRanges">9675</topic>
+	<topic id="HardwareDetectionWizard_Page_ManualHardware">9675</topic>
+	<topic id="HardwareDetectionWizard_Page_HardwareScanning">9675</topic>
+	<topic id="HardwareDetectionWizard_Page_HardwareSetupInfo">9675</topic>
+	<topic id="HardwareDetectionWizard_Page_Naming">9675</topic>
+	<topic id="HardwareDetectionWizard_Page_Grouping">9675</topic>
+
+	<topic id="ReplaceHardwareWizard_Page_Welcome">9682</topic>
+	<topic id="ReplaceHardwareWizard_Page_Hardware">9682</topic>
+	<topic id="ReplaceHardwareWizard_Page_Inherit">9682</topic>
+	<topic id="ReplaceHardwareWizard_Page_Confirmation">9682</topic>
+	<topic id="ReplaceHardwareWizard_Page_Summary">9682</topic>
+
+	<topic id="SiteProperties_General">10284</topic>
+	<topic id="SiteProperties_MasterSite">10285</topic>
+
+	<topic id="DialogNotification_Page_tabFront">9714</topic>
+	<topic id="DialogNotification_Page_tabTypes">9714</topic>
+	<topic id="DialogNotification_Page_tabEmail">9714</topic>
+	<topic id="DialogNotification_Page_tabSMS">9714</topic>
+
+	<topic id="Recorder_EditIPHardware">9681</topic>
+	<!--- = EditHardware-->
+
+	<topic id="RuleWizard_Page_keyRuleType">9703</topic>
+	<topic id="RuleWizard_Page_keyConditions">9703</topic>
+	<topic id="RuleWizard_Page_keyActions">9703</topic>
+	<topic id="RuleWizard_Page_keyStopEvent">9703</topic>
+	<topic id="RuleWizard_Page_keyStopActions">9703</topic>
+
+
+
+	<!--- Picker dialogs -->
+	<!--- no IDs in this section - moved to other sections-->
+	<topic id="DialogTimeProfile" />
+	<topic id="DialogTimeOfDay" />
+	<topic id="DialogStateOnOff" />
+	<topic id="DialogRelativeTime" />
+	<topic id="DialogRecorders" />
+	<topic id="DialogPreset" />
+	<topic id="DialogPlugin" />
+	<topic id="DialogNotification" />
+	<topic id="DialogLogEntry" />
+	<topic id="DialogFramerate" />
+	<topic id="DialogDeviceSettings" />
+	<topic id="DialogDaysOfWeek" />
+	<topic id="DialogTriggerAndDevices" />
+	<topic id="DialogAlarmTypes" />
+	<topic id="DialogEvent">9697</topic>
+	<topic id="DialogPatrollingSchema" />
+	<topic id="DialogPresets" />
+	<topic id="DialogDevicesAndGroups" />
+	<!--- End Picker dialogs -->
+
+	<!--- Misc dialogs -->
+	<topic id="DialogDiskSpaceCalculator" />
+	<topic id="DialogInput" />
+	<topic id="DialogAbout" />
+	<!--- End no IDs in this section - moved to other sections-->
+
+	<topic id="DialogAddNewNotificationProfile">9716</topic>
+	<topic id="DialogSelectUsersGroups">9912</topic>
+	<topic id="DialogAddNewRenameRole">9896</topic>
+	<topic id="DialogDeviceGroupAddRename">9745</topic>
+	<topic id="DialogDeviceGroupEditMembers">9746</topic>
+	<topic id="DialogAddNewEditAlarmType">9708</topic>
+	<topic id="DialogAddNewEditCameraPreset">9772</topic>
+	<topic id="DialogEditCameraDefinedPreset">58663</topic>
+	<topic id="DialogViewGroups">9421</topic>
+	<topic id="DialogAddNewViewGroup">9424</topic>
+	<topic id="DialogMatrix">9433</topic>
+	<topic id="DialogAddNewMatrix">9924</topic>
+	<topic id="DialogNetworkConfiguration">9975</topic>
+	<topic id="DialogOptions">9834</topic>
+	<topic id="DialogRegisteredServers">9398</topic>
+	<topic id="DialogAddNewRegisteredServer">9974</topic>
+
+	<topic id="DialogAddEditAvhsHardware">9393</topic>
+	<topic id="DialogAddEditTunnelServer">9396</topic>
+	<topic id="DialogReregisterAvhsHardware">9393</topic>
+
+	<topic id="DialogAddEditFailoverGroup">9977</topic>
+	<topic id="DialogAdvancedFailoverSettings">9659</topic>
+
+	<!-- License Overview-->
+	<topic id="DialogViewLicenseOverview">10334</topic>
+	<topic id="DialogActivateLicensesOnline">9438</topic>
+
+	<!-- Site Information-->
+	<topic id="DialogEditSiteInformation">10332</topic>
+
+	<!-- Video Wall -->
+	<topic id="DialogAddVideoWallPreset">9412</topic>
+	<topic id="DialogEditVideoWallPreset">9412</topic>
+	<topic id="DialogVideoLayoutSetup">9413</topic>
+	<topic id="DialogAddMonitor">9415</topic>
+	<topic id="DialogAddVideoWall">9411</topic>
+	<topic id="DialogViewEditMembers">9416</topic>
+
+	<topic id="DialogRecordingStorageSettings">54715</topic>
+	<topic id="DialogArchiveSettings">9650</topic>
+	<topic id="DialogSchedule">9649</topic>
+	<topic id="DialogRecurrenceSchedule">83023</topic>
+
+	<!-- Basic User -->
+	<topic id="DialogNewBasicUser">10314</topic>
+
+	<!-- Claims -->
+	<topic id="DialogAddNewClaim">9845</topic>
+
+	<!--- (Effective Roles) -->
+	<topic id="DialogRoleSecurity">9898</topic>
+	<topic id="DialogSelectDriverEvent_Camera">9802</topic>
+	<topic id="DialogSelectDriverEvent_AudioInput">9802</topic>
+	<topic id="DialogSelectDriverEvent_Input">9802</topic>
+
+	<!--- End Misc dialogs -->
+
+	<!--Client Profile dialog-->
+	<topic id="ClientProfile_Info">83011</topic>
+	<topic id="ClientProfile_General">83012</topic>
+	<topic id="ClientProfile_Advanced">83013</topic>
+	<topic id="ClientProfile_Live">83014</topic>
+	<topic id="ClientProfile_Playback">83015</topic>
+	<topic id="ClientProfile_Setup">83016</topic>
+	<topic id="ClientProfile_Export">83017</topic>
+	<topic id="ClientProfile_Access Control">83019</topic>
+	<topic id="ClientProfile_Alarm Manager">83021</topic>
+	<!--- Added for ACE-->
+	<topic id="ClientProfile_Timeline">83018</topic>
+	<topic id="ClientProfile_ViewLayouts">83022</topic>
+	<topic id="ClientProfile_Smartmap">83020</topic>
+	<topic id="ClientProfile_AddNew">9429</topic>
+	<!--End Client Profile dialog-->
+
+
+	<!--- Logs dialogs -->
+	<topic id="Log_ExportDialog">9508</topic>
+
+
+	<!--- Time profiles -->
+	<topic id="TimeProfile_AddEdit">9709</topic>
+	<topic id="TimeProfile_SingleTime">9709</topic>
+	<topic id="TimeProfile_RecurrenceTime">9709</topic>
+	<topic id="DialogAddEditSunClockTimeProfile">9713</topic>
+	<topic id="TimeProfile_General">9708</topic>
+
+	<!--- Options -->
+	<topic id="Options_General">9835</topic>
+	<topic id="Options_SystemLogs">9836</topic>
+	<topic id="Options_MailServer">9837</topic>
+	<topic id="Options_AVIGeneration">9838</topic>
+	<topic id="Options_Network">9839</topic>
+	<topic id="Options_Bookmark">9840</topic>
+  <topic id="Options_ExternalIDP">9845</topic>
+  <topic id="Options_EvidenceLock">9951</topic>
+	<!--- Added for ACE-->
+	<topic id="Options_UserSettings">9841</topic>
+	<topic id="Options_PrivacySettings">83024</topic>
+	<topic id="Options_AccessControl">10372</topic>
+	<topic id="Options_AudioMessages">68521</topic>
+	<!--- Added for Polar-->
+	<topic id="Options_4d2859d2-90d9-4192-afc3-3c435241af0e">56878</topic>
+	<!--Analytics events settings-->
+	<topic id="Options_0bb46907-c50f-46ff-8fd3-2ac454be9baf">9842</topic>
+	<!--Event Server Settings-->
+	<topic id="Options_c5cf7015-549c-492d-ad66-8d6c59b8d03d">9843</topic>
+	<!--Generic Events-->
+	<topic id="Options_2dcc9d9d-688e-468d-af6f-c2a9acd623fe">9844</topic>
+	
+
+	<!-- Device group information tab -->
+	<topic id="DeviceGroup_Info">9744</topic>
+
+	<!-- Recorder tabs -->
+	<topic id="Recorder_Info">9639</topic>
+	<topic id="Recorder_Storage">9646</topic>
+	<!-- PE: Reused for redesigned recorder/storage tab -->
+	<topic id="Recorder_Failover">9657</topic>
+	<topic id="Recorder_Multicast">9660</topic>
+	<topic id="Recorder_Network">9668</topic>
+	<topic id="Recorders_DetectedHardware">64647</topic>
+	
+	<!-- Hardware tabs -->
+	<topic id="Device_Info">9749</topic>
+	<!--- = HW - Devices are further down-->
+	<topic id="Device_Settings">9753</topic>
+	<!--- = HW - Devices are further down-->
+	<topic id="Device_PTZ">9809</topic>
+	<!--- = HW - Devices are further down-->
+
+	<!-- Remote Server tabs -->
+	<topic id="Device_EdgeStorage">9811</topic>
+	<!--- = RemoteServer-Remote Retrieval tab-->
+	<topic id="RemoteServer_Info">10137</topic>
+	<!--- Added for ACE-->
+	<topic id="RemoteServer_Settings">10140</topic>
+	<!--- Added for ACE-->
+	<topic id="RemoteServer_Events">10136</topic>
+	<!--- Added for ACE-->
+
+	<topic id="Log_AuditLog">9503</topic>
+	<!--- ID updated, but also under NAV-->
+	<topic id="Log_RuleLog">9503</topic>
+	<!--- ID updated, but also under NAV-->
+	<topic id="Log_SystemLog">9503</topic>
+	<!--- ID updated, but also under NAV-->
+
+	<topic id="Notification_General">9714</topic>
+	<!--- ID updated, but also under NAV-->
+	<topic id="ViewGroup_General">9421</topic>
+	<!--- ID updated, but also under NAV-->
+	<topic id="TimeProfile_General">9708</topic>
+	<!--- ID updated, but also under NAV-->
+	<topic id="UserDefinedEvent_General">9719</topic>
+	<!--- ID updated, but also under NAV-->
+	<topic id="Rules_General">9700</topic>
+	<!--- ID updated, but also under NAV-->
+	<topic id="Rules_VideoWall">9418</topic>
+	<!--- ID updated, but also under NAV-->
+	<topic id="NetworkFailover_Configuration">9668</topic>
+	<!--- ID updated, but also under NAV-->
+	<topic id="Rules_Default">9689</topic>
+
+	<topic id="Roles_Info">10338</topic>
+	<topic id="Roles_UserGroups">9912</topic>
+	<topic id="Roles_ExternalIDP">9845</topic>
+	<topic id="Roles_OverallSecurity">10502</topic>
+	<topic id="Roles_Device">9902</topic>
+	<topic id="Roles_Ptz">9903</topic>
+	<topic id="Roles_Speak">9904</topic>
+	<topic id="Roles_Edge">9908</topic>
+	<topic id="Roles_VideoWall">9417</topic>
+	<topic id="Roles_Application">9905</topic>
+	<topic id="Roles_UserDefinedEvents">9906</topic>
+	<topic id="Roles_ViewGroups">9907</topic>
+	<topic id="Roles_EnterpriseServers">9909</topic>
+	<topic id="Roles_Matrix">9928</topic>
+	<topic id="Roles_MIPAlarm">9910</topic>
+	<topic id="Roles_AccessControl">10460</topic>
+  <topic id="Roles_LPR">9905</topic>
+  <topic id="Roles_IncidentManager">1000</topic>
+  <topic id="Roles_Webhooks">9788</topic>
+  <topic id="Roles_Transact">9789</topic>
+	<topic id="Roles_MIP">9911</topic>
+
+	<topic id="ChangingSLC_General">9419</topic>
+
+	<topic id="Hardware_Events">9697</topic>
+
+	<!-- Camera tabs -->
+	<topic id="Camera_Info">9856</topic>
+	<topic id="Camera_Settings">9858</topic>
+	<topic id="Camera_Streams">9860</topic>
+	<topic id="Camera_Record">9861</topic>
+	<!-- PE: Reused for redesigned Camera/Record tab -->
+	<topic id="Camera_Presets">9863</topic>
+	<topic id="Camera_Patroling">9864</topic>
+	<topic id="Camera_360Lens">9865</topic>
+	<topic id="Camera_Events">9868</topic>
+	<topic id="Camera_Client">9869</topic>
+	<topic id="PrivacyMasking_General">9870</topic>
+	<topic id="Camera_Motion">9871</topic>
+
+	<!-- Microphone tabs -->
+	<topic id="Microphone_Info">9856</topic>
+	<topic id="Microphone_Settings">9858</topic>
+	<topic id="Microphone_Record">9861</topic>
+	<topic id="Microphone_Events">9868</topic>
+
+	<!-- Speaker tabs -->
+	<topic id="Speaker_Info">9856</topic>
+	<topic id="Speaker_Settings">9858</topic>
+	<topic id="Speaker_Record">9861</topic>
+
+	<!-- Metadata tabs -->
+	<!--- Added for ACE-->
+	<topic id="Metadata_Info">9856</topic>
+	<!--- Added for ACE-->
+	<topic id="Metadata_Settings">9858</topic>
+	<!--- Added for ACE-->
+	<topic id="Speaker_Record">9861</topic>
+	<!--- Added for ACE-->
+
+	<!-- Input tabs -->
+	<topic id="Input_Info">9856</topic>
+	<topic id="Input_Settings">9858</topic>
+	<topic id="Input_Events">9868</topic>
+
+	<!-- Output tabs -->
+	<topic id="Output_Info">9856</topic>
+	<topic id="Output_Settings">9858</topic>
+
+	<!-- Failover Recorder tabs -->
+	<topic id="FailoverRecorder_AddGroupDialog">9882</topic>
+	<topic id="FailoverRecorder_EditMembersDialog">9882</topic>
+	<topic id="FailoverRecorder_GroupInfo">9880</topic>
+	<topic id="FailoverRecorder_GroupSequence">9880</topic>
+	<topic id="FailoverRecorder_RecorderInfo">9884</topic>
+	<topic id="FailoverRecorder_Multicast">72596</topic>
+
+	<!-- VideoWall tabs -->
+	<topic id="VideoWall_Info">9411</topic>
+	<topic id="VideoWall_Presets">9412</topic>
+	<topic id="VideoWall_Layout">9413</topic>
+	<topic id="VideoWall_Monitor_Info">9415</topic>
+	<topic id="VideoWall_Monitor_Presets">9416</topic>
+	<topic id="VideoWall_RulesSelect">9418</topic>
+
+	<!-- System monitor dashboard dialog -->
+	<topic id="SystemDashboard_Customize">56299</topic>
+
+	<!-- Access Control tabs -->
+	<topic id="AccessControl_General">9246</topic>
+	<topic id="AccessControl_AssCameras">9261</topic>
+	<topic id="AccessControl_Events">9264</topic>
+	<topic id="AccessControl_Notifications">10472</topic>
+	<topic id="AccessControl_Cardholder">9276</topic>
+
+	<!-- Access Control wizard -->
+	<topic id="AccessControl_Create">9257</topic>
+	<topic id="AccessControl_Connecting">9244</topic>
+	<topic id="AccessControl_AssCameras">9258</topic>
+	<topic id="AccessControl_Final">9259</topic>
+
+	<!-- Manual Backup/Restore helptopics-->
+	<topic id="DialogBackupWarning">9994</topic>
+	<topic id="DialogRestoreWarning">9642</topic>
+	<topic id="DialogSelectBackupFolder">9637</topic>
+
+	<!-- Management Server TrayController helptopics-->
+	<topic id="ChangeLicense">9419</topic>
+  <topic id="fms_managementserverfailoverexplained">9878</topic>
+
+	<!-- KeyManagement TrayController helptopics -->
+	<topic id="SystemConfigurationPasswordForm">2963</topic>
+
+  <!-- Incident Manager Plugin -->
+  <topic id="NAV_6053b0b4-3e97-4a86-8e46-d1a9ce807ed1">1003</topic>
+  <topic id="IM_IncidentType">1006</topic>
+  <topic id="IM_IncidentStatus">1007</topic>
+  <topic id="IM_IncidentCategory">1008</topic>
+  <topic id="IM_IncidentData">1009</topic>
+
+	<!-- Event Server MIP plugin -->
+	<!-- Alarms -->
+	<topic id="NAV_46bb0392-fd06-465b-8776-b90ac16639b3">9520</topic>
+	<!-- Alarm Definitions -->
+	<topic id="NAV_46bb0392-fd06-465b-8776-b90ac16639b39807ca8a-46c2-45ed-9446-6423dae2cd88">9541</topic>
+	<!--Alarm Data-->
+	<topic id="NAV_46bb0392-fd06-465b-8776-b90ac16639b3d0bc0d25-1f1e-41d0-8606-5aa321d360a3">9532</topic>
+	<!--Alarm Sound-->
+	<topic id="NAV_46bb0392-fd06-465b-8776-b90ac16639b32eb4a521-063a-4c9f-b415-9fc78411c1f8">9533</topic>
+
+
+	<!-- Analytics Events Settings  -->
+	<topic id="NAV_9f6e7e9d-3fd2-49b2-9ca0-f7e7f8f8c3a74de695a0-b30a-4f0f-b25e-ee353528dc02">9535</topic>
+	<!-- Options, Event Server Settings -->
+	<topic id="NAV_46bb0392-fd06-465b-8776-b90ac16639b357f2c56e-cecc-45c0-aa0f-2c3a966fd484">9534</topic>
+
+	<!-- Analytics Events  -->
+	<topic id="NAV_9f6e7e9d-3fd2-49b2-9ca0-f7e7f8f8c3a72e319f3e-0350-4df1-90c6-633ead31c117">9722</topic>
+	<topic id="TestAnalyticEvents">9726</topic>
+
+	<!--Generic Events-->
+	<topic id="NAV_ff9de88e-45f2-4b1e-a551-30ad84e25102d4d19c01-03f2-4ac6-9d2b-5356b5de62f1">9728</topic>
+
+  <!--Webhooks-->
+  <topic id="NAV_1a726db5-29c5-461e-8fbe-75b11ca3f87db9a5bc9c-e9a5-4a15-8453-ffa41f2815ac">9718</topic>
+
+  <!--Access Control-->
+	<topic id="Options_5d220973-46df-4eaa-9a53-11bd59c61ea5">10372</topic>
+	<topic id="NAV_bb529de8-608e-4ebb-b796-889504e54670b71fd628-e593-42fc-b528-5a927ea9bda4">10462</topic>
+
+	<!-- LPR Camera tabs -->
+	<topic id="LPRCamera_Info">10885</topic>
+	<topic id="LPRCamera_RecognitionSettings">10907</topic>
+	<topic id="LPRCamera_MatchLists">10891</topic>
+	<topic id="LPRCamera_CountryModules">10879</topic>
+
+	<!--LPR Controls -->
+	<topic id="NAV_6f714690-e09f-4d6a-a0ca-9f913ca125e8b4722667-e468-41d3-ad1e-7470fa8f7f79">10966</topic>
+	<topic id="NAV_6f714690-e09f-4d6a-a0ca-9f913ca125e86b1845a7-851f-4f0b-9644-940463a5c2e7">10904</topic>
+	<topic id="NAV_6f714690-e09f-4d6a-a0ca-9f913ca125e8fe3450d5-4fca-4ea4-9424-a03bc1b988f2">10965</topic>
+  <topic id="NAV_6f714690-e09f-4d6a-a0ca-9f913ca125e813814896-5978-455f-9b56-11456a0e5c34">10880</topic>
+	
+	<!--Mobile servers-->
+	<topic id="NAV_32c415c6-6ddb-4931-ae35-e971590dd8b69947f340-397c-483b-9e03-f27253f7f403">61093</topic>
+
+	<!--ONVIF servers-->
+	<topic id="NAV_24a01849-a322-4ad3-8284-0ebceb1a8036357a694a-d739-4a91-ba0e-b106142c050a">61928</topic>
+
+	<!--Move Hardware Controls -->
+	<topic id="MoveHardwareWizard_Link_General_Move_Hardware">56216</topic>
+	<topic id="MoveHardwareWizard">56072</topic>
+	
+	<!--Edit Hardware controls -->
+	<topic id="EditHardwareWindow_Link_How_To_Change_Password">1002</topic>
+
+	<!--Change passwords controls -->
+	<topic id="ChangeHardwarePasswordWizard_Link_General_Change_Password">1001</topic>
+
+	<!-- Hardware setup -->
+	<topic id="HardwareSetupDialog_Link_General_Preconfigure_Hardware">9683</topic>
+
+	<!-- Firmware update wizard -->
+	<topic id="FirmwareUpdateWizard_Link_General_Firmware_Update">9684</topic>
+
+	<topic id="NAV_Recorders_HW_level">10293</topic>
+
+	<!--Transact Controls-->
+	<topic id="NAV_71e86d1a-30ee-4d58-8ad6-2cf7245dda9f">56209</topic>
+	<topic id="NAV_71e86d1a-30ee-4d58-8ad6-2cf7245dda9f9a1492d1-fca0-44d7-ba9c-3699c99063a7">56240</topic>
+	<topic id="NAV_71e86d1a-30ee-4d58-8ad6-2cf7245dda9fb4ee79cc-7d0b-449f-a53a-ebf0a3d1f14b">56642</topic>
+	<topic id="Transaction_SourceSettings">56760</topic>
+	<topic id="Transaction_DefinitionSettings">56649</topic>
+	<topic id="Transaction_DefinitionEvents">56242</topic>
+
+	<!--Online License Activation-->
+	<topic id="About automatic license activation">56655</topic>
+	<topic id="Activate licenses online">9438</topic>
+
+	<!--VPS Controls -->
+	<topic id="NAV_c5e2fc2f-0bb1-4134-a8d7-4cdec326a4da">20001</topic>
+	<topic id="NAV_c5e2fc2f-0bb1-4134-a8d7-4cdec326a4dab93ff966-cd23-486d-aec3-e798d14ef3cf">20002</topic>
+
+	<!--Digital Device TabPlugin -->
+	<!-- CameraTabPluginId -->
+	<topic id="ee7d1191-ffc2-488a-9214-af7bdf587440">200</topic>
+	<!-- HardwareTabPluginId -->
+	<topic id="59cec046-29d4-4201-96b5-da19d2b0fb05">201</topic>
+
+	<!--Healthcare-->
+	<!--  Hospital Assist -->
+	<topic id="NAV_e08321c8-e252-487f-9059-0a7e1514b1f5bdb424a4-ff74-4516-8690-626974d79449">100001</topic>
+</topics>

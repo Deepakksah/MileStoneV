@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.UI.Common.WPF</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="io\folderbrowser\resources\hard_drive.png" />
+    <None Remove="searchtextboxcontrol\resources\icn_clear_search_16x16.png" />
+    <None Remove="io\folderbrowser\resources\network_drive.png" />
+    <None Remove="timeline\control\resources\marker.png" />
+    <None Remove="videotext\resources\icn16x16_light_fontsizesmaller.png" />
+    <None Remove="themes\resources\sizer.png" />
+    <None Remove="videotext\resources\icn16x16_light_moveup.png" />
+    <None Remove="searchtextboxcontrol\resources\icn_search_magnifier_16x16.png" />
+    <None Remove="io\folderbrowser\resources\folder-20closed-20flat-2016-20n-20p.png" />
+    <None Remove="io\folderbrowser\resources\cd_drive.png" />
+    <None Remove="videotext\resources\icn16x16_light_fontsizelarger.png" />
+    <None Remove="timeline\control\timelinearea\layers\timelines\slicedtimelines\resources\marker.png" />
+    <None Remove="videotext\resources\icn16x16_light_movedown.png" />
+    <EmbeddedResource Include="io\folderbrowser\resources\hard_drive.png" LogicalName="io/folderbrowser/resources/hard_drive.png" />
+    <EmbeddedResource Include="searchtextboxcontrol\resources\icn_clear_search_16x16.png" LogicalName="searchtextboxcontrol/resources/icn_clear_search_16x16.png" />
+    <EmbeddedResource Include="io\folderbrowser\resources\network_drive.png" LogicalName="io/folderbrowser/resources/network_drive.png" />
+    <EmbeddedResource Include="timeline\control\resources\marker.png" LogicalName="timeline/control/resources/marker.png" />
+    <EmbeddedResource Include="videotext\resources\icn16x16_light_fontsizesmaller.png" LogicalName="videotext/resources/icn16x16_light_fontsizesmaller.png" />
+    <EmbeddedResource Include="themes\resources\sizer.png" LogicalName="themes/resources/sizer.png" />
+    <EmbeddedResource Include="videotext\resources\icn16x16_light_moveup.png" LogicalName="videotext/resources/icn16x16_light_moveup.png" />
+    <EmbeddedResource Include="searchtextboxcontrol\resources\icn_search_magnifier_16x16.png" LogicalName="searchtextboxcontrol/resources/icn_search_magnifier_16x16.png" />
+    <EmbeddedResource Include="io\folderbrowser\resources\folder-20closed-20flat-2016-20n-20p.png" LogicalName="io/folderbrowser/resources/folder%20closed%20flat%2016%20n%20p.png" />
+    <EmbeddedResource Include="io\folderbrowser\resources\cd_drive.png" LogicalName="io/folderbrowser/resources/cd_drive.png" />
+    <EmbeddedResource Include="videotext\resources\icn16x16_light_fontsizelarger.png" LogicalName="videotext/resources/icn16x16_light_fontsizelarger.png" />
+    <EmbeddedResource Include="timeline\control\timelinearea\layers\timelines\slicedtimelines\resources\marker.png" LogicalName="timeline/control/timelinearea/layers/timelines/slicedtimelines/resources/marker.png" />
+    <EmbeddedResource Include="videotext\resources\icn16x16_light_movedown.png" LogicalName="videotext/resources/icn16x16_light_movedown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Core" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Xml" />
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <Reference Include="Microsoft.Xaml.Behaviors" />
+    
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="C5" />
+    
+    
+  </ItemGroup>
+</Project>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="VideoOS.UI.Common.WPF.MultipleSelectComboBoxControl.MultipleSelectComboBox" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:multipleSelectComboBoxControl2="clr-namespace:VideoOS.UI.Common.WPF.MultipleSelectComboBoxControl" Loaded="MultipleSelectComboBox_OnLoaded">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <multipleSelectComboBoxControl2:MultipleSelectComboBoxDataContextConverter x:Key="MultipleSelectComboBoxDataContextConverter" />
+      <Style x:Key="{x:Type multipleSelectComboBoxControl2:MultipleSelectComboBoxItem}" TargetType="{x:Type multipleSelectComboBoxControl2:MultipleSelectComboBoxItem}">
+        <Setter Property="multipleSelectComboBoxControl2:MultipleSelectComboBoxItem.ListBoxStyle" Value="{DynamicResource ScListBox}" />
+        <Setter Property="multipleSelectComboBoxControl2:MultipleSelectComboBoxItem.TextBlockStyle" Value="{DynamicResource ScTextBlock}" />
+        <Setter Property="multipleSelectComboBoxControl2:MultipleSelectComboBoxItem.CheckBoxStyle" Value="{DynamicResource ScCheckBox}" />
+      </Style>
+      <Style x:Key="{x:Type multipleSelectComboBoxControl2:MultipleSelectComboBox}" TargetType="{x:Type multipleSelectComboBoxControl2:MultipleSelectComboBox}">
+        <Setter Property="multipleSelectComboBoxControl2:MultipleSelectComboBox.TextBlockStyle" Value="{DynamicResource ScTextBlock}" />
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid>
+    <multipleSelectComboBoxControl2:FixedPopupPlacementComboBox x:Name="_combobox" DropDownClosed="_combobox_OnDropDownClosed" SelectionChanged="_combobox_OnSelectionChanged" Background="#00FFFFFF" ItemsSource="{Binding DataContext, Converter={StaticResource MultipleSelectComboBoxDataContextConverter}, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" Style="{Binding Path=ComboBoxStyle, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" ToolTip="{Binding ElementName=_comboBoxTextBlock, Path=Text}">
+      <FrameworkElement.Resources>
+        <ResourceDictionary>
+          <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+          <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+        </ResourceDictionary>
+      </FrameworkElement.Resources>
+      <ItemsControl.ItemContainerStyle>
+        <Style TargetType="{x:Type ListBoxItem}">
+          <Setter Property="Padding" Value="0" />
+          <Setter Property="Template">
+            <Setter.Value>
+              <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+              </ControlTemplate>
+            </Setter.Value>
+          </Setter>
+        </Style>
+      </ItemsControl.ItemContainerStyle>
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <multipleSelectComboBoxControl2:MultipleSelectComboBoxItem CustomItemSelected="MultipleSelectComboBoxItem_OnCustomItemSelected" SelectedItemsChanged="MultipleSelectComboBoxItem_OnSelectedItemsChanged" MinWidth="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType=multipleSelectComboBoxControl2:MultipleSelectComboBox}}" />
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </multipleSelectComboBoxControl2:FixedPopupPlacementComboBox>
+    <Grid>
+      <FrameworkElement.Style>
+        <Style TargetType="{x:Type Grid}">
+          <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="True">
+              <Setter Property="UIElement.Opacity" Value="1.0" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter Property="UIElement.Opacity" Value="0.5" />
+            </Trigger>
+          </Style.Triggers>
+        </Style>
+      </FrameworkElement.Style>
+      <TextBlock Name="_comboBoxTextBlock" Margin="4,0,20,0" VerticalAlignment="Center" IsHitTestVisible="False" TextTrimming="CharacterEllipsis" Style="{Binding Path=TextBlockStyle, RelativeSource={RelativeSource AncestorType=multipleSelectComboBoxControl2:MultipleSelectComboBox}}" />
+    </Grid>
+  </Grid>
+</UserControl>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="MsgBoxAboutBuildNumber" xml:space="preserve"><value>Build:</value></data>
+  <data name="MsgBoxOnlyOneInstanseAllowedPerUser" xml:space="preserve"><value>An instance of Management Server Manager started by the current user is already running.</value></data>
+  <data name="MsgBoxAboutTitle" xml:space="preserve"><value>About</value></data>
+  <data name="TrayIconServiceStatusStopPending" xml:space="preserve"><value>Stopping</value></data>
+  <data name="TrayIconServiceStatusRunning" xml:space="preserve"><value>Running</value></data>
+  <data name="TrayIconServiceStatusStartPending" xml:space="preserve"><value>Starting</value></data>
+  <data name="MsgBoxAboutVersionDefaultText" xml:space="preserve"><value>? (service not available)</value></data>
+  <data name="TrayIconServiceStatusIndeterminate" xml:space="preserve"><value>Connecting</value></data>
+  <data name="TrayIconServiceStatusStopped" xml:space="preserve"><value>Stopped</value></data>
+  <data name="MsgBoxAboutVersion" xml:space="preserve"><value>Version:</value></data>
+  <data name="MsgBoxOnlyOneInstanceAllowedCaption" xml:space="preserve"><value>Cannot start the application</value></data>
+  <data name="TrayIconToolTipStatus" xml:space="preserve"><value>{0} - {1}</value></data>
+  <data name="MsgBoxUacErrorCaption" xml:space="preserve"><value>Unable to load external program</value></data>
+  </root>

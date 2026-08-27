@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:commands="clr-namespace:VideoOS.Platform.UI.Commands">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/VideoOSBase.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <ControlTemplate x:Key="{x:Static controls:VideoOSScrollViewer+VideoOSScrollViewerInternals.ScrollViewerTemplateKey}" TargetType="{x:Type ScrollViewer}">
+    <Grid Background="{TemplateBinding Panel.Background}">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <ScrollContentPresenter Grid.Row="0" Grid.Column="0" Margin="{TemplateBinding Control.Padding}" CanContentScroll="{TemplateBinding ScrollViewer.CanContentScroll}" Content="{TemplateBinding ContentControl.Content}" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" />
+      <ScrollBar Name="PART_VerticalScrollBar" Grid.Row="0" Grid.Column="1" AutomationProperties.AutomationId="VerticalScrollBar" Cursor="Arrow" Maximum="{TemplateBinding ScrollViewer.ScrollableHeight}" Minimum="0" ViewportSize="{TemplateBinding ScrollViewer.ViewportHeight}" Visibility="{TemplateBinding ScrollViewer.ComputedVerticalScrollBarVisibility}" Value="{TemplateBinding ScrollViewer.VerticalOffset}" commands:EventsToCommandMapping.Events="ContextMenuOpening" commands:EventsToCommandMapping.Command="{Binding Path=(controls:VideoOSScrollViewer.ScrollBarContextMenuOpeningCommand), RelativeSource={RelativeSource TemplatedParent}}" />
+      <ScrollBar Name="PART_HorizontalScrollBar" Grid.Row="1" Grid.Column="0" AutomationProperties.AutomationId="HorizontalScrollBar" Cursor="Arrow" Maximum="{TemplateBinding ScrollViewer.ScrollableWidth}" Minimum="0" Orientation="Horizontal" ViewportSize="{TemplateBinding ScrollViewer.ViewportWidth}" Visibility="{TemplateBinding ScrollViewer.ComputedHorizontalScrollBarVisibility}" Value="{TemplateBinding ScrollViewer.HorizontalOffset}" commands:EventsToCommandMapping.Events="ContextMenuOpening" commands:EventsToCommandMapping.Command="{Binding Path=(controls:VideoOSScrollViewer.ScrollBarContextMenuOpeningCommand), RelativeSource={RelativeSource TemplatedParent}}" />
+      <Rectangle Grid.Row="1" Grid.Column="1" Fill="{TemplateBinding Panel.Background}" />
+      <Rectangle Grid.Row="1" Grid.Column="1" Width="0.51" Height="0.51" VerticalAlignment="Top" HorizontalAlignment="Left" UseLayoutRounding="True" Fill="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollBarBorderBrush}}">
+        <UIElement.Visibility>
+          <MultiBinding Converter="{x:Static controls:VideoOSStyleScrollBarInternals.BorderCornerPixelVisibilityConverter}">
+            <Binding Path="(controls:VideoOSStyleScrollBar.IsContentBorderVisible)" RelativeSource="{RelativeSource TemplatedParent}" />
+            <Binding ElementName="PART_VerticalScrollBar" Path="Visibility" />
+            <Binding ElementName="PART_HorizontalScrollBar" Path="Visibility" />
+          </MultiBinding>
+        </UIElement.Visibility>
+      </Rectangle>
+      <Grid Row="0" Column="0" ColumnSpan="2" IsHitTestVisible="False" VerticalAlignment="Top">
+        <UIElement.Visibility>
+          <MultiBinding Converter="{x:Static controls:VideoOSScrollViewerInternals.ScrollUnderEdgeTopVisibilityConverter}">
+            <Binding Path="(controls:VideoOSScrollViewer.ShowScrollUnderEdges)" RelativeSource="{RelativeSource TemplatedParent}" />
+            <Binding Path="VerticalOffset" RelativeSource="{RelativeSource TemplatedParent}" />
+          </MultiBinding>
+        </UIElement.Visibility>
+        <Rectangle Height="4" Fill="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollViewerScrollEdgeTopShadowBrush}}" />
+        <Rectangle Height="0.51" VerticalAlignment="Top" Fill="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollViewerScrollEdgeBrush}}" />
+      </Grid>
+      <Grid Row="0" Column="0" ColumnSpan="2" IsHitTestVisible="False" VerticalAlignment="Bottom">
+        <UIElement.Visibility>
+          <MultiBinding Converter="{x:Static controls:VideoOSScrollViewerInternals.ScrollUnderEdgeBottomVisibilityConverter}">
+            <Binding Path="(controls:VideoOSScrollViewer.ShowScrollUnderEdges)" RelativeSource="{RelativeSource TemplatedParent}" />
+            <Binding Path="VerticalOffset" RelativeSource="{RelativeSource TemplatedParent}" />
+            <Binding Path="ExtentHeight" RelativeSource="{RelativeSource TemplatedParent}" />
+            <Binding Path="ViewportHeight" RelativeSource="{RelativeSource TemplatedParent}" />
+          </MultiBinding>
+        </UIElement.Visibility>
+        <Rectangle Height="4" Fill="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollViewerScrollEdgeBottomShadowBrush}}" />
+        <Rectangle Height="0.51" VerticalAlignment="Bottom" Fill="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSScrollViewerScrollEdgeBrush}}" />
+      </Grid>
+    </Grid>
+  </ControlTemplate>
+  <Style x:Key="{x:Type controls:VideoOSScrollViewer}" BasedOn="{StaticResource {x:Static controls:VideoOSBaseInternals.StyleKey}}" TargetType="{x:Type controls:VideoOSScrollViewer}">
+    <Setter Property="Template" Value="{StaticResource {x:Static controls:VideoOSScrollViewerInternals.ScrollViewerTemplateKey}}" />
+  </Style>
+</ResourceDictionary>

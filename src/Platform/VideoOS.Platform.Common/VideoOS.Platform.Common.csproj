@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Platform.Common</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    
+    
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    
+    
+    
+    <Reference Include="System.IdentityModel.Tokens.Jwt" />
+    <Reference Include="Newtonsoft.Json" />
+    
+    
+    
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <Reference Include="NAudio.WinMM" />
+    <Reference Include="NAudio.Core" />
+    <Reference Include="Microsoft.IdentityModel.Tokens" />
+    <Reference Include="System.Web" />
+    
+    <Reference Include="NAudio.WinForms" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="VideoOS.Platform\VideoOS.Platform.csproj" />
+  </ItemGroup>
+</Project>

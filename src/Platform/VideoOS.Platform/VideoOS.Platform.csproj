@@ -1,0 +1,847 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Platform</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="ui\resources\builtinicons\search.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_16.svg" />
+    <None Remove="ui\resources\builtinicons\server_state_base.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_11.svg" />
+    <None Remove="ui\resources\builtinicons\settings.svg" />
+    <None Remove="ui\resources\builtinicons\comment_add.svg" />
+    <None Remove="ui\resources\builtinicons\view_change.svg" />
+    <None Remove="ui\resources\builtinicons\card_reader.svg" />
+    <None Remove="ui\resources\builtinicons\access_control_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\search_temperature.svg" />
+    <None Remove="ui\resources\builtinicons\application.svg" />
+    <None Remove="ui\resources\builtinicons\status_connected.svg" />
+    <None Remove="ui\resources\builtinicons\comment.svg" />
+    <None Remove="ui\resources\builtinicons\keyword.svg" />
+    <None Remove="ui\resources\builtinicons\go_to_selection_start_from_left_12px.svg" />
+    <None Remove="ui\resources\builtinicons\layout_group.svg" />
+    <None Remove="ui\resources\builtinicons\go_to_selection_start_from_right_12px.svg" />
+    <None Remove="ui\resources\builtinicons\export_add_to_list.svg" />
+    <None Remove="ui\resources\builtinicons\plus.svg" />
+    <None Remove="ui\resources\builtinicons\search_private.svg" />
+    <None Remove="ui\resources\builtinicons\restore.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_double_left.svg" />
+    <None Remove="ui\resources\builtinicons\folder_locked.svg" />
+    <None Remove="ui\resources\builtinicons\blur_video.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_right.svg" />
+    <None Remove="ui\resources\builtinicons\image_missing.svg" />
+    <None Remove="ui\resources\builtinicons\smart_map_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\play_forward.svg" />
+    <None Remove="ui\resources\builtinicons\view_duplicate.svg" />
+    <None Remove="ui\resources\builtinicons\checkmark_12px.svg" />
+    <None Remove="ui\resources\builtinicons\text_bold.svg" />
+    <None Remove="ui\resources\builtinicons\colorpicker.svg" />
+    <None Remove="ui\resources\builtinicons\speaker.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_4_p.svg" />
+    <None Remove="ui\resources\builtinicons\plugin.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_up.svg" />
+    <None Remove="client\images\icn16x16_light_lastsequence_default.png" />
+    <None Remove="ui\resources\builtinicons\filter.svg" />
+    <None Remove="ui\resources\builtinicons\zoom_out_slider.svg" />
+    <None Remove="ui\resources\builtinicons\toast_message.svg" />
+    <None Remove="ui\resources\builtinicons\mobile_next_frame.svg" />
+    <None Remove="ui\resources\builtinicons\window.svg" />
+    <None Remove="ui\resources\builtinicons\arrow_right.svg" />
+    <None Remove="ui\resources\builtinicons\selection_bookmark_start_12px.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_2x6_p.svg" />
+    <None Remove="ui\resources\builtinicons\text.svg" />
+    <None Remove="ui\resources\builtinicons\location_off.svg" />
+    <None Remove="ui\resources\builtinicons\view_options.svg" />
+    <None Remove="ui\resources\builtinicons\overlay_buttons.svg" />
+    <None Remove="ui\resources\builtinicons\frame_previous.svg" />
+    <None Remove="ui\resources\builtinicons\matchlist_add.svg" />
+    <None Remove="ui\resources\builtinicons\close_12px.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_6x6.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_6x3.svg" />
+    <None Remove="ui\resources\builtinicons\status_disc_small.svg" />
+    <None Remove="ui\resources\builtinicons\output_off.svg" />
+    <None Remove="ui\resources\builtinicons\sequence_split.svg" />
+    <None Remove="ui\resources\builtinicons\server_service.svg" />
+    <None Remove="ui\resources\builtinicons\maximize.svg" />
+    <None Remove="ui\resources\builtinicons\bookmark_timeline_12px.svg" />
+    <None Remove="ui\resources\builtinicons\bookmark.svg" />
+    <None Remove="ui\resources\builtinicons\image.svg" />
+    <None Remove="ui\resources\builtinicons\html_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\arrow_down.svg" />
+    <None Remove="ui\resources\builtinicons\view_reload.svg" />
+    <None Remove="ui\resources\builtinicons\cd_drive.svg" />
+    <None Remove="ui\resources\builtinicons\unknown.svg" />
+    <None Remove="ui\resources\builtinicons\arrow_up.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_2x_p.svg" />
+    <None Remove="ui\resources\builtinicons\lock_off.svg" />
+    <None Remove="ui\resources\builtinicons\devices_add.svg" />
+    <None Remove="ui\resources\builtinicons\recording_search.svg" />
+    <None Remove="ui\resources\builtinicons\layers_add.svg" />
+    <None Remove="ui\resources\builtinicons\preset.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_2_1_2.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_3x2.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_3x3.svg" />
+    <None Remove="client\images\icn16x16_light_stepbackward_default.png" />
+    <None Remove="ui\resources\builtinicons\set_selection_end_12px.svg" />
+    <None Remove="ui\resources\builtinicons\microphone_add.svg" />
+    <None Remove="ui\resources\builtinicons\output_active.svg" />
+    <None Remove="ui\resources\builtinicons\go_to_start.svg" />
+    <None Remove="ui\resources\builtinicons\mask_show.svg" />
+    <None Remove="ui\resources\builtinicons\retrieve_from_storage.svg" />
+    <None Remove="ui\resources\builtinicons\drag_grippers.svg" />
+    <None Remove="ui\resources\builtinicons\map_recenter.svg" />
+    <None Remove="ui\resources\builtinicons\layers.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_down_12px.svg" />
+    <None Remove="ui\resources\builtinicons\time_selection_mode_date_time.svg" />
+    <None Remove="ui\resources\builtinicons\smartwall_preset.svg" />
+    <None Remove="ui\resources\builtinicons\evidence_lock_add.svg" />
+    <None Remove="ui\resources\builtinicons\view_add.svg" />
+    <None Remove="ui\resources\builtinicons\speaker_add.svg" />
+    <None Remove="ui\resources\builtinicons\ptz_control.svg" />
+    <None Remove="ui\resources\builtinicons\start_recording.svg" />
+    <None Remove="ui\resources\builtinicons\interconnected_hardware.svg" />
+    <None Remove="ui\resources\builtinicons\alarm_list_view.svg" />
+    <None Remove="ui\resources\builtinicons\paste.svg" />
+    <None Remove="ui\resources\builtinicons\clipboard.svg" />
+    <None Remove="ui\resources\builtinicons\commands.svg" />
+    <None Remove="ui\resources\builtinicons\hotspot_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\plugin_add.svg" />
+    <None Remove="ui\resources\builtinicons\output.svg" />
+    <None Remove="ui\resources\builtinicons\zoom_out.svg" />
+    <None Remove="ui\resources\builtinicons\help.svg" />
+    <None Remove="ui\resources\builtinicons\text_color.svg" />
+    <None Remove="ui\resources\builtinicons\text_size.svg" />
+    <None Remove="ui\resources\builtinicons\arrow_short_right.svg" />
+    <None Remove="client\images\icn16x16_light_stepforward_default.png" />
+    <None Remove="ui\resources\builtinicons\checkmark.svg" />
+    <None Remove="ui\resources\builtinicons\drag_handle.svg" />
+    <None Remove="ui\resources\builtinicons\project_add.svg" />
+    <None Remove="ui\resources\builtinicons\go_to_video_tutorials.svg" />
+    <None Remove="ui\resources\builtinicons\network_drive.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_10x10.svg" />
+    <None Remove="ui\resources\builtinicons\output_add.svg" />
+    <None Remove="ui\resources\builtinicons\alarm.svg" />
+    <None Remove="ui\resources\builtinicons\receipt.svg" />
+    <None Remove="ui\resources\builtinicons\database_end.svg" />
+    <None Remove="ui\resources\builtinicons\user_state_base.svg" />
+    <None Remove="ui\resources\builtinicons\pin.svg" />
+    <None Remove="ui\resources\builtinicons\send_to_window.svg" />
+    <None Remove="ui\resources\builtinicons\text_size_large.svg" />
+    <None Remove="ui\resources\builtinicons\selection_add.svg" />
+    <None Remove="ui\resources\builtinicons\status_confirmation_check_mark.svg" />
+    <None Remove="ui\resources\builtinicons\playback_speed.svg" />
+    <None Remove="ui\resources\builtinicons\bookmark_timeline.svg" />
+    <None Remove="client\images\icn16x16_light_nextsequence_default.png" />
+    <None Remove="ui\resources\builtinicons\arrow_short_left.svg" />
+    <None Remove="ui\resources\builtinicons\microphone_muted.svg" />
+    <None Remove="ui\resources\builtinicons\text_italic.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_double_up.svg" />
+    <None Remove="ui\resources\builtinicons\hardware_acceleration_tag.svg" />
+    <None Remove="ui\resources\builtinicons\smartwall_monitor.svg" />
+    <None Remove="ui\resources\builtinicons\link_add.svg" />
+    <None Remove="ui\resources\builtinicons\face_recognition.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_double_right.svg" />
+    <None Remove="ui\resources\builtinicons\door_open.svg" />
+    <None Remove="ui\resources\builtinicons\location.svg" />
+    <None Remove="ui\resources\builtinicons\refresh.svg" />
+    <None Remove="ui\resources\builtinicons\keycard.svg" />
+    <None Remove="ui\resources\builtinicons\time_selection_mode.svg" />
+    <None Remove="ui\resources\builtinicons\status_information_mark_color.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_12x6.svg" />
+    <None Remove="ui\resources\builtinicons\save.svg" />
+    <None Remove="ui\resources\builtinicons\folder_add.svg" />
+    <None Remove="ui\resources\builtinicons\key.svg" />
+    <None Remove="ui\resources\builtinicons\zoom_in_slider.svg" />
+    <None Remove="ui\resources\builtinicons\selected.svg" />
+    <None Remove="ui\resources\builtinicons\unit.svg" />
+    <None Remove="ui\resources\builtinicons\transact_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\actions.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_7x7.svg" />
+    <None Remove="ui\resources\builtinicons\independent_playback.svg" />
+    <None Remove="ui\resources\builtinicons\sources.svg" />
+    <None Remove="ui\resources\builtinicons\object_cube.svg" />
+    <None Remove="ui\resources\builtinicons\search_motion.svg" />
+    <None Remove="ui\resources\builtinicons\selection_hand.svg" />
+    <None Remove="ui\resources\builtinicons\microphone.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_down.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1x2.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1x1.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1x3.svg" />
+    <None Remove="ui\resources\builtinicons\ellipsis.svg" />
+    <None Remove="ui\resources\builtinicons\fullscreen_exit.svg" />
+    <None Remove="ui\resources\builtinicons\location_add.svg" />
+    <None Remove="ui\resources\builtinicons\next.svg" />
+    <None Remove="ui\resources\builtinicons\replay.svg" />
+    <None Remove="ui\resources\builtinicons\recording_server.svg" />
+    <None Remove="ui\resources\builtinicons\music_note.svg" />
+    <None Remove="ui\resources\builtinicons\selection_cursor.svg" />
+    <None Remove="ui\resources\builtinicons\text_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\status_warning_exclamation_mark.svg" />
+    <None Remove="ui\resources\builtinicons\text_align_center.svg" />
+    <None Remove="ui\resources\builtinicons\link.svg" />
+    <None Remove="ui\resources\builtinicons\search_sequence.svg" />
+    <None Remove="ui\resources\builtinicons\set_selection_start_12px.svg" />
+    <None Remove="ui\resources\builtinicons\copy.svg" />
+    <None Remove="ui\resources\builtinicons\search_clear_field_12px.svg" />
+    <None Remove="ui\resources\builtinicons\arrow_short_up.svg" />
+    <None Remove="ui\resources\builtinicons\filter_selection.svg" />
+    <None Remove="ui\resources\builtinicons\adaptive_view.svg" />
+    <None Remove="ui\resources\builtinicons\database.svg" />
+    <None Remove="ui\resources\builtinicons\camera_ptz.svg" />
+    <None Remove="ui\resources\builtinicons\language.svg" />
+    <None Remove="ui\resources\builtinicons\playback_controller.svg" />
+    <None Remove="ui\resources\builtinicons\access_control_system.svg" />
+    <None Remove="ui\resources\builtinicons\comment_edit.svg" />
+    <None Remove="ui\resources\builtinicons\home.svg" />
+    <None Remove="ui\resources\builtinicons\event.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_left_12px.svg" />
+    <None Remove="ui\resources\builtinicons\suppress.svg" />
+    <None Remove="ui\resources\builtinicons\screen.svg" />
+    <None Remove="ui\resources\builtinicons\pause.svg" />
+    <None Remove="ui\resources\builtinicons\database_add.svg" />
+    <None Remove="ui\resources\builtinicons\speaker_muted.svg" />
+    <None Remove="ui\resources\builtinicons\alarm_tooltip_map.svg" />
+    <None Remove="ui\resources\builtinicons\status_confirmation_check_mark_color.svg" />
+    <None Remove="ui\resources\builtinicons\view_in_bookmarks_tab.svg" />
+    <None Remove="ui\resources\builtinicons\camera_marquee.svg" />
+    <None Remove="ui\resources\builtinicons\camera.svg" />
+    <None Remove="ui\resources\builtinicons\status_triangle_warning.svg" />
+    <None Remove="ui\resources\builtinicons\star.svg" />
+    <None Remove="ui\resources\builtinicons\questionmark.svg" />
+    <None Remove="ui\resources\builtinicons\text_size_small.svg" />
+    <None Remove="ui\resources\builtinicons\matrix_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\building.svg" />
+    <None Remove="ui\resources\builtinicons\arrow_short_down.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_transact2.svg" />
+    <None Remove="ui\resources\builtinicons\status_warning_exclamation_mark_color.svg" />
+    <None Remove="ui\resources\builtinicons\alarm_related_tooltip_map.svg" />
+    <None Remove="ui\resources\builtinicons\map_settings.svg" />
+    <None Remove="ui\resources\builtinicons\drag_out.svg" />
+    <None Remove="ui\resources\builtinicons\go_to_selection_end_from_left_12px.svg" />
+    <None Remove="ui\resources\builtinicons\device.svg" />
+    <None Remove="ui\resources\builtinicons\video_lock.svg" />
+    <None Remove="ui\resources\builtinicons\bookmark_delete.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_double_down_base.svg" />
+    <None Remove="ui\resources\builtinicons\mask_hide.svg" />
+    <None Remove="ui\resources\builtinicons\status_information_mark.svg" />
+    <None Remove="ui\resources\builtinicons\carousel_view_item.svg" />
+    <None Remove="client\images\icn16x16_light_firstsequence_default.png" />
+    <None Remove="ui\resources\builtinicons\sequence_next.svg" />
+    <None Remove="ui\resources\builtinicons\speaker_active.svg" />
+    <None Remove="ui\resources\builtinicons\project.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_2_8.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_2_4.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_5x5.svg" />
+    <None Remove="ui\resources\builtinicons\zoom_in.svg" />
+    <None Remove="ui\resources\builtinicons\text_size_medium.svg" />
+    <None Remove="ui\resources\builtinicons\previous.svg" />
+    <None Remove="ui\resources\builtinicons\map_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_left.svg" />
+    <None Remove="ui\resources\builtinicons\edit.svg" />
+    <None Remove="ui\resources\builtinicons\zone.svg" />
+    <None Remove="ui\resources\builtinicons\image_snapshot.svg" />
+    <None Remove="ui\resources\builtinicons\caps_lock.svg" />
+    <None Remove="ui\resources\builtinicons\sync_to_playback.svg" />
+    <None Remove="ui\resources\builtinicons\sequence_previous.svg" />
+    <None Remove="ui\resources\builtinicons\rename.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_4x4.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_4x1.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_4x6.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_4x3.svg" />
+    <None Remove="ui\resources\builtinicons\controller_device.svg" />
+    <None Remove="ui\resources\builtinicons\text_underline.svg" />
+    <None Remove="ui\resources\builtinicons\server_add.svg" />
+    <None Remove="ui\resources\builtinicons\delete.svg" />
+    <None Remove="ui\resources\builtinicons\camera_wall_mounted.svg" />
+    <None Remove="ui\resources\builtinicons\ellipsis_large.svg" />
+    <None Remove="ui\resources\builtinicons\mobile_previous_frame.svg" />
+    <None Remove="ui\resources\builtinicons\go_to_selection_end_from_right_12px.svg" />
+    <None Remove="client\images\icn16x16_light_playpausebackward_default.png" />
+    <None Remove="ui\resources\builtinicons\sequence_first.svg" />
+    <None Remove="client\images\icn16x16_light_previoussequence_default.png" />
+    <None Remove="ui\resources\builtinicons\play_backward.svg" />
+    <None Remove="ui\resources\builtinicons\microphone_unmuted.svg" />
+    <None Remove="ui\resources\builtinicons\input_add.svg" />
+    <None Remove="ui\resources\builtinicons\close.svg" />
+    <None Remove="ui\resources\builtinicons\workspace.svg" />
+    <None Remove="ui\resources\builtinicons\selection_bookmark_start.svg" />
+    <None Remove="client\images\icn16x16_light_pause_default.png" />
+    <None Remove="ui\resources\builtinicons\view_layout_8x8.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_1_2.svg" />
+    <None Remove="ui\resources\builtinicons\matchlist_remove.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_1_4.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_1_6.svg" />
+    <None Remove="ui\resources\builtinicons\view.svg" />
+    <None Remove="ui\resources\builtinicons\door_closed.svg" />
+    <None Remove="ui\resources\builtinicons\fullscreen_enter.svg" />
+    <None Remove="ui\resources\builtinicons\text_align_right.svg" />
+    <None Remove="ui\resources\builtinicons\music_note_muted.svg" />
+    <None Remove="ui\resources\builtinicons\keypad.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_7.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_8.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_5.svg" />
+    <None Remove="ui\resources\builtinicons\text_size_larger.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_3.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_1.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_2.svg" />
+    <None Remove="ui\resources\builtinicons\level_up.svg" />
+    <None Remove="ui\resources\builtinicons\search_location.svg" />
+    <None Remove="ui\resources\builtinicons\system_overview.svg" />
+    <None Remove="ui\resources\builtinicons\status_disconnected.svg" />
+    <None Remove="client\images\icn16x16_light_play_default.png" />
+    <None Remove="ui\resources\builtinicons\notification.svg" />
+    <None Remove="ui\resources\builtinicons\server.svg" />
+    <None Remove="ui\resources\builtinicons\input_device.svg" />
+    <None Remove="ui\resources\builtinicons\status_error_exclamation_mark.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_2x4_p.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout.svg" />
+    <None Remove="ui\resources\builtinicons\selection_remove.svg" />
+    <None Remove="ui\resources\builtinicons\open_in_search.svg" />
+    <None Remove="ui\resources\builtinicons\theme.svg" />
+    <None Remove="ui\resources\builtinicons\frame_next.svg" />
+    <None Remove="ui\resources\builtinicons\note.svg" />
+    <None Remove="ui\resources\builtinicons\status_round_disc.svg" />
+    <None Remove="ui\resources\builtinicons\folder.svg" />
+    <None Remove="ui\resources\builtinicons\state_indicator.svg" />
+    <None Remove="ui\resources\builtinicons\state_indicator_top_right.svg" />
+    <None Remove="ui\resources\builtinicons\folder_private.svg" />
+    <None Remove="ui\resources\builtinicons\share.svg" />
+    <None Remove="ui\resources\builtinicons\server_jobs.svg" />
+    <None Remove="ui\resources\builtinicons\sequence_last.svg" />
+    <None Remove="ui\resources\builtinicons\bookmark_edit.svg" />
+    <None Remove="ui\resources\builtinicons\server_site.svg" />
+    <None Remove="ui\resources\builtinicons\selection_bookmark_end.svg" />
+    <None Remove="ui\resources\builtinicons\arrow_left.svg" />
+    <None Remove="ui\resources\builtinicons\calendar.svg" />
+    <None Remove="ui\resources\builtinicons\camera_add.svg" />
+    <None Remove="ui\resources\builtinicons\clock.svg" />
+    <None Remove="ui\resources\builtinicons\alarm_list_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_right_12px.svg" />
+    <None Remove="ui\resources\builtinicons\smartwall_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\unpin.svg" />
+    <None Remove="ui\resources\builtinicons\time_date_select.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_double_down.svg" />
+    <None Remove="ui\resources\builtinicons\lpr_view_item.svg" />
+    <None Remove="ui\resources\builtinicons\text_size_smaller.svg" />
+    <None Remove="ui\resources\builtinicons\go_to_end.svg" />
+    <None Remove="ui\resources\builtinicons\alarm_definition.svg" />
+    <None Remove="ui\resources\builtinicons\search_clear_field.svg" />
+    <None Remove="ui\resources\builtinicons\image_copy.svg" />
+    <None Remove="ui\resources\builtinicons\print.svg" />
+    <None Remove="ui\resources\builtinicons\create_floating_window.svg" />
+    <None Remove="ui\resources\builtinicons\pdf_create.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_2x3.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_2x2.svg" />
+    <None Remove="ui\resources\builtinicons\zones.svg" />
+    <None Remove="ui\resources\builtinicons\logout.svg" />
+    <None Remove="ui\resources\builtinicons\role.svg" />
+    <None Remove="ui\resources\builtinicons\metadata.svg" />
+    <None Remove="ui\resources\builtinicons\color_fill.svg" />
+    <None Remove="ui\resources\builtinicons\status_error_exclamation_mark_color.svg" />
+    <None Remove="ui\resources\builtinicons\selection_bookmark_end_12px.svg" />
+    <None Remove="client\images\icn16x16_light_playpause_default.png" />
+    <None Remove="ui\resources\builtinicons\search_people.svg" />
+    <None Remove="ui\resources\builtinicons\chevron_up_12px.svg" />
+    <None Remove="ui\resources\builtinicons\text_align_left.svg" />
+    <None Remove="ui\resources\builtinicons\lock_overlay.svg" />
+    <None Remove="ui\resources\builtinicons\save_as.svg" />
+    <None Remove="ui\resources\builtinicons\building_add.svg" />
+    <None Remove="ui\resources\builtinicons\minus.svg" />
+    <None Remove="ui\resources\builtinicons\user.svg" />
+    <None Remove="ui\resources\builtinicons\globe.svg" />
+    <None Remove="ui\resources\builtinicons\alarm_disabled.svg" />
+    <None Remove="ui\resources\builtinicons\export.svg" />
+    <None Remove="ui\resources\builtinicons\camera_multiple.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_1x.svg" />
+    <None Remove="ui\resources\builtinicons\folder_read_only.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_2x.svg" />
+    <None Remove="ui\resources\builtinicons\minimize.svg" />
+    <None Remove="ui\resources\builtinicons\view_layout_1_2p.svg" />
+    <None Remove="ui\resources\builtinicons\search_vehicle.svg" />
+    <None Remove="VideoOS.Platform.Resources.alarm2.ico" />
+    <None Remove="VideoOS.Platform.Resources.alert.ico" />
+    <None Remove="VideoOS.Platform.Resources.event.ico" />
+    <None Remove="VideoOS.Platform.Resources.folder_closed.ico" />
+    <None Remove="VideoOS.Platform.Resources.folder_open.ico" />
+    <None Remove="VideoOS.Platform.Resources.input.ico" />
+    <None Remove="VideoOS.Platform.Resources.matrix.ico" />
+    <None Remove="VideoOS.Platform.Resources.microphone.ico" />
+    <None Remove="VideoOS.Platform.Resources.output.ico" />
+    <None Remove="VideoOS.Platform.Resources.Presets.ico" />
+    <None Remove="VideoOS.Platform.Resources.speaker.ico" />
+    <None Remove="VideoOS.Platform.Resources.central.ico" />
+    <None Remove="VideoOS.Platform.Resources.AnalyticsSource.ico" />
+    <None Remove="VideoOS.Platform.Resources.TransactSource.ico" />
+    <None Remove="VideoOS.Platform.Resources.camera.ico" />
+    <None Remove="VideoOS.Platform.Resources.Recorder.ico" />
+    <None Remove="VideoOS.Platform.Resources.SDK_general.ico" />
+    <None Remove="VideoOS.Platform.Resources.ViewItem.ico" />
+    <None Remove="VideoOS.Platform.Resources.SDK_tool.ico" />
+    <None Remove="VideoOS.Platform.Resources.SDK_VS.ico" />
+    <None Remove="VideoOS.Platform.Resources.Metadata_device.ico" />
+    <None Remove="VideoOS.Platform.Resources.Hardware16ni8.ico" />
+    <None Remove="VideoOS.Platform.Resources.Hardware32ni8.ico" />
+    <None Remove="VideoOS.Platform.Resources.Interconnected_hardware_16x16.ico" />
+    <None Remove="VideoOS.Platform.Resources.TimeProfile.ico" />
+    <None Remove="VideoOS.Platform.Resources.User.ico" />
+    <None Remove="VideoOS.Platform.Resources.Role.ico" />
+    <None Remove="VideoOS.Platform.Resources.Video-Wall-16-n-i8.ico" />
+    <None Remove="VideoOS.Platform.Resources.Server.png" />
+    <None Remove="VideoOS.Platform.Resources.Clear-Video-Wall-View---Single-Item.png" />
+    <None Remove="VideoOS.Platform.Resources.Clear-Video-Wall-View.png" />
+    <None Remove="VideoOS.Platform.Resources.Folder-Closed-Flat-16-n-p.png" />
+    <None Remove="VideoOS.Platform.Resources.Single-View-16-h-p.png" />
+    <None Remove="VideoOS.Platform.Resources.View-group-closed-16-n-p.png" />
+    <None Remove="VideoOS.Platform.Resources.Smart-Wall-Preset.png" />
+    <None Remove="VideoOS.Platform.Resources.GisMapLocation.png" />
+    <None Remove="VideoOS.Platform.Resources.CameraPTZ_icon.png" />
+    <None Remove="VideoOS.Platform.Resources.Window-16-h-p.png" />
+    <None Remove="VideoOS.Platform.Resources.PlugIn.bmp" />
+    <None Remove="VideoOS.Platform.Resources.video_push_no_video.jpg" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableActionsColumnHeaderTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableActionsColumnCellTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableIconAndTextColumnCellTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableIconAndTextColumnHeaderTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableMarkColumnCellTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableMarkColumnHeaderTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTemplateColumnCellTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTemplateColumnHeaderTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTextColumnCellTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTextColumnHeaderTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTimestampColumnCellTemplate.xaml" />
+    <None Remove="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTimestampColumnHeaderTemplate.xaml" />
+    <EmbeddedResource Include="ui\resources\builtinicons\search.svg" LogicalName="ui/resources/builtinicons/search.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_16.svg" LogicalName="ui/resources/builtinicons/view_layout_1_16.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\server_state_base.svg" LogicalName="ui/resources/builtinicons/server_state_base.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_11.svg" LogicalName="ui/resources/builtinicons/view_layout_1_11.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\settings.svg" LogicalName="ui/resources/builtinicons/settings.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\comment_add.svg" LogicalName="ui/resources/builtinicons/comment_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_change.svg" LogicalName="ui/resources/builtinicons/view_change.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\card_reader.svg" LogicalName="ui/resources/builtinicons/card_reader.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\access_control_view_item.svg" LogicalName="ui/resources/builtinicons/access_control_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\search_temperature.svg" LogicalName="ui/resources/builtinicons/search_temperature.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\application.svg" LogicalName="ui/resources/builtinicons/application.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_connected.svg" LogicalName="ui/resources/builtinicons/status_connected.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\comment.svg" LogicalName="ui/resources/builtinicons/comment.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\keyword.svg" LogicalName="ui/resources/builtinicons/keyword.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\go_to_selection_start_from_left_12px.svg" LogicalName="ui/resources/builtinicons/go_to_selection_start_from_left_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\layout_group.svg" LogicalName="ui/resources/builtinicons/layout_group.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\go_to_selection_start_from_right_12px.svg" LogicalName="ui/resources/builtinicons/go_to_selection_start_from_right_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\export_add_to_list.svg" LogicalName="ui/resources/builtinicons/export_add_to_list.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\plus.svg" LogicalName="ui/resources/builtinicons/plus.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\search_private.svg" LogicalName="ui/resources/builtinicons/search_private.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\restore.svg" LogicalName="ui/resources/builtinicons/restore.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_double_left.svg" LogicalName="ui/resources/builtinicons/chevron_double_left.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\folder_locked.svg" LogicalName="ui/resources/builtinicons/folder_locked.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\blur_video.svg" LogicalName="ui/resources/builtinicons/blur_video.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_right.svg" LogicalName="ui/resources/builtinicons/chevron_right.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\image_missing.svg" LogicalName="ui/resources/builtinicons/image_missing.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\smart_map_view_item.svg" LogicalName="ui/resources/builtinicons/smart_map_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\play_forward.svg" LogicalName="ui/resources/builtinicons/play_forward.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_duplicate.svg" LogicalName="ui/resources/builtinicons/view_duplicate.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\checkmark_12px.svg" LogicalName="ui/resources/builtinicons/checkmark_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_bold.svg" LogicalName="ui/resources/builtinicons/text_bold.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\colorpicker.svg" LogicalName="ui/resources/builtinicons/colorpicker.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\speaker.svg" LogicalName="ui/resources/builtinicons/speaker.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_4_p.svg" LogicalName="ui/resources/builtinicons/view_layout_1_4_p.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\plugin.svg" LogicalName="ui/resources/builtinicons/plugin.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_up.svg" LogicalName="ui/resources/builtinicons/chevron_up.svg" />
+    <EmbeddedResource Include="client\images\icn16x16_light_lastsequence_default.png" LogicalName="client/images/icn16x16_light_lastsequence_default.png" />
+    <EmbeddedResource Include="ui\resources\builtinicons\filter.svg" LogicalName="ui/resources/builtinicons/filter.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\zoom_out_slider.svg" LogicalName="ui/resources/builtinicons/zoom_out_slider.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\toast_message.svg" LogicalName="ui/resources/builtinicons/toast_message.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\mobile_next_frame.svg" LogicalName="ui/resources/builtinicons/mobile_next_frame.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\window.svg" LogicalName="ui/resources/builtinicons/window.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\arrow_right.svg" LogicalName="ui/resources/builtinicons/arrow_right.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\selection_bookmark_start_12px.svg" LogicalName="ui/resources/builtinicons/selection_bookmark_start_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_2x6_p.svg" LogicalName="ui/resources/builtinicons/view_layout_2x6_p.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text.svg" LogicalName="ui/resources/builtinicons/text.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\location_off.svg" LogicalName="ui/resources/builtinicons/location_off.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_options.svg" LogicalName="ui/resources/builtinicons/view_options.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\overlay_buttons.svg" LogicalName="ui/resources/builtinicons/overlay_buttons.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\frame_previous.svg" LogicalName="ui/resources/builtinicons/frame_previous.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\matchlist_add.svg" LogicalName="ui/resources/builtinicons/matchlist_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\close_12px.svg" LogicalName="ui/resources/builtinicons/close_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_6x6.svg" LogicalName="ui/resources/builtinicons/view_layout_6x6.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_6x3.svg" LogicalName="ui/resources/builtinicons/view_layout_6x3.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_disc_small.svg" LogicalName="ui/resources/builtinicons/status_disc_small.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\output_off.svg" LogicalName="ui/resources/builtinicons/output_off.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\sequence_split.svg" LogicalName="ui/resources/builtinicons/sequence_split.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\server_service.svg" LogicalName="ui/resources/builtinicons/server_service.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\maximize.svg" LogicalName="ui/resources/builtinicons/maximize.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\bookmark_timeline_12px.svg" LogicalName="ui/resources/builtinicons/bookmark_timeline_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\bookmark.svg" LogicalName="ui/resources/builtinicons/bookmark.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\image.svg" LogicalName="ui/resources/builtinicons/image.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\html_view_item.svg" LogicalName="ui/resources/builtinicons/html_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\arrow_down.svg" LogicalName="ui/resources/builtinicons/arrow_down.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_reload.svg" LogicalName="ui/resources/builtinicons/view_reload.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\cd_drive.svg" LogicalName="ui/resources/builtinicons/cd_drive.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\unknown.svg" LogicalName="ui/resources/builtinicons/unknown.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\arrow_up.svg" LogicalName="ui/resources/builtinicons/arrow_up.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_2x_p.svg" LogicalName="ui/resources/builtinicons/view_layout_1_2x_p.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\lock_off.svg" LogicalName="ui/resources/builtinicons/lock_off.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\devices_add.svg" LogicalName="ui/resources/builtinicons/devices_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\recording_search.svg" LogicalName="ui/resources/builtinicons/recording_search.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\layers_add.svg" LogicalName="ui/resources/builtinicons/layers_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\preset.svg" LogicalName="ui/resources/builtinicons/preset.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_2_1_2.svg" LogicalName="ui/resources/builtinicons/view_layout_2_1_2.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_3x2.svg" LogicalName="ui/resources/builtinicons/view_layout_3x2.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_3x3.svg" LogicalName="ui/resources/builtinicons/view_layout_3x3.svg" />
+    <EmbeddedResource Include="client\images\icn16x16_light_stepbackward_default.png" LogicalName="client/images/icn16x16_light_stepbackward_default.png" />
+    <EmbeddedResource Include="ui\resources\builtinicons\set_selection_end_12px.svg" LogicalName="ui/resources/builtinicons/set_selection_end_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\microphone_add.svg" LogicalName="ui/resources/builtinicons/microphone_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\output_active.svg" LogicalName="ui/resources/builtinicons/output_active.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\go_to_start.svg" LogicalName="ui/resources/builtinicons/go_to_start.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\mask_show.svg" LogicalName="ui/resources/builtinicons/mask_show.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\retrieve_from_storage.svg" LogicalName="ui/resources/builtinicons/retrieve_from_storage.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\drag_grippers.svg" LogicalName="ui/resources/builtinicons/drag_grippers.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\map_recenter.svg" LogicalName="ui/resources/builtinicons/map_recenter.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\layers.svg" LogicalName="ui/resources/builtinicons/layers.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_down_12px.svg" LogicalName="ui/resources/builtinicons/chevron_down_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\time_selection_mode_date_time.svg" LogicalName="ui/resources/builtinicons/time_selection_mode_date_time.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\smartwall_preset.svg" LogicalName="ui/resources/builtinicons/smartwall_preset.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\evidence_lock_add.svg" LogicalName="ui/resources/builtinicons/evidence_lock_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_add.svg" LogicalName="ui/resources/builtinicons/view_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\speaker_add.svg" LogicalName="ui/resources/builtinicons/speaker_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\ptz_control.svg" LogicalName="ui/resources/builtinicons/ptz_control.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\start_recording.svg" LogicalName="ui/resources/builtinicons/start_recording.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\interconnected_hardware.svg" LogicalName="ui/resources/builtinicons/interconnected_hardware.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\alarm_list_view.svg" LogicalName="ui/resources/builtinicons/alarm_list_view.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\paste.svg" LogicalName="ui/resources/builtinicons/paste.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\clipboard.svg" LogicalName="ui/resources/builtinicons/clipboard.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\commands.svg" LogicalName="ui/resources/builtinicons/commands.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\hotspot_view_item.svg" LogicalName="ui/resources/builtinicons/hotspot_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\plugin_add.svg" LogicalName="ui/resources/builtinicons/plugin_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\output.svg" LogicalName="ui/resources/builtinicons/output.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\zoom_out.svg" LogicalName="ui/resources/builtinicons/zoom_out.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\help.svg" LogicalName="ui/resources/builtinicons/help.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_color.svg" LogicalName="ui/resources/builtinicons/text_color.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_size.svg" LogicalName="ui/resources/builtinicons/text_size.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\arrow_short_right.svg" LogicalName="ui/resources/builtinicons/arrow_short_right.svg" />
+    <EmbeddedResource Include="client\images\icn16x16_light_stepforward_default.png" LogicalName="client/images/icn16x16_light_stepforward_default.png" />
+    <EmbeddedResource Include="ui\resources\builtinicons\checkmark.svg" LogicalName="ui/resources/builtinicons/checkmark.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\drag_handle.svg" LogicalName="ui/resources/builtinicons/drag_handle.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\project_add.svg" LogicalName="ui/resources/builtinicons/project_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\go_to_video_tutorials.svg" LogicalName="ui/resources/builtinicons/go_to_video_tutorials.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\network_drive.svg" LogicalName="ui/resources/builtinicons/network_drive.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_10x10.svg" LogicalName="ui/resources/builtinicons/view_layout_10x10.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\output_add.svg" LogicalName="ui/resources/builtinicons/output_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\alarm.svg" LogicalName="ui/resources/builtinicons/alarm.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\receipt.svg" LogicalName="ui/resources/builtinicons/receipt.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\database_end.svg" LogicalName="ui/resources/builtinicons/database_end.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\user_state_base.svg" LogicalName="ui/resources/builtinicons/user_state_base.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\pin.svg" LogicalName="ui/resources/builtinicons/pin.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\send_to_window.svg" LogicalName="ui/resources/builtinicons/send_to_window.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_size_large.svg" LogicalName="ui/resources/builtinicons/text_size_large.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\selection_add.svg" LogicalName="ui/resources/builtinicons/selection_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_confirmation_check_mark.svg" LogicalName="ui/resources/builtinicons/status_confirmation_check_mark.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\playback_speed.svg" LogicalName="ui/resources/builtinicons/playback_speed.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\bookmark_timeline.svg" LogicalName="ui/resources/builtinicons/bookmark_timeline.svg" />
+    <EmbeddedResource Include="client\images\icn16x16_light_nextsequence_default.png" LogicalName="client/images/icn16x16_light_nextsequence_default.png" />
+    <EmbeddedResource Include="ui\resources\builtinicons\arrow_short_left.svg" LogicalName="ui/resources/builtinicons/arrow_short_left.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\microphone_muted.svg" LogicalName="ui/resources/builtinicons/microphone_muted.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_italic.svg" LogicalName="ui/resources/builtinicons/text_italic.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_double_up.svg" LogicalName="ui/resources/builtinicons/chevron_double_up.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\hardware_acceleration_tag.svg" LogicalName="ui/resources/builtinicons/hardware_acceleration_tag.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\smartwall_monitor.svg" LogicalName="ui/resources/builtinicons/smartwall_monitor.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\link_add.svg" LogicalName="ui/resources/builtinicons/link_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\face_recognition.svg" LogicalName="ui/resources/builtinicons/face_recognition.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_double_right.svg" LogicalName="ui/resources/builtinicons/chevron_double_right.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\door_open.svg" LogicalName="ui/resources/builtinicons/door_open.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\location.svg" LogicalName="ui/resources/builtinicons/location.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\refresh.svg" LogicalName="ui/resources/builtinicons/refresh.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\keycard.svg" LogicalName="ui/resources/builtinicons/keycard.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\time_selection_mode.svg" LogicalName="ui/resources/builtinicons/time_selection_mode.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_information_mark_color.svg" LogicalName="ui/resources/builtinicons/status_information_mark_color.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_12x6.svg" LogicalName="ui/resources/builtinicons/view_layout_12x6.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\save.svg" LogicalName="ui/resources/builtinicons/save.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\folder_add.svg" LogicalName="ui/resources/builtinicons/folder_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\key.svg" LogicalName="ui/resources/builtinicons/key.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\zoom_in_slider.svg" LogicalName="ui/resources/builtinicons/zoom_in_slider.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\selected.svg" LogicalName="ui/resources/builtinicons/selected.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\unit.svg" LogicalName="ui/resources/builtinicons/unit.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\transact_view_item.svg" LogicalName="ui/resources/builtinicons/transact_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\actions.svg" LogicalName="ui/resources/builtinicons/actions.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_7x7.svg" LogicalName="ui/resources/builtinicons/view_layout_7x7.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\independent_playback.svg" LogicalName="ui/resources/builtinicons/independent_playback.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\sources.svg" LogicalName="ui/resources/builtinicons/sources.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\object_cube.svg" LogicalName="ui/resources/builtinicons/object_cube.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\search_motion.svg" LogicalName="ui/resources/builtinicons/search_motion.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\selection_hand.svg" LogicalName="ui/resources/builtinicons/selection_hand.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\microphone.svg" LogicalName="ui/resources/builtinicons/microphone.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_down.svg" LogicalName="ui/resources/builtinicons/chevron_down.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1x2.svg" LogicalName="ui/resources/builtinicons/view_layout_1x2.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1x1.svg" LogicalName="ui/resources/builtinicons/view_layout_1x1.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1x3.svg" LogicalName="ui/resources/builtinicons/view_layout_1x3.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\ellipsis.svg" LogicalName="ui/resources/builtinicons/ellipsis.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\fullscreen_exit.svg" LogicalName="ui/resources/builtinicons/fullscreen_exit.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\location_add.svg" LogicalName="ui/resources/builtinicons/location_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\next.svg" LogicalName="ui/resources/builtinicons/next.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\replay.svg" LogicalName="ui/resources/builtinicons/replay.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\recording_server.svg" LogicalName="ui/resources/builtinicons/recording_server.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\music_note.svg" LogicalName="ui/resources/builtinicons/music_note.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\selection_cursor.svg" LogicalName="ui/resources/builtinicons/selection_cursor.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_view_item.svg" LogicalName="ui/resources/builtinicons/text_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_warning_exclamation_mark.svg" LogicalName="ui/resources/builtinicons/status_warning_exclamation_mark.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_align_center.svg" LogicalName="ui/resources/builtinicons/text_align_center.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\link.svg" LogicalName="ui/resources/builtinicons/link.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\search_sequence.svg" LogicalName="ui/resources/builtinicons/search_sequence.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\set_selection_start_12px.svg" LogicalName="ui/resources/builtinicons/set_selection_start_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\copy.svg" LogicalName="ui/resources/builtinicons/copy.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\search_clear_field_12px.svg" LogicalName="ui/resources/builtinicons/search_clear_field_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\arrow_short_up.svg" LogicalName="ui/resources/builtinicons/arrow_short_up.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\filter_selection.svg" LogicalName="ui/resources/builtinicons/filter_selection.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\adaptive_view.svg" LogicalName="ui/resources/builtinicons/adaptive_view.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\database.svg" LogicalName="ui/resources/builtinicons/database.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\camera_ptz.svg" LogicalName="ui/resources/builtinicons/camera_ptz.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\language.svg" LogicalName="ui/resources/builtinicons/language.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\playback_controller.svg" LogicalName="ui/resources/builtinicons/playback_controller.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\access_control_system.svg" LogicalName="ui/resources/builtinicons/access_control_system.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\comment_edit.svg" LogicalName="ui/resources/builtinicons/comment_edit.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\home.svg" LogicalName="ui/resources/builtinicons/home.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\event.svg" LogicalName="ui/resources/builtinicons/event.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_left_12px.svg" LogicalName="ui/resources/builtinicons/chevron_left_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\suppress.svg" LogicalName="ui/resources/builtinicons/suppress.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\screen.svg" LogicalName="ui/resources/builtinicons/screen.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\pause.svg" LogicalName="ui/resources/builtinicons/pause.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\database_add.svg" LogicalName="ui/resources/builtinicons/database_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\speaker_muted.svg" LogicalName="ui/resources/builtinicons/speaker_muted.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\alarm_tooltip_map.svg" LogicalName="ui/resources/builtinicons/alarm_tooltip_map.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_confirmation_check_mark_color.svg" LogicalName="ui/resources/builtinicons/status_confirmation_check_mark_color.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_in_bookmarks_tab.svg" LogicalName="ui/resources/builtinicons/view_in_bookmarks_tab.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\camera_marquee.svg" LogicalName="ui/resources/builtinicons/camera_marquee.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\camera.svg" LogicalName="ui/resources/builtinicons/camera.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_triangle_warning.svg" LogicalName="ui/resources/builtinicons/status_triangle_warning.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\star.svg" LogicalName="ui/resources/builtinicons/star.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\questionmark.svg" LogicalName="ui/resources/builtinicons/questionmark.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_size_small.svg" LogicalName="ui/resources/builtinicons/text_size_small.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\matrix_view_item.svg" LogicalName="ui/resources/builtinicons/matrix_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\building.svg" LogicalName="ui/resources/builtinicons/building.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\arrow_short_down.svg" LogicalName="ui/resources/builtinicons/arrow_short_down.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_transact2.svg" LogicalName="ui/resources/builtinicons/view_layout_transact2.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_warning_exclamation_mark_color.svg" LogicalName="ui/resources/builtinicons/status_warning_exclamation_mark_color.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\alarm_related_tooltip_map.svg" LogicalName="ui/resources/builtinicons/alarm_related_tooltip_map.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\map_settings.svg" LogicalName="ui/resources/builtinicons/map_settings.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\drag_out.svg" LogicalName="ui/resources/builtinicons/drag_out.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\go_to_selection_end_from_left_12px.svg" LogicalName="ui/resources/builtinicons/go_to_selection_end_from_left_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\device.svg" LogicalName="ui/resources/builtinicons/device.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\video_lock.svg" LogicalName="ui/resources/builtinicons/video_lock.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\bookmark_delete.svg" LogicalName="ui/resources/builtinicons/bookmark_delete.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_double_down_base.svg" LogicalName="ui/resources/builtinicons/chevron_double_down_base.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\mask_hide.svg" LogicalName="ui/resources/builtinicons/mask_hide.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_information_mark.svg" LogicalName="ui/resources/builtinicons/status_information_mark.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\carousel_view_item.svg" LogicalName="ui/resources/builtinicons/carousel_view_item.svg" />
+    <EmbeddedResource Include="client\images\icn16x16_light_firstsequence_default.png" LogicalName="client/images/icn16x16_light_firstsequence_default.png" />
+    <EmbeddedResource Include="ui\resources\builtinicons\sequence_next.svg" LogicalName="ui/resources/builtinicons/sequence_next.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\speaker_active.svg" LogicalName="ui/resources/builtinicons/speaker_active.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\project.svg" LogicalName="ui/resources/builtinicons/project.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_2_8.svg" LogicalName="ui/resources/builtinicons/view_layout_2_8.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_2_4.svg" LogicalName="ui/resources/builtinicons/view_layout_2_4.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_5x5.svg" LogicalName="ui/resources/builtinicons/view_layout_5x5.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\zoom_in.svg" LogicalName="ui/resources/builtinicons/zoom_in.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_size_medium.svg" LogicalName="ui/resources/builtinicons/text_size_medium.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\previous.svg" LogicalName="ui/resources/builtinicons/previous.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\map_view_item.svg" LogicalName="ui/resources/builtinicons/map_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_left.svg" LogicalName="ui/resources/builtinicons/chevron_left.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\edit.svg" LogicalName="ui/resources/builtinicons/edit.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\zone.svg" LogicalName="ui/resources/builtinicons/zone.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\image_snapshot.svg" LogicalName="ui/resources/builtinicons/image_snapshot.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\caps_lock.svg" LogicalName="ui/resources/builtinicons/caps_lock.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\sync_to_playback.svg" LogicalName="ui/resources/builtinicons/sync_to_playback.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\sequence_previous.svg" LogicalName="ui/resources/builtinicons/sequence_previous.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\rename.svg" LogicalName="ui/resources/builtinicons/rename.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_4x4.svg" LogicalName="ui/resources/builtinicons/view_layout_4x4.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_4x1.svg" LogicalName="ui/resources/builtinicons/view_layout_4x1.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_4x6.svg" LogicalName="ui/resources/builtinicons/view_layout_4x6.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_4x3.svg" LogicalName="ui/resources/builtinicons/view_layout_4x3.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\controller_device.svg" LogicalName="ui/resources/builtinicons/controller_device.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_underline.svg" LogicalName="ui/resources/builtinicons/text_underline.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\server_add.svg" LogicalName="ui/resources/builtinicons/server_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\delete.svg" LogicalName="ui/resources/builtinicons/delete.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\camera_wall_mounted.svg" LogicalName="ui/resources/builtinicons/camera_wall_mounted.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\ellipsis_large.svg" LogicalName="ui/resources/builtinicons/ellipsis_large.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\mobile_previous_frame.svg" LogicalName="ui/resources/builtinicons/mobile_previous_frame.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\go_to_selection_end_from_right_12px.svg" LogicalName="ui/resources/builtinicons/go_to_selection_end_from_right_12px.svg" />
+    <EmbeddedResource Include="client\images\icn16x16_light_playpausebackward_default.png" LogicalName="client/images/icn16x16_light_playpausebackward_default.png" />
+    <EmbeddedResource Include="ui\resources\builtinicons\sequence_first.svg" LogicalName="ui/resources/builtinicons/sequence_first.svg" />
+    <EmbeddedResource Include="client\images\icn16x16_light_previoussequence_default.png" LogicalName="client/images/icn16x16_light_previoussequence_default.png" />
+    <EmbeddedResource Include="ui\resources\builtinicons\play_backward.svg" LogicalName="ui/resources/builtinicons/play_backward.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\microphone_unmuted.svg" LogicalName="ui/resources/builtinicons/microphone_unmuted.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\input_add.svg" LogicalName="ui/resources/builtinicons/input_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\close.svg" LogicalName="ui/resources/builtinicons/close.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\workspace.svg" LogicalName="ui/resources/builtinicons/workspace.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\selection_bookmark_start.svg" LogicalName="ui/resources/builtinicons/selection_bookmark_start.svg" />
+    <EmbeddedResource Include="client\images\icn16x16_light_pause_default.png" LogicalName="client/images/icn16x16_light_pause_default.png" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_8x8.svg" LogicalName="ui/resources/builtinicons/view_layout_8x8.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_1_2.svg" LogicalName="ui/resources/builtinicons/view_layout_1_1_2.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\matchlist_remove.svg" LogicalName="ui/resources/builtinicons/matchlist_remove.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_1_4.svg" LogicalName="ui/resources/builtinicons/view_layout_1_1_4.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_1_6.svg" LogicalName="ui/resources/builtinicons/view_layout_1_1_6.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view.svg" LogicalName="ui/resources/builtinicons/view.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\door_closed.svg" LogicalName="ui/resources/builtinicons/door_closed.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\fullscreen_enter.svg" LogicalName="ui/resources/builtinicons/fullscreen_enter.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_align_right.svg" LogicalName="ui/resources/builtinicons/text_align_right.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\music_note_muted.svg" LogicalName="ui/resources/builtinicons/music_note_muted.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\keypad.svg" LogicalName="ui/resources/builtinicons/keypad.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_7.svg" LogicalName="ui/resources/builtinicons/view_layout_1_7.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_8.svg" LogicalName="ui/resources/builtinicons/view_layout_1_8.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_5.svg" LogicalName="ui/resources/builtinicons/view_layout_1_5.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_size_larger.svg" LogicalName="ui/resources/builtinicons/text_size_larger.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_3.svg" LogicalName="ui/resources/builtinicons/view_layout_1_3.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_1.svg" LogicalName="ui/resources/builtinicons/view_layout_1_1.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_2.svg" LogicalName="ui/resources/builtinicons/view_layout_1_2.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\level_up.svg" LogicalName="ui/resources/builtinicons/level_up.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\search_location.svg" LogicalName="ui/resources/builtinicons/search_location.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\system_overview.svg" LogicalName="ui/resources/builtinicons/system_overview.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_disconnected.svg" LogicalName="ui/resources/builtinicons/status_disconnected.svg" />
+    <EmbeddedResource Include="client\images\icn16x16_light_play_default.png" LogicalName="client/images/icn16x16_light_play_default.png" />
+    <EmbeddedResource Include="ui\resources\builtinicons\notification.svg" LogicalName="ui/resources/builtinicons/notification.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\server.svg" LogicalName="ui/resources/builtinicons/server.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\input_device.svg" LogicalName="ui/resources/builtinicons/input_device.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_error_exclamation_mark.svg" LogicalName="ui/resources/builtinicons/status_error_exclamation_mark.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_2x4_p.svg" LogicalName="ui/resources/builtinicons/view_layout_2x4_p.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout.svg" LogicalName="ui/resources/builtinicons/view_layout.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\selection_remove.svg" LogicalName="ui/resources/builtinicons/selection_remove.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\open_in_search.svg" LogicalName="ui/resources/builtinicons/open_in_search.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\theme.svg" LogicalName="ui/resources/builtinicons/theme.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\frame_next.svg" LogicalName="ui/resources/builtinicons/frame_next.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\note.svg" LogicalName="ui/resources/builtinicons/note.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_round_disc.svg" LogicalName="ui/resources/builtinicons/status_round_disc.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\folder.svg" LogicalName="ui/resources/builtinicons/folder.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\state_indicator.svg" LogicalName="ui/resources/builtinicons/state_indicator.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\state_indicator_top_right.svg" LogicalName="ui/resources/builtinicons/state_indicator_top_right.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\folder_private.svg" LogicalName="ui/resources/builtinicons/folder_private.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\share.svg" LogicalName="ui/resources/builtinicons/share.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\server_jobs.svg" LogicalName="ui/resources/builtinicons/server_jobs.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\sequence_last.svg" LogicalName="ui/resources/builtinicons/sequence_last.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\bookmark_edit.svg" LogicalName="ui/resources/builtinicons/bookmark_edit.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\server_site.svg" LogicalName="ui/resources/builtinicons/server_site.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\selection_bookmark_end.svg" LogicalName="ui/resources/builtinicons/selection_bookmark_end.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\arrow_left.svg" LogicalName="ui/resources/builtinicons/arrow_left.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\calendar.svg" LogicalName="ui/resources/builtinicons/calendar.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\camera_add.svg" LogicalName="ui/resources/builtinicons/camera_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\clock.svg" LogicalName="ui/resources/builtinicons/clock.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\alarm_list_view_item.svg" LogicalName="ui/resources/builtinicons/alarm_list_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_right_12px.svg" LogicalName="ui/resources/builtinicons/chevron_right_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\smartwall_view_item.svg" LogicalName="ui/resources/builtinicons/smartwall_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\unpin.svg" LogicalName="ui/resources/builtinicons/unpin.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\time_date_select.svg" LogicalName="ui/resources/builtinicons/time_date_select.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_double_down.svg" LogicalName="ui/resources/builtinicons/chevron_double_down.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\lpr_view_item.svg" LogicalName="ui/resources/builtinicons/lpr_view_item.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_size_smaller.svg" LogicalName="ui/resources/builtinicons/text_size_smaller.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\go_to_end.svg" LogicalName="ui/resources/builtinicons/go_to_end.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\alarm_definition.svg" LogicalName="ui/resources/builtinicons/alarm_definition.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\search_clear_field.svg" LogicalName="ui/resources/builtinicons/search_clear_field.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\image_copy.svg" LogicalName="ui/resources/builtinicons/image_copy.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\print.svg" LogicalName="ui/resources/builtinicons/print.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\create_floating_window.svg" LogicalName="ui/resources/builtinicons/create_floating_window.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\pdf_create.svg" LogicalName="ui/resources/builtinicons/pdf_create.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_2x3.svg" LogicalName="ui/resources/builtinicons/view_layout_2x3.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_2x2.svg" LogicalName="ui/resources/builtinicons/view_layout_2x2.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\zones.svg" LogicalName="ui/resources/builtinicons/zones.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\logout.svg" LogicalName="ui/resources/builtinicons/logout.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\role.svg" LogicalName="ui/resources/builtinicons/role.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\metadata.svg" LogicalName="ui/resources/builtinicons/metadata.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\color_fill.svg" LogicalName="ui/resources/builtinicons/color_fill.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\status_error_exclamation_mark_color.svg" LogicalName="ui/resources/builtinicons/status_error_exclamation_mark_color.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\selection_bookmark_end_12px.svg" LogicalName="ui/resources/builtinicons/selection_bookmark_end_12px.svg" />
+    <EmbeddedResource Include="client\images\icn16x16_light_playpause_default.png" LogicalName="client/images/icn16x16_light_playpause_default.png" />
+    <EmbeddedResource Include="ui\resources\builtinicons\search_people.svg" LogicalName="ui/resources/builtinicons/search_people.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\chevron_up_12px.svg" LogicalName="ui/resources/builtinicons/chevron_up_12px.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\text_align_left.svg" LogicalName="ui/resources/builtinicons/text_align_left.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\lock_overlay.svg" LogicalName="ui/resources/builtinicons/lock_overlay.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\save_as.svg" LogicalName="ui/resources/builtinicons/save_as.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\building_add.svg" LogicalName="ui/resources/builtinicons/building_add.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\minus.svg" LogicalName="ui/resources/builtinicons/minus.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\user.svg" LogicalName="ui/resources/builtinicons/user.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\globe.svg" LogicalName="ui/resources/builtinicons/globe.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\alarm_disabled.svg" LogicalName="ui/resources/builtinicons/alarm_disabled.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\export.svg" LogicalName="ui/resources/builtinicons/export.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\camera_multiple.svg" LogicalName="ui/resources/builtinicons/camera_multiple.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_1x.svg" LogicalName="ui/resources/builtinicons/view_layout_1_1x.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\folder_read_only.svg" LogicalName="ui/resources/builtinicons/folder_read_only.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_2x.svg" LogicalName="ui/resources/builtinicons/view_layout_1_2x.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\minimize.svg" LogicalName="ui/resources/builtinicons/minimize.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\view_layout_1_2p.svg" LogicalName="ui/resources/builtinicons/view_layout_1_2p.svg" />
+    <EmbeddedResource Include="ui\resources\builtinicons\search_vehicle.svg" LogicalName="ui/resources/builtinicons/search_vehicle.svg" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.alarm2.ico" LogicalName="VideoOS.Platform.Resources.alarm2.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.alert.ico" LogicalName="VideoOS.Platform.Resources.alert.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.event.ico" LogicalName="VideoOS.Platform.Resources.event.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.folder_closed.ico" LogicalName="VideoOS.Platform.Resources.folder_closed.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.folder_open.ico" LogicalName="VideoOS.Platform.Resources.folder_open.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.input.ico" LogicalName="VideoOS.Platform.Resources.input.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.matrix.ico" LogicalName="VideoOS.Platform.Resources.matrix.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.microphone.ico" LogicalName="VideoOS.Platform.Resources.microphone.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.output.ico" LogicalName="VideoOS.Platform.Resources.output.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Presets.ico" LogicalName="VideoOS.Platform.Resources.Presets.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.speaker.ico" LogicalName="VideoOS.Platform.Resources.speaker.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.central.ico" LogicalName="VideoOS.Platform.Resources.central.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.AnalyticsSource.ico" LogicalName="VideoOS.Platform.Resources.AnalyticsSource.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.TransactSource.ico" LogicalName="VideoOS.Platform.Resources.TransactSource.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.camera.ico" LogicalName="VideoOS.Platform.Resources.camera.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Recorder.ico" LogicalName="VideoOS.Platform.Resources.Recorder.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.SDK_general.ico" LogicalName="VideoOS.Platform.Resources.SDK_general.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.ViewItem.ico" LogicalName="VideoOS.Platform.Resources.ViewItem.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.SDK_tool.ico" LogicalName="VideoOS.Platform.Resources.SDK_tool.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.SDK_VS.ico" LogicalName="VideoOS.Platform.Resources.SDK_VS.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Metadata_device.ico" LogicalName="VideoOS.Platform.Resources.Metadata_device.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Hardware16ni8.ico" LogicalName="VideoOS.Platform.Resources.Hardware16ni8.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Hardware32ni8.ico" LogicalName="VideoOS.Platform.Resources.Hardware32ni8.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Interconnected_hardware_16x16.ico" LogicalName="VideoOS.Platform.Resources.Interconnected_hardware_16x16.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.TimeProfile.ico" LogicalName="VideoOS.Platform.Resources.TimeProfile.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.User.ico" LogicalName="VideoOS.Platform.Resources.User.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Role.ico" LogicalName="VideoOS.Platform.Resources.Role.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Video-Wall-16-n-i8.ico" LogicalName="VideoOS.Platform.Resources.Video Wall 16 n i8.ico" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Server.png" LogicalName="VideoOS.Platform.Resources.Server.png" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Clear-Video-Wall-View---Single-Item.png" LogicalName="VideoOS.Platform.Resources.Clear Video Wall View - Single Item.png" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Clear-Video-Wall-View.png" LogicalName="VideoOS.Platform.Resources.Clear Video Wall View.png" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Folder-Closed-Flat-16-n-p.png" LogicalName="VideoOS.Platform.Resources.Folder Closed Flat 16 n p.png" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Single-View-16-h-p.png" LogicalName="VideoOS.Platform.Resources.Single View 16 h p.png" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.View-group-closed-16-n-p.png" LogicalName="VideoOS.Platform.Resources.View group closed 16 n p.png" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Smart-Wall-Preset.png" LogicalName="VideoOS.Platform.Resources.Smart Wall Preset.png" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.GisMapLocation.png" LogicalName="VideoOS.Platform.Resources.GisMapLocation.png" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.CameraPTZ_icon.png" LogicalName="VideoOS.Platform.Resources.CameraPTZ_icon.png" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.Window-16-h-p.png" LogicalName="VideoOS.Platform.Resources.Window 16 h p.png" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.PlugIn.bmp" LogicalName="VideoOS.Platform.Resources.PlugIn.bmp" />
+    <EmbeddedResource Include="VideoOS.Platform.Resources.video_push_no_video.jpg" LogicalName="VideoOS.Platform.Resources.video_push_no_video.jpg" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableActionsColumnHeaderTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableActionsColumnHeaderTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableActionsColumnCellTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableActionsColumnCellTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableIconAndTextColumnCellTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableIconAndTextColumnCellTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableIconAndTextColumnHeaderTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableIconAndTextColumnHeaderTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableMarkColumnCellTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableMarkColumnCellTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableMarkColumnHeaderTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableMarkColumnHeaderTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTemplateColumnCellTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTemplateColumnCellTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTemplateColumnHeaderTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTemplateColumnHeaderTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTextColumnCellTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTextColumnCellTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTextColumnHeaderTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTextColumnHeaderTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTimestampColumnCellTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTimestampColumnCellTemplate.xaml" />
+    <EmbeddedResource Include="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTimestampColumnHeaderTemplate.xaml" LogicalName="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.VideoOSTableTimestampColumnHeaderTemplate.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="WebRequestStop" xml:space="preserve"><value>Web request stopped {0}</value></data>
+  <data name="InnerException" xml:space="preserve"><value>Inner Exception Details: {0}</value></data>
+  <data name="AuthenticationFailure" xml:space="preserve"><value>Authentication failure</value></data>
+  <data name="Method" xml:space="preserve"><value>Method: {0}</value></data>
+  <data name="RunningStatus" xml:space="preserve"><value>Running</value></data>
+  <data name="AuthenticationSuccess" xml:space="preserve"><value>Authentication success</value></data>
+  <data name="WebRequestStart" xml:space="preserve"><value>Web request started {0}</value></data>
+  <data name="ExceptionDataDictionary" xml:space="preserve"><value>{0} = {1}</value></data>
+  <data name="EventSourceMissingException" xml:space="preserve"><value>An event log source must be specified.</value></data>
+  <data name="Category" xml:space="preserve"><value>Category: {0}</value></data>
+  <data name="StopOperation" xml:space="preserve"><value>Stop</value></data>
+  <data name="Exception" xml:space="preserve"><value>Exception: {0}</value></data>
+  <data name="StoppedStatus" xml:space="preserve"><value>Stopped</value></data>
+  <data name="VmoInvalidSettingException" xml:space="preserve"><value>The setting '{0}' is invalid.</value></data>
+  <data name="ContinuePendingStatus" xml:space="preserve"><value>ContinuePending</value></data>
+  <data name="StartOperation" xml:space="preserve"><value>Start</value></data>
+  <data name="ExceptionStackTrace" xml:space="preserve"><value>Exception Stack Trace: {0}</value></data>
+  <data name="StackFrameLineFormat" xml:space="preserve"><value>{0} (line {1})</value></data>
+  <data name="FailedReadingTracingConfiguration" xml:space="preserve"><value>Failed to read tracing configuration because of error: {0}. Tracing is disabled.</value></data>
+  <data name="NotAvailable" xml:space="preserve"><value>not available</value></data>
+  <data name="StackFrameHeader" xml:space="preserve"><value>at {0}.{1}</value></data>
+  <data name="SqlErrorDetails" xml:space="preserve"><value>SQL Error[{0}]: {1}
+\n    Class: {2}
+\n    Number: {3}
+\n    Server: {4}
+\n    Source: {5}
+\n    State: {6}
+\n    Procedure: {7}
+\n    Line Number: {8}</value></data>
+  <data name="MIP" xml:space="preserve"><value>MIP</value></data>
+  <data name="Entering" xml:space="preserve"><value>Entering {0}</value></data>
+  <data name="InformationalEventFormatNoHost" xml:space="preserve"><value>InformationalEventFormatNoHost={0}
+\n
+\nApplication Domain: {1}</value></data>
+  <data name="MessageBrief" xml:space="preserve"><value>The following error has occurred:</value></data>
+  <data name="ActiveDirectoryAuthenticationException" xml:space="preserve"><value>The Management Server was unable to retrieve identity information from Active Directory for {0}\{1} because the Management Server service identity is not authorized to access this information, or is a local user account. To access this information, the Management Server service user must be an Active Directory user account.</value></data>
+  <data name="InformationalEventFormat" xml:space="preserve"><value>InformationalEventFormat={0}
+\n
+\nApplication Domain: {1}
+\nService Host:       {2}</value></data>
+  <data name="ExceptionDataDetails" xml:space="preserve"><value>Exception Data: {0}</value></data>
+  <data name="PausePendingStatus" xml:space="preserve"><value>PausePending</value></data>
+  <data name="AssertionFailureHeader" xml:space="preserve"><value>Debug Assertion</value></data>
+  <data name="Leaving" xml:space="preserve"><value>Leaving {0}</value></data>
+  <data name="HostingServerInvalidEntityException" xml:space="preserve"><value>Invalid entity '{0}'</value></data>
+  <data name="StopPendingStatus" xml:space="preserve"><value>StopPending</value></data>
+  <data name="StartPendingStatus" xml:space="preserve"><value>StartPending</value></data>
+  <data name="PausedStatus" xml:space="preserve"><value>Paused</value></data>
+  <data name="SqlExceptionDetails" xml:space="preserve"><value>\nSQL Exception Class: {0}
+\nSQL Exception Number: {1}
+\nSQL Exception Procedure: {2}
+\nSQL Exception Line Number: {3}
+\nSQL Exception Server: {4}
+\nSQL Exception State: {5}
+\nSQL Error(s):
+\n{6}</value></data>
+  <data name="PauseOperation" xml:space="preserve"><value>Pause</value></data>
+  <data name="ExceptionHeader" xml:space="preserve"><value>Exception Message: {0} (type: {1})</value></data>
+  <data name="ResumeOperation" xml:space="preserve"><value>Resume</value></data>
+  <data name="LogOutputString" xml:space="preserve"><value>{0} (pid {1}, tid {2}, {3}) {4}</value></data>
+  <data name="ActiveDirectoryNoDomainException" xml:space="preserve"><value>Unable to retrieve domain object from Active Directory.</value></data>
+  </root>

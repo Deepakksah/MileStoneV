@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="The_directory_specified_for_the_virtual_directories_was_not_found" xml:space="preserve"><value>The directory specified for the virtual directories was not found</value></data>
+  <data name="Website_id_is_null_or_empty" xml:space="preserve"><value>Website id is null or empty</value></data>
+  <data name="registerClientCallback_is_null" xml:space="preserve"><value>Registration client callback is null</value></data>
+  <data name="localhost" xml:space="preserve"><value>localhost</value></data>
+  <data name="Created_the_App_Pools" xml:space="preserve"><value>Created the App Pools</value></data>
+  <data name="WCF_was_enbled" xml:space="preserve"><value>WCF was enabled.</value></data>
+  <data name="Virtual_directory_parent_folder_is_null_or_empty" xml:space="preserve"><value>Virtual directory parent folder is null or empty</value></data>
+  <data name="Service_account_is_null" xml:space="preserve"><value>Service account is null</value></data>
+  <data name="ManagementServer" xml:space="preserve"><value>ManagementServer</value></data>
+  <data name="IdentityServer" xml:space="preserve"><value>IDP</value></data>
+  <data name="Website_address_is_null_or_empty" xml:space="preserve"><value>Website address is null or empty</value></data>
+  <data name="Url_Shortcut_File_folder_is_null_or_empty" xml:space="preserve"><value>URL shortcut folder is null or empty</value></data>
+  <data name="Granted_access_to_the_IIS_User" xml:space="preserve"><value>Granted access to the IIS. User : {0}</value></data>
+  <data name="Website_port_must_be_higher_than_0" xml:space="preserve"><value>Website port must be higher than 0</value></data>
+  <data name="Created_virtual_directory_Directory" xml:space="preserve"><value>Created virtual directory. Directory : {0}</value></data>
+  <data name="ASPNET_enabled_for_Net_20" xml:space="preserve"><value>ASP.NET enabled for .Net 2.0</value></data>
+  <data name="ASPNET_enabled_for_Net_40" xml:space="preserve"><value>ASP.NET enabled for .Net 4.0</value></data>
+  <data name="Starting_the_IIS_setup" xml:space="preserve"><value>Starting the IIS setup</value></data>
+  </root>

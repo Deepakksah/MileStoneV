@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="LPRWorkSpaceView_FilterNoLicensePlateStyles" xml:space="preserve"><value>No license plate styles selected</value></data>
+  <data name="ManageListsSearch" xml:space="preserve"><value>Search match list item</value></data>
+  <data name="ManageListsSelect" xml:space="preserve"><value>Select match list</value></data>
+  <data name="CountryModule_CDN_YT" xml:space="preserve"><value>Canada - Yukon</value></data>
+  <data name="CountryModule_CDN_PE" xml:space="preserve"><value>Canada - Prince Edward Island</value></data>
+  <data name="CountryModule_CDN_QC" xml:space="preserve"><value>Canada - Quebec</value></data>
+  <data name="CountryModule_CDN_SK" xml:space="preserve"><value>Canada - Saskatchewan</value></data>
+  <data name="CountryModule_CDN_MB" xml:space="preserve"><value>Canada - Manitoba</value></data>
+  <data name="CountryModule_CDN_NS" xml:space="preserve"><value>Canada - Nova Scotia</value></data>
+  <data name="CountryModule_CDN_NT" xml:space="preserve"><value>Canada - Northwest Territories</value></data>
+  <data name="CountryModule_CDN_NU" xml:space="preserve"><value>Canada - Nunavut</value></data>
+  <data name="CountryModule_CDN_NB" xml:space="preserve"><value>Canada - New Brunswick</value></data>
+  <data name="CountryModule_CDN_NL" xml:space="preserve"><value>Canada - Newfoundland</value></data>
+  <data name="CountryModule_CDN_ON" xml:space="preserve"><value>Canada - Ontario</value></data>
+  <data name="CountryModule_CDN_AB" xml:space="preserve"><value>Canada - Alberta</value></data>
+  <data name="CountryModule_CDN_BC" xml:space="preserve"><value>Canada - British Columbia</value></data>
+  <data name="AddLicensePlateItemsWindow_WindowTitle" xml:space="preserve"><value>Add match list item</value></data>
+  <data name="EventItemUserControl_SearchToolTip" xml:space="preserve"><value>Search this license plate on the LPR tab</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_EditButton" xml:space="preserve"><value>Edit</value></data>
+  <data name="LPRPlateStylesAliasesView_Title" xml:space="preserve"><value>Configure aliases</value></data>
+  <data name="VehiclePropertiesType_Van" xml:space="preserve"><value>Van</value></data>
+  <data name="VehiclePropertiesType_Bus" xml:space="preserve"><value>Bus</value></data>
+  <data name="LPRWorkSpaceView_PreviousPageToolTip" xml:space="preserve"><value>Previous page</value></data>
+  <data name="VehiclePropertiesColor_Yellow" xml:space="preserve"><value>Yellow</value></data>
+  <data name="CountryModule_AUS_SA" xml:space="preserve"><value>Australia - South Australia</value></data>
+  <data name="CountryModule_AUS_WA" xml:space="preserve"><value>Australia - Western Australia</value></data>
+  <data name="CountryModule_AUS_FI" xml:space="preserve"><value>Australia - Federal Interstate</value></data>
+  <data name="CountryModule_AUS_NT" xml:space="preserve"><value>Australia - Northern Territory</value></data>
+  <data name="ChooseImportFilePage_AppendRadioButton" xml:space="preserve"><value>Add license plates to the existing list of license plates</value></data>
+  <data name="ImportLicensePlatesCompletePage_Title" xml:space="preserve"><value>The import is complete</value></data>
+  <data name="PreviewImportDataPage_HelpText" xml:space="preserve"><value>This view shows an example of how the license plate data looks after it has been imported.</value></data>
+  <data name="SelectVideoSourceDialog_OKButton" xml:space="preserve"><value>OK</value></data>
+  <data name="SelectIntervalComboBox_TimeIntervalLast7Days" xml:space="preserve"><value>Last 7 days</value></data>
+  <data name="LPRReportManager_PropertyNameModels" xml:space="preserve"><value>Models</value></data>
+  <data name="ChooseImportFilePage_ReplaceRadioButton" xml:space="preserve"><value>Replace existing list of license plates</value></data>
+  <data name="LPRReportManager_PropertyNameColors" xml:space="preserve"><value>Colors</value></data>
+  <data name="LPRWorkSpaceView_FilterByThis" xml:space="preserve"><value>Filter using this value</value></data>
+  <data name="ChooseImportFilePage_Title" xml:space="preserve"><value>Select import file</value></data>
+  <data name="VideoSourceStatusErrorFailedToStartIntradaProcess" xml:space="preserve"><value>Failed to start the process.</value></data>
+  <data name="LPRWorkSpaceView_UnknownName" xml:space="preserve"><value>Unknown</value></data>
+  <data name="ImportLicensePlatesPage_Title" xml:space="preserve"><value>Importing license plates...</value></data>
+  <data name="ChooseExportDestinationPage_ExportFileCreationFailedMessage" xml:space="preserve"><value>The export file could not be created: {0}</value></data>
+  <data name="LPRPlateStyleAliasesView_SearchHint" xml:space="preserve"><value>Search alias</value></data>
+  <data name="LPRReportManager_ReportEventDetailCountryCode" xml:space="preserve"><value>Country</value></data>
+  <data name="LPRPlateStyleAliasesTabStyles" xml:space="preserve"><value>Assign aliases</value></data>
+  <data name="RemoveFromListDialogYes" xml:space="preserve"><value>Yes</value></data>
+  <data name="VideoSourceStatusErrorVideoSourceLicenseInvalid" xml:space="preserve"><value>The LPR camera license is invalid.</value></data>
+  <data name="SelectVideoSourceDialog_Title" xml:space="preserve"><value>Select LPR camera</value></data>
+  <data name="LPRReportManager_PropertyValueMultipleVideoSources" xml:space="preserve"><value>Multiple LPR cameras</value></data>
+  <data name="LPRWorkSpaceView_ResultsContextMenuAddToList" xml:space="preserve"><value>Add registration number to match list</value></data>
+  <data name="LPRReportManager_PropertyValueAllVideoSources" xml:space="preserve"><value>All LPR cameras</value></data>
+  <data name="PreviewImportDataPage_Title" xml:space="preserve"><value>Preview imported data</value></data>
+  <data name="ChooseExportDestinationPage_DirectoryLabel" xml:space="preserve"><value>Location:</value></data>
+  <data name="FromToTimePicker_FromLabel" xml:space="preserve"><value>From</value></data>
+  <data name="LPRWorkSpaceView_HideVehicleProperties" xml:space="preserve"><value>Hide Vehicle Properties</value></data>
+  <data name="LPRReportManager_PropertyNameVideoSources" xml:space="preserve"><value>LPR cameras</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_LicensePlateColumnName" xml:space="preserve"><value>Value</value></data>
+  <data name="CameraUserControl_CameraNotAvailable" xml:space="preserve"><value>Camera not available.</value></data>
+  <data name="LPRReportManager_PropertyValueAllCountryCodes" xml:space="preserve"><value>All country modules</value></data>
+  <data name="StatusDetails_CpuUsage" xml:space="preserve"><value>Computer CPU usage</value></data>
+  <data name="LPRReportManager_ReportFileName" xml:space="preserve"><value>LPR report {0}</value></data>
+  <data name="SearchColumnCountry" xml:space="preserve"><value>Country</value></data>
+  <data name="LPRReportManager_ReportEventDetailTime" xml:space="preserve"><value>Time</value></data>
+  <data name="LPRReportManager_ReportEventDetailList" xml:space="preserve"><value>Match list</value></data>
+  <data name="ManageListsErrorRemove" xml:space="preserve"><value>Cannot remove the number from the match list.</value></data>
+  <data name="EventsViewItemPropertiesUserControl_ShowListPropertiesCheckBox" xml:space="preserve"><value>Show custom list fields</value></data>
+  <data name="ChangeLicensePlateListContentsWindow_CancelButton" xml:space="preserve"><value>Cancel</value></data>
+  <data name="EventItemUserControl_AddToListToolTip" xml:space="preserve"><value>Add to list</value></data>
+  <data name="LPRPlateStyleAliasesTabAliases" xml:space="preserve"><value>Configure aliases</value></data>
+  <data name="LPRWorkSpaceView_FilterAllSources" xml:space="preserve"><value>All LPR cameras</value></data>
+  <data name="SelectIntervalComboBox_TimeIntervalToday" xml:space="preserve"><value>Today</value></data>
+  <data name="LPRReportManager_PropertyLicensePlate" xml:space="preserve"><value>Registration number</value></data>
+  <data name="ChangeLicensePlateListContentsWindow_AddButton" xml:space="preserve"><value>Add</value></data>
+  <data name="RemoveFromListDialogTitle" xml:space="preserve"><value>Remove from match list</value></data>
+  <data name="ServiceStatusLPRServerRegisteredOnAnotherSystem" xml:space="preserve"><value>The LPR server is registered on another surveillance system</value></data>
+  <data name="CountryModule_USA_RI" xml:space="preserve"><value>USA - Rhode Island</value></data>
+  <data name="CountryModule_USA_PA" xml:space="preserve"><value>USA - Pennsylvania</value></data>
+  <data name="CountryModule_USA_UT" xml:space="preserve"><value>USA - Utah</value></data>
+  <data name="CountryModule_USA_VA" xml:space="preserve"><value>USA - Virginia</value></data>
+  <data name="CountryModule_USA_VT" xml:space="preserve"><value>USA - Vermont</value></data>
+  <data name="CountryModule_USA_SC" xml:space="preserve"><value>USA - South Carolina</value></data>
+  <data name="CountryModule_USA_SD" xml:space="preserve"><value>USA - South Dakota</value></data>
+  <data name="CountryModule_USA_TN" xml:space="preserve"><value>USA - Tennessee</value></data>
+  <data name="CountryModule_USA_TX" xml:space="preserve"><value>USA - Texas</value></data>
+  <data name="CountryModule_USA_WA" xml:space="preserve"><value>USA - Washington</value></data>
+  <data name="CountryModule_USA_WI" xml:space="preserve"><value>USA - Wisconsin</value></data>
+  <data name="CountryModule_USA_WV" xml:space="preserve"><value>USA - West Virginia</value></data>
+  <data name="CountryModule_USA_WY" xml:space="preserve"><value>USA - Wyoming</value></data>
+  <data name="CountryModule_USA_AR" xml:space="preserve"><value>USA - Arkansas</value></data>
+  <data name="CountryModule_USA_AZ" xml:space="preserve"><value>USA - Arizona</value></data>
+  <data name="CountryModule_USA_AK" xml:space="preserve"><value>USA - Alaska</value></data>
+  <data name="CountryModule_USA_AL" xml:space="preserve"><value>USA - Alabama</value></data>
+  <data name="CountryModule_USA_FL" xml:space="preserve"><value>USA - Florida</value></data>
+  <data name="CountryModule_USA_CT" xml:space="preserve"><value>USA - Connecticut</value></data>
+  <data name="CountryModule_USA_CA" xml:space="preserve"><value>USA - California</value></data>
+  <data name="CountryModule_USA_CO" xml:space="preserve"><value>USA - Colorado</value></data>
+  <data name="CountryModule_USA_DE" xml:space="preserve"><value>USA - Delaware</value></data>
+  <data name="CountryModule_USA_DC" xml:space="preserve"><value>USA - Washington DC</value></data>
+  <data name="CountryModule_USA_IL" xml:space="preserve"><value>USA - Illinois</value></data>
+  <data name="CountryModule_USA_IN" xml:space="preserve"><value>USA - Indiana</value></data>
+  <data name="CountryModule_USA_IA" xml:space="preserve"><value>USA - Iowa</value></data>
+  <data name="CountryModule_USA_ID" xml:space="preserve"><value>USA - Idaho</value></data>
+  <data name="CountryModule_USA_GS" xml:space="preserve"><value>USA - Government</value></data>
+  <data name="CountryModule_USA_GA" xml:space="preserve"><value>USA - Georgia</value></data>
+  <data name="CountryModule_USA_HI" xml:space="preserve"><value>USA - Hawaii</value></data>
+  <data name="CountryModule_USA_MT" xml:space="preserve"><value>USA - Montana</value></data>
+  <data name="CountryModule_USA_MS" xml:space="preserve"><value>USA - Mississippi</value></data>
+  <data name="CountryModule_USA_MO" xml:space="preserve"><value>USA - Missouri</value></data>
+  <data name="CountryModule_USA_MN" xml:space="preserve"><value>USA - Minnesota</value></data>
+  <data name="CountryModule_USA_MI" xml:space="preserve"><value>USA - Michigan</value></data>
+  <data name="CountryModule_USA_ME" xml:space="preserve"><value>USA - Maine</value></data>
+  <data name="CountryModule_USA_MD" xml:space="preserve"><value>USA - Maryland</value></data>
+  <data name="CountryModule_USA_MA" xml:space="preserve"><value>USA - Massachusetts</value></data>
+  <data name="CountryModule_USA_NY" xml:space="preserve"><value>USA - New York</value></data>
+  <data name="CountryModule_USA_NV" xml:space="preserve"><value>USA - Nevada</value></data>
+  <data name="CountryModule_USA_NM" xml:space="preserve"><value>USA - New Mexico</value></data>
+  <data name="CountryModule_USA_NJ" xml:space="preserve"><value>USA - New Jersey</value></data>
+  <data name="CountryModule_USA_NH" xml:space="preserve"><value>USA - New Hampshire</value></data>
+  <data name="CountryModule_USA_ND" xml:space="preserve"><value>USA - North Dakota</value></data>
+  <data name="CountryModule_USA_NE" xml:space="preserve"><value>USA - Nebraska</value></data>
+  <data name="CountryModule_USA_NC" xml:space="preserve"><value>USA - North Carolina</value></data>
+  <data name="CountryModule_USA_KY" xml:space="preserve"><value>USA - Kentucky</value></data>
+  <data name="CountryModule_USA_KS" xml:space="preserve"><value>USA - Kansas</value></data>
+  <data name="CountryModule_USA_LA" xml:space="preserve"><value>USA - Louisiana</value></data>
+  <data name="CountryModule_USA_OR" xml:space="preserve"><value>USA - Oregon</value></data>
+  <data name="CountryModule_USA_OK" xml:space="preserve"><value>USA - Oklahoma</value></data>
+  <data name="CountryModule_USA_OH" xml:space="preserve"><value>USA - Ohio</value></data>
+  <data name="LPRReportManager_PropertyNameStyles" xml:space="preserve"><value>License plate styles</value></data>
+  <data name="ChangeLicensePlateListContentsWindow_OkButton" xml:space="preserve"><value>OK</value></data>
+  <data name="LPRPlateStylesView_Title" xml:space="preserve"><value>Assign aliases</value></data>
+  <data name="CountryModule_UAE_FU" xml:space="preserve"><value>UAE - Fujairah</value></data>
+  <data name="CountryModule_UAE_DU" xml:space="preserve"><value>UAE - Dubai</value></data>
+  <data name="CountryModule_UAE_AJ" xml:space="preserve"><value>UAE - Ajman</value></data>
+  <data name="CountryModule_UAE_AZ" xml:space="preserve"><value>UAE - Abu Dhabi</value></data>
+  <data name="CountryModule_UAE_UQ" xml:space="preserve"><value>UAE - Umm al-Quwain</value></data>
+  <data name="CountryModule_UAE_RK" xml:space="preserve"><value>UAE - Ras al-Khaimah</value></data>
+  <data name="CountryModule_UAE_SH" xml:space="preserve"><value>UAE - Sharjah</value></data>
+  <data name="LPRReportManager_ReportTitle" xml:space="preserve"><value>LPR report</value></data>
+  <data name="LPRReportManager_FailedToGetEventsFromSomeLPRCameras" xml:space="preserve"><value>Failed to get events from the following LPR cameras:</value></data>
+  <data name="EventsViewItemUserControl_LPRListIsLiveOnly" xml:space="preserve"><value>The LPR event list is only enabled in live mode.</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderNumber" xml:space="preserve"><value>Registration number</value></data>
+  <data name="LPRReportManager_PropertyNamePeriod" xml:space="preserve"><value>Period</value></data>
+  <data name="ChangeLicensePlateListContentsWindow_EditButton" xml:space="preserve"><value>Save</value></data>
+  <data name="ServiceStatusWebServiceNotRespondingError" xml:space="preserve"><value>The service is not responding.</value></data>
+  <data name="VehiclePropertiesGeneric_Undetectable" xml:space="preserve"><value>Undetectable</value></data>
+  <data name="LPRReportManager_ReportEventDetailLicensePlateStyle" xml:space="preserve"><value>License plate style</value></data>
+  <data name="EventItemUserControl_RemoveFromListToolTip" xml:space="preserve"><value>Remove from list</value></data>
+  <data name="LPRWorkSpaceView_FilterNoModelsSelected" xml:space="preserve"><value>No models selected</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderColor" xml:space="preserve"><value>Color</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderStyles" xml:space="preserve"><value>License plate style</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderModel" xml:space="preserve"><value>Model</value></data>
+  <data name="LPRPlateStyleStylesView_SearchHint" xml:space="preserve"><value>Search license plate style or alias</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderSource" xml:space="preserve"><value>LPR camera</value></data>
+  <data name="AddToListDialogAdd" xml:space="preserve"><value>Add</value></data>
+  <data name="CountryModule_X_NR" xml:space="preserve"><value>Generic number reader</value></data>
+  <data name="CountryModule_X_EE" xml:space="preserve"><value>Eastern Europe</value></data>
+  <data name="CountryModule_X_EU" xml:space="preserve"><value>EU</value></data>
+  <data name="CountryModule_X_DG" xml:space="preserve"><value>Dangerous Goods</value></data>
+  <data name="CountryModule_X_XX" xml:space="preserve"><value>Generic</value></data>
+  <data name="LPRReportManager_PropertyValueMultipleTypes" xml:space="preserve"><value>Multiple types</value></data>
+  <data name="LPRReportManager_PropertyValueMultipleSides" xml:space="preserve"><value>Multiple sides</value></data>
+  <data name="LPRWorkSpaceView_CountryCodeRestOfUS" xml:space="preserve"><value>Rest of {0}</value></data>
+  <data name="LPRReportManager_PropertyValueMultipleLists" xml:space="preserve"><value>Multiple match lists</value></data>
+  <data name="LPRReportManager_PropertyValueMultipleMakes" xml:space="preserve"><value>Multiple makes</value></data>
+  <data name="ServiceStatusOK" xml:space="preserve"><value>All LPR cameras are running.</value></data>
+  <data name="EventType_ServerRunning" xml:space="preserve"><value>LPR server responding</value></data>
+  <data name="LPRWorkspaceTitle" xml:space="preserve"><value>LPR</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderList" xml:space="preserve"><value>Match list</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderMake" xml:space="preserve"><value>Make</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderType" xml:space="preserve"><value>Type</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderTime" xml:space="preserve"><value>Time</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderSide" xml:space="preserve"><value>Side</value></data>
+  <data name="ExportLicensePlatesPage_HelpText" xml:space="preserve"><value>This may take a few minutes</value></data>
+  <data name="CountryModule_H" xml:space="preserve"><value>Hungary</value></data>
+  <data name="CountryModule_I" xml:space="preserve"><value>Italy</value></data>
+  <data name="CountryModule_L" xml:space="preserve"><value>Luxembourg</value></data>
+  <data name="CountryModule_M" xml:space="preserve"><value>Malta</value></data>
+  <data name="CountryModule_N" xml:space="preserve"><value>Norway</value></data>
+  <data name="CountryModule_A" xml:space="preserve"><value>Austria</value></data>
+  <data name="CountryModule_B" xml:space="preserve"><value>Belgium</value></data>
+  <data name="CountryModule_D" xml:space="preserve"><value>Germany</value></data>
+  <data name="CountryModule_E" xml:space="preserve"><value>Spain</value></data>
+  <data name="CountryModule_F" xml:space="preserve"><value>France</value></data>
+  <data name="CountryModule_P" xml:space="preserve"><value>Portugal</value></data>
+  <data name="CountryModule_Q" xml:space="preserve"><value>Qatar</value></data>
+  <data name="CountryModule_S" xml:space="preserve"><value>Sweden</value></data>
+  <data name="CountryModule_T" xml:space="preserve"><value>Thailand</value></data>
+  <data name="ServiceStatusUnknownError" xml:space="preserve"><value>Unknown error</value></data>
+  <data name="ManageListsErrorAddCaption" xml:space="preserve"><value>Add to match list</value></data>
+  <data name="EventsViewItemPropertiesUserControl_SelectVideoSourceButton" xml:space="preserve"><value>...</value></data>
+  <data name="LPRPlateStyleStylesView_SubTitleHyperlink" xml:space="preserve"><value>Learn more</value></data>
+  <data name="ImportLicensePlatesPage_HelpText" xml:space="preserve"><value>This may take a few minutes.</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_RegistrationNumber" xml:space="preserve"><value>Match list item</value></data>
+  <data name="LPRViewItemTitle" xml:space="preserve"><value>LPR</value></data>
+  <data name="LPRWorkspaceView_Error" xml:space="preserve"><value>Connection to the following server(s) is lost: {0}. You cannot see data from the server(s) until your system reconnects.</value></data>
+  <data name="RemoveFromListDialogNo" xml:space="preserve"><value>No</value></data>
+  <data name="LPRWorkSpaceView_NoSearchResults" xml:space="preserve"><value>No LPR events match your search</value></data>
+  <data name="EventsViewItemUserControl_VideoSourceNotSelected" xml:space="preserve"><value>The LPR event list is not configured.</value></data>
+  <data name="EventsViewItemPropertiesUserControl_VideoSourceLabel" xml:space="preserve"><value>LPR camera</value></data>
+  <data name="FromToTimePicker_SetButton" xml:space="preserve"><value>Set</value></data>
+  <data name="UnregisteredPlate" xml:space="preserve"><value>Unlisted license plate</value></data>
+  <data name="LPRReportManager_RetrievingEventsProgressText" xml:space="preserve"><value>Retrieving events ({0} of {1})...</value></data>
+  <data name="SearchListMatch" xml:space="preserve"><value>Match List</value></data>
+  <data name="CountryModule_HKJ" xml:space="preserve"><value>Jordan</value></data>
+  <data name="CountryModule_HON" xml:space="preserve"><value>Honduras</value></data>
+  <data name="CountryModule_KSA" xml:space="preserve"><value>Saudi Arabia</value></data>
+  <data name="CountryModule_KWT" xml:space="preserve"><value>Kuwait</value></data>
+  <data name="CountryModule_LAR" xml:space="preserve"><value>Libya</value></data>
+  <data name="CountryModule_IND" xml:space="preserve"><value>India</value></data>
+  <data name="CountryModule_IRQ" xml:space="preserve"><value>Iraq</value></data>
+  <data name="CountryModule_IRL" xml:space="preserve"><value>Ireland</value></data>
+  <data name="CountryModule_MEX" xml:space="preserve"><value>Mexico</value></data>
+  <data name="CountryModule_MAL" xml:space="preserve"><value>Malaysia</value></data>
+  <data name="CountryModule_MGL" xml:space="preserve"><value>Mongolia</value></data>
+  <data name="CountryModule_MCO" xml:space="preserve"><value>Macao</value></data>
+  <data name="CountryModule_MOC" xml:space="preserve"><value>Mozambique</value></data>
+  <data name="CountryModule_MNE" xml:space="preserve"><value>Montenegro</value></data>
+  <data name="CountryModule_NAM" xml:space="preserve"><value>Namibia</value></data>
+  <data name="CountryModule_NIC" xml:space="preserve"><value>Nicaragua</value></data>
+  <data name="CountryModule_CMR" xml:space="preserve"><value>Cameroon</value></data>
+  <data name="CountryModule_CDN" xml:space="preserve"><value>Canada</value></data>
+  <data name="CountryModule_CGO" xml:space="preserve"><value>Congo</value></data>
+  <data name="CountryModule_DJI" xml:space="preserve"><value>Djibouti</value></data>
+  <data name="CountryModule_DOM" xml:space="preserve"><value>Dominican Republic</value></data>
+  <data name="CountryModule_ANG" xml:space="preserve"><value>Angola</value></data>
+  <data name="CountryModule_AND" xml:space="preserve"><value>Andorra</value></data>
+  <data name="CountryModule_AUS" xml:space="preserve"><value>Australia</value></data>
+  <data name="CountryModule_BIH" xml:space="preserve"><value>Bosnia-Herzegovina</value></data>
+  <data name="CountryModule_BOL" xml:space="preserve"><value>Bolivia</value></data>
+  <data name="CountryModule_BRU" xml:space="preserve"><value>Brunei</value></data>
+  <data name="CountryModule_BRN" xml:space="preserve"><value>Bahrain</value></data>
+  <data name="CountryModule_BUR" xml:space="preserve"><value>Myanmar</value></data>
+  <data name="CountryModule_GCA" xml:space="preserve"><value>Guatemala</value></data>
+  <data name="CountryModule_GUY" xml:space="preserve"><value>Guyana</value></data>
+  <data name="CountryModule_EAK" xml:space="preserve"><value>Kenya</value></data>
+  <data name="CountryModule_EAT" xml:space="preserve"><value>Tanzania</value></data>
+  <data name="CountryModule_EAU" xml:space="preserve"><value>Uganda</value></data>
+  <data name="CountryModule_EST" xml:space="preserve"><value>Estonia</value></data>
+  <data name="CountryModule_FIN" xml:space="preserve"><value>Finland</value></data>
+  <data name="CountryModule_PNG" xml:space="preserve"><value>Papua New Guinea</value></data>
+  <data name="CountryModule_SRB" xml:space="preserve"><value>Serbia</value></data>
+  <data name="CountryModule_SME" xml:space="preserve"><value>Suriname</value></data>
+  <data name="CountryModule_SLO" xml:space="preserve"><value>Slovenia</value></data>
+  <data name="CountryModule_SGP" xml:space="preserve"><value>Singapore</value></data>
+  <data name="CountryModule_RUS" xml:space="preserve"><value>Russia</value></data>
+  <data name="CountryModule_RWA" xml:space="preserve"><value>Rwanda</value></data>
+  <data name="CountryModule_RKS" xml:space="preserve"><value>Kosovo</value></data>
+  <data name="CountryModule_RMM" xml:space="preserve"><value>Mali</value></data>
+  <data name="CountryModule_ROU" xml:space="preserve"><value>Uruguay</value></data>
+  <data name="CountryModule_ROK" xml:space="preserve"><value>South Korea</value></data>
+  <data name="CountryModule_RCH" xml:space="preserve"><value>Chile</value></data>
+  <data name="CountryModule_RCB" xml:space="preserve"><value>Democratic Republic of Congo</value></data>
+  <data name="CountryModule_WAN" xml:space="preserve"><value>Nigeria</value></data>
+  <data name="CountryModule_USA" xml:space="preserve"><value>Generic America style</value></data>
+  <data name="CountryModule_UAE" xml:space="preserve"><value>UAE</value></data>
+  <data name="LPRWorkSpaceView_ShowVehicleProperties" xml:space="preserve"><value>Show Vehicle Properties</value></data>
+  <data name="DeleteLicensePlatesWindow_ConfirmationMessageBoxTitle" xml:space="preserve"><value>Confirm deletion</value></data>
+  <data name="ErrorDialogEventServerNotRegistered" xml:space="preserve"><value>The event server is not registered. Make sure that the Event Server service is registered and enabled under registered services.</value></data>
+  <data name="LPRWorkSpaceView_FilterAllLicensePlateStyles" xml:space="preserve"><value>All license plate styles</value></data>
+  <data name="LPRPlateStyleAliasesView_TabTitle" xml:space="preserve"><value>License plate styles information</value></data>
+  <data name="RemoveFromListDialogText" xml:space="preserve"><value>Are you sure you want to remove {0} from {1}?</value></data>
+  <data name="SelectIntervalComboBox_TimeIntervalAll" xml:space="preserve"><value>All</value></data>
+  <data name="VideoSourceStatusFPS" xml:space="preserve"><value>{0:0.0} FPS</value></data>
+  <data name="ServiceStatusOKNoVideoSources" xml:space="preserve"><value>No LPR cameras configured.</value></data>
+  <data name="LPRReportManager_CreateReportDialogTitle" xml:space="preserve"><value>LPR report</value></data>
+  <data name="CvsFileDialog_CsvFiles" xml:space="preserve"><value>CSV files (*.csv)</value></data>
+  <data name="ChangeLicensePlateListContentsWindow_ErrorPopupTitle" xml:space="preserve"><value>Value required</value></data>
+  <data name="SelectIntervalComboBox_TimeIntervalYesterday" xml:space="preserve"><value>Yesterday</value></data>
+  <data name="LPRPlateStyleAliasesView_Info" xml:space="preserve"><value>Supported license plate styles</value></data>
+  <data name="ServiceStatusVideoSourceRunning" xml:space="preserve"><value>Running</value></data>
+  <data name="LPRPlateStyleStylesView_LicensePlateStyleColumnHeader" xml:space="preserve"><value>License plate style</value></data>
+  <data name="SearchColumnSource" xml:space="preserve"><value>Source</value></data>
+  <data name="ErrorDialogEventServerConnectionFailed" xml:space="preserve"><value>The event server is not responding. Make sure the Event Server service is running.</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_ImportButton" xml:space="preserve"><value>Import</value></data>
+  <data name="ManageListsToolbarName" xml:space="preserve"><value>Match lists</value></data>
+  <data name="EventType_VideoSourceError" xml:space="preserve"><value>LPR camera connection lost</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_LoadingLabel" xml:space="preserve"><value>Loading...</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_AddButton" xml:space="preserve"><value>Add</value></data>
+  <data name="SearchColumnNumber" xml:space="preserve"><value>Registration number</value></data>
+  <data name="EventItemUserControl_LabelDecoratorFormat" xml:space="preserve"><value>{0}:</value></data>
+  <data name="LPRWorkSpaceView_FilterAllCountries" xml:space="preserve"><value>All country modules</value></data>
+  <data name="FromToTimePicker_ToLabel" xml:space="preserve"><value>To</value></data>
+  <data name="LPRReportManager_CreateReportDialogDataTypeDisplayName" xml:space="preserve"><value>events</value></data>
+  <data name="LPRPlateStyleStylesView_AliasColumnHeader" xml:space="preserve"><value>Alias</value></data>
+  <data name="ServiceStatusVideoSourceError" xml:space="preserve"><value>Error</value></data>
+  <data name="LPRWorkSpaceView_RefreshSearchButton" xml:space="preserve"><value>Refresh</value></data>
+  <data name="VehiclePropertiesColor_White" xml:space="preserve"><value>White</value></data>
+  <data name="ErrorDialogCaption" xml:space="preserve"><value>LPR</value></data>
+  <data name="VehiclePropertiesColor_Green" xml:space="preserve"><value>Green</value></data>
+  <data name="ImportLicensePlatesWizard_Title" xml:space="preserve"><value>Import license plates</value></data>
+  <data name="VehiclePropertiesColor_Black" xml:space="preserve"><value>Black</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_DeleteButton" xml:space="preserve"><value>Delete</value></data>
+  <data name="AddToListDialogText" xml:space="preserve"><value>Select the match list that you want to add {0} to.</value></data>
+  <data name="VehiclePropertiesType_Motorcycle" xml:space="preserve"><value>Motorcycle</value></data>
+  <data name="LPRWorkSpaceView_ResultsGridHeaderCountry" xml:space="preserve"><value>Country</value></data>
+  <data name="VideoSourceStatusErrorCountryModuleLicenseInvalid" xml:space="preserve"><value>The country module license is invalid.</value></data>
+  <data name="CsvImportExport_SemicolonRadioButtonContent" xml:space="preserve"><value>Semicolon (;)</value></data>
+  <data name="LPRReportManager_PropertyValueMultipleCountryCodes" xml:space="preserve"><value>Multiple country modules</value></data>
+  <data name="ChooseImportFilePage_FileLocationLabel" xml:space="preserve"><value>File location:</value></data>
+  <data name="LPRReportManager_CreateReportDialogPropertiesLabel" xml:space="preserve"><value>Filters</value></data>
+  <data name="LPRReportManager_ReportFolderName" xml:space="preserve"><value>LPR reports</value></data>
+  <data name="EventType_ServerError" xml:space="preserve"><value>LPR server not responding</value></data>
+  <data name="LPRPlateStyleStylesView_SubTitle" xml:space="preserve"><value>Use an alias to group license plate styles.</value></data>
+  <data name="EventsViewItemPropertiesUserControl_ListOrderReverse" xml:space="preserve"><value>Newest on bottom</value></data>
+  <data name="LPRPlateStyleAliasesView_AddButton" xml:space="preserve"><value>Add</value></data>
+  <data name="LPRReportManager_FailedToGetEventsFromAllLPRCameras" xml:space="preserve"><value>Failed to create report. Try again later. If the problem persists, contact your system administrator.</value></data>
+  <data name="CsvImportExport_CommaRadioButtonContent" xml:space="preserve"><value>Comma (,)</value></data>
+  <data name="ChangeLicensePlateListContentsWindow_DeleteButton" xml:space="preserve"><value>Delete</value></data>
+  <data name="ChangeLicensePlateListContentsWindow_ErrorPopupMessage" xml:space="preserve"><value>Please fill in the Value field.</value></data>
+  <data name="ManageListsErrorRemoveCaption" xml:space="preserve"><value>Remove from match list</value></data>
+  <data name="VehiclePropertiesSide_Front" xml:space="preserve"><value>Front</value></data>
+  <data name="LPRWorkSpaceView_FilterNoMakesSelected" xml:space="preserve"><value>No makes selected</value></data>
+  <data name="LPRReportManager_FailedLPRCamerasHeader" xml:space="preserve"><value>Failed to get events from the following LPR cameras:</value></data>
+  <data name="EventsViewItemPropertiesUserControl_ListOrderLabel" xml:space="preserve"><value>LPR event list:</value></data>
+  <data name="LPRReportManager_FailedLPRCamerasKey" xml:space="preserve"><value>LPR cameras</value></data>
+  <data name="StatusDetails_Status" xml:space="preserve"><value>Status</value></data>
+  <data name="CountryModule_X_BIC" xml:space="preserve"><value>BIC Container codes</value></data>
+  <data name="CountryModule_X_AUS" xml:space="preserve"><value>Australia</value></data>
+  <data name="CountryModule_X_USA" xml:space="preserve"><value>USA</value></data>
+  <data name="CountryModule_ZA_LP" xml:space="preserve"><value>South Africa - Limpopo</value></data>
+  <data name="CountryModule_ZA_MP" xml:space="preserve"><value>South Africa - Mpumalanga</value></data>
+  <data name="CountryModule_ZA_NC" xml:space="preserve"><value>South Africa - Northern Cape</value></data>
+  <data name="CountryModule_ZA_NW" xml:space="preserve"><value>South Africa - North West</value></data>
+  <data name="CountryModule_ZA_EC" xml:space="preserve"><value>South Africa - Eastern Cape</value></data>
+  <data name="CountryModule_ZA_FS" xml:space="preserve"><value>South Africa - Free State</value></data>
+  <data name="CountryModule_ZA_GP" xml:space="preserve"><value>South Africa - Gauteng</value></data>
+  <data name="CountryModule_ZA_ZN" xml:space="preserve"><value>South Africa - KwaZulu-Natal</value></data>
+  <data name="CountryModule_ZA_WC" xml:space="preserve"><value>South Africa - Western Cape</value></data>
+  <data name="ErrorDialogInternalError" xml:space="preserve"><value>Operation failed due to an internal error.</value></data>
+  <data name="VehiclePropertyKeyMissing" xml:space="preserve"><value>Missing Vehicle Property key</value></data>
+  <data name="LPRPlateStyleAliasesView_CountryCodeColumnHeader" xml:space="preserve"><value>Country code</value></data>
+  <data name="EventsViewItemUserControl_VideoSourceNotAvailable" xml:space="preserve"><value>The LPR camera is not available.</value></data>
+  <data name="EditLicensePlatesWindow_DuplicateRegistrationNumbersDetected" xml:space="preserve"><value>Duplicate registration numbers detected: {0}</value></data>
+  <data name="SelectIntervalComboBox_TimeIntervalCustom" xml:space="preserve"><value>Custom interval...</value></data>
+  <data name="LPRPlateStyleAliasesView_SubTitle" xml:space="preserve"><value>An alias is a custom name for one or more license plate styles.</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_SearchHelpText" xml:space="preserve"><value>You can use a question mark (?) as a substitute for a single character in the registration number.</value></data>
+  <data name="AddToListDialogTitle" xml:space="preserve"><value>Add to match list</value></data>
+  <data name="FromToTimePicker_CancelButton" xml:space="preserve"><value>Cancel</value></data>
+  <data name="EventsViewItemUserControl_NoLPREntries" xml:space="preserve"><value>No license plate entries.</value></data>
+  <data name="LPRPlateStyleAliasesView_UnselectedAlias" xml:space="preserve"><value>Assign</value></data>
+  <data name="EventsViewItemPropertiesUserControl_ListOrderNormal" xml:space="preserve"><value>Newest on top</value></data>
+  <data name="LPRReportManager_ReportEventDetailVideoSource" xml:space="preserve"><value>LPR camera</value></data>
+  <data name="SelectIntervalComboBox_TimeIntervalLastHour" xml:space="preserve"><value>Last hour</value></data>
+  <data name="LPRWorkSpaceView_FilterAllModels" xml:space="preserve"><value>All models</value></data>
+  <data name="LPRPlateStyleAliasesView_AliasColumnHeader" xml:space="preserve"><value>Alias</value></data>
+  <data name="LPRReportManager_PropertyValueAllLists" xml:space="preserve"><value>All match lists</value></data>
+  <data name="CountryModule_HK" xml:space="preserve"><value>Hong Kong</value></data>
+  <data name="CountryModule_HR" xml:space="preserve"><value>Croatia</value></data>
+  <data name="CountryModule_KS" xml:space="preserve"><value>Kyrgyzstan</value></data>
+  <data name="CountryModule_KZ" xml:space="preserve"><value>Kazakhstan</value></data>
+  <data name="CountryModule_LT" xml:space="preserve"><value>Lithuania</value></data>
+  <data name="CountryModule_LV" xml:space="preserve"><value>Latvia</value></data>
+  <data name="CountryModule_LS" xml:space="preserve"><value>Lesotho</value></data>
+  <data name="CountryModule_IL" xml:space="preserve"><value>Israel</value></data>
+  <data name="CountryModule_IS" xml:space="preserve"><value>Iceland</value></data>
+  <data name="CountryModule_IR" xml:space="preserve"><value>Iran</value></data>
+  <data name="CountryModule_JA" xml:space="preserve"><value>Jamaica</value></data>
+  <data name="CountryModule_OM" xml:space="preserve"><value>Oman</value></data>
+  <data name="CountryModule_MD" xml:space="preserve"><value>Moldova</value></data>
+  <data name="CountryModule_MA" xml:space="preserve"><value>Morocco</value></data>
+  <data name="CountryModule_MC" xml:space="preserve"><value>Monaco</value></data>
+  <data name="CountryModule_MK" xml:space="preserve"><value>Macedonia</value></data>
+  <data name="CountryModule_MS" xml:space="preserve"><value>Mauritius</value></data>
+  <data name="CountryModule_NL" xml:space="preserve"><value>Netherlands</value></data>
+  <data name="CountryModule_NZ" xml:space="preserve"><value>New Zealand</value></data>
+  <data name="CountryModule_CI" xml:space="preserve"><value>Ivory Coast</value></data>
+  <data name="CountryModule_CH" xml:space="preserve"><value>Switzerland</value></data>
+  <data name="CountryModule_CO" xml:space="preserve"><value>Colombia</value></data>
+  <data name="CountryModule_CN" xml:space="preserve"><value>China</value></data>
+  <data name="CountryModule_CL" xml:space="preserve"><value>Sri Lanka</value></data>
+  <data name="CountryModule_CZ" xml:space="preserve"><value>Czech Republic</value></data>
+  <data name="CountryModule_CY" xml:space="preserve"><value>Cyprus</value></data>
+  <data name="CountryModule_CR" xml:space="preserve"><value>Costa Rica</value></data>
+  <data name="CountryModule_CW" xml:space="preserve"><value>Curaçao</value></data>
+  <data name="CountryModule_DK" xml:space="preserve"><value>Denmark</value></data>
+  <data name="CountryModule_DZ" xml:space="preserve"><value>Algeria</value></data>
+  <data name="CountryModule_AM" xml:space="preserve"><value>Armenia</value></data>
+  <data name="CountryModule_AL" xml:space="preserve"><value>Albania</value></data>
+  <data name="CountryModule_AZ" xml:space="preserve"><value>Azerbaijan</value></data>
+  <data name="CountryModule_AW" xml:space="preserve"><value>Aruba</value></data>
+  <data name="CountryModule_BM" xml:space="preserve"><value>Bermuda</value></data>
+  <data name="CountryModule_BF" xml:space="preserve"><value>Burkina Faso</value></data>
+  <data name="CountryModule_BG" xml:space="preserve"><value>Bulgaria</value></data>
+  <data name="CountryModule_BD" xml:space="preserve"><value>Bangladesh</value></data>
+  <data name="CountryModule_BZ" xml:space="preserve"><value>Belize</value></data>
+  <data name="CountryModule_BY" xml:space="preserve"><value>Belarus</value></data>
+  <data name="CountryModule_BR" xml:space="preserve"><value>Brazil</value></data>
+  <data name="CountryModule_BS" xml:space="preserve"><value>Bahamas</value></data>
+  <data name="CountryModule_BQ" xml:space="preserve"><value>Bonaire</value></data>
+  <data name="CountryModule_BW" xml:space="preserve"><value>Botswana</value></data>
+  <data name="CountryModule_BU" xml:space="preserve"><value>Burundi</value></data>
+  <data name="CountryModule_GH" xml:space="preserve"><value>Ghana</value></data>
+  <data name="CountryModule_GE" xml:space="preserve"><value>Georgia</value></data>
+  <data name="CountryModule_GB" xml:space="preserve"><value>Great Britain</value></data>
+  <data name="CountryModule_GR" xml:space="preserve"><value>Greece</value></data>
+  <data name="CountryModule_EC" xml:space="preserve"><value>Ecuador</value></data>
+  <data name="CountryModule_EU" xml:space="preserve"><value>EU Generic</value></data>
+  <data name="CountryModule_ET" xml:space="preserve"><value>Egypt</value></data>
+  <data name="CountryModule_ES" xml:space="preserve"><value>El Salvador</value></data>
+  <data name="CountryModule_FO" xml:space="preserve"><value>Faroe Islands</value></data>
+  <data name="CountryModule_FL" xml:space="preserve"><value>Liechtenstein</value></data>
+  <data name="CountryModule_YV" xml:space="preserve"><value>Venezuela</value></data>
+  <data name="CountryModule_ZW" xml:space="preserve"><value>Zimbabwe</value></data>
+  <data name="CountryModule_ZA" xml:space="preserve"><value>South Africa</value></data>
+  <data name="CountryModule_PY" xml:space="preserve"><value>Paraguay</value></data>
+  <data name="CountryModule_PR" xml:space="preserve"><value>Puerto Rico</value></data>
+  <data name="CountryModule_PS" xml:space="preserve"><value>Palestine</value></data>
+  <data name="CountryModule_PK" xml:space="preserve"><value>Pakistan</value></data>
+  <data name="CountryModule_PL" xml:space="preserve"><value>Poland</value></data>
+  <data name="CountryModule_PA" xml:space="preserve"><value>Panama</value></data>
+  <data name="CountryModule_PE" xml:space="preserve"><value>Peru</value></data>
+  <data name="CountryModule_SK" xml:space="preserve"><value>Slovakia</value></data>
+  <data name="CountryModule_SN" xml:space="preserve"><value>Senegal</value></data>
+  <data name="CountryModule_SA" xml:space="preserve"><value>South America (Mercosur)</value></data>
+  <data name="CountryModule_SD" xml:space="preserve"><value>Swaziland</value></data>
+  <data name="CountryModule_TT" xml:space="preserve"><value>Trinidad and Tobago</value></data>
+  <data name="CountryModule_TR" xml:space="preserve"><value>Turkey</value></data>
+  <data name="CountryModule_TM" xml:space="preserve"><value>Turkmenistan</value></data>
+  <data name="CountryModule_TN" xml:space="preserve"><value>Tunisia</value></data>
+  <data name="CountryModule_TJ" xml:space="preserve"><value>Tajikistan</value></data>
+  <data name="CountryModule_TG" xml:space="preserve"><value>Togo</value></data>
+  <data name="CountryModule_RP" xml:space="preserve"><value>Philippines</value></data>
+  <data name="CountryModule_RI" xml:space="preserve"><value>Indonesia</value></data>
+  <data name="CountryModule_RO" xml:space="preserve"><value>Romania</value></data>
+  <data name="CountryModule_RB" xml:space="preserve"><value>Benin</value></data>
+  <data name="CountryModule_RC" xml:space="preserve"><value>Taiwan</value></data>
+  <data name="CountryModule_RA" xml:space="preserve"><value>Argentina</value></data>
+  <data name="CountryModule_UZ" xml:space="preserve"><value>Uzbekistan</value></data>
+  <data name="CountryModule_UA" xml:space="preserve"><value>Ukraine</value></data>
+  <data name="CountryModule_VN" xml:space="preserve"><value>Vietnam</value></data>
+  <data name="LPRReportManager_PropertyNameCountryCodes" xml:space="preserve"><value>Country modules</value></data>
+  <data name="ExportLicensePlatesPage_ProgressTextExportFailed" xml:space="preserve"><value>Failed to export license plates. Could not write to file.</value></data>
+  <data name="LPRReportManager_PropertyNameLists" xml:space="preserve"><value>Match lists</value></data>
+  <data name="LPRReportManager_PropertyNameMakes" xml:space="preserve"><value>Makes</value></data>
+  <data name="VehiclePropertiesNotAvailableShort" xml:space="preserve"><value>N/A</value></data>
+  <data name="LPRReportManager_PropertyNameSides" xml:space="preserve"><value>Sides</value></data>
+  <data name="LPRReportManager_PropertyNameTypes" xml:space="preserve"><value>Types</value></data>
+  <data name="VideoSourceStatusErrorIntradaProcessError" xml:space="preserve"><value>LPR error</value></data>
+  <data name="SearchColumnTime" xml:space="preserve"><value>Time</value></data>
+  <data name="LPRWorkSpaceView_FilterAllTypes" xml:space="preserve"><value>All types</value></data>
+  <data name="LPRWorkSpaceView_FilterAllSides" xml:space="preserve"><value>All sides</value></data>
+  <data name="LPRWorkSpaceView_FilterAllLists" xml:space="preserve"><value>All match lists</value></data>
+  <data name="LPRWorkSpaceView_FilterAllMakes" xml:space="preserve"><value>All makes</value></data>
+  <data name="LPRReportManager_PropertyComment" xml:space="preserve"><value>Comment</value></data>
+  <data name="ChooseImportFilePage_ImportTypeLabel" xml:space="preserve"><value>Import type:</value></data>
+  <data name="LPRReportManager_PropertyValueMultipleStyles" xml:space="preserve"><value>Multiple license plate styles</value></data>
+  <data name="ServiceStatusVideoSourcesRunning" xml:space="preserve"><value>{0} of {1} LPR cameras running</value></data>
+  <data name="ServiceStatusLicensePlatesPollError" xml:space="preserve"><value>Event server is not connected.</value></data>
+  <data name="LPRSelectAliasComboBox_SearchHint" xml:space="preserve"><value /></data>
+  <data name="VehiclePropertiesType_PassengerCar" xml:space="preserve"><value>Car</value></data>
+  <data name="LPRPlateStyleAliasesView_SubTitleHyperlink" xml:space="preserve"><value>Learn more</value></data>
+  <data name="SelectIntervalComboBox_TimeIntervalLast12Hours" xml:space="preserve"><value>Last 12 hours</value></data>
+  <data name="LPRWorkSpaceView_ResultsContextMenuRemoveFromList" xml:space="preserve"><value>Remove registration number from match list</value></data>
+  <data name="DeleteLicensePlatesWindow_Title" xml:space="preserve"><value>Delete match list item</value></data>
+  <data name="LPRWorkSpaceView_FilterAllColors" xml:space="preserve"><value>All colors</value></data>
+  <data name="LPRPlateStyleAliasesView_EditButton" xml:space="preserve"><value>Edit</value></data>
+  <data name="ExportLicensePlatesCompletePage_Title" xml:space="preserve"><value>The export is complete</value></data>
+  <data name="LPRWorkSpaceView_ReportButton" xml:space="preserve"><value>LPR Report</value></data>
+  <data name="ServiceStatusWebServiceError" xml:space="preserve"><value>The service is not running.</value></data>
+  <data name="LPRWorkSpaceView_SearchLabel" xml:space="preserve"><value>Search registration number</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_PageSizeLabel" xml:space="preserve"><value>Rows per page:</value></data>
+  <data name="ImportLicensePlatesWizard_ErrorReadingFromFile" xml:space="preserve"><value>Error accessing import file.</value></data>
+  <data name="ListUnlisted" xml:space="preserve"><value>[Unlisted]</value></data>
+  <data name="ExportLicensePlatesPage_Title" xml:space="preserve"><value>Exporting license plates...</value></data>
+  <data name="ErrorDialogImageServerConnectionFailed" xml:space="preserve"><value>The image server is not responding. Make sure the Image Server service is running.</value></data>
+  <data name="CvsFileDialog_TextFiles" xml:space="preserve"><value>Text files (*.txt)</value></data>
+  <data name="LPRWorkSpaceView_ClearToolTip" xml:space="preserve"><value>Clear</value></data>
+  <data name="VideoSourceStatusErrorCountryModuleLicenseExpired" xml:space="preserve"><value>The country module license is expired.</value></data>
+  <data name="SelectVideoSourceDialog_CancelButton" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Loading" xml:space="preserve"><value>Loading...</value></data>
+  <data name="LPRPlateStyleAliasesView_DeleteButton" xml:space="preserve"><value>Delete</value></data>
+  <data name="VehiclePropertiesGeneric_Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="VideoSourceStatusErrorVideoSourceLicenseExpired" xml:space="preserve"><value>The LPR camera license is expired.</value></data>
+  <data name="VideoSourceStatusErrorUnspecified" xml:space="preserve"><value>Unknown error</value></data>
+  <data name="VehiclePropertiesColor_Gray" xml:space="preserve"><value>Gray</value></data>
+  <data name="VehiclePropertiesColor_Blue" xml:space="preserve"><value>Blue</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_PageCount" xml:space="preserve"><value>{0} - {1}</value></data>
+  <data name="ImportLicensePlatesPage_ProgressTextImportFailed" xml:space="preserve"><value>Failed to import license plates. The server may be offline.</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_ExportButton" xml:space="preserve"><value>Export</value></data>
+  <data name="VehiclePropertiesType_Truck" xml:space="preserve"><value>Truck</value></data>
+  <data name="ServiceStatusUnknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="VideoSourceStatusErrorCameraNotAvailable" xml:space="preserve"><value>The camera is not available.</value></data>
+  <data name="ComboBoxWithSearch_GenericSearch" xml:space="preserve"><value>Search...</value></data>
+  <data name="ImportLicensePlatesPage_ProgressTextImportFailedReplaceNotSupported" xml:space="preserve"><value>The selected import type is not supported by the LPR software on the event server. You can choose to add license plates to the existing list instead or delete the existing license plates from the list and import again to replace them.</value></data>
+  <data name="LPRReportManager_PropertyValueMultipleColors" xml:space="preserve"><value>Multiple colors</value></data>
+  <data name="LPREventDetailsView_PlateStyle" xml:space="preserve"><value>License plate style</value></data>
+  <data name="ChooseExportDestinationPage_ExportFileCreationFailedMessageboxTitle" xml:space="preserve"><value>Export file error</value></data>
+  <data name="LPRWorkSpaceView_NextPageToolTip" xml:space="preserve"><value>Next page</value></data>
+  <data name="CsvImportExport_RecordDelimiterLabel" xml:space="preserve"><value>Value delimiter:</value></data>
+  <data name="CvsFileDialog_AllFiles" xml:space="preserve"><value>All files (*.*)</value></data>
+  <data name="CountryModule_AUS_TAS" xml:space="preserve"><value>Australia - Tasmania</value></data>
+  <data name="CountryModule_AUS_QLD" xml:space="preserve"><value>Australia - Queensland</value></data>
+  <data name="CountryModule_AUS_VIC" xml:space="preserve"><value>Australia - Victoria</value></data>
+  <data name="CountryModule_AUS_ACT" xml:space="preserve"><value>Australia - Capital Territory</value></data>
+  <data name="CountryModule_AUS_NSW" xml:space="preserve"><value>Australia - New South Wales</value></data>
+  <data name="VehiclePropertiesColor_Red" xml:space="preserve"><value>Red</value></data>
+  <data name="ServiceStatusSurveillanceSystemConnectionError" xml:space="preserve"><value>Not connected to surveillance system.</value></data>
+  <data name="EventType_VideoSourceRunning" xml:space="preserve"><value>LPR camera running</value></data>
+  <data name="VideoSourceStatusErrorFailedToStartIntradaProcessNoCountry" xml:space="preserve"><value>No country modules defined.</value></data>
+  <data name="LPRReportManager_PropertyValueMultipleModels" xml:space="preserve"><value>Multiple models</value></data>
+  <data name="LPRPlateStyleAliasesView_DescriptionColumnHeader" xml:space="preserve"><value>Description</value></data>
+  <data name="EventGroup_Lists" xml:space="preserve"><value>Match lists</value></data>
+  <data name="PlateListLicensePlatesManagementUserControl_ValueTypeColumnName" xml:space="preserve"><value>Type</value></data>
+  <data name="VideoSourceStatusWarningUnspecified" xml:space="preserve"><value>Unknown warning</value></data>
+  <data name="EventGroup_Status" xml:space="preserve"><value>LPR server</value></data>
+  <data name="VideoSourceStatusWarningIntradaProcessWarning" xml:space="preserve"><value>LPR warning</value></data>
+  <data name="ManageListsClose" xml:space="preserve"><value>Close</value></data>
+  <data name="ChooseExportFilePage_Title" xml:space="preserve"><value>Select export location</value></data>
+  <data name="ChooseExportDestinationPage_FileNameLabel" xml:space="preserve"><value>Name:</value></data>
+  <data name="LPRPlateStyleAliasesView_SummaryHeadingAllPlateStyleAliases" xml:space="preserve"><value>All license plate style aliases</value></data>
+  <data name="AddToListDialogCancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="LPRWorkSpaceView_CountryCodeUnknownToolTip" xml:space="preserve"><value>Unrecognized country code</value></data>
+  <data name="ExportLicensePlatesPage_NoLicensePlatesReturned" xml:space="preserve"><value>Failed to export license plates. The server may be offline.</value></data>
+  <data name="EditLicenePlatesWindow_Title" xml:space="preserve"><value>Edit match list item</value></data>
+  <data name="ManageListsErrorAdding" xml:space="preserve"><value>Cannot add the number to the match list.</value></data>
+  <data name="CountryModule_MEX_NL" xml:space="preserve"><value>Mexico - Nuevo León</value></data>
+  <data name="VehiclePropertiesSide_Rear" xml:space="preserve"><value>Rear</value></data>
+  <data name="LPRReportManager_ReportEventDetailLicensePlate" xml:space="preserve"><value>Registration number</value></data>
+  <data name="StatusDetails_MemoryFree" xml:space="preserve"><value>Memory free</value></data>
+  <data name="StatusDetails_MemoryUsed" xml:space="preserve"><value>Memory used</value></data>
+  <data name="ManageListsSearchLabel" xml:space="preserve"><value>Search</value></data>
+  <data name="ExportLicensePlatesWizard_Title" xml:space="preserve"><value>Export license plates</value></data>
+  </root>

@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.DataCollector.Service</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <StartupObject>VideoOS.DataCollector.Service.Program</StartupObject>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="VideoOS.Common.Logging" />
+    <Reference Include="Microsoft.Extensions.Hosting.WindowsServices">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\Microsoft.Extensions.Hosting.WindowsServices.dll</HintPath>
+    </Reference>
+    <Reference Include="MediatR">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\MediatR.dll</HintPath>
+    </Reference>
+    
+    
+    
+    <Reference Include="Microsoft.AspNetCore.Authentication.JwtBearer">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\Microsoft.AspNetCore.Authentication.JwtBearer.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="MediatR.Contracts">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\MediatR.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core.Api">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.PerformanceCounter">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.28\System.Diagnostics.PerformanceCounter.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="System.ServiceProcess.ServiceController">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\System.ServiceProcess.ServiceController.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.AspNetCore.Server">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\Grpc.AspNetCore.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.AspNetCore.Web">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\Grpc.AspNetCore.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>..\..\..\MSI_Audit_All\Extracted\VideoOS.DataCollector.Installer_x64\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\Identity\VideoOS.IdentityServer\VideoOS.IdentityServer.csproj" />
+    <ProjectReference Include="..\VideoOS.WebService.Common\VideoOS.WebService.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.DataCollector.Media\VideoOS.DataCollector.Media.csproj" />
+    <ProjectReference Include="..\VideoOS.Common\VideoOS.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Common.Crypto\VideoOS.Common.Crypto.csproj" />
+    <ProjectReference Include="..\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\VideoOS.DataCollector.Oem\VideoOS.DataCollector.Oem.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.IdentityServer.Common\VideoOS.IdentityServer.Common.csproj" />
+  </ItemGroup>
+</Project>

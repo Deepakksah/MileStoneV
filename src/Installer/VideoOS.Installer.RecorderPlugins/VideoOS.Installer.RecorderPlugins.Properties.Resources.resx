@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrroMessage_AddAcountRightUserNotFound" xml:space="preserve"><value>Account name not found.</value></data>
+  <data name="ServerConfig_RetentionTimeLabel" xml:space="preserve"><value>Retention time for recordings:</value></data>
+  <data name="MessageBox_MakeSureUserHasAccess_Caption" xml:space="preserve"><value>Service Account</value></data>
+  <data name="ServerConfig_ManagementServerURLInfo" xml:space="preserve"><value>Use HTTPS if the management server is configured to be secure:</value></data>
+  <data name="ServerUninstall_KeepMediaArch" xml:space="preserve"><value>Keep media archives</value></data>
+  <data name="ServerConfig_FailoverLicenseNotSupported" xml:space="preserve"><value>The selected management server license does not support failover recording servers. 
+Select another management server or upgrade the selected management server license.</value></data>
+  <data name="ErrorMessage_Caption" xml:space="preserve"><value>Error occurred</value></data>
+  <data name="ServerConfig_ManagementServerURL" xml:space="preserve"><value>&amp;Management server address.</value></data>
+  <data name="ErrorMessage_ServerNotFound" xml:space="preserve"><value>The server is not responding. Make sure that the server is online and that the version is correct.</value></data>
+  <data name="ServiceAccount_LocalServiceName" xml:space="preserve"><value>Local Service</value></data>
+  <data name="ServiceAccount_HeadLine" xml:space="preserve"><value>Select service account for recording server</value></data>
+  <data name="MessageBox_UnableToVerifyAccountType_Caption" xml:space="preserve"><value>Invalid Format</value></data>
+  <data name="ServerUninstall_KeepDp" xml:space="preserve"><value>Keep the device pack {0} installed on this computer.</value></data>
+  <data name="ErrroMessage_AddAccountRightGranted" xml:space="preserve"><value>The account {0} has been granted the 'Log On As A Service' right.</value></data>
+  <data name="ServerConfig_MediaDb" xml:space="preserve"><value>Select your media &amp;database location:</value></data>
+  <data name="ServerConfig_MediaDbInfo" xml:space="preserve"><value>It is recommended that you save your video recordings on a drive different from where you install the program.</value></data>
+  <data name="WarningMessage_ConnectionFailed" xml:space="preserve"><value>Could not verify the connection to the management server. If you continue, performance data from the recording server might be lost. 
+After installation, use the Server Configurator to register the recording server once the connection has been established.
+Do you want to continue?</value></data>
+  <data name="ErrroMessage_ServiceLogOnSetupDialogErrorCode" xml:space="preserve"><value>Error code: {0}</value></data>
+  <data name="ServiceAccount_NetworkServiceName" xml:space="preserve"><value>Network Service</value></data>
+  <data name="ErrorMessage_InvalidServerCertificateSelection" xml:space="preserve"><value>You must either select a certificate or disable encryption to continue the installation.</value></data>
+  <data name="ServerUninstall_HeadLine" xml:space="preserve"><value>Recording server uninstall</value></data>
+  <data name="MediaDatabaseLocation_LabelSpaceAvailable" xml:space="preserve"><value>Free disk space on drive: {0} GB</value></data>
+  <data name="WarningPageHeadingDetails" xml:space="preserve"><value>GDPR: retention time of personal data</value></data>
+  <data name="ErrroMessage_AddAcountRightError" xml:space="preserve"><value>Could not grant the 'Log On As A Service' right to the account {0}.</value></data>
+  <data name="ErrorMessage_ConnectionFailed" xml:space="preserve"><value>Could not verify the connection to the management server. </value></data>
+  <data name="ServiceAccount_LocalSystemName" xml:space="preserve"><value>Local System</value></data>
+  <data name="WarningMessage_GdprRetention" xml:space="preserve"><value>In this installer, you will be prompted to set the retention time for media, which may potentially contain personal data. If you are subject to the EU General Data Protection Regulation (“GDPR”), the system may not be compliant with the GDPR if the retention time is too long.
+
+For more information on how you can work with GDPR compliance, including retention times, when using the {0} VMS, please see our GDPR Privacy Guide:
+{1}
+
+Our GDPR Privacy Guide is intended for general information purposes only, and you are responsible for compliance with applicable laws concerning personal data. Retention periods may, among other things, depend on the purpose of the system and the purpose of your data processing. You may consult the relevant Data Protection Authority to receive guidance on local laws.
+
+</value></data>
+  <data name="ErrorMessage_ServerNameEmpty" xml:space="preserve"><value>Enter the server name.</value></data>
+  <data name="Logging_ServiceAccountAddRightGranted" xml:space="preserve"><value>The account {0} has been granted the 'Log On As A Service' right</value></data>
+  <data name="MediaDatabaseLocation_LabelSpaceAvailableTb" xml:space="preserve"><value>Free disk space on drive: {0} TB</value></data>
+  <data name="MediaDatabaseLocation_LabelSpaceAvailableMb" xml:space="preserve"><value>Free disk space on drive: {0} MB</value></data>
+  <data name="ErrorMessage_ServerAddressEmpty" xml:space="preserve"><value>Enter the management server address.</value></data>
+  <data name="MessageBox_MakeSureUserHasAccess" xml:space="preserve"><value>The user account '{0}' for the Recording Server service will not be validated. 
+
+Make sure that the selected user account has enough permissions to access the existing media in the media database.
+
+Are you sure you want to continue this installation?</value></data>
+  <data name="ErrorMessage_EmptyMediaDBPath" xml:space="preserve"><value>Enter the path to the media database.</value></data>
+  <data name="ServiceAccount_FailoverSubLine" xml:space="preserve"><value>The service uses this account, which must have administrator rights in the system. If the computer is part of a domain, you must specify a domain user account.</value></data>
+  <data name="InvalidConfigFileException" xml:space="preserve"><value>The recorder config file is invalid.</value></data>
+  <data name="ServerConfig_ServerName" xml:space="preserve"><value>&amp;Recording server name:</value></data>
+  <data name="MessageBox_UnableToVerifyAccountType" xml:space="preserve"><value>The format of the user name is incorrect and could not be resolved automatically. The correct format is:
+
+For domain users:   DOMAIN\USER NAME
+For local users:        COMPUTER NAME\USER NAME</value></data>
+  <data name="ErrorMessage_ServiceLogOnSetupDialogPasswordInvalid" xml:space="preserve"><value>The account could not log on. The account name or password is invalid or the account does not exist.</value></data>
+  <data name="ServerConfig_HeadLine" xml:space="preserve"><value>Specify recording server settings</value></data>
+  <data name="ErrorMessage_InvalidMediaDBPath" xml:space="preserve"><value>The path to the media database is invalid.</value></data>
+  <data name="ServerConfig_BrowseButton" xml:space="preserve"><value>&amp;Browse...</value></data>
+  <data name="ErrorMessage_InvalidServerURL" xml:space="preserve"><value>The address of the {0} is invalid.</value></data>
+  <data name="ServerConfig_ManagementServerExample" xml:space="preserve"><value>Examples: http://host or https://host.domain.com:8443.</value></data>
+  <data name="ServerConfig_RetentionDaysLabel" xml:space="preserve"><value>days</value></data>
+  <data name="ErrorMessage_MustInstallBeforeChangingTracks" xml:space="preserve"><value>The server type that was selected for install cannot be installed because another type is already installed.</value></data>
+  </root>

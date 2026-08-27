@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentControl x:Class="VideoOS.Platform.UI.Controls.ActionLists.Internal.ActionSelectControlHolder" x:ClassModifier="internal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:internal="clr-namespace:VideoOS.Platform.UI.Controls.ActionLists.Internal" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" Focusable="False" Content="{Binding}">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="{x:Static internal:ActionSelectControlHolder.CheckBoxExtraSmallDataTemplateName}">
+        <controls:VideoOSCheckBoxSmall Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" IsChecked="{Binding IsSelected}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSCheckBoxSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionSelectControlHolder.CheckBoxSmallDataTemplateName}">
+        <controls:VideoOSCheckBoxSmall Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" IsChecked="{Binding IsSelected}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSCheckBoxSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionSelectControlHolder.CheckBoxMediumDataTemplateName}">
+        <controls:VideoOSCheckBoxSmall Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" IsChecked="{Binding IsSelected}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSCheckBoxSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionSelectControlHolder.ToggleButtonIconExtraSmallDataTemplateName}">
+        <controls:VideoOSToggleButtonIconExtraSmall ToolTip="{Binding ToolTip}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" IsChecked="{Binding IsSelected}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" />
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionSelectControlHolder.ToggleButtonIconSmallDataTemplateName}">
+        <controls:VideoOSToggleButtonIconSmall ToolTip="{Binding ToolTip}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" IsChecked="{Binding IsSelected}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" />
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionSelectControlHolder.ToggleButtonIconMediumDataTemplateName}">
+        <controls:VideoOSToggleButtonIconMedium ToolTip="{Binding ToolTip}" IconSource="{Binding IconSource}" IsEnabled="{Binding IsEnabled}" IsChecked="{Binding IsSelected}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}" />
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionSelectControlHolder.ToggleButtonSwitchExtraSmallDataTemplateName}">
+        <controls:VideoOSToggleButtonSwitchSmall Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" IsChecked="{Binding IsSelected}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSToggleButtonSwitchSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionSelectControlHolder.ToggleButtonSwitchSmallDataTemplateName}">
+        <controls:VideoOSToggleButtonSwitchSmall Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" IsChecked="{Binding IsSelected}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSToggleButtonSwitchSmall>
+      </DataTemplate>
+      <DataTemplate x:Key="{x:Static internal:ActionSelectControlHolder.ToggleButtonSwitchMediumDataTemplateName}">
+        <controls:VideoOSToggleButtonSwitchMedium Content="{Binding Text}" IsEnabled="{Binding IsEnabled}" IsChecked="{Binding IsSelected}" Focusable="{Binding Path=AreActionsFocusable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:VideoOSActionListBase}}}">
+          <FrameworkElement.ToolTip>
+            <MultiBinding Converter="{x:Static internal:ActionsPresenter.ActionTooltipConverter}">
+              <Binding Path="Text" />
+              <Binding Path="ToolTip" />
+            </MultiBinding>
+          </FrameworkElement.ToolTip>
+        </controls:VideoOSToggleButtonSwitchMedium>
+      </DataTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <ContentControl.ContentTemplate>
+    <MultiBinding Converter="{x:Static internal:ActionSelectControlHolder.ContentDataTemplateConverter}">
+      <Binding Path="." RelativeSource="{RelativeSource Self}" />
+      <Binding Path="Appearance" />
+    </MultiBinding>
+  </ContentControl.ContentTemplate>
+</ContentControl>

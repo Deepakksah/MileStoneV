@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Milestone XProtect VMS Products 2025 R3 System Installer</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VideoOS.Installer.Setup.Program</StartupObject>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="images\1336650470_adept_installer.ico" />
+    <None Remove="VideoOS.Installer.Setup.InitialData.EmbeddedZip" />
+    <EmbeddedResource Include="images\1336650470_adept_installer.ico" LogicalName="images/1336650470_adept_installer.ico" />
+    <EmbeddedResource Include="VideoOS.Installer.Setup.InitialData.EmbeddedZip" LogicalName="VideoOS.Installer.Setup.InitialData.EmbeddedZip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.Installer.CommandLine\VideoOS.Installer.CommandLine.csproj" />
+  </ItemGroup>
+</Project>

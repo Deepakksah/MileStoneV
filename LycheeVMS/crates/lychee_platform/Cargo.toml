@@ -1,0 +1,10 @@
+[package]
+name = "lychee_platform"
+version = "2025.3.0"
+edition = "2021"
+description = "Core Media Platform & Video Engine (converted from Milestone src/Platform, VideoOS.Platform, VideoOS.Toolkit, VideoOS.Platform.SDK.Export)"
+
+[dependencies]
+lychee_common = { path = "../lychee_common" }
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4" }

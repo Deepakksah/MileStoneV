@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Server.BackupRestoreComponent</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="VideoOS.Server.BackupRestoreComponent.EventServer.Intercommunication.MilestoneCentralClientSide.private.pfx" />
+    <None Remove="VideoOS.Server.BackupRestoreComponent.EventServer.Intercommunication.MilestoneCentralServerSide.public.cer" />
+    <EmbeddedResource Include="VideoOS.Server.BackupRestoreComponent.EventServer.Intercommunication.MilestoneCentralClientSide.private.pfx" LogicalName="VideoOS.Server.BackupRestoreComponent.EventServer.Intercommunication.MilestoneCentralClientSide.private.pfx" />
+    <EmbeddedResource Include="VideoOS.Server.BackupRestoreComponent.EventServer.Intercommunication.MilestoneCentralServerSide.public.cer" LogicalName="VideoOS.Server.BackupRestoreComponent.EventServer.Intercommunication.MilestoneCentralServerSide.public.cer" />
+  </ItemGroup>
+  <ItemGroup>
+    
+    <Reference Include="System.Xml" />
+    
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    
+    
+    <Reference Include="System.Core" />
+    
+    <Reference Include="System.IdentityModel" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="VideoOS.Server\VideoOS.Server.csproj" />
+  </ItemGroup>
+</Project>

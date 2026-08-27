@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="VideoOS.LPR.Common.UI.Wizard.WizardWindow" x:ClassModifier="internal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:resources1="clr-namespace:VideoOS.LPR.Common.UI.Resources" Width="800" Height="600" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="false" WindowStyle="ToolWindow" xmlns:wizard="clr-namespace:VideoOS.LPR.Common.UI.Wizard" Closed="WizardWindow_OnClosed" Loaded="WizardWindow_OnLoaded" Closing="WizardWindow_OnClosing">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid Name="_wizardPageGrid" Row="0" />
+    <Border Grid.Row="1" BorderThickness="0,1,0,0" BorderBrush="#EEEEEE">
+      <Grid Height="40" Margin="10,0,10,0">
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Center" />
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center">
+          <Button Name="_previousButton" Content="{x:Static resources1:Strings.WizardWindow_ButtonPrevious}" Margin="10,0,0,0" Padding="10,1,10,3" MinWidth="100" Visibility="Collapsed" Click="_previousButton_OnClick" />
+          <Button Name="_nextButton" Margin="10,0,0,0" Padding="10,1,10,3" MinWidth="100" Visibility="Collapsed" Click="_nextButton_OnClick" />
+          <Button Name="_finishButton" Margin="10,0,0,0" Padding="10,1,10,3" MinWidth="100" Visibility="Collapsed" Click="_finishButton_OnClick" />
+          <Button Name="_cancelButton" Content="{x:Static resources1:Strings.WizardWindow_ButtonCancel}" Margin="10,0,0,0" Padding="10,1,10,3" MinWidth="100" Visibility="Collapsed" Click="_cancelButton_OnClick" />
+        </StackPanel>
+      </Grid>
+    </Border>
+  </Grid>
+</Window>

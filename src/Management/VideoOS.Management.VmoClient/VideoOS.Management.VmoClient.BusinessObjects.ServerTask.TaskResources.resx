@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="TaskRetrievingEdgeRecordings" xml:space="preserve"><value>Retrieving remote recordings</value></data>
+  <data name="TaskDeleteStorage" xml:space="preserve"><value>Deleting storage</value></data>
+  <data name="TaskTruncateDeviceStorage" xml:space="preserve"><value>Deleting device recordings</value></data>
+  <data name="TaskArchiving" xml:space="preserve"><value>Archiving</value></data>
+  <data name="TaskActivateLicense" xml:space="preserve"><value>Activating license</value></data>
+  <data name="TaskMoveHardware" xml:space="preserve"><value>Moving hardware</value></data>
+  <data name="TaskSetEncryptionPassword" xml:space="preserve"><value>Applying encryption password changes</value></data>
+  <data name="TaskMoveArchiveStorage" xml:space="preserve"><value>Moving archive</value></data>
+  <data name="TaskDeleteArchive" xml:space="preserve"><value>Deleting archive</value></data>
+  <data name="TaskHardwareScanExpress" xml:space="preserve"><value>Scanning network for hardware...</value></data>
+  <data name="TaskMoveDevice" xml:space="preserve"><value>Moving device recordings</value></data>
+  <data name="TaskDeleteRecorder" xml:space="preserve"><value>Delete recorder</value></data>
+  <data name="TaskChangeHardwarePassword" xml:space="preserve"><value>Changing hardware password</value></data>
+  <data name="TaskReplaceHardware" xml:space="preserve"><value>Replace hardware</value></data>
+  <data name="TaskHardwareScan" xml:space="preserve"><value>Scanning for a piece of hardware</value></data>
+  <data name="TaskGetDevicePresets" xml:space="preserve"><value>Get device presets</value></data>
+  <data name="TaskRepairing" xml:space="preserve"><value>Repairing database</value></data>
+  <data name="TaskUnmountArchiveStorage" xml:space="preserve"><value>Unmounting archive</value></data>
+  <data name="TaskSetEncryptionMethod" xml:space="preserve"><value>Applying encryption method changes</value></data>
+  <data name="TaskUpdateHardware" xml:space="preserve"><value>Update hardware</value></data>
+  <data name="TaskFirmwareUpgrade" xml:space="preserve"><value>Updating firmware</value></data>
+  <data name="TaskAddHardware" xml:space="preserve"><value>Adding hardware</value></data>
+  <data name="TaskDeleteHardware" xml:space="preserve"><value>Delete hardware</value></data>
+  <data name="EntityNameManagementServer" xml:space="preserve"><value>Management server</value></data>
+  <data name="TaskDeleteIdpUser" xml:space="preserve"><value>Delete user in Identity Provider</value></data>
+  <data name="NameOfUnknownStorage" xml:space="preserve"><value>&lt;Unknown&gt;</value></data>
+  <data name="TaskAddIdpAdmin" xml:space="preserve"><value>Add administrator identity in Identity Provider</value></data>
+  <data name="TaskDeleteIdpAdmin" xml:space="preserve"><value>Delete administrator identity in Identity Provider</value></data>
+  <data name="TaskMountArchiveStorage" xml:space="preserve"><value>Mounting archive</value></data>
+  <data name="TaskMoveRecordingStorage" xml:space="preserve"><value>Moving storage</value></data>
+  <data name="TaskSetEncryptionMethodInvalidMethod" xml:space="preserve"><value>An invalid encryption method is specified.</value></data>
+  </root>

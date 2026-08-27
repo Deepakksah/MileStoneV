@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:ui="clr-namespace:VideoOS.Platform.UI" xmlns:converters="clr-namespace:VideoOS.Platform.UI.Converters">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/VideoOS.Platform;component/UI/Controls/VideoOSBase.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="{x:Type controls:VideoOSProgressSpinner}" BasedOn="{StaticResource {x:Static controls:VideoOSBaseInternals.StyleKey}}" TargetType="{x:Type controls:VideoOSProgressSpinner}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type controls:VideoOSProgressSpinner}">
+          <ControlTemplate.Triggers>
+            <Trigger Property="controls:VideoOSProgressSpinner.IsIndeterminate" Value="True">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PART_IndicatorPath" Storyboard.TargetProperty="Tag" From="0.0" To="1.0" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+            </Trigger>
+          </ControlTemplate.Triggers>
+          <Grid MinWidth="16" MinHeight="16" Background="#00FFFFFF">
+            <Path Name="PART_TrackPath" StrokeThickness="4" Stroke="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSProgressBarBackgroundBrush}}">
+              <FrameworkElement.Tag>
+                <system:Double>0</system:Double>
+              </FrameworkElement.Tag>
+              <Path.Data>
+                <PathGeometry>
+                  <PathGeometry.Figures>
+                    <PathFigureCollection>
+                      <PathFigure x:Name="PART_TrackPathFigure">
+                        <PathFigure.Segments>
+                          <PathSegmentCollection>
+                            <ArcSegment x:Name="PART_TrackArcSegment" SweepDirection="Clockwise" />
+                          </PathSegmentCollection>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathFigureCollection>
+                  </PathGeometry.Figures>
+                </PathGeometry>
+              </Path.Data>
+            </Path>
+            <Path Name="PART_IndicatorPath" StrokeThickness="4" Stroke="{DynamicResource {x:Static controls:VideoOSResourceKeysInternal.VideoOSProgressBarForegroundBrush}}">
+              <FrameworkElement.Tag>
+                <system:Double>0</system:Double>
+              </FrameworkElement.Tag>
+              <Path.Data>
+                <PathGeometry>
+                  <PathGeometry.Figures>
+                    <PathFigureCollection>
+                      <PathFigure x:Name="PART_IndicatorPathFigure">
+                        <PathFigure.Segments>
+                          <PathSegmentCollection>
+                            <ArcSegment x:Name="PART_IndicatorArcSegment" SweepDirection="Clockwise" />
+                          </PathSegmentCollection>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathFigureCollection>
+                  </PathGeometry.Figures>
+                </PathGeometry>
+              </Path.Data>
+            </Path>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

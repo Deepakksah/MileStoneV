@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Common.Integration</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="VideoOS.Common.Integration.Plugins.VideoOS.Plugin.MotionDetection.xml" />
+    <EmbeddedResource Include="VideoOS.Common.Integration.Plugins.VideoOS.Plugin.MotionDetection.xml" LogicalName="VideoOS.Common.Integration.Plugins.VideoOS.Plugin.MotionDetection.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Data" />
+    
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    
+    <Reference Include="System.Data.DataSetExtensions" />
+    
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <Reference Include="SNMPBDGE" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Microsoft.Owin" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    
+    
+    
+    
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.Common.SharedTimeProfile\VideoOS.Common.SharedTimeProfile.csproj" />
+    <ProjectReference Include="..\VideoOS.Common\VideoOS.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Common.Crypto\VideoOS.Common.Crypto.csproj" />
+    <ProjectReference Include="..\VideoOS.Vms.Utilities\VideoOS.Vms.Utilities.csproj" />
+    <ProjectReference Include="..\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\..\Management\VideoOS.Management.Common\VideoOS.Management.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.Common.Interfaces\VideoOS.Common.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Platform\VideoOS.Platform.Primitives\VideoOS.Platform.Primitives.csproj" />
+    <ProjectReference Include="..\..\RulesEngine\VideoOS.Rules\VideoOS.Rules.csproj" />
+    <ProjectReference Include="..\..\RulesEngine\VideoOS.Rules.Interfaces\VideoOS.Rules.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Platform\VideoOS.Platform\VideoOS.Platform.csproj" />
+    <ProjectReference Include="..\VideoOS.Vms.Types\VideoOS.Vms.Types.csproj" />
+    <ProjectReference Include="..\VideoOS.Utilities.Telemetry\VideoOS.Utilities.Telemetry.csproj" />
+  </ItemGroup>
+</Project>

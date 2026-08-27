@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="FaceSearchFilterName" xml:space="preserve"><value>Face</value></data>
+  <data name="FaceSearchFilterItem" xml:space="preserve"><value>Show results for Faces</value></data>
+  <data name="DiplomatPlateTypeFilterItem" xml:space="preserve"><value>Diplomatic</value></data>
+  <data name="LicensePlateTypeFilterName" xml:space="preserve"><value>License plate type</value></data>
+  <data name="SandalFilterItem" xml:space="preserve"><value>Sandals</value></data>
+  <data name="PureColourSearchFilterItem" xml:space="preserve"><value>Solid color</value></data>
+  <data name="ShortsSearchFilterItem" xml:space="preserve"><value>Shorts</value></data>
+  <data name="LongSearchFilterItem" xml:space="preserve"><value>Long</value></data>
+  <data name="LicensePlateIssuingEntityFilterName" xml:space="preserve"><value>License plate issuing entity (state)</value></data>
+  <data name="BottomTypeSearchFilterName" xml:space="preserve"><value>Clothing (lower) type</value></data>
+  <data name="HasSideburnFilterItem" xml:space="preserve"><value>Show results for Sideburns</value></data>
+  <data name="TopStyleSearchFilterName" xml:space="preserve"><value>Clothing (upper) style</value></data>
+  <data name="MaskColorFilterName" xml:space="preserve"><value>Face mask color</value></data>
+  <data name="TailorSearchFilterItem" xml:space="preserve"><value>Tailor</value></data>
+  <data name="HasMaskFilterItem" xml:space="preserve"><value>Show results for Face masks</value></data>
+  <data name="ShoesCategoryFilterName" xml:space="preserve"><value>Shoe category</value></data>
+  <data name="GlassesFilterName" xml:space="preserve"><value>Glasses</value></data>
+  <data name="BeardFilterName" xml:space="preserve"><value>Facial hair: beard</value></data>
+  <data name="PlaidSearchFilterItem" xml:space="preserve"><value>Plaid</value></data>
+  <data name="SweaterSearchFilterItem" xml:space="preserve"><value>Sweater</value></data>
+  <data name="BottomGrainSearchFilterName" xml:space="preserve"><value>Clothing (lower) pattern</value></data>
+  <data name="OvercoatSearchFilterItem" xml:space="preserve"><value>Overcoat</value></data>
+  <data name="NormalPlateTypeFilterItem" xml:space="preserve"><value>Standard</value></data>
+  <data name="BicycleSearchFilterItem" xml:space="preserve"><value>Bicycle</value></data>
+  <data name="Orange" xml:space="preserve"><value>Orange</value></data>
+  <data name="TrousersSearchFilterItem" xml:space="preserve"><value>Pants</value></data>
+  <data name="GeoCoordinatesFilterName" xml:space="preserve"><value>Geo coordinates</value></data>
+  <data name="FormalPantsSearchFilterItem" xml:space="preserve"><value>Dress pants</value></data>
+  <data name="ShortSleeveSearchFilterItem" xml:space="preserve"><value>Short sleeves</value></data>
+  <data name="HasGlassesFilterItem" xml:space="preserve"><value>Show results for Glasses</value></data>
+  <data name="VehiclesSearchCategoryName" xml:space="preserve"><value>Vehicles</value></data>
+  <data name="HairLengthSearchFilterName" xml:space="preserve"><value>Hair length</value></data>
+  <data name="DUMMY_TEST_STRING" xml:space="preserve"><value>None</value></data>
+  <data name="BusSearchFilterItem" xml:space="preserve"><value>Bus</value></data>
+  <data name="Purple" xml:space="preserve"><value>Purple</value></data>
+  <data name="HasScarfFilterItem" xml:space="preserve"><value>Show results for Scarfs</value></data>
+  <data name="StriaSearchFilterItem" xml:space="preserve"><value>Striped</value></data>
+  <data name="LocationSearchCategoryName" xml:space="preserve"><value>Location</value></data>
+  <data name="Yellow" xml:space="preserve"><value>Yellow</value></data>
+  <data name="SlipperFilterItem" xml:space="preserve"><value>Slippers</value></data>
+  <data name="HatFilterName" xml:space="preserve"><value>Hat</value></data>
+  <data name="ScarfColorFilterName" xml:space="preserve"><value>Scarf color</value></data>
+  <data name="VanSearchFilterItem" xml:space="preserve"><value>Van</value></data>
+  <data name="CarSearchFilterItem" xml:space="preserve"><value>Car</value></data>
+  <data name="VehicleTypeSearchFilterName" xml:space="preserve"><value>Vehicle type</value></data>
+  <data name="LicensePlateCountryCodeFilterName" xml:space="preserve"><value>License plate country code</value></data>
+  <data name="TopColorSearchFilterName" xml:space="preserve"><value>Clothing (upper) color</value></data>
+  <data name="VehicleBrandFilterName" xml:space="preserve"><value>Vehicle brand</value></data>
+  <data name="HasBeardFilterItem" xml:space="preserve"><value>Show results for Beards</value></data>
+  <data name="JeansSearchFilterItem" xml:space="preserve"><value>Jeans</value></data>
+  <data name="HelmetColorFilterName" xml:space="preserve"><value>Helmet color</value></data>
+  <data name="GlovesColorFilterName" xml:space="preserve"><value>Gloves color</value></data>
+  <data name="ScarfFilterName" xml:space="preserve"><value>Scarf</value></data>
+  <data name="SideburnFilterName" xml:space="preserve"><value>Facial hair: sideburns</value></data>
+  <data name="HeightSearchFilterName" xml:space="preserve"><value>Height</value></data>
+  <data name="HairColorSearchFilterName" xml:space="preserve"><value>Hair color</value></data>
+  <data name="LongSleeveSearchFilterItem" xml:space="preserve"><value>Long sleeves</value></data>
+  <data name="MaskFilterName" xml:space="preserve"><value>Face mask</value></data>
+  <data name="BackpackSearchFilterItem" xml:space="preserve"><value>Backpack</value></data>
+  <data name="PolicePlateTypeFilterItem" xml:space="preserve"><value>Police</value></data>
+  <data name="Red" xml:space="preserve"><value>Red</value></data>
+  <data name="Green" xml:space="preserve"><value>Green</value></data>
+  <data name="Beige" xml:space="preserve"><value>Beige</value></data>
+  <data name="Blond" xml:space="preserve"><value>Blond</value></data>
+  <data name="Black" xml:space="preserve"><value>Black</value></data>
+  <data name="Brown" xml:space="preserve"><value>Brown</value></data>
+  <data name="White" xml:space="preserve"><value>White</value></data>
+  <data name="HasHatFilterItem" xml:space="preserve"><value>Show results for Hats</value></data>
+  <data name="GlovesFilterName" xml:space="preserve"><value>Gloves</value></data>
+  <data name="SkirtSearchFilterItem" xml:space="preserve"><value>Skirt</value></data>
+  <data name="HasGlovesFilterItem" xml:space="preserve"><value>Show results for Gloves</value></data>
+  <data name="LeatherShoesFilterItem" xml:space="preserve"><value>Leather shoes</value></data>
+  <data name="VehicleModelFilterName" xml:space="preserve"><value>Vehicle model</value></data>
+  <data name="TemporaryPlateTypeFilterItem" xml:space="preserve"><value>Temporary</value></data>
+  <data name="HelmetFilterName" xml:space="preserve"><value>Helmet</value></data>
+  <data name="BikeSearchFilterItem" xml:space="preserve"><value>Bike</value></data>
+  <data name="SingleShoulderBagSearchFilterItem" xml:space="preserve"><value>Single shoulder bag</value></data>
+  <data name="MotorcycleSearchFilterItem" xml:space="preserve"><value>Motorcycle</value></data>
+  <data name="BagColorSearchFilterName" xml:space="preserve"><value>Bag color</value></data>
+  <data name="DressSearchFilterItem" xml:space="preserve"><value>Dress</value></data>
+  <data name="PeopleSearchCategoryName" xml:space="preserve"><value>People</value></data>
+  <data name="ShoesColorFilterName" xml:space="preserve"><value>Shoe color</value></data>
+  <data name="JacketSearchFilterItem" xml:space="preserve"><value>Jacket</value></data>
+  <data name="BagCategorySearchFilterName" xml:space="preserve"><value>Bag category</value></data>
+  <data name="HasHelmetFilterItem" xml:space="preserve"><value>Show results for Helmets</value></data>
+  <data name="HasMustacheFilterItem" xml:space="preserve"><value>Show results for Mustaches</value></data>
+  <data name="TopTypeSearchFilterName" xml:space="preserve"><value>Clothing (upper) type</value></data>
+  <data name="VehicleSpeedSearchFilterName" xml:space="preserve"><value>Vehicle speed</value></data>
+  <data name="MediumSearchFilterItem" xml:space="preserve"><value>Medium</value></data>
+  <data name="TruckSearchFilterItem" xml:space="preserve"><value>Truck</value></data>
+  <data name="TopGrainSearchFilterName" xml:space="preserve"><value>Clothing (upper) pattern</value></data>
+  <data name="HatColorFilterName" xml:space="preserve"><value>Hat color</value></data>
+  <data name="DecalSearchFilterItem" xml:space="preserve"><value>Printed design</value></data>
+  <data name="ShortSearchFilterItem" xml:space="preserve"><value>Short</value></data>
+  <data name="BottomStyleSearchFilterName" xml:space="preserve"><value>Clothing (lower) style</value></data>
+  <data name="SneakersFilterItem" xml:space="preserve"><value>Sneakers</value></data>
+  <data name="OtherSearchFilterItem" xml:space="preserve"><value>Other</value></data>
+  <data name="HasBagFilterItem" xml:space="preserve"><value>Show results for Bags</value></data>
+  <data name="BottomColorSearchFilterName" xml:space="preserve"><value>Clothing (lower) color</value></data>
+  <data name="MustacheFilterName" xml:space="preserve"><value>Facial hair: mustache</value></data>
+  <data name="BagFilterName" xml:space="preserve"><value>Bag</value></data>
+  <data name="Gray" xml:space="preserve"><value>Gray</value></data>
+  <data name="Blue" xml:space="preserve"><value>Blue</value></data>
+  <data name="Pink" xml:space="preserve"><value>Pink</value></data>
+  </root>

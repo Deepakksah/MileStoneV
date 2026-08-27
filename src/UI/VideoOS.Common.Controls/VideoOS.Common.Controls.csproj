@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.Common.Controls</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="VideoOS.Common.Controls.Help.Topics.xml" />
+    <EmbeddedResource Include="VideoOS.Common.Controls.Help.Topics.xml" LogicalName="VideoOS.Common.Controls.Help.Topics.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Design" />
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    
+    <Reference Include="System.Xml" />
+    <Reference Include="Infragistics2.Win.Misc.v10.2" />
+    <Reference Include="Infragistics2.Win.v10.2" />
+    <Reference Include="System.ServiceModel" />
+    
+    <Reference Include="Syncfusion.Pdf.Base" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Configuration" />
+    
+    <Reference Include="Infragistics2.Shared.v10.2" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Core" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\VideoOS.Common\VideoOS.Common.csproj" />
+  </ItemGroup>
+</Project>

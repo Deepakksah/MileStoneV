@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentControl x:Class="VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates.CellText" xmlns:controls="clr-namespace:VideoOS.Platform.UI.Controls" xmlns:markup="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:columnTemplates="clr-namespace:VideoOS.Platform.UI.Controls.Tables.Internal.ColumnTemplates" x:Name="_root" Focusable="False">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="{markup:Static columnTemplates:CellText+CellTextInternals.TallSelectedTemplateKey}">
+        <controls:VideoOSTextBlockInteractiveMedium TextTrimming="CharacterEllipsis" Appearance="HighEmphasis" Text="{Binding Text, ElementName=_root}" />
+      </DataTemplate>
+      <DataTemplate x:Key="{markup:Static columnTemplates:CellText+CellTextInternals.TallDeselectedTemplateKey}">
+        <controls:VideoOSTextBlockBodyMedium TextTrimming="CharacterEllipsis" Appearance="HighEmphasis" Text="{Binding Text, ElementName=_root}" />
+      </DataTemplate>
+      <DataTemplate x:Key="{markup:Static columnTemplates:CellText+CellTextInternals.NormalSelectedTemplateKey}">
+        <controls:VideoOSTextBlockInteractiveSmall TextTrimming="CharacterEllipsis" Appearance="HighEmphasis" Text="{Binding Text, ElementName=_root}" />
+      </DataTemplate>
+      <DataTemplate x:Key="{markup:Static columnTemplates:CellText+CellTextInternals.NormalDeselectedTemplateKey}">
+        <controls:VideoOSTextBlockBodySmall TextTrimming="CharacterEllipsis" Appearance="HighEmphasis" Text="{Binding Text, ElementName=_root}" />
+      </DataTemplate>
+      <DataTemplate x:Key="{markup:Static columnTemplates:CellText+CellTextInternals.CompactSelectedTemplateKey}">
+        <controls:VideoOSTextBlockInteractiveSmall TextTrimming="CharacterEllipsis" Appearance="HighEmphasis" Text="{Binding Text, ElementName=_root}" />
+      </DataTemplate>
+      <DataTemplate x:Key="{markup:Static columnTemplates:CellText+CellTextInternals.CompactDeselectedTemplateKey}">
+        <controls:VideoOSTextBlockBodySmall TextTrimming="CharacterEllipsis" Appearance="HighEmphasis" Text="{Binding Text, ElementName=_root}" />
+      </DataTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <ContentControl.ContentTemplate>
+    <MultiBinding Converter="{columnTemplates:CellTextContentTemplateConverter TallSelectedTemplate={StaticResource {markup:Static columnTemplates:CellTextInternals.TallSelectedTemplateKey}}, TallDeselectedTemplate={StaticResource {markup:Static columnTemplates:CellTextInternals.TallDeselectedTemplateKey}}, NormalSelectedTemplate={StaticResource {markup:Static columnTemplates:CellTextInternals.NormalSelectedTemplateKey}}, NormalDeselectedTemplate={StaticResource {markup:Static columnTemplates:CellTextInternals.NormalDeselectedTemplateKey}}, CompactSelectedTemplate={StaticResource {markup:Static columnTemplates:CellTextInternals.CompactSelectedTemplateKey}}, CompactDeselectedTemplate={StaticResource {markup:Static columnTemplates:CellTextInternals.CompactDeselectedTemplateKey}}}">
+      <Binding Path="RowAppearance" RelativeSource="{RelativeSource FindAncestor, AncestorType={markup:Type controls:VideoOSTable}}" />
+      <Binding Path="IsSelected" RelativeSource="{RelativeSource FindAncestor, AncestorType={markup:Type DataGridRow}}" />
+      <Binding Path="SelectionMode" RelativeSource="{RelativeSource FindAncestor, AncestorType={markup:Type controls:VideoOSTable}}" />
+    </MultiBinding>
+  </ContentControl.ContentTemplate>
+</ContentControl>

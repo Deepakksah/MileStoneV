@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Specification>
+  <Controls>
+    <Control ID="AvailableUnavailable" ControlType="ComboBox" Enum="OptionAvailable">
+      <Value ID="Available" LocalizationID="ClientProfileValueAvailable"></Value>
+      <Value ID="Unavailable" LocalizationID="ClientProfileValueUnavailable"></Value>
+    </Control>
+    <Control ID="ShowHide" Enum="OptionShowHide" ControlType="ComboBox">
+      <Value ID="Show" LocalizationID="ClientProfileValueShow"></Value>
+      <Value ID="Hide" LocalizationID="ClientProfileValueHide"></Value>
+    </Control>
+    <Control ID="YesNo" Enum="OptionYesNo" ControlType="ComboBox">
+      <Value ID="Yes" LocalizationID="ClientProfileValueYes"></Value>
+      <Value ID="No" LocalizationID="ClientProfileValueNo"></Value>
+    </Control>
+    <Control ID="Enabled" Enum="OptionEnabled" ControlType="ComboBox">
+      <Value ID="Enabled" LocalizationID="ClientProfileValueEnabled"></Value>
+      <Value ID="Disabled" LocalizationID="ClientProfileValueDisabled"></Value>
+    </Control>
+    <Control ID="EmptySpaces" Enum="OptionEmptySpaces" ControlType="ComboBox">
+      <Value ID="CompanyLogo" LocalizationID="ClientProfileValueLogoMilestone"></Value>
+      <Value ID="CustomLogo" LocalizationID="ClientProfileValueLogoCustom"></Value>
+      <Value ID="Nothing" LocalizationID="ClientProfileValueNothing"></Value>
+      <Value ID="BlackImage" LocalizationID="ClientProfileValueLogoBlackImage"></Value>
+    </Control>
+    <Control ID="EmptyCameraErrorMessage" Enum="OptionCameraErrors" ControlType="ComboBox">
+      <Value ID="ShowAsOverlay" LocalizationID="ClientProfileValueOverlayShow"></Value>
+      <Value ID="BlackImageWithOverlay" LocalizationID="ClientProfileValueOverlayBlackImage"></Value>
+      <Value ID="Hidden" LocalizationID="ClientProfileValueHideSeeHelp"></Value>
+    </Control>
+    <Control ID="EmptyServerErrorMessage" Enum="OptionServerErrors" ControlType="ComboBox">
+      <Value ID="ShowAsOverlay" LocalizationID="ClientProfileValueOverlayShow"></Value>
+      <Value ID="Hidden" LocalizationID="ClientProfileValueHide"></Value>
+    </Control>
+    <Control ID="ViewsGridSpaceWidth" Enum="OptionViewGridSpacer" ControlType="ComboBox">
+      <Value ID="Hide" LocalizationID="ClientProfileValueHide"></Value>
+      <Value ID="Pixel1" LocalizationID="ClientProfileValuePixelOne"></Value>
+      <Value ID="Pixel2" LocalizationID="ClientProfileValuePixelTwo"></Value>
+      <Value ID="Pixel3" LocalizationID="ClientProfileValuePixelThree"></Value>
+      <Value ID="Pixel4" LocalizationID="ClientProfileValuePixelFour"></Value>
+    </Control>
+    <Control ID="MaximizeButtonBehavior" Enum="OptionApplicationMaximization" ControlType="ComboBox">
+      <Value ID="FullScreen" LocalizationID="ClientProfileValueMaximizeFullscreen"></Value>
+      <Value ID="NormalWindow" LocalizationID="ClientProfileValueMaximizeNormal"></Value>
+    </Control>
+    <Control ID="StartMode" Enum="OptionApplicationStartMode" ControlType="ComboBox">
+      <Value ID="FullScreen" LocalizationID="ClientProfileValueFullScreen"></Value>
+      <Value ID="Maximized" LocalizationID="ClientProfileValueMaximized"></Value>
+      <Value ID="Window" LocalizationID="ClientProfileValueWindow"></Value>
+      <Value ID="Last" LocalizationID="ClientProfileValueLast"></Value>
+    </Control>
+    <Control ID="StartView" Enum="OptionStartView" ControlType="ComboBox">
+      <Value ID="Last" LocalizationID="ClientProfileValueLast"></Value>
+      <Value ID="None" LocalizationID="ClientProfileValueNone"></Value>
+      <Value ID="Ask" LocalizationID="ClientProfileValueAsk"></Value>
+    </Control>
+    <Control ID="BookmarkOverlayButton" Enum="OptionBookmarkMode" ControlType="ComboBox">
+      <Value ID="Quick" LocalizationID="ClientProfileValueBookmarkQuick"></Value>
+      <Value ID="Detail" LocalizationID="ClientProfileValueBookmarkAddDetail"></Value>
+      <Value ID="Unavailable" LocalizationID="ClientProfileValueUnavailable"></Value>
+    </Control>
+    <Control ID="ExportPath" Enum="OptionExportPath" ControlType="ComboBox">
+      <Value ID="Default" LocalizationID="ClientProfileValueDefault"></Value>
+      <Value ID="Custom" LocalizationID="ClientProfileValueCustom"></Value>
+    </Control>
+    <Control ID="PrintReportHeadline" Enum="OptionPrintReportHeadline" ControlType="ComboBox">
+      <Value ID="Default" LocalizationID="ClientProfileValueDefault"></Value>
+      <Value ID="Custom" LocalizationID="ClientProfileValueCustom"></Value>
+      <Value ID="Hide" LocalizationID="ClientProfileValueHide"></Value>
+    </Control>
+    <Control ID="MaxDecodingThreads" Enum="OptionMaxDecodingThreads" ControlType="ComboBox">
+      <Value ID="Auto" LocalizationID="ClientProfileValueAuto"></Value>
+      <Value ID="Normal" LocalizationID="ClientProfileValueNormal"></Value>
+      <Value ID="One" LocalizationID="ClientProfileValueOne"></Value>
+      <Value ID="Two" LocalizationID="ClientProfileValueTwo"></Value>
+      <Value ID="Three" LocalizationID="ClientProfileValueThree"></Value>
+      <Value ID="Four" LocalizationID="ClientProfileValueFour"></Value>
+      <Value ID="Five" LocalizationID="ClientProfileValueFive"></Value>
+      <Value ID="Six" LocalizationID="ClientProfileValueSix"></Value>
+      <Value ID="Seven" LocalizationID="ClientProfileValueSeven"></Value>
+      <Value ID="Eight" LocalizationID="ClientProfileValueEight"></Value>
+    </Control>
+    <Control ID="Deinterlacing" Enum="OptionDeinterlacing" ControlType="ComboBox">
+      <Value ID="Default" LocalizationID="ClientProfileValueNoFilter"></Value>
+      <Value ID="Bob_Top" LocalizationID="ClientProfileValueBobTop"></Value>
+      <Value ID="Bob_Bottom" LocalizationID="ClientProfileValueBobBottom"></Value>
+      <Value ID="Content_Adaptive_Vertical_Temporal" LocalizationID="ClientProfileValueContentAdaptiveVerticalTemporal"></Value>
+    </Control>
+    <Control ID="TimeZone" Enum="OptionTimeZone" ControlType="ComboBox">
+      <Value ID="LocalMachine" LocalizationID="ClientProfileValueTimeZoneLocalMachine"></Value>
+      <Value ID="MasterServer" LocalizationID="ClientProfileValueTimeZoneMasterServer"></Value>
+      <Value ID="UTC" LocalizationID="ClientProfileValueTimeZoneUTC"></Value>
+      <Value ID="Custom" LocalizationID="ClientProfileValueTimeZoneCustom"></Value>
+    </Control>
+    <Control ID="TimeZoneCustom" ControlType="CustomComboBox" ComboBoxPluginClassName="VideoOS.Administration.AddIn.ClientProfileAddIn.Plugin.ComboBoxPluginTimeZone" AssemblyFileName="VideoOS.Administration.AddIn.dll"></Control>
+    <Control ID="ExportDestinationType" Enum="OptionDestinationTypes" ControlType="ComboBox">
+      <Value ID="ToDisk" LocalizationID="ClientProfileValueToDisk"></Value>
+      <Value ID="ToMediaBurner" LocalizationID="ClientProfileValueToMediaBurner"></Value>
+      <Value ID="Both" LocalizationID="ClientProfileValueToDiskMediaBurner"></Value>
+    </Control>
+    <Control ID="VideoClipRequiredType" Enum="OptionRequired" ControlType="ComboBox">
+      <Value ID="Required" LocalizationID="ClientProfileValueRequired"></Value>
+      <Value ID="Optional" LocalizationID="ClientProfileValueOptional"></Value>
+      <Value ID="Unavailable" LocalizationID="ClientProfileValueUnavailable"></Value>
+    </Control>
+    <Control ID="ExportEncryptStrength" Enum="OptionEncryptionStrength" ControlType="ComboBox">
+      <Value ID="AES256" LocalizationID="ClientProfileValueEncryptStregthAES256"></Value>
+    </Control>
+    <Control ID="TimelineSkipGaps" Enum="OptionSkipGaps" ControlType="ComboBox">
+      <Value ID="DoSkipGaps" LocalizationID="ClientProfileValueDoSkipGaps"></Value>
+      <Value ID="DoNotSkipGaps" LocalizationID="ClientProfileValueDoNotSkipGaps"></Value>
+    </Control>
+    <Control ID="PtzPointToClick" Enum="OptionPtzPointAndClickMode" ControlType="ComboBox">
+      <Value ID="VirtualJoystick" LocalizationID="ClientProfileValueVirtualJoystick"></Value>
+      <Value ID="ClickToCenter" LocalizationID="ClientProfileValueClickToCenter"></Value>
+    </Control>
+    <Control ID="ExportVideoClipType" Enum="OptionExportVideoClipType" ControlType="ComboBox">
+      <Value ID="Audio" LocalizationID="ClientProfileValueAudio"></Value>
+      <Value ID="Video" LocalizationID="ClientProfileValueVideo"></Value>
+      <Value ID="Both" LocalizationID="ClientProfileValueAudioVideo"></Value>
+    </Control>
+    <Control ID="ExportVideoClipOutputType" Enum="OptionExportVideoClipOutputType" ControlType="ComboBox">
+      <Value ID="AVI" LocalizationID="ClientProfileValueAVI"></Value>
+      <Value ID="MKV" LocalizationID="ClientProfileValueMKV"></Value>
+    </Control>
+    <Control ID="ExportVideoClipMergeType" Enum="OptionExportVideoClipType" ControlType="ComboBox">
+      <Value ID="Video" LocalizationID="ClientProfileValueVideo"></Value>
+      <Value ID="Both" LocalizationID="ClientProfileValueAudioVideo"></Value>
+    </Control>
+    <Control ID="ExportMergeQualityType" Enum="OptionExportMergeQualityType" ControlType="ComboBox">
+      <Value ID="Highest" LocalizationID="ClientProfileSettingExportMergeQualityOptionHighest"/>
+      <Value ID="High" LocalizationID="ClientProfileSettingExportMergeQualityOptionHigh"/>
+      <Value ID="Medium" LocalizationID="ClientProfileSettingExportMergeQualityOptionMedium"/>
+      <Value ID="Low" LocalizationID="ClientProfileSettingExportMergeQualityOptionLow"/>
+      <Value ID="Lowest" LocalizationID="ClientProfileSettingExportMergeQualityOptionLowest"/>
+    </Control>
+    <Control ID="ExportMergeFramesPerSecondType" Enum="OptionExportMergeFpsType" ControlType="ComboBox">
+      <Value ID="Fps15" LocalizationID="ClientProfileSettingExportMergeFramesPerSecondOption15"/>
+      <Value ID="Fps24" LocalizationID="ClientProfileSettingExportMergeFramesPerSecondOption24"/>
+      <Value ID="Fps30" LocalizationID="ClientProfileSettingExportMergeFramesPerSecondOption30"/>
+      <Value ID="Fps60" LocalizationID="ClientProfileSettingExportMergeFramesPerSecondOption60"/>
+    </Control>
+    <Control ID="ExportMergeResolutionType" Enum="OptionExportMergeResolutionType" ControlType="ComboBox">
+      <Value ID="SD" LocalizationID="ClientProfileSettingExportMergeResolutionOptionSD"/>
+      <Value ID="HD" LocalizationID="ClientProfileSettingExportMergeResolutionOptionHD"/>
+      <Value ID="FullHD" LocalizationID="ClientProfileSettingExportMergeResolutionOptionFullHD"/>
+      <Value ID="UHD4K" LocalizationID="ClientProfileSettingExportMergeResolutionOptionUHD4K"/>
+    </Control>
+    <Control ID="ExportMergeFormatType" Enum="OptionExportMergeFormatType" ControlType="ComboBox">
+      <Value ID="MP4" LocalizationID="ClientProfileSettingExportMergeFormatOptionMP4"/>
+      <Value ID="MKV" LocalizationID="ClientProfileSettingExportMergeFormatOptionMKV"/>
+    </Control>
+    <Control ID="ExportMergeSequenceType" Enum="OptionExportMergeSequenceType" ControlType="ComboBox">
+      <Value ID="Sequential" LocalizationID="ClientProfileSettingExportMergeMediaSequenceTypeOptionExportListOrder"/>
+      <Value ID="Adaptive" LocalizationID="ClientProfileSettingExportMergeMediaSequenceTypeOptionExportAdaptive"/>
+    </Control>
+    <Control ID="ImageLookup" ControlType="Button" ButtonPluginClassName="VideoOS.Administration.AddIn.ClientProfileAddIn.Plugin.ButtonPluginCustomLogo" AssemblyFileName="VideoOS.Administration.AddIn.dll" ReportDisplayValueAsPicture="true"></Control>
+    <Control ID="InactivityTimeoutTextbox" ControlType="TextBox" ValidationPluginClassName="VideoOS.Administration.AddIn.ClientProfileAddIn.Plugin.ValidationPluginInactiveTimeout" AssemblyFileName="VideoOS.Administration.AddIn.dll"></Control>
+    <Control ID="EditLargeMessage" ControlType="TextBoxButton" ValidationPluginClassName="VideoOS.Administration.AddIn.ClientProfileAddIn.Plugin.ValidationPluginEditLargeMessage" ButtonPluginClassName="VideoOS.Administration.AddIn.ClientProfileAddIn.Plugin.ButtonPluginEditLargeMessage" AssemblyFileName="VideoOS.Administration.AddIn.dll" ReportDisplayValueAsPicture="false"></Control>
+    <Control ID="ExportDefaultFilePath" ControlType="TextBox" ValidationPluginClassName="VideoOS.Administration.AddIn.ClientProfileAddIn.Plugin.ValidationPluginExportDefaultFilePath" AssemblyFileName="VideoOS.Administration.AddIn.dll"></Control>
+    <Control ID="ManageAVIText" ControlType="Button" ButtonPluginClassName="VideoOS.Administration.AddIn.ClientProfileAddIn.Plugin.ButtonPluginManageAVIText" AssemblyFileName="VideoOS.Administration.AddIn.dll" ReportDisplayValueAsPicture="false"></Control>
+    <Control ID="EncryptionPassword" ControlType="Button" ButtonPluginClassName="VideoOS.Administration.AddIn.ClientProfileAddIn.Plugin.EncryptionPassword" AssemblyFileName="VideoOS.Administration.AddIn.dll" ReportDisplayValueAsPicture="false"></Control>
+    <Control ID="HideMouseCursorTimeout" Enum="OptionHideMousePointerInterval" ControlType="ComboBox">
+      <Value ID="Disabled" LocalizationID="ClientProfileValueHideMouseDisabled"></Value>
+      <Value ID="Seconds_5" LocalizationID="ClientProfileValueHideMouse5Seconds"></Value>
+      <Value ID="Seconds_10" LocalizationID="ClientProfileValueHideMouse10Seconds"></Value>
+      <Value ID="Seconds_20" LocalizationID="ClientProfileValueHideMouse20Seconds"></Value>
+      <Value ID="Seconds_30" LocalizationID="ClientProfileValueHideMouse30Seconds"></Value>
+    </Control>
+    <Control ID="VideoBuffer" Enum="OptionVideoBuffer" ControlType="ComboBox">
+      <Value ID="Standard" LocalizationID="ClientProfileValueVideoBufferStandard"></Value>
+      <Value ID="Minimum" LocalizationID="ClientProfileValueVideoBufferMinimum"></Value>
+      <Value ID="VerySmall" LocalizationID="ClientProfileValueVideoBufferVerySmall"></Value>
+      <Value ID="Small" LocalizationID="ClientProfileValueVideoBufferSmall"></Value>
+      <Value ID="Medium" LocalizationID="ClientProfileValueVideoBufferMedium"></Value>
+      <Value ID="Large" LocalizationID="ClientProfileValueVideoBufferLarge"></Value>
+      <Value ID="VeryLarge" LocalizationID="ClientProfileValueVideoBufferVeryLarge"></Value>
+      <Value ID="Maximum" LocalizationID="ClientProfileValueVideoBufferMaximum"></Value>
+    </Control>
+    <Control ID="VideoPlayerDiagnosticLevel" Enum="OptionVideoPlayerDiagnosticLevel" ControlType="ComboBox">
+      <Value ID="Level0" LocalizationID="ClientProfileValueVideoPlayerDiagnosticLevel0"></Value>
+      <Value ID="Level1" LocalizationID="ClientProfileValueVideoPlayerDiagnosticLevel1"></Value>
+      <Value ID="Level2" LocalizationID="ClientProfileValueVideoPlayerDiagnosticLevel2"></Value>
+      <Value ID="Level3" LocalizationID="ClientProfileValueVideoPlayerDiagnosticLevel3"></Value>
+    </Control>
+    <Control ID="VideoPlayerHardwareDecodingMode" Enum="OptionVideoPlayerHardwareDecodingMode" ControlType="ComboBox">
+      <Value ID="Auto" LocalizationID="ClientProfileValueVideoPlayerHardwareDecodingModeAuto"></Value>
+      <Value ID="Off" LocalizationID="ClientProfileValueVideoPlayerHardwareDecodingModeOff"></Value>
+    </Control>
+    <Control ID="GisMapCacheCleanUpWhen" Enum="OptionGisMapCacheCleanUp" ControlType="ComboBox">
+      <Value ID="Never" LocalizationID="ClientProfileValueGisMapCacheCleanWhenNever"></Value>
+      <Value ID="OnScClose" LocalizationID="ClientProfileValueGisMapCacheCleanWhenScClose"></Value>
+      <Value ID="OnScClose_IfFileNotUsed" LocalizationID="ClientProfileValueGisMapCacheCleanWhenFileNotUsed"></Value>
+    </Control>
+    <Control ID="EncryptionKey" ControlType="Button" ButtonPluginClassName="VideoOS.Administration.AddIn.ClientProfileAddIn.Plugin.EncryptionKey" AssemblyFileName="VideoOS.Administration.AddIn.dll" ReportDisplayValueAsPicture="false"></Control>
+    <Control ID="OpenStreetMapServerAddressString" ControlType="TextBox"></Control>
+    <Control ID="LiftPrivacyMask" Enum="OptionLiftPrivacyMaskTimeout" ControlType="ComboBox">
+      <Value ID="Minutes_2" LocalizationID="ClientProfileValue_LiftPrivacyMask_Minutes_2"></Value>
+      <Value ID="Minutes_10" LocalizationID="ClientProfileValue_LiftPrivacyMask_Minutes_10"></Value>
+      <Value ID="Minutes_30" LocalizationID="ClientProfileValue_LiftPrivacyMask_Minutes_30"></Value>
+      <Value ID="Minutes_60" LocalizationID="ClientProfileValue_LiftPrivacyMask_Minutes_60"></Value>
+      <Value ID="Minutes_120" LocalizationID="ClientProfileValue_LiftPrivacyMask_Minutes_120"></Value>
+      <Value ID="Until_Logout" LocalizationID="ClientProfileValue_LiftPrivacyMask_Until_Logout"></Value>
+    </Control>
+    <Control ID="CentralizedSearchMaxDeviceCountControl" Enum="OptionCentralizedSearchMaxDeviceCount" ControlType="ComboBox">
+      <Value ID="Count_50" LocalizationID="ClientProfileValue_CentralizedSearchMaxDeviceCount_Count_50"></Value>
+      <Value ID="Count_100" LocalizationID="ClientProfileValue_CentralizedSearchMaxDeviceCount_Count_100"></Value>
+      <Value ID="Count_500" LocalizationID="ClientProfileValue_CentralizedSearchMaxDeviceCount_Count_500"></Value>
+      <Value ID="Count_Unlimited" LocalizationID="ClientProfileValue_CentralizedSearchMaxDeviceCount_Count_Unlimited"></Value>
+    </Control>
+    <Control ID="TimelineHideForNormalViewsTimeout" Enum="OptionTimelineHideForNormalViewsInterval" ControlType="ComboBox">
+      <Value ID="Disabled" LocalizationID="ClientProfileValueTimelineHideForNormalViewsTimeoutDisabled"></Value>
+      <Value ID="Seconds_5" LocalizationID="ClientProfileValueTimelineHideForNormalViewsTimeout5Seconds"></Value>
+      <Value ID="Seconds_10" LocalizationID="ClientProfileValueTimelineHideForNormalViewsTimeout10Seconds"></Value>
+      <Value ID="Seconds_20" LocalizationID="ClientProfileValueTimelineHideForNormalViewsTimeout20Seconds"></Value>
+      <Value ID="Seconds_30" LocalizationID="ClientProfileValueTimelineHideForNormalViewsTimeout30Seconds"></Value>
+    </Control>
+    <Control ID="TimelineHideForSmartWallViewsTimeout" Enum="OptionTimelineHideForSmartWallViewsInterval" ControlType="ComboBox">
+      <Value ID="Disabled" LocalizationID="ClientProfileValueTimelineHideForSmartWallViewsTimeoutDisabled"></Value>
+      <Value ID="Seconds_5" LocalizationID="ClientProfileValueTimelineHideForSmartWallViewsTimeout5Seconds"></Value>
+      <Value ID="Seconds_10" LocalizationID="ClientProfileValueTimelineHideForSmartWallViewsTimeout10Seconds"></Value>
+      <Value ID="Seconds_20" LocalizationID="ClientProfileValueTimelineHideForSmartWallViewsTimeout20Seconds"></Value>
+      <Value ID="Seconds_30" LocalizationID="ClientProfileValueTimelineHideForSmartWallViewsTimeout30Seconds"></Value>
+    </Control>
+  </Controls>
+  <Warnings>
+    <Warning ID="GisMapWarning" LocalizationID="ClientProfileWarningGisMap">
+      <Parameter OEMID="Company" Index="0" Type="Text"/>
+      <Parameter OEMID="BrandName" Index="1" Type="Text"/>
+      <Parameter OEMID="GisMapGDPRWarningUrl" Index="2" Type="Hyperlink"/>
+    </Warning>
+  </Warnings>
+  <WarningTriggers>
+    <WarningTrigger ID="GisMapOpenStreetMapGeographicLayerWarningTrigger" TriggerUnlocked="true" TriggerLocked="false" TriggerOnNonDefaultValue="true"/>
+    <WarningTrigger ID="GisMapOpenStreetMapAlternativeServerWarningTrigger" TriggerUnlocked="true" TriggerLocked="false" TriggerOnNonDefaultValue="true"/>
+    <WarningTrigger ID="GisMapBingMapKeyWarningTrigger" TriggerUnlocked="true" TriggerLocked="false" TriggerOnNonDefaultValue="true"/>
+    <WarningTrigger ID="GisMapGoogleMapClientIdWarningTrigger" TriggerUnlocked="true" TriggerLocked="false" TriggerOnNonDefaultValue="true"/>
+    <WarningTrigger ID="GisMapGoogleMapPrivateKeyWarningTrigger" TriggerUnlocked="true" TriggerLocked="false" TriggerOnNonDefaultValue="true"/>
+    <WarningTrigger ID="GisMapGoogleMapSigningSecretWarningTrigger" TriggerUnlocked="true" TriggerLocked="false" TriggerOnNonDefaultValue="true"/>
+  </WarningTriggers>
+  <Settings>
+    <!-- When adding or removing options remember to update Corporate\Database\StoredProcedures\install_client_profile.sql  if needed.-->
+    <Section ID="General" App="MC" LocalizationIDName="ClientProfileSectionGeneralName" LocalizationIDHeader="ClientProfileSectionGeneralHeader" IconKey="ClientProfileSectionGeneralImage">
+      <Setting ID="GeneralTimeInTitlebar" ControlID="ShowHide" DefaultValue="Show" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGeneralTimeInTitlebar"/>
+      <Setting ID="GeneralTitleBar" ControlID="ShowHide" DefaultValue="Show" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGeneralTitleBar"/>
+      <Setting ID="GeneralHtmlViewItemScripting" ControlID="Enabled" DefaultValue="Disabled" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingGeneralAllowHtmlItemScripting"/>
+      <Setting ID="GeneralEmptySpaces" ControlID="EmptySpaces" DefaultValue="CompanyLogo" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGeneralEmptySpaces"/>
+      <Setting ID="ViewsCustomLogoInEmptySpaces" ControlID="ImageLookup" DefaultValue="" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingViewsCustomLogoInEmptySpaces"/>
+      <Setting ID="GeneralCameraErrors" ControlID="EmptyCameraErrorMessage" DefaultValue="BlackImageWithOverlay" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGeneralCameraErrors"/>
+      <Setting ID="GeneralServerErrors" ControlID="EmptyServerErrorMessage" DefaultValue="Hidden" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGeneralServerErrors"/>
+      <Setting ID="GeneralCameraStoppedMessage" ControlID="EmptyCameraErrorMessage" DefaultValue="BlackImageWithOverlay" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingCameraStoppedMessage"/>
+      <Setting ID="GeneralViewGridSpacer" ControlID="ViewsGridSpaceWidth" DefaultValue="Hide" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGeneralViewGridSpacer"/>
+      <Setting ID="GeneralApplicationMaximization" ControlID="MaximizeButtonBehavior" DefaultValue="FullScreen" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGeneralApplicationMaximization"/>
+      <Setting ID="ApplicationInactivityTimeout" ControlID="InactivityTimeoutTextbox" DefaultValue="0" LockedAvailable="false" DefaultLocked="true" LocalizationID="ClientProfileSettingApplicationInactivityTimeout"/>
+      <Setting ID="GeneralDefaultVideoBuffer" ControlID="VideoBuffer" DefaultValue="Standard" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGeneralDefaultVideoBuffer"/>
+      <Setting ID="ApplicationMinimizeButton" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationMinimizeButton"/>
+      <Setting ID="ApplicationMaximizeButton" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationMaximizeButton"/>
+      <Setting ID="ApplicationLogoutButton" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationLogoutButton"/>
+      <Setting ID="ApplicationExitButton" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationExitButton"/>
+      <Setting ID="ApplicationOptionsDialogButton" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationOptionsDialogButton"/>
+      <Setting ID="ApplicationKeyboardSetup" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationKeyboardSetup"/>
+      <Setting ID="ApplicationJoystickSetup" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationJoystickSetup"/>
+      <Setting ID="ApplicationRememberPassword" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationRememberPassword"/>
+      <Setting ID="ApplicationAutoLogin" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationAutoLogin"/>
+      <Setting ID="ApplicationStartMode" ControlID="StartMode" DefaultValue="Last" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationStartMode"/>
+      <Setting ID="ApplicationStartView" ControlID="StartView" DefaultValue="Last" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationStartView"/>
+      <Setting ID="ApplicationNewSCVersionWindow" ControlID="ShowHide" DefaultValue="Show" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationNewSCVersionWindow"/>
+      <Setting ID="ApplicationNewSCVersionText" ControlID="EditLargeMessage" DefaultValue="" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationNewSCVersionText"/>
+      <Setting ID="GeneralDefaultPtzPointAndClickMode" ControlID="PtzPointToClick" DefaultValue="VirtualJoystick" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGeneralDefaultPtzPointAndClickMode"/>
+      <Setting ID="SystemMonitorTab" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingSystemMonitorTab" Feature="SystemMonitor"/>
+      <Setting ID="CentralizedSearchTab" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingCentralizedSearchTab"/>
+      <Setting ID="CentralizedSearchMaxDeviceCount" ControlID="CentralizedSearchMaxDeviceCountControl" DefaultValue="Count_100" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingCentralizedSearchMaxDeviceCount"/>
+      <Setting ID="ApplicationHideMousePointerTimeout" ControlID="HideMouseCursorTimeout" DefaultValue="Seconds_5" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationHideMousePointerTimeout"/>
+      <Setting ID="AlarmManagerTab" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingAlarmManagerTab"/>
+      <Setting ID="ApplicationSnapshotAvailability" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingSnapshotAvailable"/>
+      <Setting ID="ApplicationSnapshotPath" ControlID="ExportDefaultFilePath" DefaultValue="ClientProfileSettingDefaultSnapshotPath" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingSnapshotPath"/>
+      <Setting ID="ApplicationSnapshotTimeStampOverlay" ControlID="ShowHide" DefaultValue="Hide" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingSnapshotTimeStampOverlay"/>
+      <Setting ID="ApplicationSnapshotCameraNameOverlay" ControlID="ShowHide" DefaultValue="Hide" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingSnapshotCameraNameOverlay"/>
+	  <Setting ID="ApplicationEvidenceLock" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationEvidenceLock" Feature="EvidenceLock"/>
+      <Setting ID="ApplicationLiftPrivacyMaskTimeout" ControlID="LiftPrivacyMask" DefaultValue="Minutes_30" LockedAvailable="false" DefaultLocked="true" LocalizationID="ClientProfileSettingApplicationLiftPrivacyMaskTimeout" Feature="ExtendedPrivacyMasking"/>
+      <Setting ID="ApplicationOnlineHelp" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationOnlineHelp"/>
+      <Setting ID="ApplicationVideoTutorials" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationVideoTutorials"/>
+      <Setting ID="ApplicationTransactTab" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingApplicationTransactTab"/>
+    </Section>
+    <Section ID="Advanced" App="MC" LocalizationIDName="ClientProfileSectionAdvancedName" LocalizationIDHeader="ClientProfileSectionAdvancedHeader" IconKey="ClientProfileSectionAdvancedImage">
+      <!-- When adding or removing options remember to update Corporate\Database\StoredProcedures\install_client_profile.sql  if needed.-->
+      <Setting ID="AdvancedMaxDecodingThreads" ControlID="MaxDecodingThreads" DefaultValue="Normal" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingAdvancedMaxDecodingThreads"/>
+      <Setting ID="AdvancedDeinterlacing" ControlID="Deinterlacing" DefaultValue="Default" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingAdvancedDeinterlacing"/>
+      <Setting ID="AdvancedVideoPlayerDiagnosticLevel" ControlID="VideoPlayerDiagnosticLevel" DefaultValue="Level0" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingAdvancedVideoPlayerDiagnosticLevel"/>
+      <Setting ID="AdvancedVideoPlayerHardwareDecodingMode" ControlID="VideoPlayerHardwareDecodingMode" DefaultValue="Auto" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingAdvancedVideoPlayerHardwareDecodingMode"/>
+      <Setting ID="AdvancedAdaptiveStreaming" ControlID="Enabled" DefaultValue="Disabled" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingAdvancedAdaptiveStreaming" Feature="AdaptiveStreaming"/>
+      <Setting ID="AdvancedTimeZone" ControlID="TimeZone" DefaultValue="LocalMachine" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingAdvancedTimeZone"/>
+      <Setting ID="AdvancedTimeZoneCustom" ControlID="TimeZoneCustom" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingAdvancedTimeZoneCustom"/>
+      <Setting ID="AdvancedMulticast" ControlID="Enabled" DefaultValue="Enabled" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingAdvancedMulticast"/>
+    </Section>
+    <Section ID="Live" App="MC" LocalizationIDName="ClientProfileSectionLiveName" LocalizationIDHeader="ClientProfileSectionLiveHeader" IconKey="ClientProfileSectionLiveImage">
+      <!-- When adding or removing options remember to update Corporate\Database\StoredProcedures\install_client_profile.sql  if needed.-->
+      <Setting ID="PanesLiveTab" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesLiveTab"/>
+      <Setting ID="PanesLiveViews" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesLiveViews"/>
+      <Setting ID="PanesLiveSystemOverview" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesLiveSystemOverview"/>
+      <Setting ID="PanesLiveAudio" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesLiveAudio"/>
+      <Setting ID="PanesLiveOutputs" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesLiveOutputs"/>
+      <Setting ID="PanesLiveEvents" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesLiveEvents"/>
+      <Setting ID="FunctionsLiveBookmarkMode" ControlID="BookmarkOverlayButton" DefaultValue="Quick" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsLiveBookmarkMode" Feature="Bookmarking"/>
+      <Setting ID="FunctionsLivePrintAvailability" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsLivePrintAvailability"/>
+      <Setting ID="FunctionsLiveCameraPlayback" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsLiveCameraPlayback"/>
+      <Setting ID="FunctionsLiveOverlayButtons" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsLiveOverlayButtons"/>
+      <Setting ID="FunctionsLiveBoundingBoxes" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsLiveBoundingBoxes"/>
+      <Setting ID="PanesLiveMIPPlugin" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesLiveMIPPlugin"/>
+    </Section>
+    <Section ID="Playback" App="MC" LocalizationIDName="ClientProfileSectionPlaybackName" LocalizationIDHeader="ClientProfileSectionPlaybackHeader" IconKey="ClientProfileSectionPlaybackImage">
+      <!-- When adding or removing options remember to update Corporate\Database\StoredProcedures\install_client_profile.sql  if needed.-->
+      <Setting ID="PanesPlaybackTab" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesPlaybackTab"/>
+      <Setting ID="PanesPlaybackViews" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesPlaybackViews"/>
+      <Setting ID="PanesPlaybackSystemOverview" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesPlaybackSystemOverview"/>
+      <Setting ID="PanesPlaybackAudio" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesPlaybackAudio"/>
+      <Setting ID="PanesPlaybackPrint" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesPlaybackPrint"/>
+      <Setting ID="FunctionsPlaybackPrintReportHeadline" ControlID="PrintReportHeadline" DefaultValue="Default" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsPlaybackPrintReportHeadline"/>
+      <Setting ID="FunctionsPlaybackPrintReportHeadlineText" ControlID="EditLargeMessage" DefaultValue="ClientProfileSettingDefaultFunctionsPlaybackPrintReportHeadlineText" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsPlaybackPrintReportHeadlineText"/>
+      <Setting ID="FunctionsPlaybackPrintReportUserInformation" ControlID="ShowHide" DefaultValue="Show" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsPlaybackPrintReportUserInformation"/>
+      <Setting ID="FunctionsPlaybackPrintReportCopyRights" ControlID="ShowHide" DefaultValue="Show" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsPlaybackPrintReportCopyRights"/>
+      <Setting ID="FunctionsPlaybackIndependentPlayback" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsPlaybackIndependentPlayback"/>
+      <Setting ID="FunctionsPlaybackBookmarkMode" ControlID="BookmarkOverlayButton" DefaultValue="Detail" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsPlaybackBookmarkMode" Feature="Bookmarking"/>
+      <Setting ID="FunctionsPlaybackBoundingBoxes" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsPlaybackBoundingBoxes"/>
+      <Setting ID="PanesPlaybackMIPPlugin" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesPlaybackMIPPlugin"/>
+    </Section>
+    <Section ID="Setup" App="MC" LocalizationIDName="ClientProfileSectionSetupName" LocalizationIDHeader="ClientProfileSectionSetupHeader" IconKey="ClientProfileSectionSetupImage">
+      <!-- When adding or removing options remember to update Corporate\Database\StoredProcedures\install_client_profile.sql  if needed.-->
+      <Setting ID="PanesSetupTab" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesSetupTab"/>
+      <Setting ID="PanesSetupViews" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesSetupViews"/>
+      <Setting ID="PanesSetupSystemOverview" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesSetupSystemOverview"/>
+      <Setting ID="PanesSetupOverlayButtons" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesSetupOverlayButtons"/>
+      <Setting ID="PanesSetupProperties" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesSetupProperties"/>
+      <Setting ID="FunctionsSetupOverlayButtons" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsSetupOverlayButtons"/>
+      <Setting ID="FunctionsSetupEnableVideoBufferingOption" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsSetupEnableVideoBufferingOption"/>
+      <Setting ID="PanesSetupMIPPlugin" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesSetupMIPPlugin"/>
+      <Setting ID="MapEditMaps" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingMapEditMaps"/>
+      <Setting ID="MapEditGisMap" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingMapEditGisMap" Feature="SmartMap"/>
+    </Section>
+    <Section ID="Export" App="MC" LocalizationIDName="ClientProfileSectionExportName" LocalizationIDHeader="ClientProfileSectionExportHeader" IconKey="ClientProfileSectionExportImage">
+      <!-- When adding or removing options remember to update Corporate\Database\StoredProcedures\install_client_profile.sql  if needed.-->
+      <Setting ID="ExportGeneralSeperator" IsSeperator="true" LocalizationID="ClientProfileSettingExportGeneralSeperator"/>
+      <Setting ID="PanesPlaybackExport" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingPanesPlaybackExport"/>
+      <Setting ID="ExportDestinationType" ControlID="ExportDestinationType" DefaultValue="Both" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportDestinationType"/>
+      <Setting ID="FunctionsPlaybackExportPath" ControlID="ExportPath" DefaultValue="Default" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsPlaybackExportPath"/>
+      <Setting ID="FunctionsPlaybackExportPathCustom" ControlID="ExportDefaultFilePath" DefaultValue="ClientProfileSettingDefaultFunctionsPlaybackExportPathCustom" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingFunctionsPlaybackExportPathCustom"/>
+      <Setting ID="ExportPrivacyMask" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportPrivacyMask"/>
+
+      <Setting ID="ClientProfileSettingExportSmartClientPlayerSeperator" IsSeperator="true" LocalizationID="ClientProfileSettingExportSmartClientPlayerSeperator"/>
+      <Setting ID="ExportSmartClientPlayerFormat" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportSmartClientPlayerFormat"/>
+      <Setting ID="ExportSmartClientPlayerIncludePlayer" ControlID="YesNo" DefaultValue="Yes" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportSmartClientPlayerIncludePlayer"/>
+      <Setting ID="ExportSmartClientPlayerLockForReExport" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportSmartClientPlayerLockForReExport"/>
+      <Setting ID="ExportSmartClientPlayerEncryptDatabases" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportSmartClientPlayerEncryptDatabases"/>
+      <Setting ID="ExportSmartClientPlayerEncryptPassword" ControlID="EncryptionPassword" DefaultValue="" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportSmartClientPlayerEncryptPassword"/>
+      <Setting ID="ExportSmartClientPlayerEncryptionStrength" ControlID="ExportEncryptStrength" DefaultValue="AES256" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportSmartClientPlayerEncryptionStrength"/>
+      <Setting ID="ExportSmartClientPlayerGlobalCommentsMode" ControlID="VideoClipRequiredType" DefaultValue="Optional" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportSmartClientPlayerGlobalCommentsMode"/>
+      <Setting ID="ExportSmartClientPlayerGlobalCommentsContent" ControlID="EditLargeMessage" DefaultValue="" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportSmartClientPlayerGlobalCommentsContent"/>
+      <Setting ID="ExportSmartClientPlayerIndividualCommentsMode" ControlID="VideoClipRequiredType" DefaultValue="Optional" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportSmartClientPlayerIndividualCommentsMode"/>
+      <Setting ID="ExportSmartClientPlayerSignData" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportSmartClientPlayerSignData"/>
+      
+      <Setting ID="ExportVideoClipSeperator" IsSeperator="true" LocalizationID="ClientProfileSettingExportVideoClipSeperator"/>
+      <Setting ID="ExportVideoClipFormat" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportVideoClipFormat"/>
+      <Setting ID="ExportVideoClipType" ControlID="ExportVideoClipType" DefaultValue="Both" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportVideoClipType"/>
+      <Setting ID="ExportVideoClipOutputType" ControlID="ExportVideoClipOutputType" DefaultValue="AVI" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportVideoClipOutputType"/>
+      <Setting ID="ExportVideoClipTimestamp" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportVideoClipTimestamp"/>
+      <Setting ID="ExportVideoClipFrameRate" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportVideoClipFrameRate"/>
+      <Setting ID="ExportVideoClipTextsMode" ControlID="VideoClipRequiredType" DefaultValue="Optional" LockedAvailable="false" DefaultLocked="false" LocalizationID="ClientProfileSettingExportVideoClipTextsMode"/>
+      <Setting ID="ExportVideoClipTextsContent" ControlID="ManageAVIText" DefaultValue="" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportVideoClipTextsContent"/>
+      <Setting ID="ExportVideoClipCodecProperties" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportVideoClipCodecProperties"/>
+    
+      <Setting ID="ExportMergeMediaSeperator" IsSeperator="true" LocalizationID="ClientProfileSettingExportMergeMediaSeperator"/>
+      <Setting ID="ExportMergeMediaPlayerFormat" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergeMediaPlayerFormat"/>
+      <Setting ID="ExportMergeVideoClipType" ControlID="ExportVideoClipMergeType" DefaultValue="Both" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergeVideoClipType"/>
+      <Setting ID="ExportMergeQuality" ControlID="ExportMergeQualityType" DefaultValue="Medium" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergeQuality"/>
+      <Setting ID="ExportMergeFramesPerSecond" ControlID="ExportMergeFramesPerSecondType" DefaultValue="Fps30" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergeFramesPerSecond"/>
+      <Setting ID="ExportMergeResolution" ControlID="ExportMergeResolutionType" DefaultValue="FullHD" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergeResolution"/>
+      <Setting ID="ExportMergeFormat" ControlID="ExportMergeFormatType" DefaultValue="MP4" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergeFormat"/>
+      <Setting ID="ExportMergeSequenceType" ControlID="ExportMergeSequenceType" DefaultValue="Sequential" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergeMediaSequenceType"/>
+      <Setting ID="ExportMergePreventUpscaling" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergePreventUpscaling"/>
+      <Setting ID="ExportMergeAddPadding" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergeAddPadding"/>
+      <Setting ID="ExportMergeIncludeTimestamps" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergeIncludeTimestamps"/>
+      <Setting ID="ExportMergeIncludeCameraNames" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportMergeIncludeCameraNames"/>
+      <Setting ID="ExportStillImageSeperator" IsSeperator="true" LocalizationID="ClientProfileSettingExportStillImageSeperator"/>
+      <Setting ID="ExportStillImageFormat" ControlID="AvailableUnavailable" DefaultValue="Available" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportStillImageFormat"/>
+      <Setting ID="ExportStillImageTimestamp" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingExportStillImageTimestamp"/>
+    </Section>
+    <Section ID="Timeline" App="MC" LocalizationIDName="ClientProfileSectionTimelineName" LocalizationIDHeader="ClientProfileSectionTimelineHeader" IconKey="ClientProfileSectionTimelineImage">
+      <!-- When adding or removing options remember to update Corporate\Database\StoredProcedures\install_client_profile.sql  if needed.-->
+      <Setting ID="TimelineIncomingAudio" ControlID="ShowHide" DefaultValue="Hide" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingTimelineIncomingAudio"/>
+      <Setting ID="TimelineOutgoingAudio" ControlID="ShowHide" DefaultValue="Hide" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingTimelineOutgoingAudio"/>
+      <Setting ID="TimelineMipData" ControlID="ShowHide" DefaultValue="Hide" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingTimelineMipData"/>
+      <Setting ID="TimelineBookmarks" ControlID="ShowHide" DefaultValue="Show" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingTimelineBookmarks" Feature="Bookmarking"/>
+      <Setting ID="TimelineMipMarker" ControlID="ShowHide" DefaultValue="Hide" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingTimelineMipMarker"/>
+      <Setting ID="TimelineMotion" ControlID="ShowHide" DefaultValue="Show" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingTimelineMotion"/>
+      <Setting ID="TimelineAllCamerasTimeline" ControlID="ShowHide" DefaultValue="Show" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingTimelineAllCamerasTimeline"/>
+      <Setting ID="TimelineSkipGaps" ControlID="TimelineSkipGaps" DefaultValue="DoSkipGaps" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingTimelineSkipGaps"/>
+      <Setting ID="TimelineHideForNormalViewsTimeout" ControlID="TimelineHideForNormalViewsTimeout" DefaultValue="Disabled" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingTimelineHideForNormalViewsTimeout"/>
+      <Setting ID="TimelineHideForSmartWallViewsTimeout" ControlID="TimelineHideForSmartWallViewsTimeout" DefaultValue="Seconds_5" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingTimelineHideForSmartWallViewsTimeout"/>
+    </Section>
+    <Section ID="AccessControl" App="MC" LocalizationIDName="ClientProfileSectionAccessControlName" LocalizationIDHeader="ClientProfileSectionAccessControlHeader" IconKey="ClientProfileSectionAccessControlImage">
+      <!-- When adding or removing options remember to update Corporate\Database\StoredProcedures\install_client_profile.sql  if needed.-->
+      <Setting ID="ShowAccessRequestNotifications" ControlID="YesNo" DefaultValue="Yes" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingShowAccessRequestNotifications"/>
+    </Section>
+    <Section ID="AlarmManager" App="MC" LocalizationIDName="ClientProfileSectionAlarmManagerName" LocalizationIDHeader="ClientProfileSectionAlarmManagerHeader" IconKey="ClientProfileSectionAlarmManagerImage">
+      <!-- When adding or removing options remember to update Corporate\Database\StoredProcedures\install_client_profile.sql  if needed.-->
+      <Setting ID="AlarmManagerShowDesktopNotifications" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingAlarmManagerShowAlarmDesktopNotifications"/>
+      <Setting ID="AlarmManagerPlaySoundNotifications" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingAlarmManagerPlayAlarmSoundNotifications"/>
+    </Section>
+    <Section ID="GisMap" App="MC" LocalizationIDName="ClientProfileSectionGisMapName" LocalizationIDHeader="ClientProfileSectionGisMapHeader" IconKey="ClientProfileSectionGisMapImage" Feature="SmartMap">
+      <!-- When adding or removing options remember to update Corporate\Database\StoredProcedures\install_client_profile.sql  if needed.-->
+      <Setting ID="GisMapOpenStreetMapGeographicLayer" ControlID="AvailableUnavailable" DefaultValue="Unavailable" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGisMapOpenStreetMapGeographicLayer" Feature="SmartMap" WarningID="GisMapWarning" WarningTriggerID="GisMapOpenStreetMapGeographicLayerWarningTrigger"/>
+      <Setting ID="GisMapOpenStreetMapAlternativeServer" ControlID="OpenStreetMapServerAddressString" DefaultValue="" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGisMapOpenStreetMapAlternativeServer" Feature="SmartMap" WarningID="GisMapWarning" WarningTriggerID="GisMapOpenStreetMapAlternativeServerWarningTrigger"/>
+      <Setting ID="GisMapCreateLayerLocation" ControlID="YesNo" DefaultValue="No" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGisMapCreateLayerLocation" Feature="SmartMap"/>
+      <Setting ID="GisMapCacheCleanUp" ControlID="GisMapCacheCleanUpWhen" DefaultValue="OnScClose_IfFileNotUsed" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGisMapCacheCleanUp" Feature="SmartMap"/>
+      <Setting ID="GisMapBingMapKey" ControlID="EncryptionKey" DefaultValue="" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGisMapBingMapKey" Feature="SmartMapOtherProviders" WarningID="GisMapWarning" WarningTriggerID="GisMapBingMapKeyWarningTrigger"/>
+      <Setting ID="GisMapGoogleMapClientId" ControlID="EncryptionKey" DefaultValue="" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGisMapGoogleMapClientId" Feature="SmartMapOtherProviders" WarningID="GisMapWarning" WarningTriggerID="GisMapGoogleMapClientIdWarningTrigger"/>
+      <Setting ID="GisMapGoogleMapPrivateKey" ControlID="EncryptionKey" DefaultValue="" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGisMapGoogleMapPrivateKey" Feature="SmartMapOtherProviders" WarningID="GisMapWarning" WarningTriggerID="GisMapGoogleMapPrivateKeyWarningTrigger"/>
+      <Setting ID="GisMapGoogleMapSigningSecret" ControlID="EncryptionKey" DefaultValue="" LockedAvailable="true" DefaultLocked="false" LocalizationID="ClientProfileSettingGisMapGoogleMapSigningSecret" Feature="SmartMapOtherProviders" WarningID="GisMapWarning" WarningTriggerID="GisMapGoogleMapSigningSecretWarningTrigger"/>
+    </Section>
+  </Settings>
+</Specification>

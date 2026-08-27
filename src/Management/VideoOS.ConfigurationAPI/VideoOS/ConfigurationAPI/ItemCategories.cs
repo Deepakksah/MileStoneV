@@ -1,0 +1,10 @@
+namespace VideoOS.ConfigurationAPI;
+
+public static class ItemCategories
+{
+	public static string Group = "Group";
+
+	public static string Item = "Item";
+
+	public static string ChildItem = "ChildItem";
+}

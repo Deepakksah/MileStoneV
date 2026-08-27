@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="StringRecorderKBLinkDescription" xml:space="preserve"><value>要更新您的記錄伺服器，請按照以下指示操作：</value></data>
+  <data name="StringHeading" xml:space="preserve"><value>警告</value></data>
+  <data name="StringReason" xml:space="preserve"><value>有可用的重要安全修補程式。
+
+在繼續進行此升級前，確保所有記錄伺服器已更新此安全修補程式
+如果不更新記錄伺服器而繼續，將會導致記錄伺服器發生故障。</value></data>
+  <data name="WarningPageHeadingDetails" xml:space="preserve"><value>只有在錄影伺服器升級後，證據鎖定才能正常運作。</value></data>
+  <data name="WarningPageBodyDetails" xml:space="preserve"><value>舊版錄影伺服器不支援建立、修改或刪除證據鎖定。</value></data>
+  <data name="WarningPageBodySubsection" xml:space="preserve"><value>將您的錄影伺服器升級至新的版本。</value></data>
+  <data name="StringNextAction" xml:space="preserve"><value>沒有此安全修補程式，記錄伺服器將在系統升級後無法與管理伺服器通訊。</value></data>
+  <data name="StringCheckBoxAccept" xml:space="preserve"><value>此安全修補程式已安裝在所有記錄伺服器上</value></data>
+  <data name="WarningPageHeadingSubsection" xml:space="preserve"><value>後續步驟</value></data>
+  </root>

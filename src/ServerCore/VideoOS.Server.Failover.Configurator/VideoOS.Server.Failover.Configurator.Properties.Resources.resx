@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="atom_icon_help_off" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAIAEAAAKJUE5HDQoaCgAA
+AA1JSERSAAAADAAAAA0IBgAAAJ0pj0IAAAAEZ0FNQQAAsY8L/GEFAAAA10lEQVQoU5WRMQ6DMBAE
+eU2+koYqL8kf0vIJI0AUlC6oqFK7oaakjxTRBCTiOXEWJg1ZaaXD3r1bH8n1nv7F6CPP81td18+y
+LN+QmrO9JhRe4PzlOo7jOk2TkLppmrmqKhsZiqJ4WGs/y7KIcBgGEQPOMPmGmRiMMRfGcwG6rlsx
+M805N6sJDVrJ3bbtS9QeTAAYoQINWomjnRREIobGAmjQ/kwARzEIE45vAEzQaCB6w7bSjK5qou77
+XmrOWAJxwlohu9Yo+//AtnxDp7pggGQ8/afPMU2+OkqTYlhwv/0AAAAASUVORK5CYIIL</value></data><data name="FailoverWizardForm_WebServerPasswordUnsupportedCharError" xml:space="preserve"><value>Password contains one or more unsupported characters.</value></data>
+  <data name="warning_status" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAUwIAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAJAAAACcIBgAAAGeU6jYAAAAEZ0FNQQAAsY8L/GEFAAACCklEQVRYR+3WS0sCURTA
+cb9MjqaQ1h2lrDQLKkKoaBMuWtVOWkkQVFARUVT76DP0EYK20UN7UEFEtJAIqYjU3o8TnriNZ64z
+44zTogv/hXgWhx/XcRxmnNyyxKDiR/tPYdm5ChU/2ntAJr/i3Ib+hBLI4EK2K/E6mK1KvA5mmxKl
+g9miROlgVVcS6WBVVRLpYFVT0qKDVUVJiw5muZIeHcxSJT06mGVKlM5G0nMSDrFnvqt5aU85Z4kS
+pbM55jn2scAH3+1CzY5yznQltbuzNV57pFjonZqDTFVSuzvpSfchv1AwGHil5iDTlNR0oNNp1z6/
+UGuT/EzNYaYoqelAl3NSil+oo4U9UnNYxUoiHSi76NzlF+qJsDw1x1eRkkgHyn3FL9Tfzh6oOT7D
+SuV0MBaQ33ChwU52T80oM6RUTgcLNQZecKGh7vo7akaZbiWtOlA0JD/hQiMx/w01Q6VLSasO1BmW
+C7hQotefpWaoNCvp0YFibSyPCyUHfNfUjFqalPToQBezrhQ8IKEM8ccqqqySXh0zEirp1YHm4nWZ
+aLP81B1hhbVh7wU1I0pVyYiO8vUDnkmXs1KKmhVFKhnRWU94z/iFoNSE+5CaFVWiZPTuPCw5t+Nd
+DfewiP/rXWi0r17zz17ZLyUjOnwHU66D8xkpTX2ntR8lozpW9K1UqY6Zldyl//P3j8PxCUjnP4n7
+67oBAAAAAElFTkSuQmCCCw==</value></data><data name="FailoverWizardForm_Title_Primary" xml:space="preserve"><value>primary computer</value></data>
+  <data name="FailoverWizardForm_WebServerConfirmPasswordDoesNotMatchError" xml:space="preserve"><value>Passwords do not match.</value></data>
+  <data name="FailoverWizardForm_CertificatePage_Description" xml:space="preserve"><value>To encrypt the connection to the failover web console, you need a server certificate.
+You must install the server certificate on all computers that will access the failover web console.</value></data>
+  <data name="FailoverWizardForm_HttpsDescriptionText" xml:space="preserve"><value>{0} recommends that you use a secure connection between the two computers.</value></data>
+  <data name="FailoverWizardForm_ProcessingPage_DeconfigureHeader" xml:space="preserve"><value>Removing configuration...</value></data>
+  <data name="FailoverWizardForm_Title_Secondary" xml:space="preserve"><value>secondary computer</value></data>
+  <data name="FailoverWizardForm_LicenseChangedCompleteDescription" xml:space="preserve"><value>Failover license applied successfully. You can now close this wizard.</value></data>
+  <data name="FailoverWizardForm_FinalizeSecondaryPageHeader" xml:space="preserve"><value>Configuration completed successfully</value></data>
+  <data name="FailoverWizardForm_CertificateGenerationCompleteHeader" xml:space="preserve"><value>Download completed</value></data>
+  <data name="FailoverWizardForm_MessageBoxContinueDeconfigurationTitle" xml:space="preserve"><value>Remove the failover configuration from this computer</value></data>
+  <data name="FailoverWizardForm_CertificateGenerationComplete" xml:space="preserve"><value>You can find the server certificate at {0}.</value></data>
+  <data name="FailoverWizardForm_MustBeAdminError" xml:space="preserve"><value>You must be a member of the Administrators role in '{0}' to complete this operation..</value></data>
+  <data name="FailoverWizardForm_MessageBoxContinuePrimaryText" xml:space="preserve"><value>If the secondary computer is not prepared, the failover management server configuration will fail.</value></data>
+  <data name="FailoverWizardForm_ProcessingPage_GenerateHeader" xml:space="preserve"><value>Downloading server certificate to the selected folder…</value></data>
+  <data name="FailoverWizardForm_SecondaryMachineAddressSameAsFirst_Error" xml:space="preserve"><value>The address of the primary computer and the secondary computer cannot be identical.</value></data>
+  <data name="FailoverWizardForm_ProcessingPage_FinalizeHeader" xml:space="preserve"><value>Completing configuration…</value></data>
+  <data name="FailoverWizardForm_MessageBoxCloseWizardText" xml:space="preserve"><value>You may need to remove the configuration and start the process again.</value></data>
+  <data name="FailoverWizardForm_MessageBoxButtonCancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="FailoverWizardForm_SetWebServerPasswordCompleteDescription" xml:space="preserve"><value>Make sure the password is changed on the primary and the secondary computer.</value></data>
+  <data name="FailoverWizardForm_VirtualIPInUse_Error" xml:space="preserve"><value>This IP address is already in use. Choose a different address.</value></data>
+  <data name="FailoverWizardForm_GeneralErrorHeader" xml:space="preserve"><value>Configuration of the failover management server failed</value></data>
+  <data name="FailoverWizardForm_MessageBoxCloseWizardTitle" xml:space="preserve"><value>Are you sure you want to cancel?</value></data>
+  <data name="FailoverWizardForm_NotInstalledErrorHeader" xml:space="preserve"><value>{0} is not installed on this computer</value></data>
+  <data name="FailoverWizardForm_MessageBoxButtonConfirm" xml:space="preserve"><value>Confirm</value></data>
+  <data name="FailoverWizardForm_CertificatePasswordLengthError" xml:space="preserve"><value>The length of the password must be between 6 and 32 characters long.</value></data>
+  <data name="FailoverWizardForm_MessageBoxButtonNo" xml:space="preserve"><value>No</value></data>
+  <data name="FailoverWizardForm_ToCompleteMessage" xml:space="preserve"><value>To complete the setup of {0}, register the recording server and other remote servers with the Virtual IP address of the failover management server. 
+</value></data>
+  <data name="FailoverWizardForm_MessageBoxButtonContinue" xml:space="preserve"><value>Continue</value></data>
+  <data name="FailoverWizardForm_CertificatePasswordUnsupportedCharError" xml:space="preserve"><value>Password contains one or more unsupported characters.</value></data>
+  <data name="FailoverWizardForm_NotSupportedErrorDescription" xml:space="preserve"><value>Contact your reseller for more information.</value></data>
+  <data name="FailoverWizardForm_ProcessingPage_CheckingSystemHeader" xml:space="preserve"><value>Checking your system...</value></data>
+  <data name="FailoverWizardForm_LicenseFileSelect_Filter" xml:space="preserve"><value>Text files (*.txt)|*.txt</value></data>
+  <data name="FailoverWizardForm_ProcessingPage_SetWebServerPasswordHeader" xml:space="preserve"><value>Setting password for authentication...</value></data>
+  <data name="copy_security_code" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0
+ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAlAEAAAKJUE5HDQoaCgAA
+AA1JSERSAAAAGAAAABoIBgAAAK2/nPMAAAAEZ0FNQQAAsY8L/GEFAAABS0lEQVRIS82VsUrFMBSG
+41soDnJREF/Czaa36ju4O+ns6ugmCkmKij6ADi6CLj6ECC45F4voKjrWk5CUXr0ntU3l+sNH6Uly
+PmhCyv4867JYSQVwkvx52U3tFi7hMBG6JJHwnilYddPbp1FgiJF4ARdwVZblTJ1E6rVEwEeUpBJI
+uHSlsViJ1J+dJZQAmylsfG0RoK3ASXwdD8Gum06HEuAne6qaBkDJnlsyOU0CfN7j2FGN47rAEJTg
+grBAwrYr2djNr5q7A4CQkhgBNt3C8cfa+09JjGCYQ8LP3+aCkliBqQUlMQIcAy70g6PwdcOmfBnY
+BTGCEFyNluyCtgKTVMHOJHDufi8CKsNTWJyq4CZTxYLH3z+9CSj+vyA7eZ01/+XvYGPoRUClt02m
+4gX4Y7nlCg5+hYC8vaAjjYJU6gu8X+66snE2mmeMsS9rqDn/5n651AAAAABJRU5ErkJgggs=</value></data><data name="FailoverWizardForm_LicenseInfoHost" xml:space="preserve"><value>Host</value></data>
+  <data name="FailoverWizardForm_ProcessingPage_ValidateHeader" xml:space="preserve"><value>Validating connection. This may take some time. Please wait…</value></data>
+  <data name="FailoverWizardForm_NoConnection_Error" xml:space="preserve"><value>No connection to certificate authority service.</value></data>
+  <data name="FailoverWizardForm_SecondaryMachineAddressValidation_Error" xml:space="preserve"><value>Cannot find a computer under that address. Try again.</value></data>
+  <data name="FailoverWizardForm_MaintenanceGetLicenseInfoFail" xml:space="preserve"><value>Unable to load license information from this computer.</value></data>
+  <data name="FailoverWizardForm_ProcessingPage_PrepareSecondHeader" xml:space="preserve"><value>Preparing secondary computer…</value></data>
+  <data name="FailoverWizardForm_SecurityCodeValidation_Error" xml:space="preserve"><value>Security codes do not match.</value></data>
+  <data name="FailoverWizardForm_ButtonClose" xml:space="preserve"><value>Close</value></data>
+  <data name="FailoverWizardForm_Deconfiguration_GeneralErrorMessage" xml:space="preserve"><value>For more information, visit  &lt;a href="{0}"&gt;{1} Support&lt;/a&gt;</value></data>
+  <data name="FailoverWizardForm_MessageBoxButtonYes" xml:space="preserve"><value>Yes</value></data>
+  <data name="FailoverWizardForm_NotInstalledErrorDescription" xml:space="preserve"><value>&lt;a href="{0}"&gt;Learn more&lt;/a&gt; about the installation and configuration of {1}.</value></data>
+  <data name="FailoverWizardForm_WebServerPasswordLengthError" xml:space="preserve"><value>The length of the password must be between 6 and 32 characters long.</value></data>
+  <data name="FailoverWizardForm_MessageBoxLicenseText" xml:space="preserve"><value>You must use the same license on the secondary computer.
+
+If you do not add a license, the Management Server service stops after three days.</value></data>
+  <data name="FailoverWizardForm_MessageBoxLicenseTitle" xml:space="preserve"><value>Add a failover license on this computer</value></data>
+  <data name="FailoverWizardForm_MessageBoxContinuePrimaryTitle" xml:space="preserve"><value>Confirm that you have prepared the secondary computer</value></data>
+  <data name="FailoverWizardForm_MessageBoxContinueSecondaryTitle" xml:space="preserve"><value>Before you continue</value></data>
+  <data name="FailoverWebConsoleShortcut" xml:space="preserve"><value>Web Console</value></data>
+  <data name="FailoverWizardForm_ProcessingPage_PreparePrimaryHeader" xml:space="preserve"><value>Preparing primary computer…</value></data>
+  <data name="FailoverWizardForm_MessageBoxContinueDeconfigurationText" xml:space="preserve"><value>If you continue, you will remove the failover configuration from this computer.
+
+Your system access will be lost. To restore system access, replace the Virtual IP with the address of the current management server.</value></data>
+  <data name="FailoverWizardForm_GeneralErrorMessage" xml:space="preserve"><value>For more information, visit  &lt;a href="{0}"&gt;{1} Support&lt;/a&gt;</value></data>
+  <data name="FailoverWizardForm_NotSupportedErrorHeader" xml:space="preserve"><value>Your {0} product does not support {1}</value></data>
+  <data name="FailoverWizardForm_SetWebServerPasswordCompleteHeader" xml:space="preserve"><value>Password changed successfully on this computer.</value></data>
+  <data name="FailoverWizardForm_EmptyField_Error" xml:space="preserve"><value>The field cannot be empty.</value></data>
+  <data name="FailoverWizardForm_VirtualIPValidation_Error" xml:space="preserve"><value>IP address is invalid.</value></data>
+  <data name="FailoverWizardForm_MessageBoxContinueSecondaryText" xml:space="preserve"><value>Please confirm that the following tasks are completed:
+Install the following {4} VMS components:
+	   •  {0}
+	   •  {1}
+	   •  {2}
+	   •  {3} 
+
+Make a backup of the existing management server configuration.
+Schedule a downtime. You will lose access to the management
+server during the configuration.</value></data>
+  </root>

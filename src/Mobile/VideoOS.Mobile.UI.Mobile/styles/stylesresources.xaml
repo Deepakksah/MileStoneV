@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="TextBlockDefaultStyle.xaml" />
+    <ResourceDictionary Source="TextBoxDefaultStyle.xaml" />
+    <ResourceDictionary Source="CheckBoxDefaultStyle.xaml" />
+    <ResourceDictionary Source="ComboBoxDefaultStyle.xaml" />
+    <ResourceDictionary Source="ButtonDefaultStyle.xaml" />
+    <ResourceDictionary Source="DatePickerDefaultStyle.xaml" />
+    <ResourceDictionary Source="GroupBoxExpanderStyle.xaml" />
+    <ResourceDictionary Source="TextBoxTrimStyle.xaml" />
+    <ResourceDictionary Source="GroupBoxExpanderToggleButtonStyle.xaml" />
+    <ResourceDictionary Source="../Templates/InputValidationErrorTemplate.xaml" />
+    <ResourceDictionary Source="../Controls/GroupBoxExpander/GroupBoxExpanderTemplate.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="DUMMY_TEST_STRING" xml:space="preserve"><value>None</value></data>
+  <data name="BodyTextNoBackwardCompability" xml:space="preserve"><value>You cannot access your existing server logs after this system upgrade.</value></data>
+  <data name="DetailTextNoBackwardCompability" xml:space="preserve"><value>1. Cancel this installation.
+2. Open {0} and export your existing server logs to a text file that you can access when needed.
+3. Restart this installation.
+
+For more information, see: {{0}}</value></data>
+  <data name="SubHeading" xml:space="preserve"><value>Next steps</value></data>
+  <data name="DetailTextMoreSecureLog" xml:space="preserve"><value>1. Continue this installation.
+2. Open {0} immediately after installation.
+3. On the "Tools" tab, select "Options", and then on the "Server Logs" tab, select the "Allow 2018 R2 and earlier components to write logs" check box.
+This allows system components regardless of version to write their logs to the log server database.
+4. Check the version of all system components that write logs and upgrade them if they are version 2018 R2 (12.2a) or earlier. 
+5. Open {1} again and clear the "Allow 2018 R2 and earlier components to write logs" check box.
+
+For more information, see: {{0}}</value></data>
+  <data name="HeadlineMoreSecureLog" xml:space="preserve"><value>A more secure way for log communication between {0} system components</value></data>
+  <data name="BodyTextMoreSecureLog" xml:space="preserve"><value>You may have system components that are version 2018 R2 (12.2a) or earlier and that write logs. These system components write their logs in a less secure way than later versions.</value></data>
+  <data name="HelpText" xml:space="preserve"><value>{0} help</value></data>
+  <data name="HeadlineNoBackwardCompability" xml:space="preserve"><value>Server logs: no backward compatibility</value></data>
+  </root>

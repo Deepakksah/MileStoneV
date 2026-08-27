@@ -1,0 +1,1597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="5EF48046-B3EE-4DCC-9FF9-E05C1B126654" xml:space="preserve"><value>デイ開</value></data>
+  <data name="0B803EC7-3437-435E-9C17-341D7EE2810C" xml:space="preserve"><value>AOI左</value></data>
+  <data name="4DF236B3-AB60-42CD-9E15-7D26B744A276" xml:space="preserve"><value>自動屋外</value></data>
+  <data name="7EEBA0AB-DA8B-410A-BBDB-3B621ADEB9A0" xml:space="preserve"><value>等温線有効</value></data>
+  <data name="9438115F-55D6-4A29-92C1-A6F94D2225A7" xml:space="preserve"><value>OSD 日付</value></data>
+  <data name="6DE3872E-EC3D-4C96-83A0-067ACCE19599" xml:space="preserve"><value>ビデオロス開始</value></data>
+  <data name="80F3B591-F659-4A05-AC58-EEC0D50413D6" xml:space="preserve"><value>レベル6</value></data>
+  <data name="D1AEAFBF-7E79-49F0-A15E-28189BCEECF6" xml:space="preserve"><value>トリガー使用、スケジュール使用、連続</value></data>
+  <data name="CF6AC0C0-C43B-4026-BBD8-92E3F1C2C310" xml:space="preserve"><value>シーン6</value></data>
+  <data name="9C228BF6-78E6-4F6E-B8EC-182B2781594C" xml:space="preserve"><value>圧縮P-フレーム</value></data>
+  <data name="747E569E-72B8-4550-85A4-60FDC6796B60" xml:space="preserve"><value>フリッカレス</value></data>
+  <data name="34E200EF-213E-40AC-A11B-C66E608986ED" xml:space="preserve"><value>レート制限モード</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F12" xml:space="preserve"><value>ビデオストリーム12</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F13" xml:space="preserve"><value>ビデオストリーム13</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F10" xml:space="preserve"><value>ビデオストリーム10</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F11" xml:space="preserve"><value>ビデオストリーム11</value></data>
+  <data name="AE70E690-274E-4CBF-9364-A0C7B3D5A7AA" xml:space="preserve"><value>2Mダブルパノラマ + 魚眼</value></data>
+  <data name="96F215C4-FE35-42B8-A352-7138660F4B6C" xml:space="preserve"><value>人物検出</value></data>
+  <data name="141FDC76-E169-49A8-BB61-D4BC09FD6885" xml:space="preserve"><value>モザイク列の最大数</value></data>
+  <data name="FD323126-7E7D-4A6F-A36A-378B477D5DCA" xml:space="preserve"><value>高 CAVLC プロファイル</value></data>
+  <data name="D8F70B8A-DB79-401A-9E8D-4EC31F4C79AA" xml:space="preserve"><value>自動</value></data>
+  <data name="83694463-8F8B-427D-9418-2A297556629A" xml:space="preserve"><value>解像度 幅</value></data>
+  <data name="6D4009AF-1B36-4852-AAAD-8CEF6EB941DE" xml:space="preserve"><value>G711 オーディオビットレート (kビット/秒)</value></data>
+  <data name="AABF7636-2DEB-457A-A95A-EEA5D6B33BC4" xml:space="preserve"><value>自動露光</value></data>
+  <data name="72328392-61B1-4989-BF99-235C7C3D45AA" xml:space="preserve"><value>温度が適正範囲を超えています</value></data>
+  <data name="BE693B0D-9117-4D6E-8015-87EAD536FE84" xml:space="preserve"><value>最速</value></data>
+  <data name="1E31F15C-5117-4900-83F4-030749CA877E" xml:space="preserve"><value>パノラマ 360: 640x208</value></data>
+  <data name="674575D1-C782-48E5-931D-805DE0CCDA9A" xml:space="preserve"><value>ビデオ入力2</value></data>
+  <data name="B16E86D7-4B9D-4355-877E-128DD229700D" xml:space="preserve"><value>プロファイル9</value></data>
+  <data name="FD0FDCB6-DFD8-475C-AC1E-E3924D7C996E" xml:space="preserve"><value>インテリジェントシーンキャプチャ(低ノイズ)</value></data>
+  <data name="9E9F9ACE-228C-4116-A7B9-C91BB2242D40" xml:space="preserve"><value>AAC 64 キロビット/秒</value></data>
+  <data name="3B0460A0-ED9A-41A5-A94C-67873160C592" xml:space="preserve"><value>1Mダブルパノラマ + 魚眼</value></data>
+  <data name="31D53E24-C32D-4899-B63E-806F400A984D" xml:space="preserve"><value>EV補正</value></data>
+  <data name="D667F206-ACCA-4CE4-9422-4D4E2C6B32D6" xml:space="preserve"><value>最大AGC</value></data>
+  <data name="5079CAC5-1D73-42F7-B53E-9A8626075E9A" xml:space="preserve"><value>解像度(MJPEG/MPEG-4)</value></data>
+  <data name="D2B2AAAF-06A1-42A6-B21A-6C7DA8890422" xml:space="preserve"><value>2 分割</value></data>
+  <data name="72D9DAF2-EC0D-4F10-B11C-658071FC98DD" xml:space="preserve"><value>1.3M シングル PTZ [4:3]</value></data>
+  <data name="0FB90117-F316-49C0-876A-2DF86C084E71" xml:space="preserve"><value>ソフトウェアバージョン</value></data>
+  <data name="19BC7C1A-EBC5-4A74-87AC-FC3EDBA2425A" xml:space="preserve"><value>ホワイトバランスRゲイン</value></data>
+  <data name="B066F130-64BA-4916-8438-77C3FFB3552F" xml:space="preserve"><value>ナイト閾値</value></data>
+  <data name="C01458B5-CD6E-4B12-999F-9299A8E0916D" xml:space="preserve"><value>大まかな</value></data>
+  <data name="C76D0783-0747-4462-973E-AB5C3FDC8E77" xml:space="preserve"><value>ビデオフォーマット</value></data>
+  <data name="35A0387C-D7BD-4A0A-B0A9-0A5B1A806BF2" xml:space="preserve"><value>デイタイム終了</value></data>
+  <data name="E2D15C21-E355-4EFC-9731-B64F30E866E4" xml:space="preserve"><value>JPEG 画質制御モード</value></data>
+  <data name="53F67C8F-7CBB-4062-BCB7-4F53BC71565A" xml:space="preserve"><value>最小ビットレート (kbit/秒)</value></data>
+  <data name="9B681B4F-5865-44F3-BFEF-0B264C051CB1" xml:space="preserve"><value>ビューの選択</value></data>
+  <data name="53C97321-A832-46E7-88FF-4B015CDCE0D7" xml:space="preserve"><value>パロラマ複合: 640x480</value></data>
+  <data name="48393ED4-3961-4C57-ACC2-DB4BEBACF483" xml:space="preserve"><value>スケジュール使用、トリガー使用、連続</value></data>
+  <data name="04161237-1C72-4B1E-AB85-176A1998DAD6" xml:space="preserve"><value>衝撃検出</value></data>
+  <data name="6E025772-1FE7-4D6B-84A5-F1553A3A59A4" xml:space="preserve"><value>夜間の露出モード</value></data>
+  <data name="4913B3E1-11D5-41C0-B87A-DDE19F106627" xml:space="preserve"><value>画像サイズ</value></data>
+  <data name="FCE2B1A0-BAFB-497E-B7CB-5EDF4AE687B6" xml:space="preserve"><value>音声スピーカー</value></data>
+  <data name="09F10FA0-1100-4690-A51B-20B08A40B5CC" xml:space="preserve"><value>9M魚眼</value></data>
+  <data name="97F4D58D-8E7A-45DE-AECE-F5062AB3119B" xml:space="preserve"><value>夜間ビット レート制御モード</value></data>
+  <data name="C56F964A-1101-4077-AEF4-A7ABD5615382" xml:space="preserve"><value>強制日中</value></data>
+  <data name="51B83FBE-A723-4102-8A32-B4EB6875E18D" xml:space="preserve"><value>ウェブカム</value></data>
+  <data name="FFF918E7-0E11-44A6-B13B-91EB149D7D8E" xml:space="preserve"><value>自動露光</value></data>
+  <data name="D65BE37A-9416-4BBF-8ED3-36EBD12CD837" xml:space="preserve"><value>カラー</value></data>
+  <data name="74C8E891-37AA-4782-A36A-816F465958BD" xml:space="preserve"><value>画質優先度</value></data>
+  <data name="211611E4-3736-46F6-B927-E61D88744270" xml:space="preserve"><value>上側(2/3)</value></data>
+  <data name="E3F37D3F-941A-49A1-8434-E9AB14C51FF7" xml:space="preserve"><value>タイプ 4</value></data>
+  <data name="59A591E3-0E73-47CD-B4DB-82D096B7807F" xml:space="preserve"><value>平均ビットレート - 最大</value></data>
+  <data name="C3D96B10-560F-47BD-8D25-FB232ED7D1A5" xml:space="preserve"><value>取得するエッジ録画タイプ</value></data>
+  <data name="368033E3-91E8-4344-B265-718CB5E42DB9" xml:space="preserve"><value>煙検知開始イベント</value></data>
+  <data name="F5F97E6E-1175-4F7E-A0A0-CD5636631683" xml:space="preserve"><value>マスターアラーム開始</value></data>
+  <data name="E87141E1-C41E-40D8-8535-2CFF0E91126C" xml:space="preserve"><value>1280x1024（SXGA）</value></data>
+  <data name="F2E15E54-7DB3-48DE-BFDC-4872994E387A" xml:space="preserve"><value>遅延標準/半解像度</value></data>
+  <data name="C169BE0F-33B7-43BC-B1C8-62FCD7907BA8" xml:space="preserve"><value>音声 入力感度</value></data>
+  <data name="080842BE-A318-4A51-BA60-71FE9D5B0CF7" xml:space="preserve"><value>場所</value></data>
+  <data name="D8693C9A-A531-4BCD-85AC-8BDAFFC47579" xml:space="preserve"><value>室内蛍光灯 1</value></data>
+  <data name="1CDE58E6-227F-4D3A-B300-B9DB26C2A465" xml:space="preserve"><value>パレット</value></data>
+  <data name="B14F9055-358E-4761-A345-6D92BBA3DAD7" xml:space="preserve"><value>低バッテリー出力開始</value></data>
+  <data name="64CCB1BB-0239-43FF-B6A1-1C9057834BED" xml:space="preserve"><value>露光 自動シャッタースピード</value></data>
+  <data name="5F33D1FD-614F-4634-8BA5-37005E4B880C" xml:space="preserve"><value>録画モード</value></data>
+  <data name="EFEA083E-4B44-42FB-B29D-06A7FCC4CA71" xml:space="preserve"><value>FPSモード</value></data>
+  <data name="09D44CCF-3F63-4AAA-8286-CC27FEFDE464" xml:space="preserve"><value>自動 x 12</value></data>
+  <data name="AA02034C-132B-421D-A62E-F3C05808A417" xml:space="preserve"><value>メタデータ境界ボックス</value></data>
+  <data name="04B7B55E-DC31-4A8B-8302-3177DEB95E7E" xml:space="preserve"><value>ノイズ低減レベル</value></data>
+  <data name="AA0FD1AB-3FC7-483B-A08D-B063608F20A8" xml:space="preserve"><value>4K マルチインスタンス</value></data>
+  <data name="4B2042FD-2FAA-426D-9639-9C7AC2DDA770" xml:space="preserve"><value>ビデオ ストリーム 1 と同じ</value></data>
+  <data name="7ED8565D-D394-4AC8-952C-5D3223526EEB" xml:space="preserve"><value>固定ナトリウム</value></data>
+  <data name="6AC710C1-D6EB-448F-A086-1CE4346833DF" xml:space="preserve"><value>H.264 3 - ストリーム後</value></data>
+  <data name="6EA8E85F-1D1D-43A9-A569-1E23D7E0E20E" xml:space="preserve"><value>オブジェクト カウンティング イベントが停止されました</value></data>
+  <data name="AD3D2F75-513C-4472-BA70-0E44BDA9B007" xml:space="preserve"><value>ソフト</value></data>
+  <data name="1217FEAA-5ECA-459C-9EA9-93169570E2B7" xml:space="preserve"><value>PTZ COMポート</value></data>
+  <data name="2D4AFE92-1588-400A-88D4-88061E755AC8" xml:space="preserve"><value>蛍光灯</value></data>
+  <data name="1FF215A7-7A8B-4AB2-8C29-F720EB2F9DE5" xml:space="preserve"><value>モーションウィンドウ5</value></data>
+  <data name="1FF215A7-7A8B-4AB2-8C29-F720EB2F9DE4" xml:space="preserve"><value>モーションウィンドウ4</value></data>
+  <data name="1FF215A7-7A8B-4AB2-8C29-F720EB2F9DE7" xml:space="preserve"><value>モーションウィンドウ7</value></data>
+  <data name="1FF215A7-7A8B-4AB2-8C29-F720EB2F9DE6" xml:space="preserve"><value>モーションウィンドウ6</value></data>
+  <data name="1FF215A7-7A8B-4AB2-8C29-F720EB2F9DE1" xml:space="preserve"><value>モーションウィンドウ1</value></data>
+  <data name="1FF215A7-7A8B-4AB2-8C29-F720EB2F9DE3" xml:space="preserve"><value>モーションウィンドウ3</value></data>
+  <data name="1FF215A7-7A8B-4AB2-8C29-F720EB2F9DE2" xml:space="preserve"><value>モーションウィンドウ2</value></data>
+  <data name="1FF215A7-7A8B-4AB2-8C29-F720EB2F9DE9" xml:space="preserve"><value>モーションウィンドウ9</value></data>
+  <data name="1FF215A7-7A8B-4AB2-8C29-F720EB2F9DE8" xml:space="preserve"><value>モーションウィンドウ8</value></data>
+  <data name="31356FAE-FFDD-4D90-BC08-C0EC6EAA1468" xml:space="preserve"><value>ポストバッファ秒</value></data>
+  <data name="90081C3B-69EF-46D5-9199-93808360D22B" xml:space="preserve"><value>非マルチパートストリーム</value></data>
+  <data name="5D61516C-86FD-4DCB-92C7-B4CE4FC1459A" xml:space="preserve"><value>MPEG-4 - 1 - ストリーム後</value></data>
+  <data name="1B566D7A-6854-40CF-8668-8B49C4885CEE" xml:space="preserve"><value>OSD 日時 Y</value></data>
+  <data name="EE76ABEE-5729-4418-9E53-CBB504E868E6" xml:space="preserve"><value>5 ノーマル</value></data>
+  <data name="12C57134-5077-4412-AC3C-3482C20AAD66" xml:space="preserve"><value>高画質</value></data>
+  <data name="128E1AFB-1382-42AC-8C81-1483D79727A9" xml:space="preserve"><value>PTZ 対角サポート</value></data>
+  <data name="3EE2149C-D698-419D-949B-C2157C2B992E" xml:space="preserve"><value>キーフレーム モード間の最大時間 H.264</value></data>
+  <data name="A8777B3F-39E7-4D1E-9802-A690B817B278" xml:space="preserve"><value>ビデオ再開</value></data>
+  <data name="4DBF1377-4E38-4C60-8F3D-D2DD2A72894B" xml:space="preserve"><value>ストリームモード</value></data>
+  <data name="E7550592-7A34-4FB2-B0DD-D39D6F9E1C4A" xml:space="preserve"><value>9M 魚眼 + クアッド PTZ</value></data>
+  <data name="AA0ECC96-56AA-42FE-A362-8ADFD884F624" xml:space="preserve"><value>最低</value></data>
+  <data name="F6E641C9-EAE3-4B8B-90D5-41FE3FF2FD00" xml:space="preserve"><value>デフォーカス開始</value></data>
+  <data name="E3719A4D-CD15-4500-B421-F89B78413ED8" xml:space="preserve"><value>ビデオ入力4</value></data>
+  <data name="6D3D34D7-A0BC-49C2-B66F-D87DE77E52AD" xml:space="preserve"><value>レンズ補正</value></data>
+  <data name="EF74024B-B011-4CF1-898C-36D5BFEF2E48" xml:space="preserve"><value>アンチフリッカー</value></data>
+  <data name="CBDB1424-E3ED-4D73-B600-88EE30C264A5" xml:space="preserve"><value>1.5（PAL）</value></data>
+  <data name="ADE6CFCC-3BC5-4F4E-A709-04ACB7948102" xml:space="preserve"><value>エコノミー</value></data>
+  <data name="37C1DF47-39AB-45BF-B5C4-26A88B2F2387" xml:space="preserve"><value>レベル4</value></data>
+  <data name="D82FE5B6-22B4-4FF8-B5BA-D9566859231D" xml:space="preserve"><value>PTZデバイスIDが必要です</value></data>
+  <data name="440B8077-86BD-4DD5-8B16-C07A5026D877" xml:space="preserve"><value>2.5（NTSC）</value></data>
+  <data name="14ECBA58-4F64-4070-A890-9508B980D9C7" xml:space="preserve"><value>トップ</value></data>
+  <data name="205652D7-9055-4BB8-970E-E829AA1D322B" xml:space="preserve"><value>デイナイトセンサー1</value></data>
+  <data name="238F4110-153A-4FD8-AFD7-104274273596" xml:space="preserve"><value>ネガ</value></data>
+  <data name="B3EBED61-8E59-45F5-963D-1F271C1E5A0D" xml:space="preserve"><value>補助入力ボタン機能</value></data>
+  <data name="06A3665B-0E4D-4566-8B0F-85F310CA7E63" xml:space="preserve"><value>ライン - 中</value></data>
+  <data name="95930A4A-09BC-492E-B23A-589A9FD0C745" xml:space="preserve"><value>時間を含む</value></data>
+  <data name="A2EE9794-41B5-4166-B07B-6220B7358200" xml:space="preserve"><value>デイナイトセンサー2</value></data>
+  <data name="0785876D-D09C-4C61-8834-52AF15913A92" xml:space="preserve"><value>HTTP ポート</value></data>
+  <data name="96CBDF37-4FFC-46D8-89D0-D24ECE0B4FB7" xml:space="preserve"><value>輝度</value></data>
+  <data name="08F9F60E-3DCB-44A2-A750-7D214D7895AE" xml:space="preserve"><value>強</value></data>
+  <data name="24A127EA-162E-4BEE-A441-BEAF9CC7E3D1" xml:space="preserve"><value>ダブルパノラマ</value></data>
+  <data name="930E7F1F-E238-4721-996D-54BB31E27532" xml:space="preserve"><value>中高</value></data>
+  <data name="CD5581A7-C57A-4E4E-A2EB-186FC567C5BD" xml:space="preserve"><value>H.264 - ストリーム後</value></data>
+  <data name="E2D66201-F86E-44E6-B359-E18E30105746" xml:space="preserve"><value>トラブル出力停止</value></data>
+  <data name="93749780-127B-40DC-8C15-D74E43A617FD" xml:space="preserve"><value>プロファイル19</value></data>
+  <data name="E9589F52-B681-4DC3-BED2-3591BE5D0623" xml:space="preserve"><value>ゲインブースト</value></data>
+  <data name="8F4CECCB-82E3-4371-AB8D-58760B31016F" xml:space="preserve"><value>ミドル</value></data>
+  <data name="A783C52C-7D75-47C0-AE4E-6E0423250225" xml:space="preserve"><value>設定しない</value></data>
+  <data name="68F91837-5760-4715-8DCC-1BECF711B19B" xml:space="preserve"><value>TCPストリーミング</value></data>
+  <data name="55EE7E32-1DC6-494A-9E9D-17A71DF7EA44" xml:space="preserve"><value>チャンネル番号</value></data>
+  <data name="3E4674C9-796B-4064-8A36-791422576C2A" xml:space="preserve"><value>マイク音声ストリーム</value></data>
+  <data name="EE5F96EB-E5DF-4538-906E-5DDB52CF648E" xml:space="preserve"><value>マルチキャスト ポート</value></data>
+  <data name="66D06DEF-82D1-4681-923A-96C40A18F9D4" xml:space="preserve"><value>メイン</value></data>
+  <data name="6FB166D8-263C-4461-8D14-41485C83487B" xml:space="preserve"><value>スポット</value></data>
+  <data name="DE3EA791-57C2-4C0A-B517-A7703F7E324B" xml:space="preserve"><value>プロファイル10</value></data>
+  <data name="29E3688B-9685-4291-AEAD-74F3985CCF9A" xml:space="preserve"><value>赤外線日中/夜間オペレーション</value></data>
+  <data name="9595C5A2-7C7C-469B-92E2-D5218D48B1A2" xml:space="preserve"><value>オート高</value></data>
+  <data name="75392B03-481B-490E-B849-63C0E1461520" xml:space="preserve"><value>VSIPポート番号</value></data>
+  <data name="F05400B3-60CD-413E-970E-FC3C92C4186C" xml:space="preserve"><value>PTZホームサポート</value></data>
+  <data name="B3B97999-AEA6-4201-9AD2-2D1517304CE3" xml:space="preserve"><value>リンクイベント停止</value></data>
+  <data name="86FAE980-51F1-4A32-9D54-4582EF81CA97" xml:space="preserve"><value>シンプル</value></data>
+  <data name="B28955AF-2B56-4D20-8FBC-0C92A32EB898" xml:space="preserve"><value>デスク</value></data>
+  <data name="DEB1F89E-367A-4096-9F7A-BDD790862ED5" xml:space="preserve"><value>MPEG-4 - 5 - ストリーム後</value></data>
+  <data name="DEB1F89E-367A-4096-9F7A-BDD790862ED4" xml:space="preserve"><value>MPEG-4 - 4 - ストリーム後</value></data>
+  <data name="DEB1F89E-367A-4096-9F7A-BDD790862ED7" xml:space="preserve"><value>MPEG-4 - 7 - ストリーム後</value></data>
+  <data name="DEB1F89E-367A-4096-9F7A-BDD790862ED6" xml:space="preserve"><value>MPEG-4 - 6 - ストリーム後</value></data>
+  <data name="DEB1F89E-367A-4096-9F7A-BDD790862ED1" xml:space="preserve"><value>MPEG-4 - 1 - ストリーム後</value></data>
+  <data name="DEB1F89E-367A-4096-9F7A-BDD790862ED0" xml:space="preserve"><value>MPEG-4 - 0 - ストリーム後</value></data>
+  <data name="DEB1F89E-367A-4096-9F7A-BDD790862ED3" xml:space="preserve"><value>MPEG-4 - 3 - ストリーム後</value></data>
+  <data name="DEB1F89E-367A-4096-9F7A-BDD790862ED2" xml:space="preserve"><value>MPEG-4 - 2 - ストリーム後</value></data>
+  <data name="DEB1F89E-367A-4096-9F7A-BDD790862ED9" xml:space="preserve"><value>MPEG-4 - 9 - ストリーム後</value></data>
+  <data name="DEB1F89E-367A-4096-9F7A-BDD790862ED8" xml:space="preserve"><value>MPEG-4 - 8 - ストリーム後</value></data>
+  <data name="A787CB06-8D88-4D69-B720-425D93309DCD" xml:space="preserve"><value>パノラマシーリングモード</value></data>
+  <data name="EE2A0B90-0681-4E48-B484-88BD671EEFC6" xml:space="preserve"><value>AOIトップ</value></data>
+  <data name="134FE378-8F12-407F-B31C-E7A3001698E2" xml:space="preserve"><value>RTSP タイムアウト</value></data>
+  <data name="ED75B2E3-BFB9-4F67-A574-CA22D1E07984" xml:space="preserve"><value>最大ビット レート</value></data>
+  <data name="2430BED3-D651-4660-ABCD-7E879CA3BB7B" xml:space="preserve"><value>録画 1</value></data>
+  <data name="0DA543EE-6713-413D-8DF4-2286089A493C" xml:space="preserve"><value>H.264 2 - ストリーム後</value></data>
+  <data name="63005ED9-4F6B-49EB-B36E-2E649D2F22FF" xml:space="preserve"><value>自動(カラーローリング防止)</value></data>
+  <data name="5854AAEA-8242-4F2C-A829-73B5A759FE4C" xml:space="preserve"><value>12.5（PAL）、15（NTSC）</value></data>
+  <data name="43887DFE-E2C2-4A2F-B452-FC4CEF8189DF" xml:space="preserve"><value>濃霧を検出</value></data>
+  <data name="710AB8F2-740A-4938-B19F-3EB38C0F88F1" xml:space="preserve"><value>5 秒</value></data>
+  <data name="6A5AE86E-0AE1-4A85-94E5-02717BF51DC0" xml:space="preserve"><value>平均ビットレート - 保存期間 (日数)</value></data>
+  <data name="E2AC9ACD-7138-4701-81E5-C0E6620AC05A" xml:space="preserve"><value>デイタイム開始</value></data>
+  <data name="774B80A2-7915-4C48-9097-1CD67AFB21BD" xml:space="preserve"><value>イベントデータ</value></data>
+  <data name="10C686A2-D93C-46DF-B4D1-766CD6EBA67A" xml:space="preserve"><value>自動 x 256</value></data>
+  <data name="D3F94233-4AAC-4124-9090-1551E4060741" xml:space="preserve"><value>ビットレート</value></data>
+  <data name="C081FFB7-337D-4299-9231-039EF7E3D8FA" xml:space="preserve"><value>品質 JPEG</value></data>
+  <data name="2BCA8B23-CB77-4E6D-AC78-3F8FFD0AD8CE" xml:space="preserve"><value>PTZ データ</value></data>
+  <data name="B30909A2-EE90-422A-A40E-21D7F129437F" xml:space="preserve"><value>0.8（PAL）、1（NTSC）</value></data>
+  <data name="3C49F4D7-9AEB-4538-84FB-58561FD14999" xml:space="preserve"><value>ベター</value></data>
+  <data name="10765FF1-15DB-41FE-87FD-E6457BA956D0" xml:space="preserve"><value>シャッタースピード制御</value></data>
+  <data name="23D6C680-6FF3-497B-98A8-A1D19FF2E223" xml:space="preserve"><value>テールゲート (共連れ)</value></data>
+  <data name="9BAF0226-415B-4C25-8D15-A0ADF4826A5A" xml:space="preserve"><value>カラーモード</value></data>
+  <data name="DBFE9154-29EC-4674-B0CC-7D49F4E6E0E9" xml:space="preserve"><value>プロファイル33</value></data>
+  <data name="719695C5-D19E-48F4-B26C-76CBC191D476" xml:space="preserve"><value>アイリス</value></data>
+  <data name="9F1E8762-79EA-4940-A795-7D61413426BC" xml:space="preserve"><value>H264 - ストリーム後</value></data>
+  <data name="B0028260-03A2-46E0-84CA-3ABD0D33AC71" xml:space="preserve"><value>モーション履歴</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F9" xml:space="preserve"><value>ビデオストリーム9</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F8" xml:space="preserve"><value>ビデオストリーム8</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F3" xml:space="preserve"><value>ビデオストリーム3</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F2" xml:space="preserve"><value>ビデオストリーム2</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F1" xml:space="preserve"><value>ビデオストリーム1</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F7" xml:space="preserve"><value>ビデオストリーム7</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F6" xml:space="preserve"><value>ビデオストリーム6</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F5" xml:space="preserve"><value>ビデオストリーム5</value></data>
+  <data name="D695DEAB-5970-4844-B50C-1DDB07F4C2F4" xml:space="preserve"><value>ビデオストリーム4</value></data>
+  <data name="13568982-14C9-4774-A28F-6316EF48BBCA" xml:space="preserve"><value>白色バランス補正</value></data>
+  <data name="E9658E99-3AE5-40D3-B91C-0068655CFB54" xml:space="preserve"><value>モーションタイプ</value></data>
+  <data name="DAD3AF6B-F846-4832-882F-C0B75AB0BFCC" xml:space="preserve"><value>イージーデイナイト</value></data>
+  <data name="4B674F1A-DFD0-49F2-8ED3-F7B82931E334" xml:space="preserve"><value>右下</value></data>
+  <data name="F66D8640-F4ED-4CD4-8E50-4EE9A6FF82FF" xml:space="preserve"><value>3M 魚眼 [4:3]</value></data>
+  <data name="42BFCCF1-4DF1-4A4D-83F2-D8AD9D7285EA" xml:space="preserve"><value>'PTZ ステータス' メタデータが有効になりました</value></data>
+  <data name="4193E4B6-FE08-4560-8C6B-3546EBC58C10" xml:space="preserve"><value>白黒モード</value></data>
+  <data name="E8F665AD-1324-4306-8929-3139DF2A30CD" xml:space="preserve"><value>デリバリー モード</value></data>
+  <data name="912EBC62-3D84-4812-9B6C-8FC74284A700" xml:space="preserve"><value>ノーマル未満</value></data>
+  <data name="67745CD1-63A1-456C-921E-262D96FBA820" xml:space="preserve"><value>メイン CABAC プロファイル</value></data>
+  <data name="A5F70CCE-FE83-4971-8DDE-662C09254DC7" xml:space="preserve"><value>画質モード</value></data>
+  <data name="C0C24359-B2B7-47C7-8DB2-F1ED608A8ECB" xml:space="preserve"><value>採光閾値</value></data>
+  <data name="929F8C36-E00A-477D-B335-CD355A125052" xml:space="preserve"><value>ダイレクトオーディオ</value></data>
+  <data name="46EF2454-9B4D-4A49-9EC7-CACBE309690D" xml:space="preserve"><value>モーション</value></data>
+  <data name="F1E1FDAC-989F-4717-8158-E127AA6BC646" xml:space="preserve"><value>SD カードエラー</value></data>
+  <data name="D77AA012-B2E5-4636-BF68-0D4DCB81B03A" xml:space="preserve"><value>JPEG 分割ストリーム</value></data>
+  <data name="73E6B69A-B99F-447E-87D9-1662B59BD943" xml:space="preserve"><value>1M パノラマ [16:9]</value></data>
+  <data name="52CA7667-158C-409E-9DDF-82F9EF2A4E01" xml:space="preserve"><value>アナログC-レベル</value></data>
+  <data name="81E1F2F7-7861-43A8-9ECC-5361DBC5FA2C" xml:space="preserve"><value>プロファイル20</value></data>
+  <data name="763A417B-453E-4D6A-8165-29329EFC83D7" xml:space="preserve"><value>デイナイトセンサー3</value></data>
+  <data name="C45DDC6D-A121-44E5-892F-AD944097A4D1" xml:space="preserve"><value>AC照明</value></data>
+  <data name="E0BE6134-0414-4772-A5D6-6B012B1FD27E" xml:space="preserve"><value>ビットレート制御モード MPEG-4</value></data>
+  <data name="38A61CFD-4490-4D8B-999F-760E9AED22A4" xml:space="preserve"><value>高品質H265</value></data>
+  <data name="A8A568F9-66B9-49F7-88C2-E5CD911B7D90" xml:space="preserve"><value>タイプ 1</value></data>
+  <data name="880848B0-A985-4771-A860-39A9008D1F45" xml:space="preserve"><value>エクセレント</value></data>
+  <data name="7F44283F-ADB7-4005-BF40-D1176AB56FEF" xml:space="preserve"><value>対象の存在を検出</value></data>
+  <data name="2D64E0F4-BBCC-418E-8618-94546B617962" xml:space="preserve"><value>標準</value></data>
+  <data name="A3F3F61E-6D4A-4808-A4AE-1249D69DB533" xml:space="preserve"><value>自動 x 16</value></data>
+  <data name="0C2F3984-857D-43F6-937E-8929410BD7A2" xml:space="preserve"><value>マスターアラーム停止</value></data>
+  <data name="D6BE7E2A-479C-46A1-A537-39717E91875E" xml:space="preserve"><value>トリミングウィンドウボトム</value></data>
+  <data name="08FF0033-0925-47FE-8C59-3214F5960FF3" xml:space="preserve"><value>不明</value></data>
+  <data name="4DA56ADC-989C-4913-8BEA-6E53DC48B0B7" xml:space="preserve"><value>可変ビットレートノンドロップ</value></data>
+  <data name="18544697-CA1B-48EE-8B2F-EFD6D9AA914E" xml:space="preserve"><value>「煙/火災検知停止」イベント</value></data>
+  <data name="6BB58FF6-8D40-498F-9928-16485C6B3CDB" xml:space="preserve"><value>G.726 40 キロビット/秒</value></data>
+  <data name="3286684D-BEC1-4F51-A7C5-BE849A4D74D4" xml:space="preserve"><value>画像内画像</value></data>
+  <data name="7E5F075F-3ADD-463D-B52B-180B38307B6D" xml:space="preserve"><value>9 ロー</value></data>
+  <data name="880631B9-67A5-4D1E-B8D6-22A9E572AB26" xml:space="preserve"><value>デイ閉</value></data>
+  <data name="0CFA0DC1-F018-408D-9F7D-6F4A3ACAEE9B" xml:space="preserve"><value>マイク - 低</value></data>
+  <data name="A271E87F-6BBB-4A69-B02F-079542DB6DB3" xml:space="preserve"><value>エコーサプレッサー</value></data>
+  <data name="50FC7A83-B797-419E-905D-486E8A1A2395" xml:space="preserve"><value>AWC手動</value></data>
+  <data name="7D22C838-6F15-4D37-8381-67810041507A" xml:space="preserve"><value>設定無し</value></data>
+  <data name="6996BD4F-DB8A-4B86-A61A-9921DB6631E1" xml:space="preserve"><value>不変ビットレートノンドロップ</value></data>
+  <data name="46329E0F-BC25-4509-A452-DB115CBFBDEA" xml:space="preserve"><value>回転</value></data>
+  <data name="CCFE3F77-89AE-4C1F-83C4-80454A4625C2" xml:space="preserve"><value>デジタル自動追跡プロファイル</value></data>
+  <data name="6A2B8736-F64B-4BC2-A3FF-ADEB262D9A96" xml:space="preserve"><value>回路閉</value></data>
+  <data name="B134D66D-DB9C-4822-BAA0-5CE4B04EC29A" xml:space="preserve"><value>コーデック</value></data>
+  <data name="00E10014-54F3-4401-98D9-5A3AA684028F" xml:space="preserve"><value>内部UDPイベントサーバーIP</value></data>
+  <data name="E080D0A3-5F6B-4649-89F5-19A0D9B89EB6" xml:space="preserve"><value>オブジェクト滞在</value></data>
+  <data name="AAE810ED-536C-4698-AE8B-030591087C09" xml:space="preserve"><value>魚眼 + クアッドPTZ</value></data>
+  <data name="259B2B8A-8BCA-4189-9B1E-E8EB22078E32" xml:space="preserve"><value>ガンマ設定</value></data>
+  <data name="456AB936-178B-49C7-BCB6-E90C5632893A" xml:space="preserve"><value>トラブル出力開始</value></data>
+  <data name="081AF8DA-2C6D-4F66-9859-8F340AABB8C7" xml:space="preserve"><value>可変FPSモード</value></data>
+  <data name="5BDB6CB5-75BD-4FD1-8B28-CE732DDDD80B" xml:space="preserve"><value>不変ビットレート</value></data>
+  <data name="9D2255F2-EC6B-45D2-AC60-8F14C4D141AB" xml:space="preserve"><value>プロファイル26</value></data>
+  <data name="01457CCB-79CE-4F00-AA61-31DBA2BB057F" xml:space="preserve"><value>OSD 日時</value></data>
+  <data name="B2371F08-C0AB-4607-938E-0BE263E48545" xml:space="preserve"><value>スケジュールされたデイモード終了時間</value></data>
+  <data name="A46A0BF8-3AA1-4AB9-BD35-CCA39619E915" xml:space="preserve"><value>- メタデータ設定</value></data>
+  <data name="E6FD2CF3-323D-494E-884F-DD8564DF3BED" xml:space="preserve"><value>自動 x 64</value></data>
+  <data name="7499CCC9-FA33-4039-B069-2EA492E44127" xml:space="preserve"><value>帯域幅制限 (kビット/秒)</value></data>
+  <data name="07C97ED1-05F2-4E8A-B626-CFC7EC05950D" xml:space="preserve"><value>「素早い動き」イベント開始</value></data>
+  <data name="5BC9BFA3-0FCC-46F3-93DD-5B9B61F9A431" xml:space="preserve"><value>可変ビットレート</value></data>
+  <data name="0C9D3F75-6D29-44EE-9CB5-754CE432050F" xml:space="preserve"><value>プロファイル15</value></data>
+  <data name="2F390EFF-9B2F-412C-8217-19D030C5B757" xml:space="preserve"><value>ワンプッシュWB</value></data>
+  <data name="4B94A957-048A-47ED-8B76-A0FCDA9BC8B4" xml:space="preserve"><value>ライン</value></data>
+  <data name="D655EC05-C763-47C2-B4F5-194C53065421" xml:space="preserve"><value>停止車両イベントが開始されました</value></data>
+  <data name="0A1A058E-C407-46FE-BA8E-08A3304ACA75" xml:space="preserve"><value>音声 出力バス</value></data>
+  <data name="3D38726A-4470-4365-B9DF-DF9DEEAE87B8" xml:space="preserve"><value>ロー</value></data>
+  <data name="CCF36C44-1077-4ED2-BBE4-F34A100B67C4" xml:space="preserve"><value>なし</value></data>
+  <data name="ABBD0108-BB0D-4329-847B-F6705F9FD956" xml:space="preserve"><value>デイナイト閾値イン</value></data>
+  <data name="3B296F81-F81C-46E8-B79A-C55B0B8E03B2" xml:space="preserve"><value>最大ビットレート (kビット/秒) MJPEG</value></data>
+  <data name="E08BC195-D603-43DC-B40D-3A177A940BC3" xml:space="preserve"><value>バイナリ</value></data>
+  <data name="8D67847D-3C6E-4E5F-A27E-082325105B67" xml:space="preserve"><value>ゲインコントロール</value></data>
+  <data name="763616AB-08E9-492B-BE30-FD1A2AE6F93A" xml:space="preserve"><value>デイナイト閾値アウト</value></data>
+  <data name="DD8F47BF-3EBE-4200-B214-B78617501B8B" xml:space="preserve"><value>モーション</value></data>
+  <data name="08E4837F-85CA-4C6C-958F-34C4CC7EFB7B" xml:space="preserve"><value>多角形ウィンドウ</value></data>
+  <data name="A382AAA7-8F2F-4B11-AFD0-D66851061D3A" xml:space="preserve"><value>マルチキャスト開始ポート</value></data>
+  <data name="131516FB-613D-47B6-A1B4-52AF43706429" xml:space="preserve"><value>スレーブ</value></data>
+  <data name="6DA7E113-8BC2-4B64-8CD7-675A156C7CD3" xml:space="preserve"><value>限定チルト</value></data>
+  <data name="8416CA14-E00B-4412-B14B-5B333E36150C" xml:space="preserve"><value>スケジュール</value></data>
+  <data name="E7041EE4-3E65-4E98-BAD6-4543F7EED863" xml:space="preserve"><value>侵入が停止されました</value></data>
+  <data name="0476C101-80A3-4E84-AF80-5D68FE152216" xml:space="preserve"><value>1024x768(JPEGのみ)</value></data>
+  <data name="AC6CD17D-D3EC-44D3-BE22-54AF0DB2DB6F" xml:space="preserve"><value>最大露出時間</value></data>
+  <data name="667D3ECE-9540-40DD-905F-EB5961276DEE" xml:space="preserve"><value>隔離</value></data>
+  <data name="4AA524BB-C44E-40FB-8412-2CE69326BF23" xml:space="preserve"><value>音声 出力高音域</value></data>
+  <data name="A364A604-50A9-46B8-8114-F3156DAC3F2C" xml:space="preserve"><value>シャッタースピード</value></data>
+  <data name="810BB9D0-095B-42EF-B637-6BC14B132BF4" xml:space="preserve"><value>プロファイル</value></data>
+  <data name="DCD1F393-9A36-4EA0-87D3-1E422968CA83" xml:space="preserve"><value>モーション ウィンドウ座標</value></data>
+  <data name="E1EFFB73-FFC8-4E49-9586-255FEA9DF20C" xml:space="preserve"><value>ミラー + 垂直方向の反転</value></data>
+  <data name="BF8B81CD-8BBB-4997-A52A-C4DBBB52DC30" xml:space="preserve"><value>1.25（PAL）、1.5（NTSC）</value></data>
+  <data name="F5EE1C93-35E3-40EE-A543-46F80E634270" xml:space="preserve"><value>除外</value></data>
+  <data name="5BEEA3D4-17CB-4222-BC76-590B349054D9" xml:space="preserve"><value>固定屋外色</value></data>
+  <data name="2DBBCE58-4324-47AA-BBCE-6FDDE480C670" xml:space="preserve"><value>オブジェクト放棄イベントが停止されました</value></data>
+  <data name="D2D74CA7-1652-4EA4-91B8-DBEC24B20945" xml:space="preserve"><value>最大ビットレート (kビット/秒) H.264</value></data>
+  <data name="96FC08FE-CE41-4BE6-AC9E-69F50ECBE305" xml:space="preserve"><value>Y 軸範囲 (mm)</value></data>
+  <data name="6B845165-28AF-45DB-9740-C188D99B1273" xml:space="preserve"><value>連続</value></data>
+  <data name="9FB206F7-0AF6-4439-A5CE-D3D68EFC459E" xml:space="preserve"><value>ビデオストリーム2</value></data>
+  <data name="B16799DB-2BFE-4C8E-AC99-A5D0FD0D2146" xml:space="preserve"><value>エンハンス後</value></data>
+  <data name="71BB62F8-6B01-474A-9D70-720C3AFA1F3B" xml:space="preserve"><value>煙検知停止イベント</value></data>
+  <data name="D5B4881E-C0A3-49BC-836D-B0F629CFB34E" xml:space="preserve"><value>鏡像</value></data>
+  <data name="F27092D5-F149-4F3A-93F4-DA137F8C22EC" xml:space="preserve"><value>不レムレート</value></data>
+  <data name="C22D1A09-560A-4F17-8A1F-C361316716CA" xml:space="preserve"><value>自動　狭い</value></data>
+  <data name="EDFFC5D2-B160-462E-99AE-E97C63854642" xml:space="preserve"><value>シーンの変更</value></data>
+  <data name="BC8592A7-7A8E-4677-A139-91FF2400E1A0" xml:space="preserve"><value>ExtIOマイク</value></data>
+  <data name="EC6BA593-0378-4F94-B8AC-816C5EBD2961" xml:space="preserve"><value>電子 PTZ</value></data>
+  <data name="72337E4B-3F1B-45FD-9F04-DF66B10E1ECD" xml:space="preserve"><value>変更 (カメラ サボタージュ) イベントが開始されました</value></data>
+  <data name="1B2B51E2-F4E7-4854-9DCB-89E8C0875212" xml:space="preserve"><value>オン</value></data>
+  <data name="70650C51-F408-4311-B64C-BEECE90BDB44" xml:space="preserve"><value>ストリーミング方法JPEG</value></data>
+  <data name="78D0A2B1-182D-4FB0-B7C5-2D860766CB07" xml:space="preserve"><value>昼光</value></data>
+  <data name="7FE69C53-E93B-43AF-B1B0-EA5C90629492" xml:space="preserve"><value>プロファイル7</value></data>
+  <data name="13CB2567-C47D-42D7-9E57-33D16D3271EF" xml:space="preserve"><value>HTTPS - 証明書の認証</value></data>
+  <data name="58A64E84-3B69-477D-9F1F-83DED1B1EF20" xml:space="preserve"><value>AOI幅</value></data>
+  <data name="44EC05A7-0C84-4039-B613-FA5312A906F7" xml:space="preserve"><value>右</value></data>
+  <data name="56217CD9-2F2E-4432-A25D-ED83952A4C60" xml:space="preserve"><value>回転防止出力開始</value></data>
+  <data name="C8A326A2-0FBF-40CB-A0EE-E3D74C2A33C1" xml:space="preserve"><value>白黒</value></data>
+  <data name="92252761-989F-4635-9471-C116892D0904" xml:space="preserve"><value>不変ビットレート</value></data>
+  <data name="29AAF1DB-F50B-4140-842B-77E887D7BDDC" xml:space="preserve"><value>ゲインモード</value></data>
+  <data name="C48E29EA-CB65-4B4F-975E-A4EA2DF0FEA0" xml:space="preserve"><value>自動ゲインコントロール(dB)</value></data>
+  <data name="7C285ED3-B0F4-4457-B6A1-90CDFEE276B3" xml:space="preserve"><value>水銀灯</value></data>
+  <data name="C2C1C890-3EF9-4BCD-8BF3-F2975C085838" xml:space="preserve"><value>360°レンズ: 1024x1024</value></data>
+  <data name="1D027CCC-5BA8-4E1A-B6C1-F1A87D84718C" xml:space="preserve"><value>ウェブカムのパス</value></data>
+  <data name="E111DFDB-D5D3-4D59-8139-94A6726E1DB7" xml:space="preserve"><value>1/50（50 Hz）、1/60（60 Hz）</value></data>
+  <data name="F43D58FB-FB70-4F69-B858-B605877B78BD" xml:space="preserve"><value>1 I-フレーム/秒</value></data>
+  <data name="7966BE6C-A85A-4F6A-9460-D35997ACBAAE" xml:space="preserve"><value>夜間 MPEG4/H.264 品質</value></data>
+  <data name="309BA291-76AD-48DD-9244-87CF0F6F8100" xml:space="preserve"><value>垂直方向</value></data>
+  <data name="8EF6A61F-7132-44BE-B3F4-79FFD6625D1A" xml:space="preserve"><value>温度</value></data>
+  <data name="B5F28294-3712-475D-9CBB-C0A7E66FEB04" xml:space="preserve"><value>プライオリティ</value></data>
+  <data name="42614A44-50C9-46FB-9647-E6B12BA6BCC2" xml:space="preserve"><value>H.264 高さ</value></data>
+  <data name="B2BF9225-8CE5-4A17-B352-C4A8D1AECFB1" xml:space="preserve"><value>露光 自動スローシャッター最低スピード</value></data>
+  <data name="5895DB49-F3FF-4EE8-BE4C-3EB7B1BF4452" xml:space="preserve"><value>パノラマ + シングル PTZ</value></data>
+  <data name="EE2F1E95-E76A-4D3B-8422-F1D6E173B185" xml:space="preserve"><value>レーダーウィンドウ</value></data>
+  <data name="D7431E92-A279-4355-851E-672DEFC91A99" xml:space="preserve"><value>クアッドPTZ</value></data>
+  <data name="22C54D81-E0C4-4CD8-A58E-AE4501B3C543" xml:space="preserve"><value>PT スピード</value></data>
+  <data name="4F173127-48F5-438D-8F6F-58FC2F4EFF03" xml:space="preserve"><value>最大ビットレート (kビット/秒) H265</value></data>
+  <data name="C6F7349D-80B6-43D1-B8BB-59BDD59C6BC6" xml:space="preserve"><value>H264 2 - ストリーム後</value></data>
+  <data name="15EDE76E-3193-4B7D-AFE3-F39A7681328C" xml:space="preserve"><value>360°レンズの縮尺: 320x240</value></data>
+  <data name="74EE7002-AB9B-4E4C-ABE2-79AC3FBF8730" xml:space="preserve"><value>COM ポート</value></data>
+  <data name="CA7DD05E-862A-41D9-9B7D-52B8ABBE7315" xml:space="preserve"><value>変更 (カメラ サボタージュ) イベントが停止されました</value></data>
+  <data name="E8056A5E-ECCA-4BC8-B8FE-AB1D36452F6C" xml:space="preserve"><value>温度検知が停止されました</value></data>
+  <data name="E778A166-39BE-43AE-8673-EAA314AB9570" xml:space="preserve"><value>ナイト</value></data>
+  <data name="DBC240C5-1634-43D5-B84B-CFAA952555C9" xml:space="preserve"><value>カラー LCD</value></data>
+  <data name="A294CEC3-85DE-471F-81B5-43FEBF0EC7DD" xml:space="preserve"><value>ベスト</value></data>
+  <data name="49EB28D2-063E-49BB-869A-705C9B2C3CAB" xml:space="preserve"><value>マルチ</value></data>
+  <data name="1F5CAA4B-034C-43E4-9E03-040D8C3F2369" xml:space="preserve"><value>最大ビットレート(Kビット/秒)</value></data>
+  <data name="0742D98F-2E11-474B-A874-A944DBC9944D" xml:space="preserve"><value>1.3M 魚眼 [4:3]</value></data>
+  <data name="FF98DA5F-A36A-4FCA-AC52-820664C289E4" xml:space="preserve"><value>逆光補正</value></data>
+  <data name="56E2CE04-C028-4036-BC5B-1CEE732A65E8" xml:space="preserve"><value>最小 FPS</value></data>
+  <data name="E16C196A-1098-42E5-836D-EF9F99A0E051" xml:space="preserve"><value>レベル2</value></data>
+  <data name="0DA5A68A-515D-43F0-8040-82FC9FF04426" xml:space="preserve"><value>オブジェクト消滅</value></data>
+  <data name="6DBA2C21-C17E-482A-BF63-3D504457A607" xml:space="preserve"><value>ライン カウンター B</value></data>
+  <data name="4A30F414-A50D-45F7-ADF2-85DB47691BE2" xml:space="preserve"><value>PTZデバイスID</value></data>
+  <data name="2C49A3E2-4AD7-4ECE-B84D-785CB2B99C85" xml:space="preserve"><value>エッジ保存プロファイル</value></data>
+  <data name="BEA80C56-6DC2-4006-B64E-6CAA0B7B4E34" xml:space="preserve"><value>ハーフ D1</value></data>
+  <data name="B90F89C7-B850-421C-B415-6DAF7E0DF129" xml:space="preserve"><value>サイバー攻撃</value></data>
+  <data name="F822505F-4C87-48F5-AAAF-ABEF49CA3A25" xml:space="preserve"><value>最小 P フレーム QP</value></data>
+  <data name="88DD94E8-2C6B-465C-996B-FC6A3B33231B" xml:space="preserve"><value>照明 </value></data>
+  <data name="6E34FB91-666B-4366-9E42-93A853C04237" xml:space="preserve"><value>取り込みモード</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE433{#81X#}" xml:space="preserve"><value>ビデオ ストリーム {#01#}</value></data>
+  <data name="9E8AD957-C6DE-4FD6-A510-52EAD71F34C5" xml:space="preserve"><value>固定ビットレート</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE433812" xml:space="preserve"><value>ビデオストリーム12</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE433813" xml:space="preserve"><value>ビデオストリーム13</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE433810" xml:space="preserve"><value>ビデオストリーム10</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE433811" xml:space="preserve"><value>ビデオストリーム11</value></data>
+  <data name="CC843EE4-584F-471F-BC85-B5E735DDA395" xml:space="preserve"><value>魚眼ビュー</value></data>
+  <data name="FC4E2BFB-8106-43AE-993B-5348035EDB8B" xml:space="preserve"><value>2M パノラマ [16:9]</value></data>
+  <data name="C09F52F9-7F22-46FD-AE2D-FC2FEF6881E6" xml:space="preserve"><value>火災検知停止イベント</value></data>
+  <data name="0ADDFD63-E1DE-4FD2-953E-8E6F37C37C94" xml:space="preserve"><value>B-ゲイン</value></data>
+  <data name="E03B9D04-701E-436B-823D-0E02BA5344B6" xml:space="preserve"><value>画像ダウンサンプリング係数</value></data>
+  <data name="7466DED7-F2EC-40F2-BCB3-9CCD14157DAE" xml:space="preserve"><value>Iso パレット</value></data>
+  <data name="E83B05EF-89E1-4721-9233-6E3DD5F9AE6B" xml:space="preserve"><value>トリミングウィンドウ高さ</value></data>
+  <data name="99756467-B58B-4045-BE46-AE93F107BAC9" xml:space="preserve"><value>赤-黄</value></data>
+  <data name="EDE0D888-E16A-4933-8E33-B8C6E67E4F82" xml:space="preserve"><value>開く</value></data>
+  <data name="ACF3306E-427C-43FA-9C92-1D016467801A" xml:space="preserve"><value>空きスペースなし</value></data>
+  <data name="D2BB3A8E-FA60-495F-AB89-E1EE449BC581" xml:space="preserve"><value>最大ビットレート制限</value></data>
+  <data name="3D70CF54-F3C7-4831-BB82-4619DF0B3FA9" xml:space="preserve"><value>PSA適合デバイス</value></data>
+  <data name="0BF2ADF1-A432-47D7-A4C1-36A4B5295A6A" xml:space="preserve"><value>モーション停止(ハードウェア)</value></data>
+  <data name="4D9317BA-F847-4B4A-9863-D869EF35D4BB" xml:space="preserve"><value>アコースティックエコーキャンセレーション</value></data>
+  <data name="5B37F4A3-E4D6-498D-8410-27BAE9A697E2" xml:space="preserve"><value>H264 画質</value></data>
+  <data name="1A7A3E07-24D3-43FA-96B4-356A6E973CD2" xml:space="preserve"><value>マスキング/配分</value></data>
+  <data name="BD9D20F2-C5C0-4E5D-9B94-611E4BC07EEE" xml:space="preserve"><value>変更開始</value></data>
+  <data name="2B6BD055-26C0-4EFC-85E2-F52287FAC1B3" xml:space="preserve"><value>IP 競合開始イベント</value></data>
+  <data name="7753B527-C724-4A3B-9DB4-69C5A32482B8" xml:space="preserve"><value>マスキング防止出力開始</value></data>
+  <data name="E9E4773F-F740-4548-88DE-13619455CB02" xml:space="preserve"><value>AGCゲイン</value></data>
+  <data name="D06E89BC-569A-452F-8041-A13EBE8D9761" xml:space="preserve"><value>MPEG4/H264 品質</value></data>
+  <data name="8BB5276F-9198-4A5D-B9E3-2D34A752F2FC" xml:space="preserve"><value>H264 ストリーミング モード</value></data>
+  <data name="76D75A98-5514-4C00-B7B7-E155839AE5D2" xml:space="preserve"><value>SD カードイベントが開始されました</value></data>
+  <data name="C705E9F3-42E8-41C9-88E3-E44619D9FDCE" xml:space="preserve"><value>平均ビットレート</value></data>
+  <data name="4C2DAE9B-5D96-4F3B-B5BA-237A4F712646" xml:space="preserve"><value>平均</value></data>
+  <data name="903BE88C-750A-4CD7-BD06-1EEBDBFD97B6" xml:space="preserve"><value>カスタム設定</value></data>
+  <data name="072A5447-A1BA-42B7-AFF8-6E9D6CCE13A1" xml:space="preserve"><value>自動(室内)</value></data>
+  <data name="F2F31196-2FDC-4BD1-A0D1-3463E0022E90" xml:space="preserve"><value>オフィス 蛍光灯</value></data>
+  <data name="67169266-7B3B-41D7-B535-5F4550B826D1" xml:space="preserve"><value>H.264 4 - ストリーム後</value></data>
+  <data name="C4E628FC-2DDE-4EDA-9412-3C7C5C633ED7" xml:space="preserve"><value>照明 </value></data>
+  <data name="0DEE12D5-CB6B-4E62-8F4A-434CF7B36A60" xml:space="preserve"><value>HTTPマルチパート</value></data>
+  <data name="3F66F6EB-E174-4D81-AB9A-01EF58085FBE" xml:space="preserve"><value>彩度モード</value></data>
+  <data name="82A4B2BD-31B6-4E89-B2A6-49C87171BC9E" xml:space="preserve"><value>カスタム</value></data>
+  <data name="31725B7C-0809-4B25-A35B-E9DAD84F0523" xml:space="preserve"><value>J:1280x960  M:640x480 (マスク)</value></data>
+  <data name="27BC0BB0-60AC-492C-8790-62F003949473" xml:space="preserve"><value>蛍光灯</value></data>
+  <data name="A8C2DCDB-CCE6-4A8E-A0D0-5DF6768BF9F6" xml:space="preserve"><value>室内1</value></data>
+  <data name="242384FD-FF9A-48ED-AB37-2EE754E6FB18" xml:space="preserve"><value>デジタルマイク</value></data>
+  <data name="8D1AD8A3-4FC9-4059-AEE7-56A730CF4A7C" xml:space="preserve"><value>音声立上がり</value></data>
+  <data name="9CCA84BD-7804-4C30-81D1-ACA7DD6DFCC1" xml:space="preserve"><value>デスクトップ</value></data>
+  <data name="41A882D3-78FC-4BF4-AAA8-46FB1DBE0898" xml:space="preserve"><value>アクティブな出力状態</value></data>
+  <data name="C2E55047-ABB4-4043-9D46-FD678A039233" xml:space="preserve"><value>徘徊検知イベントが停止されました</value></data>
+  <data name="F7657B86-89AC-4127-97CD-B4FB45E9C2C4" xml:space="preserve"><value>最大</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE43389" xml:space="preserve"><value>ビデオストリーム9</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE43388" xml:space="preserve"><value>ビデオストリーム8</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE43387" xml:space="preserve"><value>ビデオストリーム7</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE43386" xml:space="preserve"><value>ビデオストリーム6</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE43385" xml:space="preserve"><value>ビデオストリーム5</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE43384" xml:space="preserve"><value>ビデオストリーム4</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE43383" xml:space="preserve"><value>ビデオストリーム3</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE43382" xml:space="preserve"><value>ビデオストリーム2</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE43381" xml:space="preserve"><value>ビデオストリーム1</value></data>
+  <data name="C453AD27-B74D-4A2A-B532-300F3AE43380" xml:space="preserve"><value>ビデオストリーム0</value></data>
+  <data name="CE8F7073-822C-44F7-8F46-DE40191E57F4" xml:space="preserve"><value>縮小モード</value></data>
+  <data name="FE0BE36B-16B5-4509-80DB-5D345E939ABE" xml:space="preserve"><value>内部UDPイベントサーバーポート</value></data>
+  <data name="2ED9430C-AC97-4B3D-ABB1-21653FDCF9D4" xml:space="preserve"><value>輝度(ALC)</value></data>
+  <data name="14705EEA-98C9-4657-BEEF-5A54291B68B8" xml:space="preserve"><value>プリバッファ秒</value></data>
+  <data name="E52E8BDF-1F11-4326-8F20-6432071386C4" xml:space="preserve"><value>モーション オフ閾値</value></data>
+  <data name="8E368A75-04EC-482F-8527-F9AE65E0F41F" xml:space="preserve"><value>5 秒</value></data>
+  <data name="B3B6D70E-C719-4B38-8AC4-B50C2913F3D1" xml:space="preserve"><value>ゲイン</value></data>
+  <data name="2B604024-EFD7-4174-BB9A-1AA8B837BB45" xml:space="preserve"><value>画像サイズ減ファクター</value></data>
+  <data name="A51BD3DB-7C57-4ADD-A06A-8B859899C23D" xml:space="preserve"><value>PTZをビューの中心に設定</value></data>
+  <data name="2AF7FBD0-4417-4638-A676-BDC62CFDB80E" xml:space="preserve"><value>7ビット</value></data>
+  <data name="47386294-03DB-4751-8B16-449CA0B29708" xml:space="preserve"><value>詳細VBR</value></data>
+  <data name="34C98369-6D2E-461E-AF7E-085089B7E1D2" xml:space="preserve"><value>1/100（50 Hz）、1/120（60 Hz）</value></data>
+  <data name="4AB8DC0C-EED3-422A-AE9B-545F3F6678A2" xml:space="preserve"><value>マイナー</value></data>
+  <data name="7D7D2E73-FA63-4F94-95B6-A684BB9D4AE1" xml:space="preserve"><value>12V リング出力</value></data>
+  <data name="BD3981A3-772E-43EE-BC09-A61DB8F5EFCA" xml:space="preserve"><value>色調</value></data>
+  <data name="990FDA0D-6FDD-4383-9C92-9E4601D313CD" xml:space="preserve"><value>エッジ録画取得優先順位</value></data>
+  <data name="6D5ED974-80DC-438F-BE94-ED5A6AD87EDB" xml:space="preserve"><value>最下部</value></data>
+  <data name="28FF6617-BC5B-4E3E-8C3B-9BE16F3D53D6" xml:space="preserve"><value>ズーム</value></data>
+  <data name="3379B746-444C-4FDC-8447-8E7215CDB1E7" xml:space="preserve"><value>帯域</value></data>
+  <data name="CA164B91-247A-4A28-9414-37646D24A3A7" xml:space="preserve"><value>HTTPスナップショット</value></data>
+  <data name="6926B8D5-CEC7-4931-9B6C-E6B85C531AEE" xml:space="preserve"><value>H264:1280x720、アナログ出力</value></data>
+  <data name="242A2A07-5DC0-4BCA-B13E-23F0619445A0" xml:space="preserve"><value>320x180（HD）</value></data>
+  <data name="A9708AC5-A3F9-4797-84D0-3C558A23CAC2" xml:space="preserve"><value>ナイトゲイン</value></data>
+  <data name="A57D4E50-4158-4D04-955A-3141653E44DC" xml:space="preserve"><value>型名</value></data>
+  <data name="7E58875C-69B7-4942-AE76-FAA5F74878C2" xml:space="preserve"><value>音声 入力インピーダンス</value></data>
+  <data name="543EDF4D-898F-4689-8B7D-B8484BE02284" xml:space="preserve"><value>2 台のカメラの追跡イベントが開始されました</value></data>
+  <data name="16E32313-6F35-4441-A322-8CD00A33B031" xml:space="preserve"><value>ウルトラファイン</value></data>
+  <data name="75A72A92-9F7E-4D0B-9D92-B2F2C1D33EA3" xml:space="preserve"><value>汚れたウィンドウ出力開始</value></data>
+  <data name="EF4107CC-9067-4C3A-A531-4102B4D09D8F" xml:space="preserve"><value>VGA クロッピング</value></data>
+  <data name="167648BB-6757-4EB4-9871-23BC4A8668A8" xml:space="preserve"><value>中</value></data>
+  <data name="E10470EB-E59E-4E3C-BCC7-CDB82A28DFDF" xml:space="preserve"><value>フルHD</value></data>
+  <data name="BB1B6C77-D5FD-4A25-AC4B-A2F223C4FBA6" xml:space="preserve"><value>H264ビットレート</value></data>
+  <data name="369A9006-4857-4D1B-AE7F-6B8326752CB4" xml:space="preserve"><value>右半分</value></data>
+  <data name="DF605089-DC48-4AF6-B649-4E8F6DC05F09" xml:space="preserve"><value>PSIA適合デバイス（2～16チャネル）</value></data>
+  <data name="27D3ACC6-3AE8-42E5-A90F-241CBB6A0FA7" xml:space="preserve"><value>屋外</value></data>
+  <data name="7F4DC1F6-09C1-4C07-8281-9E2CA4C22A31" xml:space="preserve"><value>アスペクト比</value></data>
+  <data name="02A2EBFA-CB1A-4F16-B409-DD121C384B98" xml:space="preserve"><value>プロファイル16</value></data>
+  <data name="AF70B3CE-076E-4F22-A9F3-11B20FFFA0C4" xml:space="preserve"><value>自動 x 128</value></data>
+  <data name="C27F0E57-39B0-48AA-B212-79ABDE6C563D" xml:space="preserve"><value>VGAファインモード</value></data>
+  <data name="4199DA03-AA53-4DDF-A94F-BA782EB90A42" xml:space="preserve"><value>H264 3 - ストリーム後</value></data>
+  <data name="977D4D3F-8258-48F4-BDBC-0107A3C20561" xml:space="preserve"><value>トリガー使用、連続、スケジュール使用</value></data>
+  <data name="DBA54185-B9F9-47CC-A9AB-346818A1F91F" xml:space="preserve"><value>最小画質調整レベル</value></data>
+  <data name="C70214F6-20BF-4208-AAEC-A6CF574FF07E" xml:space="preserve"><value>プロファイル8</value></data>
+  <data name="1E7D856F-BFA2-41EA-8FC6-371CC665B807" xml:space="preserve"><value>最大量子化</value></data>
+  <data name="AB6A06AF-9902-436A-BE36-C5E406BF5F32" xml:space="preserve"><value>量子化</value></data>
+  <data name="C4535EA8-C675-452D-88BD-27AE1B4B2FD9" xml:space="preserve"><value>オブジェクト停止</value></data>
+  <data name="886A1370-4260-4394-8D00-4F69F584ECFE" xml:space="preserve"><value>GOP 構造</value></data>
+  <data name="BB087B49-E5D9-4750-ADDA-89588A15D6BA" xml:space="preserve"><value>移動シャドー除外</value></data>
+  <data name="394A6874-FA50-45E4-BFB6-4D28180D2F47" xml:space="preserve"><value>プロファイル25</value></data>
+  <data name="8B3545BD-E905-4211-9C9C-AF639E35B079" xml:space="preserve"><value>プロファイル17</value></data>
+  <data name="E72DC5FC-CA06-4C66-B107-4CA8574E202F" xml:space="preserve"><value>自動屋内</value></data>
+  <data name="357A3962-BA12-45BD-ACFC-8AEEF510D3B8" xml:space="preserve"><value>固定モードの最大ビットレート</value></data>
+  <data name="BF4DDEED-4084-422F-9F7D-13FBABE6374F" xml:space="preserve"><value>ALCプライオリティ</value></data>
+  <data name="B42E3AEB-CE7A-430A-80BE-92656E647070" xml:space="preserve"><value>音声コーデック</value></data>
+  <data name="F35B8005-CC04-45B6-9844-2C6BA378B58B" xml:space="preserve"><value>環境失格出力開始</value></data>
+  <data name="0B714382-C2E4-47FA-986C-AC03C319E49C" xml:space="preserve"><value>双方向オーディオ</value></data>
+  <data name="AEDA36D0-9F07-4800-8082-06134995EBFE" xml:space="preserve"><value>スタビライザレベル</value></data>
+  <data name="1F678AEB-5D39-40FA-88C0-4EFFBA5BD189" xml:space="preserve"><value>音声</value></data>
+  <data name="C88AA759-0497-401C-BCD5-117F383EF286" xml:space="preserve"><value>回転</value></data>
+  <data name="8210A85F-7A0A-4CF9-8AA9-5FFC69F7A932" xml:space="preserve"><value>スタビライザ</value></data>
+  <data name="09658695-DCCF-4661-95F3-C72F94899FBD" xml:space="preserve"><value>1M ダブルパノラマ [16:9]</value></data>
+  <data name="87CBAE2D-E428-4DD6-BF3A-DBFBAE6F9DEC" xml:space="preserve"><value>ONVIF適合デバイス（2～16チャネル）</value></data>
+  <data name="F9A401FF-A0B0-4983-BFCB-E1D68B09F66C" xml:space="preserve"><value>自動(1/30-1/100)</value></data>
+  <data name="E506FE7A-E7C0-4BC1-B413-5554CCC10142" xml:space="preserve"><value>パリティー</value></data>
+  <data name="7D707C06-D7D4-4750-81C0-236E8FFB7243" xml:space="preserve"><value>マスター</value></data>
+  <data name="4BE2F7FE-B2B6-4517-8B4C-8E15DC635552" xml:space="preserve"><value>ストリーミング</value></data>
+  <data name="8CC568C2-1FAC-4075-B71D-85AE413097EA" xml:space="preserve"><value>ビデオインピーダンス</value></data>
+  <data name="2EA872C9-9141-493D-A2CE-86C5F875C1FC" xml:space="preserve"><value>日時</value></data>
+  <data name="3962374F-2788-4690-9529-77C7FAA568D9" xml:space="preserve"><value>タイプ 2</value></data>
+  <data name="9F62651A-D21D-40F4-AB86-6A489745D95E" xml:space="preserve"><value>1024x768（SD）</value></data>
+  <data name="16BAB727-CE5B-4AAC-A557-E4357AD75602" xml:space="preserve"><value>地区入口</value></data>
+  <data name="153B007B-4BD9-4C33-8AC3-8D228DCC43D6" xml:space="preserve"><value>PTZカメラアドレス</value></data>
+  <data name="D6BFD933-F7D4-4402-A09C-49963097DFE4" xml:space="preserve"><value>PTZを中心に設定して四角形にズーム</value></data>
+  <data name="DC2859CA-CE19-4981-B626-9D09FABECF4E" xml:space="preserve"><value>色温度</value></data>
+  <data name="ECC5E1EF-8E45-46E0-ADF3-F86B4B4D2155" xml:space="preserve"><value>逆光</value></data>
+  <data name="518F0E5B-8ECD-41A2-9B87-5A738DA248B2" xml:space="preserve"><value>圧縮</value></data>
+  <data name="C9D72BE0-3233-41EF-B3E7-B3B6F82657C7" xml:space="preserve"><value>消音</value></data>
+  <data name="9269B79F-BCD6-4B2D-B4C0-DF438390B01B" xml:space="preserve"><value>温度が適正範囲を下回っています</value></data>
+  <data name="3E70039B-6998-49FC-A145-F37425251D0E" xml:space="preserve"><value>モーション開始(ハードウェア)</value></data>
+  <data name="1158F356-5AE6-4264-8BD9-FACEB0CEBFD2" xml:space="preserve"><value>パノラマ/フォーカス</value></data>
+  <data name="2C8CECD3-33DC-43C2-9B4B-E930D9CA36DA" xml:space="preserve"><value>1 ファイン</value></data>
+  <data name="EA8B02F0-5CA1-4354-8606-BD5607D9F0F7" xml:space="preserve"><value>入力立上がり</value></data>
+  <data name="A35B7F14-CEF8-4A22-8395-BE5CDED343F4" xml:space="preserve"><value>MJPEGセカンダリ</value></data>
+  <data name="32817A16-3035-4FE0-9F35-98699A4076F3" xml:space="preserve"><value>可変ビット レート画質維持</value></data>
+  <data name="8DBC0665-BB11-474B-ADD0-90F58EF76A82" xml:space="preserve"><value>魚眼モード</value></data>
+  <data name="31E5CCAE-9819-4834-9DFB-D22D0CF4A1A4" xml:space="preserve"><value>720x576（SD）</value></data>
+  <data name="39844414-9884-480F-B4A3-31645341005E" xml:space="preserve"><value>プロファイル12</value></data>
+  <data name="327D2A70-4F8C-4E56-8A92-A9A3BAE9CF07" xml:space="preserve"><value>輝度(ELC)</value></data>
+  <data name="7CA288BD-D9CC-4AF8-9533-22EB063BA78D" xml:space="preserve"><value>タイマー</value></data>
+  <data name="DBACF2A4-E909-4E25-97DF-4E6884FA212F" xml:space="preserve"><value>モーション オン閾値</value></data>
+  <data name="3A23CC5A-C3EA-44A9-8EEA-EE1AE4A4A055" xml:space="preserve"><value>高 CABAC プロファイル</value></data>
+  <data name="303A1AD6-E858-4727-8833-F87EE5CF9F2E" xml:space="preserve"><value>顔非表示</value></data>
+  <data name="4D28BC86-5D22-49A3-AA80-6549B93E7802" xml:space="preserve"><value>チャネル1</value></data>
+  <data name="6B5DF976-D5E7-4F90-8EFD-9DE93F04C5DF" xml:space="preserve"><value>顔ウィンドウ</value></data>
+  <data name="9A8D783A-597C-4265-A2F2-691020C41322" xml:space="preserve"><value>破棄オブジェクト イベントが開始されました</value></data>
+  <data name="1A278279-4876-4BB6-94BB-2E46C95003D8" xml:space="preserve"><value>ウィンドウ変更が停止されました</value></data>
+  <data name="979F3DB5-2B1C-4D8C-86CC-262C1B1DA96F" xml:space="preserve"><value>4K 高フレームレート</value></data>
+  <data name="1A5CCDE4-EB67-42A0-9DD1-3DC8685E9D3E" xml:space="preserve"><value>IP ゲートウェイ</value></data>
+  <data name="D9E13EB4-0EDB-44EB-9730-31C0CBAB77E7" xml:space="preserve"><value>ユニバーサル</value></data>
+  <data name="5B4D23A5-705A-4ED5-A944-481CCABB8FEF" xml:space="preserve"><value>デイナイトモード</value></data>
+  <data name="675433B5-CF72-4252-A303-F0CB69643D7A" xml:space="preserve"><value>現在の値を維持する</value></data>
+  <data name="40B33764-110C-47EC-A4DE-FB5DF71BB62D" xml:space="preserve"><value>マルチキャスト グループ</value></data>
+  <data name="2302EA8C-91F4-4FB3-AD3A-16D12F528504" xml:space="preserve"><value>Zipstream対応</value></data>
+  <data name="22F205D2-448A-4602-ABD0-520AA43632A3" xml:space="preserve"><value>目標ビットレート (kビット/秒) MJPEG</value></data>
+  <data name="A474CCCD-DBF5-423E-9B62-941483158BF7" xml:space="preserve"><value>ラインエコーキャンセレーション</value></data>
+  <data name="1C049BDB-941A-4B6A-B779-A7A740D3E24D" xml:space="preserve"><value>カメラ1とカメラ2のマイク</value></data>
+  <data name="367287F1-F927-466F-899B-CEBDED54DF0E" xml:space="preserve"><value>中低</value></data>
+  <data name="866AEDC2-2979-4AD2-AF02-D7921AAE17EC" xml:space="preserve"><value>H264/H264 デュアル ストリーム</value></data>
+  <data name="A22C5227-D028-4CB6-BD38-E7EDBFB701F4" xml:space="preserve"><value>マイク(コンデンサー)</value></data>
+  <data name="88EC3289-0E91-4638-95EA-8338E1A8E9A5" xml:space="preserve"><value>ファースト</value></data>
+  <data name="685FB8A9-CDC3-4A97-AD23-BCA8FEEFA71E" xml:space="preserve"><value>スクリーン 15</value></data>
+  <data name="67DF9542-DFBC-4BF6-A43A-023054F07A40" xml:space="preserve"><value>Zipstream GOPモード</value></data>
+  <data name="DA00FB0C-5E53-466F-A8ED-D671E870093D" xml:space="preserve"><value>日中輝度</value></data>
+  <data name="BCC42447-3469-4A9F-BB4F-238F8FC49758" xml:space="preserve"><value>目標ビットレート (kビット/秒) H265</value></data>
+  <data name="BDE75FD7-3790-4CD3-B6A1-7A48AB82659F" xml:space="preserve"><value>良</value></data>
+  <data name="22D438C9-C9B8-42A2-AC1B-8FD9B4F44EBF" xml:space="preserve"><value>方向性モーション イベントが開始されました</value></data>
+  <data name="82A83706-E8E5-4B78-8F9C-32930ECE5ED8" xml:space="preserve"><value>エリア4</value></data>
+  <data name="F86C7224-B336-4024-82AB-76D698E5C448" xml:space="preserve"><value>エッジストレージサポート</value></data>
+  <data name="FD5AF7D9-ADC0-45F5-863A-B56603E10E06" xml:space="preserve"><value>J:1280x960 (マスク) M:N/A</value></data>
+  <data name="AC96FEC6-DE88-452A-A931-7B01AFE00CBE" xml:space="preserve"><value>RTSP PLAY リクエスト時に URI オプションを含める</value></data>
+  <data name="01C8703F-E4A1-457A-B796-B3ED905B1C1D" xml:space="preserve"><value>パノラマフォーカス</value></data>
+  <data name="02582C17-AB34-411A-98E3-898BA565BCAD" xml:space="preserve"><value>デジタル自動追跡</value></data>
+  <data name="7813E2EB-54FE-4125-852D-97EF21D0FA7D" xml:space="preserve"><value>入力アクティブ化</value></data>
+  <data name="09BECCD2-2CC6-42E7-9F6E-EA74792D43F2" xml:space="preserve"><value>MPEGビットレート</value></data>
+  <data name="AC72AEA4-70F0-43E9-B596-60412ECC76DB" xml:space="preserve"><value>デフォルト(ドライバーにより決定)</value></data>
+  <data name="32114B84-2360-4BC5-B332-82C2B5EA4F44" xml:space="preserve"><value>レンズ補正</value></data>
+  <data name="6759F170-A3D5-4ED3-B825-2120B25765EB" xml:space="preserve"><value>H264 コントロールモード</value></data>
+  <data name="487A1CC0-379D-43F5-A303-B086D0CA280B" xml:space="preserve"><value>プロファイル5</value></data>
+  <data name="655C11D5-98CA-46B5-B694-09E5AFB5D1D6" xml:space="preserve"><value>PTZプロトコル</value></data>
+  <data name="D08C358E-0AB7-4A5D-BC3C-330FF150CE76" xml:space="preserve"><value>目標ビットレート</value></data>
+  <data name="91EA34CE-24D6-409D-80E5-7825FFF07247" xml:space="preserve"><value>4 分割</value></data>
+  <data name="73DD0EE8-86DE-465A-BC2A-4508E49A4F7B" xml:space="preserve"><value>量子化</value></data>
+  <data name="128D1C9F-D0B5-4AF7-921A-C296E16F6E78" xml:space="preserve"><value>アクセスエラー</value></data>
+  <data name="B8CF80C6-A557-45C8-B35B-610DF09EE11F" xml:space="preserve"><value>シーン3</value></data>
+  <data name="16006734-4840-4FEE-BB49-7ED6D5CA7D5B" xml:space="preserve"><value>ホワイトバランスセット B</value></data>
+  <data name="A60EF778-83FA-4D3A-9D4A-B8068DFDA459" xml:space="preserve"><value>変更レベル</value></data>
+  <data name="BCA881A8-94EB-42E0-8208-4A1386BBA551" xml:space="preserve"><value>採光時間</value></data>
+  <data name="8418F6A4-E5E1-4C6C-A7DE-2DDAF13A87D5" xml:space="preserve"><value>方向</value></data>
+  <data name="5A7DC2A9-EC86-4FD1-855B-9415AD8E253B" xml:space="preserve"><value>スナップショット</value></data>
+  <data name="2F8B6325-9C48-44B9-9868-27DB64A71D51" xml:space="preserve"><value>1秒当たり MPEG-4 フレーム</value></data>
+  <data name="FE0B2A00-D896-454A-9A9E-BBB952A34AC9" xml:space="preserve"><value>プロファイル38</value></data>
+  <data name="36F5F45A-CAD3-4E79-AF0D-8CEF5262BA1B" xml:space="preserve"><value>方向モーションウィンドウ</value></data>
+  <data name="84AA6FB8-4F15-4160-A720-0214CF822CC2" xml:space="preserve"><value>VBR最大ビットレート</value></data>
+  <data name="786E1F88-73BB-47FC-8B1A-FAAF93C0BF4B" xml:space="preserve"><value>画質</value></data>
+  <data name="53A4B2B7-210E-47B3-A824-087ED3936ACC" xml:space="preserve"><value>ビジビリティーエンハンサー</value></data>
+  <data name="39CF9444-B670-4258-A419-3F8EAB8D5A05" xml:space="preserve"><value>逆光補正</value></data>
+  <data name="931A802A-8376-4F3B-8233-33486E66DC00" xml:space="preserve"><value>チャネル2</value></data>
+  <data name="A96C87EF-7E62-4556-A988-3AAC66CA9A0E" xml:space="preserve"><value>プリバッファフレーム数/秒</value></data>
+  <data name="B716D1FD-6305-47E0-8DFC-C48080EA49B9" xml:space="preserve"><value>スクリーン 9</value></data>
+  <data name="94E2F4AC-386E-4B78-B9DC-6B10953775CA" xml:space="preserve"><value>H.264 プロファイル</value></data>
+  <data name="DF34991B-E917-43DF-8B60-C856597870C1" xml:space="preserve"><value>自動 x 4</value></data>
+  <data name="38790448-860E-48B3-BAE8-0976A788B1FA" xml:space="preserve"><value>デイナイト</value></data>
+  <data name="69C5F970-DE8B-4E2D-8109-50B145F7E937" xml:space="preserve"><value>マイク出力タイプ</value></data>
+  <data name="88FCFDD9-D884-4843-BD8F-03E29CF6EDE9" xml:space="preserve"><value>2メガピクセル[16:9] (30fpsモード)</value></data>
+  <data name="A40CC7BF-4BD2-48D2-B2C7-2F462C4D8029" xml:space="preserve"><value>2メガピクセル[16:9] (60fpsモード)</value></data>
+  <data name="7AC2EFEA-7D12-4EA9-B710-EA337BB099D3" xml:space="preserve"><value>TCPイベントホストポート番号</value></data>
+  <data name="57C84CF5-B647-49E2-B3A6-18E8A5BD1D3B" xml:space="preserve"><value>キーフレーム間の最大フレーム数</value></data>
+  <data name="C09AF136-E0BA-4BD9-AB34-AC428A0E1882" xml:space="preserve"><value>室内2</value></data>
+  <data name="93613DBE-4DD2-455A-A71B-B0556F16CE59" xml:space="preserve"><value>拡大1.2MPから3MP</value></data>
+  <data name="914A90F2-6EF6-409A-B01E-C6F0902A3905" xml:space="preserve"><value>AWC R-ゲイン</value></data>
+  <data name="C07A7440-A393-4FB5-A859-9AEC66E67DC1" xml:space="preserve"><value>1Mパノラマ + 魚眼</value></data>
+  <data name="B7185D5B-6F94-4704-904B-5F4C2E8DBB81" xml:space="preserve"><value>最大シャッター速度</value></data>
+  <data name="9A7645C2-6303-48C9-95BC-7597C35CE4A3" xml:space="preserve"><value>モード</value></data>
+  <data name="F2B607A4-D95D-44B5-A6A3-9A7107702FEC" xml:space="preserve"><value>ATW-ワイド</value></data>
+  <data name="1E7AE705-0C37-4C57-A4C7-B75E077C7E57" xml:space="preserve"><value>プリバッファフレーム数/秒</value></data>
+  <data name="5D1AE51B-5DCC-47AA-A9EC-A32DBC76809C" xml:space="preserve"><value>RTSP ポート</value></data>
+  <data name="3E88CF8A-A396-43B8-8F77-F5C2EE6400C8" xml:space="preserve"><value>温度プレアラーム開始</value></data>
+  <data name="66529C6E-1DC1-493C-9287-D72E768D3646" xml:space="preserve"><value>アラームレベル</value></data>
+  <data name="C36A150B-9527-4B7A-B968-6F1172F5D5A2" xml:space="preserve"><value>アナリティクスデータ</value></data>
+  <data name="7D3EF7B7-1496-498A-8F17-D9811BBE26B6" xml:space="preserve"><value>マイク音量</value></data>
+  <data name="A34A8946-5CE2-4E2B-8736-0D20C877758B" xml:space="preserve"><value>熱放射測定</value></data>
+  <data name="BA374119-8AA9-4746-AD9D-189E22B77FE3" xml:space="preserve"><value>デジタルスローシャッター</value></data>
+  <data name="11EEAFCD-B657-49D6-92C0-5858EEC3064C" xml:space="preserve"><value>H264 補正済みストリーム</value></data>
+  <data name="13EA4005-49BD-4985-93FB-36C8DF3B2843" xml:space="preserve"><value>固定蛍光灯</value></data>
+  <data name="2443BBBF-6E86-424A-9B01-6FB2BB6E03A9" xml:space="preserve"><value>インターレースの解除</value></data>
+  <data name="504D544E-C579-4008-AC26-AA8D150D696A" xml:space="preserve"><value>レベル1</value></data>
+  <data name="93E4FC87-BDE5-4FAD-8763-217C342F9F28" xml:space="preserve"><value>プロファイル モード</value></data>
+  <data name="A4193014-D0BE-4262-853E-B39CBD37D74F" xml:space="preserve"><value>等温線低レベル</value></data>
+  <data name="94B2690D-DA61-448B-84B0-924B1B862A66" xml:space="preserve"><value>360°レンズの縮尺: 640x480</value></data>
+  <data name="93B1C69C-8D51-4015-B7F8-74DC70B3254E" xml:space="preserve"><value>デイナイト</value></data>
+  <data name="50BDF0DE-8324-4186-9D76-64FF479D71AB" xml:space="preserve"><value>ストリーミング モード</value></data>
+  <data name="61EF7D4E-2249-4B48-83C7-CF0AF68B43AA" xml:space="preserve"><value>PIR センサー</value></data>
+  <data name="FD451F7A-E215-4225-9EC4-A853137A5D62" xml:space="preserve"><value>PanoramaWallモード</value></data>
+  <data name="3BCCC48A-1752-4738-8706-4DC36E04E9CA" xml:space="preserve"><value>ウィンドウ2</value></data>
+  <data name="F42C4038-37F7-49BE-8ECC-2AF352542652" xml:space="preserve"><value>AOI高さ</value></data>
+  <data name="3EA809D2-1E89-4FE8-B21C-42013E6F5166" xml:space="preserve"><value>MPEG自動レート</value></data>
+  <data name="D259C645-1FFA-4D5E-8744-1E6644CBC879" xml:space="preserve"><value>センサーAOI高さ</value></data>
+  <data name="40849836-A46F-4AA9-AC8A-144C289AFE79" xml:space="preserve"><value>3メガピクセル[4:3] (30fpsモード)</value></data>
+  <data name="52560826-DF62-44ED-9330-C9B9F1CEFC71" xml:space="preserve"><value>左上</value></data>
+  <data name="0F47D6B4-A0E6-4A9F-895C-3CB5D68E2A77" xml:space="preserve"><value>反転 / ミラー</value></data>
+  <data name="7AD55118-00C7-4C36-A212-C2E92E087D1C" xml:space="preserve"><value>イベントスキーマID</value></data>
+  <data name="550A0E03-A664-499D-9CB8-446FD64595DF" xml:space="preserve"><value>1/13（50 Hz）、1/15（60 Hz）</value></data>
+  <data name="468E1427-FD6C-432B-8251-CB0575EEB0F8" xml:space="preserve"><value>ウィンドウ3</value></data>
+  <data name="0D1E9863-D142-4F2C-939A-531807CD42DB" xml:space="preserve"><value>ガラスの破損を検出</value></data>
+  <data name="43BD67C6-B0EC-4460-9962-F15E6B8D6CED" xml:space="preserve"><value>4M 魚眼 + クアッド PTZ</value></data>
+  <data name="00209B48-40CD-4712-ACB3-31F09250A209" xml:space="preserve"><value>キーフレーム間の最大フレーム数</value></data>
+  <data name="0501122D-35BB-4BD9-9E5D-3AC14421B846" xml:space="preserve"><value>G.711 オーディオビットレート (kビット/秒)</value></data>
+  <data name="FDC143EC-8DF5-4E84-955F-7A361496255F" xml:space="preserve"><value>カメラタイプ</value></data>
+  <data name="597202D5-8BAA-4A66-A4C2-43060D59271C" xml:space="preserve"><value>自動 x 2</value></data>
+  <data name="FCAAC434-21AD-421F-97DF-671CCDAE8C40" xml:space="preserve"><value>H264 4 - ストリーム後</value></data>
+  <data name="5406EBE3-8533-4671-B349-020151CF347B" xml:space="preserve"><value>コントラストモード</value></data>
+  <data name="68585498-369E-4EE3-BD2F-002429B06FFC" xml:space="preserve"><value>PAL（crop）</value></data>
+  <data name="C383E30C-2F44-447C-84B8-1630070D6FF9" xml:space="preserve"><value>4秒</value></data>
+  <data name="559C9EC1-114B-489D-9A80-10E5ACA4AF91" xml:space="preserve"><value>ストップ ビット</value></data>
+  <data name="33308C5C-EF5E-4CB6-B914-EBFDD22D002F" xml:space="preserve"><value>夜間の露出ゲイン</value></data>
+  <data name="78BE551B-F5F2-4FFD-BABA-F899EA9D1346" xml:space="preserve"><value>デイナイトと同期</value></data>
+  <data name="76C4ED48-BFC8-486F-A430-026B061AE835" xml:space="preserve"><value>ダブルパノラマ</value></data>
+  <data name="BE5CC049-FB9E-4564-B955-51D075F46C41" xml:space="preserve"><value>20 dB</value></data>
+  <data name="82689FAA-D926-4D4B-B6F5-AF7A3BEF509C" xml:space="preserve"><value>ミラー</value></data>
+  <data name="2461683C-C13B-4902-9E27-F3C6266181DF" xml:space="preserve"><value>パノラマ 180 後: 1024x336</value></data>
+  <data name="3894423E-8A86-40BA-9C18-C6F27A59F47A" xml:space="preserve"><value>ナイトモード</value></data>
+  <data name="DA474E6F-114F-491C-9135-B66060118634" xml:space="preserve"><value>音声立下がり</value></data>
+  <data name="BF64EF1F-A498-4B9A-83D9-FCC020E9459B" xml:space="preserve"><value>監視対象入力 - 短絡</value></data>
+  <data name="9FAF1F8F-16AC-42D0-A213-428C91249849" xml:space="preserve"><value>連続、スケジュール使用、トリガー使用</value></data>
+  <data name="CEA4E557-EB5A-442C-909C-B543AA6ADD76" xml:space="preserve"><value>取得モード</value></data>
+  <data name="D33C27F6-6192-4F47-854D-0BD7E3D41A55" xml:space="preserve"><value>ロー</value></data>
+  <data name="3BA5633C-3ACB-4861-BD7E-5D1751408294" xml:space="preserve"><value>露光補正モード</value></data>
+  <data name="6CBACAD9-B646-40B4-9B41-096629417BCF" xml:space="preserve"><value>自動　速い</value></data>
+  <data name="F9CB3DF7-684C-4F7A-9B27-C69AAABD7E9D" xml:space="preserve"><value>標準</value></data>
+  <data name="EB713F02-F2CF-45D8-BC5D-0ADF977832AB" xml:space="preserve"><value>夜間秒当たりフレーム数</value></data>
+  <data name="E7B38CEB-5C24-4E75-8030-CC22978F1611" xml:space="preserve"><value>輝度(WDR)</value></data>
+  <data name="00AF98AC-CA77-4BBC-83BF-074FB6DC7F43" xml:space="preserve"><value>最高</value></data>
+  <data name="1F4E135B-3F57-4E1D-853F-8C0103F8F679" xml:space="preserve"><value>ワイパー/ウォッシャーコントロール</value></data>
+  <data name="A5760A42-A948-4F69-8D0A-050A5637A6D3" xml:space="preserve"><value>TCPイベントホストポート番号</value></data>
+  <data name="0C6779A3-56DB-41AE-9F2C-9FE5930ED444" xml:space="preserve"><value>夜間シャープ度</value></data>
+  <data name="85F26821-A46C-4193-A0BE-00BDA959FDF8" xml:space="preserve"><value>3.125（PAL）</value></data>
+  <data name="887A0A30-C086-4B1A-B047-22E34C699FDE" xml:space="preserve"><value>カメラが交換されました</value></data>
+  <data name="0081415A-27CE-4BDB-A186-C6DDB515E6D5" xml:space="preserve"><value>RTP (UDP)マルチキャスト</value></data>
+  <data name="3B643C04-ADBA-49A5-A27F-93038FBB8086" xml:space="preserve"><value>640x480（SD）</value></data>
+  <data name="E22505C4-BED7-4B83-88AB-F418BEFFB351" xml:space="preserve"><value>白熱灯</value></data>
+  <data name="1F1A6010-99F2-44E1-9AA4-38D05B0FC5B6" xml:space="preserve"><value>1/25（50 Hz）、1/30（60 Hz）</value></data>
+  <data name="8ADFAC28-EC36-45DA-AC52-58D7811445DE" xml:space="preserve"><value>低速</value></data>
+  <data name="93B451DA-C44B-4E11-A8BF-E5B8480435E2" xml:space="preserve"><value>ハイ</value></data>
+  <data name="BC14A685-0903-4F74-98A7-52BBCF01C2DA" xml:space="preserve"><value>MPEG4品質</value></data>
+  <data name="3599303C-DF63-42F7-835F-F0C2A96F6CFB" xml:space="preserve"><value>HTTPS有効</value></data>
+  <data name="31088851-8321-4764-96D5-F24642D475A4" xml:space="preserve"><value>G726 オーディオビットレート (kビット/秒)</value></data>
+  <data name="B72224F1-47A6-4C1C-97AF-EF2D272E01C0" xml:space="preserve"><value>エンハンス帯域</value></data>
+  <data name="836C3F4A-1BB4-47C7-9F5E-6AA178F4B1BB" xml:space="preserve"><value>夜間使用</value></data>
+  <data name="C0A4E974-8B08-4AD9-8661-3360DB77D680" xml:space="preserve"><value>パーキング </value></data>
+  <data name="E3F9F5F1-3FE4-4EC5-A2E9-05B9A5408815" xml:space="preserve"><value>H.264 画質</value></data>
+  <data name="4987FD10-2416-4622-913B-9BA0FEAC8F16" xml:space="preserve"><value>ユーザー定義</value></data>
+  <data name="culture" xml:space="preserve"><value>ja-JP</value></data>
+  <data name="584B67F3-B294-46DA-A673-68939DDCE8B7" xml:space="preserve"><value>IPモード</value></data>
+  <data name="BA3A8B7F-019F-4541-A3E2-3A9234AE920B" xml:space="preserve"><value>第一スクリーン</value></data>
+  <data name="5E7CCC65-F311-4570-B399-6E7DFA2A89D8" xml:space="preserve"><value>フル</value></data>
+  <data name="48364CEC-A000-46BF-BF25-C85A01A93956" xml:space="preserve"><value>360 パノラマ</value></data>
+  <data name="A51DED36-616F-48B7-ADF3-5EA17D9BFCB2" xml:space="preserve"><value>夜間 AGC ゲイン</value></data>
+  <data name="79FA2EC3-AB74-473D-9676-7CAD56275EAF" xml:space="preserve"><value>スクリーム検出立ち下がり</value></data>
+  <data name="D84B3EC8-0BD4-4716-AA52-66B01D652A32" xml:space="preserve"><value>4M魚眼</value></data>
+  <data name="23AEF632-2875-490B-B5A8-4B441E91EB7A" xml:space="preserve"><value>ZipstreamダイナミックGOPの最大の長さ</value></data>
+  <data name="442AD88E-DF05-4DA6-92F1-899B76132883" xml:space="preserve"><value>カメラ2のマイク</value></data>
+  <data name="A773E898-E106-48A3-8559-28D143A9CA69" xml:space="preserve"><value>目標ビットレート (kビット/秒) H.264</value></data>
+  <data name="442D13AB-4DA4-4B72-BBB1-DD3634936E58" xml:space="preserve"><value>MPEG 1 - ストリーム後</value></data>
+  <data name="0718C278-BC08-41D1-B128-27970829EADB" xml:space="preserve"><value>自動 x 48</value></data>
+  <data name="02F07CDF-BFD7-45D7-BA58-C402BF19117D" xml:space="preserve"><value>アナログ形式</value></data>
+  <data name="8209D4FC-6757-4F95-BBFD-DFE65CC49049" xml:space="preserve"><value>H264 1 - ストリーム後</value></data>
+  <data name="5387F360-B4EC-43D5-8863-7DDC437BBA23" xml:space="preserve"><value>白色バランス補正</value></data>
+  <data name="80441285-483A-4EE7-BFC9-BA7A23FBB796" xml:space="preserve"><value>物体の方向</value></data>
+  <data name="F28538DB-5801-4C89-9C8E-80606AD8896E" xml:space="preserve"><value>フロー制御</value></data>
+  <data name="C2F65D5B-F41B-4FA7-8A69-00E1BD23D620" xml:space="preserve"><value>屋外1</value></data>
+  <data name="3186D09C-1512-4FD4-84CD-78E24C02F764" xml:space="preserve"><value>H264 単一ストリーム</value></data>
+  <data name="27C98FBA-6A35-423B-8572-A79D1AAC14C9" xml:space="preserve"><value>ビデオプッシュドライバー</value></data>
+  <data name="7A34D43A-2EB5-4E49-9744-3C87E26F9ADA" xml:space="preserve"><value>メジャー</value></data>
+  <data name="991535BC-7186-4BCB-91D8-264580073161" xml:space="preserve"><value>JPEG 単一ストリーム</value></data>
+  <data name="16929FAB-6BEA-4008-8FE8-31036BDD6CF1" xml:space="preserve"><value>両方</value></data>
+  <data name="6CD1C69E-2F07-4035-9EFF-5C44BE8F6A6C" xml:space="preserve"><value>ダブルパノラマ + クアッド PTZ</value></data>
+  <data name="C5D81233-4178-4A26-A297-B2D7DB53CEE2" xml:space="preserve"><value>ズーム中の画像</value></data>
+  <data name="3FE6AEB2-AD1E-43DE-8D8F-8ED05B272DA9" xml:space="preserve"><value>露光補正</value></data>
+  <data name="5BE4619A-0CEE-4A40-B1DC-E93BC745164D" xml:space="preserve"><value>夜間露出シャッター速度</value></data>
+  <data name="8D17C1E6-2E8E-468D-AC9F-731372AB9958" xml:space="preserve"><value>キーフレーム モード間の最大時間 H265</value></data>
+  <data name="BFC9F400-58FB-4DDA-9C46-FFFA85ABFEB7" xml:space="preserve"><value>プライオリティ</value></data>
+  <data name="C0093FC4-18FC-446E-903C-5E57912173E6" xml:space="preserve"><value>移動物体検知</value></data>
+  <data name="04A69547-A515-4CB8-82F6-49612EEE5E9F" xml:space="preserve"><value>4M 魚眼 + ダブルパノラマ</value></data>
+  <data name="6DC5DA45-2FBE-46C2-B8A0-834320B2546E" xml:space="preserve"><value>JPEG帯域</value></data>
+  <data name="60581DBD-D0DF-4BDA-91BE-F8BCF500E475" xml:space="preserve"><value>赤外線 1 レベル</value></data>
+  <data name="2CBE9496-E0FC-4D5E-9EDE-0517DBCB9B7C" xml:space="preserve"><value>ラインクロス開始</value></data>
+  <data name="BC8402E0-5E15-43B0-8575-A603913D30F6" xml:space="preserve"><value>出力トリガ時間(ミリ秒)</value></data>
+  <data name="6DEB0FD6-5FA4-45AA-8DD5-B86D616D518B" xml:space="preserve"><value>シャープ</value></data>
+  <data name="3001515F-A42F-44A3-80EE-6FEC563F7568" xml:space="preserve"><value>シングルPTZ</value></data>
+  <data name="3FEA66B1-3089-45D8-8928-12175DCBF511" xml:space="preserve"><value>氷と炎</value></data>
+  <data name="D1F53940-CE3E-49F9-B02D-FB6A172B4BCF" xml:space="preserve"><value>バランス</value></data>
+  <data name="128ACC53-9EBD-41D2-9D13-33AFAC56CB6A" xml:space="preserve"><value>マルチキャスト TTL</value></data>
+  <data name="00EA78CF-A48A-46B4-A574-65DA6804457A" xml:space="preserve"><value>メンテナンス警告</value></data>
+  <data name="EBBEDE14-66F7-4A43-987F-BC96028F4262" xml:space="preserve"><value>フレームレート優先度</value></data>
+  <data name="A0173A1A-7868-41A1-A885-78C75E52F56B" xml:space="preserve"><value>音声 - ストリーム出力</value></data>
+  <data name="1000D11F-2F44-4A6D-9DDD-DC2CB71D8CEE" xml:space="preserve"><value>デジタルノイズ低減</value></data>
+  <data name="954EE865-7CD8-4FA7-8EC0-7A9CC870622D" xml:space="preserve"><value>5M魚眼</value></data>
+  <data name="414F7F8F-4AAD-4E10-B6D8-56C98B8EAA22" xml:space="preserve"><value>ビデオ入力1</value></data>
+  <data name="5A1570C0-F7AA-48F7-BDB2-85AE55077F83" xml:space="preserve"><value>イベント画像ソース</value></data>
+  <data name="9AA2E0FD-3DE3-43F3-A977-F2466FFF4D6C" xml:space="preserve"><value>グループ検出</value></data>
+  <data name="74BE8444-7686-41E1-9AEA-DE21F5F0ECF4" xml:space="preserve"><value>音声 出力間隔</value></data>
+  <data name="2CBFD31D-7E25-4237-9FF0-6A7B4F49EAED" xml:space="preserve"><value>スクリーン 2</value></data>
+  <data name="1FCB6725-0E0B-4D2E-808C-039F59DB1BAA" xml:space="preserve"><value>解像度 高さ</value></data>
+  <data name="634F16C4-5E82-4BA4-A100-E3CA7128D362" xml:space="preserve"><value>最小量子化</value></data>
+  <data name="FF6280E7-6551-4F78-8D2B-3F709E7216C3" xml:space="preserve"><value>自動 x 96</value></data>
+  <data name="1210B405-DB1B-4553-9A62-103E57E3BDD0" xml:space="preserve"><value>MJPEG - ストリーム化済み</value></data>
+  <data name="A01302D4-858A-4379-98B8-9A61BC357736" xml:space="preserve"><value>IR ライト</value></data>
+  <data name="E410EB0B-6A3F-4FB4-B1F2-E7E3E3C24744" xml:space="preserve"><value>シリアル番号</value></data>
+  <data name="8DD1A23E-9BF8-4806-87C2-FFF31D31DE0A" xml:space="preserve"><value>オート低</value></data>
+  <data name="1FC0EE1D-D662-47E5-8580-CF9820378A09" xml:space="preserve"><value>H264 9 - ストリーム後</value></data>
+  <data name="1FC0EE1D-D662-47E5-8580-CF9820378A08" xml:space="preserve"><value>H264 8 - ストリーム後</value></data>
+  <data name="1FC0EE1D-D662-47E5-8580-CF9820378A07" xml:space="preserve"><value>H264 7 - ストリーム後</value></data>
+  <data name="1FC0EE1D-D662-47E5-8580-CF9820378A06" xml:space="preserve"><value>H264 6 - ストリーム後</value></data>
+  <data name="1FC0EE1D-D662-47E5-8580-CF9820378A05" xml:space="preserve"><value>H264 5 - ストリーム後</value></data>
+  <data name="1FC0EE1D-D662-47E5-8580-CF9820378A04" xml:space="preserve"><value>H264 4 - ストリーム後</value></data>
+  <data name="1FC0EE1D-D662-47E5-8580-CF9820378A03" xml:space="preserve"><value>H264 3 - ストリーム後</value></data>
+  <data name="1FC0EE1D-D662-47E5-8580-CF9820378A02" xml:space="preserve"><value>H264 2 - ストリーム後</value></data>
+  <data name="1FC0EE1D-D662-47E5-8580-CF9820378A01" xml:space="preserve"><value>H264 1 - ストリーム後</value></data>
+  <data name="1FC0EE1D-D662-47E5-8580-CF9820378A00" xml:space="preserve"><value>H264 0 - ストリーム後</value></data>
+  <data name="F66268F9-EF5F-4AE9-AABF-91363AEF2412" xml:space="preserve"><value>1秒当たりH265フレーム</value></data>
+  <data name="23D247A2-E090-4E8B-A53D-4993F72D6441" xml:space="preserve"><value>ホーム位置のプリセット</value></data>
+  <data name="5C5C04DF-4546-46C8-A099-F4DEE8DE464D" xml:space="preserve"><value>最高画質</value></data>
+  <data name="9887AC87-ADC9-4C26-B120-A4EB8526B369" xml:space="preserve"><value>イベントソース</value></data>
+  <data name="9A7FE337-F317-42BE-BC1C-29342957E78B" xml:space="preserve"><value>スクリーン 14</value></data>
+  <data name="10C1D89E-12D5-4E9B-8F8D-B7FA1A62B619" xml:space="preserve"><value>超低</value></data>
+  <data name="0CC0CB08-13B5-4A18-8A11-C9E0154069EF" xml:space="preserve"><value>マニュアルゲインコントロール</value></data>
+  <data name="043F9BB6-A47F-445D-9321-FBAC9464885A" xml:space="preserve"><value>1.3メガピクセル[16:9] (60fpsモード)</value></data>
+  <data name="D7FF7725-0052-4A11-ABBC-5EF1801E1F12" xml:space="preserve"><value>音声 ビットレート</value></data>
+  <data name="CD592A14-C850-43F4-874B-2C886E71BE68" xml:space="preserve"><value>1ビット</value></data>
+  <data name="399F6D54-76E7-4EA6-ADB0-5B8F5CE43D16" xml:space="preserve"><value>エリア2</value></data>
+  <data name="6AC44486-B2E1-4E01-B173-DB90499716A0" xml:space="preserve"><value>キーフレーム モード間の最大時間 H.265</value></data>
+  <data name="19A4BA18-0B30-4F7C-A210-FFDF579864C2" xml:space="preserve"><value>夜間のコントラスト</value></data>
+  <data name="AB209F5C-69A4-4665-95E9-B6DB28CA6B65" xml:space="preserve"><value>30 秒</value></data>
+  <data name="73902E56-E198-46E3-8C89-E7C2526FBE05" xml:space="preserve"><value>マイク - 高</value></data>
+  <data name="F75877DF-CCED-48F0-9905-EAA11AE690C8" xml:space="preserve"><value>温度ウィンドウ</value></data>
+  <data name="E2936CB6-497F-4E9B-9820-EAE42E7B326F" xml:space="preserve"><value>絶対的</value></data>
+  <data name="30F5099C-402B-4289-94B6-1B19D63D53AD" xml:space="preserve"><value>ユーザー</value></data>
+  <data name="AC5467EA-BF90-475E-8BC7-C41D977A2910" xml:space="preserve"><value>顔認識停止</value></data>
+  <data name="258EE3A0-1745-422C-9F21-B40AC6229733" xml:space="preserve"><value>出力状態</value></data>
+  <data name="7AAF9191-B536-42A3-A0D7-8AB9A4BCCC31" xml:space="preserve"><value>時間モード</value></data>
+  <data name="09570ECF-9E9A-4AB7-9A34-2A33A4FC3D8E" xml:space="preserve"><value>ウィンドウ4</value></data>
+  <data name="47F42B12-CDE0-4E8F-8F36-57D86F3A3C23" xml:space="preserve"><value>画像モード</value></data>
+  <data name="123BA415-3BFD-4A69-A603-4E7C55847CC3" xml:space="preserve"><value>内部メッセージギャップ</value></data>
+  <data name="6A74A7A6-79A8-453F-9174-686535FCF320" xml:space="preserve"><value>地区出口</value></data>
+  <data name="73C0025B-84A0-4B82-B1D7-9E7F6928570B" xml:space="preserve"><value>320x240（SD）</value></data>
+  <data name="8CCE9FD0-E333-49D0-938B-535DEC8C53E0" xml:space="preserve"><value>インテリジェントシーンキャプチャ(高速A)</value></data>
+  <data name="944DB54B-9509-4CB4-B41E-71CB0CB9DAA7" xml:space="preserve"><value>逆光補正</value></data>
+  <data name="34955D9A-AC98-4531-BF23-033E3961AE12" xml:space="preserve"><value>レベル10</value></data>
+  <data name="D8B552C8-B27F-4AB5-84A8-8E184DBA8BA3" xml:space="preserve"><value>監視対象入力 - 断線</value></data>
+  <data name="90A64F09-FE91-4BA7-8CE8-BD1492E9A345" xml:space="preserve"><value>目標ビットレート (kビット/秒) H.265</value></data>
+  <data name="FA7C09E1-C39C-46C8-B82F-B94FFBC23458" xml:space="preserve"><value>他のストリームをコピー</value></data>
+  <data name="33BF4964-463C-4716-970B-A352C3BC684F" xml:space="preserve"><value>RTSP上のRTP（TCP）</value></data>
+  <data name="24C02BA2-BDFB-4291-B697-0FECF7B146FF" xml:space="preserve"><value>メタデータパッケージ</value></data>
+  <data name="DFFEC612-50FB-4ABC-8FBE-9BC613A6B8D7" xml:space="preserve"><value>3秒</value></data>
+  <data name="24EB9CC7-80ED-4B75-81AE-E3FB5D9568DA" xml:space="preserve"><value>露光シャッタースピード</value></data>
+  <data name="1746CB47-5742-4979-9F9D-7F537DF17F99" xml:space="preserve"><value>室内灯</value></data>
+  <data name="D823D914-675A-4656-8A1D-11F523C00D8A" xml:space="preserve"><value>回路開</value></data>
+  <data name="687B7B87-C8FD-43CA-BDAE-6D83F68BA30C" xml:space="preserve"><value>最小</value></data>
+  <data name="CEB28F20-09F3-4BDB-9D7D-EF87ACDB535C" xml:space="preserve"><value>ハーフVGA</value></data>
+  <data name="1B0E39FC-F61D-460B-9825-3603D3918A51" xml:space="preserve"><value>モーショングリッドのYピクセルオフセット</value></data>
+  <data name="858C535B-9F21-4F89-935D-FC85073C7F5E" xml:space="preserve"><value>一定ビット レート画質維持</value></data>
+  <data name="27F68496-8421-44D7-BFFC-E7B85CCA587E" xml:space="preserve"><value>6.25（PAL）、7.5（NTSC）</value></data>
+  <data name="AB6362AB-5F89-48CD-B588-1F5CC26A8D83" xml:space="preserve"><value>汚れたウィンドウ出力停止</value></data>
+  <data name="77CDA6EE-0103-4607-A867-39F001FC969D" xml:space="preserve"><value>トリップワイヤー</value></data>
+  <data name="4C29B27C-8FF3-4494-9475-F1DDBCE5588F" xml:space="preserve"><value>ALCレベル</value></data>
+  <data name="FCD406C5-7D19-4F3C-8B4C-7D924A560C15" xml:space="preserve"><value>ビットレート制御プライオリティ</value></data>
+  <data name="F6EE27E8-7259-44A3-AFC6-B949477A2C7A" xml:space="preserve"><value>音声入力ライン ゲイン</value></data>
+  <data name="7F471AC3-34A8-406B-9E9F-D54F9E93A1CD" xml:space="preserve"><value>JPEG ストリーミング モード</value></data>
+  <data name="6E5DFF5D-F25F-4712-983B-7A79A29ECCDF" xml:space="preserve"><value>日中サチュレーション</value></data>
+  <data name="C35AB2AB-AE67-46DF-A49D-DDD300D73ADB" xml:space="preserve"><value>温度アラーム開始</value></data>
+  <data name="8A5AA980-6371-47E7-857E-4DE4F197A274" xml:space="preserve"><value>片方向オーディオ</value></data>
+  <data name="52B8F780-B309-4697-A106-420E226E78E6" xml:space="preserve"><value>カメラ1のマイク</value></data>
+  <data name="72940F6B-92F5-44C6-9C9C-6C88E8C10291" xml:space="preserve"><value>MPEG4 拡張シンプルプロファイル</value></data>
+  <data name="EFAD665C-B0F9-4106-85E4-A29314C9CA89" xml:space="preserve"><value>自動(1/30-1/1000)</value></data>
+  <data name="33CCCA16-A9FA-4521-BFEE-F003EDA5517A" xml:space="preserve"><value>変更</value></data>
+  <data name="8133E472-2A88-4C8C-B891-244600DB9CDA" xml:space="preserve"><value>MPEG-4セカンダリ</value></data>
+  <data name="EDA2D8A9-AFBE-4795-937D-BAD6329E6FBF" xml:space="preserve"><value>NTP IP アドレス</value></data>
+  <data name="EF1E4984-A3F1-4505-8A38-34D064D68D6B" xml:space="preserve"><value>ガンマ</value></data>
+  <data name="1F9BD6C2-3EA8-4E83-8989-E0B386D63C4E" xml:space="preserve"><value>水平反転</value></data>
+  <data name="C298811E-C651-457E-B9A2-567CC6ADA991" xml:space="preserve"><value>フォルト開始</value></data>
+  <data name="BF2886C2-A7EA-4E5D-B2E5-9A99393FCF37" xml:space="preserve"><value>制御モード</value></data>
+  <data name="B74A1155-5102-472E-BF70-B5484439492C" xml:space="preserve"><value>非常に良い</value></data>
+  <data name="DA14B727-9901-4F80-8B05-EE7F0B401DAD" xml:space="preserve"><value>モーショングリッドのXピクセルオフセット</value></data>
+  <data name="7246D59C-2F5D-4681-ADAC-696B7363D347" xml:space="preserve"><value>固定品質</value></data>
+  <data name="94851204-F46C-4A27-8885-A0C876C2B2B7" xml:space="preserve"><value>いいえ</value></data>
+  <data name="7F8354AC-553A-4371-94C0-4AFC7DB6AE2A" xml:space="preserve"><value>センサープロファイル</value></data>
+  <data name="97652257-A301-4BFC-BA45-67E238C39725" xml:space="preserve"><value>入力状態</value></data>
+  <data name="AB50C218-C940-4C6C-B323-C730DC4A7082" xml:space="preserve"><value>縮小幅</value></data>
+  <data name="EF467BAE-C0AF-4996-87ED-F8BD4F0D6CF8" xml:space="preserve"><value>レベル5</value></data>
+  <data name="6F5AB90D-BF22-427D-96E8-B95FAEA5876A" xml:space="preserve"><value>監視対象入力 - 開</value></data>
+  <data name="4611667E-A023-4438-844A-81514B050FFA" xml:space="preserve"><value>HuskyIOモジュール</value></data>
+  <data name="68BC27CD-52C0-4642-9B23-060633C011AE" xml:space="preserve"><value>センサー入力</value></data>
+  <data name="3535208E-FBB2-44E9-BA72-BF07E9ECF0A1" xml:space="preserve"><value>1秒当たり MJPEG フレーム</value></data>
+  <data name="3C52151A-5CD8-4C03-BE53-CE421D6A00D6" xml:space="preserve"><value>G.726 オーディオビットレート (kビット/秒)</value></data>
+  <data name="DC4A6C33-722C-4AE3-89A7-8B66491B1302" xml:space="preserve"><value>PTZ中は消音</value></data>
+  <data name="E56B7BB9-443D-4B28-B343-A1B505358CBF" xml:space="preserve"><value>左下</value></data>
+  <data name="BCDFD96B-A2A3-4A79-92A9-38F825CDF14C" xml:space="preserve"><value>P-Iris制御</value></data>
+  <data name="9D1028B3-4254-46C5-8CA8-5ADF30B9C536" xml:space="preserve"><value>MPEG-4 - 2 - ストリーム後</value></data>
+  <data name="D9BE2608-C6E2-4C2B-8362-7231BC2418AB" xml:space="preserve"><value>0 スーパーファイン</value></data>
+  <data name="45359B43-BFDC-43C8-8ECF-C066FEABDB92" xml:space="preserve"><value>マイク出力</value></data>
+  <data name="D1DA31B1-DADC-4DAD-90B3-B543E2D5FCD5" xml:space="preserve"><value>赤外線強度</value></data>
+  <data name="F35B5A83-971F-496A-A073-04908F938901" xml:space="preserve"><value>分析イベントインデックス</value></data>
+  <data name="7ADA8CEF-8F44-4128-B9D7-374CBA4F248F" xml:space="preserve"><value>中-高</value></data>
+  <data name="84EDDB0F-C0F9-401E-BE3B-7C6157196E08" xml:space="preserve"><value>MPEG 補正済みストリーム</value></data>
+  <data name="C0D6E51F-C761-40B2-A548-7AE2A7C00F4D" xml:space="preserve"><value>センサーモード</value></data>
+  <data name="8267FEB3-9E18-4763-B673-905A1E20C48C" xml:space="preserve"><value>ビデオストリーム</value></data>
+  <data name="66055EE0-DBD8-4F16-82E6-8D0E366B678D" xml:space="preserve"><value>オフ</value></data>
+  <data name="FDFB5089-637A-4A7B-9573-7E307022609E" xml:space="preserve"><value>周波数</value></data>
+  <data name="955A7209-76B8-4F2B-A525-4F152CEE0497" xml:space="preserve"><value>OSD 表示テキスト</value></data>
+  <data name="88C5B040-66E1-4993-BCB9-1A145313078D" xml:space="preserve"><value>日中露出</value></data>
+  <data name="C0DDAE39-B098-46DF-9FB1-3B444AFEDAD0" xml:space="preserve"><value>OPTIONS (url なし)</value></data>
+  <data name="D5482038-BFC4-4B46-9750-4A020AE4F36D" xml:space="preserve"><value>スクリーン 16</value></data>
+  <data name="8B97BC2F-6EEB-4BA9-A297-98D6E65457D5" xml:space="preserve"><value>目標帯域</value></data>
+  <data name="AC14EA1B-E091-4B0A-A018-CE6704B84EE7" xml:space="preserve"><value>露光ゲイン</value></data>
+  <data name="A99EC514-744B-4B95-AC33-0BDA85000E7E" xml:space="preserve"><value>Iフレームの距離</value></data>
+  <data name="BFC9EDBB-7C4F-4D33-ABF8-28DC4B078B86" xml:space="preserve"><value>デバイス依存</value></data>
+  <data name="EC2ACA4A-22AC-46E5-B1CD-1824F2929879" xml:space="preserve"><value>低ビットレート</value></data>
+  <data name="77E46E49-B899-4D4E-90BD-05CF66D3EF29" xml:space="preserve"><value>スクリーンレコーダー</value></data>
+  <data name="BD78D403-1385-4D58-A1DB-29EE74FCE4FE" xml:space="preserve"><value>中</value></data>
+  <data name="D850B54A-0762-4459-B3B0-FF8CFCCB25D2" xml:space="preserve"><value>720x480（SD）</value></data>
+  <data name="0752FD1C-E4C2-4E78-BA0F-6DC8A6484046" xml:space="preserve"><value>FTPイベントホストポート番号</value></data>
+  <data name="AE21AFE2-CEBC-4AC5-9C7F-61F37A3DE338" xml:space="preserve"><value>NTP URL</value></data>
+  <data name="2E67D556-2594-450F-B057-7D84A181D130" xml:space="preserve"><value>ビットレート制御モードH265</value></data>
+  <data name="2EBA2502-B56F-460B-B2B8-24C521A08258" xml:space="preserve"><value>ホワイトバランスセット A</value></data>
+  <data name="C60926F6-5BD7-411C-8395-12B97C331EA4" xml:space="preserve"><value>ライン カウンター A</value></data>
+  <data name="114E3263-8A59-40DF-83EF-897561DB9745" xml:space="preserve"><value>閉</value></data>
+  <data name="67F7DF83-741F-445C-AE4A-985C44EF23CC" xml:space="preserve"><value>SMTPイベントサーバーIPアドレス</value></data>
+  <data name="C0CA2B33-5906-4786-B686-598F7FEC9BF4" xml:space="preserve"><value>画像分割</value></data>
+  <data name="6AE9A318-DFFA-414C-8E32-A9C448FF84B9" xml:space="preserve"><value>イベントインデックス</value></data>
+  <data name="3B3E8520-8E75-4B62-B508-BF7D6464B0CE" xml:space="preserve"><value>JPEG 解像度</value></data>
+  <data name="E6FB30C4-8671-41ED-A378-1553FF408E82" xml:space="preserve"><value>圧縮</value></data>
+  <data name="FB30FEF7-746F-4692-A4A8-A44F9B00CD42" xml:space="preserve"><value>SD カード取り出し済み</value></data>
+  <data name="11291B21-1F66-46F5-88DF-61887D652DE2" xml:space="preserve"><value>ドーム</value></data>
+  <data name="3885D26C-BCED-4A1C-9062-68362D59DA17" xml:space="preserve"><value>スーパーファイン</value></data>
+  <data name="2F0B286E-5BAC-475D-82B1-F8AA7FFFBCB0" xml:space="preserve"><value>カラー CRT</value></data>
+  <data name="4866A72D-43DC-423A-8D46-994EAA85AC2C" xml:space="preserve"><value>スクリーン 3</value></data>
+  <data name="015FE991-4D53-4536-A537-055AC8D46A4C" xml:space="preserve"><value>有効</value></data>
+  <data name="732813CE-A877-4E66-8FD3-1711DC73D3CA" xml:space="preserve"><value>音声 入力ゲイン</value></data>
+  <data name="15D39710-1467-4CE6-B152-2EF2BEC4181E" xml:space="preserve"><value>インタレスト地区</value></data>
+  <data name="C985AABF-1F2C-4EAB-8272-21D3B09DD504" xml:space="preserve"><value>8M 魚眼 + ダブルパノラマ</value></data>
+  <data name="049CBBC8-A7B7-40F0-80DA-768B93D4296C" xml:space="preserve"><value>640x360（HD）</value></data>
+  <data name="0727B9AC-71BD-4451-8B79-6A8EABDC55FC" xml:space="preserve"><value>5M 魚眼 + ダブルパノラマ</value></data>
+  <data name="9EA16E24-45CB-47B0-B1E3-62AE0A14F1F3" xml:space="preserve"><value>画像を含む</value></data>
+  <data name="A7C77DAC-A453-49B9-8B5B-F62032F68889" xml:space="preserve"><value>パン</value></data>
+  <data name="FB0BE0F3-E610-4FCC-A136-801F4843C238" xml:space="preserve"><value>最大ビットレート</value></data>
+  <data name="C274D19E-15F2-491E-B1A6-F6EDA86D02C1" xml:space="preserve"><value>シーン1</value></data>
+  <data name="FCB527BF-9212-4D65-BB92-A08640F922DA" xml:space="preserve"><value>SD カードイベント</value></data>
+  <data name="2099467D-5AA4-427A-BBCD-68F54D506925" xml:space="preserve"><value>タイムスタンプポジション</value></data>
+  <data name="2D5614E3-0084-4B2A-AC78-5852868ED3CD" xml:space="preserve"><value>H264セカンダリ</value></data>
+  <data name="459D7DB0-55CD-4EA5-A2F8-2462244044F9" xml:space="preserve"><value>15 秒</value></data>
+  <data name="326052A9-F6E4-44CE-B536-1B54DC0B4CA1" xml:space="preserve"><value>OSD 時刻</value></data>
+  <data name="C21C3910-09BA-4BE1-9CCD-8E8AD3FB569E" xml:space="preserve"><value>360x240（SD）</value></data>
+  <data name="D91AE80F-4550-4994-A21D-0B1E4038E6FB" xml:space="preserve"><value>トリガー使用</value></data>
+  <data name="B25F818A-AB23-4C99-B378-06EAE01F1385" xml:space="preserve"><value>ブロック解除フィルター</value></data>
+  <data name="322FB909-5E53-4611-86B1-4B41AA44D661" xml:space="preserve"><value>メディアプロファイル</value></data>
+  <data name="BD8B741B-4787-4417-8B3C-484CAA63DD48" xml:space="preserve"><value>H264自動レート</value></data>
+  <data name="969B7199-EE1F-4EBF-9C44-65894963EAC2" xml:space="preserve"><value>PTZ有効</value></data>
+  <data name="A573609E-D1A0-4480-A701-570F3AF42A02" xml:space="preserve"><value>ビデオ分析イベントが開始されました</value></data>
+  <data name="9A84F620-409E-4427-BE50-F7BA6B3805C8" xml:space="preserve"><value>エッジストレージ有効</value></data>
+  <data name="72D3F628-EC56-4679-937B-DC8046530AA0" xml:space="preserve"><value>プロファイル3</value></data>
+  <data name="2FE749CC-57EC-4D07-9A62-878FE7174A3B" xml:space="preserve"><value>OSD テキスト</value></data>
+  <data name="4660F555-5CBA-419B-A8DD-DC61521E17C9" xml:space="preserve"><value>最大ビットレート (kビット/秒) H264</value></data>
+  <data name="8DE07D7B-8C07-44DE-B3B2-0815073CE36E" xml:space="preserve"><value>虹</value></data>
+  <data name="E3E6A315-92CD-4876-AD3F-255118F80CA0" xml:space="preserve"><value>暗視</value></data>
+  <data name="E00C4D94-76CF-4D36-A7FE-6A4F6031E0CE" xml:space="preserve"><value>パンとチルト</value></data>
+  <data name="480A9288-34F7-4B06-A151-049A180FEE8D" xml:space="preserve"><value>ホワイトバランスレベル</value></data>
+  <data name="0D70F4C2-5CE5-43BD-9367-B9380CBAEA8A" xml:space="preserve"><value>未挿入</value></data>
+  <data name="020A09DC-5BF8-48E4-BD12-0698FEFC738F" xml:space="preserve"><value>10 秒</value></data>
+  <data name="D54BED6D-A820-46CC-99B1-DE7DEAA31D96" xml:space="preserve"><value>目標ビットレート(Kビット/秒)</value></data>
+  <data name="352F80CA-4F5B-45D1-B27A-DCA5D03730CA" xml:space="preserve"><value>JPEG 3 - ストリーム後</value></data>
+  <data name="1D555B06-3838-4277-A6B6-FE6EE8A1C813" xml:space="preserve"><value>エンハンス</value></data>
+  <data name="69A5AE9D-36BB-48EC-B32E-94F92B0DA900" xml:space="preserve"><value>画質</value></data>
+  <data name="F3EF8106-E2E1-441D-BA18-82E55FEAAF89" xml:space="preserve"><value>Zipstream圧縮</value></data>
+  <data name="ECCA8158-07A6-415C-8243-9375482AC937" xml:space="preserve"><value>シーン変更停止</value></data>
+  <data name="B7CEBF19-E96D-45A8-9663-C9D027AB60CF" xml:space="preserve"><value>G.726 16 キロビット/秒</value></data>
+  <data name="AFDEC46A-F9F2-4182-B55D-28E7F61E2906" xml:space="preserve"><value>デフォーカス停止</value></data>
+  <data name="E8D4600F-D60C-4107-916D-48B599B1CDE9" xml:space="preserve"><value>明るい</value></data>
+  <data name="E10018C8-56E7-4062-B6DB-DA9CBB55399C" xml:space="preserve"><value>方向違反</value></data>
+  <data name="80B1D8C4-FFA1-4B69-B837-25188D6ACA0C" xml:space="preserve"><value>1秒当たり H264 フレーム</value></data>
+  <data name="8367844E-4F4E-48CF-9333-BF9FBADB17F7" xml:space="preserve"><value>露光 逆光補正</value></data>
+  <data name="C244E28F-FEDE-4A84-A5CB-C1676B5EDF54" xml:space="preserve"><value>最低速</value></data>
+  <data name="A2E411F1-C2A5-484F-A52B-0209043F07E6" xml:space="preserve"><value>中心1/6</value></data>
+  <data name="751788A1-ED96-43D5-9531-8A6A8B24D32B" xml:space="preserve"><value>はい</value></data>
+  <data name="821E18A9-A280-44FC-B10A-2F10CAD1CB78" xml:space="preserve"><value>シーン4</value></data>
+  <data name="B4E30016-7EEA-4EC1-9713-9605C8CD5812" xml:space="preserve"><value>自動(1/15-1/100)</value></data>
+  <data name="F7143493-B7D5-4443-AAD4-72D9785F4E4C" xml:space="preserve"><value>手動蛍光 (4000K)</value></data>
+  <data name="2EB19268-1080-458B-8A02-EC9226FD6D56" xml:space="preserve"><value>MPEG-4 - ストリーム後</value></data>
+  <data name="D357E2CA-9F65-44AD-8F4E-5928B77CCD38" xml:space="preserve"><value>JPEGサイズ</value></data>
+  <data name="ED6F2235-1B48-423C-ABBD-4AF59EE30B2F" xml:space="preserve"><value>夜間サチュレーション</value></data>
+  <data name="E9B61B11-3163-4B7A-98BA-F991A10A5039" xml:space="preserve"><value>スクリーン 1</value></data>
+  <data name="F138301A-F883-4DD5-BE1C-C83F30516F55" xml:space="preserve"><value>I フレーム間隔 (秒)</value></data>
+  <data name="BBF727DB-6488-4BD2-8BA0-6FF50BE3EB59" xml:space="preserve"><value>MPEG4/H.264 品質</value></data>
+  <data name="DDB8D4F5-98B0-40CD-A186-08EF914BA205" xml:space="preserve"><value>反転とミラー</value></data>
+  <data name="69DB866B-6BDC-448E-9360-E5882556CCE2" xml:space="preserve"><value>フォルト停止</value></data>
+  <data name="D2A6D775-6533-4E22-8E6C-E4C0E657ABD6" xml:space="preserve"><value>インテリジェントシーンキャプチャ(標準)</value></data>
+  <data name="036DA7C7-4D2B-419E-A7FC-E81B6443DB53" xml:space="preserve"><value>ビットレート制御モード H264</value></data>
+  <data name="B3C6F00C-E0E5-462F-A851-8C4B962AC605" xml:space="preserve"><value>パスワードの確認</value></data>
+  <data name="8B7D47E5-C996-4A4A-AA5C-55E60470103A" xml:space="preserve"><value>5M 魚眼 + パノラマ</value></data>
+  <data name="C9E854D6-DDD0-4DCC-8BF3-C97BE119F6BE" xml:space="preserve"><value>FHD クロッピング</value></data>
+  <data name="75DAFECA-29B3-451E-8A96-284305DF5846" xml:space="preserve"><value>ナトリウム</value></data>
+  <data name="0D49A3E1-56B5-44C4-A66B-C115448C3A1F" xml:space="preserve"><value>1/4 秒</value></data>
+  <data name="139CCB80-15C3-48F3-AE40-6BF2C8321D1B" xml:space="preserve"><value>HTTPS有効</value></data>
+  <data name="0B08CCBE-7FB7-4863-A2B1-69ECE476B94C" xml:space="preserve"><value>魚眼レンズ</value></data>
+  <data name="B5F55713-FD8A-4DBB-B268-AE7E38FCD6AE" xml:space="preserve"><value>すべての画面</value></data>
+  <data name="E5851744-C450-4AE9-990D-2919E6F7DAB2" xml:space="preserve"><value>自動</value></data>
+  <data name="AA2E4DED-BE9C-4A49-A726-8B8B8E382AC2" xml:space="preserve"><value>プロファイル30</value></data>
+  <data name="78C425AC-66E4-4845-ADA4-16D114F4DDD5" xml:space="preserve"><value>キーフレーム モード間の最大時間 H264</value></data>
+  <data name="C71EF144-A793-4F13-A08E-6C9CE0F42696" xml:space="preserve"><value>日中シャープネス</value></data>
+  <data name="E3158717-2C2B-40B4-B6EA-B2F0F2D3FB17" xml:space="preserve"><value>品質 H.265</value></data>
+  <data name="8152A6AF-F256-4B0B-9939-9A0C3DA4A616" xml:space="preserve"><value>オートスローシャッター</value></data>
+  <data name="F90BE0B5-5445-42EA-8FB0-9FA944949409" xml:space="preserve"><value>外灯 - 水銀</value></data>
+  <data name="C94BD4FA-5820-42C7-806A-907A488280A5" xml:space="preserve"><value>オブジェクト停止</value></data>
+  <data name="5EBD5786-DE93-46E6-B428-729D79FBB0B9" xml:space="preserve"><value>エンコーダー9</value></data>
+  <data name="5EBD5786-DE93-46E6-B428-729D79FBB0B8" xml:space="preserve"><value>エンコーダー8</value></data>
+  <data name="5EBD5786-DE93-46E6-B428-729D79FBB0B3" xml:space="preserve"><value>エンコーダー3</value></data>
+  <data name="5EBD5786-DE93-46E6-B428-729D79FBB0B2" xml:space="preserve"><value>エンコーダー2</value></data>
+  <data name="5EBD5786-DE93-46E6-B428-729D79FBB0B1" xml:space="preserve"><value>エンコーダー1</value></data>
+  <data name="5EBD5786-DE93-46E6-B428-729D79FBB0B7" xml:space="preserve"><value>エンコーダー7</value></data>
+  <data name="5EBD5786-DE93-46E6-B428-729D79FBB0B6" xml:space="preserve"><value>エンコーダー6</value></data>
+  <data name="5EBD5786-DE93-46E6-B428-729D79FBB0B5" xml:space="preserve"><value>エンコーダー5</value></data>
+  <data name="5EBD5786-DE93-46E6-B428-729D79FBB0B4" xml:space="preserve"><value>エンコーダー4</value></data>
+  <data name="AA76CF53-DB65-43A6-B4FF-FA221480BEA0" xml:space="preserve"><value>ライブまでのマルチキャスト時間</value></data>
+  <data name="9938B8E9-EADA-446B-9B6B-5F8AA18363FB" xml:space="preserve"><value>監視対象入力 - 閉</value></data>
+  <data name="E238A343-CC03-4E8B-BC0F-EABC90DED5A4" xml:space="preserve"><value>認証タイプ</value></data>
+  <data name="B5FCACAC-AD1A-462C-B196-E26E8B34CF01" xml:space="preserve"><value>MxPEG 1 - ストリーム後</value></data>
+  <data name="B5FCACAC-AD1A-462C-B196-E26E8B34CF03" xml:space="preserve"><value>MxPEG 3 - ストリーム後</value></data>
+  <data name="B5FCACAC-AD1A-462C-B196-E26E8B34CF02" xml:space="preserve"><value>MxPEG 2 - ストリーム後</value></data>
+  <data name="B5FCACAC-AD1A-462C-B196-E26E8B34CF05" xml:space="preserve"><value>MxPEG 5 - ストリーム後</value></data>
+  <data name="B5FCACAC-AD1A-462C-B196-E26E8B34CF04" xml:space="preserve"><value>MxPEG 4 - ストリーム後</value></data>
+  <data name="B5FCACAC-AD1A-462C-B196-E26E8B34CF07" xml:space="preserve"><value>MxPEG 7 - ストリーム後</value></data>
+  <data name="B5FCACAC-AD1A-462C-B196-E26E8B34CF06" xml:space="preserve"><value>MxPEG 6 - ストリーム後</value></data>
+  <data name="B5FCACAC-AD1A-462C-B196-E26E8B34CF09" xml:space="preserve"><value>MxPEG 9 - ストリーム後</value></data>
+  <data name="B5FCACAC-AD1A-462C-B196-E26E8B34CF08" xml:space="preserve"><value>MxPEG 8 - ストリーム後</value></data>
+  <data name="71D9D178-3F2B-4214-8B92-A7D648E695F5" xml:space="preserve"><value>最大解像度JPEG品質</value></data>
+  <data name="68A8A6DC-9B4F-4876-B9C6-9F6D28780FEA" xml:space="preserve"><value>ブラックホット</value></data>
+  <data name="6276C9AD-8A5A-4B35-B399-5E0E34827B7C" xml:space="preserve"><value>室内</value></data>
+  <data name="E96E4A07-C60B-42AD-8813-2ACFB01C41F5" xml:space="preserve"><value>オブジェクト存在</value></data>
+  <data name="919074B1-530C-4D2A-B185-39A817CA3483" xml:space="preserve"><value>無効</value></data>
+  <data name="F5DF6852-838B-4537-AD5B-8CA1D9834856" xml:space="preserve"><value>熱スポットメーター</value></data>
+  <data name="F93AC198-EF86-430A-A869-9D7D26A5642F" xml:space="preserve"><value>スクリーン 4</value></data>
+  <data name="F6E7D64A-FCFE-4AFE-928B-63A401E6EEDD" xml:space="preserve"><value>フルフレーム</value></data>
+  <data name="B1B0E3A8-654E-41E2-B072-49042CBDCBED" xml:space="preserve"><value>音声入力マイク ゲイン</value></data>
+  <data name="A662717E-3747-4A5F-A3FF-97DBF2D7CFA5" xml:space="preserve"><value>等温線高レベル</value></data>
+  <data name="ED2A6E93-6FB7-4A81-812A-11006A992DA4" xml:space="preserve"><value>エッジストレージストリームインデックス</value></data>
+  <data name="D82BFF01-860F-42BB-82BE-454CDAA6F9AB" xml:space="preserve"><value>VBR無制限</value></data>
+  <data name="CF07D844-FD0A-47E5-9C1B-0CA2FC2A5923" xml:space="preserve"><value>IRプリセットAF</value></data>
+  <data name="D2B4697C-0C20-4787-9C2B-90501A006117" xml:space="preserve"><value>可変モードの最大ビットレート</value></data>
+  <data name="14A6322B-C345-49C1-9612-50B903EE40F1" xml:space="preserve"><value>ビットレート制御モード</value></data>
+  <data name="F573C272-AC95-485F-85C2-5260DE2D640C" xml:space="preserve"><value>スケジュールされたデイモード開始時間</value></data>
+  <data name="6F10FE97-5A5F-4452-9B97-2144262D5FA3" xml:space="preserve"><value>メディアサービス</value></data>
+  <data name="417A9B60-8202-439C-AD3C-5CEAF40AE1C4" xml:space="preserve"><value>ベストエフォート型</value></data>
+  <data name="CC797148-1DAC-42E1-8615-4C22E85A7EA4" xml:space="preserve"><value>露光</value></data>
+  <data name="B60ECC20-BF27-4E45-8442-CA75269A8643" xml:space="preserve"><value>トリミングウィンドウ有効</value></data>
+  <data name="E8C59F31-F380-48CE-82EB-733196C6B9AE" xml:space="preserve"><value>ビットレート制限</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B9" xml:space="preserve"><value>JPEG 9 - ストリーム後</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B8" xml:space="preserve"><value>JPEG 8 - ストリーム後</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B5" xml:space="preserve"><value>JPEG 5 - ストリーム後</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B4" xml:space="preserve"><value>JPEG 4 - ストリーム後</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B7" xml:space="preserve"><value>JPEG 7 - ストリーム後</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B6" xml:space="preserve"><value>JPEG 6 - ストリーム後</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B1" xml:space="preserve"><value>JPEG 1 - ストリーム後</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B0" xml:space="preserve"><value>JPEG 0 - ストリーム後</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B3" xml:space="preserve"><value>JPEG 3 - ストリーム後</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B2" xml:space="preserve"><value>JPEG 2 - ストリーム後</value></data>
+  <data name="D3902D17-4C18-4764-BD04-BADA8D796A9F" xml:space="preserve"><value>スクリーン 11</value></data>
+  <data name="93F7E4C6-535E-4341-9DE4-8F80E260E2DA" xml:space="preserve"><value>レベル7</value></data>
+  <data name="6C8910BE-8173-4395-9371-ACA008DA0001" xml:space="preserve"><value>モーション ウィンドウの最大数</value></data>
+  <data name="587866F5-F171-463E-B733-84234E286C9D" xml:space="preserve"><value>固定屋外色2</value></data>
+  <data name="0064C4E0-5220-4D74-A88F-AE40DBAC9709" xml:space="preserve"><value>徘徊検知イベントが開始されました</value></data>
+  <data name="E980CB64-7FA8-4385-9557-7CBD4E2A608A" xml:space="preserve"><value>1/2 秒</value></data>
+  <data name="4A18DBEA-A492-461D-B704-2A3D9740513A" xml:space="preserve"><value>マスキング防止出力停止</value></data>
+  <data name="238C8882-E52E-4766-8AFE-A732B80C6C71" xml:space="preserve"><value>トリミングウィンドウトップ</value></data>
+  <data name="1A9ABB27-9FE5-49D5-B18C-DB54049A9052" xml:space="preserve"><value>未処理</value></data>
+  <data name="59BDBC5A-0D3D-4F63-9DF1-12840FC06D2D" xml:space="preserve"><value>圧縮係数</value></data>
+  <data name="D067935A-D4BC-469C-8828-AFEA9BED86CF" xml:space="preserve"><value>固定室内色</value></data>
+  <data name="BC362760-726F-445D-A1BC-0AACFE4AB814" xml:space="preserve"><value>シーリング</value></data>
+  <data name="822A985E-F206-449B-9F93-1B2CE9746117" xml:space="preserve"><value>デイナイトセンサー4</value></data>
+  <data name="70C9B7EE-9FF8-4F4A-B9C6-A89A25962A72" xml:space="preserve"><value>出力</value></data>
+  <data name="2C986120-9222-4503-A93E-761F4AE2DE2A" xml:space="preserve"><value>製品ID</value></data>
+  <data name="F9F97EF3-A021-4E1E-ACE8-33FC2733B7E8" xml:space="preserve"><value>プロファイル2</value></data>
+  <data name="79A86E3B-B823-46C5-BB02-35228BBEC8DD" xml:space="preserve"><value>ビデオ品質モード</value></data>
+  <data name="77870CCE-9BD0-4E1F-B8D3-3D8EBCCEB3EF" xml:space="preserve"><value>帯域幅制限</value></data>
+  <data name="722A8803-2268-46A4-AC25-BEAF97861458" xml:space="preserve"><value>鏡像</value></data>
+  <data name="9DB432D0-A0F6-4E88-899A-FD409F325075" xml:space="preserve"><value>解像度パターン</value></data>
+  <data name="4C21E539-FA75-4D57-B052-EB4F13C7FA85" xml:space="preserve"><value>自動入力選択</value></data>
+  <data name="AE27A660-8590-4658-9EFB-F62B986F54B4" xml:space="preserve"><value>H264/H265 4 - ストリーム後</value></data>
+  <data name="AE27A660-8590-4658-9EFB-F62B986F54B5" xml:space="preserve"><value>H264/H265 5 - ストリーム後</value></data>
+  <data name="AE27A660-8590-4658-9EFB-F62B986F54B6" xml:space="preserve"><value>H264/H265 6 - ストリーム後</value></data>
+  <data name="AE27A660-8590-4658-9EFB-F62B986F54B7" xml:space="preserve"><value>H264/H265 7 - ストリーム後</value></data>
+  <data name="AE27A660-8590-4658-9EFB-F62B986F54B1" xml:space="preserve"><value>H264/H265 1 - ストリーム後</value></data>
+  <data name="AE27A660-8590-4658-9EFB-F62B986F54B2" xml:space="preserve"><value>H264/H265 2 - ストリーム後</value></data>
+  <data name="AE27A660-8590-4658-9EFB-F62B986F54B3" xml:space="preserve"><value>H264/H265 3 - ストリーム後</value></data>
+  <data name="AE27A660-8590-4658-9EFB-F62B986F54B8" xml:space="preserve"><value>H264/H265 8 - ストリーム後</value></data>
+  <data name="AE27A660-8590-4658-9EFB-F62B986F54B9" xml:space="preserve"><value>H264/H265 9 - ストリーム後</value></data>
+  <data name="2E3B3B48-2268-4842-9E94-06D668E24482" xml:space="preserve"><value>スーパー</value></data>
+  <data name="693CFCBB-4F42-4689-8F8D-115C86037064" xml:space="preserve"><value>蛍光灯(黄色)</value></data>
+  <data name="0642B30B-0CA8-4711-A0E6-FB079D519771" xml:space="preserve"><value>不変ビットレートポリシー</value></data>
+  <data name="A9EEC8A4-08F7-43BE-AEB3-7D304598C424" xml:space="preserve"><value>レート制限</value></data>
+  <data name="6DFDB2E1-128B-4AE3-9626-00B21E272F56" xml:space="preserve"><value>最大ビットレート (kビット/秒) MPEG-4</value></data>
+  <data name="F8341E77-ABC9-452D-A7F8-26AE1BCC9F69" xml:space="preserve"><value>固定FPSモード</value></data>
+  <data name="BD69F770-A29D-458F-B4D2-BB373B3520B1" xml:space="preserve"><value>モザイク処理ウィンドウ</value></data>
+  <data name="B9026D8E-AF5B-463F-8494-8E3E1F20095F" xml:space="preserve"><value>パノラマ 180 後: 640x208</value></data>
+  <data name="3335487D-82EA-4111-82A9-6126BB8115B9" xml:space="preserve"><value>ベーシック</value></data>
+  <data name="92D3BF66-49E5-49CF-94DF-32C3749F6D81" xml:space="preserve"><value>1080x864（SD）</value></data>
+  <data name="99566D9C-7F98-4ECF-8324-BC7E491BC886" xml:space="preserve"><value>赤外線レベル</value></data>
+  <data name="DF3D063D-5B15-43AC-9D30-862408D97645" xml:space="preserve"><value>MPEG 3 - ストリーム後</value></data>
+  <data name="33E79EB2-F611-4606-BEE6-004459D9BAC3" xml:space="preserve"><value>スケジュールされたデイモード終了分</value></data>
+  <data name="CDDA51D5-B2B3-4699-91DA-BC7BEC92269C" xml:space="preserve"><value>1280x720（HD）</value></data>
+  <data name="27C9716D-A567-4762-91A7-B3CE546BE405" xml:space="preserve"><value>最低自動シャッター速度</value></data>
+  <data name="355290DD-6815-4C4C-ADA6-5614448770D9" xml:space="preserve"><value>8ビット</value></data>
+  <data name="55445A84-B3EB-45BA-811B-54CA1D86522A" xml:space="preserve"><value>画像を反転</value></data>
+  <data name="D093629D-33BB-4D53-AE91-0ACC4DCDA3F7" xml:space="preserve"><value>クアッドシステム</value></data>
+  <data name="3564CAC2-BE89-4FE9-90A1-2561CD06FE42" xml:space="preserve"><value>プロファイル40</value></data>
+  <data name="D1B6A937-8919-4397-9A02-903270D8802C" xml:space="preserve"><value>デイゲイン</value></data>
+  <data name="D0E28734-5A7D-4CB9-94AC-C79300CAB550" xml:space="preserve"><value>マイク</value></data>
+  <data name="11734756-43B6-446D-BF99-052073DB96B4" xml:space="preserve"><value>厳密不変ビットレート</value></data>
+  <data name="FE6AF378-5C62-4522-978C-CE9C534DC124" xml:space="preserve"><value>マイク - 中</value></data>
+  <data name="4E2B682C-D024-4CFD-A84A-BB34F48EFE8E" xml:space="preserve"><value>タイプ 3</value></data>
+  <data name="C5AC0BA7-0D96-4276-85F1-EA8621295DFF" xml:space="preserve"><value>チルト</value></data>
+  <data name="94751C90-972C-44F9-8F5F-62E993275F0F" xml:space="preserve"><value>露光モード</value></data>
+  <data name="C57BE3CB-1D72-4AF1-8515-31B4732AA4AA" xml:space="preserve"><value>パノラマ 180 前: 1024x336</value></data>
+  <data name="5625C0C5-5670-4CA0-94C5-5571372330A5" xml:space="preserve"><value>録画が利用可能なイベント</value></data>
+  <data name="3753A90C-12A2-4E41-A7F2-C369071B258D" xml:space="preserve"><value>「煙/火災検出開始」イベント</value></data>
+  <data name="B6DB3D02-C15D-4817-8EC3-E9B8F72770F1" xml:space="preserve"><value>データ ビット</value></data>
+  <data name="959CAB83-9430-4B54-9421-869F659E134C" xml:space="preserve"><value>オートスローシャッター</value></data>
+  <data name="9BB4308B-FB80-48B9-B1B2-550BE572D761" xml:space="preserve"><value>プロファイル24</value></data>
+  <data name="0C61993D-08AC-4A88-8421-D0B163D2B94A" xml:space="preserve"><value>自動 +</value></data>
+  <data name="9D67BBC6-B067-4244-A674-47FEEF01ED35" xml:space="preserve"><value>手動屋内 (2800K)</value></data>
+  <data name="192853AA-C918-43CC-A44C-A73E477ECD6C" xml:space="preserve"><value>マニュアルホワイトバランス</value></data>
+  <data name="C3043C0E-642C-477E-B176-14F925CEFA55" xml:space="preserve"><value>電力周波数</value></data>
+  <data name="95698F82-3BB7-4001-BE8D-07B268527FCF" xml:space="preserve"><value>温度単位</value></data>
+  <data name="9AD9DEC0-CCA5-407C-B5E0-BB2798F93ADA" xml:space="preserve"><value>分割なし</value></data>
+  <data name="A6EC74DF-B534-478D-808A-5D1781628023" xml:space="preserve"><value>ビットレート制御モード MJPEG</value></data>
+  <data name="7E775B31-688E-41D5-8698-5AA1102EA974" xml:space="preserve"><value>自動 x 8</value></data>
+  <data name="F44BF26F-EB34-4061-9FE5-38282C57045F" xml:space="preserve"><value>360x288（SD）</value></data>
+  <data name="00A1298D-B73A-4EB6-971E-FE553BBFEB4B" xml:space="preserve"><value>火災検知開始イベント</value></data>
+  <data name="34116DB6-7FB2-4522-A88B-9980FD63F3D2" xml:space="preserve"><value>1.3メガピクセル[4:3] (30fpsモード)</value></data>
+  <data name="35E243E0-6C20-40CE-B8BA-1FEE1EC4C534" xml:space="preserve"><value>MJPEG 制御モード</value></data>
+  <data name="E7EB27A8-B795-4149-9AFF-AC1A087C79B4" xml:space="preserve"><value>H264/JPEG デュアル ストリーム</value></data>
+  <data name="48C11101-DF64-4309-8141-1BB47649AE30" xml:space="preserve"><value>マニュアル</value></data>
+  <data name="C5643613-8D51-4231-875C-9759998688F8" xml:space="preserve"><value>スピーカー音量</value></data>
+  <data name="F6C4D288-8C8A-49EB-B118-8AF523FD4EF5" xml:space="preserve"><value>スクリーン 13</value></data>
+  <data name="B981DBC4-789A-4F43-8421-C198F54AECF5" xml:space="preserve"><value>フェア</value></data>
+  <data name="8A829256-3594-4BA1-AEAA-8A0AFB5287F5" xml:space="preserve"><value>有効時間 (秒）</value></data>
+  <data name="099CB949-BF28-48FF-918B-4FE3AB21112E" xml:space="preserve"><value>シャッターモード</value></data>
+  <data name="0DA694FE-BCB9-4F2B-A2C1-3B9D2748BBD0" xml:space="preserve"><value>TCPイベントサーバーIPアドレス</value></data>
+  <data name="F864A3E2-4EB5-4DB4-8831-162BC0012400" xml:space="preserve"><value>固定</value></data>
+  <data name="AA8BCCA4-E8B2-4A64-83BF-4709FAA82587" xml:space="preserve"><value>最大ビットレート (キロビット/秒)</value></data>
+  <data name="7553AEDD-F31C-433D-BC89-CAB2AE2B0C3D" xml:space="preserve"><value>ビットレート</value></data>
+  <data name="1751F42D-5011-4DE0-A33C-3D9F7C6657E0" xml:space="preserve"><value>音声チャンネル1</value></data>
+  <data name="298572EE-987E-49B3-877E-93AC203646A7" xml:space="preserve"><value>日中スムージング</value></data>
+  <data name="86D23296-5576-46E1-BC30-E7A2C229EE18" xml:space="preserve"><value>自動 (絞り優先度)</value></data>
+  <data name="41B86DF6-6A89-47E8-895C-C863BF95E8E1" xml:space="preserve"><value>デイナイトマニュアルモード</value></data>
+  <data name="717A0625-689C-412A-B33A-0CEAC74076D0" xml:space="preserve"><value>1秒当たりのJPEGフレーム</value></data>
+  <data name="99099795-653C-47F6-840D-050DC4E85AA5" xml:space="preserve"><value>固定画質</value></data>
+  <data name="5503B3AB-8898-4925-882F-25FAE6430F16" xml:space="preserve"><value>シャッタープライオリティ</value></data>
+  <data name="925E7B8B-5DB5-4282-8CCD-2BBB486AB6FC" xml:space="preserve"><value>月光</value></data>
+  <data name="398B8220-9C06-4889-922C-A38B80ED2C3D" xml:space="preserve"><value>通過</value></data>
+  <data name="5653AC75-F186-4BE1-8360-89C39E2B8E64" xml:space="preserve"><value>相対的</value></data>
+  <data name="B2642D89-D7D2-4B43-AF87-B3A78488F1AB" xml:space="preserve"><value>量子化 最小</value></data>
+  <data name="8FBB5BB8-0FDF-4E23-BECD-CBF6A28A6268" xml:space="preserve"><value>シャッタースピード(WDR)</value></data>
+  <data name="EDB0E5BA-0616-44F5-A11C-6E9A954E69F0" xml:space="preserve"><value>シーン2</value></data>
+  <data name="7F33844F-4BBD-41E0-ADF1-85281232C691" xml:space="preserve"><value>e-シャッター速度</value></data>
+  <data name="9EDEE051-12F5-40DA-95ED-E2969FE93D05" xml:space="preserve"><value>コントラスト</value></data>
+  <data name="3B19EC1F-5B46-47EF-A84C-2C502B009DC3" xml:space="preserve"><value>1秒</value></data>
+  <data name="2D4F093E-B4A5-4331-B73F-2CBEF45C91F3" xml:space="preserve"><value>HTTPSポート</value></data>
+  <data name="64F0C5EE-4EEE-4147-89DB-CAAE4A5BA1C9" xml:space="preserve"><value>プロファイル22</value></data>
+  <data name="82676E8A-C7E7-4E6A-A886-70A36D5B8493" xml:space="preserve"><value>360°レンズ: 2144x1944</value></data>
+  <data name="CF562170-C581-42D7-B4D5-BC052B20B0E9" xml:space="preserve"><value>アスペクト比の修正</value></data>
+  <data name="E06C8D24-BC27-4405-9CE1-965D47C555FD" xml:space="preserve"><value>フルサイズ</value></data>
+  <data name="B0323065-599F-4D73-B18E-55C0193368BC" xml:space="preserve"><value>解像度</value></data>
+  <data name="DC4FA9D8-9666-4103-B9A0-936EF035DAC8" xml:space="preserve"><value>プロファイル4</value></data>
+  <data name="A0BB66F6-93B5-46EF-8F3F-598DD4FC930E" xml:space="preserve"><value>彩度</value></data>
+  <data name="B2531C1C-0269-466A-B134-D75D182ABE4C" xml:space="preserve"><value>自動照明調節</value></data>
+  <data name="0AFD4466-A48E-4218-841B-D74A8E7F7D9B" xml:space="preserve"><value>古D1 (720x576、720x480)</value></data>
+  <data name="4AFAA2E0-5BEA-4102-B018-4A7DEACF2239" xml:space="preserve"><value>右カメラから左カメラに</value></data>
+  <data name="07E5E321-07BB-48BF-89A9-70369F76A7AA" xml:space="preserve"><value>添付でディレクトリパスを維持する</value></data>
+  <data name="F0B93CB6-FC06-4BF4-A809-16A64ABF7BBB" xml:space="preserve"><value>スクリーン 12</value></data>
+  <data name="1D27F4AF-6899-4C50-A2CA-A463723AB4F9" xml:space="preserve"><value>基準</value></data>
+  <data name="1702B6E0-F3B1-49A7-953A-1013D7EE0303" xml:space="preserve"><value>オブジェクト放棄イベントが開始されました</value></data>
+  <data name="363E0F9E-F341-4EE1-95BA-FA2D8DBF8A1C" xml:space="preserve"><value>ぼかしを抑制</value></data>
+  <data name="244A6A7B-9F5D-4CB5-B64A-8163278531FF" xml:space="preserve"><value>画質</value></data>
+  <data name="3B496E7A-1C6E-45BB-81E0-6195B0A7339F" xml:space="preserve"><value>J:640x480 (マスク) M:640x480 (マスク)</value></data>
+  <data name="73B3300A-341F-45EF-B44F-74B5A5215FDF" xml:space="preserve"><value>ストリーミング方法</value></data>
+  <data name="E39A86F6-504C-4DB2-8DE0-F6966F711A05" xml:space="preserve"><value>ストリーミングモード</value></data>
+  <data name="90916014-954E-4B20-A8D0-BD4F1A0DADA6" xml:space="preserve"><value>低ライト</value></data>
+  <data name="48578B58-5891-4565-B8FE-EE1292039797" xml:space="preserve"><value>アクセスチェック</value></data>
+  <data name="88B17936-7546-48FB-9046-54AD586D1572" xml:space="preserve"><value>ONVIF 拡張済み</value></data>
+  <data name="7B0DC421-4714-4753-BBDE-9A7217CDAE0E" xml:space="preserve"><value>ノーマル</value></data>
+  <data name="FA764C62-E467-4CF0-A30A-5C8C4A3535EE" xml:space="preserve"><value>夜間スムージング</value></data>
+  <data name="3512676E-FA8A-4C93-8115-9EF3A55B2719" xml:space="preserve"><value>日付</value></data>
+  <data name="9867AA53-3274-453F-9A1D-EAF01886EF1B" xml:space="preserve"><value>ダイナミック</value></data>
+  <data name="C216619B-62D8-4C01-8439-CC5682D7310A" xml:space="preserve"><value>プロファイル14</value></data>
+  <data name="0FC0C99F-350A-471E-9B85-EA2620B38958" xml:space="preserve"><value>自動トラッカー イベントが停止されました</value></data>
+  <data name="69628795-C118-43DA-A098-79710B06F60E" xml:space="preserve"><value>圧縮I-フレーム</value></data>
+  <data name="7455D74B-B63A-49AA-9ED1-C487D8F8FA1C" xml:space="preserve"><value>白黒バーストあり</value></data>
+  <data name="E7594006-C859-4782-96EE-F5F6BBA3A309" xml:space="preserve"><value>ONVIF適合デバイス</value></data>
+  <data name="9EFB2BA0-E076-47E0-92FD-2EFD39F744DC" xml:space="preserve"><value>ウィンドウ当たりの最大点数</value></data>
+  <data name="3A32B268-D4AD-4AB9-A94A-D2BC5305CBE5" xml:space="preserve"><value>夜間の輝度</value></data>
+  <data name="3E4A64C1-FEFB-4C8B-9218-AB50104528B2" xml:space="preserve"><value>壁</value></data>
+  <data name="2F03BC96-0A1E-41B9-A01E-AAA6C86E5678" xml:space="preserve"><value>自動 -</value></data>
+  <data name="372356B6-25F0-4492-BCE5-8CC681ED8C2F" xml:space="preserve"><value>入力立下がりイベント</value></data>
+  <data name="CCA25D34-4461-43A2-BD41-72CBA7733A21" xml:space="preserve"><value>ナンバープレート検出</value></data>
+  <data name="57FB1C57-970B-4BDC-904B-FBD150FE8DD1" xml:space="preserve"><value>ノイズ低減</value></data>
+  <data name="66D64D94-D452-4C2C-83AE-7C999D276BB3" xml:space="preserve"><value>ダブルパノラマ + シングル PTZ</value></data>
+  <data name="58ABEC84-4DE2-4CF6-99EC-B94C157D95C7" xml:space="preserve"><value>オブジェクト削除イベントが停止されました</value></data>
+  <data name="73A9838E-A6CD-4D78-ADA7-8A08454A4008" xml:space="preserve"><value>HTTPストリーミング</value></data>
+  <data name="8972EA03-2436-4487-9B18-E043D1924D0C" xml:space="preserve"><value>H.264:1280x720、アナログ出力</value></data>
+  <data name="C5000007-0C55-4146-83BE-7E0E54F779C0" xml:space="preserve"><value>会社/組織名</value></data>
+  <data name="AD7D113F-A65C-4F3C-91A9-B224E46F4A34" xml:space="preserve"><value>MPEG - 4 - ストリーム後</value></data>
+  <data name="AD7D113F-A65C-4F3C-91A9-B224E46F4A35" xml:space="preserve"><value>MPEG - 5 - ストリーム後</value></data>
+  <data name="AD7D113F-A65C-4F3C-91A9-B224E46F4A36" xml:space="preserve"><value>MPEG - 6 - ストリーム後</value></data>
+  <data name="AD7D113F-A65C-4F3C-91A9-B224E46F4A37" xml:space="preserve"><value>MPEG - 7 - ストリーム後</value></data>
+  <data name="AD7D113F-A65C-4F3C-91A9-B224E46F4A31" xml:space="preserve"><value>MPEG - 1 - ストリーム後</value></data>
+  <data name="AD7D113F-A65C-4F3C-91A9-B224E46F4A32" xml:space="preserve"><value>MPEG - 2 - ストリーム後</value></data>
+  <data name="AD7D113F-A65C-4F3C-91A9-B224E46F4A33" xml:space="preserve"><value>MPEG - 3 - ストリーム後</value></data>
+  <data name="AD7D113F-A65C-4F3C-91A9-B224E46F4A38" xml:space="preserve"><value>MPEG - 8 - ストリーム後</value></data>
+  <data name="AD7D113F-A65C-4F3C-91A9-B224E46F4A39" xml:space="preserve"><value>MPEG - 9 - ストリーム後</value></data>
+  <data name="08945B20-F3A2-47DB-9A51-138B20DA2A08" xml:space="preserve"><value>シーン5</value></data>
+  <data name="68BA67E2-EFB6-4566-B024-60571312083E" xml:space="preserve"><value>自動 (ワイドモード)</value></data>
+  <data name="C26756F2-CD22-4205-9586-98377A1A75FE" xml:space="preserve"><value>音源</value></data>
+  <data name="8000879A-3648-4F5E-828C-8CF4DF439028" xml:space="preserve"><value>外付けマイク</value></data>
+  <data name="32F5CB80-BD2E-48A8-B416-D2040CC98C1F" xml:space="preserve"><value>非常に良い</value></data>
+  <data name="951D9AB1-E41C-4383-9B30-C25248B305D2" xml:space="preserve"><value>2 台のカメラの追跡イベントが停止されました</value></data>
+  <data name="08BDC384-D51F-4B9B-A232-1DA187D16597" xml:space="preserve"><value>ライン - 高</value></data>
+  <data name="36008632-8664-4804-929D-B3EDE14CB091" xml:space="preserve"><value>外部センサー</value></data>
+  <data name="DECB585B-F806-42B0-9AB7-13F55AB6D8BE" xml:space="preserve"><value>温度アラーム停止</value></data>
+  <data name="89DE7DE9-43E5-4ADF-9DD3-F838CF7DD15B" xml:space="preserve"><value>顔認識開始</value></data>
+  <data name="0235A21C-9349-488C-A467-88490959F1DE" xml:space="preserve"><value>レーダーイベント停止</value></data>
+  <data name="22700E3A-3CAA-4A95-B5A8-E2194BAEF40D" xml:space="preserve"><value>スクリーン 10</value></data>
+  <data name="0DAF7585-5580-4E4E-93A8-2B70AD2A6F18" xml:space="preserve"><value>AWC B-ゲイン</value></data>
+  <data name="AE71948D-BD57-48A5-9BEF-4868DD114E28" xml:space="preserve"><value>HTTPSポート</value></data>
+  <data name="464FF6A8-5436-4B38-8456-0A9A4B5D840B" xml:space="preserve"><value>ビデオ ストリーム 2 と同じ</value></data>
+  <data name="04353577-09F8-4913-A8A8-A74705CB78D2" xml:space="preserve"><value>歪み補正ビュー</value></data>
+  <data name="93BA8BF0-8AB3-48F4-BF74-4350C38D8DC6" xml:space="preserve"><value>遅延低/半解像度</value></data>
+  <data name="CCAFEF81-279F-425D-B5D1-295A765BD114" xml:space="preserve"><value>デバイスタイプ</value></data>
+  <data name="739E0635-7819-40A7-BB1A-FD6A850B2027" xml:space="preserve"><value>夜間ホワイト バランス</value></data>
+  <data name="A8493778-6847-4D3C-914B-FD0CF0C1EF18" xml:space="preserve"><value>2 ストリーム</value></data>
+  <data name="44560C04-96A8-4D39-A668-5E70DEB81ABD" xml:space="preserve"><value>8M 魚眼 + クアッド PTZ</value></data>
+  <data name="9CF956E7-3C2F-4EA9-9974-3868B8ED2CA0" xml:space="preserve"><value>音声エンコード</value></data>
+  <data name="728CA43F-8420-4323-B3F9-57011B236F55" xml:space="preserve"><value>概要</value></data>
+  <data name="C796719D-CF93-442C-B539-FB11C27345A7" xml:space="preserve"><value>エリア1</value></data>
+  <data name="7EF9C6CA-DAE3-4B06-BA82-51C0A46F0142" xml:space="preserve"><value>メイン CAVLC プロファイル</value></data>
+  <data name="0B7CB31A-FDC8-4DBA-919C-00E94FC49072" xml:space="preserve"><value>品質</value></data>
+  <data name="57EFAD10-CA88-4E5A-A42A-C4A8694BC8C2" xml:space="preserve"><value>オブジェクト出現</value></data>
+  <data name="3831690D-B9E9-44E7-9058-1FCE7DE4DE41" xml:space="preserve"><value>ノイズ低減閾値</value></data>
+  <data name="82D83928-EEAB-41EF-8A1C-404C6DF69E43" xml:space="preserve"><value>手動屋外 (6500K)</value></data>
+  <data name="926B50DC-2370-47C4-A0F4-00BC97D37FF5" xml:space="preserve"><value>最低</value></data>
+  <data name="6E51CECB-8304-4361-AA62-BCFB45625AE0" xml:space="preserve"><value>2.5（PAL）、3（NTSC）</value></data>
+  <data name="2FE86759-E172-4956-8156-8E94A40B836B" xml:space="preserve"><value>最大画質調整レベル</value></data>
+  <data name="117DEA48-A9EE-4EE6-8ACD-9E4D755A2C20" xml:space="preserve"><value>ハイスピード</value></data>
+  <data name="F5155A2C-DCB9-40CF-808C-0C9A2CBEBC85" xml:space="preserve"><value>自動(1/30-1/10000)</value></data>
+  <data name="FB408E5C-2004-4F39-9206-00CDBCF8CD9F" xml:space="preserve"><value>HTTP ポート上の RTSP</value></data>
+  <data name="53ABB0E7-E8A1-4EE3-BA96-7C7E0F43926D" xml:space="preserve"><value>緊急トリガー開始</value></data>
+  <data name="66367D27-1A62-4B55-8E69-F44D421A55E9" xml:space="preserve"><value>魚眼ウィンドウ</value></data>
+  <data name="505D40B9-3ED7-4D08-B523-B4D36233F2AF" xml:space="preserve"><value>マルチキャスト強制PIM-SSM</value></data>
+  <data name="4B4E2CAC-425F-42A6-9281-D40B92B7DBB0" xml:space="preserve"><value>ビデオソース</value></data>
+  <data name="C73D7A2E-F08A-422D-9967-92DEF9717840" xml:space="preserve"><value>H264オリジナル</value></data>
+  <data name="02F7E33C-A5C7-4F0E-A166-20EA2EECD9C7" xml:space="preserve"><value>マイクゲイン</value></data>
+  <data name="8361CEA1-2E08-43F5-B54F-F94442610E36" xml:space="preserve"><value>R-ゲイン</value></data>
+  <data name="C203F0AA-2D68-425C-9D6B-6EBD6911CA87" xml:space="preserve"><value>固定屋外色1</value></data>
+  <data name="E066AADE-CA2A-4624-A5B8-8F215C820061" xml:space="preserve"><value>自動レート制御</value></data>
+  <data name="287A1804-15F9-4463-A226-67B041F9C16B" xml:space="preserve"><value>プロファイル32</value></data>
+  <data name="F68945E4-9945-49DA-AFD9-81DB3557EFC9" xml:space="preserve"><value>レベル8</value></data>
+  <data name="36894C2C-9F10-4201-94FF-1DC74BE40321" xml:space="preserve"><value>マウンティング</value></data>
+  <data name="47DA8995-93A5-4EAF-A175-8F82BE8F26AA" xml:space="preserve"><value>日を含む</value></data>
+  <data name="51880779-4249-465E-B77D-8010784D8F2D" xml:space="preserve"><value>フレームレートスケーリング</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD110" xml:space="preserve"><value>H.264/H.265 10 - ストリーム後</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD111" xml:space="preserve"><value>H.264/H.265 11 - ストリーム後</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD112" xml:space="preserve"><value>H.264/H.265 12 - ストリーム後</value></data>
+  <data name="842E6573-1007-4CC5-BF76-4F2E6EAD735E" xml:space="preserve"><value>無制限</value></data>
+  <data name="9DD779B9-C301-4771-9787-ED0AE73C2BD9" xml:space="preserve"><value>音声 - ストリーム入力</value></data>
+  <data name="C75792B9-AEC0-44F8-B3F4-1EBA5E8310B2" xml:space="preserve"><value>MPEG 2 - ストリーム後</value></data>
+  <data name="F85991C8-FBDA-4EFC-9A52-02DFA60171BA" xml:space="preserve"><value>1080x720（SD）</value></data>
+  <data name="C177E31F-6570-4575-969D-321A55776163" xml:space="preserve"><value>夜間 MPEG4/H264 品質</value></data>
+  <data name="5F766231-6245-41E9-99EC-CEBA1E8D0D09" xml:space="preserve"><value>MPEG4 シンプルプロファイル</value></data>
+  <data name="8189ABD9-228D-45E9-AE8C-DE82C4F4DAF7" xml:space="preserve"><value>音声 入力プリゲイン</value></data>
+  <data name="7F3AC897-BB2B-4F3D-BF08-66538C541D20" xml:space="preserve"><value>プロファイル37</value></data>
+  <data name="3728E84B-82E5-4649-B7C8-F1836D21D821" xml:space="preserve"><value>遅延標準/最大解像度</value></data>
+  <data name="6D255396-1A3C-4775-8F78-3E06EAF0B073" xml:space="preserve"><value>クラリティ</value></data>
+  <data name="B8CF6154-6F9E-4591-B1AF-A2C10401C14E" xml:space="preserve"><value>サラウンド</value></data>
+  <data name="C148AC02-60B6-4ED7-8B8F-30579DECB8BB" xml:space="preserve"><value>プロファイル28</value></data>
+  <data name="AB80B984-7964-4918-BE54-54D00EA84DBF" xml:space="preserve"><value>PTZ 移動</value></data>
+  <data name="8AAAFAFD-8D1B-4BA7-A49D-EC0D8551E6AD" xml:space="preserve"><value>テキストポジション</value></data>
+  <data name="9BC37A29-A179-49E0-9854-4E2C2039099B" xml:space="preserve"><value>日中コントラスト</value></data>
+  <data name="9B9EEFE7-D6A1-4E27-94A1-DEE06B9E0455" xml:space="preserve"><value>ExtIOラインイン</value></data>
+  <data name="7F7E9EBB-C016-48C8-8F9D-06E50ACD8FA1" xml:space="preserve"><value>中-低</value></data>
+  <data name="D66B2363-BB65-404E-8F53-6A555708E4D0" xml:space="preserve"><value>ウィンドウ オフセット右トリミング</value></data>
+  <data name="7595B440-8C64-4CCD-9B90-63CB01012491" xml:space="preserve"><value>詳細</value></data>
+  <data name="CF3AFD52-B723-43E1-AE7D-406C7491B5B4" xml:space="preserve"><value>1024x576（HD）</value></data>
+  <data name="63C48D5A-566C-434D-823C-660423788E9E" xml:space="preserve"><value>画像のイベント</value></data>
+  <data name="A6C22ADD-A471-49DC-A0C8-B7A01E7996B9" xml:space="preserve"><value>H.264ビットレート</value></data>
+  <data name="DEA9AEC2-7087-412A-9D0B-773CC5803F5E" xml:space="preserve"><value>速いオブジェクト</value></data>
+  <data name="A4178DF3-6A91-4836-AAE9-D0BE5600677A" xml:space="preserve"><value>レーダーイベント開始</value></data>
+  <data name="F5187D47-B5ED-423D-8E04-40E5D0080C8E" xml:space="preserve"><value>デフォルト</value></data>
+  <data name="CC1475D7-392D-4803-989D-B72E20EA8847" xml:space="preserve"><value>1秒当たり H.265 フレーム</value></data>
+  <data name="0D9C5E36-7186-436F-B12D-CE1C4670CC{#A0X#}" xml:space="preserve"><value>メタデータストリーム {#01#}</value></data>
+  <data name="E5008423-3E16-43D1-9D61-BA5578BF6384" xml:space="preserve"><value>製品ID</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B10" xml:space="preserve"><value>JPEG 10 - ストリーム後</value></data>
+  <data name="4055A71B-60EA-4F3F-9FE3-0A76B73A55B11" xml:space="preserve"><value>JPEG 11 - ストリーム後</value></data>
+  <data name="B0C3C180-A678-4144-B1DD-26930B0E6CE5" xml:space="preserve"><value>1（PAL）</value></data>
+  <data name="F2D6BAF7-101D-4F05-85FE-031E7E151313" xml:space="preserve"><value>アダプティブモーションウィンドウ</value></data>
+  <data name="04A18CA2-A8F1-4701-B883-6D7A7A9D7512" xml:space="preserve"><value>パノラマ + クアッドPTZ</value></data>
+  <data name="9E5E3D00-0FE6-439A-8F07-84D0B0EF7D66" xml:space="preserve"><value>プロファイル27</value></data>
+  <data name="8A1847FE-BB57-48B3-B752-B2EC75E17069" xml:space="preserve"><value>室内蛍光灯 2</value></data>
+  <data name="D102D1C9-318E-4461-8410-6A0AAB28BAE3" xml:space="preserve"><value>露光 自動ゲイン最大値</value></data>
+  <data name="B8492932-264D-4ED1-B648-7240B47C6C21" xml:space="preserve"><value>無効</value></data>
+  <data name="91FFDF11-582E-414C-9040-7925565862EF" xml:space="preserve"><value>ストリームタイプ</value></data>
+  <data name="2516E028-5503-4CB7-8375-F36699FE70C7" xml:space="preserve"><value>接続URI</value></data>
+  <data name="DC613480-CB48-46B9-B6B4-5049D23C5BDD" xml:space="preserve"><value>内蔵マイク</value></data>
+  <data name="43EF57D1-EA0A-4897-9060-7048DBD0D1E3" xml:space="preserve"><value>偶数</value></data>
+  <data name="EC0149F2-4ED8-4BC0-A674-77B2BCDD3866" xml:space="preserve"><value>ホワイトバランスBゲイン</value></data>
+  <data name="EBAADB7B-30FE-43C2-83D5-D9DDB43B1486" xml:space="preserve"><value>プロファイル1</value></data>
+  <data name="71C54BDA-8330-4F96-95A0-F6DFA20CA03C" xml:space="preserve"><value>自動アイリス</value></data>
+  <data name="448B04F2-F56E-45EA-B1B1-777EE8603919" xml:space="preserve"><value>9M 魚眼 + パノラマ</value></data>
+  <data name="3FC61C51-C035-4DA2-8DCB-51CCCB90A4D4" xml:space="preserve"><value>60 秒</value></data>
+  <data name="A89D261C-72F0-4D89-B47D-4AF121AF8C49" xml:space="preserve"><value>JPEG 1 - ストリーム後</value></data>
+  <data name="D661E46C-DCB0-4402-B9B3-0E9E5D07FFD9" xml:space="preserve"><value>1秒当りのフレーム</value></data>
+  <data name="75F4E10E-CA1F-4C86-A838-5CC3B0981D13" xml:space="preserve"><value>蛍光灯(白色)</value></data>
+  <data name="B41B40F9-03D2-4085-89A3-ECDE6E4F3348" xml:space="preserve"><value>等温線中レベル</value></data>
+  <data name="72A59720-DE99-4EBD-80B3-1E45536B0B54" xml:space="preserve"><value>夜間目標ビット レート</value></data>
+  <data name="08FF00F7-00EE-46A5-A57E-6327F20BDC17" xml:space="preserve"><value>メンテナンスエラー</value></data>
+  <data name="6E53510D-CDCB-4830-8E42-0C8371A61EB9" xml:space="preserve"><value>スクリーン 7</value></data>
+  <data name="A1AF37D3-9EAB-4335-B99D-040536E0AA06" xml:space="preserve"><value>音声 出力ゲイン</value></data>
+  <data name="A2918136-C138-446E-B4B9-A93B50566CF0" xml:space="preserve"><value>温度が適正範囲内です</value></data>
+  <data name="87F5BB69-6F2E-4BD6-82A0-48C10CF26395" xml:space="preserve"><value>プロファイル18</value></data>
+  <data name="2FFA1522-BF55-47C5-8BF6-F2AE490CD5F8" xml:space="preserve"><value>シャープネス</value></data>
+  <data name="6E069F43-AAE1-4545-BF9C-F9AD37AB5E0E" xml:space="preserve"><value>ボーレート</value></data>
+  <data name="0DD39D24-8278-45A1-A6ED-C9A72B7E713F" xml:space="preserve"><value>タイムスタンプ</value></data>
+  <data name="02726221-7C3D-47B2-903F-928029E7F015" xml:space="preserve"><value>入力フィルターのタイプ</value></data>
+  <data name="EDF67156-56EC-42C4-B5AD-D6CD0777F44E" xml:space="preserve"><value>魚眼タイプ</value></data>
+  <data name="FF7DFD1A-8926-4AF9-8D68-E9E72E8258CA" xml:space="preserve"><value>環境失格出力停止</value></data>
+  <data name="2E503D72-7A44-4231-B6EF-99DFC92DEF59" xml:space="preserve"><value>自動　広い</value></data>
+  <data name="392AC9A4-320E-4CA6-91B0-ABB014A02195" xml:space="preserve"><value>外灯 - ソジウム</value></data>
+  <data name="32FAFE7A-1636-4963-8CB9-77658E823D38" xml:space="preserve"><value>ビューモード</value></data>
+  <data name="27D2B534-4835-4677-86D6-F7C1517CA464" xml:space="preserve"><value>ビデオロス停止</value></data>
+  <data name="A03AB3E6-0762-4624-B6D5-DF5A23FCCD24" xml:space="preserve"><value>HALF D1 (352x576、352x480)</value></data>
+  <data name="AC795003-7790-4D40-9CE3-4768973FCA4B" xml:space="preserve"><value>連続、トリガー使用、スケジュール使用</value></data>
+  <data name="A6886172-658A-49BF-9B1A-E0DDB3BD26BE" xml:space="preserve"><value>水平解像度</value></data>
+  <data name="6054B08E-45B2-4402-AD89-5082F53AC705" xml:space="preserve"><value>デイしきい値</value></data>
+  <data name="0D9C5E36-7186-436F-B12D-CE1C4670CC94" xml:space="preserve"><value>メタデータ ストリーム</value></data>
+  <data name="4C0EFA26-5568-4232-80A0-EA24544A92E9" xml:space="preserve"><value>音声チャンネル2</value></data>
+  <data name="01EC6338-819F-4D8C-A983-3BB0B1275653" xml:space="preserve"><value>ビデオ入力形式</value></data>
+  <data name="CA63C5CC-C399-4860-9FFB-D4DB154006DC" xml:space="preserve"><value>温度検知が開始されました</value></data>
+  <data name="B8BBEFC9-FFF5-46C8-B458-7ED74E89A28F" xml:space="preserve"><value>チャネル3</value></data>
+  <data name="FC5A9321-A993-4E07-B6EA-50884B32EB5C" xml:space="preserve"><value>1.3メガピクセル[16:9] (30fpsモード)</value></data>
+  <data name="C485E7F9-92D3-4C31-BC2A-CEC87864FC99" xml:space="preserve"><value>夜間最低シャッター速度</value></data>
+  <data name="E719BEC6-C8A5-4673-9A58-F7DA174C68F4" xml:space="preserve"><value>スクリーン 6</value></data>
+  <data name="CF45060E-4CF3-4E1F-B01C-7669F2223D7B" xml:space="preserve"><value>オブジェクト退出</value></data>
+  <data name="B39A5549-26B9-4C59-8319-3AF08B9C6568" xml:space="preserve"><value>ビデオ入力3</value></data>
+  <data name="A8377E50-F8EF-45D8-B4C6-215BAB0241D8" xml:space="preserve"><value>自動黒色補正</value></data>
+  <data name="BFBF54FE-7B62-4D44-996B-50078056955A" xml:space="preserve"><value>品質 H264</value></data>
+  <data name="7B9D9AE7-69B1-4A8C-8015-A0639EFC84EC" xml:space="preserve"><value>PTZカメラタイプ</value></data>
+  <data name="1F6E7E7C-48A2-4F39-BA2B-40CEF5BBE1F6" xml:space="preserve"><value>ハイブリッド可変ビットレート</value></data>
+  <data name="1B2C0CDB-C967-4FD7-8C7A-4E82672F7F7D" xml:space="preserve"><value>侵入が開始されました</value></data>
+  <data name="63299DA9-6037-4F3B-AB59-F801250FB7C1" xml:space="preserve"><value>スケジュール使用、連続、トリガー使用</value></data>
+  <data name="B3BB591C-1BBF-4D50-83EF-83C15FF3CDA2" xml:space="preserve"><value>デイナイトモード</value></data>
+  <data name="1A9F982E-49D4-4189-9CF1-B82F4C1BB3CD" xml:space="preserve"><value>エリア3</value></data>
+  <data name="82FB375F-3B3D-4A7E-99CD-8C898F9EEB5F" xml:space="preserve"><value>デイナイト閾値</value></data>
+  <data name="73969BBE-4779-4D7B-BE26-2DD5806D76BD" xml:space="preserve"><value>停止車両イベントが停止しました</value></data>
+  <data name="7477EA12-C4E7-49F8-885C-F25C6578788A" xml:space="preserve"><value>SMTPイベントホストポート番号</value></data>
+  <data name="0E9417E0-89D1-4A14-889C-60352220689F" xml:space="preserve"><value>アクティブ</value></data>
+  <data name="4A762A05-3673-4CFF-B418-332829969DF3" xml:space="preserve"><value>I/P フレームデルタ QP</value></data>
+  <data name="9AD1686F-C382-4C1D-A94D-A8F42358BCC3" xml:space="preserve"><value>プロファイル6</value></data>
+  <data name="3C736B7F-15AA-40D9-B0D0-D0CDCE7CE0B2" xml:space="preserve"><value>ビデオ分析イベントが停止されました</value></data>
+  <data name="C9151230-70A4-4A85-84B5-CB24287F777A" xml:space="preserve"><value>ビデオ ファイル</value></data>
+  <data name="8EE7C6AC-37C0-45DD-9510-D88BE62A50E8" xml:space="preserve"><value>5M 魚眼 + クアッド PTZ</value></data>
+  <data name="FBB18ACC-5655-4A44-AA80-25FC0265D5C7" xml:space="preserve"><value>ビデオが失われました</value></data>
+  <data name="C5F2601A-4096-4160-9467-49625128F821" xml:space="preserve"><value>4M 魚眼 + パノラマ</value></data>
+  <data name="65DC9ADE-775A-4FE6-AC17-A4500D52120E" xml:space="preserve"><value>ホワイトバランス</value></data>
+  <data name="063EB0E8-80D2-49FF-A429-1EE8E3BF5F51" xml:space="preserve"><value>含める</value></data>
+  <data name="FF0391CF-E9DA-4FEA-A3E0-879E89EACBEB" xml:space="preserve"><value>最大ビットレート (kビット/秒) H.265</value></data>
+  <data name="227ECC1F-2CA9-4336-950C-7FF0CF77594B" xml:space="preserve"><value>IP 競合停止イベント</value></data>
+  <data name="30ABA4FC-F915-4F91-9B49-C1EEAC526B87" xml:space="preserve"><value>ハードウェア通知</value></data>
+  <data name="706237DF-D7A0-4590-B35F-947A6C5C8351" xml:space="preserve"><value>ビット レート (kbit/秒):</value></data>
+  <data name="343EA284-1743-4DDE-BF87-4D4785943B5E" xml:space="preserve"><value>ウィンドウ オフセット底部トリミング</value></data>
+  <data name="EDACD891-B11B-4A7D-9892-6A8C63741356" xml:space="preserve"><value>入力変更</value></data>
+  <data name="BCA9BAF6-C7FB-44F4-B043-64B34A15AFF0" xml:space="preserve"><value>SRTP/RTSPS/UDP マルチキャスト</value></data>
+  <data name="EA6A0C5F-02CB-41A6-B1CD-6BA743622BDD" xml:space="preserve"><value>検出応答時間</value></data>
+  <data name="661D9FB1-39D3-414E-83F0-ACA1FB81C1B3" xml:space="preserve"><value>プロファイル23</value></data>
+  <data name="401E467D-D31B-4E19-A046-8B6B4CDF28A8" xml:space="preserve"><value>G.726 32 キロビット/秒</value></data>
+  <data name="22D02F0F-7BDD-4CC0-A79C-78D45C0AE670" xml:space="preserve"><value>音声パッケージは投げ捨てないでください</value></data>
+  <data name="9BB94ADF-7207-45ED-B052-0F89E89BE4B5" xml:space="preserve"><value>キーフレーム モード間の最大時間 Mpeg4</value></data>
+  <data name="590051D2-BC81-44C6-9DA1-570B55C63154" xml:space="preserve"><value>プロファイル29</value></data>
+  <data name="A3350F84-B6E3-49FF-BFBA-B24CDE6DCEC3" xml:space="preserve"><value>右上</value></data>
+  <data name="1C6BF709-D418-4F68-9F3F-9F8C9CE4097E" xml:space="preserve"><value>スケジュールされたデイモード</value></data>
+  <data name="30EC2A6D-5B71-4E4B-BBC2-A9F94E1BBE75" xml:space="preserve"><value>リンクイベント開始</value></data>
+  <data name="8FC09522-64C7-4C82-8634-23FB84504EBA" xml:space="preserve"><value>アイリスゲイン</value></data>
+  <data name="F7729675-9E20-4593-9611-F53C11C6FDD4" xml:space="preserve"><value>白黒</value></data>
+  <data name="0CBF865E-A2FC-4C42-8EEE-AD54DFB95F92" xml:space="preserve"><value>ビデオが失われました</value></data>
+  <data name="35C4BD1E-7F88-42A7-A44B-505F8E52E7B0" xml:space="preserve"><value>室内/屋外</value></data>
+  <data name="5635B87F-250B-4925-8851-0343CEF8E501" xml:space="preserve"><value>キーフレーム モード間の最大フレーム数</value></data>
+  <data name="61F40B38-24A0-4DD0-9375-32C0B90CD77A" xml:space="preserve"><value>蛍光灯(昼光色)</value></data>
+  <data name="57F611C6-B25E-475E-A7C7-86E55AEABD87" xml:space="preserve"><value>露光シャッターモード</value></data>
+  <data name="88E3A78D-0E36-44E2-B9D8-EB088CC8913B" xml:space="preserve"><value>キープアライブタイプ</value></data>
+  <data name="FAC8AF18-70BB-4275-9858-31A20C452A6C" xml:space="preserve"><value>ノイズ低減</value></data>
+  <data name="7D07AF06-FCB5-4D4D-B898-818F3FC8EDAC" xml:space="preserve"><value>MJPEGオリジナル</value></data>
+  <data name="7980D48B-F5FB-4C04-B4C2-3906AFED5954" xml:space="preserve"><value>チャネル4</value></data>
+  <data name="C0CB47D1-9661-452C-9C42-C0497338A5A0" xml:space="preserve"><value>IPアドレス</value></data>
+  <data name="E7F141CD-8C83-4C66-BA85-13BD5F871E32" xml:space="preserve"><value>スクリーン 8</value></data>
+  <data name="DA3F8659-B7A0-4825-94B0-E8AAE0CC3EA6" xml:space="preserve"><value>イベントユーザーデータ</value></data>
+  <data name="181CF64E-F64A-4EF5-A1FF-D3B322EF77B8" xml:space="preserve"><value>SD カード無効</value></data>
+  <data name="D93FB7C2-837D-4C3F-AD88-9EFFB18939F3" xml:space="preserve"><value>キーフレーム モード間の最大フレーム数</value></data>
+  <data name="2A2E05D4-4B2A-4F74-822A-3A94E306CDF1" xml:space="preserve"><value>夜間の露出</value></data>
+  <data name="F23B8257-ECB7-4FB2-910B-D87A44A1474E" xml:space="preserve"><value>プロファイル34</value></data>
+  <data name="EF18F61C-E565-49F5-B60E-5D8BD7B908BA" xml:space="preserve"><value>破棄オブジェクト イベントが停止しました</value></data>
+  <data name="824ADEBA-04BE-4F69-AAD1-3EA7D3F73FEA" xml:space="preserve"><value>夜間 JPEG 品質</value></data>
+  <data name="976D9DAC-CABD-46C2-A17C-4789400E7683" xml:space="preserve"><value>リモート録画動画ストリーム番号</value></data>
+  <data name="D3B65660-88CE-4F2C-B1FD-51A7CBEB4BBA" xml:space="preserve"><value>プロファイル39</value></data>
+  <data name="BE0495C2-6AB0-4B38-8553-71653839A4C2" xml:space="preserve"><value>常にオフ</value></data>
+  <data name="EE2B87F7-01D9-45D1-81BB-0F5B0C398BF6" xml:space="preserve"><value>顔認識</value></data>
+  <data name="44EE484B-BB8A-42A6-9CE5-1FF5A85CFB26" xml:space="preserve"><value>- メディア プロファイル</value></data>
+  <data name="06799C28-37C4-441E-B53C-9D30CF256601" xml:space="preserve"><value>自動(シャッター優先度)</value></data>
+  <data name="2DD30D1F-0F37-4466-91FA-CAF5CE9768FC" xml:space="preserve"><value>0 秒</value></data>
+  <data name="54D38633-0473-467C-ACE8-E8C14DA7D37A" xml:space="preserve"><value>タングステン</value></data>
+  <data name="F6B5CC3D-13EB-4262-8700-5F59865D608E" xml:space="preserve"><value>画像取り込みモード</value></data>
+  <data name="2AC9B751-A269-4B67-97C7-9A1DC67279A5" xml:space="preserve"><value>PanTiltレシオ</value></data>
+  <data name="459C97C8-86E1-45BC-93EC-CF67C22D69F4" xml:space="preserve"><value>オート中</value></data>
+  <data name="48EED613-1C77-4EF0-9765-06A54C3A5825" xml:space="preserve"><value>ウィンドウ変更が開始されました</value></data>
+  <data name="AF3E8EEE-7107-4D21-A6B0-FF7DCA73DCBF" xml:space="preserve"><value>MPEG-4 2 - ストリーム後</value></data>
+  <data name="DDF07B20-BACC-432F-B4E0-1D06FD59A1B3" xml:space="preserve"><value>MPEG4 - ストリーム後</value></data>
+  <data name="5B4FDBFA-6242-4960-BA7D-45F62B208D20" xml:space="preserve"><value>ビットレート制御モード H.265</value></data>
+  <data name="FEFC70D4-36F3-4EF7-8D8C-1E48E2B59FEA" xml:space="preserve"><value>自動(屋外)</value></data>
+  <data name="8BA76195-735B-496C-A143-49E2DC99F467" xml:space="preserve"><value>DHCP 経由 NTP</value></data>
+  <data name="9CFFCFFB-A88E-462E-A9F8-13CC40933C6C" xml:space="preserve"><value>パノラマ 360: 1024x336</value></data>
+  <data name="C4943571-96E4-474B-BAE8-131F226708DE" xml:space="preserve"><value>方向性モーション イベントが停止されました</value></data>
+  <data name="1BBE1DED-90C0-4BBF-A4D6-6DA7ADD5D055" xml:space="preserve"><value>スケジュール使用</value></data>
+  <data name="21DE1A7C-57D6-4FE5-85DF-123EAA5E6B50" xml:space="preserve"><value>目標ビットレート(bps)</value></data>
+  <data name="26DD6402-87DD-4507-B613-C515A1C856CB" xml:space="preserve"><value>プリセット設定</value></data>
+  <data name="F44A97CE-F53F-4281-9EC8-1154F0CD4F19" xml:space="preserve"><value>マルチキャスト ビデオ ポート</value></data>
+  <data name="9F2CF196-854B-4E1C-AA9B-66C2EE83228B" xml:space="preserve"><value>カメラの選択</value></data>
+  <data name="8F5BD8F1-B932-4F9C-90C3-7B04F4128A8A" xml:space="preserve"><value>JPEG 補正済みストリーム</value></data>
+  <data name="FC4F9CF0-DF49-4115-8CF0-474189E4AD9C" xml:space="preserve"><value>ビデオ ファイルのパス</value></data>
+  <data name="5F3447D4-53DC-463B-A5F5-12B7D50EC863" xml:space="preserve"><value>中位</value></data>
+  <data name="204E954D-7B1C-4A7E-8284-FF3906D961A3" xml:space="preserve"><value>Zipstream FPSモード</value></data>
+  <data name="9C069754-244E-47A4-AD0D-0ED143252E0E" xml:space="preserve"><value>8メガピクセル[16:9] (30fpsモード)</value></data>
+  <data name="226FE294-4C4D-45E3-9392-39627BBA77F5" xml:space="preserve"><value>目標ビットレート (kビット/秒) H264</value></data>
+  <data name="72825A3D-96BC-4E04-BBD7-C97DC18880D5" xml:space="preserve"><value>回転/ミラー</value></data>
+  <data name="FCB70770-C8A8-41A6-A6C7-8C954BBE8927" xml:space="preserve"><value>入力立上がりイベント</value></data>
+  <data name="58335CC0-363B-48A8-845F-291CF1E08923" xml:space="preserve"><value>自動トラッカー イベントが開始されました</value></data>
+  <data name="600C0775-3F4F-4242-9DB3-8AACC41EB564" xml:space="preserve"><value>6 ストリーム</value></data>
+  <data name="30DA6102-9CAB-4D24-B779-BC25A6E0044D" xml:space="preserve"><value>プロファイル36</value></data>
+  <data name="66E18549-3084-4D4E-B61C-FE170CABB810" xml:space="preserve"><value>垂直方向の反転</value></data>
+  <data name="C3AE2E22-EC03-4C7C-9043-914DD11F29EC" xml:space="preserve"><value>パノラマ 180 前: 640x208</value></data>
+  <data name="EBA1016B-6E0D-4095-AA35-F53EC9B7A8A2" xml:space="preserve"><value>H.264 コントロールモード</value></data>
+  <data name="F3005953-55FC-4E96-AC9E-C7C5EDC640C9" xml:space="preserve"><value>水平ミラー</value></data>
+  <data name="5E2B03DF-219B-4C4B-9463-3EF1FBBA310F" xml:space="preserve"><value>自動 (フリッカレス2)</value></data>
+  <data name="2C07920C-5604-4FA8-A19E-49D8B0B1D07F" xml:space="preserve"><value>中心</value></data>
+  <data name="03136A90-35E2-4587-AD9C-767973B4043F" xml:space="preserve"><value>オブジェクト終了</value></data>
+  <data name="E61929C7-6A60-40F4-9378-C3C818F8633B" xml:space="preserve"><value>自動トラッカー</value></data>
+  <data name="BE014FEE-1CE1-4371-88F3-ED7638D7B23F" xml:space="preserve"><value>総当たり攻撃</value></data>
+  <data name="79E53FF4-BDED-4B55-9C26-EE8D355AAAE6" xml:space="preserve"><value>デイ</value></data>
+  <data name="CF27EE68-CB0B-4400-B902-A05E96A1426A" xml:space="preserve"><value>アクティブカメラ</value></data>
+  <data name="265E12B8-3644-4A07-B60A-8586FAC7AFED" xml:space="preserve"><value>赤外線 2 レベル</value></data>
+  <data name="FDED9664-5F1E-453E-854C-9D6F32372989" xml:space="preserve"><value>ナイトモード閾値</value></data>
+  <data name="6E180B09-5EA8-44A2-B0DA-F290DE35BF98" xml:space="preserve"><value>固定蛍光灯2</value></data>
+  <data name="045FBFC8-E2C2-4773-B823-1AFA81052909" xml:space="preserve"><value>レベル3</value></data>
+  <data name="E5A2C8E6-F8C7-4C46-8521-7017EB87F1C1" xml:space="preserve"><value>発砲を検出</value></data>
+  <data name="EABCD96D-E513-404C-A0F6-A13C80F2C2CF" xml:space="preserve"><value>ダイジェスト</value></data>
+  <data name="6F80D8E6-D2A5-4ED3-9D9F-3877425AD3A6" xml:space="preserve"><value>遅延標準/プログレッシブSIF</value></data>
+  <data name="70BA991C-063F-49AF-9B46-BA44F562ADBB" xml:space="preserve"><value>自動ナトリウム</value></data>
+  <data name="35354F70-B41F-4D10-8285-7F5FB511D87B" xml:space="preserve"><value>車両検出</value></data>
+  <data name="DB4AD2FE-7D1A-46EC-A553-5CF8AA4398E9" xml:space="preserve"><value>自動ゲイン</value></data>
+  <data name="FA0AFD40-CBB5-41A0-91CB-346FBF5D7A4A" xml:space="preserve"><value>テキストオーバーレイ</value></data>
+  <data name="EAB2F003-E705-48CB-A66D-82C966658E07" xml:space="preserve"><value>左</value></data>
+  <data name="956F31D0-4941-410C-8074-16C62ACB5B6D" xml:space="preserve"><value>左半分</value></data>
+  <data name="8F321E1D-4D7E-4685-AE76-EA49FFA4E8BA" xml:space="preserve"><value>エッジ保存最大ダウンロード速度</value></data>
+  <data name="03179E2C-19B2-4CDA-83AF-16730FF534B7" xml:space="preserve"><value>モノクロ</value></data>
+  <data name="8B2CD83A-277C-4638-A053-011E81E81F80" xml:space="preserve"><value>回転防止出力停止</value></data>
+  <data name="90E653DB-8EF0-4287-8CB2-C084EB60F3D6" xml:space="preserve"><value>ビットレートの最適化</value></data>
+  <data name="F01168E8-B606-487A-9733-D8DFDFD28DF1" xml:space="preserve"><value>強制夜間</value></data>
+  <data name="094D7693-A1CC-474E-B33E-A402A2D8D511" xml:space="preserve"><value>レイアウト</value></data>
+  <data name="A09BEE5C-8433-4ACA-92DF-89C9188C223D" xml:space="preserve"><value>自動ゲインコントロール</value></data>
+  <data name="2861A990-5212-4DD7-869A-CBD89B9A28F2" xml:space="preserve"><value>下側(2/3)</value></data>
+  <data name="0553C5D2-0643-4435-849E-3947A5D74A3D" xml:space="preserve"><value>カーネルのバージョン</value></data>
+  <data name="D2137A43-3151-4210-AFDF-84F182C58E72" xml:space="preserve"><value>VGA クアッドストリーム [4:3]</value></data>
+  <data name="BB40E092-BE56-487A-BAE0-6E065C216971" xml:space="preserve"><value>目標ビットレート (kビット/秒) MPEG-4</value></data>
+  <data name="9229867A-AF44-4200-974F-596CA0545E9E" xml:space="preserve"><value>MACアドレス</value></data>
+  <data name="E10CBAF6-396D-44E1-8227-6E4675A9008C" xml:space="preserve"><value>JPEG 元のストリーム</value></data>
+  <data name="1EC7DE7C-1DED-45B0-A600-D119DE1B9422" xml:space="preserve"><value>マルチキャスト アドレス</value></data>
+  <data name="09A44189-3699-4E36-8A60-38BEC3C2A616" xml:space="preserve"><value>プロファイル31</value></data>
+  <data name="23539786-B0CF-4369-B279-8AAFEA593B65" xml:space="preserve"><value>コンボ</value></data>
+  <data name="69098AB4-E42E-47A4-8B50-FA9AB0EDD048" xml:space="preserve"><value>中心1/3</value></data>
+  <data name="A17550FC-9E4C-4B02-A04D-63B78344604C" xml:space="preserve"><value>最大チルト</value></data>
+  <data name="C93BDDB8-D192-42AA-839C-5762C2F43C49" xml:space="preserve"><value>バッファサイズ</value></data>
+  <data name="003CF355-A670-4487-8C5E-8FEC8337E1C5" xml:space="preserve"><value>品質 H.264</value></data>
+  <data name="C5C94B23-5FDE-48CD-A505-A69088944707" xml:space="preserve"><value>自動　ノーマル</value></data>
+  <data name="8E106C5F-5D45-4066-97A9-0D56B922CB2B" xml:space="preserve"><value>変更停止</value></data>
+  <data name="F416377E-E40C-4723-B0C0-0010897A7625" xml:space="preserve"><value>遅延低/最大解像度</value></data>
+  <data name="CF7D07E2-5749-4071-A180-D81DF75B3B74" xml:space="preserve"><value>センサーAOI幅</value></data>
+  <data name="30442BCD-17FD-4ECB-9B00-317B58BD7AF6" xml:space="preserve"><value>SD カード挿入済み</value></data>
+  <data name="24781318-7793-4CCF-B461-30C468750706" xml:space="preserve"><value>プロトコル</value></data>
+  <data name="E03A1F01-A9A3-4811-9E68-5513607C1A6C" xml:space="preserve"><value>アナログY-レベル</value></data>
+  <data name="6E343F27-BFF9-40E6-B33D-27347607EAAA" xml:space="preserve"><value>自動 x 6</value></data>
+  <data name="B6C099DE-4BED-4311-B09A-28FF3B495CE2" xml:space="preserve"><value>シングル</value></data>
+  <data name="D1B05F9B-3A6E-467B-ADE2-52077E01C136" xml:space="preserve"><value>インテリジェントシーンキャプチャ(高速B)</value></data>
+  <data name="343E4F78-1E45-4B75-ACA5-5B39EE2C2196" xml:space="preserve"><value>自動 x 32</value></data>
+  <data name="DC8D6C86-9B3B-4B6C-8342-6E65BF6A6EF4" xml:space="preserve"><value>夜間ホワイト バランス B ゲイン</value></data>
+  <data name="2596DFAA-CD1D-48FD-AA0E-609F68A3C1A8" xml:space="preserve"><value>品質 MPEG-4</value></data>
+  <data name="32E62FEE-5E3C-4F14-9C1B-B8716839116C" xml:space="preserve"><value>モーション ウィンドウ タイプ</value></data>
+  <data name="1708341E-AEDA-4D26-B81B-67CC43FDD4F7" xml:space="preserve"><value>ミックス</value></data>
+  <data name="145B61A3-D0CE-4643-B8FA-DAD59DE44363" xml:space="preserve"><value>9M 魚眼 + ダブルパノラマ</value></data>
+  <data name="9CA31374-3307-4B60-8D05-D4D620DE899D" xml:space="preserve"><value>5メガピクセル[16:9] (30fpsモード)</value></data>
+  <data name="5F32B7A0-CAFF-4EB0-88F7-25D2CCF2F60B" xml:space="preserve"><value>低速シャッター速度</value></data>
+  <data name="26D8FB6B-9B39-4E15-A532-0D4178133FD8" xml:space="preserve"><value>2M ダブルパノラマ [16:9]</value></data>
+  <data name="30A7DA42-AC6F-4431-B6C5-A78C73C4F54E" xml:space="preserve"><value>爆発を検出</value></data>
+  <data name="BC8792DF-E3C6-498F-90A7-61C6FFABFC49" xml:space="preserve"><value>モーションウィンドウ</value></data>
+  <data name="0E503D5B-C1FF-423E-83FD-16F84ECC402E" xml:space="preserve"><value>日時を含む</value></data>
+  <data name="5F5CA024-A647-47F5-8143-A3DB694344A1" xml:space="preserve"><value>ネットワークカメラ</value></data>
+  <data name="443B94F5-D686-4FA4-9DEC-50860F373CA2" xml:space="preserve"><value>左カメラから右カメラに</value></data>
+  <data name="85492807-D181-4D0B-B918-0FC61D91CB1A" xml:space="preserve"><value>JPEG品質</value></data>
+  <data name="D27F2772-2108-492F-AF93-5D45F7C297D5" xml:space="preserve"><value>輝度モード</value></data>
+  <data name="2F5EB026-173A-4A32-872E-A55EBD5AD89A" xml:space="preserve"><value>最大解像度</value></data>
+  <data name="76FFFDE8-2265-436B-997A-0E7A23DDB0B5" xml:space="preserve"><value>非常に良い</value></data>
+  <data name="7343B9B9-CC33-4A61-A2A9-B298E59C4ED5" xml:space="preserve"><value>遅延標準/プログレッシブQSIF</value></data>
+  <data name="A0E3CF73-6F60-4F1B-A990-77893D5948FE" xml:space="preserve"><value>下側中央</value></data>
+  <data name="9B11A49C-D604-48D3-88ED-D87C53171885" xml:space="preserve"><value>録画 2</value></data>
+  <data name="2C675A30-06B9-4FCF-AFD1-1D0069A7EE9D" xml:space="preserve"><value>HTTPS - ホスト名の認証</value></data>
+  <data name="6C6F625F-A4CF-47FA-B62F-AB949DAAE620" xml:space="preserve"><value>IP ネームサーバー</value></data>
+  <data name="F21ECA72-7C26-47B7-A95F-38B2732B344C" xml:space="preserve"><value>パノラマ</value></data>
+  <data name="B04DDA6E-A171-4286-A036-6AB267B03111" xml:space="preserve"><value>デフォルトストリーム</value></data>
+  <data name="874DB4DF-60B2-46C5-A939-F6D7F33B6508" xml:space="preserve"><value>5メガピクセル[4:3] (30fpsモード)</value></data>
+  <data name="2F042ADF-F81A-4C63-B6CA-BE41BA3DB5D4" xml:space="preserve"><value>オペレーションモード</value></data>
+  <data name="032CDFAA-5DE2-45CC-ABCF-D4E9AC0E563F" xml:space="preserve"><value>カラーレベル</value></data>
+  <data name="54422E54-38B2-449D-AA69-4BE3816BEDA8" xml:space="preserve"><value>SD カード録画</value></data>
+  <data name="43F7B519-19B8-47D6-BA9F-D7E0322C8645" xml:space="preserve"><value>採光モード</value></data>
+  <data name="3847A20C-9C17-4551-A4A5-41069A3B60A0" xml:space="preserve"><value>SAP宛先IP</value></data>
+  <data name="97022C76-4350-403C-9532-449EB0F7499D" xml:space="preserve"><value>2Mパノラマ + 魚眼</value></data>
+  <data name="97AE3286-B8D0-41B8-A49C-2041D5F71010" xml:space="preserve"><value>デイナイトモード</value></data>
+  <data name="3FD8618D-33F3-4607-A908-FA62635BE458" xml:space="preserve"><value>SD カードイベントが停止されました</value></data>
+  <data name="50BD31EC-C3FB-46E7-8385-86623CF77D8A" xml:space="preserve"><value>AWC自動</value></data>
+  <data name="BE8572BC-A9B2-4548-AFF1-AE93C42061C7" xml:space="preserve"><value>フレーム高</value></data>
+  <data name="18511AE0-CD34-480C-8782-AB133479E0B1" xml:space="preserve"><value>反転</value></data>
+  <data name="62986703-E70C-4C7B-AB89-F3CB4BB7FD84" xml:space="preserve"><value>スクリーン 5</value></data>
+  <data name="D7E596E6-7752-4BFE-9B71-1CF79BBEDD06" xml:space="preserve"><value>1秒当たり H.264 フレーム</value></data>
+  <data name="5D1D7A40-A0A3-47CD-9C3D-9C9C9028A842" xml:space="preserve"><value>1280x960(JPEGのみ)</value></data>
+  <data name="8C6129A8-0FCB-4B40-9435-3BD5760307B3" xml:space="preserve"><value>1.3M クアッド PTZ [4:3]</value></data>
+  <data name="A9E0E1F8-CD79-4E35-A229-C5A70DBAFA72" xml:space="preserve"><value>2ビット</value></data>
+  <data name="A0B1A714-4304-45E8-B383-E3A8BA44855E" xml:space="preserve"><value>モザイク行の最大数</value></data>
+  <data name="912A069B-A8AE-4ECA-9DEE-A25E7340C5E9" xml:space="preserve"><value>プロファイル13</value></data>
+  <data name="06C0DCDE-9020-47A6-9561-5633F6872585" xml:space="preserve"><value>ATW-ナロー</value></data>
+  <data name="8FE824C2-FC4D-4B85-9FB7-262F07F873FF" xml:space="preserve"><value>8M 魚眼 + パノラマ</value></data>
+  <data name="62F2DCAB-912B-4CCF-ACD9-D938A1D8D0AC" xml:space="preserve"><value>画質調整レベル</value></data>
+  <data name="3E0F9CA7-3C2A-43D3-A688-64D830BBFF6A" xml:space="preserve"><value>水平</value></data>
+  <data name="FBBC8730-E898-4CB4-BEDC-BA4916347140" xml:space="preserve"><value>アイドル出力状態</value></data>
+  <data name="16A5D8DA-6525-4527-8AFC-24F0DEF7AEAF" xml:space="preserve"><value>エンコーダー モード</value></data>
+  <data name="0D615267-375D-43BC-892C-7B3E71390745" xml:space="preserve"><value>なし - ストリームは無効化されています</value></data>
+  <data name="F5CACEC7-62DA-42CB-812F-321C7EF37E64" xml:space="preserve"><value>ガンマレベル</value></data>
+  <data name="C6A79EEF-EA20-4101-B026-120FFF003767" xml:space="preserve"><value>ストリームプロパティ</value></data>
+  <data name="A3A31973-7E5D-48F7-930E-C8F58BC9C55D" xml:space="preserve"><value>8メガピクセル[16:9] (15fpsモード)</value></data>
+  <data name="7985430F-EDDD-4D13-B9AC-390026D9BFDA" xml:space="preserve"><value>オブジェクト削除イベントが開始されました</value></data>
+  <data name="A02F886B-D60A-4B9A-93B6-BE9427A48F22" xml:space="preserve"><value>マニュアル露光</value></data>
+  <data name="B7FAA38A-7822-4095-B5A7-E970A72E235D" xml:space="preserve"><value>ラインゲイン</value></data>
+  <data name="05898AC8-F05E-495A-863A-2BFD9C760C09" xml:space="preserve"><value>音声アラート繰り返し回数</value></data>
+  <data name="9FB9BA0E-AE86-4772-BC0A-2266FE288030" xml:space="preserve"><value>'アナリティクス' メタデータが有効になりました</value></data>
+  <data name="9CB032FE-7A42-4AC7-8CF5-827B33828EAF" xml:space="preserve"><value>MPEG-4オリジナル</value></data>
+  <data name="D069E629-EF1A-4BAA-931C-2EDC65BC9A54" xml:space="preserve"><value>自動 x 24</value></data>
+  <data name="7B57AD11-1504-4225-852D-64A3D749E403" xml:space="preserve"><value>ビットレート制御モード H.264</value></data>
+  <data name="1D0B927A-AC2D-4FBA-98BC-FCC05C2DBD4A" xml:space="preserve"><value>音声エンコード</value></data>
+  <data name="17DC15E9-521F-4988-B645-C5FCE0ADAE1E" xml:space="preserve"><value>ファイン</value></data>
+  <data name="F16B161B-46A4-48E8-8B00-03A2B584033D" xml:space="preserve"><value>HTTPマルチパート</value></data>
+  <data name="84B836F9-9660-4FDC-AEDD-F600A79AE313" xml:space="preserve"><value>3 分割</value></data>
+  <data name="A232032E-4B15-4E86-BBEA-A9411AFF4FA9" xml:space="preserve"><value>最小ビットレート</value></data>
+  <data name="36A07C34-0A0D-41DF-A690-F43703E1D335" xml:space="preserve"><value>デイナイト停留時間</value></data>
+  <data name="AC2110AE-3509-443F-8DB4-40FDD92DC6F5" xml:space="preserve"><value>最高</value></data>
+  <data name="053D120A-AC70-474E-B89C-561203DB02F7" xml:space="preserve"><value>JPEG - ストリーム後</value></data>
+  <data name="99195CF8-B142-4871-9A2D-93E85C33A38B" xml:space="preserve"><value>フリッカレス</value></data>
+  <data name="4C5C7FEC-4474-4CA8-98D1-134EE98E1748" xml:space="preserve"><value>オーディオビットレート (キロビット/秒)</value></data>
+  <data name="59826C34-4001-425C-8ADC-F548C14E0CB7" xml:space="preserve"><value>悪い</value></data>
+  <data name="A0E18E9C-69C6-4E71-A712-100A35E7233B" xml:space="preserve"><value>マイク + バイアス</value></data>
+  <data name="EEB784E7-D8A4-4E11-908B-CC0C17CF1C38" xml:space="preserve"><value>エクストリーム</value></data>
+  <data name="F068A802-0609-4E2E-BCE9-91F905CC71F6" xml:space="preserve"><value>ファームウェアバージョン</value></data>
+  <data name="41B731B2-C61E-45CF-B979-F28FBF0E18AE" xml:space="preserve"><value>ビデオ標準</value></data>
+  <data name="9EB7272B-D2F8-45DB-92AF-D13412F95A93" xml:space="preserve"><value>1024x768(高速)</value></data>
+  <data name="A5FE5972-85E0-4902-B293-DA5015921B29" xml:space="preserve"><value>スクリーム検出立ち上がり</value></data>
+  <data name="AB12CFDD-E9C1-4F09-8058-B6BF78B6D795" xml:space="preserve"><value>JPEG 2 - ストリーム後</value></data>
+  <data name="E0DF8C94-EB6A-4A37-8804-7FCFE397AF72" xml:space="preserve"><value>露光 固定ゲイン値</value></data>
+  <data name="36BA64FA-530F-4D2B-9CBE-35B5AA47354F" xml:space="preserve"><value>色調モード</value></data>
+  <data name="69167170-51C3-41CD-9CC7-B00438F42DFC" xml:space="preserve"><value>ビデオ品質</value></data>
+  <data name="3D19D498-B70D-4AE9-9845-BC5FB93C0F6A" xml:space="preserve"><value>期間の平均化</value></data>
+  <data name="C3BC218E-2483-47B9-94C9-8FB011FEF4CE" xml:space="preserve"><value>NTSC（crop）</value></data>
+  <data name="BE58B819-0980-42EF-A2DC-7887BA88B890" xml:space="preserve"><value>スーパーファイン</value></data>
+  <data name="1DF056AF-66D0-4E5F-9F96-F09A99E77B7B" xml:space="preserve"><value>デイナイトタイム</value></data>
+  <data name="CCFC8579-0297-4CA7-BB9E-0A9C12DAFC51" xml:space="preserve"><value>オブジェクト カウンティング イベントが開始されました</value></data>
+  <data name="84924B42-BD10-4ECB-A3AE-CD658A3F49FB" xml:space="preserve"><value>非常に悪い</value></data>
+  <data name="93546D21-38CD-4B6C-8AB1-9B39EA0BAA20" xml:space="preserve"><value>ライン - 低</value></data>
+  <data name="2C1148D1-91F8-44AE-A3D4-A9A9FA54FE56" xml:space="preserve"><value>シャッタースピード</value></data>
+  <data name="F7124A4F-9DAA-48F9-BAE7-7C934E0DAEA7" xml:space="preserve"><value>表示モード</value></data>
+  <data name="B77DE7D7-A512-4231-92DE-F7CAEA114D80" xml:space="preserve"><value>緊急トリガー停止</value></data>
+  <data name="150CF46A-62DF-4EF4-83EE-327E710AA961" xml:space="preserve"><value>MPEG 元のストリーム</value></data>
+  <data name="2C67D341-7D4C-4497-9318-F5E26D67D432" xml:space="preserve"><value>'イベント' メタデータが有効になりました</value></data>
+  <data name="02564AB6-3E1A-4279-B44E-FD0B759D9B72" xml:space="preserve"><value>縦横反転</value></data>
+  <data name="DE155772-175D-4011-B4C3-3982DEE9ADB7" xml:space="preserve"><value>電子感度アップ</value></data>
+  <data name="5A8CC8C3-11C5-46A9-84A6-14AC3A77EDA0" xml:space="preserve"><value>プロファイル35</value></data>
+  <data name="D4823F08-F51E-4FF0-B16B-B58FBBB84405" xml:space="preserve"><value>設定あり</value></data>
+  <data name="6C92979C-F890-4F2C-8D75-CE637C2176D5" xml:space="preserve"><value>低周波除去有効</value></data>
+  <data name="C45E9F3E-3DAC-45A4-8760-A1479D55CBD8" xml:space="preserve"><value>RTP/UDP マルチキャスト</value></data>
+  <data name="F5579CF5-F41C-4ECB-A0FA-8AA0A2BAA8DB" xml:space="preserve"><value>顔表示</value></data>
+  <data name="1542CDA5-1D5B-46B4-8DEE-C0852A7C1AAB" xml:space="preserve"><value>プロファイル11</value></data>
+  <data name="445FDB2D-54DB-4E5F-ADD8-5121D1A24124" xml:space="preserve"><value>「素早い動き」イベント停止</value></data>
+  <data name="A8BFBDC7-5062-4F60-89A2-E6A3AE407D03" xml:space="preserve"><value>温度プレアラーム停止</value></data>
+  <data name="1DAE6014-0083-495A-9A8B-6C70980442EB" xml:space="preserve"><value>ウィンドウ1</value></data>
+  <data name="14E2581F-A788-4F57-8DC8-7CF7CD859429" xml:space="preserve"><value>黒レベル</value></data>
+  <data name="B570F643-2C02-444D-9F4D-6622D873835A" xml:space="preserve"><value>不正アクセス</value></data>
+  <data name="420D95A8-BCF1-4633-9211-6485F8585198" xml:space="preserve"><value>適応モーション イベントが開始されました</value></data>
+  <data name="92C5230D-6B51-4703-81B6-E7C0B262E567" xml:space="preserve"><value>フィルターレベル</value></data>
+  <data name="530571D8-4490-407B-90BC-0E1457ED7618" xml:space="preserve"><value>詳細</value></data>
+  <data name="08BF95E0-BFE4-42D2-92B0-D07916365B56" xml:space="preserve"><value>屋外2</value></data>
+  <data name="28545B72-187D-4174-BE70-D749B45E200F" xml:space="preserve"><value>奇数</value></data>
+  <data name="8313E56B-41D1-4512-84FA-E01D1896C74F" xml:space="preserve"><value>ハロゲン</value></data>
+  <data name="B8387CB9-E5A9-42C3-9686-A0A4F2420119" xml:space="preserve"><value>マルチキャスト終了ポート</value></data>
+  <data name="CAB84AE6-8908-4CF1-9AA4-A3AA62FCA6A8" xml:space="preserve"><value>JPEG 分割ストリーム 8</value></data>
+  <data name="CAB84AE6-8908-4CF1-9AA4-A3AA62FCA6A2" xml:space="preserve"><value>JPEG 分割ストリーム 2</value></data>
+  <data name="CAB84AE6-8908-4CF1-9AA4-A3AA62FCA6A3" xml:space="preserve"><value>JPEG 分割ストリーム 3</value></data>
+  <data name="CAB84AE6-8908-4CF1-9AA4-A3AA62FCA6A0" xml:space="preserve"><value>JPEG 分割ストリーム 0</value></data>
+  <data name="CAB84AE6-8908-4CF1-9AA4-A3AA62FCA6A1" xml:space="preserve"><value>JPEG 分割ストリーム 1</value></data>
+  <data name="CAB84AE6-8908-4CF1-9AA4-A3AA62FCA6A6" xml:space="preserve"><value>JPEG 分割ストリーム 6</value></data>
+  <data name="CAB84AE6-8908-4CF1-9AA4-A3AA62FCA6A7" xml:space="preserve"><value>JPEG 分割ストリーム 7</value></data>
+  <data name="CAB84AE6-8908-4CF1-9AA4-A3AA62FCA6A4" xml:space="preserve"><value>JPEG 分割ストリーム 4</value></data>
+  <data name="CAB84AE6-8908-4CF1-9AA4-A3AA62FCA6A5" xml:space="preserve"><value>JPEG 分割ストリーム 5</value></data>
+  <data name="93B1FBAB-D495-4E6E-84DE-AB94BE98A6E6" xml:space="preserve"><value>2秒</value></data>
+  <data name="9A2FAC50-7E47-46C8-A7D0-E7EB3C0F2B2A" xml:space="preserve"><value>IP サブネットマスク</value></data>
+  <data name="94D73DC3-A290-44E3-913A-07915B0F358F" xml:space="preserve"><value>固定蛍光灯1</value></data>
+  <data name="A774A2E6-9C3E-4640-8B3B-5600B47718C4" xml:space="preserve"><value>10 dB</value></data>
+  <data name="902F2448-8901-41E4-B151-7C03E80A7041" xml:space="preserve"><value>G.726 24 キロビット/秒</value></data>
+  <data name="8AE0FBC9-78A0-462F-BD52-A013E1EDA747" xml:space="preserve"><value>垂直方向のミラー</value></data>
+  <data name="53ABEEA4-86E6-4081-8AF1-1B444AA77D83" xml:space="preserve"><value>拡張Coaxitron</value></data>
+  <data name="B05C31FA-B203-418A-88E5-78713ED54534" xml:space="preserve"><value>プロファイル21</value></data>
+  <data name="645F3C58-232E-45C4-A80A-90170A0B6EC1" xml:space="preserve"><value>IP ドメイン名</value></data>
+  <data name="4094FC43-C5F0-4B16-83D2-15AC8E2820E7" xml:space="preserve"><value>書込禁止</value></data>
+  <data name="707B8CD8-BEA8-4DB0-ABBF-DB96E883DB4B" xml:space="preserve"><value>トリミングウィンドウ左</value></data>
+  <data name="9AC85E90-DE53-46D7-9AA7-3A645AC511FC" xml:space="preserve"><value>縮小高さ</value></data>
+  <data name="1DFF9C24-C20B-43B6-8B6A-D9F68C36F935" xml:space="preserve"><value>MIP ドライバー</value></data>
+  <data name="DF3CDEBB-0D6F-4D11-9942-8625AF3B11CB" xml:space="preserve"><value>モーション感度閾値</value></data>
+  <data name="6AAFB6CB-F750-42D9-B2CA-CD8B0F103C58" xml:space="preserve"><value>J:1280x960  M:N/A、JPEG切り取り使用可能</value></data>
+  <data name="BDD09C47-4804-40C0-B04D-272EEBF2084E" xml:space="preserve"><value>音源</value></data>
+  <data name="D98899DF-D482-4177-A93B-9241F3B2431B" xml:space="preserve"><value>ハイ</value></data>
+  <data name="7A8A0924-D0C5-4877-A337-E1CDC8086D77" xml:space="preserve"><value>適応モーション イベントが開始されました</value></data>
+  <data name="9532C0E1-0A6F-4D59-BE58-BD6C69F31B90" xml:space="preserve"><value>最大圧縮</value></data>
+  <data name="B32BB81D-E2B4-4FBE-9C52-55AF4D4AB6C0" xml:space="preserve"><value>360°レンズ: 640x480</value></data>
+  <data name="F93FA120-030F-43B7-903D-EE8DC08184EA" xml:space="preserve"><value>OSD 日時 X</value></data>
+  <data name="29F79AA5-A0CC-4EB1-8C70-DB971FD02824" xml:space="preserve"><value>自動(フリッカレス)</value></data>
+  <data name="6AC67E6D-05E8-4944-BEF2-CF8AFADA70A7" xml:space="preserve"><value>FTPイベントサーバーIPアドレス</value></data>
+  <data name="1DF8E6B3-4106-4655-AEAA-C1787CDF4293" xml:space="preserve"><value>最小圧縮</value></data>
+  <data name="A06008DD-E94D-4670-9CA8-980205EE5126" xml:space="preserve"><value>トリミングウィンドウ幅</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD19" xml:space="preserve"><value>H.264/H.265 9 - ストリーム後</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD18" xml:space="preserve"><value>H.264/H.265 8 - ストリーム後</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD15" xml:space="preserve"><value>H.264/H.265 5 - ストリーム後</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD14" xml:space="preserve"><value>H.264/H.265 4 - ストリーム後</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD17" xml:space="preserve"><value>H.264/H.265 7 - ストリーム後</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD16" xml:space="preserve"><value>H.264/H.265 6 - ストリーム後</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD11" xml:space="preserve"><value>H.264/H.265 1 - ストリーム後</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD13" xml:space="preserve"><value>H.264/H.265 3 - ストリーム後</value></data>
+  <data name="9A059E7E-F1A5-4AE3-AF97-87248F75BD12" xml:space="preserve"><value>H.264/H.265 2 - ストリーム後</value></data>
+  <data name="00881751-5EB1-4C63-B38F-CD979B6A65D6" xml:space="preserve"><value>常にオン</value></data>
+  <data name="5DE8E282-8C9E-4926-A01A-E8F749AAE19B" xml:space="preserve"><value>最大</value></data>
+  <data name="78C4BD91-784F-4ED3-9CC5-2CA1FB9AC8B8" xml:space="preserve"><value>スピード</value></data>
+  <data name="F174D541-9D26-406A-8739-66A0CFE093B2" xml:space="preserve"><value>固定画質</value></data>
+  <data name="D93C1E2B-851C-474E-AB7D-1E7A6689E873" xml:space="preserve"><value>夜間ホワイト バランス R ゲイン</value></data>
+  <data name="374E8BCA-5E58-41D3-82B7-4BB9CD903915" xml:space="preserve"><value>ホワイトホット</value></data>
+  <data name="A9270294-014D-49D8-9F9D-5CCB96051835" xml:space="preserve"><value>PTZモード</value></data>
+  <data name="E83E3839-4693-4E25-A4BA-999C0297285F" xml:space="preserve"><value>矩形ウィンドウ</value></data>
+  <data name="DBDB730A-7CEF-4816-9846-13C6D727DB0D" xml:space="preserve"><value>トリミングウィンドウ右</value></data>
+  <data name="4E9BFD36-DF00-4D34-A316-23ED113638BA" xml:space="preserve"><value>PTZ制御モード</value></data>
+  <data name="001210B1-D3F1-4EF5-9650-3A5C6439AAEB" xml:space="preserve"><value>ウィンドウ高さトリミング</value></data>
+  <data name="4CE3FD89-4A96-4997-BE05-B42F2350F54A" xml:space="preserve"><value>MJPEG 2 - ストリーム後</value></data>
+  <data name="AB7C9F0F-8EAF-4451-B974-B3C33E5DD2B4" xml:space="preserve"><value>スケジュールされたデイモード開始分</value></data>
+  <data name="F3BDDFB0-2A75-4E01-90AE-E6FBC3734588" xml:space="preserve"><value>クアッドビュー</value></data>
+  <data name="F348AA03-2EE4-495E-AB33-C2CD70A14D91" xml:space="preserve"><value>レベル9</value></data>
+  <data name="14ACE261-362B-4CB9-8196-FE7C664EC23B" xml:space="preserve"><value>2メガピクセル[4:3] (30fpsモード)</value></data>
+  </root>

@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VideoOS.IM.Server.WebApi</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.Web.Http.dll</HintPath>
+    </Reference>
+    
+    
+    
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    
+    
+    
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\MSI_Restored\ManagerServer\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    
+    
+    
+    
+    <Reference Include="System.Core" />
+    
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VideoOS.IM.Server.Service\VideoOS.IM.Server.Service.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Server.Localization\VideoOS.IM.Server.Localization.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Common.GlobalDefinitions\VideoOS.IM.Common.GlobalDefinitions.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.LogServer.Communication\VideoOS.LogServer.Communication.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities\VideoOS.Utilities.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.IdentityServer\VideoOS.IdentityServer.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Server.Logger\VideoOS.IM.Server.Logger.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities.Database\VideoOS.Utilities.Database.csproj" />
+    <ProjectReference Include="..\..\Platform\VideoOS.Platform\VideoOS.Platform.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Common.Service\VideoOS.IM.Common.Service.csproj" />
+    <ProjectReference Include="..\..\Common\VideoOS.Utilities.Telemetry\VideoOS.Utilities.Telemetry.csproj" />
+    <ProjectReference Include="..\..\Identity\VideoOS.IdentityServer.Common\VideoOS.IdentityServer.Common.csproj" />
+    <ProjectReference Include="..\VideoOS.IM.Common.Dto\VideoOS.IM.Common.Dto.csproj" />
+  </ItemGroup>
+</Project>

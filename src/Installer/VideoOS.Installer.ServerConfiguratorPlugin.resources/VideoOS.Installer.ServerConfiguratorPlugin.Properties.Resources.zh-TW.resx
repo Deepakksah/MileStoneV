@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="WarningPageHeadingDetails" xml:space="preserve"><value>SQL Server 2019 不受 Windows 支援</value></data>
+  <data name="WarningPageBodyDetails" xml:space="preserve"><value>您的 Windows 的目前版本不支援 SQL Server 2019，該版本已包含在此安裝中。
+若要安裝此軟體，您必須具備 SQL Server 的一個受支援版本。欲瞭解受支援的 SQL Server 版本的更多資訊，請參閱 {0}。</value></data>
+  <data name="WarningPageBodySubsection" xml:space="preserve"><value>如果您沒有 SQL Server 的受支援版本，請取消此安裝並安裝 SQL Server 的受支援版本。
+若要能夠選取預先安裝的 SQL Server，必須選取自訂安裝。</value></data>
+  <data name="WarningPageHeadingSubsection" xml:space="preserve"><value>我需要做什麼？</value></data>
+  <data name="ConfigurationPlugin_ErrorOccured" xml:space="preserve"><value>無法設定伺服器。如需詳細資訊，請參閱記錄檔。</value></data>
+  </root>

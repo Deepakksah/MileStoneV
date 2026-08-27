@@ -16,6 +16,7 @@ namespace MilestoneManagementClient.Services
         private readonly List<RoleModel> _roles = new List<RoleModel>();
         private readonly List<TaskModel> _tasks = new List<TaskModel>();
         private readonly List<LogEntryModel> _logs = new List<LogEntryModel>();
+        private readonly SqlDatabaseService _sqlDb = new SqlDatabaseService();
 
         private static readonly string DbFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "surveillance_database.json");
 
@@ -107,6 +108,7 @@ namespace MilestoneManagementClient.Services
             _savedConfigurations.Remove(name);
             _license.HardwareDeviceLicensesUsed = _cameras.Count;
             AddLog("WARN", "Devices", "Deleted camera '" + name + "'", "Administrator");
+            _sqlDb.DeleteCameraFromSql(name);
             SaveToDatabase();
         }
 
@@ -520,6 +522,9 @@ namespace MilestoneManagementClient.Services
 
                 string json = SimpleJsonSerializer.SerializeDb(data);
                 System.IO.File.WriteAllText(DbFilePath, json);
+
+                // Direct MSSQL Synchronizer
+                _sqlDb.SyncAllToMssql(_cameras.Values.ToList(), _servers, _rules);
             }
             catch (Exception ex)
             {

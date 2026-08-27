@@ -62,7 +62,8 @@ namespace MilestoneManagementClient.UI
             this.BackColor = Color.FromArgb(245, 247, 250);
             this.Font = new Font("Segoe UI", 9.5f);
 
-            string icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "app.ico");
+            string icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lychee.ico");
+            if (!File.Exists(icoPath)) icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "app.ico");
             if (File.Exists(icoPath)) try { this.Icon = new Icon(icoPath); } catch { }
 
             BuildUI();
@@ -94,7 +95,8 @@ namespace MilestoneManagementClient.UI
                 SizeMode = PictureBoxSizeMode.StretchImage,
                 BackColor = Color.Transparent
             };
-            string icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "app.ico");
+            string icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lychee.ico");
+            if (!File.Exists(icoPath)) icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "app.ico");
             if (File.Exists(icoPath)) try { _pbLogo.Image = new Icon(icoPath, 44, 44).ToBitmap(); } catch { }
             _topBanner.Controls.Add(_pbLogo);
 

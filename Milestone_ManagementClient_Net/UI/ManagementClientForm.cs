@@ -45,7 +45,8 @@ namespace MilestoneManagementClient.UI
             this.BackColor = Color.FromArgb(248, 250, 252);
             this.DoubleBuffered = true;
 
-            string icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "app.ico");
+            string icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lychee.ico");
+            if (!File.Exists(icoPath)) icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "app.ico");
             if (File.Exists(icoPath))
             {
                 try { this.Icon = new Icon(icoPath); } catch { }
@@ -121,6 +122,9 @@ namespace MilestoneManagementClient.UI
 
         private void BuildUI()
         {
+            string icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lychee.ico");
+            if (!File.Exists(icoPath)) icoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "app.ico");
+
             // 1. Top Crimson / Ruby Branding Header Bar
             var pnlHeader = new Panel();
             pnlHeader.Dock = DockStyle.Top;
@@ -128,19 +132,29 @@ namespace MilestoneManagementClient.UI
             pnlHeader.BackColor = Color.FromArgb(190, 18, 60); // Crimson / Ruby Red
             pnlHeader.Padding = new Padding(12, 0, 12, 0);
 
+            var pbLogo = new PictureBox
+            {
+                Size = new Size(26, 26),
+                Location = new Point(12, 8),
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                BackColor = Color.Transparent
+            };
+            if (File.Exists(icoPath)) try { pbLogo.Image = new Icon(icoPath, 26, 26).ToBitmap(); } catch { }
+            pnlHeader.Controls.Add(pbLogo);
+
             var lblLogo = new Label();
-            lblLogo.Text = "🍒 LycheeVMS";
+            lblLogo.Text = "LycheeVMS";
             lblLogo.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             lblLogo.ForeColor = Color.White;
             lblLogo.AutoSize = true;
-            lblLogo.Location = new Point(12, 8);
+            lblLogo.Location = new Point(44, 8);
 
             var lblSubTitle = new Label();
             lblSubTitle.Text = "Intelligent VMS Management Client 2025 R3";
             lblSubTitle.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
             lblSubTitle.ForeColor = Color.FromArgb(254, 205, 211); // Rose tint
             lblSubTitle.AutoSize = true;
-            lblSubTitle.Location = new Point(155, 11);
+            lblSubTitle.Location = new Point(165, 11);
 
             var pnlBadge = new Panel();
             pnlBadge.Dock = DockStyle.Right;

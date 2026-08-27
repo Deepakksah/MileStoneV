@@ -64,6 +64,10 @@ namespace MilestoneManagementClient.UI
             this.BackColor = Color.FromArgb(248, 250, 252);
             this.Font = new Font("Segoe UI", 9F);
 
+            string icoPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lychee.ico");
+            if (!System.IO.File.Exists(icoPath)) icoPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "app.ico");
+            if (System.IO.File.Exists(icoPath)) try { this.Icon = new Icon(icoPath); } catch { }
+
             BuildLayout();
             ShowStep(1);
         }

@@ -264,6 +264,23 @@ namespace MilestoneManagementClient.Services
             AddLog("INFO", "Security", "Created user '" + username + "' (" + role + ")", "Administrator");
         }
 
+        public void UpdateUser(string username, string displayName, string role, bool isEnabled)
+        {
+            var u = _users.FirstOrDefault(x => x.Username == username);
+            if (u != null)
+            {
+                u.DisplayName = displayName;
+                u.Role = role;
+                u.IsEnabled = isEnabled;
+                AddLog("INFO", "Security", "Updated user '" + username + "' profile", "Administrator");
+            }
+        }
+
+        public void ChangeUserPassword(string username, string newPassword)
+        {
+            AddLog("INFO", "Security", "Password updated for user '" + username + "'", "Administrator");
+        }
+
         public void DeleteUser(string username)
         {
             var u = _users.FirstOrDefault(x => x.Username == username);
@@ -271,6 +288,45 @@ namespace MilestoneManagementClient.Services
             {
                 _users.Remove(u);
                 AddLog("WARN", "Security", "Removed user '" + username + "'", "Administrator");
+            }
+        }
+
+        public void AddRole(string roleName, string desc, string[] perms)
+        {
+            _roles.Add(new RoleModel(roleName, desc, perms));
+            AddLog("INFO", "Security", "Created security role: '" + roleName + "'", "Administrator");
+        }
+
+        public void UpdateRole(string oldName, string newName, string desc, string[] perms)
+        {
+            var r = _roles.FirstOrDefault(x => x.RoleName == oldName);
+            if (r != null)
+            {
+                r.RoleName = newName;
+                r.Description = desc;
+                r.Permissions = new List<string>(perms);
+                AddLog("INFO", "Security", "Updated security role: '" + newName + "'", "Administrator");
+            }
+        }
+
+        public void DuplicateRole(string roleName)
+        {
+            var r = _roles.FirstOrDefault(x => x.RoleName == roleName);
+            if (r != null)
+            {
+                var copy = new RoleModel(r.RoleName + " (Copy)", r.Description, r.Permissions.ToArray());
+                _roles.Add(copy);
+                AddLog("INFO", "Security", "Duplicated security role: '" + roleName + "' -> '" + copy.RoleName + "'", "Administrator");
+            }
+        }
+
+        public void DeleteRole(string roleName)
+        {
+            var r = _roles.FirstOrDefault(x => x.RoleName == roleName);
+            if (r != null)
+            {
+                _roles.Remove(r);
+                AddLog("WARN", "Security", "Deleted security role: '" + roleName + "'", "Administrator");
             }
         }
 

@@ -99,7 +99,11 @@ namespace MilestoneManagementClient.UI.Views
                 Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bin", "cctv_frame.png"),
                 Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "publish", "cctv_frame.png"),
                 Path.Combine(Directory.GetCurrentDirectory(), "cctv_frame.png"),
-                @"c:\Program Files (x86)\i-Comply\Milestone\Milestone XProtect VMS Products 2025 R3 System Installer\Milestone_ManagementClient_Net\cctv_frame.png"
+                Path.Combine(Directory.GetCurrentDirectory(), "Milestone_ManagementClient_Net", "cctv_frame.png"),
+                @"c:\Program Files (x86)\i-Comply\Milestone\Milestone XProtect VMS Products 2025 R3 System Installer\Milestone_ManagementClient_Net\cctv_frame.png",
+                @"c:\Program Files (x86)\i-Comply\Milestone\Milestone XProtect VMS Products 2025 R3 System Installer\Milestone_ManagementClient_Net\bin\cctv_frame.png",
+                @"c:\Program Files (x86)\i-Comply\Milestone\Milestone XProtect VMS Products 2025 R3 System Installer\Milestone_ManagementClient_Net\publish\cctv_frame.png",
+                @"c:\Program Files (x86)\i-Comply\Milestone\Milestone XProtect VMS Products 2025 R3 System Installer\cctv_frame.png"
             };
 
             foreach (var p in paths)
@@ -2163,14 +2167,91 @@ namespace MilestoneManagementClient.UI.Views
             g.SmoothingMode = SmoothingMode.HighQuality;
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
 
-            EnsureBaseCctvImage();
+            // 1. Draw Live Stream Video Feed (Real IP Stream -> Recorded Disk Frame -> Base CCTV Frame -> Photorealistic Generator)
+            bool frameDrawn = false;
 
-            // 1. Draw Background Video Frame
-            if (_sharedCctvBaseImage != null)
+            // A. Check if real IP snapshot is available
+            Bitmap physicalFrame = null;
+            if (!string.IsNullOrEmpty(cam.IpAddress) && cam.IpAddress != "0.0.0.0" && cam.IpAddress != "127.0.0.1")
             {
-                g.DrawImage(_sharedCctvBaseImage, 0, 0, w, h);
+                try
+                {
+                    physicalFrame = MilestoneToolkitLiveBridge.Instance.FetchLiveFrameMultiProtocol(cam);
+                }
+                catch { }
             }
-            else
+
+            // B. Check latest recorded frame from storage
+            if (physicalFrame == null)
+            {
+                try
+                {
+                    string dir = CameraRecordingEngine.Instance.GetCameraStorageDirectory(cam.ServerName, cam.Name);
+                    if (Directory.Exists(dir))
+                    {
+                        var files = Directory.GetFiles(dir, "*.jpg", SearchOption.AllDirectories);
+                        if (files.Length > 0)
+                        {
+                            string latest = files.OrderByDescending(f => File.GetLastWriteTime(f)).FirstOrDefault();
+                            if (latest != null && File.Exists(latest))
+                            {
+                                using (var fs = new FileStream(latest, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                                {
+                                    physicalFrame = new Bitmap(fs);
+                                }
+                            }
+                        }
+                    }
+                }
+                catch { }
+            }
+
+            if (physicalFrame != null)
+            {
+                try
+                {
+                    g.DrawImage(physicalFrame, 0, 0, w, h);
+                    frameDrawn = true;
+                }
+                finally
+                {
+                    try { physicalFrame.Dispose(); } catch { }
+                }
+            }
+
+            // C. Draw CCTV Base Template Image
+            if (!frameDrawn)
+            {
+                EnsureBaseCctvImage();
+                if (_sharedCctvBaseImage != null)
+                {
+                    try
+                    {
+                        g.DrawImage(_sharedCctvBaseImage, 0, 0, w, h);
+                        frameDrawn = true;
+                    }
+                    catch { }
+                }
+            }
+
+            // D. Fallback: Draw Photorealistic Live Surveillance Frame
+            if (!frameDrawn)
+            {
+                try
+                {
+                    using (var synBmp = CctvFrameGenerator.GeneratePhotorealisticFrame(cam.Name, cam.IpAddress, _feedTick + camIndex * 10, 0, 0, 1.0f, w, h))
+                    {
+                        if (synBmp != null)
+                        {
+                            g.DrawImage(synBmp, 0, 0, w, h);
+                            frameDrawn = true;
+                        }
+                    }
+                }
+                catch { }
+            }
+
+            if (!frameDrawn)
             {
                 using (var bgBrush = new SolidBrush(Color.FromArgb(15, 23, 42)))
                 {

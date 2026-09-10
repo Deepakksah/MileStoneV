@@ -306,17 +306,18 @@ namespace MilestoneManagementClient.UI.Views
             {
                 if (_splitRoot != null && this.Width > 500)
                 {
-                    int propW = Math.Max(380, Math.Min(520, (int)(this.Width * 0.35)));
+                    int propW = Math.Max(320, Math.Min(380, (int)(this.Width * 0.30)));
                     int centerW = this.Width - propW;
-                    if (centerW > 200)
+                    if (centerW > 250)
                         _splitRoot.SplitterDistance = centerW;
                 }
 
-                if (_splitCenter != null && _splitCenter.Height > 320)
+                if (_splitCenter != null && _splitCenter.Height > 250)
                 {
-                    int previewH = Math.Max(220, Math.Min(340, (int)(_splitCenter.Height * 0.40)));
-                    int explorerH = _splitCenter.Height - previewH;
-                    if (explorerH > 150)
+                    bool isMatrix = (_pnlGroupMatrixView != null && _pnlGroupMatrixView.Visible);
+                    double bottomRatio = isMatrix ? 0.62 : 0.52;
+                    int explorerH = Math.Max(110, (int)(_splitCenter.Height * (1.0 - bottomRatio)));
+                    if (explorerH > 80 && explorerH < _splitCenter.Height - 120)
                         _splitCenter.SplitterDistance = explorerH;
                 }
             }
@@ -1798,7 +1799,7 @@ namespace MilestoneManagementClient.UI.Views
 
         private void BuildGroupMatrixPane(Panel parent)
         {
-            var pnlHeader = new Panel { Dock = DockStyle.Top, Height = 32, BackColor = Color.FromArgb(255, 241, 242), Padding = new Padding(8, 3, 8, 3) };
+            var pnlHeader = new Panel { Dock = DockStyle.Top, Height = 30, BackColor = Color.FromArgb(248, 250, 252), Padding = new Padding(8, 2, 8, 2) };
 
             _lblMatrixGroupTitle = new Label
             {
@@ -1812,8 +1813,15 @@ namespace MilestoneManagementClient.UI.Views
             pnlHeader.Controls.Add(_lblMatrixGroupTitle);
 
             // Matrix Toolbar
-            var pnlTools = new Panel { Dock = DockStyle.Right, Width = 560, BackColor = Color.Transparent };
-            int bx = 0;
+            var flowTools = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Right,
+                AutoSize = true,
+                AutoSizeMode = AutoSizeMode.GrowAndShrink,
+                WrapContents = false,
+                BackColor = Color.Transparent,
+                Padding = new Padding(0)
+            };
 
             // Layout Switcher Buttons
             string[] layouts = new[] { "2x2", "3x3", "4x4", "1+7" };
@@ -1823,12 +1831,12 @@ namespace MilestoneManagementClient.UI.Views
                 var btnLay = new Button
                 {
                     Text = "▦ " + layoutKey,
-                    Location = new Point(bx, 2),
-                    Size = new Size(58, 24),
+                    Size = new Size(54, 24),
                     FlatStyle = FlatStyle.Flat,
                     BackColor = (layoutKey == _matrixLayoutMode) ? Color.FromArgb(219, 234, 254) : Color.White,
                     ForeColor = (layoutKey == _matrixLayoutMode) ? Color.FromArgb(30, 64, 175) : Color.FromArgb(71, 85, 105),
                     Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                    Margin = new Padding(2, 1, 2, 1),
                     Cursor = Cursors.Hand
                 };
                 btnLay.FlatAppearance.BorderColor = Color.FromArgb(203, 213, 225);
@@ -1837,19 +1845,18 @@ namespace MilestoneManagementClient.UI.Views
                     _matrixLayoutMode = layoutKey;
                     PopulateMatrixGrid();
                 };
-                pnlTools.Controls.Add(btnLay);
-                bx += 62;
+                flowTools.Controls.Add(btnLay);
             }
 
             var btnRecAll = new Button
             {
                 Text = "🔴 REC ALL",
-                Location = new Point(bx, 2),
-                Size = new Size(85, 24),
+                Size = new Size(78, 24),
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.FromArgb(254, 226, 226),
                 ForeColor = Color.FromArgb(220, 38, 38),
                 Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                Margin = new Padding(3, 1, 2, 1),
                 Cursor = Cursors.Hand
             };
             btnRecAll.FlatAppearance.BorderColor = Color.FromArgb(239, 68, 68);
@@ -1862,18 +1869,17 @@ namespace MilestoneManagementClient.UI.Views
                 MessageBox.Show("Active continuous recording initiated for all " + _currentGroupCameras.Count + " cameras in group!", "Recording Engine Active", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 PopulateMatrixGrid();
             };
-            pnlTools.Controls.Add(btnRecAll);
-            bx += 90;
+            flowTools.Controls.Add(btnRecAll);
 
             var btnRefreshAll = new Button
             {
-                Text = "🔄 Refresh All",
-                Location = new Point(bx, 2),
-                Size = new Size(95, 24),
+                Text = "🔄 Refresh",
+                Size = new Size(76, 24),
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.White,
                 ForeColor = Color.FromArgb(0, 102, 204),
                 Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                Margin = new Padding(2, 1, 2, 1),
                 Cursor = Cursors.Hand
             };
             btnRefreshAll.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
@@ -1882,18 +1888,17 @@ namespace MilestoneManagementClient.UI.Views
                 PopulateMatrixGrid();
                 InvalidateActiveFeeds();
             };
-            pnlTools.Controls.Add(btnRefreshAll);
-            bx += 100;
+            flowTools.Controls.Add(btnRefreshAll);
 
             var btnPopoutMatrix = new Button
             {
-                Text = "⛶ Fullscreen Matrix",
-                Location = new Point(bx, 2),
-                Size = new Size(130, 24),
+                Text = "⛶ Fullscreen",
+                Size = new Size(88, 24),
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.FromArgb(190, 18, 60),
                 ForeColor = Color.White,
                 Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                Margin = new Padding(2, 1, 2, 1),
                 Cursor = Cursors.Hand
             };
             btnPopoutMatrix.FlatAppearance.BorderSize = 0;
@@ -1904,11 +1909,9 @@ namespace MilestoneManagementClient.UI.Views
                     OpenPopoutGroupMatrix(_currentGroupCameras, _currentGroupTitle);
                 }
             };
-            pnlTools.Controls.Add(btnPopoutMatrix);
-            bx += 135;
+            flowTools.Controls.Add(btnPopoutMatrix);
 
-            pnlTools.Width = bx + 10;
-            pnlHeader.Controls.Add(pnlTools);
+            pnlHeader.Controls.Add(flowTools);
             parent.Controls.Add(pnlHeader);
 
             var pnlMatrixCenter = new Panel { Dock = DockStyle.Fill, BackColor = Color.FromArgb(11, 15, 25) };
@@ -1917,11 +1920,11 @@ namespace MilestoneManagementClient.UI.Views
             {
                 Text = "GROUP: LYCHEE-REC-SRV-01 • 9 CAMERAS ACTIVE • TOTAL BITRATE: 22.5 Mbps • FPS: 25.0 AVG • DOUBLE-CLICK ANY CAMERA TO EXPAND",
                 ForeColor = Color.FromArgb(190, 18, 60),
-                BackColor = Color.White,
-                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
+                BackColor = Color.FromArgb(248, 250, 252),
+                Font = new Font("Segoe UI", 8F, FontStyle.Bold),
                 Dock = DockStyle.Bottom,
                 TextAlign = ContentAlignment.MiddleCenter,
-                Height = 24
+                Height = 22
             };
 
             _tableMatrixGrid = new TableLayoutPanel
@@ -1965,6 +1968,7 @@ namespace MilestoneManagementClient.UI.Views
                     _currentGroupCameras.Count * 2.5);
             }
 
+            AdjustLayout();
             TriggerAsyncFrameFetch(_currentGroupCameras);
             PopulateMatrixGrid();
 
@@ -2137,38 +2141,38 @@ namespace MilestoneManagementClient.UI.Views
                 var pnlTileHeader = new Panel
                 {
                     Dock = DockStyle.Top,
-                    Height = 22,
-                    BackColor = Color.FromArgb(30, 41, 59),
-                    Padding = new Padding(4, 2, 4, 2)
-                };
-
-                var lblTileName = new Label
-                {
-                    Text = "📹 " + cam.Name + " [" + (string.IsNullOrEmpty(cam.IpAddress) ? (cam.MulticastIp ?? "10.192.0.5") : cam.IpAddress) + "]",
-                    Font = new Font("Segoe UI", 7.5F, FontStyle.Bold),
-                    ForeColor = Color.White,
-                    Dock = DockStyle.Left,
-                    AutoSize = true,
-                    Padding = new Padding(0, 1, 0, 0),
-                    Cursor = Cursors.Hand
+                    Height = 20,
+                    BackColor = Color.FromArgb(24, 32, 47),
+                    Padding = new Padding(3, 1, 3, 1)
                 };
 
                 var btnZoomTile = new Button
                 {
-                    Text = "⛶ Zoom",
+                    Text = "⛶",
                     Dock = DockStyle.Right,
-                    Width = 52,
+                    Width = 24,
                     FlatStyle = FlatStyle.Flat,
                     BackColor = Color.FromArgb(190, 18, 60),
                     ForeColor = Color.White,
-                    Font = new Font("Segoe UI", 7F, FontStyle.Bold),
+                    Font = new Font("Segoe UI", 7.5F, FontStyle.Bold),
                     Cursor = Cursors.Hand
                 };
                 btnZoomTile.FlatAppearance.BorderSize = 0;
                 btnZoomTile.Click += (s, e) => SelectCamera(cam.Name);
 
-                pnlTileHeader.Controls.Add(btnZoomTile);
+                var lblTileName = new Label
+                {
+                    Text = "📹 " + cam.Name,
+                    Font = new Font("Segoe UI", 7.5F, FontStyle.Bold),
+                    ForeColor = Color.FromArgb(241, 245, 249),
+                    Dock = DockStyle.Fill,
+                    AutoEllipsis = true,
+                    TextAlign = ContentAlignment.MiddleLeft,
+                    Cursor = Cursors.Hand
+                };
+
                 pnlTileHeader.Controls.Add(lblTileName);
+                pnlTileHeader.Controls.Add(btnZoomTile);
 
                 // Video PictureBox for Tile
                 var pbTile = new PictureBox
@@ -2260,7 +2264,7 @@ namespace MilestoneManagementClient.UI.Views
 
             // 2. Multi-channel Distinct Viewpoint Mapping from Base CCTV Surveillance Stream
             EnsureBaseCctvImage();
-            string channelLabel = "CH-01: Main Bay Overview";
+            string channelLabel = "CH-01: Main Bay";
             string aiLabel = "Person 98%";
             Rectangle aiBoxRel = new Rectangle((int)(w * 0.08), (int)(h * 0.38), (int)(w * 0.22), (int)(h * 0.42));
 
@@ -2277,50 +2281,50 @@ namespace MilestoneManagementClient.UI.Views
                     {
                         case 0:
                             srcCrop = new Rectangle(0, 0, imgW, imgH);
-                            channelLabel = "CH-01: Main Bay Overview";
+                            channelLabel = "CH-01: Main Bay";
                             aiLabel = "Person 98%";
                             aiBoxRel = new Rectangle((int)(w * 0.08), (int)(h * 0.38), (int)(w * 0.22), (int)(h * 0.42));
                             break;
                         case 1:
                             srcCrop = new Rectangle((int)(imgW * 0.02), (int)(imgH * 0.28), (int)(imgW * 0.40), (int)(imgH * 0.62));
-                            channelLabel = "CH-02: Visitor Seating & Desk";
+                            channelLabel = "CH-02: Visitor Seating";
                             aiLabel = "Person (Seated) 99%";
                             aiBoxRel = new Rectangle((int)(w * 0.15), (int)(h * 0.30), (int)(w * 0.50), (int)(h * 0.55));
                             break;
                         case 2:
                             srcCrop = new Rectangle((int)(imgW * 0.25), (int)(imgH * 0.28), (int)(imgW * 0.42), (int)(imgH * 0.60));
-                            channelLabel = "CH-03: ANPR [DL8CAR466]";
+                            channelLabel = "CH-03: ANPR Plate";
                             aiLabel = "Car [DL8CAR466] 97%";
                             aiBoxRel = new Rectangle((int)(w * 0.12), (int)(h * 0.25), (int)(w * 0.70), (int)(h * 0.60));
                             break;
                         case 3:
                             srcCrop = new Rectangle((int)(imgW * 0.45), (int)(imgH * 0.32), (int)(imgW * 0.46), (int)(imgH * 0.60));
-                            channelLabel = "CH-04: SUV Bay / Parking";
+                            channelLabel = "CH-04: SUV Bay";
                             aiLabel = "SUV Vehicle 96%";
                             aiBoxRel = new Rectangle((int)(w * 0.12), (int)(h * 0.28), (int)(w * 0.72), (int)(h * 0.58));
                             break;
                         case 4:
                             srcCrop = new Rectangle((int)(imgW * 0.65), (int)(imgH * 0.20), (int)(imgW * 0.34), (int)(imgH * 0.58));
-                            channelLabel = "CH-05: North Shutter Gate";
+                            channelLabel = "CH-05: North Shutter";
                             aiLabel = "Gate Access 95%";
                             aiBoxRel = new Rectangle((int)(w * 0.18), (int)(h * 0.22), (int)(w * 0.60), (int)(h * 0.65));
                             break;
                         case 5:
                             srcCrop = new Rectangle((int)(imgW * 0.06), (int)(imgH * 0.48), (int)(imgW * 0.48), (int)(imgH * 0.50));
-                            channelLabel = "CH-06: Ramp / Driveway";
+                            channelLabel = "CH-06: Driveway Ramp";
                             aiLabel = "Clear Passage 99%";
                             aiBoxRel = new Rectangle((int)(w * 0.08), (int)(h * 0.35), (int)(w * 0.48), (int)(h * 0.50));
                             break;
                         case 6:
                             srcCrop = new Rectangle((int)(imgW * 0.36), (int)(imgH * 0.42), (int)(imgW * 0.36), (int)(imgH * 0.52));
-                            channelLabel = "CH-07: Passenger Dock";
+                            channelLabel = "CH-07: Loading Dock";
                             aiLabel = "Motion Zone 94%";
                             aiBoxRel = new Rectangle((int)(w * 0.20), (int)(h * 0.30), (int)(w * 0.55), (int)(h * 0.55));
                             break;
                         case 7:
                             srcCrop = new Rectangle((int)(imgW * 0.55), (int)(imgH * 0.48), (int)(imgW * 0.42), (int)(imgH * 0.50));
                             channelLabel = "CH-08: Rear Perimeter";
-                            aiLabel = "Obstacle / Object 93%";
+                            aiLabel = "Obstacle 93%";
                             aiBoxRel = new Rectangle((int)(w * 0.25), (int)(h * 0.30), (int)(w * 0.50), (int)(h * 0.55));
                             break;
                         default:
@@ -2363,52 +2367,56 @@ namespace MilestoneManagementClient.UI.Views
             }
 
             // 3. Draw Realistic AI Object Detection Bounding Boxes
-            using (var penBoxRed = new Pen(Color.FromArgb(239, 68, 68), 2f))
-            using (var brushLabelBg = new SolidBrush(Color.FromArgb(200, 15, 23, 42)))
-            using (var fontAi = new Font("Segoe UI", 7.5F, FontStyle.Bold))
+            using (var penBoxRed = new Pen(Color.FromArgb(239, 68, 68), Math.Max(1.5f, w / 220.0f)))
+            using (var brushLabelBg = new SolidBrush(Color.FromArgb(210, 15, 23, 42)))
+            using (var fontAi = new Font("Segoe UI", Math.Max(6.5f, Math.Min(8.0f, w / 42.0f)), FontStyle.Bold))
             using (var brushAiText = new SolidBrush(Color.White))
             {
                 g.DrawRectangle(penBoxRed, aiBoxRel);
-                int labelW = Math.Min(120, aiBoxRel.Width);
-                g.FillRectangle(brushLabelBg, aiBoxRel.X, Math.Max(2, aiBoxRel.Y - 16), labelW, 16);
-                g.DrawString(aiLabel, fontAi, brushAiText, aiBoxRel.X + 2, Math.Max(2, aiBoxRel.Y - 15));
+                int labelW = Math.Min((int)(w * 0.45), Math.Max(70, aiBoxRel.Width));
+                int labelH = (int)(Math.Max(13, fontAi.Height + 2));
+                int labelY = Math.Max(2, aiBoxRel.Y - labelH);
+                g.FillRectangle(brushLabelBg, aiBoxRel.X, labelY, labelW, labelH);
+                g.DrawString(aiLabel, fontAi, brushAiText, aiBoxRel.X + 2, labelY + 1);
             }
 
             // 4. Top HUD: Status Pill, Channel & Bitrate
-            using (var brushHudBg = new SolidBrush(Color.FromArgb(180, 15, 23, 42)))
-            using (var fontHud = new Font("Segoe UI", 7.5F, FontStyle.Bold))
-            using (var fontMono = new Font("Consolas", 7.5F))
+            using (var brushHudBg = new SolidBrush(Color.FromArgb(190, 15, 23, 42)))
+            using (var fontHud = new Font("Segoe UI", Math.Max(6.5f, Math.Min(8.0f, w / 45.0f)), FontStyle.Bold))
+            using (var fontMono = new Font("Consolas", Math.Max(6.0f, Math.Min(7.5f, w / 50.0f))))
             using (var brushWhite = new SolidBrush(Color.White))
             using (var brushGreen = new SolidBrush(Color.FromArgb(34, 197, 94)))
             {
                 // Top Left: Status & IP
-                int pillW = Math.Min(165, w / 2);
-                g.FillRectangle(brushHudBg, 6, 6, pillW, 18);
-                g.FillEllipse(brushGreen, 10, 11, 7, 7);
+                int pillW = Math.Min((int)(w * 0.48), 150);
+                g.FillRectangle(brushHudBg, 4, 4, pillW, 16);
+                g.FillEllipse(brushGreen, 7, 8, 6, 6);
                 string ipStr = string.IsNullOrEmpty(cam.IpAddress) ? (cam.MulticastIp ?? "10.192.0.5") : cam.IpAddress;
-                g.DrawString("LIVE • " + ipStr, fontHud, brushWhite, 20, 8);
+                g.DrawString("LIVE • " + ipStr, fontHud, brushWhite, 16, 5);
 
                 // Top Right: 25 FPS • 1080p
                 if (w > 200)
                 {
-                    string teleStr = "25 FPS • 1080p UHD • H.265+";
-                    int teleW = 150;
-                    g.FillRectangle(brushHudBg, w - teleW - 6, 6, teleW, 18);
-                    g.DrawString(teleStr, fontHud, brushWhite, w - teleW - 2, 8);
+                    string teleStr = "25 FPS • 1080p";
+                    int teleW = Math.Min(110, (int)(w * 0.38));
+                    g.FillRectangle(brushHudBg, w - teleW - 4, 4, teleW, 16);
+                    g.DrawString(teleStr, fontHud, brushWhite, w - teleW, 5);
                 }
 
                 // Bottom Left: Live Timestamp
-                string timeStr = DateTime.Now.ToString("dd/MM/yyyy ddd hh:mm:ss tt");
-                g.FillRectangle(brushHudBg, 6, h - 22, Math.Min(200, w - 12), 16);
-                g.DrawString(timeStr, fontMono, brushWhite, 8, h - 21);
+                string timeStr = DateTime.Now.ToString("HH:mm:ss");
+                if (w > 210) timeStr = DateTime.Now.ToString("dd/MM/yy HH:mm:ss");
+                int timeW = Math.Min((int)(w * 0.48), 140);
+                g.FillRectangle(brushHudBg, 4, h - 18, timeW, 15);
+                g.DrawString(timeStr, fontMono, brushWhite, 6, h - 17);
 
                 // Bottom Right: Camera / Channel Tag
-                if (w > 230)
+                if (w > 160)
                 {
                     string camTag = channelLabel;
-                    int tagW = Math.Min(175, w / 2);
-                    g.FillRectangle(brushHudBg, w - tagW - 6, h - 22, tagW, 16);
-                    g.DrawString(camTag, fontHud, brushWhite, w - tagW - 2, h - 21);
+                    int tagW = Math.Min((int)(w * 0.50), 160);
+                    g.FillRectangle(brushHudBg, w - tagW - 4, h - 18, tagW, 15);
+                    g.DrawString(camTag, fontHud, brushWhite, w - tagW, h - 17);
                 }
             }
 
@@ -2423,8 +2431,8 @@ namespace MilestoneManagementClient.UI.Views
                 using (var fontBadge = new Font("Segoe UI", 7.5F, FontStyle.Bold))
                 using (var brushWhite = new SolidBrush(Color.White))
                 {
-                    g.FillRectangle(brushSel, w / 2 - 45, 6, 90, 18);
-                    g.DrawString("● SELECTED", fontBadge, brushWhite, w / 2 - 40, 8);
+                    g.FillRectangle(brushSel, w / 2 - 40, 4, 80, 16);
+                    g.DrawString("● SELECTED", fontBadge, brushWhite, w / 2 - 36, 5);
                 }
             }
         }

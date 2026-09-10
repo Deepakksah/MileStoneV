@@ -6,6 +6,7 @@ namespace MilestoneManagementClient.Models
     {
         public string Name { get; set; }
         public string Group { get; set; }
+        public string ServerName { get; set; }
         public string Resolution { get; set; }
         public string Codec { get; set; }
         public int Fps { get; set; }
@@ -21,8 +22,19 @@ namespace MilestoneManagementClient.Models
         public int Sharpness { get; set; }
         public string MulticastIp { get; set; }
         public string IpAddress { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public int HttpPort { get; set; }
+        public int RtspPort { get; set; }
         public string StreamingMethod { get; set; }
         public bool IsOnline { get; set; }
+
+        public string Manufacturer { get; set; }
+        public string Model { get; set; }
+        public string DriverName { get; set; }
+        public string DriverVersion { get; set; }
+        public string MacAddress { get; set; }
+        public string FirmwareVersion { get; set; }
 
         public int RetentionDays { get; set; }
         public string StoragePath { get; set; }
@@ -56,6 +68,13 @@ namespace MilestoneManagementClient.Models
             MulticastIp = "0.0.0.0";
             StreamingMethod = "RTP/RTSP/TCP";
             IsOnline = true;
+
+            Manufacturer = "Universal ONVIF";
+            Model = "Generic Profile S/G/T Camera";
+            DriverName = "Universal ONVIF Conformance Driver";
+            DriverVersion = "v2025 R3";
+            MacAddress = "00:1A:2B:3C:4D:5E";
+            FirmwareVersion = "v2.5.0-build2025";
 
             RetentionDays = 30;
             StoragePath = @"D:\Milestone\MediaDatabase";

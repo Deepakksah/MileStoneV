@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MediaRecording camera="HIKVISION-CAM-10_192_0_10" server="LYCHEE-REC-SRV-01" ip="10.192.0.10" resolution="1920x1080 / 4K UHD" codec="H.265+" date="2026-09-10">
+  <FootageSession startTime="13:31:08" format="JPEG/H.265 Continuous" status="RECORDING" />
+</MediaRecording>

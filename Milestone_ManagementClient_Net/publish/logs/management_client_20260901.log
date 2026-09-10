@@ -1,0 +1,6 @@
+﻿[2026-09-01 11:58:38.804] [INFO ] [STARTUP] =========================================================
+[2026-09-01 11:58:38.808] [INFO ] [STARTUP] Milestone XProtect Management Client 2025 R3 Initializing
+[2026-09-01 11:58:38.810] [INFO ] [STARTUP] Log Location: C:\Program Files (x86)\i-Comply\Milestone\Milestone XProtect VMS Products 2025 R3 System Installer\Milestone_ManagementClient_Net\publish\logs\management_client_20260901.log
+[2026-09-01 11:58:38.813] [INFO ] [STARTUP] =========================================================
+[2026-09-01 11:58:38.822] [INFO ] [STARTUP] Launching ManagementClientForm UI shell...
+[2026-09-01 11:58:50.115] [INFO ] [SHUTDOWN] Milestone Management Client closed gracefully.

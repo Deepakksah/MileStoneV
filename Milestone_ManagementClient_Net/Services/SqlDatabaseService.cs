@@ -57,8 +57,10 @@ namespace MilestoneManagementClient.Services
         {
             try
             {
-                string digest = "UNIVERSAL_ONVIF_DRIVER_2025";
+                string digest = string.IsNullOrWhiteSpace(cam.DriverName) ? "UNIVERSAL_ONVIF_DRIVER_2025" : cam.DriverName.ToUpper().Replace(" ", "_");
                 string hwGuid = Guid.NewGuid().ToString();
+                string desc = string.Format("{0} {1} [{2}]", cam.Manufacturer ?? "Universal ONVIF", cam.Model ?? "Generic IP Camera", cam.Resolution ?? "1080p");
+                string uri = string.Format("http://{0}:{1}/onvif/device_service", !string.IsNullOrWhiteSpace(cam.IpAddress) ? cam.IpAddress : "192.168.1.100", cam.Port1 > 0 ? cam.Port1 : 80);
 
                 string query = @"
 IF NOT EXISTS (SELECT 1 FROM dbo.Hardware WHERE Name = @Name + ' HW')
@@ -67,8 +69,8 @@ BEGIN
         IDHardware, IDHardwareDriver, Name, Description, URI, LoginID, EncryptedPassword,
         IDRecorder, Enabled, C18NDigest, DriverNumber, DriverProxyName, SubType, LastModified
     ) VALUES (
-        @HwGuid, '00000000-0000-0000-0000-000000000001', @Name + ' HW', 'ONVIF Conformance Driver Device', 'http://192.168.1.100/onvif/device_service',
-        'root', 'encrypted_pass', '11111111-2222-3333-4444-555555555555', 1, @Digest, 1, 'Universal1Channel', 1, GETUTCDATE()
+        @HwGuid, '00000000-0000-0000-0000-000000000001', @Name + ' HW', @Description, @URI,
+        'root', 'encrypted_pass', '11111111-2222-3333-4444-555555555555', 1, @Digest, 1, @DriverProxy, 1, GETUTCDATE()
     );
 END
 
@@ -106,10 +108,13 @@ END";
                     cmd.Parameters.AddWithValue("@Name", cam.Name ?? "");
                     cmd.Parameters.AddWithValue("@HwGuid", hwGuid);
                     cmd.Parameters.AddWithValue("@Digest", digest);
-                    cmd.Parameters.AddWithValue("@Description", "Milestone IP Camera - " + (cam.Resolution ?? "1080p"));
+                    cmd.Parameters.AddWithValue("@DriverProxy", cam.DriverName ?? "Universal1Channel");
+                    cmd.Parameters.AddWithValue("@URI", uri);
+                    cmd.Parameters.AddWithValue("@Description", desc);
                     cmd.Parameters.AddWithValue("@Group", cam.Group ?? "Default");
                     cmd.Parameters.AddWithValue("@Enabled", cam.IsOnline);
-                    cmd.Parameters.AddWithValue("@Settings", string.Format("<Settings><Fps>{0}</Fps><Codec>{1}</Codec><Prebuffer>{2}</Prebuffer><MotionSensitivity>{3}</MotionSensitivity></Settings>", cam.Fps, cam.Codec, cam.PrebufferSeconds, cam.MotionSensitivity));
+                    cmd.Parameters.AddWithValue("@Settings", string.Format("<Settings><Manufacturer>{0}</Manufacturer><Model>{1}</Model><Driver>{2}</Driver><DriverVersion>{3}</DriverVersion><MacAddress>{4}</MacAddress><Firmware>{5}</Firmware><Fps>{6}</Fps><Codec>{7}</Codec><Prebuffer>{8}</Prebuffer><MotionSensitivity>{9}</MotionSensitivity></Settings>", 
+                        cam.Manufacturer, cam.Model, cam.DriverName, cam.DriverVersion, cam.MacAddress, cam.FirmwareVersion, cam.Fps, cam.Codec, cam.PrebufferSeconds, cam.MotionSensitivity));
                     cmd.Parameters.AddWithValue("@Streams", string.Format("<Streams><Stream name=\"Main\" res=\"{0}\" fps=\"{1}\" codec=\"{2}\" /></Streams>", cam.Resolution, cam.Fps, cam.Codec));
                     cmd.ExecuteNonQuery();
                 }

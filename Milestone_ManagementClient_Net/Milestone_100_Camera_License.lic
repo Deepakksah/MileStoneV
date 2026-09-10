@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<SoftwareLicense version="2025.3" generated="2026-08-31T10:01:22.4603896Z" xmlns="http://milestonesys.com/licensing/v2">
+  <LicenseHeader>
+    <SLC>M01-C02-252-01-6C49F7</SLC>
+    <ProductName>XProtect Corporate 2025 R3</ProductName>
+    <ProductSKU>XPCO</ProductSKU>
+    <VendorCode>MilestoneSystems</VendorCode>
+    <CustomerName>i-Comply Milestone Surveillance</CustomerName>
+    <Organization>JSPLICCC Security Network</Organization>
+    <LicenseType>Perpetual</LicenseType>
+    <IssueDate>2026-08-31</IssueDate>
+    <ExpirationDate>9999-12-31</ExpirationDate>
+    <HardwareId>{42AF73E4-748B-4110-9ABD-8F83E559AE1F}</HardwareId>
+  </LicenseHeader>
+  <Entitlements>
+    <DeviceCapacity type="CameraChannels" count="100" status="Activated" />
+    <DeviceCapacity type="RecordingServers" count="Unlimited" status="Activated" />
+    <DeviceCapacity type="FailoverServers" count="32" status="Activated" />
+  </Entitlements>
+  <Features>
+    <Feature name="SmartMap_GIS" enabled="true" tier="Enterprise" />
+    <Feature name="FailoverClustering" enabled="true" tier="Enterprise" />
+    <Feature name="AccessControl_Integrations" enabled="true" tier="Enterprise" />
+    <Feature name="IncidentManager_Evidence" enabled="true" tier="Enterprise" />
+    <Feature name="AI_VideoAnalytics_LPR" enabled="true" tier="Enterprise" />
+    <Feature name="Milestone_Interconnect" enabled="true" tier="Enterprise" />
+    <Feature name="H265_HardwareAcceleration" enabled="true" tier="Enterprise" />
+    <Feature name="EdgeStorage_AutoRetrieval" enabled="true" tier="Enterprise" />
+    <Feature name="Mobile_Web_Gateway" enabled="true" tier="Enterprise" />
+  </Features>
+  <DigitalSignature algorithm="RSA-SHA256">
+    <SignatureValue>Um3+czzHhVXLaifJIMRabnIixqv17a45q1wUOpDsDF0=</SignatureValue>
+    <KeyIdentifier>MILESTONE-ROOT-CA-2025-V2</KeyIdentifier>
+  </DigitalSignature>
+</SoftwareLicense>

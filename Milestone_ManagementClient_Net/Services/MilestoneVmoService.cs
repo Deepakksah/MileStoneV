@@ -146,6 +146,43 @@ namespace MilestoneManagementClient.Services
             SaveToDatabase();
         }
 
+        public void AddHardwareWithDetails(string camName, string groupName, string manufacturer, string model, string driverName, string driverVersion, string ip, int port, string resolution)
+        {
+            var cam = new CameraModel
+            {
+                Name = camName,
+                Group = string.IsNullOrWhiteSpace(groupName) ? manufacturer : groupName,
+                ServerName = groupName,
+                Manufacturer = manufacturer,
+                Model = model,
+                DriverName = driverName,
+                DriverVersion = driverVersion,
+                IpAddress = ip,
+                MulticastIp = ip,
+                HttpPort = port,
+                Port1 = port,
+                Resolution = resolution,
+                Codec = "H.265+",
+                Fps = 30,
+                IsOnline = true
+            };
+            _cameras[camName] = cam;
+            _savedConfigurations[camName] = cam.Clone();
+            _license.HardwareDeviceLicensesUsed = _cameras.Count;
+            AddLog("INFO", "Hardware Wizard", "Registered " + manufacturer + " device '" + camName + "' [" + model + "] with driver '" + driverName + "' (" + driverVersion + ")", "Administrator");
+            SaveToDatabase();
+        }
+
+        public void AddCamera(CameraModel cam)
+        {
+            if (cam == null || string.IsNullOrWhiteSpace(cam.Name)) return;
+            _cameras[cam.Name] = cam;
+            _savedConfigurations[cam.Name] = cam.Clone();
+            _license.HardwareDeviceLicensesUsed = _cameras.Count;
+            AddLog("INFO", "Hardware", "Registered camera '" + cam.Name + "' (" + (cam.Manufacturer ?? "Generic") + ")", "Administrator");
+            SaveToDatabase();
+        }
+
         // --- Servers Management ---
         public List<RecordingServerModel> GetServers() { return _servers; }
 
@@ -185,12 +222,22 @@ namespace MilestoneManagementClient.Services
             SaveToDatabase();
         }
 
-        public void DeleteRecordingServer(string name)
+        public void DeleteRecordingServer(string name, bool deleteAttachedCameras = true)
         {
             var srv = _servers.FirstOrDefault(s => s.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
             if (srv != null)
             {
                 _servers.Remove(srv);
+                if (deleteAttachedCameras)
+                {
+                    var attachedCams = _cameras.Values.Where(c => !string.IsNullOrEmpty(c.ServerName) && c.ServerName.Equals(name, StringComparison.OrdinalIgnoreCase)).ToList();
+                    foreach (var c in attachedCams)
+                    {
+                        _cameras.Remove(c.Name);
+                        _savedConfigurations.Remove(c.Name);
+                    }
+                    _license.HardwareDeviceLicensesUsed = _cameras.Count;
+                }
                 AddLog("WARN", "Servers", "Deleted recording server '" + name + "'", "Administrator");
                 SaveToDatabase();
             }
@@ -345,79 +392,11 @@ namespace MilestoneManagementClient.Services
         // --- Initializers ---
         private void InitializeDefaultMilestoneInventory()
         {
-            var groups = new Dictionary<string, string[]>
-            {
-                { "Lychee Recording Cluster", new[] { "LYCHEE MAIN ENTRANCE CAM 01", "LYCHEE PERIMETER PTZ CAM 02" } },
-                { "Camera Group 1", new[] { "MAIN GATE ENTRY CAM", "MAIN GATE EXIT CAM", "VISITOR LOBBY CAM 01", "PARKING NORTH CAM 01" } },
-                { "ROAD SAFETY", new[] { "SPEED CAM 01 - NORTH ROAD", "SPEED CAM 02 - JUNCTION", "ANPR HIGHWAY CAM 01", "ANPR HIGHWAY CAM 02" } },
-                { "SECTOR-1", new[] { "SEC1 BOUNDARY CAM 1", "SEC1 BOUNDARY CAM 2", "SEC1 SUBSTATION CAM", "SEC1 TOWER CAM" } },
-                { "SECTOR-2", new[] { "SEC2 CONVEYER CAM 1", "SEC2 CONVEYER CAM 2", "SEC2 PUMP HOUSE CAM" } },
-                { "SECTOR-3", new[] { "SEC3 HOPPER CAM 1", "SEC3 CRUSHER CAM 1", "SEC3 LOADING AREA CAM" } },
-                { "SECTOR-4", new[] { "SEC4 WAREHOUSE EAST", "SEC4 WAREHOUSE WEST", "SEC4 DISPATCH CAM" } },
-                { "SECTOR - UTKAL -C- MINES", new[] { "MINES PIT CAM 01", "MINES PIT CAM 02", "HAUL ROAD CAM 01", "WEIGHBRIDGE CAM 01" } },
-                { "Sharmik Vihar", new[] { "SHARMIK VIHAR GATE CAM", "SHARMIK VIHAR RESIDENTIAL 01", "SHARMIK VIHAR CLUB CAM" } },
-                { "South Block", new[] {
-                    "AIRTEL TOWER SIDE WALL CAM 2",
-                    "AIRTEL TOWER SIDE WALL CAM 1",
-                    "B32 WALL CAM 1",
-                    "B32 WALL CAM 2",
-                    "B38 SIDE WALL CAM 1",
-                    "B38 SIDE WALL CAM 2",
-                    "B47 WALL CAMERA 1",
-                    "B47 WALL CAMERA 2",
-                    "B47 WALL CAMERA 3",
-                    "B53 SIDE WALL CAM 1",
-                    "B58 WALL CAM 1",
-                    "B58 WALL CAM 2",
-                    "B65 FRONT WALL CAM 1",
-                    "B65 FRONT WALL CAM 2",
-                    "B69 FRONT WALL CAM",
-                    "B73 SIDE WALL CAM 1",
-                    "B73 SIDE WALL CAM 2",
-                    "B75 BACK WALL CAM 1",
-                    "B77 BACK WALL CAM",
-                    "B79 SIDE WALL CAM 1",
-                    "B79 SIDE WALL CAM 2",
-                    "B80 SIDE WALL CAM 1",
-                    "B80 SIDE WALL CAM 2",
-                    "EP-02 cam-1",
-                    "SERVER ROOM FRONT CAM 1",
-                    "SERVER ROOM FRONT CAM 2",
-                    "SERVER ROOM FRONT CAM 3"
-                }},
-                { "Universal", new[] { "UNIVERSAL PTZ 01 (360 DEG)", "UNIVERSAL THERMAL CAM 01", "PANORAMIC MULTI-SENSOR CAM" } }
-            };
-
-            foreach (var kvp in groups)
-            {
-                foreach (var camName in kvp.Value)
-                {
-                    bool is4k = camName.Contains("B32") || camName.Contains("B38") || camName.Contains("B58") || camName.Contains("B80") || camName.Contains("PTZ");
-                    var cam = new CameraModel
-                    {
-                        Name = camName,
-                        Group = kvp.Key,
-                        Resolution = is4k ? "2688x1520 (4MP QHD)" : "1920x1080 (1080p FHD)",
-                        Codec = "H.265",
-                        Fps = 25,
-                        BitrateMode = "Variable bit rate",
-                        Quality = 60,
-                        Port1 = 8860,
-                        Port2 = 8866,
-                        Stream2Res = "640x360",
-                        Stream2Fps = 25,
-                        Brightness = 50,
-                        Contrast = 50,
-                        Saturation = 50,
-                        Sharpness = 50,
-                        MulticastIp = "0.0.0.0",
-                        StreamingMethod = "RTP/RTSP/TCP"
-                    };
-                    _cameras[camName] = cam;
-                    _savedConfigurations[camName] = cam.Clone();
-                }
-            }
-            _license.HardwareDeviceLicensesUsed = _cameras.Count;
+            // Clean slate: No hardcoded dummy cameras.
+            // Cameras will only be added via Auto-Detect Scan or Add Camera dialog.
+            _cameras.Clear();
+            _savedConfigurations.Clear();
+            _license.HardwareDeviceLicensesUsed = 0;
         }
 
         private void InitializeServers()
@@ -425,56 +404,18 @@ namespace MilestoneManagementClient.Services
             _servers.Add(new RecordingServerModel
             {
                 Name = "JSPANGICCCREC01.JSPLICCC.LOCAL",
-                Hostname = "jspangicccrec01.jspliccc.local",
+                Hostname = "127.0.0.1",
                 Port = 7563,
                 Status = "Running (Active)",
-                DeviceCount = 14,
-                CpuUsage = 32,
-                RamUsage = 48,
+                DeviceCount = 0,
+                CpuUsage = 12,
+                RamUsage = 25,
                 PrimaryStoragePath = @"D:\Milestone\MediaDatabase\Live01",
-                StorageUsedGb = 4200,
+                StorageUsedGb = 0,
                 StorageTotalGb = 10000,
                 ArchiveStoragePath = @"E:\Milestone\Archive01",
-                ArchiveUsedGb = 18000,
+                ArchiveUsedGb = 0,
                 ArchiveTotalGb = 40000,
-                IsFailoverConfigured = true,
-                FailoverServerName = "FAILOVER-SRV-01.JSPLICCC.LOCAL (Hot Standby)"
-            });
-
-            _servers.Add(new RecordingServerModel
-            {
-                Name = "JSPANGICCCREC02.JSPLICCC.LOCAL",
-                Hostname = "jspangicccrec02.jspliccc.local",
-                Port = 7563,
-                Status = "Running (Active)",
-                DeviceCount = 8,
-                CpuUsage = 24,
-                RamUsage = 38,
-                PrimaryStoragePath = @"D:\Milestone\MediaDatabase\Live02",
-                StorageUsedGb = 2800,
-                StorageTotalGb = 8000,
-                ArchiveStoragePath = @"E:\Milestone\Archive02",
-                ArchiveUsedGb = 12000,
-                ArchiveTotalGb = 32000,
-                IsFailoverConfigured = true,
-                FailoverServerName = "FAILOVER-SRV-01.JSPLICCC.LOCAL (Hot Standby)"
-            });
-
-            _servers.Add(new RecordingServerModel
-            {
-                Name = "JSPANGICCCREC03.JSPLICCC.LOCAL",
-                Hostname = "jspangicccrec03.jspliccc.local",
-                Port = 7563,
-                Status = "Running (Active)",
-                DeviceCount = 4,
-                CpuUsage = 18,
-                RamUsage = 29,
-                PrimaryStoragePath = @"D:\Milestone\MediaDatabase\Live03",
-                StorageUsedGb = 1500,
-                StorageTotalGb = 8000,
-                ArchiveStoragePath = @"E:\Milestone\Archive03",
-                ArchiveUsedGb = 6500,
-                ArchiveTotalGb = 24000,
                 IsFailoverConfigured = false,
                 FailoverServerName = "None"
             });
@@ -624,6 +565,8 @@ namespace MilestoneManagementClient.Services
         {
             var sb = new System.Text.StringBuilder();
             sb.AppendLine("{");
+            
+            // 1. Cameras
             sb.AppendLine("  \"Cameras\": [");
             for (int i = 0; i < snap.Cameras.Count; i++)
             {
@@ -631,6 +574,18 @@ namespace MilestoneManagementClient.Services
                 sb.AppendLine("    {");
                 sb.AppendLine("      \"Name\": \"" + Escape(c.Name) + "\",");
                 sb.AppendLine("      \"Group\": \"" + Escape(c.Group) + "\",");
+                sb.AppendLine("      \"ServerName\": \"" + Escape(c.ServerName) + "\",");
+                sb.AppendLine("      \"IpAddress\": \"" + Escape(c.IpAddress) + "\",");
+                sb.AppendLine("      \"UserName\": \"" + Escape(c.UserName) + "\",");
+                sb.AppendLine("      \"Password\": \"" + Escape(c.Password) + "\",");
+                sb.AppendLine("      \"HttpPort\": " + c.HttpPort + ",");
+                sb.AppendLine("      \"RtspPort\": " + c.RtspPort + ",");
+                sb.AppendLine("      \"Manufacturer\": \"" + Escape(c.Manufacturer) + "\",");
+                sb.AppendLine("      \"Model\": \"" + Escape(c.Model) + "\",");
+                sb.AppendLine("      \"DriverName\": \"" + Escape(c.DriverName) + "\",");
+                sb.AppendLine("      \"DriverVersion\": \"" + Escape(c.DriverVersion) + "\",");
+                sb.AppendLine("      \"MacAddress\": \"" + Escape(c.MacAddress) + "\",");
+                sb.AppendLine("      \"FirmwareVersion\": \"" + Escape(c.FirmwareVersion) + "\",");
                 sb.AppendLine("      \"Resolution\": \"" + Escape(c.Resolution) + "\",");
                 sb.AppendLine("      \"Fps\": " + c.Fps + ",");
                 sb.AppendLine("      \"Codec\": \"" + Escape(c.Codec) + "\",");
@@ -645,13 +600,32 @@ namespace MilestoneManagementClient.Services
                 sb.AppendLine("      \"MotionThreshold\": " + c.MotionThreshold + ",");
                 sb.AppendLine("      \"MotionHardwareAcceleration\": \"" + Escape(c.MotionHardwareAcceleration) + "\",");
                 sb.AppendLine("      \"IsOnline\": " + (c.IsOnline ? "true" : "false") + ",");
-                sb.AppendLine("      \"MulticastIp\": \"" + Escape(c.MulticastIp) + "\",");
-                sb.AppendLine("      \"EventsCount\": " + c.DriverEvents.Count);
+                sb.AppendLine("      \"MulticastIp\": \"" + Escape(c.MulticastIp) + "\"");
                 sb.Append("    }");
                 if (i < snap.Cameras.Count - 1) sb.Append(",");
                 sb.AppendLine();
             }
+            sb.AppendLine("  ],");
+
+            // 2. Recording Servers
+            sb.AppendLine("  \"Servers\": [");
+            for (int i = 0; i < snap.Servers.Count; i++)
+            {
+                var s = snap.Servers[i];
+                sb.AppendLine("    {");
+                sb.AppendLine("      \"Name\": \"" + Escape(s.Name) + "\",");
+                sb.AppendLine("      \"Hostname\": \"" + Escape(s.Hostname) + "\",");
+                sb.AppendLine("      \"Port\": " + s.Port + ",");
+                sb.AppendLine("      \"Status\": \"" + Escape(s.Status) + "\",");
+                sb.AppendLine("      \"DeviceCount\": " + s.DeviceCount + ",");
+                sb.AppendLine("      \"PrimaryStoragePath\": \"" + Escape(s.PrimaryStoragePath) + "\",");
+                sb.AppendLine("      \"FailoverServerName\": \"" + Escape(s.FailoverServerName) + "\"");
+                sb.Append("    }");
+                if (i < snap.Servers.Count - 1) sb.Append(",");
+                sb.AppendLine();
+            }
             sb.AppendLine("  ]");
+
             sb.AppendLine("}");
             return sb.ToString();
         }
@@ -675,46 +649,96 @@ namespace MilestoneManagementClient.Services
             {
                 string[] lines = json.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
                 CameraModel curCam = null;
+                RecordingServerModel curSrv = null;
+                string currentSection = "";
 
                 foreach (var line in lines)
                 {
                     string tr = line.Trim();
-                    if (tr.StartsWith("{") && curCam == null)
+                    if (tr.Contains("\"Cameras\":")) { currentSection = "Cameras"; continue; }
+                    if (tr.Contains("\"Servers\":")) { currentSection = "Servers"; continue; }
+
+                    if (currentSection == "Cameras")
                     {
-                        curCam = new CameraModel();
-                    }
-                    else if (tr.StartsWith("}") || tr.StartsWith("},"))
-                    {
-                        if (curCam != null && !string.IsNullOrWhiteSpace(curCam.Name))
+                        if (tr.StartsWith("{") && curCam == null)
                         {
-                            snap.Cameras.Add(curCam);
-                            curCam = null;
+                            curCam = new CameraModel();
+                        }
+                        else if (tr.StartsWith("}") || tr.StartsWith("},"))
+                        {
+                            if (curCam != null && !string.IsNullOrWhiteSpace(curCam.Name))
+                            {
+                                snap.Cameras.Add(curCam);
+                                curCam = null;
+                            }
+                        }
+                        else if (curCam != null && tr.Contains(":"))
+                        {
+                            int colonIdx = tr.IndexOf(':');
+                            string key = tr.Substring(0, colonIdx).Replace("\"", "").Trim();
+                            string val = tr.Substring(colonIdx + 1).Trim().TrimEnd(',');
+                            string cleanVal = val.Trim('\"');
+
+                            if (key == "Name") curCam.Name = cleanVal;
+                            else if (key == "Group") curCam.Group = cleanVal;
+                            else if (key == "ServerName") curCam.ServerName = cleanVal;
+                            else if (key == "IpAddress") curCam.IpAddress = cleanVal;
+                            else if (key == "UserName") curCam.UserName = cleanVal;
+                            else if (key == "Password") curCam.Password = cleanVal;
+                            else if (key == "HttpPort") { int p; if (int.TryParse(cleanVal, out p)) curCam.HttpPort = p; }
+                            else if (key == "RtspPort") { int p; if (int.TryParse(cleanVal, out p)) curCam.RtspPort = p; }
+                            else if (key == "Manufacturer") curCam.Manufacturer = cleanVal;
+                            else if (key == "Model") curCam.Model = cleanVal;
+                            else if (key == "DriverName") curCam.DriverName = cleanVal;
+                            else if (key == "DriverVersion") curCam.DriverVersion = cleanVal;
+                            else if (key == "MacAddress") curCam.MacAddress = cleanVal;
+                            else if (key == "FirmwareVersion") curCam.FirmwareVersion = cleanVal;
+                            else if (key == "Resolution") curCam.Resolution = cleanVal;
+                            else if (key == "Fps") { int v; if (int.TryParse(cleanVal, out v)) curCam.Fps = v; }
+                            else if (key == "Codec") curCam.Codec = cleanVal;
+                            else if (key == "RetentionDays") { int v; if (int.TryParse(cleanVal, out v)) curCam.RetentionDays = v; }
+                            else if (key == "StoragePath") curCam.StoragePath = cleanVal;
+                            else if (key == "PrebufferSeconds") { int v; if (int.TryParse(cleanVal, out v)) curCam.PrebufferSeconds = v; }
+                            else if (key == "PrebufferType") curCam.PrebufferType = cleanVal;
+                            else if (key == "RecordFps") { int v; if (int.TryParse(cleanVal, out v)) curCam.RecordFps = v; }
+                            else if (key == "RecordKeyframesOnly") curCam.RecordKeyframesOnly = cleanVal.Equals("true", StringComparison.OrdinalIgnoreCase);
+                            else if (key == "MotionDetectionEnabled") curCam.MotionDetectionEnabled = cleanVal.Equals("true", StringComparison.OrdinalIgnoreCase);
+                            else if (key == "MotionSensitivity") { int v; if (int.TryParse(cleanVal, out v)) curCam.MotionSensitivity = v; }
+                            else if (key == "MotionThreshold") { int v; if (int.TryParse(cleanVal, out v)) curCam.MotionThreshold = v; }
+                            else if (key == "MotionHardwareAcceleration") curCam.MotionHardwareAcceleration = cleanVal;
+                            else if (key == "IsOnline") curCam.IsOnline = cleanVal.Equals("true", StringComparison.OrdinalIgnoreCase);
+                            else if (key == "MulticastIp") curCam.MulticastIp = cleanVal;
                         }
                     }
-                    else if (curCam != null && tr.Contains(":"))
+                    else if (currentSection == "Servers")
                     {
-                        int colonIdx = tr.IndexOf(':');
-                        string key = tr.Substring(0, colonIdx).Replace("\"", "").Trim();
-                        string val = tr.Substring(colonIdx + 1).Trim().TrimEnd(',');
-                        string cleanVal = val.Trim('\"');
+                        if (tr.StartsWith("{") && curSrv == null)
+                        {
+                            curSrv = new RecordingServerModel();
+                        }
+                        else if (tr.StartsWith("}") || tr.StartsWith("},"))
+                        {
+                            if (curSrv != null && !string.IsNullOrWhiteSpace(curSrv.Name))
+                            {
+                                snap.Servers.Add(curSrv);
+                                curSrv = null;
+                            }
+                        }
+                        else if (curSrv != null && tr.Contains(":"))
+                        {
+                            int colonIdx = tr.IndexOf(':');
+                            string key = tr.Substring(0, colonIdx).Replace("\"", "").Trim();
+                            string val = tr.Substring(colonIdx + 1).Trim().TrimEnd(',');
+                            string cleanVal = val.Trim('\"');
 
-                        if (key == "Name") curCam.Name = cleanVal;
-                        else if (key == "Group") curCam.Group = cleanVal;
-                        else if (key == "Resolution") curCam.Resolution = cleanVal;
-                        else if (key == "Fps") { int v; if (int.TryParse(cleanVal, out v)) curCam.Fps = v; }
-                        else if (key == "Codec") curCam.Codec = cleanVal;
-                        else if (key == "RetentionDays") { int v; if (int.TryParse(cleanVal, out v)) curCam.RetentionDays = v; }
-                        else if (key == "StoragePath") curCam.StoragePath = cleanVal;
-                        else if (key == "PrebufferSeconds") { int v; if (int.TryParse(cleanVal, out v)) curCam.PrebufferSeconds = v; }
-                        else if (key == "PrebufferType") curCam.PrebufferType = cleanVal;
-                        else if (key == "RecordFps") { int v; if (int.TryParse(cleanVal, out v)) curCam.RecordFps = v; }
-                        else if (key == "RecordKeyframesOnly") curCam.RecordKeyframesOnly = cleanVal.Equals("true", StringComparison.OrdinalIgnoreCase);
-                        else if (key == "MotionDetectionEnabled") curCam.MotionDetectionEnabled = cleanVal.Equals("true", StringComparison.OrdinalIgnoreCase);
-                        else if (key == "MotionSensitivity") { int v; if (int.TryParse(cleanVal, out v)) curCam.MotionSensitivity = v; }
-                        else if (key == "MotionThreshold") { int v; if (int.TryParse(cleanVal, out v)) curCam.MotionThreshold = v; }
-                        else if (key == "MotionHardwareAcceleration") curCam.MotionHardwareAcceleration = cleanVal;
-                        else if (key == "IsOnline") curCam.IsOnline = cleanVal.Equals("true", StringComparison.OrdinalIgnoreCase);
-                        else if (key == "MulticastIp") curCam.MulticastIp = cleanVal;
+                            if (key == "Name") curSrv.Name = cleanVal;
+                            else if (key == "Hostname") curSrv.Hostname = cleanVal;
+                            else if (key == "Port") { int p; if (int.TryParse(cleanVal, out p)) curSrv.Port = p; }
+                            else if (key == "Status") curSrv.Status = cleanVal;
+                            else if (key == "DeviceCount") { int c; if (int.TryParse(cleanVal, out c)) curSrv.DeviceCount = c; }
+                            else if (key == "PrimaryStoragePath") curSrv.PrimaryStoragePath = cleanVal;
+                            else if (key == "FailoverServerName") curSrv.FailoverServerName = cleanVal;
+                        }
                     }
                 }
             }

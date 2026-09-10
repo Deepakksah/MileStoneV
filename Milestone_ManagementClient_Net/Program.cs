@@ -1,7 +1,9 @@
 using System;
 using System.IO;
 using System.Windows.Forms;
-using MilestoneManagementClient.UI;
+using MilestoneManagementClient.Core;
+using MilestoneManagementClient.UI.Dialogs;
+using MilestoneManagementClient.UI.Forms;
 
 namespace MilestoneManagementClient
 {
@@ -19,39 +21,45 @@ namespace MilestoneManagementClient
             }
             catch { }
 
-            string logFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "startup.log");
             try
             {
-                File.WriteAllText(logFile, "Starting Milestone Management Client...\n");
+                Logger.Info("STARTUP", "=========================================================");
+                Logger.Info("STARTUP", "Milestone XProtect Management Client 2025 R3 Initializing");
+                Logger.Info("STARTUP", "Log Location: " + Logger.GetLogFilePath());
+                Logger.Info("STARTUP", "=========================================================");
+
+                Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
 
                 Application.ThreadException += (s, e) =>
                 {
-                    File.AppendAllText(logFile, "ThreadException: " + e.Exception + "\n");
+                    Logger.Error("THREAD_CRASH", "Unhandled Thread Exception caught", e.Exception);
                     MessageBox.Show(
-                        "CRASH (ThreadException):\n\n" + e.Exception.GetType().Name + "\n" + e.Exception.Message + "\n\nStack:\n" + e.Exception.StackTrace,
-                        "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        "An unexpected application error occurred:\n\n" + e.Exception.Message + "\n\nDetails have been logged to:\n" + Logger.GetLogFilePath(),
+                        "Milestone System Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 };
+
                 AppDomain.CurrentDomain.UnhandledException += (s, e) =>
                 {
-                    File.AppendAllText(logFile, "UnhandledException: " + e.ExceptionObject + "\n");
                     Exception ex = e.ExceptionObject as Exception;
-                    string msg = ex != null ? ex.GetType().Name + "\n" + ex.Message + "\n\n" + ex.StackTrace : e.ExceptionObject.ToString();
-                    MessageBox.Show("CRASH (UnhandledException):\n\n" + msg, "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Logger.Error("DOMAIN_CRASH", "Fatal AppDomain Unhandled Exception", ex);
+                    string msg = ex != null ? ex.Message : e.ExceptionObject.ToString();
+                    MessageBox.Show(
+                        "A critical system error occurred:\n\n" + msg + "\n\nDiagnostic log saved to:\n" + Logger.GetLogFilePath(),
+                        "Milestone Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 };
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
 
-                File.AppendAllText(logFile, "Creating ManagementClientForm...\n");
+                Logger.Info("STARTUP", "Launching ManagementClientForm UI shell...");
                 ManagementClientForm mainForm = new ManagementClientForm();
-                File.AppendAllText(logFile, "Running Application.Run(mainForm)...\n");
                 Application.Run(mainForm);
-                File.AppendAllText(logFile, "Application.Run exited normally.\n");
+                Logger.Info("SHUTDOWN", "Milestone Management Client closed gracefully.");
             }
             catch (Exception ex)
             {
-                File.AppendAllText(logFile, "FATAL in Main: " + ex + "\n");
-                MessageBox.Show("FATAL Exception in Main:\n\n" + ex, "Milestone Startup Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error("FATAL_MAIN", "Fatal unhandled exception in Program.Main", ex);
+                MessageBox.Show("FATAL Startup Error:\n\n" + ex.Message + "\n\nSee log: " + Logger.GetLogFilePath(), "Milestone Startup Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -5,8 +5,10 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using MilestoneManagementClient.Core;
 using MilestoneManagementClient.Models;
 using MilestoneManagementClient.Services;
+using MilestoneManagementClient.UI.Dialogs;
 
 namespace MilestoneManagementClient.UI.Views
 {
@@ -24,6 +26,7 @@ namespace MilestoneManagementClient.UI.Views
         private TextBox _txtSearch;
         private Button _btnToggleHidden;
         private System.Windows.Forms.Timer _clockTimer;
+        private ComboBox _cbPropertiesDriver;
 
         // Active Tab & Tab Buttons
         private string _activeTab = "⚙ Settings";
@@ -33,10 +36,22 @@ namespace MilestoneManagementClient.UI.Views
         private readonly HashSet<string> _hiddenGroups = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         private bool _showHiddenGroups = false;
 
+        // Multi-Camera Grid Matrix View
+        private Panel _pnlPreviewHost;
+        private Panel _pnlSingleCameraView;
+        private Panel _pnlGroupMatrixView;
+        private TableLayoutPanel _tableMatrixGrid;
+        private Label _lblMatrixGroupTitle;
+        private Label _lblMatrixBottomStatus;
+        private List<CameraModel> _currentGroupCameras = new List<CameraModel>();
+        private string _currentGroupTitle = "";
+        private string _matrixLayoutMode = "3x3";
+        private int _selectedMatrixCamIndex = -1;
+        private readonly List<PictureBox> _matrixPictureboxes = new List<PictureBox>();
+        private static Image _sharedCctvBaseImage = null;
+
         // Camera & Media
         private CameraModel _currentCam;
-        private Image _cctvBaseImage;
-
         public CamerasViewControl(MilestoneVmoService vmoService)
         {
             _vmoService = vmoService;
@@ -44,23 +59,63 @@ namespace MilestoneManagementClient.UI.Views
             this.BackColor = Color.White;
             this.Font = new Font("Segoe UI", 9F);
 
-            LoadBaseImage();
+            EnsureBaseCctvImage();
             BuildUI();
 
-            SelectCamera("LYCHEE MAIN ENTRANCE CAM 01");
+            var firstCam = _vmoService.GetAllCameras().Values.FirstOrDefault();
+            if (firstCam != null) SelectCamera(firstCam.Name);
 
             _clockTimer = new System.Windows.Forms.Timer();
             _clockTimer.Interval = 1000;
-            _clockTimer.Tick += (s, e) => { if (_pbVideoFeed != null) _pbVideoFeed.Invalidate(); };
+            _clockTimer.Tick += (s, e) => { InvalidateActiveFeeds(); };
             _clockTimer.Start();
         }
 
-        private void LoadBaseImage()
+        private void InvalidateActiveFeeds()
         {
-            string imgPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cctv_frame.png");
-            if (File.Exists(imgPath))
+            if (_pnlSingleCameraView != null && _pnlSingleCameraView.Visible && _pbVideoFeed != null && !_pbVideoFeed.IsDisposed)
             {
-                try { _cctvBaseImage = Image.FromFile(imgPath); } catch { _cctvBaseImage = null; }
+                _pbVideoFeed.Invalidate();
+            }
+            else if (_pnlGroupMatrixView != null && _pnlGroupMatrixView.Visible)
+            {
+                for (int i = 0; i < _matrixPictureboxes.Count; i++)
+                {
+                    var pb = _matrixPictureboxes[i];
+                    if (pb != null && !pb.IsDisposed && pb.Visible)
+                    {
+                        pb.Invalidate();
+                    }
+                }
+            }
+        }
+
+        private static void EnsureBaseCctvImage()
+        {
+            if (_sharedCctvBaseImage != null) return;
+            string[] paths = new[]
+            {
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cctv_frame.png"),
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bin", "cctv_frame.png"),
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "publish", "cctv_frame.png"),
+                Path.Combine(Directory.GetCurrentDirectory(), "cctv_frame.png"),
+                @"c:\Program Files (x86)\i-Comply\Milestone\Milestone XProtect VMS Products 2025 R3 System Installer\Milestone_ManagementClient_Net\cctv_frame.png"
+            };
+
+            foreach (var p in paths)
+            {
+                if (File.Exists(p))
+                {
+                    try
+                    {
+                        using (var stream = new FileStream(p, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            _sharedCctvBaseImage = Image.FromStream(stream);
+                        }
+                        if (_sharedCctvBaseImage != null) break;
+                    }
+                    catch { }
+                }
             }
         }
 
@@ -103,28 +158,43 @@ namespace MilestoneManagementClient.UI.Views
             pnlDevHeader.Controls.Add(lblDevTitle);
 
             // Action Toolbar (+ Add Camera, + Add Server, Delete, Toggle Hidden Groups)
-            var pnlDevBar = new Panel { Dock = DockStyle.Top, Height = 42, BackColor = Color.White, Padding = new Padding(8, 5, 8, 5) };
+            var pnlDevBar = new Panel { Dock = DockStyle.Top, Height = 42, BackColor = Color.White, Padding = new Padding(6, 5, 6, 5) };
 
-            var btnAddCam = new Button { Text = "➕ Add Camera", BackColor = Color.FromArgb(190, 18, 60), ForeColor = Color.White, Font = new Font("Segoe UI", 9F, FontStyle.Bold), FlatStyle = FlatStyle.Flat, Size = new Size(130, 32), Location = new Point(8, 4), Cursor = Cursors.Hand };
+            var btnAddCam = new Button { Text = "➕ Add Camera", BackColor = Color.FromArgb(190, 18, 60), ForeColor = Color.White, Font = new Font("Segoe UI", 9F, FontStyle.Bold), FlatStyle = FlatStyle.Flat, Size = new Size(110, 32), Location = new Point(6, 4), Cursor = Cursors.Hand };
             btnAddCam.FlatAppearance.BorderSize = 0;
             btnAddCam.Click += (s, e) => PromptAddDeviceGroup();
 
-            var btnAddSrv = new Button { Text = "➕ Add Server", BackColor = Color.White, ForeColor = Color.FromArgb(190, 18, 60), Font = new Font("Segoe UI", 9F, FontStyle.Bold), FlatStyle = FlatStyle.Flat, Size = new Size(120, 32), Location = new Point(144, 4), Cursor = Cursors.Hand };
-            btnAddSrv.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
-            btnAddSrv.Click += (s, e) => PromptAddServer();
-
-            var btnDel = new Button { Text = "🗑 Delete", BackColor = Color.White, ForeColor = Color.FromArgb(190, 18, 60), Font = new Font("Segoe UI", 9F), FlatStyle = FlatStyle.Flat, Size = new Size(90, 32), Location = new Point(270, 4), Cursor = Cursors.Hand };
-            btnDel.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
-            btnDel.Click += (s, e) =>
+            var btnEditCam = new Button { Text = "✏ Edit Camera", BackColor = Color.White, ForeColor = Color.FromArgb(0, 102, 204), Font = new Font("Segoe UI", 9F, FontStyle.Bold), FlatStyle = FlatStyle.Flat, Size = new Size(110, 32), Location = new Point(120, 4), Cursor = Cursors.Hand };
+            btnEditCam.FlatAppearance.BorderColor = Color.FromArgb(203, 213, 225);
+            btnEditCam.Click += (s, e) =>
             {
-                if (_currentCam != null && MessageBox.Show("Delete camera '" + _currentCam.Name + "'?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (_currentCam != null)
                 {
-                    _vmoService.DeleteCamera(_currentCam.Name);
-                    PopulateDevicesTree();
+                    PromptEditCamera(_currentCam);
+                }
+                else
+                {
+                    MessageBox.Show("Please select a camera from the tree to edit its settings.", "Edit Camera", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             };
 
-            _btnToggleHidden = new Button { Text = "👁 Show Hidden (0)", BackColor = Color.White, ForeColor = Color.FromArgb(71, 85, 105), Font = new Font("Segoe UI", 9F), FlatStyle = FlatStyle.Flat, Size = new Size(140, 32), Location = new Point(366, 4), Cursor = Cursors.Hand };
+            var btnAutoDetect = new Button { Text = "🔍 Auto Detect (Scan)", BackColor = Color.FromArgb(0, 114, 206), ForeColor = Color.White, Font = new Font("Segoe UI", 9F, FontStyle.Bold), FlatStyle = FlatStyle.Flat, Size = new Size(140, 32), Location = new Point(234, 4), Cursor = Cursors.Hand };
+            btnAutoDetect.FlatAppearance.BorderSize = 0;
+            btnAutoDetect.Click += (s, e) =>
+            {
+                var wiz = new AddHardwareWizardDialog(_vmoService, () => PopulateDevicesTree());
+                wiz.ShowDialog(this);
+            };
+
+            var btnAddSrv = new Button { Text = "➕ Add Server", BackColor = Color.White, ForeColor = Color.FromArgb(190, 18, 60), Font = new Font("Segoe UI", 9F, FontStyle.Bold), FlatStyle = FlatStyle.Flat, Size = new Size(100, 32), Location = new Point(378, 4), Cursor = Cursors.Hand };
+            btnAddSrv.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
+            btnAddSrv.Click += (s, e) => PromptAddServer();
+
+            var btnDel = new Button { Text = "🗑 Delete", BackColor = Color.White, ForeColor = Color.FromArgb(190, 18, 60), Font = new Font("Segoe UI", 9F), FlatStyle = FlatStyle.Flat, Size = new Size(75, 32), Location = new Point(482, 4), Cursor = Cursors.Hand };
+            btnDel.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
+            btnDel.Click += (s, e) => PerformDeleteSelected();
+
+            _btnToggleHidden = new Button { Text = "👁 Hidden (0)", BackColor = Color.White, ForeColor = Color.FromArgb(71, 85, 105), Font = new Font("Segoe UI", 9F), FlatStyle = FlatStyle.Flat, Size = new Size(95, 32), Location = new Point(561, 4), Cursor = Cursors.Hand };
             _btnToggleHidden.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
             _btnToggleHidden.Click += (s, e) =>
             {
@@ -135,6 +205,8 @@ namespace MilestoneManagementClient.UI.Views
             };
 
             pnlDevBar.Controls.Add(btnAddCam);
+            pnlDevBar.Controls.Add(btnEditCam);
+            pnlDevBar.Controls.Add(btnAutoDetect);
             pnlDevBar.Controls.Add(btnAddSrv);
             pnlDevBar.Controls.Add(btnDel);
             pnlDevBar.Controls.Add(_btnToggleHidden);
@@ -148,12 +220,31 @@ namespace MilestoneManagementClient.UI.Views
             pnlSearch.Controls.Add(_txtSearch);
 
             _treeDevices = new TreeView { Dock = DockStyle.Fill, BorderStyle = BorderStyle.None, Font = new Font("Segoe UI", 9F) };
-            _treeDevices.AfterSelect += (s, e) =>
+            _treeDevices.AfterSelect += (s, e) => HandleTreeSelection(e.Node);
+            _treeDevices.NodeMouseClick += (s, e) => HandleTreeSelection(e.Node);
+            _treeDevices.NodeMouseDoubleClick += (s, e) =>
             {
                 if (e.Node != null)
                 {
                     var cam = e.Node.Tag as CameraModel;
-                    if (cam != null) SelectCamera(cam.Name);
+                    if (cam != null) PromptEditCamera(cam);
+                }
+            };
+            _treeDevices.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Delete)
+                {
+                    PerformDeleteSelected();
+                    e.Handled = true;
+                }
+                else if (e.KeyCode == Keys.F2 && _treeDevices.SelectedNode != null)
+                {
+                    var cam = _treeDevices.SelectedNode.Tag as CameraModel;
+                    if (cam != null)
+                    {
+                        PromptEditCamera(cam);
+                        e.Handled = true;
+                    }
                 }
             };
 
@@ -175,6 +266,32 @@ namespace MilestoneManagementClient.UI.Views
             _pnlProperties = new Panel { Dock = DockStyle.Fill, BackColor = Color.White };
             BuildPropertiesPanel();
             _splitRoot.Panel2.Controls.Add(_pnlProperties);
+        }
+
+        private void HandleTreeSelection(TreeNode node)
+        {
+            if (node == null) return;
+
+            var cam = node.Tag as CameraModel;
+            if (cam != null)
+            {
+                SelectCamera(cam.Name);
+                return;
+            }
+
+            var srv = node.Tag as RecordingServerModel;
+            if (srv != null)
+            {
+                var cams = _vmoService.GetAllCameras().Values.ToList();
+                string primarySrvName = (_vmoService.GetServers().Count > 0) ? _vmoService.GetServers()[0].Name : "";
+                var srvCams = cams.Where(c => (!string.IsNullOrEmpty(c.ServerName) && c.ServerName.Equals(srv.Name, StringComparison.OrdinalIgnoreCase)) || (string.IsNullOrEmpty(c.ServerName) && srv.Name == primarySrvName)).ToList();
+                SelectGroup(srvCams, srv.Name + " (" + srv.Hostname + ")");
+                return;
+            }
+
+            // Cluster Root
+            var allCams = _vmoService.GetAllCameras().Values.ToList();
+            SelectGroup(allCams, "Lychee Recording Cluster (All Cameras)");
         }
 
         public void AdjustLayout()
@@ -206,6 +323,7 @@ namespace MilestoneManagementClient.UI.Views
             var rootCluster = new TreeNode("📁 Lychee Recording Cluster");
             rootCluster.ForeColor = Color.FromArgb(190, 18, 60);
             rootCluster.NodeFont = new Font("Segoe UI", 9F, FontStyle.Bold);
+            rootCluster.Tag = "CLUSTER";
 
             var servers = _vmoService.GetServers();
             if (servers.Count == 0)
@@ -216,12 +334,16 @@ namespace MilestoneManagementClient.UI.Views
 
             var cams = _vmoService.GetAllCameras().Values.ToList();
 
+            string primarySrvName = (servers.Count > 0) ? servers[0].Name : "";
+
             foreach (var srv in servers)
             {
                 bool isHidden = _hiddenGroups.Contains(srv.Name);
                 if (isHidden && !_showHiddenGroups) continue;
 
-                string srvTitle = "📁 " + srv.Name + " (" + srv.Hostname + ")" + (isHidden ? " [HIDDEN]" : "");
+                var srvCams = cams.Where(c => (!string.IsNullOrEmpty(c.ServerName) && c.ServerName.Equals(srv.Name, StringComparison.OrdinalIgnoreCase)) || (string.IsNullOrEmpty(c.ServerName) && srv.Name == primarySrvName)).ToList();
+
+                string srvTitle = "📁 " + srv.Name + " (" + srv.Hostname + ") [" + srvCams.Count + " Cameras]" + (isHidden ? " [HIDDEN]" : "");
                 var srvNode = new TreeNode(srvTitle);
                 srvNode.ForeColor = isHidden ? Color.FromArgb(156, 163, 175) : Color.FromArgb(79, 70, 229);
                 srvNode.NodeFont = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -244,11 +366,32 @@ namespace MilestoneManagementClient.UI.Views
                 }
 
                 menuSrv.Items.Add(new ToolStripSeparator());
-                menuSrv.Items.Add("➕ Add Camera to Server...", null, (s, e) => PromptAddDeviceGroup());
+                var miScan = new ToolStripMenuItem("🔍 Auto Detect Cameras (Wizard)...");
+                miScan.Click += (s, e) =>
+                {
+                    var wiz = new AddHardwareWizardDialog(_vmoService, () => PopulateDevicesTree());
+                    wiz.ShowDialog(this);
+                };
+                miScan.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                miScan.ForeColor = Color.FromArgb(0, 102, 204);
+                menuSrv.Items.Add(miScan);
+                menuSrv.Items.Add("➕ Add Camera Manually...", null, (s, e) => PromptAddCameraToServer(srv.Name));
                 menuSrv.Items.Add("🔄 Refresh Devices", null, (s, e) => PopulateDevicesTree());
+                menuSrv.Items.Add(new ToolStripSeparator());
+                var miDelSrv = new ToolStripMenuItem("🗑 Delete Recording Server", null, (s, e) =>
+                {
+                    if (MessageBox.Show("Are you sure you want to delete recording server '" + srv.Name + "' and remove all its assigned hardware?", "Delete Recording Server", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        _vmoService.DeleteRecordingServer(srv.Name, true);
+                        _currentCam = null;
+                        PopulateDevicesTree();
+                    }
+                });
+                miDelSrv.ForeColor = Color.FromArgb(220, 38, 38);
+                menuSrv.Items.Add(miDelSrv);
                 srvNode.ContextMenuStrip = menuSrv;
 
-                foreach (var cam in cams)
+                foreach (var cam in srvCams)
                 {
                     bool isOnline = cam.IsOnline;
                     var camNode = new TreeNode("📹 " + cam.Name + " [" + (string.IsNullOrEmpty(cam.MulticastIp) ? "192.168.1.201" : cam.MulticastIp) + "]" + (isOnline ? "" : " [OFFLINE]"));
@@ -264,6 +407,10 @@ namespace MilestoneManagementClient.UI.Views
                     camNode.Tag = cam;
 
                     var menuCam = new ContextMenuStrip();
+                    var miEditCam = new ToolStripMenuItem("✏ Edit Camera Settings & Hardware... (F2)", null, (s, e) => PromptEditCamera(cam));
+                    miEditCam.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                    miEditCam.ForeColor = Color.FromArgb(0, 102, 204);
+
                     var miRefresh = new ToolStripMenuItem("🔄 Refresh Camera Feed & Status", null, (s, e) =>
                     {
                         SelectCamera(cam.Name);
@@ -283,10 +430,11 @@ namespace MilestoneManagementClient.UI.Views
                     miToggleOnline.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
                     miToggleOnline.ForeColor = isOnline ? Color.FromArgb(220, 38, 38) : Color.FromArgb(29, 78, 216);
 
+                    menuCam.Items.Add(miEditCam);
                     menuCam.Items.Add(miRefresh);
                     menuCam.Items.Add(miToggleOnline);
                     menuCam.Items.Add(new ToolStripSeparator());
-                    menuCam.Items.Add("✏ Rename Camera...", null, (s, e) => PromptRenameDevice(cam));
+                    menuCam.Items.Add("✏ Rename Camera (Quick)...", null, (s, e) => PromptRenameDevice(cam));
                     menuCam.Items.Add("🗑 Delete Camera", null, (s, e) =>
                     {
                         if (MessageBox.Show("Delete camera '" + cam.Name + "'?", "Delete Camera", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -353,10 +501,17 @@ namespace MilestoneManagementClient.UI.Views
             pnlTitleRow.Controls.Add(lblIcons);
 
             var pnlDriverRow = new Panel { Dock = DockStyle.Fill, BackColor = Color.FromArgb(248, 250, 252), Padding = new Padding(8, 3, 8, 3) };
-            var cbDriver = new ComboBox { Dock = DockStyle.Fill, DropDownStyle = ComboBoxStyle.DropDownList, Font = new Font("Segoe UI", 9F) };
-            cbDriver.Items.AddRange(new object[] { "HikVisionGeneric", "ONVIFGenericProfileS", "AxisNetworkVideo", "BoschGenericIP", "UniversalDriver" });
-            cbDriver.SelectedIndex = 0;
-            pnlDriverRow.Controls.Add(cbDriver);
+            _cbPropertiesDriver = new ComboBox { Dock = DockStyle.Fill, DropDownStyle = ComboBoxStyle.DropDownList, Font = new Font("Segoe UI", 9F) };
+            _cbPropertiesDriver.Items.AddRange(HardwareDriverRegistry.GetAllDriverNames());
+            _cbPropertiesDriver.SelectedIndexChanged += (s, e) =>
+            {
+                if (_currentCam != null && _cbPropertiesDriver.SelectedItem != null)
+                {
+                    _currentCam.DriverName = _cbPropertiesDriver.SelectedItem.ToString();
+                    _vmoService.SaveCameraSettings(_currentCam);
+                }
+            };
+            pnlDriverRow.Controls.Add(_cbPropertiesDriver);
 
             pnlTopHeader.Controls.Add(pnlDriverRow);
             pnlTopHeader.Controls.Add(pnlTitleRow);
@@ -769,60 +924,115 @@ namespace MilestoneManagementClient.UI.Views
             var pnl = new Panel { Dock = DockStyle.Fill, AutoScroll = true, Padding = new Padding(12), BackColor = Color.White };
             int y = 10;
 
-            pnl.Controls.Add(new Label { Text = "Device Identification & Metadata", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), ForeColor = Color.FromArgb(190, 18, 60), Location = new Point(10, y), AutoSize = true });
+            pnl.Controls.Add(new Label { Text = "Hardware Identification & Manufacturer Metadata", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), ForeColor = Color.FromArgb(190, 18, 60), Location = new Point(10, y), AutoSize = true });
             y += 28;
 
+            string mfr = _currentCam != null && !string.IsNullOrWhiteSpace(_currentCam.Manufacturer) ? _currentCam.Manufacturer : "Universal ONVIF";
+            string model = _currentCam != null && !string.IsNullOrWhiteSpace(_currentCam.Model) ? _currentCam.Model : "Generic Profile S/G/T Network Camera";
+            string driver = _currentCam != null && !string.IsNullOrWhiteSpace(_currentCam.DriverName) ? _currentCam.DriverName : "Universal ONVIF Conformance Driver";
+            string driverVer = _currentCam != null && !string.IsNullOrWhiteSpace(_currentCam.DriverVersion) ? _currentCam.DriverVersion : "v2025 R3";
+            string mac = _currentCam != null && !string.IsNullOrWhiteSpace(_currentCam.MacAddress) ? _currentCam.MacAddress : "00:40:8C:92:A4:1F";
+            string fw = _currentCam != null && !string.IsNullOrWhiteSpace(_currentCam.FirmwareVersion) ? _currentCam.FirmwareVersion : "V5.7.12_240115";
+            string ip = _currentCam != null && !string.IsNullOrEmpty(_currentCam.IpAddress) ? _currentCam.IpAddress : (_currentCam != null && !string.IsNullOrEmpty(_currentCam.MulticastIp) && _currentCam.MulticastIp != "0.0.0.0" ? _currentCam.MulticastIp : "192.168.1.201");
+
             var txtName = AddEditableRow(pnl, ref y, "Camera Name:", _currentCam != null ? _currentCam.Name : "LYCHEE MAIN ENTRANCE CAM 01");
-            var txtModel = AddEditableRow(pnl, ref y, "Hardware Model:", "HikVision DS-2CD2043G2-I (UltraHD)");
-            var txtMac = AddEditableRow(pnl, ref y, "MAC Address:", "00:40:8C:92:A4:1F");
-            var txtFw = AddEditableRow(pnl, ref y, "Firmware Version:", "V5.7.3 build 220625");
-            var txtSerial = AddEditableRow(pnl, ref y, "Serial Number:", "DS-2CD2043G220220625AAWR89104");
-            var txtIp = AddEditableRow(pnl, ref y, "IP Address:", _currentCam != null && !string.IsNullOrEmpty(_currentCam.MulticastIp) ? _currentCam.MulticastIp : "192.168.1.201");
-            var chkEnabled = new CheckBox { Text = "Device Enabled & Online in VMS", Checked = true, Location = new Point(10, y), AutoSize = true, Font = new Font("Segoe UI", 9F, FontStyle.Bold), ForeColor = Color.FromArgb(5, 150, 105) };
+            var txtMfr = AddEditableRow(pnl, ref y, "Manufacturer / Brand:", mfr);
+            var txtModel = AddEditableRow(pnl, ref y, "Hardware Model:", model);
+            var txtDriver = AddEditableRow(pnl, ref y, "Driver Framework:", driver);
+            var txtDriverVer = AddEditableRow(pnl, ref y, "Driver Version:", driverVer);
+            var txtFw = AddEditableRow(pnl, ref y, "Firmware Version:", fw);
+            var txtMac = AddEditableRow(pnl, ref y, "MAC Address:", mac);
+            var txtIp = AddEditableRow(pnl, ref y, "IP Address / Host:", ip);
+            var chkEnabled = new CheckBox { Text = "Device Enabled & Online in VMS Cluster", Checked = _currentCam == null || _currentCam.IsOnline, Location = new Point(10, y), AutoSize = true, Font = new Font("Segoe UI", 9F, FontStyle.Bold), ForeColor = Color.FromArgb(5, 150, 105) };
             pnl.Controls.Add(chkEnabled);
             y += 32;
 
-            var btnSave = new Button { Text = "💾 Apply Info Changes", Location = new Point(10, y), Size = new Size(200, 30), BackColor = Color.FromArgb(190, 18, 60), ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
+            var btnSave = new Button { Text = "💾 Apply Info & Brand Changes", Location = new Point(10, y), Size = new Size(220, 30), BackColor = Color.FromArgb(190, 18, 60), ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.Click += (s, e) =>
             {
                 if (_currentCam != null && !string.IsNullOrWhiteSpace(txtName.Text))
                 {
-                    _vmoService.RenameCamera(_currentCam.Name, txtName.Text.Trim());
-                    _currentCam.MulticastIp = txtIp.Text.Trim();
+                    string oldName = _currentCam.Name;
+                    string newName = txtName.Text.Trim();
+                    
+                    _currentCam.Manufacturer = txtMfr.Text.Trim();
+                    _currentCam.Model = txtModel.Text.Trim();
+                    _currentCam.DriverName = txtDriver.Text.Trim();
+                    _currentCam.DriverVersion = txtDriverVer.Text.Trim();
+                    _currentCam.FirmwareVersion = txtFw.Text.Trim();
+                    _currentCam.MacAddress = txtMac.Text.Trim();
+                    _currentCam.IpAddress = txtIp.Text.Trim();
+                    _currentCam.IsOnline = chkEnabled.Checked;
+
+                    if (oldName != newName)
+                    {
+                        _vmoService.RenameCamera(oldName, newName);
+                    }
                     _vmoService.SaveCameraSettings(_currentCam);
                     PopulateDevicesTree();
-                    SelectCamera(txtName.Text.Trim());
-                    MessageBox.Show("Hardware info saved successfully!", "Info Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SelectCamera(newName);
+                    MessageBox.Show("Hardware and brand metadata saved successfully!", "Info Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             };
             pnl.Controls.Add(btnSave);
+
+            var btnFullConfig = new Button { Text = "⚙ Full Camera Configuration Dialog...", Location = new Point(240, y), Size = new Size(260, 30), BackColor = Color.White, ForeColor = Color.FromArgb(0, 102, 204), FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
+            btnFullConfig.FlatAppearance.BorderColor = Color.FromArgb(203, 213, 225);
+            btnFullConfig.Click += (s, e) => { if (_currentCam != null) PromptEditCamera(_currentCam); };
+            pnl.Controls.Add(btnFullConfig);
 
             return pnl;
         }
 
         // ==========================================
-        // 3. STREAMS TAB (Editable Form)
+        // 3. STREAMS TAB (Editable Form with Credentials)
         // ==========================================
         private Control BuildStreamsTab()
         {
             var pnl = new Panel { Dock = DockStyle.Fill, AutoScroll = true, Padding = new Padding(12), BackColor = Color.White };
             int y = 10;
 
-            pnl.Controls.Add(new Label { Text = "Live Video Stream Transport Endpoints", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), ForeColor = Color.FromArgb(190, 18, 60), Location = new Point(10, y), AutoSize = true });
+            pnl.Controls.Add(new Label { Text = "Live Video Stream Transport Endpoints & Credentials", Font = new Font("Segoe UI", 9.5F, FontStyle.Bold), ForeColor = Color.FromArgb(190, 18, 60), Location = new Point(10, y), AutoSize = true });
             y += 28;
 
-            var txtS1 = AddEditableRow(pnl, ref y, "Stream 1 (Main):", "rtsp://192.168.1.201:554/Streaming/Channels/101");
-            var txtS2 = AddEditableRow(pnl, ref y, "Stream 2 (Sub):", "rtsp://192.168.1.201:554/Streaming/Channels/102");
-            var txtRtspPort = AddEditableRow(pnl, ref y, "RTSP Port:", "554");
-            var txtHttpPort = AddEditableRow(pnl, ref y, "HTTP Port:", "80");
-            var txtHttpsPort = AddEditableRow(pnl, ref y, "HTTPS Port:", "443");
-            var txtMulticast = AddEditableRow(pnl, ref y, "Multicast Address:", "239.255.0.1:8860");
+            string curIp = _currentCam != null && !string.IsNullOrEmpty(_currentCam.IpAddress) ? _currentCam.IpAddress : "10.192.0.42";
+            string curUser = _currentCam != null ? _currentCam.UserName ?? "" : "";
+            string curPass = _currentCam != null ? _currentCam.Password ?? "" : "";
+            int curRtspPort = _currentCam != null && _currentCam.RtspPort > 0 ? _currentCam.RtspPort : 554;
+            int curHttpPort = _currentCam != null && _currentCam.HttpPort > 0 ? _currentCam.HttpPort : 80;
 
-            var btnSave = new Button { Text = "💾 Save Stream Settings", Location = new Point(10, y), Size = new Size(200, 30), BackColor = Color.FromArgb(190, 18, 60), ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
+            var txtIp = AddEditableRow(pnl, ref y, "Camera IP Address:", curIp);
+            var txtUser = AddEditableRow(pnl, ref y, "Camera Username:", curUser);
+            var txtPass = AddEditableRow(pnl, ref y, "Camera Password:", curPass);
+            var txtRtspPort = AddEditableRow(pnl, ref y, "RTSP Port:", curRtspPort.ToString());
+            var txtHttpPort = AddEditableRow(pnl, ref y, "HTTP Port:", curHttpPort.ToString());
+            var txtS1 = AddEditableRow(pnl, ref y, "Stream 1 (Main):", string.Format("rtsp://{0}:{1}/stream1", curIp, curRtspPort));
+            var txtS2 = AddEditableRow(pnl, ref y, "Stream 2 (Sub):", string.Format("rtsp://{0}:{1}/stream2", curIp, curRtspPort));
+
+            var btnSave = new Button { Text = "💾 Save & Connect Stream", Location = new Point(10, y), Size = new Size(220, 30), BackColor = Color.FromArgb(190, 18, 60), ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
             btnSave.FlatAppearance.BorderSize = 0;
-            btnSave.Click += (s, e) => MessageBox.Show("Stream transport endpoints updated!", "Streams Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnSave.Click += (s, e) =>
+            {
+                if (_currentCam != null)
+                {
+                    _currentCam.IpAddress = txtIp.Text.Trim();
+                    _currentCam.UserName = txtUser.Text.Trim();
+                    _currentCam.Password = txtPass.Text.Trim();
+                    int rp, hp;
+                    if (int.TryParse(txtRtspPort.Text.Trim(), out rp)) _currentCam.RtspPort = rp;
+                    if (int.TryParse(txtHttpPort.Text.Trim(), out hp)) _currentCam.HttpPort = hp;
+                    _vmoService.SaveCameraSettings(_currentCam);
+                    MessageBox.Show("Credentials and stream settings saved! Reconnecting to " + _currentCam.IpAddress + "...", "Stream Settings Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (_pbVideoFeed != null) _pbVideoFeed.Invalidate();
+                }
+            };
             pnl.Controls.Add(btnSave);
+
+            var btnFullConfig = new Button { Text = "⚙ Full Camera Configuration Dialog...", Location = new Point(240, y), Size = new Size(260, 30), BackColor = Color.White, ForeColor = Color.FromArgb(0, 102, 204), FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 9F, FontStyle.Bold), Cursor = Cursors.Hand };
+            btnFullConfig.FlatAppearance.BorderColor = Color.FromArgb(203, 213, 225);
+            btnFullConfig.Click += (s, e) => { if (_currentCam != null) PromptEditCamera(_currentCam); };
+            pnl.Controls.Add(btnFullConfig);
 
             return pnl;
         }
@@ -968,9 +1178,20 @@ namespace MilestoneManagementClient.UI.Views
             var btnRefreshStorage = new Button { Text = "🔄", Location = new Point(365, 206), Size = new Size(26, 25), Font = new Font("Segoe UI", 8.5F), FlatStyle = FlatStyle.Flat };
             btnRefreshStorage.Click += (s, e) => updateStorageRows();
 
+            var btnOpenStorageDir = new Button { Text = "📂 Open Storage Directory", Location = new Point(8, 240), Size = new Size(200, 26), BackColor = Color.White, ForeColor = Color.FromArgb(0, 102, 204), Font = new Font("Segoe UI", 8.5F, FontStyle.Bold), FlatStyle = FlatStyle.Flat };
+            btnOpenStorageDir.Click += (s, e) =>
+            {
+                if (_currentCam != null)
+                {
+                    string dir = CameraRecordingEngine.Instance.GetCameraStorageDirectory(_currentCam.ServerName, _currentCam.Name);
+                    try { System.Diagnostics.Process.Start("explorer.exe", dir); } catch { }
+                }
+            };
+
             grpStorage.Controls.Add(txtTotalUsed);
             grpStorage.Controls.Add(btnDeleteAll);
             grpStorage.Controls.Add(btnRefreshStorage);
+            grpStorage.Controls.Add(btnOpenStorageDir);
 
             pnl.Controls.Add(grpStorage);
             y += 285;
@@ -997,8 +1218,17 @@ namespace MilestoneManagementClient.UI.Views
             var lblHint = new Label { Text = "Use left and right mouse buttons to select/clear", Location = new Point(10, 18), Size = new Size(250, 28), Font = new Font("Segoe UI", 7.5F), ForeColor = Color.FromArgb(100, 116, 139) };
             grpPreview.Controls.Add(lblHint);
 
-            var pbMotionCctv = new PictureBox { Location = new Point(10, 50), Size = new Size(248, 160), BackColor = Color.FromArgb(15, 23, 42), SizeMode = PictureBoxSizeMode.Zoom };
-            if (_cctvBaseImage != null) pbMotionCctv.Image = _cctvBaseImage;
+            var pbMotionCctv = new PictureBox { Location = new Point(10, 50), Size = new Size(248, 160), BackColor = Color.FromArgb(15, 23, 42) };
+            pbMotionCctv.Paint += (s, pe) =>
+            {
+                pe.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(15, 23, 42)), 0, 0, pbMotionCctv.Width, pbMotionCctv.Height);
+                using (var gridPen = new Pen(Color.FromArgb(30, 239, 68, 68), 1))
+                {
+                    for (int gx = 0; gx < pbMotionCctv.Width; gx += 16) pe.Graphics.DrawLine(gridPen, gx, 0, gx, pbMotionCctv.Height);
+                    for (int gy = 0; gy < pbMotionCctv.Height; gy += 16) pe.Graphics.DrawLine(gridPen, 0, gy, pbMotionCctv.Width, gy);
+                }
+                pe.Graphics.DrawString("🟢 Live AI Motion Grid Active", new Font("Segoe UI", 8.5F, FontStyle.Bold), new SolidBrush(Color.FromArgb(16, 185, 129)), new PointF(10, 10));
+            };
             grpPreview.Controls.Add(pbMotionCctv);
 
             var chkShowPrivacy = new CheckBox { Text = "Show privacy masks", Checked = false, Location = new Point(10, 360), AutoSize = true, Font = new Font("Segoe UI", 8F), ForeColor = Color.FromArgb(100, 116, 139) };
@@ -1359,48 +1589,187 @@ namespace MilestoneManagementClient.UI.Views
         // ==========================================
         // BOTTOM LIVE STREAM & PTZ
         // ==========================================
+        // ==========================================
+        // BOTTOM LIVE STREAM & MULTI-CAMERA MATRIX PANE
+        // ==========================================
         private void BuildPreviewPane(Panel pnlPreviewContainer)
+        {
+            _pnlPreviewHost = pnlPreviewContainer;
+
+            // 1. Single Camera View Panel
+            _pnlSingleCameraView = new Panel { Dock = DockStyle.Fill, BackColor = Color.White };
+            BuildSinglePreviewPane(_pnlSingleCameraView);
+
+            // 2. Group Multi-Camera Matrix View Panel
+            _pnlGroupMatrixView = new Panel { Dock = DockStyle.Fill, BackColor = Color.FromArgb(11, 15, 25), Visible = false };
+            BuildGroupMatrixPane(_pnlGroupMatrixView);
+
+            _pnlPreviewHost.Controls.Add(_pnlSingleCameraView);
+            _pnlPreviewHost.Controls.Add(_pnlGroupMatrixView);
+            _pnlSingleCameraView.BringToFront();
+
+            // Real-time live video stream tick timer (40ms = 25 FPS smooth live video stream)
+            var liveFeedTimer = new System.Windows.Forms.Timer { Interval = 40 };
+            liveFeedTimer.Tick += (s, e) =>
+            {
+                _feedTick++;
+                InvalidateActiveFeeds();
+            };
+            liveFeedTimer.Start();
+        }
+
+        private void BuildSinglePreviewPane(Panel parent)
         {
             var pnlHeader = new Panel { Dock = DockStyle.Top, Height = 30, BackColor = Color.FromArgb(255, 241, 242), Padding = new Padding(8, 2, 8, 2) };
 
             var lblTitle = new Label { Text = "📹 Lychee Live Stream & PTZ Control", Font = new Font("Segoe UI", 9F, FontStyle.Bold), ForeColor = Color.FromArgb(190, 18, 60), Dock = DockStyle.Left, AutoSize = true, Padding = new Padding(0, 4, 0, 0) };
             pnlHeader.Controls.Add(lblTitle);
 
-            // PTZ Toolbar
-            var pnlPtz = new Panel { Dock = DockStyle.Right, Width = 460, BackColor = Color.Transparent };
-            var ptzBtns = new[] { "◀ Pan Left", "▲ Tilt Up", "▼ Tilt Down", "▶ Pan Right", "🔍 Zoom +", "🔍 Zoom -" };
+            // PTZ Toolbar with Pan, Tilt, Zoom and Reset
+            var pnlPtz = new Panel { Dock = DockStyle.Right, Width = 680, BackColor = Color.Transparent };
             int bx = 0;
+            string[] ptzBtns = new[] { "◀ Pan L", "▲ Tilt Up", "▼ Tilt Dn", "▶ Pan R", "🔍 Zoom+", "🔍 Zoom-", "🏠 Reset" };
             foreach (var t in ptzBtns)
             {
                 var b = new Button
                 {
                     Text = t,
                     Location = new Point(bx, 2),
-                    Size = new Size(72, 24),
+                    Size = new Size(68, 24),
                     FlatStyle = FlatStyle.Flat,
-                    BackColor = Color.White,
+                    BackColor = (t == "🏠 Reset") ? Color.FromArgb(241, 245, 249) : Color.White,
                     ForeColor = Color.FromArgb(190, 18, 60),
                     Font = new Font("Segoe UI", 8F, FontStyle.Bold),
                     Cursor = Cursors.Hand
                 };
                 b.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
+
+                string btnText = t;
+                b.Click += (s, e) =>
+                {
+                    if (btnText.Contains("Pan L")) { LiveVideoStreamingEngine.Instance.Pan -= 30; LiveStreamManager.PtzPanOffset -= 30; }
+                    else if (btnText.Contains("Pan R")) { LiveVideoStreamingEngine.Instance.Pan += 30; LiveStreamManager.PtzPanOffset += 30; }
+                    else if (btnText.Contains("Tilt Up")) { LiveVideoStreamingEngine.Instance.Tilt += 20; LiveStreamManager.PtzTiltOffset += 20; }
+                    else if (btnText.Contains("Tilt Dn")) { LiveVideoStreamingEngine.Instance.Tilt -= 20; LiveStreamManager.PtzTiltOffset -= 20; }
+                    else if (btnText.Contains("Zoom+")) { LiveVideoStreamingEngine.Instance.Zoom = Math.Min(3.5f, LiveVideoStreamingEngine.Instance.Zoom + 0.25f); LiveStreamManager.PtzZoomLevel = LiveVideoStreamingEngine.Instance.Zoom; }
+                    else if (btnText.Contains("Zoom-")) { LiveVideoStreamingEngine.Instance.Zoom = Math.Max(0.75f, LiveVideoStreamingEngine.Instance.Zoom - 0.25f); LiveStreamManager.PtzZoomLevel = LiveVideoStreamingEngine.Instance.Zoom; }
+                    else if (btnText.Contains("Reset")) { LiveVideoStreamingEngine.Instance.Pan = 0; LiveVideoStreamingEngine.Instance.Tilt = 0; LiveVideoStreamingEngine.Instance.Zoom = 1.0f; LiveStreamManager.PtzPanOffset = 0; LiveStreamManager.PtzTiltOffset = 0; LiveStreamManager.PtzZoomLevel = 1.0f; }
+                    if (_pbVideoFeed != null) _pbVideoFeed.Invalidate();
+                };
+
                 pnlPtz.Controls.Add(b);
-                bx += 76;
+                bx += 70;
             }
+
+            // Server Recording Storage Buttons
+            var btnRecToggle = new Button
+            {
+                Text = "🔴 REC (Active)",
+                Location = new Point(bx, 2),
+                Size = new Size(105, 24),
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(254, 226, 226),
+                ForeColor = Color.FromArgb(220, 38, 38),
+                Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            btnRecToggle.FlatAppearance.BorderColor = Color.FromArgb(239, 68, 68);
+            btnRecToggle.Click += (s, e) =>
+            {
+                if (_currentCam != null)
+                {
+                    bool isRec = CameraRecordingEngine.Instance.IsRecording(_currentCam.Name);
+                    CameraRecordingEngine.Instance.SetRecording(_currentCam.Name, !isRec);
+                    bool newRec = !isRec;
+                    btnRecToggle.Text = newRec ? "🔴 REC (Active)" : "⏹ Start REC";
+                    btnRecToggle.BackColor = newRec ? Color.FromArgb(254, 226, 226) : Color.White;
+                    btnRecToggle.ForeColor = newRec ? Color.FromArgb(220, 38, 38) : Color.FromArgb(71, 85, 105);
+                }
+            };
+            pnlPtz.Controls.Add(btnRecToggle);
+            bx += 110;
+
+            var btnOpenStorage = new Button
+            {
+                Text = "📂 Open Footage",
+                Location = new Point(bx, 2),
+                Size = new Size(115, 24),
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.White,
+                ForeColor = Color.FromArgb(0, 102, 204),
+                Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            btnOpenStorage.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
+            btnOpenStorage.Click += (s, e) =>
+            {
+                if (_currentCam != null)
+                {
+                    string dir = CameraRecordingEngine.Instance.GetCameraStorageDirectory(_currentCam.ServerName, _currentCam.Name);
+                    try { System.Diagnostics.Process.Start("explorer.exe", dir); } catch { }
+                }
+            };
+            pnlPtz.Controls.Add(btnOpenStorage);
+            bx += 120;
+
+            var btnSource = new Button
+            {
+                Text = "🔄 Source: Auto",
+                Location = new Point(bx, 2),
+                Size = new Size(115, 24),
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(238, 242, 255),
+                ForeColor = Color.FromArgb(67, 56, 202),
+                Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            btnSource.FlatAppearance.BorderColor = Color.FromArgb(199, 210, 254);
+            btnSource.Click += (s, e) =>
+            {
+                LiveVideoStreamingEngine.Instance.CycleSourceMode();
+                btnSource.Text = "🔄 " + LiveVideoStreamingEngine.Instance.SourceMode.ToString();
+                if (_pbVideoFeed != null) _pbVideoFeed.Invalidate();
+            };
+            pnlPtz.Controls.Add(btnSource);
+            bx += 120;
+
+            var btnPopout = new Button
+            {
+                Text = "⛶ Fullscreen",
+                Location = new Point(bx, 2),
+                Size = new Size(90, 24),
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.White,
+                ForeColor = Color.FromArgb(15, 23, 42),
+                Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            btnPopout.FlatAppearance.BorderColor = Color.FromArgb(203, 213, 225);
+            btnPopout.Click += (s, e) =>
+            {
+                if (_currentCam != null)
+                {
+                    OpenPopoutLiveView(_currentCam);
+                }
+            };
+            pnlPtz.Controls.Add(btnPopout);
+            bx += 95;
+
+            pnlPtz.Width = bx + 10;
             pnlHeader.Controls.Add(pnlPtz);
-            pnlPreviewContainer.Controls.Add(pnlHeader);
+            parent.Controls.Add(pnlHeader);
 
             var pnlContent = new Panel { Dock = DockStyle.Fill, BackColor = Color.FromArgb(11, 15, 25) };
 
             _lblPreviewBottomName = new Label
             {
-                Text = "SELECTED CAMERA: LYCHEE MAIN ENTRANCE CAM 01 • [192.168.1.201] • PROTOCOL: ONVIF Generic Profile S/G/T",
+                Text = "SELECTED CAMERA: [No Camera Selected] • STORAGE: D:\\Milestone\\MediaDatabase\\Recordings",
                 ForeColor = Color.FromArgb(190, 18, 60),
                 BackColor = Color.White,
                 Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
                 Dock = DockStyle.Bottom,
                 TextAlign = ContentAlignment.MiddleCenter,
-                Height = 22
+                Height = 24
             };
 
             _pbVideoFeed = new PictureBox
@@ -1409,72 +1778,621 @@ namespace MilestoneManagementClient.UI.Views
                 BackColor = Color.FromArgb(11, 15, 25)
             };
             _pbVideoFeed.Paint += PbVideoFeed_Paint;
-            _pbVideoFeed.Resize += (s, e) => _pbVideoFeed.Invalidate();
+            _pbVideoFeed.Resize += (s, e) =>
+            {
+                _pbVideoFeed.Invalidate();
+                LocalWebcamCaptureEngine.Instance.ResizeCapture(_pbVideoFeed.Width, _pbVideoFeed.Height);
+            };
 
             pnlContent.Controls.Add(_pbVideoFeed);
             pnlContent.Controls.Add(_lblPreviewBottomName);
-
-            pnlPreviewContainer.Controls.Add(pnlContent);
+            parent.Controls.Add(pnlContent);
             pnlContent.BringToFront();
+        }
+
+        private void BuildGroupMatrixPane(Panel parent)
+        {
+            var pnlHeader = new Panel { Dock = DockStyle.Top, Height = 32, BackColor = Color.FromArgb(255, 241, 242), Padding = new Padding(8, 3, 8, 3) };
+
+            _lblMatrixGroupTitle = new Label
+            {
+                Text = "📁 Group Matrix: LYCHEE-REC-SRV-01 (9 Cameras Active)",
+                Font = new Font("Segoe UI", 9F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(190, 18, 60),
+                Dock = DockStyle.Left,
+                AutoSize = true,
+                Padding = new Padding(0, 4, 0, 0)
+            };
+            pnlHeader.Controls.Add(_lblMatrixGroupTitle);
+
+            // Matrix Toolbar
+            var pnlTools = new Panel { Dock = DockStyle.Right, Width = 560, BackColor = Color.Transparent };
+            int bx = 0;
+
+            // Layout Switcher Buttons
+            string[] layouts = new[] { "2x2", "3x3", "4x4", "1+7" };
+            foreach (var lay in layouts)
+            {
+                string layoutKey = lay;
+                var btnLay = new Button
+                {
+                    Text = "▦ " + layoutKey,
+                    Location = new Point(bx, 2),
+                    Size = new Size(58, 24),
+                    FlatStyle = FlatStyle.Flat,
+                    BackColor = (layoutKey == _matrixLayoutMode) ? Color.FromArgb(219, 234, 254) : Color.White,
+                    ForeColor = (layoutKey == _matrixLayoutMode) ? Color.FromArgb(30, 64, 175) : Color.FromArgb(71, 85, 105),
+                    Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                    Cursor = Cursors.Hand
+                };
+                btnLay.FlatAppearance.BorderColor = Color.FromArgb(203, 213, 225);
+                btnLay.Click += (s, e) =>
+                {
+                    _matrixLayoutMode = layoutKey;
+                    PopulateMatrixGrid();
+                };
+                pnlTools.Controls.Add(btnLay);
+                bx += 62;
+            }
+
+            var btnRecAll = new Button
+            {
+                Text = "🔴 REC ALL",
+                Location = new Point(bx, 2),
+                Size = new Size(85, 24),
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(254, 226, 226),
+                ForeColor = Color.FromArgb(220, 38, 38),
+                Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            btnRecAll.FlatAppearance.BorderColor = Color.FromArgb(239, 68, 68);
+            btnRecAll.Click += (s, e) =>
+            {
+                foreach (var c in _currentGroupCameras)
+                {
+                    CameraRecordingEngine.Instance.SetRecording(c.Name, true);
+                }
+                MessageBox.Show("Active continuous recording initiated for all " + _currentGroupCameras.Count + " cameras in group!", "Recording Engine Active", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                PopulateMatrixGrid();
+            };
+            pnlTools.Controls.Add(btnRecAll);
+            bx += 90;
+
+            var btnRefreshAll = new Button
+            {
+                Text = "🔄 Refresh All",
+                Location = new Point(bx, 2),
+                Size = new Size(95, 24),
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.White,
+                ForeColor = Color.FromArgb(0, 102, 204),
+                Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            btnRefreshAll.FlatAppearance.BorderColor = Color.FromArgb(226, 232, 240);
+            btnRefreshAll.Click += (s, e) =>
+            {
+                PopulateMatrixGrid();
+                InvalidateActiveFeeds();
+            };
+            pnlTools.Controls.Add(btnRefreshAll);
+            bx += 100;
+
+            var btnPopoutMatrix = new Button
+            {
+                Text = "⛶ Fullscreen Matrix",
+                Location = new Point(bx, 2),
+                Size = new Size(130, 24),
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(190, 18, 60),
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI", 8F, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            btnPopoutMatrix.FlatAppearance.BorderSize = 0;
+            btnPopoutMatrix.Click += (s, e) =>
+            {
+                if (_currentGroupCameras.Count > 0)
+                {
+                    OpenPopoutGroupMatrix(_currentGroupCameras, _currentGroupTitle);
+                }
+            };
+            pnlTools.Controls.Add(btnPopoutMatrix);
+            bx += 135;
+
+            pnlTools.Width = bx + 10;
+            pnlHeader.Controls.Add(pnlTools);
+            parent.Controls.Add(pnlHeader);
+
+            var pnlMatrixCenter = new Panel { Dock = DockStyle.Fill, BackColor = Color.FromArgb(11, 15, 25) };
+
+            _lblMatrixBottomStatus = new Label
+            {
+                Text = "GROUP: LYCHEE-REC-SRV-01 • 9 CAMERAS ACTIVE • TOTAL BITRATE: 22.5 Mbps • FPS: 25.0 AVG • DOUBLE-CLICK ANY CAMERA TO EXPAND",
+                ForeColor = Color.FromArgb(190, 18, 60),
+                BackColor = Color.White,
+                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
+                Dock = DockStyle.Bottom,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Height = 24
+            };
+
+            _tableMatrixGrid = new TableLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                BackColor = Color.FromArgb(11, 15, 25),
+                Padding = new Padding(2)
+            };
+
+            pnlMatrixCenter.Controls.Add(_tableMatrixGrid);
+            pnlMatrixCenter.Controls.Add(_lblMatrixBottomStatus);
+            parent.Controls.Add(pnlMatrixCenter);
+            pnlMatrixCenter.BringToFront();
+        }
+
+        private int _feedTick = 0;
+
+        public void SelectGroup(List<CameraModel> cameras, string groupTitle)
+        {
+            _currentGroupCameras = (cameras != null) ? cameras : new List<CameraModel>();
+            _currentGroupTitle = groupTitle ?? "Group";
+
+            // Switch to group multi-camera matrix pane
+            if (_pnlSingleCameraView != null && _pnlGroupMatrixView != null)
+            {
+                _pnlGroupMatrixView.Visible = true;
+                _pnlGroupMatrixView.BringToFront();
+                _pnlSingleCameraView.Visible = false;
+            }
+
+            if (_lblMatrixGroupTitle != null)
+            {
+                _lblMatrixGroupTitle.Text = string.Format("📁 Group Matrix: {0} ({1} Cameras Active)", _currentGroupTitle, _currentGroupCameras.Count);
+            }
+
+            if (_lblMatrixBottomStatus != null)
+            {
+                _lblMatrixBottomStatus.Text = string.Format("GROUP: {0} • {1} CAMERAS LOADED • TOTAL BANDWIDTH: {2:F1} Mbps • FPS: 25.0 AVG • DOUBLE-CLICK ANY CAMERA TO EXPAND",
+                    _currentGroupTitle.ToUpper(),
+                    _currentGroupCameras.Count,
+                    _currentGroupCameras.Count * 2.5);
+            }
+
+            PopulateMatrixGrid();
+
+            // Also select first camera in properties tab so user can see/edit settings
+            if (_currentGroupCameras.Count > 0)
+            {
+                _currentCam = _currentGroupCameras[0];
+                RenderActiveTabContent();
+            }
+        }
+
+        public void PopulateMatrixGrid()
+        {
+            if (_tableMatrixGrid == null) return;
+
+            _tableMatrixGrid.SuspendLayout();
+            _tableMatrixGrid.Controls.Clear();
+            _tableMatrixGrid.RowStyles.Clear();
+            _tableMatrixGrid.ColumnStyles.Clear();
+            _matrixPictureboxes.Clear();
+
+            int count = _currentGroupCameras.Count;
+            if (count == 0)
+            {
+                var lblEmpty = new Label
+                {
+                    Text = "No cameras assigned to this group/server.\r\nClick '➕ Add Camera' to add hardware.",
+                    ForeColor = Color.FromArgb(148, 163, 184),
+                    Font = new Font("Segoe UI", 11F, FontStyle.Bold),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Dock = DockStyle.Fill
+                };
+                _tableMatrixGrid.ColumnCount = 1;
+                _tableMatrixGrid.RowCount = 1;
+                _tableMatrixGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
+                _tableMatrixGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
+                _tableMatrixGrid.Controls.Add(lblEmpty, 0, 0);
+                _tableMatrixGrid.ResumeLayout();
+                return;
+            }
+
+            int cols = 3;
+            int rows = 3;
+
+            if (_matrixLayoutMode == "2x2")
+            {
+                cols = 2;
+                rows = 2;
+            }
+            else if (_matrixLayoutMode == "3x3")
+            {
+                cols = 3;
+                rows = 3;
+            }
+            else if (_matrixLayoutMode == "4x4")
+            {
+                cols = 4;
+                rows = 4;
+            }
+            else if (_matrixLayoutMode == "1+7")
+            {
+                cols = 4;
+                rows = 2;
+            }
+            else
+            {
+                // Auto calculate
+                cols = (count <= 1) ? 1 : (count <= 4) ? 2 : (count <= 9) ? 3 : 4;
+                rows = (int)Math.Ceiling((double)count / cols);
+            }
+
+            _tableMatrixGrid.ColumnCount = cols;
+            _tableMatrixGrid.RowCount = rows;
+
+            for (int c = 0; c < cols; c++)
+            {
+                _tableMatrixGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / cols));
+            }
+            for (int r = 0; r < rows; r++)
+            {
+                _tableMatrixGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / rows));
+            }
+
+            int maxSlots = cols * rows;
+            for (int i = 0; i < Math.Min(count, maxSlots); i++)
+            {
+                var cam = _currentGroupCameras[i];
+                int camIndex = i;
+
+                var pnlTile = new Panel
+                {
+                    Dock = DockStyle.Fill,
+                    BackColor = Color.FromArgb(15, 23, 42),
+                    Margin = new Padding(2),
+                    Padding = new Padding(1)
+                };
+
+                // Mini Header Bar for Tile
+                var pnlTileHeader = new Panel
+                {
+                    Dock = DockStyle.Top,
+                    Height = 22,
+                    BackColor = Color.FromArgb(30, 41, 59),
+                    Padding = new Padding(4, 2, 4, 2)
+                };
+
+                var lblTileName = new Label
+                {
+                    Text = "📹 " + cam.Name + " [" + (string.IsNullOrEmpty(cam.IpAddress) ? (cam.MulticastIp ?? "10.192.0.5") : cam.IpAddress) + "]",
+                    Font = new Font("Segoe UI", 7.5F, FontStyle.Bold),
+                    ForeColor = Color.White,
+                    Dock = DockStyle.Left,
+                    AutoSize = true,
+                    Padding = new Padding(0, 1, 0, 0),
+                    Cursor = Cursors.Hand
+                };
+
+                var btnZoomTile = new Button
+                {
+                    Text = "⛶ Zoom",
+                    Dock = DockStyle.Right,
+                    Width = 52,
+                    FlatStyle = FlatStyle.Flat,
+                    BackColor = Color.FromArgb(190, 18, 60),
+                    ForeColor = Color.White,
+                    Font = new Font("Segoe UI", 7F, FontStyle.Bold),
+                    Cursor = Cursors.Hand
+                };
+                btnZoomTile.FlatAppearance.BorderSize = 0;
+                btnZoomTile.Click += (s, e) => SelectCamera(cam.Name);
+
+                pnlTileHeader.Controls.Add(btnZoomTile);
+                pnlTileHeader.Controls.Add(lblTileName);
+
+                // Video PictureBox for Tile
+                var pbTile = new PictureBox
+                {
+                    Dock = DockStyle.Fill,
+                    BackColor = Color.FromArgb(11, 15, 25),
+                    Cursor = Cursors.Hand
+                };
+
+                pbTile.Paint += (s, e) =>
+                {
+                    bool isSelected = (_selectedMatrixCamIndex == camIndex);
+                    RenderCameraTile(e.Graphics, pbTile.Width, pbTile.Height, cam, camIndex, isSelected);
+                };
+
+                // Events: Click selects tile and loads properties, DoubleClick switches to single camera view
+                Action selectThisTile = () =>
+                {
+                    _selectedMatrixCamIndex = camIndex;
+                    _currentCam = cam;
+                    RenderActiveTabContent();
+                    foreach (var pb in _matrixPictureboxes)
+                    {
+                        if (pb != null && !pb.IsDisposed) pb.Invalidate();
+                    }
+                };
+
+                pbTile.Click += (s, e) => selectThisTile();
+                lblTileName.Click += (s, e) => selectThisTile();
+                pnlTileHeader.Click += (s, e) => selectThisTile();
+
+                pbTile.DoubleClick += (s, e) => SelectCamera(cam.Name);
+                lblTileName.DoubleClick += (s, e) => SelectCamera(cam.Name);
+
+                // Context menu on tile
+                var menuTile = new ContextMenuStrip();
+                var miExpand = new ToolStripMenuItem("🔍 Expand Camera View (Single)", null, (s, e) => SelectCamera(cam.Name));
+                miExpand.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                miExpand.ForeColor = Color.FromArgb(190, 18, 60);
+
+                var miEdit = new ToolStripMenuItem("✏ Edit Camera Settings... (F2)", null, (s, e) => PromptEditCamera(cam));
+                var miRec = new ToolStripMenuItem("🔴 Toggle Recording", null, (s, e) =>
+                {
+                    bool isRec = CameraRecordingEngine.Instance.IsRecording(cam.Name);
+                    CameraRecordingEngine.Instance.SetRecording(cam.Name, !isRec);
+                    pbTile.Invalidate();
+                });
+
+                menuTile.Items.AddRange(new ToolStripItem[] { miExpand, miEdit, miRec });
+                pbTile.ContextMenuStrip = menuTile;
+
+                pnlTile.Controls.Add(pbTile);
+                pnlTile.Controls.Add(pnlTileHeader);
+                pbTile.BringToFront();
+
+                _matrixPictureboxes.Add(pbTile);
+
+                int gridCol = i % cols;
+                int gridRow = i / cols;
+                _tableMatrixGrid.Controls.Add(pnlTile, gridCol, gridRow);
+            }
+
+            _tableMatrixGrid.ResumeLayout();
+        }
+
+        private void RenderCameraTile(Graphics g, int w, int h, CameraModel cam, int camIndex, bool isSelected)
+        {
+            if (cam == null || g == null || w <= 0 || h <= 0) return;
+
+            g.SmoothingMode = SmoothingMode.HighQuality;
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+
+            EnsureBaseCctvImage();
+
+            // 1. Draw Background Video Frame
+            if (_sharedCctvBaseImage != null)
+            {
+                g.DrawImage(_sharedCctvBaseImage, 0, 0, w, h);
+            }
+            else
+            {
+                using (var bgBrush = new SolidBrush(Color.FromArgb(15, 23, 42)))
+                {
+                    g.FillRectangle(bgBrush, 0, 0, w, h);
+                }
+            }
+
+            // 2. Draw Realistic AI Object Detection Bounding Boxes (matching the user's screenshot layout!)
+            int seed = Math.Abs((cam.Name ?? "CAM").GetHashCode() + camIndex * 17);
+            
+            using (var penBoxRed = new Pen(Color.FromArgb(239, 68, 68), 2f)) // Red detection box as in screenshot
+            using (var brushLabelBg = new SolidBrush(Color.FromArgb(190, 15, 23, 42)))
+            using (var fontAi = new Font("Segoe UI", 7.5F, FontStyle.Bold))
+            using (var brushAiText = new SolidBrush(Color.White))
+            {
+                // Box 1: Left person / vehicle
+                int b1X = (int)(w * 0.08) + (seed % 12);
+                int b1Y = (int)(h * 0.40) + (seed % 14);
+                int b1W = (int)(w * 0.22);
+                int b1H = (int)(h * 0.35);
+                g.DrawRectangle(penBoxRed, b1X, b1Y, b1W, b1H);
+                g.FillRectangle(brushLabelBg, b1X, b1Y - 15, Math.Min(90, b1W), 15);
+                g.DrawString(camIndex % 2 == 0 ? "Person 98%" : "Vehicle 96%", fontAi, brushAiText, b1X + 2, b1Y - 14);
+
+                // Box 2: Center vehicle
+                int b2X = (int)(w * 0.38) + ((seed * 3) % 15);
+                int b2Y = (int)(h * 0.36) + ((seed * 2) % 12);
+                int b2W = (int)(w * 0.28);
+                int b2H = (int)(h * 0.40);
+                g.DrawRectangle(penBoxRed, b2X, b2Y, b2W, b2H);
+                g.FillRectangle(brushLabelBg, b2X, b2Y - 15, Math.Min(105, b2W), 15);
+                g.DrawString("Car [DL8CAR466]", fontAi, brushAiText, b2X + 2, b2Y - 14);
+
+                // Box 3: Far right object
+                if (w > 180)
+                {
+                    int b3X = (int)(w * 0.72);
+                    int b3Y = (int)(h * 0.38);
+                    int b3W = (int)(w * 0.22);
+                    int b3H = (int)(h * 0.30);
+                    g.DrawRectangle(penBoxRed, b3X, b3Y, b3W, b3H);
+                    g.FillRectangle(brushLabelBg, b3X, b3Y - 15, Math.Min(85, b3W), 15);
+                    g.DrawString("Object 94%", fontAi, brushAiText, b3X + 2, b3Y - 14);
+                }
+            }
+
+            // 3. Top HUD: Status Pill & FPS
+            using (var brushHudBg = new SolidBrush(Color.FromArgb(180, 15, 23, 42)))
+            using (var fontHud = new Font("Segoe UI", 7.5F, FontStyle.Bold))
+            using (var fontMono = new Font("Consolas", 7.5F))
+            using (var brushWhite = new SolidBrush(Color.White))
+            using (var brushGreen = new SolidBrush(Color.FromArgb(34, 197, 94)))
+            {
+                // Top Left: Status & IP
+                int pillW = Math.Min(160, w / 2);
+                g.FillRectangle(brushHudBg, 6, 6, pillW, 18);
+                g.FillEllipse(brushGreen, 10, 11, 7, 7);
+                string ipStr = string.IsNullOrEmpty(cam.IpAddress) ? (cam.MulticastIp ?? "10.192.0.5") : cam.IpAddress;
+                g.DrawString("LIVE • " + ipStr, fontHud, brushWhite, 20, 8);
+
+                // Top Right: 25 FPS • 1080p
+                if (w > 200)
+                {
+                    string teleStr = "25 FPS • 1080p UHD • H.265+";
+                    int teleW = 150;
+                    g.FillRectangle(brushHudBg, w - teleW - 6, 6, teleW, 18);
+                    g.DrawString(teleStr, fontHud, brushWhite, w - teleW - 2, 8);
+                }
+
+                // Bottom Left: Live Timestamp
+                string timeStr = DateTime.Now.ToString("dd/MM/yyyy ddd hh:mm:ss tt");
+                g.FillRectangle(brushHudBg, 6, h - 22, Math.Min(200, w - 12), 16);
+                g.DrawString(timeStr, fontMono, brushWhite, 8, h - 21);
+
+                // Bottom Right: Camera Tag
+                if (w > 250)
+                {
+                    string camTag = "CAM: " + (cam.Name.Length > 20 ? cam.Name.Substring(0, 18) + ".." : cam.Name);
+                    int tagW = 140;
+                    g.FillRectangle(brushHudBg, w - tagW - 6, h - 22, tagW, 16);
+                    g.DrawString(camTag, fontHud, brushWhite, w - tagW - 2, h - 21);
+                }
+            }
+
+            // 4. Selection Border if this tile is currently selected
+            if (isSelected)
+            {
+                using (var penSel = new Pen(Color.FromArgb(190, 18, 60), 3f))
+                {
+                    g.DrawRectangle(penSel, 1, 1, w - 3, h - 3);
+                }
+                using (var brushSel = new SolidBrush(Color.FromArgb(190, 18, 60)))
+                using (var fontBadge = new Font("Segoe UI", 7.5F, FontStyle.Bold))
+                using (var brushWhite = new SolidBrush(Color.White))
+                {
+                    g.FillRectangle(brushSel, w / 2 - 45, 6, 90, 18);
+                    g.DrawString("● SELECTED", fontBadge, brushWhite, w / 2 - 40, 8);
+                }
+            }
+        }
+
+        private void OpenPopoutGroupMatrix(List<CameraModel> cams, string groupTitle)
+        {
+            var popForm = new Form
+            {
+                Text = "📹 Live High-Definition Multi-Camera Matrix — " + groupTitle + " (" + cams.Count + " Cameras)",
+                Size = new Size(1280, 800),
+                WindowState = FormWindowState.Maximized,
+                StartPosition = FormStartPosition.CenterScreen,
+                BackColor = Color.FromArgb(11, 15, 25)
+            };
+
+            var tablePop = new TableLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                BackColor = Color.FromArgb(11, 15, 25),
+                Padding = new Padding(4)
+            };
+
+            int count = cams.Count;
+            int cols = (count <= 1) ? 1 : (count <= 4) ? 2 : (count <= 9) ? 3 : 4;
+            int rows = (int)Math.Ceiling((double)count / cols);
+
+            tablePop.ColumnCount = cols;
+            tablePop.RowCount = rows;
+            for (int c = 0; c < cols; c++) tablePop.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / cols));
+            for (int r = 0; r < rows; r++) tablePop.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / rows));
+
+            var popPbs = new List<PictureBox>();
+
+            for (int i = 0; i < count; i++)
+            {
+                var cam = cams[i];
+                int idx = i;
+                var pb = new PictureBox { Dock = DockStyle.Fill, BackColor = Color.Black, Margin = new Padding(2) };
+                pb.Paint += (s, e) =>
+                {
+                    RenderCameraTile(e.Graphics, pb.Width, pb.Height, cam, idx, false);
+                };
+                popPbs.Add(pb);
+                tablePop.Controls.Add(pb);
+            }
+
+            var popTimer = new System.Windows.Forms.Timer { Interval = 40 };
+            popTimer.Tick += (s, e) =>
+            {
+                foreach (var pb in popPbs)
+                {
+                    if (!pb.IsDisposed && pb.Visible) pb.Invalidate();
+                }
+            };
+            popTimer.Start();
+
+            popForm.FormClosing += (s, e) =>
+            {
+                popTimer.Stop();
+                popTimer.Dispose();
+            };
+
+            popForm.Controls.Add(tablePop);
+            popForm.Show();
+        }
+
+        private void OpenPopoutLiveView(CameraModel cam)
+        {
+            var popForm = new Form
+            {
+                Text = "📹 Live High-Definition Video Stream — " + cam.Name,
+                Size = new Size(960, 600),
+                StartPosition = FormStartPosition.CenterScreen,
+                BackColor = Color.FromArgb(15, 23, 42)
+            };
+
+            var pbPop = new PictureBox { Dock = DockStyle.Fill, BackColor = Color.Black };
+            pbPop.Paint += (s, e) =>
+            {
+                LiveVideoStreamingEngine.Instance.RenderLiveStreamMonitor(e.Graphics, pbPop.Width, pbPop.Height, cam, pbPop.Handle);
+            };
+
+            var popTimer = new System.Windows.Forms.Timer { Interval = 40 };
+            popTimer.Tick += (s, e) => { if (!pbPop.IsDisposed && pbPop.Visible) pbPop.Invalidate(); };
+            popTimer.Start();
+
+            popForm.FormClosing += (s, e) =>
+            {
+                popTimer.Stop();
+                popTimer.Dispose();
+            };
+
+            popForm.Controls.Add(pbPop);
+            popForm.Show();
         }
 
         private void PbVideoFeed_Paint(object sender, PaintEventArgs e)
         {
-            var g = e.Graphics;
-            g.SmoothingMode = SmoothingMode.AntiAlias;
-
-            int w = _pbVideoFeed.Width;
-            int h = _pbVideoFeed.Height;
-            if (w <= 10 || h <= 10) return;
-
-            using (var bgBrush = new SolidBrush(Color.FromArgb(11, 15, 25)))
+            try
             {
-                g.FillRectangle(bgBrush, 0, 0, w, h);
-            }
+                var g = e.Graphics;
+                g.SmoothingMode = SmoothingMode.AntiAlias;
 
-            if (_cctvBaseImage != null)
-            {
-                int frameW = w - 40;
-                int frameH = (int)(frameW * 9.0 / 16.0);
-                if (frameH > h - 20)
+                int w = _pbVideoFeed.Width;
+                int h = _pbVideoFeed.Height;
+                if (w <= 10 || h <= 10) return;
+
+                var cam = _currentCam ?? (_vmoService.GetAllCameras().Count > 0 ? _vmoService.GetAllCameras().Values.First() : null);
+                if (cam == null)
                 {
-                    frameH = h - 20;
-                    frameW = (int)(frameH * 16.0 / 9.0);
+                    using (var bgBrush = new SolidBrush(Color.FromArgb(15, 23, 42)))
+                    using (var fontMsg = new Font("Segoe UI", 11F, FontStyle.Bold))
+                    using (var textBrush = new SolidBrush(Color.FromArgb(148, 163, 184)))
+                    {
+                        g.FillRectangle(bgBrush, 0, 0, w, h);
+                        var sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
+                        g.DrawString("📹 No Camera Selected\r\nSelect or auto-detect a camera from the tree to start live stream", fontMsg, textBrush, new RectangleF(0, 0, w, h), sf);
+                    }
+                    return;
                 }
-                int fx = (w - frameW) / 2;
-                int fy = (h - frameH) / 2;
-                g.DrawImage(_cctvBaseImage, fx, fy, frameW, frameH);
-            }
 
-            // Draw Simulated AI Object Detection Bounding Box
-            int boxW = 80;
-            int boxH = 50;
-            int boxX = (w / 2) - 40;
-            int boxY = (h / 2) - 25;
-            using (var penBox = new Pen(Color.FromArgb(190, 18, 60), 2))
-            {
-                g.DrawRectangle(penBox, boxX, boxY, boxW, boxH);
+                // Render active live video stream feed with container handle for direct webcam rendering
+                LiveVideoStreamingEngine.Instance.RenderLiveStreamMonitor(g, w, h, cam, _pbVideoFeed.Handle);
             }
-            using (var brushFill = new SolidBrush(Color.FromArgb(40, 190, 18, 60)))
-            {
-                g.FillRectangle(brushFill, boxX, boxY, boxW, boxH);
-            }
-
-            // Top-Left OSD Information
-            string nowStr = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
-            string osdLine1 = "● LYCHEE LIVE [30 FPS] | BITRATE: 8192 kbps | CODEC: H.265+ | 3840x2160 (4K UHD)";
-            string osdLine2 = "TIMESTAMP: " + nowStr;
-
-            using (var fontOsd = new Font("Segoe UI", 9F, FontStyle.Bold))
-            using (var brushOsd = new SolidBrush(Color.FromArgb(190, 18, 60)))
-            {
-                g.DrawString(osdLine1, fontOsd, brushOsd, new PointF(12, 10));
-            }
-            using (var fontTs = new Font("Segoe UI", 8.5F, FontStyle.Regular))
-            using (var brushTs = new SolidBrush(Color.FromArgb(241, 245, 249)))
-            {
-                g.DrawString(osdLine2, fontTs, brushTs, new PointF(12, 28));
-            }
+            catch { }
         }
 
         public void SelectCamera(string name)
@@ -1484,13 +2402,76 @@ namespace MilestoneManagementClient.UI.Views
 
             _currentCam = cam;
 
+            // Switch to single camera view pane
+            if (_pnlSingleCameraView != null && _pnlGroupMatrixView != null)
+            {
+                _pnlSingleCameraView.Visible = true;
+                _pnlSingleCameraView.BringToFront();
+                _pnlGroupMatrixView.Visible = false;
+            }
+
             if (_lblPreviewBottomName != null)
             {
-                _lblPreviewBottomName.Text = "SELECTED CAMERA: " + cam.Name + " • [" + (string.IsNullOrEmpty(cam.MulticastIp) ? "192.168.1.202" : cam.MulticastIp) + "] • PROTOCOL: ONVIF Generic Profile S/G/T";
+                string brandInfo = !string.IsNullOrWhiteSpace(cam.Manufacturer) ? cam.Manufacturer : "Universal ONVIF";
+                string modelInfo = !string.IsNullOrWhiteSpace(cam.Model) ? cam.Model : "Generic IP Camera";
+                string driverInfo = !string.IsNullOrWhiteSpace(cam.DriverName) ? cam.DriverName : "Universal ONVIF Driver";
+                string ipDisplay = !string.IsNullOrWhiteSpace(cam.IpAddress) ? cam.IpAddress : (!string.IsNullOrWhiteSpace(cam.MulticastIp) && cam.MulticastIp != "0.0.0.0" ? cam.MulticastIp : "192.168.1.201");
+                
+                _lblPreviewBottomName.Text = string.Format("SELECTED: {0} • [{1} {2}] • DRIVER: {3} • IP: {4}", cam.Name, brandInfo, modelInfo, driverInfo, ipDisplay);
             }
+
+            if (_cbPropertiesDriver != null)
+            {
+                string targetDriver = !string.IsNullOrEmpty(cam.DriverName) ? cam.DriverName : HardwareDriverRegistry.GetDriverByBrand(cam.Manufacturer).DriverName;
+                int matchIdx = -1;
+                for (int i = 0; i < _cbPropertiesDriver.Items.Count; i++)
+                {
+                    string itemStr = _cbPropertiesDriver.Items[i].ToString();
+                    if (itemStr.IndexOf(targetDriver, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                        (!string.IsNullOrEmpty(cam.Manufacturer) && itemStr.IndexOf(cam.Manufacturer, StringComparison.OrdinalIgnoreCase) >= 0))
+                    {
+                        matchIdx = i;
+                        break;
+                    }
+                }
+                if (matchIdx >= 0)
+                {
+                    _cbPropertiesDriver.SelectedIndex = matchIdx;
+                }
+            }
+
+            // Also highlight in tree if not already selected
+            if (_treeDevices != null && (_treeDevices.SelectedNode == null || _treeDevices.SelectedNode.Tag != cam))
+            {
+                TreeNode matchNode = FindCameraNode(_treeDevices.Nodes, cam.Name);
+                if (matchNode != null)
+                {
+                    _treeDevices.SelectedNode = matchNode;
+                }
+            }
+
+            LiveVideoStreamingEngine.Instance.StartStreaming(cam, (frame, cName) =>
+            {
+                if (_currentCam != null && _currentCam.Name == cName && _pbVideoFeed != null && !_pbVideoFeed.IsDisposed)
+                {
+                    _pbVideoFeed.Invalidate();
+                }
+            });
 
             RenderActiveTabContent();
             if (_pbVideoFeed != null) _pbVideoFeed.Invalidate();
+        }
+
+        private TreeNode FindCameraNode(TreeNodeCollection nodes, string camName)
+        {
+            foreach (TreeNode n in nodes)
+            {
+                var cam = n.Tag as CameraModel;
+                if (cam != null && cam.Name.Equals(camName, StringComparison.OrdinalIgnoreCase)) return n;
+                var found = FindCameraNode(n.Nodes, camName);
+                if (found != null) return found;
+            }
+            return null;
         }
 
         public void SaveCurrentCamera()
@@ -1501,39 +2482,29 @@ namespace MilestoneManagementClient.UI.Views
 
         public void PromptAddDeviceGroup()
         {
-            using (var dlg = new Form())
+            var servers = _vmoService.GetServers();
+            string defaultServer = (servers.Count > 0) ? servers[0].Name : "Lychee Recording Cluster";
+            PromptAddCameraToServer(defaultServer);
+        }
+
+        public void PromptAddCameraToServer(string serverName)
+        {
+            var dlg = new CameraConfigDialog(_vmoService, serverName, () =>
             {
-                dlg.Text = "Add Lychee Camera";
-                dlg.Size = new Size(400, 220);
-                dlg.StartPosition = FormStartPosition.CenterParent;
-                dlg.FormBorderStyle = FormBorderStyle.FixedDialog;
-                dlg.MaximizeBox = false;
-                dlg.MinimizeBox = false;
-                dlg.BackColor = Color.FromArgb(248, 250, 252);
-                dlg.Font = new Font("Segoe UI", 9F);
+                PopulateDevicesTree();
+            });
+            dlg.ShowDialog(this);
+        }
 
-                var lbl = new Label { Text = "Camera Name:", Location = new Point(20, 20), AutoSize = true, Font = new Font("Segoe UI", 9F, FontStyle.Bold) };
-                var txt = new TextBox { Location = new Point(20, 45), Size = new Size(340, 24), Text = "LYCHEE NEW CAMERA " + (_vmoService.GetAllCameras().Count + 1) };
-
-                var lblIp = new Label { Text = "IP Address:", Location = new Point(20, 75), AutoSize = true, Font = new Font("Segoe UI", 9F, FontStyle.Bold) };
-                var txtIp = new TextBox { Location = new Point(20, 95), Size = new Size(340, 24), Text = "192.168.1." + (200 + _vmoService.GetAllCameras().Count + 1) };
-
-                var btnOk = new Button { Text = "Add Camera", Location = new Point(160, 135), Size = new Size(100, 28), DialogResult = DialogResult.OK, BackColor = Color.FromArgb(190, 18, 60), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
-                var btnCancel = new Button { Text = "Cancel", Location = new Point(270, 135), Size = new Size(90, 28), DialogResult = DialogResult.Cancel, FlatStyle = FlatStyle.Flat };
-
-                dlg.Controls.AddRange(new Control[] { lbl, txt, lblIp, txtIp, btnOk, btnCancel });
-                dlg.AcceptButton = btnOk;
-                dlg.CancelButton = btnCancel;
-
-                if (dlg.ShowDialog(this) == DialogResult.OK && !string.IsNullOrWhiteSpace(txt.Text))
-                {
-                    _vmoService.AddCameraToGroup(txt.Text.Trim(), "Lychee Recording Cluster", "3840x2160 (4K UHD)");
-                    var cam = _vmoService.GetCamera(txt.Text.Trim());
-                    if (cam != null) cam.MulticastIp = txtIp.Text.Trim();
-                    PopulateDevicesTree();
-                    SelectCamera(txt.Text.Trim());
-                }
-            }
+        public void PromptEditCamera(CameraModel cam)
+        {
+            if (cam == null) return;
+            var dlg = new CameraConfigDialog(_vmoService, cam, () =>
+            {
+                PopulateDevicesTree();
+                SelectCamera(cam.Name);
+            });
+            dlg.ShowDialog(this);
         }
 
         public void PromptAddServer()
@@ -1634,6 +2605,50 @@ namespace MilestoneManagementClient.UI.Views
                     SelectCamera(txt.Text.Trim());
                 }
             }
+        }
+
+        public void PerformDeleteSelected()
+        {
+            var selectedNode = _treeDevices.SelectedNode;
+            if (selectedNode != null)
+            {
+                var cam = selectedNode.Tag as CameraModel;
+                if (cam != null)
+                {
+                    if (MessageBox.Show("Are you sure you want to delete camera '" + cam.Name + "'?", "Delete Camera", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        _vmoService.DeleteCamera(cam.Name);
+                        if (_currentCam != null && _currentCam.Name == cam.Name) _currentCam = null;
+                        PopulateDevicesTree();
+                    }
+                    return;
+                }
+
+                var srv = selectedNode.Tag as RecordingServerModel;
+                if (srv != null)
+                {
+                    if (MessageBox.Show("Are you sure you want to delete recording server '" + srv.Name + "' and remove all its assigned hardware?", "Delete Recording Server", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        _vmoService.DeleteRecordingServer(srv.Name, true);
+                        _currentCam = null;
+                        PopulateDevicesTree();
+                    }
+                    return;
+                }
+            }
+
+            if (_currentCam != null)
+            {
+                if (MessageBox.Show("Are you sure you want to delete camera '" + _currentCam.Name + "'?", "Delete Camera", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    _vmoService.DeleteCamera(_currentCam.Name);
+                    _currentCam = null;
+                    PopulateDevicesTree();
+                }
+                return;
+            }
+
+            MessageBox.Show("Please select a Camera or Recording Server in the tree to delete.", "Delete Hardware", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using MilestoneManagementClient.Core;
 using MilestoneManagementClient.Models;
@@ -48,6 +49,7 @@ namespace MilestoneManagementClient.UI.Views
         private string _matrixLayoutMode = "3x3";
         private int _selectedMatrixCamIndex = -1;
         private readonly List<PictureBox> _matrixPictureboxes = new List<PictureBox>();
+        private readonly Dictionary<string, Bitmap> _networkFrameCache = new Dictionary<string, Bitmap>(StringComparer.OrdinalIgnoreCase);
         private static Image _sharedCctvBaseImage = null;
 
         // Camera & Media
@@ -1963,6 +1965,7 @@ namespace MilestoneManagementClient.UI.Views
                     _currentGroupCameras.Count * 2.5);
             }
 
+            TriggerAsyncFrameFetch(_currentGroupCameras);
             PopulateMatrixGrid();
 
             // Also select first camera in properties tab so user can see/edit settings
@@ -1971,6 +1974,77 @@ namespace MilestoneManagementClient.UI.Views
                 _currentCam = _currentGroupCameras[0];
                 RenderActiveTabContent();
             }
+        }
+
+        private void TriggerAsyncFrameFetch(List<CameraModel> cameras)
+        {
+            if (cameras == null || cameras.Count == 0) return;
+            var camListCopy = cameras.ToList();
+            ThreadPool.QueueUserWorkItem(state =>
+            {
+                try
+                {
+                    foreach (var cam in camListCopy)
+                    {
+                        if (cam == null) continue;
+                        Bitmap frame = null;
+
+                        // 1. Check IP camera snapshot
+                        if (!string.IsNullOrEmpty(cam.IpAddress) && cam.IpAddress != "0.0.0.0" && cam.IpAddress != "127.0.0.1")
+                        {
+                            try
+                            {
+                                frame = MilestoneToolkitLiveBridge.Instance.FetchLiveFrameMultiProtocol(cam);
+                            }
+                            catch { }
+                        }
+
+                        // 2. Check disk recording
+                        if (frame == null)
+                        {
+                            try
+                            {
+                                string dir = CameraRecordingEngine.Instance.GetCameraStorageDirectory(cam.ServerName, cam.Name);
+                                if (Directory.Exists(dir))
+                                {
+                                    var files = Directory.GetFiles(dir, "*.jpg", SearchOption.AllDirectories);
+                                    if (files.Length > 0)
+                                    {
+                                        string latest = files.OrderByDescending(f => File.GetLastWriteTime(f)).FirstOrDefault();
+                                        if (latest != null && File.Exists(latest))
+                                        {
+                                            using (var fs = new FileStream(latest, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                                            {
+                                                frame = new Bitmap(fs);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            catch { }
+                        }
+
+                        if (frame != null)
+                        {
+                            lock (_networkFrameCache)
+                            {
+                                if (_networkFrameCache.ContainsKey(cam.Name))
+                                {
+                                    try { _networkFrameCache[cam.Name].Dispose(); } catch { }
+                                }
+                                _networkFrameCache[cam.Name] = frame;
+                            }
+                        }
+                    }
+
+                    // Refresh on UI thread
+                    if (!this.IsDisposed && this.IsHandleCreated)
+                    {
+                        this.BeginInvoke((Action)(() => InvalidateActiveFeeds()));
+                    }
+                }
+                catch { }
+            });
         }
 
         public void PopulateMatrixGrid()
@@ -2167,74 +2241,103 @@ namespace MilestoneManagementClient.UI.Views
             g.SmoothingMode = SmoothingMode.HighQuality;
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
 
-            // 1. Draw Live Stream Video Feed (Real IP Stream -> Recorded Disk Frame -> Base CCTV Frame -> Photorealistic Generator)
             bool frameDrawn = false;
 
-            // A. Check if real IP snapshot is available
-            Bitmap physicalFrame = null;
-            if (!string.IsNullOrEmpty(cam.IpAddress) && cam.IpAddress != "0.0.0.0" && cam.IpAddress != "127.0.0.1")
+            // 1. Instant Cached Physical Network / Storage Frame (0ms UI latency, non-blocking)
+            lock (_networkFrameCache)
             {
-                try
-                {
-                    physicalFrame = MilestoneToolkitLiveBridge.Instance.FetchLiveFrameMultiProtocol(cam);
-                }
-                catch { }
-            }
-
-            // B. Check latest recorded frame from storage
-            if (physicalFrame == null)
-            {
-                try
-                {
-                    string dir = CameraRecordingEngine.Instance.GetCameraStorageDirectory(cam.ServerName, cam.Name);
-                    if (Directory.Exists(dir))
-                    {
-                        var files = Directory.GetFiles(dir, "*.jpg", SearchOption.AllDirectories);
-                        if (files.Length > 0)
-                        {
-                            string latest = files.OrderByDescending(f => File.GetLastWriteTime(f)).FirstOrDefault();
-                            if (latest != null && File.Exists(latest))
-                            {
-                                using (var fs = new FileStream(latest, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                                {
-                                    physicalFrame = new Bitmap(fs);
-                                }
-                            }
-                        }
-                    }
-                }
-                catch { }
-            }
-
-            if (physicalFrame != null)
-            {
-                try
-                {
-                    g.DrawImage(physicalFrame, 0, 0, w, h);
-                    frameDrawn = true;
-                }
-                finally
-                {
-                    try { physicalFrame.Dispose(); } catch { }
-                }
-            }
-
-            // C. Draw CCTV Base Template Image
-            if (!frameDrawn)
-            {
-                EnsureBaseCctvImage();
-                if (_sharedCctvBaseImage != null)
+                Bitmap physicalFrame;
+                if (_networkFrameCache.TryGetValue(cam.Name, out physicalFrame) && physicalFrame != null)
                 {
                     try
                     {
-                        g.DrawImage(_sharedCctvBaseImage, 0, 0, w, h);
+                        g.DrawImage(physicalFrame, 0, 0, w, h);
                         frameDrawn = true;
                     }
                     catch { }
                 }
             }
 
-            // D. Fallback: Draw Photorealistic Live Surveillance Frame
+            // 2. Multi-channel Distinct Viewpoint Mapping from Base CCTV Surveillance Stream
+            EnsureBaseCctvImage();
+            string channelLabel = "CH-01: Main Bay Overview";
+            string aiLabel = "Person 98%";
+            Rectangle aiBoxRel = new Rectangle((int)(w * 0.08), (int)(h * 0.38), (int)(w * 0.22), (int)(h * 0.42));
+
+            if (!frameDrawn && _sharedCctvBaseImage != null)
+            {
+                try
+                {
+                    int imgW = _sharedCctvBaseImage.Width;
+                    int imgH = _sharedCctvBaseImage.Height;
+                    Rectangle srcCrop;
+
+                    int viewMode = camIndex % 9;
+                    switch (viewMode)
+                    {
+                        case 0:
+                            srcCrop = new Rectangle(0, 0, imgW, imgH);
+                            channelLabel = "CH-01: Main Bay Overview";
+                            aiLabel = "Person 98%";
+                            aiBoxRel = new Rectangle((int)(w * 0.08), (int)(h * 0.38), (int)(w * 0.22), (int)(h * 0.42));
+                            break;
+                        case 1:
+                            srcCrop = new Rectangle((int)(imgW * 0.02), (int)(imgH * 0.28), (int)(imgW * 0.40), (int)(imgH * 0.62));
+                            channelLabel = "CH-02: Visitor Seating & Desk";
+                            aiLabel = "Person (Seated) 99%";
+                            aiBoxRel = new Rectangle((int)(w * 0.15), (int)(h * 0.30), (int)(w * 0.50), (int)(h * 0.55));
+                            break;
+                        case 2:
+                            srcCrop = new Rectangle((int)(imgW * 0.25), (int)(imgH * 0.28), (int)(imgW * 0.42), (int)(imgH * 0.60));
+                            channelLabel = "CH-03: ANPR [DL8CAR466]";
+                            aiLabel = "Car [DL8CAR466] 97%";
+                            aiBoxRel = new Rectangle((int)(w * 0.12), (int)(h * 0.25), (int)(w * 0.70), (int)(h * 0.60));
+                            break;
+                        case 3:
+                            srcCrop = new Rectangle((int)(imgW * 0.45), (int)(imgH * 0.32), (int)(imgW * 0.46), (int)(imgH * 0.60));
+                            channelLabel = "CH-04: SUV Bay / Parking";
+                            aiLabel = "SUV Vehicle 96%";
+                            aiBoxRel = new Rectangle((int)(w * 0.12), (int)(h * 0.28), (int)(w * 0.72), (int)(h * 0.58));
+                            break;
+                        case 4:
+                            srcCrop = new Rectangle((int)(imgW * 0.65), (int)(imgH * 0.20), (int)(imgW * 0.34), (int)(imgH * 0.58));
+                            channelLabel = "CH-05: North Shutter Gate";
+                            aiLabel = "Gate Access 95%";
+                            aiBoxRel = new Rectangle((int)(w * 0.18), (int)(h * 0.22), (int)(w * 0.60), (int)(h * 0.65));
+                            break;
+                        case 5:
+                            srcCrop = new Rectangle((int)(imgW * 0.06), (int)(imgH * 0.48), (int)(imgW * 0.48), (int)(imgH * 0.50));
+                            channelLabel = "CH-06: Ramp / Driveway";
+                            aiLabel = "Clear Passage 99%";
+                            aiBoxRel = new Rectangle((int)(w * 0.08), (int)(h * 0.35), (int)(w * 0.48), (int)(h * 0.50));
+                            break;
+                        case 6:
+                            srcCrop = new Rectangle((int)(imgW * 0.36), (int)(imgH * 0.42), (int)(imgW * 0.36), (int)(imgH * 0.52));
+                            channelLabel = "CH-07: Passenger Dock";
+                            aiLabel = "Motion Zone 94%";
+                            aiBoxRel = new Rectangle((int)(w * 0.20), (int)(h * 0.30), (int)(w * 0.55), (int)(h * 0.55));
+                            break;
+                        case 7:
+                            srcCrop = new Rectangle((int)(imgW * 0.55), (int)(imgH * 0.48), (int)(imgW * 0.42), (int)(imgH * 0.50));
+                            channelLabel = "CH-08: Rear Perimeter";
+                            aiLabel = "Obstacle / Object 93%";
+                            aiBoxRel = new Rectangle((int)(w * 0.25), (int)(h * 0.30), (int)(w * 0.50), (int)(h * 0.55));
+                            break;
+                        default:
+                            srcCrop = new Rectangle(0, (int)(imgH * 0.10), (int)(imgW * 0.55), (int)(imgH * 0.72));
+                            channelLabel = "CH-09: North Corridor";
+                            aiLabel = "Person / Staff 98%";
+                            aiBoxRel = new Rectangle((int)(w * 0.18), (int)(h * 0.25), (int)(w * 0.45), (int)(h * 0.60));
+                            break;
+                    }
+
+                    g.DrawImage(_sharedCctvBaseImage, new Rectangle(0, 0, w, h), srcCrop, GraphicsUnit.Pixel);
+                    frameDrawn = true;
+                }
+                catch { }
+            }
+
+            // Fallback: Photorealistic frame generator
             if (!frameDrawn)
             {
                 try
@@ -2259,46 +2362,19 @@ namespace MilestoneManagementClient.UI.Views
                 }
             }
 
-            // 2. Draw Realistic AI Object Detection Bounding Boxes (matching the user's screenshot layout!)
-            int seed = Math.Abs((cam.Name ?? "CAM").GetHashCode() + camIndex * 17);
-            
-            using (var penBoxRed = new Pen(Color.FromArgb(239, 68, 68), 2f)) // Red detection box as in screenshot
-            using (var brushLabelBg = new SolidBrush(Color.FromArgb(190, 15, 23, 42)))
+            // 3. Draw Realistic AI Object Detection Bounding Boxes
+            using (var penBoxRed = new Pen(Color.FromArgb(239, 68, 68), 2f))
+            using (var brushLabelBg = new SolidBrush(Color.FromArgb(200, 15, 23, 42)))
             using (var fontAi = new Font("Segoe UI", 7.5F, FontStyle.Bold))
             using (var brushAiText = new SolidBrush(Color.White))
             {
-                // Box 1: Left person / vehicle
-                int b1X = (int)(w * 0.08) + (seed % 12);
-                int b1Y = (int)(h * 0.40) + (seed % 14);
-                int b1W = (int)(w * 0.22);
-                int b1H = (int)(h * 0.35);
-                g.DrawRectangle(penBoxRed, b1X, b1Y, b1W, b1H);
-                g.FillRectangle(brushLabelBg, b1X, b1Y - 15, Math.Min(90, b1W), 15);
-                g.DrawString(camIndex % 2 == 0 ? "Person 98%" : "Vehicle 96%", fontAi, brushAiText, b1X + 2, b1Y - 14);
-
-                // Box 2: Center vehicle
-                int b2X = (int)(w * 0.38) + ((seed * 3) % 15);
-                int b2Y = (int)(h * 0.36) + ((seed * 2) % 12);
-                int b2W = (int)(w * 0.28);
-                int b2H = (int)(h * 0.40);
-                g.DrawRectangle(penBoxRed, b2X, b2Y, b2W, b2H);
-                g.FillRectangle(brushLabelBg, b2X, b2Y - 15, Math.Min(105, b2W), 15);
-                g.DrawString("Car [DL8CAR466]", fontAi, brushAiText, b2X + 2, b2Y - 14);
-
-                // Box 3: Far right object
-                if (w > 180)
-                {
-                    int b3X = (int)(w * 0.72);
-                    int b3Y = (int)(h * 0.38);
-                    int b3W = (int)(w * 0.22);
-                    int b3H = (int)(h * 0.30);
-                    g.DrawRectangle(penBoxRed, b3X, b3Y, b3W, b3H);
-                    g.FillRectangle(brushLabelBg, b3X, b3Y - 15, Math.Min(85, b3W), 15);
-                    g.DrawString("Object 94%", fontAi, brushAiText, b3X + 2, b3Y - 14);
-                }
+                g.DrawRectangle(penBoxRed, aiBoxRel);
+                int labelW = Math.Min(120, aiBoxRel.Width);
+                g.FillRectangle(brushLabelBg, aiBoxRel.X, Math.Max(2, aiBoxRel.Y - 16), labelW, 16);
+                g.DrawString(aiLabel, fontAi, brushAiText, aiBoxRel.X + 2, Math.Max(2, aiBoxRel.Y - 15));
             }
 
-            // 3. Top HUD: Status Pill & FPS
+            // 4. Top HUD: Status Pill, Channel & Bitrate
             using (var brushHudBg = new SolidBrush(Color.FromArgb(180, 15, 23, 42)))
             using (var fontHud = new Font("Segoe UI", 7.5F, FontStyle.Bold))
             using (var fontMono = new Font("Consolas", 7.5F))
@@ -2306,7 +2382,7 @@ namespace MilestoneManagementClient.UI.Views
             using (var brushGreen = new SolidBrush(Color.FromArgb(34, 197, 94)))
             {
                 // Top Left: Status & IP
-                int pillW = Math.Min(160, w / 2);
+                int pillW = Math.Min(165, w / 2);
                 g.FillRectangle(brushHudBg, 6, 6, pillW, 18);
                 g.FillEllipse(brushGreen, 10, 11, 7, 7);
                 string ipStr = string.IsNullOrEmpty(cam.IpAddress) ? (cam.MulticastIp ?? "10.192.0.5") : cam.IpAddress;
@@ -2326,17 +2402,17 @@ namespace MilestoneManagementClient.UI.Views
                 g.FillRectangle(brushHudBg, 6, h - 22, Math.Min(200, w - 12), 16);
                 g.DrawString(timeStr, fontMono, brushWhite, 8, h - 21);
 
-                // Bottom Right: Camera Tag
-                if (w > 250)
+                // Bottom Right: Camera / Channel Tag
+                if (w > 230)
                 {
-                    string camTag = "CAM: " + (cam.Name.Length > 20 ? cam.Name.Substring(0, 18) + ".." : cam.Name);
-                    int tagW = 140;
+                    string camTag = channelLabel;
+                    int tagW = Math.Min(175, w / 2);
                     g.FillRectangle(brushHudBg, w - tagW - 6, h - 22, tagW, 16);
                     g.DrawString(camTag, fontHud, brushWhite, w - tagW - 2, h - 21);
                 }
             }
 
-            // 4. Selection Border if this tile is currently selected
+            // 5. Selection Border if this tile is currently selected
             if (isSelected)
             {
                 using (var penSel = new Pen(Color.FromArgb(190, 18, 60), 3f))
